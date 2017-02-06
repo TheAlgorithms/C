@@ -7,11 +7,13 @@
 
 #include<stdio.h>
 #include<conio.h>
-#define SIZE 7
+#include<stdlib.h>
 int main()
 {
- int i,j,temp;
- int arr[ SIZE ];
+ int i,j,temp,SIZE;
+ printf("Enter number of elements to be sorted : ");
+ scanf("%d",&SIZE);
+ int *arr = (int*)malloc(SIZE*sizeof(int));
  for(i=0; i<SIZE; i++)
  {
   printf("Enter Number : ");
