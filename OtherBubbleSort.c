@@ -9,7 +9,21 @@ int main()
 {
 
     int i , arraySort[MAX] ={0} ,  isSort = FALSE, changePlace;
+    
+    
+    /* For example 
+    Insertion random values in array to test
+    */
+    
+    
+    for(i = 0 ; i < MAX; i++)
+    {
+        arraySort[i] = rand()%101 ;
+    }
+    
 
+/* Algorithm of bubble methods */
+    
     while(isSort)
     {
          isSort = FALSE;
@@ -25,7 +39,14 @@ int main()
               }
          
          }
+    }
 
+    /* See if it works */
+    
+    for(i = 0 ; i < MAX; i++)
+    {
+       printf("%d\n", arraySort[i]);
+    }
 
 
 
