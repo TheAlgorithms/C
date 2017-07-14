@@ -1,4 +1,13 @@
+/**
+ * Modified on 07/12/2017, Kyler Smith
+ *
+ * A number is called strong number if sum of the 
+ * 	factorial of its digit is equal to number itself.
+ */
+
 #include<stdio.h>
+
+
 void strng(int a)
 {
 	int j=a;
