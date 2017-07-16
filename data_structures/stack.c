@@ -115,6 +115,9 @@ int pop() {
     return returnData;
 }
 
+/**
+ * Returns the next value to be popped.
+ */
 int peek() {
     if(head != NULL)
         return head->data;
@@ -124,10 +127,16 @@ int peek() {
     }
 }
 
+/**
+ * Returns the size of the stack.
+ */
 int size() {
     return count;
 }
 
+/**
+ * Returns 1 if stack is empty, returns 0 if not empty.
+ */
 int isEmpty() {
     if(count == 0)
         return 1;
