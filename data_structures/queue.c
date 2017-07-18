@@ -45,6 +45,9 @@ void create() {
     tail = NULL;
 }
 
+/**
+ * Puts an item into the Queue.
+ */
 void enque(int x) {
     if(head == NULL) {
         head = (struct node *)malloc(1 * sizeof(struct node));
