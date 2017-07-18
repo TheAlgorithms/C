@@ -62,6 +62,9 @@ void enque(int x) {
     }
 }
 
+/**
+ * Takes the next item from the Queue.
+ */
 int deque() {
     int returnData;
     if(head == NULL) {
@@ -76,3 +79,47 @@ int deque() {
         head->next = NULL;
     }
 }
+
+/**
+ * Returns the size of the Queue.
+ */
+int size() {
+    return count;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
