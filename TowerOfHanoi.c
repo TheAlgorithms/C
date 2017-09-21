@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Function for Tower of Hanoi algorithm 
 void hanoi(int noOfDisks,char where,char to,char extra){
 	if(noOfDisks == 0 )
 	{
