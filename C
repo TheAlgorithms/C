@@ -1,0 +1,81 @@
+
+#include <stdio.h>
+
+void merge(int *array, int low, int middle, int high){
+  int left = middle - low + 1;
+  int right = high - middle;
+
+  int tmpLeft[left], tmpRight[right];
+
+  for(int i = 0; i < left; i++){
+    tmpLeft[i] = array[low + i];
+  }
+
+  for(int j = 0; j < right; j++){
+    tmpRight[j] = array[middle + 1+ j];
+  }
+
+  int i = 0;
+  int j = 0;
+  int k = low;
+
+  while(i < left && j < right){
+    if (tmpLeft[i] <= tmpRight[j]){
+      array[k] = tmpLeft[i];
+      i++;
+    }
+    else{
+      array[k] = tmpRight[j];
+      j++;
+    }
+    k++;
+  }
+
+  while(i < left){
+    array[k] = tmpLeft[i];
+    i++;
+    k++;
+  }
+
+  while(j < right){
+    array[k] = tmpRight[j];
+    j++;
+    k++;
+  }
+}
+
+void mergeSort(int array[], int low, int high){
+  if (low < high){
+    int middle = (low + high) / 2;
+    mergeSort(array, low, middle);
+    mergeSort(array , middle + 1, high);
+    merge(array, low, middle, high);
+    }
+  }
+
+
+int main(){
+
+    int array[] = {10,7,3,9,18,-4,67,32,0,21};
+    int size = sizeof array / sizeof array[0];
+    int high = size - 1;
+    int low = 0;
+    printf("\n");
+    printf("%s", "Original Array: \n");
+    for(int i = 0; i < size; i++) {
+      printf("%d ",array[i]);
+    }
+
+    printf("\n");
+    printf("\n");
+    printf("%s", "Sorted Array:\n");
+
+    mergeSort(array,low,high);
+
+    for(int i = 0; i < size; i++) {
+      printf("%d ",array[i]);
+    }
+
+  return 0;
+}
+
