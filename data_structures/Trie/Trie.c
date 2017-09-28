@@ -125,7 +125,7 @@ void traverse(char prefix[], TrieNode *root)
 	printPathsRecur(temp,prefix,j-1);
 }
 
-/*------Demonstrate purposes uses text file with words -------*/
+/*------Demonstrate purposes uses text file called dictionary -------*/
 
 #define NUMBER_OF_WORDS (354935)
 #define INPUT_WORD_SIZE (100)
