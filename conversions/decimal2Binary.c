@@ -1,23 +1,16 @@
+/*********decimal number to binary number conversion****************/
 #include <stdio.h>
 void decimal2Binary(long num);
  
-void main()
-{
+void main(){
+	
     long num;
  
     printf("Enter a decimal integer \n");
     scanf("%ld", &num);
     decimal2Binary(num);
-
 }
-
-
-
-
-
-
 void decimal2Binary(long num){
-
 
 long  decimal_num, remainder, base = 1, binary = 0, no_of_1s = 0;
 
@@ -31,10 +24,7 @@ while (num > 0)
         }
         binary = binary + remainder * base;
         num = num / 2;
-        base = base * 10;
-    }
-
+        base = base * 10;}
+        
     printf("Its binary equivalent is = %ld\n", binary);
-
-
 }
