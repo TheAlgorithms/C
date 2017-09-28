@@ -30,8 +30,7 @@ TrieNode *createTrieNode()
         node->children[i] = NULL;
         i++;
     }
-    return node;
-    
+    return node; 
 }
 
 /*--Insert new word to Trie--*/
@@ -58,7 +57,6 @@ void insert(TrieNode *root,char *word)
 		root->isEndOfWord = true;
 	}
 	return;
-
 }
 
 /*--Search a word in the Trie--*/
@@ -112,7 +110,6 @@ void printPathsRecur(TrieNode* node, char prefix[], int filledLen)
 	  {
 		printPathsRecur(node->children[i], prefix, filledLen);
 	  }
-
 }
 
 /*--Travel through the Trie and return words from it--*/
