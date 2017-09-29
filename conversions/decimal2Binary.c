@@ -1,4 +1,4 @@
-/*********decimal number to binary number conversion****************/
+/*********decimal number to binary number conversion*****************/
 #include <stdio.h>
 void decimal2Binary(long num);
  
