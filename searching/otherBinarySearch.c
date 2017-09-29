@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #define len 5
 
-int binarySearch(int array[] , int len , int searchX)
+int binarySearch(int array[] , int length , int searchX)
 {
   
      int pos = -1 , right , left , i = 0;
 
       left = 0;
-      right = len - 1;
+      right = length - 1;
   
-     for(i = 0; i < len ; i++)
+     for(i = 0; i < length ; i++)
      {
           pos = (left + right)/2;
           
