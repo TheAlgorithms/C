@@ -2,17 +2,25 @@
 #include <stdio.h>
 void decimal2Binary(long num);
  
-void main(){
+int main(){
 	
     long num;
  
     printf("Enter a decimal integer \n");
     scanf("%ld", &num);
     decimal2Binary(num);
-}
+
+return 0;
+} 
+
+/***function for convert decimal numbers to binary numbers****************/
 void decimal2Binary(long num){
 
-long  decimal_num, remainder, base = 1, binary = 0, no_of_1s = 0;
+long  decimal_num, remainder, base, binary, no_of_1s;
+
+base = 1; 
+binary = 0; 
+no_of_1s = 0;
 
 while (num > 0)
     {

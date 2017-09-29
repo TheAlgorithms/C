@@ -13,7 +13,8 @@ int main(){
 
 return 0;
 }
-
+ 
+/********function for convert decimal numbers to octal numbers************/ 
 void decimal2Octal(long decimalnum){
   long remainder, quotient;
 

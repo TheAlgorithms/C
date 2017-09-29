@@ -1,17 +1,21 @@
 /*****Decimal to Hexadecimal conversion*******************/
 #include <stdio.h>
 void decimal2Hexadecimal(long num);
+
  
 int main(){
 	
- long decimalnum;
+  long decimalnum;
  
- printf("Enter decimal number: ");
- scanf("%ld", &decimalnum);
+  printf("Enter decimal number: ");
+  scanf("%ld", &decimalnum);
  
- decimal2Hexadecimal(decimalnum);
+  decimal2Hexadecimal(decimalnum);
+
+return 0;
 }
 
+/********function for convert decimal number to hexadecimal number****************/
 void decimal2Hexadecimal(long num){
 
 long decimalnum=num;
@@ -39,23 +43,3 @@ char hexadecimalnum[100];
 
 	printf("\n");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
