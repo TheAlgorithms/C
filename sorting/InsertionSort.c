@@ -1,5 +1,5 @@
 #include <stdio.h>
-#incude  <stdlib.h>
+#include  <stdlib.h>
 #define MAX 20
 
 
