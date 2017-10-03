@@ -32,7 +32,7 @@ int main()
          {
               if(arraySort[i] > arraySort[i+1])
               {
-                 changePlace = arratSort[i];
+                 changePlace = arraySort[i];
                  arraySort[i] = arraySort[i+1];
                  arraySort[i+1] = changePlace ;
                  isSort = TRUE;
