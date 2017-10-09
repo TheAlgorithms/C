@@ -4,6 +4,7 @@
 */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_power(int nb, int power)
 {
@@ -117,4 +118,23 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	nr = convert_from(nbr, base_from, radix_from, length);
 	nbr_to = convert_to(nr, radix_to, base_to);
 	return (nbr_to);
+}
+
+int	main()
+{
+	char	nbr[100];
+	char	base_from[100];
+	char	base_to[100];
+	
+	printf("base examples: 01 for base 2\n");
+	printf("               poneyvif or 01234567 for an octal base\n");
+	printf("               0123456789ABCDEF for hexadecimal base\n");
+	printf("Type the sequence of characters forming the base from which to convert: ");
+	scanf("%s", base_from);
+	printf("Type the number to convert using only %s: ", base_from);
+	scanf("%s", nbr);	
+	printf("Type the sequence of characters forming the base to convert to: ");
+	scanf("%s", base_to);
+	printf("Number in the new base: %s\n", ft_convert_base(nbr, base_from, base_to));
+	return (0);
 }
