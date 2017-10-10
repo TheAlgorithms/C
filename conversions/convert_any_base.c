@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// Returns the number nb to power power 
 int		ft_power(int nb, int power)
 {
 	if (power < 0)
@@ -15,6 +16,10 @@ int		ft_power(int nb, int power)
 	return (nb * ft_power(nb, power - 1));
 }
 
+/* Alocates memory for the converton result and
+**  does the convertion from decimal to any base
+** It's an extension of convert_to function
+*/
 char	*fill(char *b_t, int nr, int index, int r_t)
 {
 	int		rest;
@@ -43,6 +48,7 @@ char	*fill(char *b_t, int nr, int index, int r_t)
 	return (n_t);
 }
 
+// Converts from decimal to any base
 char	*convert_to(int nr, int r_t, char *b_t)
 {
 	int		index;
@@ -68,6 +74,7 @@ char	*convert_to(int nr, int r_t, char *b_t)
 	return (nr_t);
 }
 
+// Converts from any base to decimal
 int		convert_from(char *nbr, char *b_f, int r_f, int l)
 {
 	int		pos;
@@ -96,6 +103,13 @@ int		convert_from(char *nbr, char *b_f, int r_f, int l)
 	return (nr);
 }
 
+/* Converts from any base to any base
+** @base_from and @base_to is represented by an array of characters
+**  containing the characters used in the base in order of their value
+** @nbr the number we want to convert, containing only characters from
+**  base_from array
+** returns the number converted to base_to
+*/
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	int		radix_from;
