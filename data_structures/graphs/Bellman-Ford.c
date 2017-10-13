@@ -48,8 +48,12 @@ int minDistance(int mdist[], int vset[], int V){
 //Utility function to print distances
 void print(int dist[], int V){
 	printf("\nVertex  Distance\n");
-	for(int i = 0; i < V; i++)
-		printf("%d\t%d\n",i,dist[i]);
+	for(int i = 0; i < V; i++){
+		if(dist[i] != INT_MAX)
+			printf("%d\t%d\n",i,dist[i]);
+		else
+			printf("%d\tINF",i);
+	}
 }
 
 //The main function that finds the shortest path from given source
