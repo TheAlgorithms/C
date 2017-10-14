@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 int linearsearch(int *arr, int size, int val){
 	int i;
@@ -21,7 +21,7 @@ void main(){
 	printf("Enter the value to be searched:\n");
 	scanf("%d", &v);
 	if (linearsearch(a, s, v))
-		printf("Value %d is in the array.\n", s);
+		printf("Value %d is in the array.\n", v);
 	else
-		printf("Value %d is not in the array.\n", s);
+		printf("Value %d is not in the array.\n", v);
 }
