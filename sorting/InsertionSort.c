@@ -21,13 +21,13 @@ int main()
           {
               // You'll enter the loop if the elmtToInsert is less than the element just before it.
             
-              arraySort[j+1] = arraySort[j]; /*shift the current element one place forward to create room for insertion of the
-                                               elmtToInsert when the correct position is found */
+              arraySort[j+1] = arraySort[j]; //shift the current element one place forward to create room for insertion of the elmtToInsert
               j--;
           }
           //when we exit the loop, j+1 will be the index of the correct position of the elmtToInsert
 
             arraySort[j+1] = elmtToInsert ; //'insert' the elmtToInsert into its correct position
+          
         }
     
 
