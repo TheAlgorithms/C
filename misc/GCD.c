@@ -2,14 +2,9 @@
 
 // Euclid's algorithm
 int GCD(int x, int y) {
-    if (x == y || y == 0)
+    if (y == 0)
         return x;
-    if (x == 0)
-        return y;
-    if (x > y)
-        return GCD(x-y, y);
-    else
-        return GCD(x, y-x);
+    return GCD(y, x%y);
 }
 
 int main() {
