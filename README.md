@@ -1,6 +1,7 @@
 # C
 All Algorithms implemented in C 
 
+
 ## Computer Oriented Statistical Methods
 	- Gauss_Elimination
 	- Lagrange_Theorem
