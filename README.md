@@ -101,6 +101,9 @@ __Properties__
 * Average case performance	O(log n)
 * Worst case space complexity	O(1) 
 
+
+## Know Thy Complexities!'
+<a href='http://bigocheatsheet.com/' target='_blank' alt='Know Thy Complexities!'>Know Thy Complexities!'</a>
 ----------------------------------------------------------------------------------------------------------------------
 
 
