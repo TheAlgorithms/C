@@ -26,7 +26,7 @@ All Algorithms implemented in C
 	* binary_trees
 		* create_node
 		* recursive_traversals
-	* trie*
+	* trie
 		* trie
 
 
