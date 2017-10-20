@@ -1,7 +1,7 @@
 # C
 All Algorithms implemented in C 
 
-# Computer Oriented Statistical Methods
+## Computer Oriented Statistical Methods
 	- Gauss_Elimination
 	- Lagrange_Theorem
 	- Mean
@@ -11,14 +11,14 @@ All Algorithms implemented in C
 	- Variance
 
 
-# Conversions
+## Conversions
 	- binary_to_decimal
 	- decimal _to_binary
 	- decimal_to_hexa
 	- decimal_to_octal
 
 
-# Data Structures
+## Data Structures
 	- stack
 	- queue
 	linked_list
@@ -30,12 +30,12 @@ All Algorithms implemented in C
 		- trie
 
 
-# Searching
+## Searching
 	- Binary_Search
 	- Other_Binary_Search
 
 
-# Sorting
+## Sorting
 	- binary_insertion_sort
 	- BubbleSort
 	- BogoSort
@@ -47,7 +47,7 @@ All Algorithms implemented in C
 	- shaker_sort
 
 
-# Misc
+## Misc
 	- Binning
 	- Factorial
 	- Fibonacci
