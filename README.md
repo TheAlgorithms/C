@@ -21,12 +21,12 @@ All Algorithms implemented in C
 # Data Structures
 	- stack
 	- queue
-	## linked_list
+	__linked_list__
 		- singly_link_list_deletion
-	## binary_trees
+	__binary_trees__
 		- create_node
 		- recursive_traversals
-	## trie
+	__trie__
 		- trie
 
 
