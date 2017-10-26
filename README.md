@@ -1,6 +1,4 @@
 # C
-All Algorithms implemented in C 
-
 
 ## Computer Oriented Statistical Methods
 	- Gauss_Elimination
@@ -11,13 +9,11 @@ All Algorithms implemented in C
 	- Simpson's_1-3rd_rule.c
 	- Variance
 
-
 ## Conversions
 	- binary_to_decimal
 	- decimal _to_binary
 	- decimal_to_hexa
 	- decimal_to_octal
-
 
 ## Data Structures
 	- stack
