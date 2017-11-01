@@ -3,37 +3,23 @@
  * Stack data structure implementation.
  */
 
-////////////////////////////////////////////////////////////////////////////////
-//INCLUDES
 #include <stdio.h>
 #include <stdlib.h>
 
-////////////////////////////////////////////////////////////////////////////////
-//MACROS: CONSTANTS
-
-////////////////////////////////////////////////////////////////////////////////
-//DATA STRUCTURES
 struct node {
     int data;
     struct node* next;
     struct node* pre;
 } *head, *tmp;
 
-////////////////////////////////////////////////////////////////////////////////
-//GLOBAL VARIABLES
 int count = 0;
 
-////////////////////////////////////////////////////////////////////////////////
-//FUNCTION PROTOTYPES
 void create();
 void push(int x);
 int pop();
 int peek();
 int size();
 int isEmpty();
-
-////////////////////////////////////////////////////////////////////////////////
-//MAIN ENTRY POINT
 
 int main(int argc, char const *argv[]) {
 
@@ -64,7 +50,7 @@ int main(int argc, char const *argv[]) {
     // 1, 6, 7, 8. Count: 2. Empty: 0.
     printf("%d, %d, %d.\tCount: %d.\tEmpty: %d.\n", x, y, z, size(), isEmpty());
 
-	return 0;
+    return 0;
 }
 
 /**
@@ -78,7 +64,7 @@ void create() {
  * Push data onto the stack.
  */
 void push(int x) {
-    if(head == NULL) {
+    if (head == NULL) {
         head = (struct node *)malloc(1 * sizeof(struct node));
         head->next = NULL;
         head->pre = NULL;
@@ -98,7 +84,7 @@ void push(int x) {
  */
 int pop() {
     int returnData;
-    if(head == NULL) {
+    if (head == NULL) {
         printf("ERROR: Pop from empty stack.\n");
         exit(1);
     } else {
