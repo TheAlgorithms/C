@@ -42,7 +42,7 @@
 	- QuickSort
 	- SelectionSort
 	- shaker_sort
-
+	- bucketSort
 
 ## Misc
 	- Binning
