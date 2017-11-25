@@ -6,7 +6,6 @@ void heap_sort(int *unsorted, int n);
 int main() {
 	int n = 0;
 	int i = 0;
-	char s[50];
 	char oper;
 
 	int* unsorted;
@@ -15,13 +14,9 @@ int main() {
 	unsorted = (int*)malloc(sizeof(int) * n);
 	while (getchar() != '\n');
 	printf("Enter numbers separated by a comma:\n");
-	gets(s);
-
-	char *ptr = strtok(s, ",");
-	while (ptr != NULL && i < n) {
-		*(unsorted + i) = atoi(ptr);
+	while (i != n) {
+		scanf("%d,", (unsorted + i));
 		i++;
-		ptr = strtok(NULL, ",");
 	}
 	heap_sort(unsorted, n);
 
