@@ -30,6 +30,7 @@
 ## Searching
 	- Binary_Search
 	- Other_Binary_Search
+	- Jump_Search
 
 
 ## Sorting
@@ -42,6 +43,7 @@
 	- QuickSort
 	- SelectionSort
 	- shaker_sort
+	- HeapSort
 
 
 ## Misc
