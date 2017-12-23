@@ -1,25 +1,14 @@
-////////////////////////////////////////////////////////////////////////////////
-//INCLUDES
 #include <stdio.h>
 #include <stdlib.h>
 
-////////////////////////////////////////////////////////////////////////////////
-//MACROS: CONSTANTS
-
-////////////////////////////////////////////////////////////////////////////////
-//DATA STRUCTURES
 struct node {
     int data;
     struct node* next;
     struct node* pre;
 } *head, *tail, *tmp;
 
-////////////////////////////////////////////////////////////////////////////////
-//GLOBAL VARIABLES
 int count;
 
-////////////////////////////////////////////////////////////////////////////////
-//FORWARD DECLARATIONS
 void create();
 void enque(int x);
 int deque();
@@ -27,16 +16,11 @@ int peek();
 int size();
 int isEmpty();
 
-////////////////////////////////////////////////////////////////////////////////
-//MAIN ENTRY POINT
-
 int main(int argc, char const *argv[]) {
-
     create();
     enque(5);
 
-
-	return 0;
+    return 0;
 }
 
 
@@ -49,7 +33,7 @@ void create() {
  * Puts an item into the Queue.
  */
 void enque(int x) {
-    if(head == NULL) {
+    if (head == NULL) {
         head = (struct node *)malloc(1 * sizeof(struct node));
         head->data = x;
         head->pre = NULL;
@@ -67,12 +51,12 @@ void enque(int x) {
  */
 int deque() {
     int returnData;
-    if(head == NULL) {
+    if (head == NULL) {
         printf("ERROR: Deque from empty queue.\n");
         exit(1);
     } else {
         returnData = head->data;
-        if(head->pre == NULL)
+        if (head->pre == NULL)
             head = NULL;
         else
             head = head->pre;
@@ -86,40 +70,3 @@ int deque() {
 int size() {
     return count;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
