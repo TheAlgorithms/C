@@ -14,6 +14,7 @@
 	- decimal _to_binary
 	- decimal_to_hexa
 	- decimal_to_octal
+	- to_decimal
 
 ## Data Structures
 	- stack
