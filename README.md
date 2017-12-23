@@ -58,3 +58,4 @@
 	- rselect
 	- strongNumber
 	- TowerOfHanoi
+	- Greatest Common Divisor
