@@ -28,7 +28,7 @@ void main()
 		x=a+i*h;
 		s2=s2+f(x);
 	}
-	intgral=(h/3.0)*(sum+2*s2+4*s3);
+	intgeral=(h/3.0)*(sum+2*s2+4*s3);
 	printf("\nvalue of the integral =%9.4f\n",integral);
 	getch();
 }
