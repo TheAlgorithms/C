@@ -43,6 +43,12 @@ int get_hash(char s[])
         hash_code = s[counter] + (hash_code << 6) + (hash_code << 16) - hash_code;
     }
 
+    /* 
+       make sure hash_code is always positive.
+       because we want uses it as index 
+     */
+    hash_code = (hash_code < 0) ? hash_code * -1 : hash_code;
+
     /* % modulo is for fitting the index in array. */
     return hash_code % MAXELEMENTS;
 }
