@@ -19,6 +19,7 @@
 ## Data Structures
 	- stack
 	- queue
+	- dictionary
 	linked_list
 		- singly_link_list_deletion
 		- stack_using_linkedlists
