@@ -67,3 +67,6 @@
 	- strongNumber
 	- TowerOfHanoi
 	- Greatest Common Divisor
+
+
+## exercism
