@@ -70,3 +70,7 @@
 
 
 ## exercism
+In this directory you will find:
+* hello-world
+* isogram
+* acronym
