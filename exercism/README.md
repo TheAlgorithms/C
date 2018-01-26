@@ -9,6 +9,5 @@ In this directory you will find (in the right order):
 * isogram
 * acronym
 * word-count
-
 * rna-transcription
 
