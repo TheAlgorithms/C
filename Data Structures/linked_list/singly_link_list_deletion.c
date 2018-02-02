@@ -3,65 +3,96 @@
   function can be modified according to the data type, easily.
   deleteNode deletes a node when passed with a key of the node.
 */
-#include <stdio.h>
-#include <stdlib.h>
-
-struct Node
-{
-    int data;
-    struct Node *next;
+#include<stdio.h>
+struct node
+{int info;
+ struct node *link;
 };
-
-void push(struct Node** head_ref, int new_data)
+struct node *start=NULL;
+///////////////////////////////////////////////////////////
+struct node * createnode()//function to create node
 {
-    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
-    new_node->data  = new_data;
-    new_node->next = (*head_ref);
-    (*head_ref)    = new_node;
+  struct node *t;
+  t=(struct node*)malloc(sizeof(struct node));
+  return(t);
 }
-
-void deleteNode(struct Node **head_ref, int key)
+////////////////////////////////////////////////////////
+void insert()//function to insert at first location
 {
-    struct Node* temp = *head_ref, *prev;
-
-    if (temp != NULL && temp->data == key)
-    {
-        *head_ref = temp->next;
-        free(temp);
-        return;
-    }
-
-
-    while (temp != NULL && temp->data != key)
-    {
-        prev = temp;
-        temp = temp->next;
-    }
-
-    if (temp == NULL) return;
-
-    prev->next = temp->next;
-
-    free(temp);
+  struct node *p;
+  p=createnode();
+  printf("\nenter the number to insert");
+  scanf("%d",&p->info);
+  p->link=NULL;
+  if(start==NULL)
+  {
+      start=p;
+  }
+  else
+  {
+      p->link=start;
+      start=p;
+  }
 }
-
-void printList(struct Node *node)
+///////////////////////////////////////////////////////////
+void deleteion()//function to delete from first position
 {
-    while (node != NULL)
+    struct node *t;
+    if(start==NULL)
     {
-        printf(" %d ", node->data);
-        node = node->next;
+        printf("\nlist is empty");
+    }
+    else
+    {
+        struct node *p;
+        p=start;
+        start=start->link;
+        free(p);
     }
 }
+///////////////////////////////////////////////////////
+void viewlist()//function to display values
+{
+    struct node *p;
+    if(start==NULL)
+    {
+        printf("\nlist is empty");
+    }
+    else
+    {   p=start;
+        while(p!=NULL)
+        {
+            printf("%d ",p->info);
+            p=p->link;
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////
 
 int main()
 {
-    /* new node can be created here as :-
-    struct Node* head = NULL;
-    push(&head, data);
-
-    and a node can be delete by using
-    deleteNode(&head, key);
-    */
-    return 0;
+    int n;
+    while(1)
+    {
+        printf("\n1.add value at first location");
+        printf("\n2.delete value from first location");
+        printf("\n3.view value");
+        printf("\nenter your choice");
+        scanf("%d",&n);
+        switch(n)
+        {
+        case 1:
+            insert();
+            break;
+        case 2:
+            deleteion();
+            break;
+        case 3:
+            viewlist();
+            break;
+        default:
+            printf("\ninvalid choice");
+        }
+    }
+  return(0);
 }
