@@ -8,6 +8,7 @@
 	- Seidal
 	- Simpson's_1-3rd_rule.c
 	- Variance
+	- statistic (C Lib)
 
 ## Conversions
 	- binary_to_decimal
