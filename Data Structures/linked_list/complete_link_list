@@ -1,0 +1,203 @@
+/*this program is for creating link list ,printing,finding a node,inserting node at beginning at end and at any position,reversing list,finding nth node from end,deleting middle element,removing duplicate elements.
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node* link;
+};
+struct node* head,*top;
+void insert(int n)
+{
+    struct node* p;
+     for(int i=1;i<=n;i++)
+     {
+        struct node* newnode=(struct node*)malloc(sizeof(struct node));
+        printf("enter %d entry\t",i);
+        scanf("%d",&newnode->data);
+        if(head==NULL)
+          p=head;
+        else
+        {
+          p->link=newnode;
+          newnode->link=NULL;
+          p=newnode;
+        }
+    }
+  }
+void print(void)
+{
+        struct node*move;
+        move=head;
+        while(move!=NULL)
+    {
+            printf("\n%d",move->data);
+            move=move->link;
+        }
+}
+void findnode(int b)
+{
+       struct node* trav=head;
+  
+       for(int i=1;i<b;i++)
+               trav=trav->link;
+      printf("data at node %d is %d ",b,trav->data);
+}
+void insertnew(int c)
+{
+       struct node*temp1,*p=head;
+       temp1=(struct node*)malloc(sizeof(struct node));
+       printf("enter data\t");
+       scanf("%d",&temp1->data);
+       for(int i=1;i<=c-2;i++)
+            p=p->link;
+       temp1->link=p->link;
+       p->link=temp1;  
+       
+}
+void insertfirst(int x)
+{
+    struct node* temp1=(struct node*)malloc(sizeof(struct node));
+    temp1->data=x;
+    temp1->link=head;
+    head=temp1;
+}
+void insertlast(int x)
+{
+    struct node*temp1=(struct node*)malloc(sizeof(struct node)),*p=head;
+    temp1->data=x;
+    for(int i=1;p->link!=NULL;i++)
+        p=p->link;
+    p->link=temp1;
+    temp1->link=NULL;
+  
+}
+void delmiddle(void)
+{
+    int count=1,i;
+    struct node *p=head,*new=NULL;
+    for( i=1;p->link!=NULL;i++)
+            {p=p->link;count++;}
+        int x=count/2;
+        p=head;
+        for(int j=1;j<=x-1;j++)
+        p=p->link;
+        new=p->link;
+        printf("\t*********data at middle node was %d and now it is deleted*********",new->data);
+        p->link=new->link;
+    free(p);free(new);  
+}
+void reverse(void)
+{
+    struct node* trav=head;
+    while(trav->link!=NULL)
+    {
+        struct node* rev=(struct node*)malloc(sizeof(struct node));
+        rev->data=trav->data;
+        rev->link=top;
+        top=rev;
+        trav=trav->link;
+    }
+        struct node* rev=(struct node*)malloc(sizeof(struct node));
+        rev->data=trav->data;
+        rev->link=top;
+        top=rev;
+        trav=trav->link;
+    free(trav);
+    while(top->link!=NULL)
+    {
+        printf("%d\n",top->data);
+        top=top->link;
+    }   
+    printf("%d",top->data);   
+}
+void nthnode(int n)
+{
+      int count=1,i;
+    struct node *p=head;
+    for( i=1;p->link!=NULL;i++)
+            {p=p->link;count++;}
+        p=head;
+    int b=count-n+1;
+    for(i=1;i<=b-1;i++)
+        p=p->link;
+    printf("\t*******data at %d node from end is %d ******",n,p->data);
+
+}
+void removedupli(int n)
+{
+    struct node* trav=head,*check=head->link;
+    for(int i=1;i<=n-1;i++)
+    {
+        for(int j=i+1;j<=n;j++)
+        {
+            if(trav->data==check->data)
+            {
+                trav->link=check->link    ;
+                check=check->link;
+                n=n-1;
+            }
+            else
+                check=check->link;
+        }
+        trav=trav->link;
+        check=trav->link;
+    }
+                           
+}
+void main()
+{
+    int n,a,b,c;
+    do
+    {
+        printf("\n\n1.create link list\n2.print\n3.find a node\n4.insert a node at begining\n5.insert a node at end\n6.insert a node\n7.delete middle node\n8.reverse a linked list\n9.nth node from end of link list\n10.remove duplicate\t");
+        scanf("%d",&a);
+        switch(a)
+        {
+            case 1: {
+                        printf("how many elements you want to enter");
+                        scanf("%d",&n);
+                            insert(n);
+                    }break;
+            case 3: {
+                        printf("enter which node you want to find");
+                        scanf("%d",&b);
+                        findnode(b);                 
+                    }break;         
+        case 2: {
+                    print();
+                }break;
+            case 6: {
+                        printf("enter where you want to insert a node\t");     
+                        scanf("%d",&c);
+                        insertnew(c);
+            }break;
+    case 4:{
+            printf("enter data\t");
+            scanf("%d",&b);
+            insertfirst(b);  
+            }break;                 
+    case 5:{
+                printf("enter data\t");
+                scanf("%d",&b);
+                insertlast(b);
+            }break;
+    case 7:{
+                delmiddle();          
+            }break;
+    case 8:{
+            reverse();
+            }break;
+    case 9:{
+            printf("enter value of n\t");
+            scanf("%d",&b);
+            nthnode(b);
+            }break;
+    case 10:{
+                removedupli(n);
+            }break;
+    }
+    }while(a>0&&a<=10);
+}
+
+
