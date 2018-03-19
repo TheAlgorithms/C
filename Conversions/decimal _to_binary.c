@@ -1,25 +1,66 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAXBITS 100
+
 int main()
 {
-    int n,re,a[10000],j;
-    printf("\nenter the no ");
-    scanf("%d",&n);
+
+    // input of the user
+    int inputNumber;
+
+    // for the remainder
+    int re;
+
+    // contains the bits 0/1
+    int bits[MAXBITS];
+
+    // for the loops
+    int j;
     int i=0;
-    while(n>0)
+
+    printf("\t\tConverter decimal --> binary\n\n");
+
+    // reads a decimal number from the user.
+    printf("\nenter a positive integer number: ");
+    scanf("%d",&inputNumber);
+
+    // make sure the input number is a positive integer.
+    if (inputNumber < 0)
+    {
+        printf("only positive integers >= 0\n");
+        return 1;
+    }
+
+    // actual processing
+    while(inputNumber>0)
     {
 
-        re=n%2;
-        a[i]=re;
-        n=n/2;
+        // computes the remainder by modulo 2
+        re = inputNumber % 2;
+
+        // computes the quotient of division by 2
+        inputNumber = inputNumber / 2;
+
+        bits[i] = re;
         i++;
+
     }
-    int k;
-    k=i-1;
+
     printf("\n the number in binary is: ");
-    for(j=k;j>=0;j--)
+
+    // iterates backwards over all bits
+    for(j=i-1; j>=0; j--)
     {
-        printf("%d",a[j]);
+        printf("%d",bits[j]);
     }
-    return(0);
+
+    // for the case the input number is 0
+    if (i == 0)
+    {
+        printf("0");
+    }
+
+    return 0;
 }
 
