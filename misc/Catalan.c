@@ -14,8 +14,10 @@ long int catalan(int n)
 }
 
 int main() {
-    int n; scanf("%d", &n);
+    int n; 
+    printf("Enter the number whose Catalan You Want to find");
+    scanf("%d", &n);
     
-    printf("%ld", catalan(n));
+    printf("The answer is :%ld", catalan(n));
     return 0;
 }
