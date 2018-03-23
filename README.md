@@ -68,6 +68,7 @@
 	- strongNumber
 	- TowerOfHanoi
 	- Greatest Common Divisor
+	- Sudoku Solver
 
 
 ## exercism
