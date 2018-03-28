@@ -9,9 +9,9 @@ int three_digits(int n)
     for(int i=0; i<3; i++)
     {
         r = n%10;
-        d = d + r * p;
-        p = p * 10;
-        n = n / 10;
+        d += r * p;
+        p *= 10;
+        n /= 10;
     }
     return d;
 }
@@ -30,7 +30,7 @@ int main(void)
 
         else td = binary_num;
 
-        binary_num = binary_num / 1000;
+        binary_num /= 1000;
 
         d = 0, base =1;
 
@@ -38,13 +38,13 @@ int main(void)
         while(td > 0)
         {
             remainder = td % 10;
-            td = td / 10;
-            d = d + (base * remainder);
-            base = base * 2;
+            td /= 10;
+            d += (base * remainder);
+            base *= 2;
         }
 
-        res = res + d * ord; // Calculating the octal value
-        ord = ord * 10;
+        res += d * ord; // Calculating the octal value
+        ord *= 10;
     }
 
     printf("\nOctal equivalent is: %d", res);
