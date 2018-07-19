@@ -28,6 +28,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "CArray.h"
 
 void swap(CArray *array, int position1, int position2);
@@ -49,11 +50,11 @@ int insertValueCArray(CArray *array, int position, int value)
 	if (position >= 0 && position < array->size) {
 		if (array->array[position] == 0) {
 			array->array[position] = value;
-			return 0; // OK
+			return SUCCESS;
 		}
-		else return 2; // Position already initialized (use update function)
+		else return POSITION_INIT; 
 	}
-	return 1; // Invalid position
+	return INVALID_POSITION; 
 }
 
 int removeValueCArray(CArray *array, int position)
@@ -62,9 +63,9 @@ int removeValueCArray(CArray *array, int position)
 		if (array->array[position] != 0) {
 			array->array[position] = 0;
 		}
-		else return 4; // Position already empty
+		else return POSITION_EMPTY; 
 	}
-	return 1; // Invalid position
+	return INVALID_POSITION;
 }
 
 int pushValueCArray(CArray *array, int value)
@@ -78,8 +79,8 @@ int pushValueCArray(CArray *array, int value)
 			break;
 		}
 	}
-	if (ok == 1) return 0;
-	else return 5; // Array is full
+	if (ok == 1) return SUCCESS;
+	else return ARRAY_FULL;
 }
 
 int updateValueCArray(CArray *array, int position, int value)
@@ -88,9 +89,10 @@ int updateValueCArray(CArray *array, int position, int value)
 		if (array->array[position] != 0) {
 
 		}
-		else return 3; // Position not initialized (use insert function)
+
+		else return POSITION_NOT_INIT;
 	}
-	return 1; // Invalid Position
+	return INVALID_POSITION;
 }
 
 int eraseCArray(CArray *array)
@@ -110,7 +112,7 @@ int switchValuesCArray(CArray *array, int position1, int position2)
 		array->array[position1] = array->array[position2];
 		array->array[position2] = temp;
 	}
-	return 1; // Invalid Position
+	return INVALID_POSITION;
 }
 
 int reverseCArray(CArray *array)
@@ -119,7 +121,7 @@ int reverseCArray(CArray *array)
 	for (i = 0; i < array->size / 2; i++) {
 		swap(array, i, array->size - i - 1);
 	}
-	return 0;
+	return SUCCESS;
 }
 
 int displayCArray(CArray *array)
