@@ -1,6 +1,7 @@
 #include<conio.h>
 #include<stdio.h>
 #include<math.h> 
+#define integral
 float f(float x)
 {
 	return 1.0+x*x*x;
@@ -8,16 +9,17 @@ float f(float x)
 void main()
 {
 	int i,n;
-	float a,b,h,x,s2,s3,sum,integral;
+	float a,b,h,x,s2,s3,sum,integeral;
 	printf("enter the lower limit of the integration");
-	sacnf("%f",&a);
+	scanf("%f",&a);
 	printf("enter the upper limit of the integration");
-	sacnf("%f",&b);
+	scanf("%f",&b);
 	printf("enter the number of intervals");
-	sacnf("%d",&n);
+	scanf("%d",&n);
 	h=(b-a)/n;
 	sum=f(a)+f(b);
-	s2=s3=0.0;
+	s2=0;
+	s3=0;
 	for(i=1;i<n;i+=3)
 	{
 		x=a+i*h;
@@ -28,7 +30,8 @@ void main()
 		x=a+i*h;
 		s2=s2+f(x);
 	}
-	intgeral=(h/3.0)*(sum+2*s2+4*s3);
-	printf("\nvalue of the integral =%9.4f\n",integral);
+
+	integeral=(h/3)*((sum+2)*(s2+4)*s3);
+	printf("\nvalue of the integral =%f\n ",integeral);
 	getch();
 }
