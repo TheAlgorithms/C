@@ -9,12 +9,19 @@ int main(void) {
 	int base, i, j;
 	char number[100];
 	unsigned long decimal = 0;
-	
+
 	printf("Enter the base: ");
-	scanf("%d", &base);
+
+	while(!scanf("%d", &base))
+	{
+		fflush(stdin);
+    		printf("The base should be a number, not a letter\n");
+      		printf("Enter the base: ");
+	}
+
 	printf("Enter the number: ");
 	scanf("%s", &number[0]);
-	
+
 	for (i = 0; number[i] != '\0'; i++) {
 		if (isdigit(number[i]))
 			number[i] -= '0';
@@ -24,15 +31,17 @@ int main(void) {
 			number[i] -= 'a' - 10;
 		else
 			number[i] = base + 1;
-		
+
 		if (number[i] > base)
 			printf("invalid number\n");
 	}
-	
+
 	for (j = 0; j < i; j++) {
 		decimal *= base;
 		decimal += number[j];
 	}
-	
+
 	printf("%lu\n", decimal);
+	return 0;
 }
+
