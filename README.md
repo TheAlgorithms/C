@@ -49,6 +49,7 @@
 	- shaker_sort
 	- HeapSort
 	- StoogeSort
+	- RadixSort
 	
 ## Hashing
 	- sdbm
