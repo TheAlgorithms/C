@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n;
+	printf("enter a number");
+	scanf("%d",&n)
+	d=-1,r=0,e;int g=n;//we can take the input from the user of any length its just an example taken
+	while(g>0)
+	{
+		int x=g%10;
+		d++;
+		g=g/10;
+		
+	}
+    while(n>0)
+	{
+		e=n%10;
+		r=r+(e*pow(10,d));
+		d--;
+		n=n/10;
+		
+		
+	}
+	printf("%d",r);
+	
+}
