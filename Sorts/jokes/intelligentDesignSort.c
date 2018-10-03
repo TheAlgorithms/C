@@ -1,3 +1,5 @@
+#include<stddef.h> /* size_t */
+
 int* IntelligentDesignSort(int arr[], size_t size) 
 {
     /* 

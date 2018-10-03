@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <math.h>
+#include <stdlib.h> /* abort(), size_t */
+#include <math.h> /* log() */
 
 /* see: https://xkcd.com/1185/ */
 
