@@ -40,6 +40,7 @@
 ## Sorting
 	- binary_insertion_sort
 	- BubbleSort
+	- BucketSort
 	- BogoSort
 	- InsertionSort
 	- mergesort
