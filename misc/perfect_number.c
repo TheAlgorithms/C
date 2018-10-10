@@ -1,4 +1,4 @@
-// C program to checl if a number is perfect or not.
+// C program to check if a number is perfect or not.
 // A perfect number is a positive integer that is equal to the sum of its proper positive divisors.
 #include<stdio.h>
 
