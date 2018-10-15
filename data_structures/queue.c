@@ -31,11 +31,27 @@ int isEmpty();
 //MAIN ENTRY POINT
 
 int main(int argc, char const *argv[]) {
-
+int x,y,z;
     create();
-    enque(5);
 
+do{printf("1.enque 2.deque 3.Exit\n");
+printf("Enter the option\n"); 
+scanf("%d",&z);
+switch(z)
+{
 
+case 1:printf("Enter the item to enque\n");
+	 scanf("%d",&x);
+	 enque(x);
+	 printf("item %d enqued\n",x);
+	  break;
+case 2:y=deque();
+	 printf("item %d dequed\n",y);
+         break;
+case 3:printf("Exited");
+       exit(0);
+default:printf("Entered incorrect option\n");
+}}while(1);
 	return 0;
 }
 
