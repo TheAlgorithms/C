@@ -40,31 +40,27 @@ int main(int argc, char const *argv[]) {
     int x, y, z;
 
     create();
-    push(4);
-    x = pop();
-    // 4. Count: 0. Empty: 1.
-    printf("%d.\t\tCount: %d.\tEmpty: %d.\n", x, size(), isEmpty());
+   
+do{printf("1.Push item to stack 2.Pop item from stack 3.Exit\n");
+printf("Enter the option\n"); 
+scanf("%d",&z);
+switch(z)
+{
 
-    push(1);
-    push(2);
-    push(3);
-    x = pop();
-    y = pop();
-    // 3, 2. Count: 1. Empty: 0;
-    printf("%d, %d.\t\tCount: %d.\tEmpty: %d.\n", x, y, size(), isEmpty());
-    pop();  // Empty the stack.
-
-    push(5);
-    push(6);
-    x = peek();
-    push(7);
-    y = pop();
-    push(8);
-    z = pop();
-    // 1, 6, 7, 8. Count: 2. Empty: 0.
-    printf("%d, %d, %d.\tCount: %d.\tEmpty: %d.\n", x, y, z, size(), isEmpty());
-
+case 1:printf("Enter the item to push\n");
+	 scanf("%d",&x);
+	 push(x);
+	 printf("Pushed %d to stack\n",x);
+	  break;
+case 2:y=pop();
+	 printf("Poped %d from stack\n",y);
+         break;
+case 3:printf("Exited");
+       exit(0);
+default:printf("Entered incorrect option\n");
+}}while(1);
 	return 0;
+
 }
 
 /**
