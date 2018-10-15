@@ -69,7 +69,8 @@
 	- selection sort
 	- shaker sort
 	- heap sort
-	
+	- comb sort
+
 ## Hashing
 	- sdbm
 	- djb2
