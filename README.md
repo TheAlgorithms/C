@@ -42,9 +42,9 @@
 	- BubbleSort
 	- BogoSort
 	- InsertionSort
-	- mergesort
+	- mergesort(Complexity- n(Logn))
 	- OtherBubbleSort
-	- QuickSort
+	- QuickSort (cases of complexities- 1.) max- n^2 2.) Avg- n(Logn))
 	- SelectionSort
 	- shaker_sort
 	- HeapSort
