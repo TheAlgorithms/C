@@ -33,7 +33,7 @@ int main()
 	}
         printf("\n");
 	printf("The permutations of the given array are: \n");
-        permutations(0, numbers, prnt, mark, size);
+	permutations(0, numbers, prnt, mark, size);
         return 0;
 }
 
