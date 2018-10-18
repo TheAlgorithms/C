@@ -10,7 +10,8 @@ int linearsearch(int *arr, int size, int val){
 }
 
 void main(){
-	int s,i,v;
+	while(True){
+	int s,i,v,y;
 	printf("Enter the size of the array:\n");
 	scanf("%d",&s);
 
@@ -24,4 +25,9 @@ void main(){
 		printf("Value %d is in the array.\n", v);
 	else
 		printf("Value %d is not in the array.\n", v);
+	printf("Want to search again press 1");
+	scanf("%d",y);
+	if(y!=1)
+	exit;
+}
 }
