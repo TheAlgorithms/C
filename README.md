@@ -48,6 +48,8 @@
 	- SelectionSort
 	- shaker_sort
 	- HeapSort
+	- BitcoinSort
+	
 	
 ## Hashing
 	- sdbm
