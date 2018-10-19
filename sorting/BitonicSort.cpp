@@ -79,6 +79,6 @@ int main()
         printf("%d ", a[i]); 
     return 0; 
 } 
-Copy Code
+
 
 
