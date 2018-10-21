@@ -16,7 +16,7 @@ int isprime(int no) {
 		return 0;
 	}
 	sq = ((int)(sqrt(no))) + 1;
-	for (int i = 3; i < sq; i + 2) {
+	for (int i = 3; i < sq; i += 2) {
 		if (no%i == 0) {
 			return 0;
 		}
