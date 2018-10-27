@@ -60,12 +60,12 @@
 	- Binning
 	- Factorial
 	- Fibonacci
-	- isArmstrong
+	- IsArmstrong
 	- LongestSubSequence
-	- palindrome
-	- QUARTILE
-	- rselect
-	- strongNumber
+	- Palindrome
+	- Quartile
+	- Rselect
+	- StrongNumber
 	- TowerOfHanoi
 	- Greatest Common Divisor
 	- Sudoku Solver
@@ -73,9 +73,9 @@
 
 ## exercism
 In this directory you will find (in the right order):
-* hello-world
-* isogram
-* acronym
-* word-count
-* rna-transcription
+* Hello-World
+* Isogram
+* Acronym
+* Word-Count
+* RNA-Transcription
 
