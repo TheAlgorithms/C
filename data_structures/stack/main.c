@@ -7,7 +7,7 @@ void peep();
 void update();
 int main()
 {
-    int n,a[100],top=0;
+    int n,a[100],top=-1;
     //function for pushing the element 
     void push()
     {
@@ -19,15 +19,16 @@ int main()
     //function for poping the element out
     void pop()
     {
-        if(top==0)
+        if(top==-1)
         {
             printf("\nstack is empty");
         }
         else
         {
             int item;
-            item=a[top];
-            top=top-1;
+            
+            a[top]=item;
+            top--;
             printf("\npoped item is %d ",item);
         }
     }
@@ -91,6 +92,7 @@ int main()
             break;
         default:
             printf("\ninvalid choice");
+            break;
         }
     }
     return(0);
