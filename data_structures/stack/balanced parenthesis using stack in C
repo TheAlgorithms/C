@@ -44,10 +44,11 @@ char pop(void)	//function for pop
     
 }
 
-int isBalanced(char *s) {		   
+int isBalanced(char *s) //function which returns if the entered expression is balanced or not
+{		   
     int i=0;char x;
- while(s[i]!='\0')	//loop for covering entire string of brackets
- {
+    while(s[i]!='\0')	//loop for covering entire string of brackets
+    {
      if(s[i]=='{'||s[i]=='('||s[i]=='[') //if opening bracket then push
          push(s[i]);
         else 
@@ -57,7 +58,7 @@ int isBalanced(char *s) {
         
             
                x=pop();			
-                if( x=='{'&&s[i]!='}')	
+                if( x=='{'&&s[i]!='}')	//to check if the opening bracket of the same type at the closing one is popped.
                     return 0;
                 if(x=='['&&s[i]!=']')
                     return 0;
@@ -80,9 +81,9 @@ int result;
         scanf("%s",s);
         result = isBalanced(s);
 if(result==1)
-printf("\nYES");
+printf("\nYES");	//prints YES if the expression has balanced paranthesis
 else       
- printf("\nNO");
+ printf("\nNO");	//prints NO if the expression has unbalanced paranthesis
 		
     }
     return 0;
