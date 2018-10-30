@@ -56,7 +56,7 @@
 	- adler_32 (32 bit)
 
 
-## Misc
+## Miscellaneous
 	- Binning
 	- Factorial
 	- Fibonacci
