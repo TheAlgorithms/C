@@ -1,0 +1,86 @@
+#include<stdio.h>
+#define MAX 100
+
+
+struct ht
+{
+ int b,s;
+ 
+}a[MAX];
+
+
+int h(int empno)
+{
+
+return (empno%100);
+}
+
+void htc(int key,int empno)
+{
+int i;
+if(a[key].s == -1)
+{
+a[key].s = empno;
+}
+else
+{
+ i=key+1;
+ while((a[i].s != -1 )&& (i != key))
+ {
+  if(i<MAX)
+  {
+   ++i;
+  }
+  else
+   i=0;
+ }
+ if(i == key){printf("No space !\n");}
+ else a[i].s=empno;
+}
+}
+
+void display()
+{
+int i;
+printf("Bucket:Slot\n");
+for(i=0;i<MAX;++i)
+if(a[i].s != -1)
+{
+printf("%d : %d\n",i,a[i].s);
+}
+}
+
+
+void main()
+{
+int i,n,empno,key;
+
+//printf("Enter number of emps: ");
+//scanf("%d",&n);
+for(i=0;i<MAX;i++)
+{
+a[i].s = -1;
+}
+
+/*for(i=0;i<n;i++)
+{
+printf("Enter id: ");
+scanf("%d",&empno);
+key=h(empno);
+htc(key,empno);
+}*/
+
+FILE *fp;
+fp = fopen("employee.txt","r");
+while(fscanf(fp,"%d",&empno) != EOF)
+{
+//fscanf(fp,"%d",&empno);
+if(fp!=NULL)
+{
+key=h(empno);
+htc(key,empno);
+}
+}
+display();
+fclose(fp);
+}
