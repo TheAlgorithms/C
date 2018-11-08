@@ -1,89 +1,64 @@
 //sorting of linked list using selection sort
-#include<stdio.h>
-struct node 
-{
- int info;
- struct node *link;
-};
-struct node *start=NULL;
-//func to create node
-struct node *createnode()
-{
- struct node *p;
- p=(struct node*)malloc(sizeof(struct node));
- return(p);
+#include <stdio.h>
+
+/*Displays the array, passed to this method*/
+void display(int arr[], int n){
+    
+    int i;
+    for(i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+    
+    printf("\n");
+    
 }
-//program to insert at begining
-void insert()
-{struct node *t;
- t=createnode();
- printf("\nenter the value to insert");
- scanf("%d",&t->info);
- if(start==NULL)
- {start=t;
- }
- else
- {strutc node *p;
-  p=start;
-  t->link=p;
-  start=t;
- }
- //program to sort the linked list using selection sort
- void sort()
- {
-  struct node *p,*t;
-  t=start;
-  int tmp;
-  for(t=start;t->link!=NULL;t=t->link)
-  {
-   for(p=t->link;p!=NULL;p=p->link)
-   {
-    if(t->info>p->info)
-     tmp=t->info;
-    t->info=p->info;
-    p->info=tmp;
-   }
-  }
-  //program to view sorted list
-  void viewlist()
-  {
-   struct node *p;
-   if(start==NULL)
-   {
-    printf("\nlist is empty");
-   }
-   else
-   {
-    p=start;
-   while(p!=NULL)
-   {
-    printf("%d",p->info);
-    p=p->link;
-   }
-  }
- int main()
- {
-  int n;
-  whhile(1)
-  {
-   printf("\n1.insert value at beg");
-   printf("\n2.sort the list");
-   printf("\n3.view value");
-   printf("\nenter your choice");
-   scanf("%d",&n);
-   switch(n)
-   {case 1:
-    insert();
-    break;
-    case 2:
-    sort();
-    break;
-    case 3:
-    viewlist();
-    break;
-    default:
-    printf("\ninvalid choice");
-   }
-  }
-  return(0);
- }
+
+/*Swap function to swap two values*/
+void swap(int *first, int *second){
+    
+    int temp = *first;
+    *first = *second;
+    *second = temp;
+    
+}
+
+/*This is where the sorting of the array takes place
+ arr[] --- Array to be sorted
+ size --- Array Size
+ */
+void selectionSort(int arr[], int size){
+    
+    for(int i=0; i<size; i++) {
+        int min_index = i;
+        for(int j=i+1; j<size; j++) {
+            if(arr[min_index] > arr[j]) {
+                min_index = j;
+            }
+        }
+        swap(&arr[i], &arr[min_index]);
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    int n;
+    printf("Enter size of array:\n");
+    scanf("%d", &n); // E.g. 8
+    
+    printf("Enter the elements of the array\n");
+    int i;
+    int arr[n];
+    for(i = 0; i < n; i++){
+        scanf("%d", &arr[i] );
+    }
+    
+    printf("Original array: ");
+    display(arr, n);                   // Original array : 10 11 9 8 4 7 3 8
+    
+    selectionSort(arr, n);
+    
+    printf("Sorted array: ");
+    display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 11
+    
+    return 0;
+}
+
