@@ -1,35 +1,53 @@
+//sorting of linked list using insertion sort
 #include <stdio.h>
-#incude  <stdlib.h>
-#define MAX 20
 
-//i and j act as counters
-//arraySort is the array that is to be sorted
-//elmtToInsert will be the element that we will be trying to move to its correct index in the current iteration
-
-int main()
-{
-    int i, elmtToInsert , j , arraySort[MAX] = {0};
-
-      for(i = 1 ; i < MAX ;  i++) //This array is being sorted in the ascending order. 
-       {
-           elmtToInsert = arraySort[i]; //Pick up the ith indexed element of the array. It will be the elmtToInsert.
-           j = i - 1 ;
-
-         while(j >= 0 && elmtToInsert < arraySort[j]) /*compare it with each (i-1)th, (i-2)th... max 0th element, till the correct 
-                                                        position of the elmtToInsert, where it is finally greater than the element just
-                                                        before it, is found */   
-          {
-              // You'll enter the loop if the elmtToInsert is less than the element just before it.
-            
-              arraySort[j+1] = arraySort[j]; //shift the current element one place forward to create room for insertion of the elmtToInsert
-              j--;
-          }
-          //when we exit the loop, j+1 will be the index of the correct position of the elmtToInsert
-
-            arraySort[j+1] = elmtToInsert ; //'insert' the elmtToInsert into its correct position
-          
-        }
+/*Displays the array, passed to this method*/
+void display(int arr[], int n){
     
-
-    return EXIT_SUCCESS;
+    int i;
+    for(i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+    
+    printf("\n");
+    
 }
+
+/*This is where the sorting of the array takes place
+ arr[] --- Array to be sorted
+ size --- Array Size
+ */
+void insertionSort(int arr[], int size){
+    int j,temp,i;
+    for(i=0; i<size; i++) {
+        temp = arr[(j=i)];
+        while(--j >= 0 && temp < arr[j]) {
+            arr[j+1] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    int n;
+    printf("Enter size of array:\n");
+    scanf("%d", &n); // E.g. 8
+    
+    printf("Enter the elements of the array\n");
+    int i;
+    int arr[n];
+    for(i = 0; i < n; i++){
+        scanf("%d", &arr[i] );
+    }
+    
+    printf("Original array: ");
+    display(arr, n);                   // Original array : 10 11 9 8 4 7 3 8
+    
+    insertionSort(arr, n);
+    
+    printf("Sorted array: ");
+    display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 11
+    
+    return 0;
+}
+
