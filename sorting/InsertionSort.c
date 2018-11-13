@@ -1,4 +1,4 @@
-//sorting of linked list using insertion sort
+//sorting of array list using insertion sort
 #include <stdio.h>
 
 /*Displays the array, passed to this method*/

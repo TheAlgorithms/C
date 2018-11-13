@@ -1,4 +1,4 @@
-//sorting of linked list using bubble sort
+//sorting of array list using bubble sort
 #include <stdio.h>
 
 /*Displays the array, passed to this method*/

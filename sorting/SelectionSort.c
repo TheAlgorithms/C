@@ -1,4 +1,4 @@
-//sorting of linked list using selection sort
+//sorting of array list using selection sort
 #include <stdio.h>
 
 /*Displays the array, passed to this method*/
