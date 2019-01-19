@@ -38,15 +38,15 @@
 
 
 ## Sorting
-	- binary_insertion_sort
+	- BinaryInsertionSort
 	- BubbleSort
 	- BogoSort
 	- InsertionSort
-	- mergesort
+	- MergeSort
 	- OtherBubbleSort
 	- QuickSort
 	- SelectionSort
-	- shaker_sort
+	- ShakerSort
 	- HeapSort
 	
 ## Hashing
