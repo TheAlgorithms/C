@@ -16,7 +16,7 @@ void main(){
 
 	int a[s];
 	printf("Enter the contents for an array of size %d:\n", s);
-	for (i = 0; i < s; i++)	scanf("%d", &a[i]);
+	for (i = 0; i < s; i++)	scanf("%d", &a[i]);// accepts the values of array elements until the loop terminates//
 
 	printf("Enter the value to be searched:\n");
 	scanf("%d", &v);

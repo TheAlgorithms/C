@@ -1,70 +1,62 @@
-// Heap sort
 #include <stdio.h>
 
-void printArr(int *A, int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        printf("%d ", A[i]);
-    }
-    printf("\n");
+void heapify(int *unsorted, int index, int heap_size);
+void heap_sort(int *unsorted, int n);
+
+int main() {
+	int n = 0;
+	int i = 0;
+	char oper;
+
+	int* unsorted;
+	printf("Enter the size of the array you want\n");
+	scanf("%d", &n);
+	unsorted = (int*)malloc(sizeof(int) * n);
+	while (getchar() != '\n');
+	printf("Enter numbers separated by a comma:\n");
+	while (i != n) {
+		scanf("%d,", (unsorted + i));
+		i++;
+	}
+	heap_sort(unsorted, n);
+
+	printf("[");
+	printf("%d", *(unsorted));
+	for (int i = 1; i < n; i++) {
+		printf(", %d", *(unsorted + i));
+	}
+	printf("]");
 }
 
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void heapify(int *unsorted, int index, int heap_size) {
+	int temp;
+	int largest = index;
+	int left_index = 2 * index;
+	int right_index = 2 * index + 1;
+	if (left_index < heap_size && *(unsorted + left_index) > *(unsorted + largest)) {
+		largest = left_index;
+	}
+	if (right_index < heap_size && *(unsorted + right_index) > *(unsorted + largest)) {
+		largest = right_index;
+	}
+
+	if (largest != index) {
+		temp = *(unsorted + largest);
+		*(unsorted + largest) = *(unsorted + index);
+		*(unsorted + index) = temp;
+		heapify(unsorted, largest, heap_size);
+	}
 }
 
-// heap looks like
-// 9 1 2 8 3 4 7 5
-//  9   8   4   7
-//     9       7
-//         9
-// the array is heap mean arr[i]>max(arr[i*2+1],arr[i*2+2])
-// the arr[0] is max of the array
-void heapShift(int *arr, int index, int size)
-{
-    // put arr[index] to arr[index+1..size-1] follow heap
-    int i = index;
-    int j = 2 * i + 1;
-    while (j < size)
-    {
-        if (j != size - 1) // there exist j and j+1
-        {
-            if (arr[j + 1] > arr[j]) // find max of arr[j] and arr[j+1]
-                j++;
-        }
-        if (arr[i] > arr[j]) // already heap
-            break;
-        swap(&arr[i], &arr[j]);
-        // move i, j
-        i = j;
-        j = i * 2 + 1;
-    }
-}
-
-void heapSort(int *arr, int size)
-{
-    // the array is split to to half
-    // just care the first half to put heap
-    for (int i = size / 2; i >= 0; i--)
-    {
-        heapShift(arr, i, size);
-    }
-    for (int i = size - 1; i >= 0; i--)
-    {
-        swap(&arr[0], &arr[i]); // move max of array to the end
-        heapShift(arr, 0, i);   // find max of arr[0..i-1], move to arr[0]
-    }
-}
-
-int main()
-{
-    int A[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-    int size = sizeof(A) / sizeof(A[0]);
-    heapSort(A, size);
-    printArr(A, size);
-    return 0;
+void heap_sort(int *unsorted, int n) {
+	int temp;
+	for (int i = n / 2 - 1; i > -1; i--) {
+		heapify(unsorted, i, n);
+	}
+	for (int i = n - 1; i > 0; i--) {
+		temp = *(unsorted);
+		*(unsorted) = *(unsorted + i);
+		*(unsorted + i) = temp;
+		heapify(unsorted, 0, i);
+	}
 }

@@ -5,6 +5,7 @@ float f(float x)
 {
 	return 1.0+x*x*x; //This is the expresion of the function to integrate?
 }
+
 void main()
 {
 	int i,n;
@@ -20,14 +21,14 @@ void main()
 	h=(b-a)/n;
 	sum=f(a)+f(b);
 	s2=s3=0.0;
-	
-	for(i=1;i<n;i+=3)
+
+  for(i=1;i<n;i+=3)
 	{
 		x=a+i*h;
 		s3=s3+f(x)+f(x+h);
 	}
-	
-	for(i=3;i<n;i+=3)
+
+  for(i=3;i<n;i+=3)
 	{
 		x=a+i*h;
 		s2=s2+f(x);

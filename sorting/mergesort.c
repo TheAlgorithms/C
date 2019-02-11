@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap (int *a,int *b)
+void swap (int *a,int *b)//To swap the variables//
 {
     int t;
     t= *a;
@@ -9,7 +9,7 @@ void swap (int *a,int *b)
     
 }
 
-void merge(int a[],int l,int r,int n)
+void merge(int a[],int l,int r,int n)//To merge //
 {  int *b = (int*)malloc(n*sizeof(int));
 int c=l;
     int p1,p2;
@@ -64,7 +64,7 @@ void mergesort(int a[],int n,int l,int r)
     }
     
 }
-int main(void) {
+int main(void) {   //main function//
 int *a,n,i;
 scanf("%d",&n);
 a = (int*)malloc(n*sizeof(int));
