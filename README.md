@@ -69,6 +69,7 @@
 	- TowerOfHanoi
 	- Greatest Common Divisor
 	- Sudoku Solver
+	- prime factorization
 
 
 ## exercism
