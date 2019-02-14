@@ -100,12 +100,10 @@ int main(void)
     for (int a0 = 0; a0 < t; a0++)
     {
         char s[SIZE];
-        int result;
         printf("\nPlease enter the expression? ");
         scanf("%s", s);
-        result = isBalanced(s);
 
-        if (result == 1)
+        if (isBalanced(s))
             printf("\nYES\n");
         else
             printf("\nNO\n");
