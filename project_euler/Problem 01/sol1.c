@@ -1,19 +1,24 @@
-/*
-If we list all the natural numbers below 10 that are multiples of 3 or 5, 
-we get 3, 5, 6 and 9. The sum of these multiples is 23.
-Find the sum of all the multiples of 3 or 5 below 1000.
-*/
+/*An Efficient code to print all the sum of all numbers that are multiples of 3 & 5 below N.*/
+
 #include <stdio.h>
 
-int main() {
-	int n = 0;
-	int sum = 0;
-	scanf("%d", &n);
-	for (int a = 0; a < n; a++) {
-		if ((a % 3 == 0) || (a % 5 == 0)) {
-			sum += a;
-		}
-	}
+int main(){
+    int t; 
+    scanf("%d",&t);
+    while(t--)
+    {
+        unsigned long long N,p=0,sum=0;	
+         
+        scanf("%lld",&N);	//Take input of N from user
+        p = (N-1)/3;
+        sum = ((3*p*(p+1))/2);
 
-	printf("%d\n", sum);
+        p = (N-1)/5;
+        sum = sum + ((5*p*(p+1))/2);
+
+        p = (N-1)/15;
+        sum = sum - ((15*p*(p+1))/2);
+        printf("%lld\n", sum);		//print the sum of all numbers that are multiples of 3 & 5 below N
+    }
+    return 0;
 }
