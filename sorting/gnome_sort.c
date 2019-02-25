@@ -8,6 +8,7 @@ void sort(int *numbers, int size)
     {
         if (numbers[pos] >= numbers[pos-1])
             pos++;
+
         else 
         {
             int tmp = numbers[pos-1];
