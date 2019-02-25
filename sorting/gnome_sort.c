@@ -18,6 +18,7 @@ void sort(int *numbers, int size)
 
             if (pos == 0)
                 pos = 1;
+
         }
     }
 }
