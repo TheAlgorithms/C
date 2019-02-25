@@ -34,6 +34,13 @@ void sort (int *numbers, int size)
     }	
 }
 
+void display(int *array, int n)
+{
+    for (int i = 0; i < n; ++i)
+        printf("%d ", array[i]);
+    printf("\n");
+}
+
 int main()
 {
     int size = 6;
@@ -42,14 +49,10 @@ int main()
     for (int i = 0; i < size; ++i)
         scanf("%d", &numbers[i]);
     printf("Initial array: ");
-    for (int i = 0; i < size; ++i)
-        printf("%d ", numbers[i]);
-    printf("\n");
+    display(numbers, size); 
     sort(numbers, size);
     printf("Sorted array: ");
-    for (int i = 0; i < size; ++i)
-        printf("%d ", numbers[i]);
-    printf("\n");
+    display(numbers, size); 
     free(numbers);
     return 0;
 }
