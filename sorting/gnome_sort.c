@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 void sort(int *numbers, int size)
 {
 	int pos = 0;
@@ -16,6 +17,7 @@ void sort(int *numbers, int size)
 		}
 	}
 }
+
 int main()
 {
 	int size = 6;
