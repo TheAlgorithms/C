@@ -7,14 +7,16 @@ void mask(int number){
 	unsigned int mask = 0;
     //crates mask 0b1111..1111
 	mask = ~((~(unsigned)0)>>1);
-    
+    int oneencountered = 0;
 	while (mask != 0){
 		//if current bit is 1
 		if ((number & mask) != 0){
 			printf ("1");
+			oneencountered = 1;
 		}
 		else {
-			printf ("0");
+		    if(oneencountered)
+			    printf ("0");
 		}
 	//shift mask 1 position to the right
 	mask >>= 1;
