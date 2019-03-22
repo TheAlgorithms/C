@@ -25,8 +25,10 @@ int main(void) {
 		else
 			number[i] = base + 1;
 		
-		if (number[i] > base)
+		if (number[i] >= base){
 			printf("invalid number\n");
+			return 0;
+		}
 	}
 	
 	for (j = 0; j < i; j++) {
