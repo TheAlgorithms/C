@@ -2,47 +2,67 @@
 #include <stdlib.h>
 #include <time.h>
 
-void shellSort(int array[], int value){
-  int i = value;
-  int j, k, tmp;
-  for (i = value / 2; i > 0; i = i / 2){
-    for (j = i; j < value; j++){
-      for(k = j - i; k >= 0; k = k - i){
-        if (array[k+i] >= array[k]){
-          break;
-        }
-        else{
-          tmp = array[k];
-          array[k] = array[k+i];
-          array[k+i] = tmp;
-        }
-      }
-    }
-  }
+#define ELEMENT_NR 20
+#define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
+const char *notation = "Shell Sort Big O Notation:\
+						\n--> Best Case: O(n log(n)) \
+						\n--> Average Case: depends on gap sequence \
+						\n--> Worst Case: O(n)";
+
+void show_data(int arr[], int len)
+{
+    int i;
+
+    for (i = 0; i < len; i++)
+        printf("%3d ", arr[i]);
+    printf("\n");
 }
 
+void swap(int *a, int *b)
+{
+    int tmp;
 
-int main(){
+    tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
 
-    int array[20];
+void shellSort(int array[], int len)
+{
+    int i, j, gap;
+
+    for (gap = len / 2; gap > 0; gap = gap / 2)
+        for (i = gap; i < len; i++)
+            for (j = i - gap; j >= 0 && array[j] > array[j + gap]; j = j - gap)
+                swap(&array[j], &array[j + gap]);
+}
+
+int main(int argc, char *argv[])
+{
+    int i;
+    int array[ELEMENT_NR];
     int range = 500;
-    for(int i = 0; i < 100; i++){
-     array[i] = rand() % range + 1;
-    }
-    int size = sizeof array / sizeof array[0];
+    int size;
+    clock_t start, end;
+    double time_spent;
 
+    srand(time(NULL));
+    for (i = 0; i < ELEMENT_NR; i++)
+        array[i] = rand() % range + 1;
 
+    size = ARRAY_LEN(array);
 
-    clock_t start = clock();
-    shellSort(array,size);
-    clock_t end = clock();
-    double time_spent = (double)(end - start) / CLOCKS_PER_SEC;
-
+    show_data(array, size);
+    start = clock();
+    shellSort(array, size);
+    end = clock();
+    time_spent = (double)(end - start) / CLOCKS_PER_SEC;
 
     printf("Data Sorted\n");
-    printf("%s\n", "Shell Sort Big O Notation:\n--> Best Case: O(n log(n))\n--> Average Case: depends on gap sequence\n--> Worst Case: O(n)\n");
+    show_data(array, size);
+
+    printf("%s\n", notation);
     printf("Time spent sorting: %f\n", time_spent);
 
-  return 0;
+    return 0;
 }
-
