@@ -85,4 +85,4 @@ This directory contains
 * client.c
 * server.c
 
-First execute server.c in a terminal and then client.c in a diferrent terminal. Enables communication between two terminals.
+First execute server.c in a terminal and then client.c in a different terminal. Enables communication between two terminals.
