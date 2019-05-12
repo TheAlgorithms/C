@@ -7,12 +7,12 @@ void naive_search(char *str, char *pattern)
     int len_str = strlen(str);
     int len_pat = strlen(pattern);
 
-    for(int i = 0; i <= len_str - len_pat; i++)
+    for (int i = 0; i <= len_str - len_pat; i++)
     {
         int j;
-        for(j = 0; j < len_pat; j++)
+        for (j = 0; j < len_pat; j++)
         {
-            if(str[i + j] != pattern[j])
+            if (str[i + j] != pattern[j])
                 break;
         }
         if (j == len_pat)
@@ -24,7 +24,7 @@ int main()
 {
     char str[] = "AABCAB12AFAABCABFFEGABCAB";
     char pat1[] = "ABCAB";
-    char pat2[] = "FFF";    /* not found */
+    char pat2[] = "FFF"; /* not found */
     char pat3[] = "CAB";
 
     printf("String test: %s\n", str);
