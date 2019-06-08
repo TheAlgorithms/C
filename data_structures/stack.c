@@ -88,6 +88,7 @@ void push(int x) {
         tmp->data = x;
         tmp->next = NULL;
         tmp->pre = head;
+        head->next = tmp;
         head = tmp;
     }
     ++count;
@@ -104,8 +105,10 @@ int pop() {
     } else {
         returnData = head->data;
 
-        if(head->pre == NULL)
+        if(head->pre == NULL){
+            free(head);
             head = NULL;
+        }
         else {
             head = head->pre;
             free(head->next);
