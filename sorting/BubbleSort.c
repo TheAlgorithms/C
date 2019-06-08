@@ -14,23 +14,27 @@ void display(int arr[], int n){
 }
 
 /*Swap function to swap two values*/
-void swap(int *first, int *second){
-    
-    int temp = *first;
-    *first = *second;
-    *second = temp;
-    
+void swap(int *first, int *second)
+{
+    *first ^= *second;
+    *second ^= *first;
+    *first ^= *second;
 }
 
-/*This is where the sorting of the array takes place
+/*This is where the sorting of the array takes place (from small to large)
  arr[] --- Array to be sorted
  size --- Array Size
  */
-void bubbleSort(int arr[], int size){
-    
-    for(int i=0; i<size-1; i++) {
-        for(int j=0; j<size-1; j++) {
-            if(arr[j]>arr[j+1]) {
+void bubbleSort(int arr[], int size)
+{    
+    int i, j;
+
+    for (i = size; i >= 0; i--)
+    {
+        for (j = 0; j < i-1; j++)
+        {
+            if (arr[j] > arr[j+1])
+            {
                 swap(&arr[j], &arr[j+1]);
             }
         }

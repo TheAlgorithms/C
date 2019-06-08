@@ -13,7 +13,7 @@ void display(int arr[], int n){
     
 }
 
-/*This is where the sorting of the array takes place
+/*This is where the sorting of the array takes place (from small to large)
  arr[] --- Array to be sorted
  size --- Array Size
  */
@@ -23,8 +23,9 @@ void insertionSort(int arr[], int size){
         temp = arr[(j=i)];
         while(--j >= 0 && temp < arr[j]) {
             arr[j+1] = arr[j];
-            arr[j] = temp;
+            //arr[j] = temp;
         }
+        arr[j+1] = temp;
     }
 }
 
