@@ -4,10 +4,12 @@
 
 int main(){
     int t; 
+    printf("Enter number of times you want to try");
     scanf("%d",&t);
     while(t--)
     {
         unsigned long long N,p=0,sum=0;	
+        printf("Enter the value of N ");
          
         scanf("%lld",&N);	//Take input of N from user
         p = (N-1)/3;
