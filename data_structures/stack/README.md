@@ -1,4 +1,4 @@
-# Simple generic Stack 
+# Simple generic Stack
 
 This is a modular generic stack data-structure. The stack is self growing.
 
@@ -6,7 +6,8 @@ This is a modular generic stack data-structure. The stack is self growing.
 
 * stack-Header file for import.
 * stack.c implementation of the stack
-* main.c framework program for testing. 
+* main.c framework program for testing.
+* stack_linkedlist: Another stack implementation by linkedlist
 
 You need to only import the **stack.h**
 
@@ -18,7 +19,7 @@ Initializes the stack with a capacity of 10 elements.
 
 ``` void push(void * object); ```
 
-pushs the argument onto the stack 
+pushs the argument onto the stack
 
 ``` void  * pop(); ```
 
