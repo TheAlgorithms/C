@@ -42,7 +42,7 @@ void initStack()
     grow: increases the stack by 10 elements.
           This utility function isn't part of the public interface
 */
-void grow()
+void  grow(void ** oldMemory)
 {
     max += 10; /* increases the capacity */
 
@@ -52,10 +52,11 @@ void grow()
     /* copies the elements from the origin array in the new one. */
     for (i = 0; i < max - 10; i++)
     {
-        *(tmp + i) = *(array + i);
+        *(tmp + i) = *(oldMemory + i);
     }
-
-    array = tmp; /* setups the new one as basis */
+    /*free the memory */
+    free(oldMemory);
+    array = tmp;  
 }
 
 /* push: pushs the argument onto the stack */
@@ -81,7 +82,7 @@ void push(void *object)
     else /* stack is full */
     {
 
-        grow(); /* lets grow stack */
+        grow(array); /* lets grow stack */
         push(object); /* recursive call */
     }
 }
