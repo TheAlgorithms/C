@@ -1,6 +1,14 @@
 #include <stdio.h>
-#include "swap.h"
 #define range 10
+
+int MAX(int ar[], int size1){
+    int i, max1 = ar[0];
+    for(i = 0; i<size1; i++){
+        if(ar[i]>max1)
+            max1 = ar[i];
+    }
+    return max1;
+}
 
 void countsort(int arr[],int n,int place)
 {
