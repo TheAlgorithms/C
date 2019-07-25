@@ -40,7 +40,12 @@
 ## Sorting
 	- BinaryInsertionSort
 	- BubbleSort
+	- BucketSort
 	- BogoSort
+	- CountingSort
+	- PartitionSort
+	- ShellSort
+	- RadixSort
 	- InsertionSort
 	- MergeSort
 	- OtherBubbleSort
