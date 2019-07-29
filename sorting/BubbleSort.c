@@ -1,5 +1,6 @@
 //sorting of array list using bubble sort
 #include <stdio.h>
+#include <stdbool.h>
 
 /*Displays the array, passed to this method*/
 void display(int arr[], int n){
@@ -29,11 +30,14 @@ void swap(int *first, int *second){
 void bubbleSort(int arr[], int size){
     
     for(int i=0; i<size-1; i++) {
-        for(int j=0; j<size-1; j++) {
+    	bool swapped = false;
+        for(int j=0; j<size-1-i; j++) {
             if(arr[j]>arr[j+1]) {
                 swap(&arr[j], &arr[j+1]);
+                swapped = true;
             }
         }
+        if(!swapped) break;
     }
 }
 
