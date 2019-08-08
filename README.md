@@ -1,4 +1,8 @@
-# C
+C
+========
+
+## LeetCode Algorithm
+    - Solution for [LeetCode](https://leetcode.com/problemset/all/)
 
 ## Computer Oriented Statistical Methods
 	- Gauss_Elimination
@@ -21,13 +25,13 @@
 	- stack
 	- queue
 	- dictionary
-	linked_list
+	- linked_list
 		- singly_link_list_deletion
 		- stack_using_linkedlists
-	binary_trees
+	- binary_trees
 		- create_node
 		- recursive_traversals
-	trie
+	- trie
 		- trie
 
 
@@ -48,7 +52,7 @@
 	- SelectionSort
 	- ShakerSort
 	- HeapSort
-	
+
 ## Hashing
 	- sdbm
 	- djb2
