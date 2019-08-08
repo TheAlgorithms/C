@@ -36,15 +36,24 @@ C
 
 
 ## Searching
+	- Linear_Search
 	- Binary_Search
 	- Other_Binary_Search
 	- Jump_Search
+	- Fibonacci_Search
+	- Interpolation_Search
+	- Modified_Binary_Search
 
 
 ## Sorting
 	- BinaryInsertionSort
 	- BubbleSort
+	- BucketSort
 	- BogoSort
+	- CountingSort
+	- PartitionSort
+	- ShellSort
+	- RadixSort
 	- InsertionSort
 	- MergeSort
 	- OtherBubbleSort
