@@ -2,7 +2,8 @@ C
 ========
 
 ## LeetCode Algorithm
-    - Solution for [LeetCode](https://leetcode.com/problemset/all/)
+
+- Solution for [LeetCode](https://leetcode.com/problemset/all/)
 
 ## Computer Oriented Statistical Methods
 	- Gauss_Elimination
