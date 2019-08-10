@@ -23,7 +23,8 @@ void sort(int *numbers, int size)
 
 void display(int *array, int n)
 {
-    for (int i = 0; i < n; ++i)
+    int i;
+    for (i = 0; i < n; ++i)
         printf("%d ", array[i]);
     printf("\n");
 }
