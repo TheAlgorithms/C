@@ -31,9 +31,10 @@ void display(int *array, int n)
 int main()
 {
     int size = 6;
+    int i;
     int *numbers = malloc(size*sizeof(int));
     printf("Insert %d unsorted numbers: \n", size);
-    for (int i = 0; i < size; ++i)
+    for (i = 0; i < size; ++i)
         scanf("%d", &numbers[i]);
     printf("Initial array: ");
     display(numbers, size);
