@@ -17,5 +17,6 @@ LeetCode
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
 |704|[Binary Search](https://leetcode.com/problems/binary-search/) | [C](./src/704.c)|Easy|
 |709|[To Lower Case](https://leetcode.com/problems/to-lower-case/) | [C](./src/709.c)|Easy|
+|771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [C](./src/771.c)|Easy|
 |905|[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | [C](./src/905.c)|Easy|
 |917|[Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) | [C](./src/917.c)|Easy|
