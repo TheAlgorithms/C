@@ -51,7 +51,9 @@ C
 	- BubbleSort
 	- BucketSort
 	- BogoSort
+	- comb_sort
 	- CountingSort
+	- gnome_sort
 	- PartitionSort
 	- ShellSort
 	- RadixSort
