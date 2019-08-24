@@ -1,8 +1,7 @@
 /*Includes structure for a node which can be use to make new nodes of the Linked List.
   It is assumed that the data in nodes will be an integer, though
   function can be modified according to the data type, easily.
-  deleteNode deletes a node when passed with a key of the node.
-*/
+  deleteNode deletes a node when passed with a */
 #include<stdio.h>
 struct node
 {int info;
