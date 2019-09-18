@@ -13,6 +13,7 @@ LeetCode
 |101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [C](./src/101.c)|Easy|
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C](./src/104.c)|Easy|
 |108|[Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [C](./src/108.c)|Easy|
+|110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | [C](./src/110.c)|Easy|
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C](./src/125.c)|Easy|
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C](./src/141.c)|Easy|
@@ -20,19 +21,25 @@ LeetCode
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C](./src/217.c)|Easy|
+|226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C](./src/226.c)|Easy|
 |234|[Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [C](./src/234.c)|Easy|
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C](./src/268.c)|Easy|
 |287|[Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [C](./src/287.c)|Medium|
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [C](./src/344.c)|Easy|
 |387|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | [C](./src/387.c)|Easy|
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [C](./src/389.c)|Easy|
+|404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [C](./src/442.c)|Medium|
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
+|617|[Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [C](./src/617.c)|Easy|
 |700|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | [C](./src/700.c)|Easy|
+|701|[Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | [C](./src/701.c)|Medium|
 |704|[Binary Search](https://leetcode.com/problems/binary-search/) | [C](./src/704.c)|Easy|
 |709|[To Lower Case](https://leetcode.com/problems/to-lower-case/) | [C](./src/709.c)|Easy|
 |771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [C](./src/771.c)|Easy|
 |876|[Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | [C](./src/876.c)|Easy|
 |905|[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | [C](./src/905.c)|Easy|
 |917|[Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) | [C](./src/917.c)|Easy|
+|938|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/) | [C](./src/938.c)|Easy|
+|965|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/) | [C](./src/965.c)|Easy|
