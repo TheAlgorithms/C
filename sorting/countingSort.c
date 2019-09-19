@@ -7,7 +7,6 @@ int main()
 	int i, n, l = 0;
 	scanf("%d", &n);
 
-	assert(n < 1e7);
 	int a[n];
 
 
@@ -19,8 +18,6 @@ int main()
 		if (a[i] > l)
 			l = a[i];
 	}
-	// to save us from accidenty declaring insanely large array
-	assert(l < 1e7);
 	// In C,it is considered a bad practice to initialise a array at definition that was initialised at runtime 
 	int b[l + 1];
 	// Initialising all the values to zero
