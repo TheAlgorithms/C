@@ -1,0 +1,39 @@
+/*
+Ioannis Sykas Leriotis  29/09/19
+
+
+Devlali is number that cannot be written
+as the sum of any other smaller natural number i
+and the individual digits of i.
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int n,i,flag=0;
+   printf("give me a  number");
+   scanf("%d",&n);
+
+   for(i=0;i<=n;i++){
+
+    if(n==i+i%10+(i/10)%10){
+        //printf("%d is not a devliali number\n",n);
+        flag=1;
+        break;
+    }else{
+        flag=0;
+    }
+   }
+   if(flag==0){
+     printf("%d is  a devliali number\n",n);
+   }else{
+      printf("%d is not a devliali number\n",n);
+   }
+
+   // printf("Hello world!\n");
+    return 0;
+}
