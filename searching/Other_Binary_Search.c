@@ -10,25 +10,23 @@ int binarySearch(int array[], int leng, int searchX)
 	left = 0;
 	right = leng - 1;
 
-	for (i = 0; i < leng; i++)
+	while(left <= right)
 	{
-		pos = (left + right) / 2;
-
-		if (array[pos] == searchX)
+		pos = left + (right - left) / 2;
+		if(array[pos] == searchX)
+		{
 			return pos;
+		}
+		else if(array[pos] > searchX)
+		{
+			right = pos - 1;
+		}
 		else
 		{
-			if (array[pos] < searchX)
-				left = pos + 1;
-			else
-			{
-				right = pos - 1;
-			}
+			left = pos + 1;
 		}
 	}
-
-
-
+	return -1; /* not found */
 }
 
 
