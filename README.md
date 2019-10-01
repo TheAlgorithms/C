@@ -87,6 +87,15 @@ C
 	- Sudoku Solver
 	- prime factorization
 
+## Project Euler
+	- Problem 1
+	- Problem 2
+	- Problem 3
+	- Problem 4
+	- Problem 5
+	- Problem 6
+	- Problem 7
+
 
 ## exercism
 In this directory you will find (in the right order):
