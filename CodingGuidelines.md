@@ -17,5 +17,6 @@ What want the program an user informations?
 See [here](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html) 
 
 Don't push all code in one line!  
-Do use comments to make it more readable and understandable to other non programmer people.
+Do use comments to make it more readable and understandable.
 use proper names for variables used in program.
+Do use functions for consise coding.
