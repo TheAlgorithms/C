@@ -56,6 +56,7 @@ C
 	- gnome_sort
 	- PartitionSort
 	- ShellSort
+	syntex error
 	- RadixSort
 	- InsertionSort
 	- MergeSort
