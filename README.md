@@ -21,10 +21,16 @@ C
 	- decimal_to_hexa
 	- decimal_to_octal
 	- to_decimal
+	- octal_to_decimal
+	- octal_to_binary
+	- octal_to_hexa
+	- binary_to_octal
+	- binary_to_hexa
 
 ## Data Structures
 	- stack
 	- queue
+	- array
 	- dictionary
 	- linked_list
 		- singly_link_list_deletion
@@ -32,8 +38,9 @@ C
 	- binary_trees
 		- create_node
 		- recursive_traversals
-	- trie
+	- tree
 		- trie
+	- graphs
 
 
 ## Searching
@@ -44,6 +51,10 @@ C
 	- Fibonacci_Search
 	- Interpolation_Search
 	- Modified_Binary_Search
+	- Hash_search
+	- Binary_tree_search
+	- Interval_search
+	- Exponential_search
 
 
 ## Sorting
