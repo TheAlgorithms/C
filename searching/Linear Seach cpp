@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e5;
+
+int main(){
+  srand(time(NULL));
+  int v[N];
+  for(int i=0; i<N; i++){
+    v[i] = rand()%N;
+  }
+  int search = rand()%N;
+  int index = -1;
+  for(int i=0; i<N; i++){
+    if(v[i] == search){
+      index = i;
+      break;
+    }
+  }
+  if(index == -1){
+    printf("Not Found\n");
+  }
+  else{
+    printf("Found %d at index: %d\n", search, index);
+  }
+
+}
