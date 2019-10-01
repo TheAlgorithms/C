@@ -36,18 +36,18 @@ int main()
                   24, 33, 35, 42, 47};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    printf("Array: ");
+    printf("Array entered: ");
     for(int i = 0; i < n; i++)
         printf("%d ", arr[i]);
-    printf("\nEnter the number to be searched: ");
+    printf("\nEnter the number to be located: ");
     scanf("%d",&x); /* Element to be searched */
 
     int index = interpolationSearch(arr, n, x);
 
     /* If element was found */
     if (index != -1)
-        printf("Element found at position: %d\n", index);
+        printf("Element located at position: %d\n", index);
     else
-        printf("Element not found.\n");
+        printf("Element not located.\n");
     return 0;
 }
