@@ -1,3 +1,5 @@
+'''STACK USING LINKED LIST IS PERFORMED HERE'''
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node
@@ -37,20 +39,16 @@ int main()
 
 void push(struct node *p)
 {
+	
 	int item;
 	struct node *temp;
 	temp=(struct node *)malloc(sizeof(struct node));
 	printf("enter element to be inserted\n");
 			scanf("%d",&item);
 			temp->info=item;
-			
-
-    
-			temp->link=top;
-		top=temp;
 		
-	
-
+    			temp->link=top;
+		top=temp;
 	printf("inserted succesfully\n");
 }
 void pop(struct node *p)
@@ -90,3 +88,4 @@ void display(struct node *p)
 }
 
 
+'''WORKING CODE'''
