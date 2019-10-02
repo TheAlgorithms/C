@@ -44,7 +44,7 @@ LeetCode
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [C](./src/389.c)|Easy|
 |404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [C](./src/442.c)|Medium|
-|469|[factorial algo](leetcode/src/469.c) | [C](leetcode/src/469.c)|Easy|
+|469|[factorial algo](https://github.com/leegamer42/C/blob/master/leetcode/src/469.c) | [C](leetcode/src/469.c)|Easy|
 |509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [C](./src/509.c)|Easy|
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
