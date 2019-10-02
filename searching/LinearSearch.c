@@ -10,17 +10,17 @@ int linearsearch(int *arr, int size, int val){
 }
 
 void main(){
-	int s,i,v;
+	int n,i,v;
 	printf("Enter the size of the array:\n");
-	scanf("%d",&s);
+	scanf("%d",&n); //Taking input for the size of Array
 
-	int a[s];
+	int a[n];
 	printf("Enter the contents for an array of size %d:\n", s);
-	for (i = 0; i < s; i++)	scanf("%d", &a[i]);// accepts the values of array elements until the loop terminates//
+	for (i = 0; i < n; i++)	scanf("%d", &a[i]);// accepts the values of array elements until the loop terminates//
 
 	printf("Enter the value to be searched:\n");
-	scanf("%d", &v);
-	if (linearsearch(a, s, v))
+	scanf("%d", &v); //Taking input the value to be searched
+	if (linearsearch(a,n,v))
 		printf("Value %d is in the array.\n", v);
 	else
 		printf("Value %d is not in the array.\n", v);
