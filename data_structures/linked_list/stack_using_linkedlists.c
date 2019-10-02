@@ -6,35 +6,6 @@ struct node
 	struct node *link;
 };
 struct node *top=NULL,*temp;
-void  push(struct node*);
-void pop(struct node*);
-void display(struct node*);
-
-int main()
-{ 
- int x=0,item;  
- printf("\t****stack using linked list****\n");
-	while(x!=4)
-	{
-		printf("enter your choice");
-		printf("\n1.push\n2.pop\n3.display\n4.exit\n");
-		scanf("%d",&x);
-		switch(x)
-		{
-			case 1:
-			     push(top);
-			   break;
-			case 2: pop(top);
-		  break;
-			case 3: display(top);
-			      break;
-			case 4: return 0;
-			      
-		}
-	}
-	
-}
-
 void push(struct node *p)
 {
 	int item;
@@ -70,7 +41,6 @@ void pop(struct node *p)
 	
 }
 
-
 void display(struct node *p)
 {
 	
@@ -88,5 +58,33 @@ void display(struct node *p)
 	}
 
 }
+int main()
+{ 
+ int x=0,item;  
+ printf("\t****stack using linked list****\n");
+	while(1)
+	{
+		printf("enter your choice");
+		printf("\n1.push\n2.pop\n3.display\n4.exit\n");
+		scanf("%d",&x);
+		switch(x)
+		{
+			case 1:
+			   push(top);
+			   break;
+			case 2: 
+                           pop(top);
+		           break;
+			case 3: 
+                           display(top);
+			   break;
+			case 4: 
+                            exit(1);
+			      
+		}
+	}
+	
+}
+
 
 
