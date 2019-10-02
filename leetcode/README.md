@@ -6,11 +6,12 @@ LeetCode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1|[Two Sum](https://https://leetcode.com/problems/two-sum/) | [C](./src/1.c)|Easy
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C](./src/3.c)|Medium|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
-|27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
+|27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
@@ -20,8 +21,8 @@ LeetCode
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C](./src/104.c)|Easy|
 |108|[Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [C](./src/108.c)|Easy|
 |109|[Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C](./src/109.c)|Medium|
-|112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
 |110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | [C](./src/110.c)|Easy|
+|112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C](./src/125.c)|Easy|
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C](./src/141.c)|Easy|
