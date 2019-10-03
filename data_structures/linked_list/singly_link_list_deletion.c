@@ -1,77 +1,90 @@
-/*Includes structure for a node which can be use to make new nodes of the Linked List.
-  It is assumed that the data in nodes will be an integer, though
-  function can be modified according to the data type, easily.
-  deleteNode deletes a node when passed with a key of the node.
+/* 
+ *Includes structure for a node which can be use to make new nodes of the Linked List. 
+ *It is assumed that the data in nodes will be an integer, though 
+ *function can be modified according to the data type, easily. 
+ *deleteNode deletes a node when passed with a key of the node.
 */
+
 #include<stdio.h>
+
 struct node
-{int info;
- struct node *link;
+{
+	int info;
+	struct node *link;
 };
-struct node *start=NULL;
-///////////////////////////////////////////////////////////
-struct node * createnode()//function to create node
+
+struct node *start = NULL;
+
+struct node *createnode()
 {
-  struct node *t;
-  t=(struct node*)malloc(sizeof(struct node));
-  return(t);
+	struct node *new;
+	new = (struct node*)malloc(sizeof(struct node));
+	if (new == NULL) {
+		new = NULL;
+		goto out_failure;
+	}
+	
+out_success:
+	return new;
+out_failure:
+	return new;
 }
-////////////////////////////////////////////////////////
-void insert()//function to insert at first location
+
+void insert()
 {
-  struct node *p;
-  p=createnode();
-  printf("\nenter the number to insert");
-  scanf("%d",&p->info);
-  p->link=NULL;
-  if(start==NULL)
-  {
-      start=p;
-  }
-  else
-  {
-      p->link=start;
-      start=p;
-  }
+	struct node *p;
+	p = createnode();
+
+	printf("\nenter the number to insert");
+	scanf("%d",&p->info);
+
+	p->link=NULL;
+
+	if(start==NULL){
+		start=p;
+	}else{
+		p->link=start;
+		start=p;
+	}
 }
-///////////////////////////////////////////////////////////
-void deleteion()//function to delete from first position
+
+void deleteion()
 {
-    struct node *t;
-    if(start==NULL)
-    {
-        printf("\nlist is empty");
-    }
-    else
-    {
-        struct node *p;
-        p=start;
-        start=start->link;
-        free(p);
-    }
+	struct node *t;
+	if(start==NULL)
+	{
+		printf("\nlist is empty");
+	}
+	else
+	{
+		struct node *p;
+		p=start;
+		start=start->link;
+		free(p);
+	}
 }
-///////////////////////////////////////////////////////
-void viewlist()//function to display values
+
+void viewlist()
 {
-    struct node *p;
-    if(start==NULL)
-    {
-        printf("\nlist is empty");
-    }
-    else
-    {   p=start;
-        while(p!=NULL)
-        {
-            printf("%d ",p->info);
-            p=p->link;
-        }
-    }
+	struct node *p;
+	if(start==NULL)
+	{
+		printf("\nlist is empty");
+	}
+	else
+	{   p=start;
+		while(p!=NULL)
+		{
+			printf("%d ",p->info);
+			p=p->link;
+		}
+	}
 }
-//////////////////////////////////////////////////////////////////////
 
 int main()
 {
     int n;
+
     while(1)
     {
         printf("\n1.add value at first location");
@@ -79,20 +92,21 @@ int main()
         printf("\n3.view value");
         printf("\nenter your choice");
         scanf("%d",&n);
-        switch(n)
+
+	switch(n)
         {
         case 1:
-            insert();
-            break;
+		insert();
+		break;
         case 2:
-            deleteion();
-            break;
+		deleteion();
+		break;
         case 3:
-            viewlist();
-            break;
+		viewlist();
+		break;
         default:
-            printf("\ninvalid choice");
+		printf("\ninvalid choice");
         }
     }
-  return(0);
+    return(0);
 }
