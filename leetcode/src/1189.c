@@ -3,46 +3,36 @@ int maxNumberOfBalloons(char * text){
         0 -> b, 
         1 -> a,
         2 -> l,
-        3 -> l,
-        4 -> o,
-        5 -> o,
-        6 -> n
+        3 -> o,
+        4 -> n
     */
-    int count_letters[7] = {0};
+    int count_letters[5] = {0};
+    int i, min_counter_ballons;
     
-    /* Count the number of each letter */
-    for(int i = 0; text[i] != '\0'; i++){
-        if(text[i] == 'b') {
+    for (char *ptr = text; *ptr; ptr++) {
+        if(*ptr == 'b') {
             count_letters[0]++;
-        }else if(text[i] == 'a') {
+        }else if(*ptr == 'a') {
             count_letters[1]++;
-        }else if(text[i] == 'l') {
+        }else if(*ptr == 'l') {
             count_letters[2]++;
+        }else if(*ptr == 'o') {
             count_letters[3]++;
-        }else if(text[i] == 'o') {
+        }else if(*ptr == 'n') {
             count_letters[4]++;
-            count_letters[5]++;
-        }else if(text[i] == 'n') {
-            count_letters[6]++;
         }
     }
     
     /* Divide by 2 the repeted letters */
     count_letters[2] /= 2;
     count_letters[3] /= 2;
-    count_letters[4] /= 2;
-    count_letters[5] /= 2;
     
     /* Max number of times which we can write ballon is equal to min value of letters on count_letter */
-    int min_counter_ballons;
-    for(int i = 0; i < 7; i++){
-        if(i == 0){
+    min_counter_ballons = count_letters[0];
+    for(i = 1; i < 5; i++){
+        if(count_letters[i] < min_counter_ballons)
             min_counter_ballons = count_letters[i];
-        }else if(count_letters[i] < min_counter_ballons){
-            min_counter_ballons = count_letters[i];
-        }
     }
     
     return min_counter_ballons;
 }
-
