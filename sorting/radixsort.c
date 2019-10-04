@@ -73,7 +73,7 @@ int main(int argc, const char * argv[]){
     int max;
     max = MAX(arr,n);
     
-    radixsort(arr, n, max);
+    radixsort(arr, n, max);          //Time complexity is O(bn) where b is no of bits in base m representation and n is no of elements to be sorted 
     
     printf("Sorted array: ");
     display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 11
