@@ -1,5 +1,26 @@
+int reverse(int x){
+    long res = 0;
+    while (x != 0)
+    {
+        int tail = x % 10;
+        res = res * 10 + tail;
+        /* Check overflow */
+        if (res > INT_MAX || res < INT_MIN)
+            return 0;
+        x = x / 10;
+    }
+    return (int)res;
+}
 
-
+bool isPalindrome(int x) {
+    if (x < 0)
+        return 0;
+    else
+        return x == reverse(x);
+}
+/*
+//For system which supports only 32-bit data.
+//ie. when it is specified that you can only use int
 bool isPalindrome(int x){
     if(x < 0)
     {
@@ -47,4 +68,4 @@ int reverse(int x){
         x /=10;
     }
     return sum*flag;
-}
+}*/

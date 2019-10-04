@@ -1,4 +1,21 @@
 int reverse(int x){
+    long res = 0;
+    while (x != 0)
+    {
+        int tail = x % 10;
+        res = res * 10 + tail;
+        /* Check overflow */
+        if (res > INT_MAX || res < INT_MIN)
+            return 0;
+        x = x / 10;
+    }
+    return (int)res;
+}
+
+/*
+//For system which supports only 32-bit data.
+//ie. when it is specified that you can only use int
+int reverse(int x){
     int sum = 0;
     int tmp = 0;
     int flag = 1;
@@ -33,3 +50,4 @@ int reverse(int x){
     }
     return sum*flag;
 }
+*/
