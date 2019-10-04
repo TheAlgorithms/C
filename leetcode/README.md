@@ -32,6 +32,7 @@ LeetCode
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [C](./src/169.c)|Easy|
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [C](./src/173.c)|Medium|
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C](./src/190.c)|Easy|
+|191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C](./src/191.c)|Easy|
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [C](./src/203.c)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
@@ -47,7 +48,6 @@ LeetCode
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [C](./src/389.c)|Easy|
 |404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [C](./src/442.c)|Medium|
-|461|[Hamming Distance](https://leetcode.com/problems/hamming-distance/) | [C](./src/461.c)|Easy|
 |509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [C](./src/509.c)|Easy|
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
