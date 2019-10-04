@@ -75,7 +75,7 @@ for (i=0;i<n;i++)
     
 }
 
-mergesort(a,n,0,n-1);
+mergesort(a,n,0,n-1);          //Time complexity is O(nlog(n)) can be found using masters theorem since recurrence relation is T(n)=2T(n/2)+n;
 for (i=0;i<n;i++)
 {
     
