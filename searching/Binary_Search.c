@@ -31,7 +31,7 @@ int main(void)
    //set value to look for
    int x = 10;
    // set result to what is returned from binarysearch
-   int result = binarysearch(arr, 0, n-1, x);
+   int result = binarysearch(arr, 0, n-1, x);    //Time complexity of binary search is O(log(n))
    // print out result
    (result == -1) ? printf("Element is not in the array\n")
                  : printf("Element is present at index %d\n", result);
