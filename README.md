@@ -53,6 +53,7 @@ C
 	- BogoSort
 	- comb_sort
 	- CountingSort
+	- Cycle Sort
 	- gnome_sort
 	- PartitionSort
 	- ShellSort
