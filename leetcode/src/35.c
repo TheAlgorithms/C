@@ -22,5 +22,4 @@ int searchInsert(int* nums, int numsSize, int target){
         return searchInsert(nums, numsSize - 1, target);
     }
     return 0;
-    
 }
