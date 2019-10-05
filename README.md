@@ -60,6 +60,7 @@ C
 	- InsertionSort
 	- MergeSort
 	- OtherBubbleSort
+	- PancakeSort
 	- QuickSort
 	- SelectionSort
 	- ShakerSort
