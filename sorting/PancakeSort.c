@@ -20,13 +20,13 @@ void flip(int arr[], int i)
 // Returns index of the maximum element in arr[0..n-1]  
 int findMax(int arr[], int n) 
 { 
-int maxElementIdx, i;
+    int maxElementIdx, i;
 
-for (maxElementIdx = 0, i = 0; i < n; ++i) 
-    if (arr[i] > arr[maxElementIdx]) 
-            maxElementIdx = i;
+    for (maxElementIdx = 0, i = 0; i < n; ++i) 
+        if (arr[i] > arr[maxElementIdx]) 
+                maxElementIdx = i;
 
-return maxElementIdx; 
+    return maxElementIdx; 
 } 
   
 // Sorts the array using flip operations 
