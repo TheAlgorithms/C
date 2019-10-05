@@ -22,7 +22,6 @@
  * Output: u(t) - Controller output at time t.
  */
 #include <stdio.h>
-#include <stdbool.h>
 
 struct pid {
     // Controller gains
@@ -31,7 +30,6 @@ struct pid {
     float kD;
 
     // State variables
-    bool hasInit;
     float lastError;
     float integral;
 };
@@ -54,8 +52,8 @@ int main() {
     printf("PID Controller Example\n");
 
     struct pid controller = {
-        .hasInit = false,
         .lastError = 0,
+        .integral = 0
     };
 
     // Take the controller gains from the user
@@ -70,7 +68,7 @@ int main() {
     float time_step = 1;
 
     float error_value;
-    while (true) {
+    while (1) {
         printf("Enter error value\n>");
         scanf("%f", &error_value);
 
