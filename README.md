@@ -63,6 +63,7 @@ C
 	- QuickSort
 	- SelectionSort
 	- ShakerSort
+	- TimSort
 	- HeapSort
 
 ## Hashing
