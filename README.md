@@ -86,6 +86,7 @@ C
 	- Greatest Common Divisor
 	- Sudoku Solver
 	- prime factorization
+	- PID Controller
 
 ## Project Euler
 	- Problem 1
