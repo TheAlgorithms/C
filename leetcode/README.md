@@ -13,6 +13,7 @@ LeetCode
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C](.src/7.c)|Easy|
 |8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C](./src/8.c) |Medium|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
+|21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C](./src/21.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
