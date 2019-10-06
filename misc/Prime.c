@@ -8,8 +8,11 @@ int isPrime(int x) {
     if (x < 2 || x % 2 == 0) {
         return 0;
     }
-    for (int i = 3; i < sqrt(x); i += 2) {
-        if (x%i == 0)
+    
+    double squareRoot = sqrt(x);
+    
+    for (int i = 3; i < squareRoot; i += 2) {
+        if (x % i == 0)
             return 0;
     }
     return 1;
