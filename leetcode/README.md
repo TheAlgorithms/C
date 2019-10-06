@@ -8,6 +8,8 @@ LeetCode
 |---| ----- | -------- | ---------- |
 |1|[Two Sum](https://https://leetcode.com/problems/two-sum/) | [C](./src/1.c)|Easy
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C](./src/3.c)|Medium|
+|7|[Reverse of a number with 32-bit overflow check](https://leetcode.com/problems/reverse-integer/) | [C](./src/7.c)|Easy|
+|9|[Pallidrome number without converting to string and 32-bt overflow check](https://leetcode.com/problems/palindrome-number/) | [C](./src/9.c)|Easy|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
