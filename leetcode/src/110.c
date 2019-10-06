@@ -1,5 +1,8 @@
+/* Ternary operator is a conditonal statement . It executes statement 1 if condition is 
+True else it executes statement 2 */
+
 int max(int a, int b) {
-    return a >= b ? a : b;
+    return (a >= b) ? (a): (b);
 }
 
 int height(struct TreeNode* root) {
