@@ -71,6 +71,9 @@ C
 	- xor8 (8 bit)
 	- adler_32 (32 bit)
 
+## Cryptography
+	- RC4
+
 
 ## Misc
 	- Binning
