@@ -1,32 +1,75 @@
-int myAtoi(char* str) {
-    int val = 0;
-    int i = 0;
-    int len = 0;
-    int dig = 0;
-    int neg_flag = 0;
-    
-    len = strlen(str);
-    if(!len)
-        return val;
-    
-    /* Get rid of whitespaces */
-    for(i = 0; i < len && str[i] == ' '; i++);
-    
-    if(str[i] == '-') {
-        neg_flag = 1;
-        i++;
-    } else if(str[i] == '+') {
-        i++;
-    }
-    
-    for(; str[i] >= '0' && str[i] <= '9'; i++) {
-        dig = str[i] - '0';
-        if(val > INT_MAX / 10 || val == INT_MAX / 10 && dig > 7)
-            return neg_flag ? INT_MIN : INT_MAX;
-        
-        val = (val * 10) + dig;
-    }
-    
-    return neg_flag ? (-1 * val) : val;
-}
+int myAtoi(char * str){
+    int i = 0, len = strlen(str),p =0,flag =1;
+    long sum = 0;
+    int flagw = 0;
+    char c,p1;
+    for (i = 0; i <len; i++)
+    {
+        c = str[i];
+        switch(c)
+        {
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '0':
+                flagw = 1;
+                sum = sum*10 + (c-48);
 
+                if(flag == 1 && sum > pow(2,31)-1)
+                {
+                        return INT_MAX;
+                } else if(flag == -1 && sum > pow(2,31))
+                {
+
+                    return INT_MIN;
+                }
+                continue;
+
+            case '-':
+                if(flagw == 1)
+                    return sum*flag;
+                 p1=str[i+1];
+                p = p1;
+                if(p >= 48 && p <=57)
+                {
+                    flag = -1;
+                    continue;
+                }
+                else
+                    return 0;
+                break;
+            case ' ':
+                if(flagw == 1)
+                    return sum*flag;
+                continue;
+                break;
+            case '+':
+                if(flagw == 1)
+                    return sum*flag;
+                p1 = str[i+1];
+                p = p1;
+                if(p>=48 && p<= 57)
+                {
+
+                    flag = 1;
+                    continue;
+                } else{
+                    return 0;
+                }
+                continue;
+            default:
+                if((c < 48 || c > 57) && flagw != 1 )
+                    return 0;
+                else if((c < 48 || c > 57) && flagw == 1)
+                    return sum*flag;
+        }
+    }
+
+    return sum*flag;
+}

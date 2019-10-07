@@ -12,9 +12,28 @@ int reverse(int x){
     return (int)res;
 }
 
+bool isPalindrome(int x) {
+    if (x < 0)
+        return 0;
+    else
+        return x == reverse(x);
+}
 /*
 //For system which supports only 32-bit data.
 //ie. when it is specified that you can only use int
+bool isPalindrome(int x){
+    if(x < 0)
+    {
+        return false;
+    }
+    int y = x;
+    int sum = reverse(x);
+    if(sum == y)
+        return true;
+    else
+        return false;
+}
+
 int reverse(int x){
     int sum = 0;
     int tmp = 0;
@@ -49,5 +68,4 @@ int reverse(int x){
         x /=10;
     }
     return sum*flag;
-}
-*/
+}*/

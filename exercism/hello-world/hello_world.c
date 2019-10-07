@@ -4,10 +4,12 @@
 
 const char *hello(void)
 {
-    char * ans = malloc(sizeof(char) * strlen("Hello, World!"));
-    if (!ans) return NULL;
-    strcpy(ans,"Hello, World!");
-
-    /* string is pointer of the first character */
+    char * ans = malloc(sizeof(char) * strlen("Hello, World!") + 1); /* Allocate as many bytes as needed +1 for the NUL-terminator*/
+    if (!ans) {
+        return NULL;
+    }
+    
+    strcpy(ans, "Hello, World!");
+    
     return  ans;
 }
