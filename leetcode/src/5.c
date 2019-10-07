@@ -1,9 +1,6 @@
 char * longestPalindrome(char * s){
 	char *result = NULL;
-	int strSize = 0;
-	for(int i = 0; *(s+i) != '\0'; i++){
-		strSize = i + 1;
-	}
+	int strSize = strlen(s);
 	int start = 0;
 	int end = 0;
 	int largest = 0;
