@@ -1,5 +1,3 @@
-
-
 int myAtoi(char * str){
     int i = 0, len = strlen(str),p =0,flag =1;
     long sum = 0;
