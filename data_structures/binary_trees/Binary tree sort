@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include<stdlib.h>
+ 
+ 
+struct Node{
+    int value;
+    struct Node *left, *right;
+};
+ 
+ 
+struct Node *newNode(int value){
+    struct Node *node = malloc(sizeof *node);
+    node->value = value;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
+ 
+ 
+struct Node *insert(struct Node *node, int value){
+    if(node == NULL)
+         return newNode(value);
+    if(value < node->value)
+        node->left = insert(node->left, value);
+    else if (value > node->value)
+        node->right = insert(node->right, value);
+    return node;
+}
+ 
+ 
+int collect(struct Node *root, int T[], int i){
+    if(root != NULL){
+        i = collect(root->left, T, i);
+        T[i] = root->value;
+        i = collect(root->right, T, i + 1);
+    }
+    return i;
+}
+ 
+void binary_tree_sort(int T[], int n){
+    struct Node *root = NULL;
+    int i;
+    for(i = 0; i < n; i++)
+        root = insert(root, T[i]);
+    collect(root, T, 0);
+}
+ 
+ 
+int main(void){
+    int TAB[] = {47, 39, 1, 45, 11};
+    int n = sizeof(TAB)/sizeof(TAB[0]);
+    binary_tree_sort(TAB, n);
+    int i;
+    for(i = 0; i < n; i++)
+        printf("%d ", TAB[i]);
+    return 0;
+}
