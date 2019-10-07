@@ -37,14 +37,14 @@ void bubbleSort(int arr[], int size) {
     }
 }
 
+//Driver Code
 int main(int argc, const char * argv[]) {
-    int n;
+    int n, i;
     printf("Enter size of array:\n");
     scanf("%d", &n); // E.g. 8
     
     printf("Enter the elements of the array\n");
-    int i;
-    int arr[n];
+    int arr[n];                                       //Declaring an array of size n and type int                      
     for(i = 0 ; i < n ; i++){
         scanf("%d", &arr[i] );
     }
