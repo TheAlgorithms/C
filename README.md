@@ -17,12 +17,9 @@ C
 
 ## Conversions
 	- binary_to_decimal
-	- binary_to_hexa
-	- binary2octal
 	- decimal _to_binary
 	- decimal_to_hexa
 	- decimal_to_octal
-	- from_decimal
 	- to_decimal
 
 ## Data Structures
