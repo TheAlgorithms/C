@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*Displays the array, passed to this method*/
-void display(int arr[], int n){
+void display(int arr[], int n) {
     
     int i;
     for(i = 0; i < n; i++){
@@ -14,7 +14,7 @@ void display(int arr[], int n){
 }
 
 /*Swap function to swap two values*/
-void swap(int *first, int *second){
+void swap(int *first, int *second) {
     
     int temp = *first;
     *first = *second;
@@ -26,10 +26,10 @@ void swap(int *first, int *second){
  arr[] --- Array to be sorted
  size --- Array Size
  */
-void bubbleSort(int arr[], int size){
+void bubbleSort(int arr[], int size) {
     
-    for(int i=0; i<size-1; i++) {
-        for(int j=0; j<size-1; j++) {
+    for(int i = 0 ; i < size - 1 ; i++) {
+        for(int j = 0 ; j < size - 1 ; j++) {
             if(arr[j]>arr[j+1]) {
                 swap(&arr[j], &arr[j+1]);
             }
@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
     printf("Enter the elements of the array\n");
     int i;
     int arr[n];
-    for(i = 0; i < n; i++){
+    for(i = 0 ; i < n ; i++){
         scanf("%d", &arr[i] );
     }
     

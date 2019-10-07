@@ -6,11 +6,19 @@ LeetCode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [C](./src/1.c)|Easy
+|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [C](./src/2.c)|Medium|
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C](./src/3.c)|Medium|
+|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [C](./src/4.c)|Hard|
+|7|[Reverse of a number with 32-bit overflow check](https://leetcode.com/problems/reverse-integer/) | [C](./src/7.c)|Easy|
+|8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C](./src/8.c) |Medium|
+|9|[Pallidrome number without converting to string and 32-bt overflow check](https://leetcode.com/problems/palindrome-number/) | [C](./src/9.c)|Easy|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
-|27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
+|21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C](./src/21.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
+|27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
+|28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [C](./src/28.c)|Easy|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
@@ -20,8 +28,8 @@ LeetCode
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C](./src/104.c)|Easy|
 |108|[Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [C](./src/108.c)|Easy|
 |109|[Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C](./src/109.c)|Medium|
-|112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
 |110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | [C](./src/110.c)|Easy|
+|112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C](./src/125.c)|Easy|
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C](./src/141.c)|Easy|
@@ -29,6 +37,9 @@ LeetCode
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C](./src/153.c)|Medium|
 |160|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [C](./src/160.c)|Easy|
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [C](./src/169.c)|Easy|
+|173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [C](./src/173.c)|Medium|
+|190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C](./src/190.c)|Easy|
+|191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C](./src/191.c)|Easy|
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [C](./src/203.c)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
@@ -44,6 +55,8 @@ LeetCode
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [C](./src/389.c)|Easy|
 |404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [C](./src/442.c)|Medium|
+|461|[Hamming Distance](https://leetcode.com/problems/hamming-distance/) | [C](./src/461.c) |Easy|
+|476|[Number Complement](https://leetcode.com/problems/number-complement/) | [C](./src/476.c)|Easy|
 |509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [C](./src/509.c)|Easy|
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
@@ -61,3 +74,4 @@ LeetCode
 |938|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/) | [C](./src/938.c)|Easy|
 |965|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/) | [C](./src/965.c)|Easy|
 |977|[Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | [C](./src/977.c)|Easy|
+|1189|[Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | [C](./src/1189.c)|Easy|

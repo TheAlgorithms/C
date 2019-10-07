@@ -14,6 +14,9 @@ What want the program an user informations?
 
 ## Code style conventions  
 
-See [here](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)  
-Don't push all code in one line!  
+See [here](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html) 
 
+Don't push all code in one line!  
+Do use comments to make it more readable and understandable.
+use proper names for variables used in program.
+Do use functions for consise coding.
