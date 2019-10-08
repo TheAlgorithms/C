@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main (){
+    double A,B,C;
+    
+    //Reading three values
+    scanf("%lf",&A);
+    scanf("%lf",&B);
+    scanf("%lf",&C);
+    
+    //Printing respective area
+    printf("TRIANGLE: %0.3lf\n",(A*C)/2);
+    printf("CIRCLE: %0.3lf\n",3.14159*(C*C));
+    printf("TRAPEZIO: %0.3lf\n",(A+B)*C/2);
+    printf("SQUARE: %0.3lf\n",B*B);
+    printf("RECTANGLE: %0.3lf\n",A*B);
+    return(0);
+}
