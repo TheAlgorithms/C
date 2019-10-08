@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
  
  //Function prototype
 int check_anagram(char [], char []);
@@ -10,10 +11,12 @@ int main()
   char a[100], b[100];
  
   printf("Enter a string\n");
-  gets(a);
+  fgets(a, 100, stdin);
+  strtok(a, "\n");
  
   printf("Enter a string\n");
-  gets(b);
+  fgets(b, 100, stdin);
+  strtok(b, "\n");
  
   if (check_anagram(a, b) == 1)
     printf("The strings are anagrams.\n");
