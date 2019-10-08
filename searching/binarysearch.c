@@ -21,7 +21,7 @@ int main(){
     
     int vet[] = {1,2,3,4,5,6,7,8,9,10}, res; //Here I create a array called vet, with ten positions, and a variable called res
     
-    res = binarySearch(vet, 5, 9); //Now I call my binarySearch function, I send to my function my array called vet, the number that I wanna find
+    res = binarySearch(vet, 5, 10); //Now I call my binarySearch function, I send to my function my array called vet, the number that I wanna find
                                    //in my array and the size of my array, respectivly.
     
     printf("%d", res); //Now, I just show what my binarySearch sent to me, it show -1 if the number isn't in the array and if 
