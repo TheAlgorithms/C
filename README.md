@@ -87,7 +87,8 @@ C
 
 
 ## Misc
-	- Binning
+	- Prime
+	- Primes in range
 	- Factorial
 	- Fibonacci
 	- isArmstrong
