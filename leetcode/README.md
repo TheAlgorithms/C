@@ -14,6 +14,7 @@ LeetCode
 |7|[Reverse of a number with 32-bit overflow check](https://leetcode.com/problems/reverse-integer/) | [C](./src/7.c)|Easy|
 |8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C](./src/8.c) |Medium|
 |9|[Pallidrome number without converting to string and 32-bt overflow check](https://leetcode.com/problems/palindrome-number/) | [C](./src/9.c)|Easy|
+|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C](./src/11.c)|Medium|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C](./src/21.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
@@ -21,6 +22,7 @@ LeetCode
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [C](./src/28.c)|Easy|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
+|42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [C](./src/42.c)|Hard|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
 |83|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [C](./src/83.c)|Easy|
@@ -35,6 +37,7 @@ LeetCode
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C](./src/141.c)|Easy|
 |142|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | [C](./src/142.c)|Medium|
+|152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C](./src/152.c)|Medium|
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C](./src/153.c)|Medium|
 |160|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [C](./src/160.c)|Easy|
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [C](./src/169.c)|Easy|
@@ -47,6 +50,7 @@ LeetCode
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C](./src/217.c)|Easy|
 |226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C](./src/226.c)|Easy|
 |234|[Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [C](./src/234.c)|Easy|
+|238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C](./src/238.c)|Medium|
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C](./src/268.c)|Easy|
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [C](./src/278.c)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [C](./src/283.c)|Easy|
