@@ -14,6 +14,7 @@ LeetCode
 |7|[Reverse of a number with 32-bit overflow check](https://leetcode.com/problems/reverse-integer/) | [C](./src/7.c)|Easy|
 |8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C](./src/8.c) |Medium|
 |9|[Pallidrome number without converting to string and 32-bt overflow check](https://leetcode.com/problems/palindrome-number/) | [C](./src/9.c)|Easy|
+|13|[Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C](./src/13.c)|Easy|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C](./src/21.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
