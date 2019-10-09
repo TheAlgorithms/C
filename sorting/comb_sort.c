@@ -27,6 +27,7 @@ void display(int *array, int n)
     int i;
     for (i = 0; i < n; ++i)
         printf("%d ", array[i]);
+	
     printf("\n");
 }
 
@@ -38,11 +39,13 @@ int main()
 	int i;
 	for (i = 0; i < size; ++i)
 		scanf("%d", &numbers[i]);
+	
 	printf("Initial array: ");
-    display(numbers, size);	
-    sort(numbers, size);
+    	display(numbers, size);	
+    	sort(numbers, size);
 	printf("Sorted array: ");
-    display(numbers, size);
-    free(numbers);
+    	display(numbers, size);
+    	free(numbers);
+	
 	return 0;
 }
