@@ -52,7 +52,7 @@ int main(int argc, const char * argv[]) {
     printf("Original array: ");
     display(arr, n);                   // Original array : 10 11 9 8 4 7 3 8
     
-    bubbleSort(arr, n);
+    bubbleSort(arr, n);               //Time Complexity of bubble sort is O(n^2) since in the function two for loops are there
     
     printf("Sorted array: ");
     display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 11
