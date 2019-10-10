@@ -1,7 +1,9 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+//Definig functions
 void heapify(int *unsorted, int index, int heap_size);
 void heap_sort(int *unsorted, int n);
+//Main function
 
 int main() {
 	int n = 0;
@@ -28,6 +30,7 @@ int main() {
 	printf("]");
 }
 
+// Make sures that heapifying rules are followed(Parent must be grater than its child) for i'th index element.
 void heapify(int *unsorted, int index, int heap_size) {
 	int temp;
 	int largest = index;
@@ -48,12 +51,13 @@ void heapify(int *unsorted, int index, int heap_size) {
 	}
 }
 
+//Heap sort which calls for heapifying from its leaves parents. 
 void heap_sort(int *unsorted, int n) {
 	int temp;
 	for (int i = n / 2 - 1; i > -1; i--) {
 		heapify(unsorted, i, n);
 	}
-	for (int i = n - 1; i > 0; i--) {
+	for (int i = n - 1; i >= 0; i--) {
 		temp = *(unsorted);
 		*(unsorted) = *(unsorted + i);
 		*(unsorted + i) = temp;
