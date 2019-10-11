@@ -86,6 +86,7 @@ C
 	- Greatest Common Divisor
 	- Sudoku Solver
 	- prime factorization
+	- Knapsack Problem
 
 ## Project Euler
 	- Problem 1
