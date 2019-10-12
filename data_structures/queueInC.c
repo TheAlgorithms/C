@@ -88,7 +88,7 @@ int lenght(Queue *q){
 int main(){
     
     Queue *left, *right;
-    int i, c, cont, flag = 1, viagem = 0;
+    int i, c, cont = 0, flag = 1, viagem = 0;
     int l, m, it;
     int actual, total = 0, total2 = 0;
     char side[max];
