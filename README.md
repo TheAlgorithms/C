@@ -21,6 +21,8 @@ C
 	- decimal_to_hexa
 	- decimal_to_octal
 	- to_decimal
+	- hexa_to_octal
+
 
 ## Data Structures
 	- stack
@@ -73,19 +75,20 @@ C
 
 
 ## Misc
+	- ArmstrongNumber	
 	- Binning
 	- Factorial
 	- Fibonacci
+	- Greatest Common Divisor	
 	- isArmstrong
 	- LongestSubSequence
 	- palindrome
+	- prime factorization	
 	- QUARTILE
 	- rselect
 	- strongNumber
-	- TowerOfHanoi
-	- Greatest Common Divisor
-	- Sudoku Solver
-	- prime factorization
+	- Sudoku Solver	
+	- TowerOfHanoi	
 
 ## Project Euler
 	- Problem 1
