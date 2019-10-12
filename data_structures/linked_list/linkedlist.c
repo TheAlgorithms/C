@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 typedef struct link{
     char element;
     struct link *next;
@@ -140,11 +136,4 @@ char getValue(List *l){
         return -1;
     }
     return l->curr->next->element;
-}
-
-#define max 100000
-
-int main(){
-    
-    return 0;
 }
