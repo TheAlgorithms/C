@@ -11,3 +11,15 @@ int searchInsert(int* nums, int numsSize, int target){
     }
     return low;
 }
+
+/* Recursive version */
+int searchInsert(int* nums, int numsSize, int target){
+    int idx = numsSize - 1;
+    if(numsSize>0){
+        if (target > nums[idx]){
+            return numsSize;
+        }
+        return searchInsert(nums, numsSize - 1, target);
+    }
+    return 0;
+}

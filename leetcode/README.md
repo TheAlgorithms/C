@@ -24,6 +24,7 @@ LeetCode
 |109|[Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C](./src/109.c)|Medium|
 |110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | [C](./src/110.c)|Easy|
 |112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
+|121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C](./src/121.c)|Easy|
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C](./src/125.c)|Easy|
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C](./src/141.c)|Easy|
@@ -50,6 +51,7 @@ LeetCode
 |404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [C](./src/442.c)|Medium|
 |461|[Hamming Distance](https://leetcode.com/problems/hamming-distance/) | [C](./src/461.c) |Easy|
+|476|[Number Complement](https://leetcode.com/problems/number-complement/) | [C](./src/476.c)|Easy|
 |509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [C](./src/509.c)|Easy|
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
