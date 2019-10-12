@@ -2,8 +2,17 @@
 #include <math.h>
 
 int isPrime(int x) {
-    for (int i = 2; i < sqrt(x); i++) {
-        if (x%i == 0)
+    if (x == 2) {
+        return 1;
+    }
+    if (x < 2 || x % 2 == 0) {
+        return 0;
+    }
+    
+    double squareRoot = sqrt(x);
+    
+    for (int i = 3; i <= squareRoot; i += 2) {
+        if (x % i == 0)
             return 0;
     }
     return 1;
