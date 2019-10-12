@@ -8,6 +8,7 @@ LeetCode
 |---| ----- | -------- | ---------- |
 |1|[Two Sum](https://https://leetcode.com/problems/two-sum/) | [C](./src/1.c)|Easy
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C](./src/3.c)|Medium|
+|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [C](./src/4.c)|Hard|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
@@ -53,6 +54,7 @@ LeetCode
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [C](./src/520.c)|Easy|
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [C](./src/561.c)|Easy|
 |617|[Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [C](./src/617.c)|Easy|
+|647|[Palindromic Substring](https://leetcode.com/problems/palindromic-substrings/) | [C](./src/647.c)|Medium|
 |674|[Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) | [C](./src/674.c)|Easy|
 |700|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | [C](./src/700.c)|Easy|
 |701|[Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | [C](./src/701.c)|Medium|
@@ -66,4 +68,7 @@ LeetCode
 |938|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/) | [C](./src/938.c)|Easy|
 |965|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/) | [C](./src/965.c)|Easy|
 |977|[Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | [C](./src/977.c)|Easy|
+|1089|[Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/) | [C](./src/1089.c)|Easy|
+|1184|[Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) | [C](./src/1184.c)|Easy|
 |1189|[Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | [C](./src/1189.c)|Easy|
+|1207|[Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) | [C](./src/1207.c)|Easy|
