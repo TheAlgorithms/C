@@ -126,7 +126,7 @@ int main(){
                     total += actual;
                 }
             }
-            flag = (++flag)%2;
+            flag = (flag+1)%2;
             viagem++;
         }
         printf("%d\n", viagem);
