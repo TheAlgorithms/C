@@ -6,7 +6,7 @@ struct TreeNode * newNode (int item) {
 }
 
 struct TreeNode* mergeTrees(struct TreeNode* t1, struct TreeNode* t2){
-    if(t1 == NULL && t2 == NULL)
+    if (t1 == NULL && t2 == NULL)
         return NULL;
     int item = (t1 == NULL ? 0 : t1->val) + (t2 == NULL ? 0 : t2->val);
     struct TreeNode *node = newNode(item);
