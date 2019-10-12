@@ -1,27 +1,17 @@
-int maxProfit(int* prices, int pricesSize){
-	/* If there is only only one day, profit cannot be made
-	 */
-	if(pricesSize <= 1) {
-		return 0;
-	}
-	int min_element = prices[0];
-	int max_difference = prices[1] - min_element;
-	for(int i = 0; i < pricesSize; i++) {
-		/* whenever maximum profit can be made, we sell the stock.
-		 * so we have to change to the new higher difference
-		 */
-		if(prices[i] - min_element > max_difference) {
-			max_difference = prices[i] - min_element;
-		}
-		/* if a cheaper stock is available, we make that the minimum element
-		 */
-		if(min_element > prices[i]) {
-			min_element = prices[i];
-		}
-	}
-	/* return 0 if max_difference is less than zero, incase there is no way of making profits
-	 */
-	return (max_difference < 0)? 0 : max_difference;
+int maxcmp(int a, int b) {
+	return (a >= b)? a : b;
 }
 
-
+/* max subarray problem by using Kadane's Algorithm
+ */
+int maxProfit(int* prices, int pricesSize){
+	/* maxCur: current maximum 
+	 * maxSoFar: found maximum for subarray so far
+	 */
+	int maxCur = 0, maxSoFar = 0;
+	for(int i = 1; i < pricesSize; i++) {
+		maxCur = maxcmp(0, maxCur + prices[i] - prices[i - 1]);
+		maxSoFar = maxcmp(maxSoFar, maxCur);
+	}
+	return maxSoFar;
+}
