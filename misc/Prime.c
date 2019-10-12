@@ -11,7 +11,7 @@ int isPrime(int x) {
     
     double squareRoot = sqrt(x);
     
-    for (int i = 3; i < squareRoot; i += 2) {
+    for (int i = 3; i <= squareRoot; i += 2) {
         if (x % i == 0)
             return 0;
     }
