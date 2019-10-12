@@ -21,7 +21,7 @@ C
 	- decimal_to_hexa
 	- decimal_to_octal
 	- to_decimal
-        - hexa_to_octal
+	- hexa_to_octal
 
 
 ## Data Structures
