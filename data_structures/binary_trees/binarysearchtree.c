@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 typedef struct bstNode{
     char element[10];
     int key;
@@ -127,9 +123,4 @@ void visit_pos(BSTNode *rt){
 		visit_pos(rt->right);
 		free(rt);
     }
-}
-
-int main(){
-
-    return 0;
 }
