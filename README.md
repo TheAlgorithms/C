@@ -75,20 +75,21 @@ C
 
 
 ## Misc
-	- ArmstrongNumber	
+	- ArmstrongNumber
 	- Binning
 	- Factorial
 	- Fibonacci
-	- Greatest Common Divisor	
+	- Greatest Common Divisor
 	- isArmstrong
 	- LongestSubSequence
-	- palindrome
-	- prime factorization	
+	- palindrome (Numbers)
+	- palidrome (strings)
+	- prime factorization
 	- QUARTILE
 	- rselect
 	- strongNumber
-	- Sudoku Solver	
-	- TowerOfHanoi	
+	- Sudoku Solver
+	- TowerOfHanoi
 
 ## Project Euler
 	- Problem 1
