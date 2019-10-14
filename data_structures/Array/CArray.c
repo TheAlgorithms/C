@@ -33,6 +33,8 @@
 
 void swap(CArray *array, int position1, int position2);
 
+/**************************************************************/
+/**************************************************************/
 CArray * getCArray(int size)
 {
 	CArray *array = (CArray *) malloc(sizeof(CArray));
@@ -44,6 +46,9 @@ CArray * getCArray(int size)
 	}
 	return array;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int insertValueCArray(CArray *array, int position, int value)
 {
@@ -57,6 +62,9 @@ int insertValueCArray(CArray *array, int position, int value)
 	return INVALID_POSITION; 
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int removeValueCArray(CArray *array, int position)
 {
 	if (position >= 0 && position < array->size) {
@@ -67,6 +75,9 @@ int removeValueCArray(CArray *array, int position)
 	}
 	return INVALID_POSITION;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int pushValueCArray(CArray *array, int value)
 {
@@ -83,6 +94,9 @@ int pushValueCArray(CArray *array, int value)
 	else return ARRAY_FULL;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int updateValueCArray(CArray *array, int position, int value)
 {
 	if (position >= 0 && position < array->size) {
@@ -95,6 +109,9 @@ int updateValueCArray(CArray *array, int position, int value)
 	return INVALID_POSITION;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int eraseCArray(CArray *array)
 {
 	int i;
@@ -103,6 +120,9 @@ int eraseCArray(CArray *array)
 	}
 	return 0;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int switchValuesCArray(CArray *array, int position1, int position2)
 {
@@ -115,6 +135,9 @@ int switchValuesCArray(CArray *array, int position1, int position2)
 	return INVALID_POSITION;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int reverseCArray(CArray *array)
 {
 	int i;
@@ -123,6 +146,9 @@ int reverseCArray(CArray *array)
 	}
 	return SUCCESS;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int displayCArray(CArray *array)
 {
@@ -135,6 +161,9 @@ int displayCArray(CArray *array)
 	return 0;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int blenderCArray(CArray *array)
 {
 	srand(time(NULL) * array->size);
@@ -145,6 +174,9 @@ int blenderCArray(CArray *array)
 	}
 	return 0;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 CArray * getCopyCArray(CArray *arr)
 {
@@ -158,12 +190,18 @@ CArray * getCopyCArray(CArray *arr)
 	return array;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 void swap(CArray *array, int position1, int position2)
 {
 	int temp = array->array[position1];
 	array->array[position1] = array->array[position2];
 	array->array[position2] = temp;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int bubbleSortCArray(CArray *array)
 {
@@ -178,6 +216,9 @@ int bubbleSortCArray(CArray *array)
 	return 0;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int selectionSortCArray(CArray *array)
 {
 	int i, j, min;
@@ -189,6 +230,9 @@ int selectionSortCArray(CArray *array)
 	}
 	return 0;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 int insertionSortCArray(CArray *array)
 {
@@ -206,6 +250,9 @@ int insertionSortCArray(CArray *array)
 	return 0;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int valueOcurranceCArray(CArray *array, int value)
 {
 	int i, total = 0;
@@ -214,6 +261,9 @@ int valueOcurranceCArray(CArray *array, int value)
 	}
 	return total;
 }
+
+/**************************************************************/
+/**************************************************************/
 
 CArray * valuePositionsCArray(CArray *array, int value)
 {
@@ -230,6 +280,9 @@ CArray * valuePositionsCArray(CArray *array, int value)
 	return resultArray;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int findMinCArray(CArray *array)
 {
 	int i;
@@ -242,6 +295,9 @@ int findMinCArray(CArray *array)
 	return min;
 }
 
+/**************************************************************/
+/**************************************************************/
+
 int findMaxCArray(CArray *array)
 {
 	int i;
@@ -253,3 +309,5 @@ int findMaxCArray(CArray *array)
 	}
 	return max;
 }
+/**************************************************************/
+/**************************************************************/
