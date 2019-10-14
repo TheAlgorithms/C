@@ -41,10 +41,11 @@ char xor8(char[]);
 int adler_32(char[]);
 
 /*
-    crc32: implements the crc-32 hash-algorithm
-    returns the checksum byte for the passed byte
+    crc32: implements the crc-32 checksum-algorithm
+    returns the crc-32 checksum
 */
 int crc32(char[]);
+
 
 
 #endif
