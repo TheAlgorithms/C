@@ -32,7 +32,7 @@ int main(void)
    int x = 10;
    // set result to what is returned from binarysearch
    int result = binarysearch(arr, 0, n-1, x);
-   // print out result
+  
    (result == -1) ? printf("Element is not in the array\n")
                  : printf("Element is present at index %d\n", result);
    return 0;
