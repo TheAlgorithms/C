@@ -9,7 +9,7 @@ int linearsearch(int *arr, int size, int val){
 	return 0;
 }
 
-void main(){
+void main(){//void is non return type
 	int n,i,v;
 	printf("Enter the size of the array:\n");
 	scanf("%d",&n); //Taking input for the size of Array
