@@ -41,6 +41,7 @@ CArray * getCArray(int size)
 	int i;
 	for (i = 0; i < size; i++) {
 		array->array[i] = 0;
+		printf("%d", array);
 	}
 	return array;
 }
