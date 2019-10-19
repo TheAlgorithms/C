@@ -90,6 +90,7 @@ C
 	- Prime
 	- Primes in range
 	- Factorial
+	- Semifactorial
 	- Fibonacci
 	- isArmstrong
 	- LongestSubSequence
