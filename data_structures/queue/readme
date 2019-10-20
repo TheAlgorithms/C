@@ -1,0 +1,3 @@
+# Queue implementation in C
+* Build the library using `make` command.
+* To test library use `make test` and run `qtest` binary
