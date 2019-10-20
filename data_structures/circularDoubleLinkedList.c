@@ -1,3 +1,10 @@
+/*
+Sorted circular Double Linked List.
+Sort the list at the input, moving the pointers, not the node values
+Includes a function to allocate memory for new nodes.
+It is assumed that the data in nodes will be an integer, though
+function can be modified according to the data type, easily.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -225,9 +232,10 @@ int main(){
 	insert(list_aux, n14);
 	insert(list_aux, n15);
 
-//Print the list
+//Print the sorted list
 	printf("First test: Printing list\n");
 	print_l(list_aux);
+//Note that even if you insert out of order, it is printed in the order
 
 //There's two 0s in the list, after remove both, need to print that doesn't exist
 	printf("\n\nSecond test: Remove node");
