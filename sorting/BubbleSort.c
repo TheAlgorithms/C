@@ -37,7 +37,7 @@ void bubbleSort(int arr[], int size){
     }
 }
 
-int main(int argc, const char * argv[]) {
+void main(int argc, const char * argv[]) {
     int n;
     printf("Enter size of array:\n");
     scanf("%d", &n); // E.g. 8
@@ -55,8 +55,6 @@ int main(int argc, const char * argv[]) {
     bubbleSort(arr, n);
     
     printf("Sorted array: ");
-    display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 11
-    
-    return 0;
+    display(arr, n);                // Sorted array : 3 4 7 8 8 9 10 
 }
 
