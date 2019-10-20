@@ -26,6 +26,7 @@ C
 
 ## Data Structures
 	- stack
+	- infix to postfix for String
 	- queue
 	- dictionary
 	- linked_list
