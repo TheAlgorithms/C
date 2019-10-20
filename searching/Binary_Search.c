@@ -22,7 +22,7 @@ int binarysearch(int arr[], int l, int r, int x)
    return -1;
 }
 
-int main(void)
+void main()
 {
    // give function an array to work with
    int arr[] = {2, 3, 4, 10, 40};
@@ -35,5 +35,4 @@ int main(void)
    // print out result
    (result == -1) ? printf("Element is not in the array\n")
                  : printf("Element is present at index %d\n", result);
-   return 0;
 }
