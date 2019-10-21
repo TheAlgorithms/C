@@ -1,5 +1,5 @@
 /*
-    author: Christian Bender
+    authors: Christian Bender, ChatN0ir, vypxl
     This file contains the public interface
 
     Overview about hash-functions:
@@ -8,8 +8,10 @@
     - djb2
     - xor8 (8 bit)
     - adler_32 (32 bits)
+    - crc32
+    - md5
 */
-
+#include <stdlib.h>
 #ifndef __HASH__H
 #define __HASH__H
 
@@ -46,6 +48,10 @@ int adler_32(char[]);
 */
 int crc32(char[]);
 
-
+/*
+    md5: implements the md5 checksum-algorithm
+    returns the 16 byte md5 checksum
+*/
+__uint128_t md5(char[]);
 
 #endif
