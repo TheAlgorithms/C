@@ -1,0 +1,89 @@
+#include<stdio.h>
+int main()
+{
+    long int t;
+    scanf("%ld",&t);
+    while(t--) {
+        long long int x1, y1, x2, y2, x3, y3, x4, y4, maxx1, maxx2, minx1, minx2, maxy1, miny1, maxy2, miny2;
+        long long int cross_pdt1, cross_pdt2, cross_pdt3, cross_pdt4;
+
+        printf("Enter 4 co-ordinates in the order 'x y'\n");
+        scanf("%lld %lld %lld %lld %lld %lld %lld %lld", &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
+        //x1,y1 and x2,y2 are the coordinates of the first line
+        //x3,y3 and x4,y4 are the coordinates of the second line
+
+        if (x1 > x2) {
+            maxx1 = x1;
+            minx1 = x2;
+        } else {
+            maxx1 = x2;
+            minx1 = x1;
+        }
+        if (x3 > x4) {
+            maxx2 = x3;
+            minx2 = x4;
+        } else {
+            maxx2 = x4;
+            minx2 = x3;
+        }
+        if (y1 > y2) {
+            maxy1 = y1;
+            miny1 = y2;
+        } else {
+            maxy1 = y2;
+            miny1 = y1;
+        }
+        if (y3 > y4) {
+            maxy2 = y3;
+            miny2 = y4;
+        } else {
+            maxy2 = y4;
+            miny2 = y3;
+        }
+
+        //finding the cross product of the vectors wrt P1,P2
+        cross_pdt1 = (x1 - x2) * (y1 - y3) - (x1 - x3) * (y1 - y2);
+        cross_pdt2 = (x1 - x2) * (y1 - y4) - (x1 - x4) * (y1 - y2);
+        //finding the cross product of the vectors wrt P3,P4
+        cross_pdt3 = (x3 - x4) * (y3 - y1) - (x3 - x1) * (y3 - y4);
+        cross_pdt4 = (x3 - x4) * (y3 - y2) - (x3 - x2) * (y3 - y4);
+
+        if(cross_pdt1!=0 && cross_pdt2!=0 && cross_pdt3!=0 && cross_pdt4!=0) {
+            if (((cross_pdt1 < 0 && cross_pdt2 > 0) || (cross_pdt1 > 0 && cross_pdt2 < 0)) &&
+                ((cross_pdt3 < 0 && cross_pdt4 > 0) || (cross_pdt3 > 0 && cross_pdt4 < 0))) {
+                printf("Yes\n");
+            } else {
+                printf("No\n");
+            }
+        }
+        else{
+            //the points are collinear
+            if (cross_pdt1 == 0) {
+                if (x3 >= minx1 && x3 <= maxx1 && y3 >= miny1 && y3 <= maxy1)
+                    printf("Yes\n");
+                else
+                    printf("No\n");
+            }
+            else if (cross_pdt2 == 0) {
+                if (x4 >= minx1 && x4 <= maxx1 && y4 >= miny1 && y4 <= maxy1)
+                    printf("Yes\n");
+                else
+                    printf("No\n");
+            }
+
+            else if (cross_pdt3 == 0) {
+                if (x1 >= minx2 && x1 <= maxx2 && y1 >= miny2 && y1 <= maxy2)
+                    printf("Yes\n");
+                else
+                    printf("No\n");
+            }
+            else if (cross_pdt4 == 0) {
+                if (x2 >= minx2 && x2 <= maxx2 && y2 >= miny2 && y2 <= maxy2)
+                    printf("Yes\n");
+                else
+                    printf("No\n");
+            }
+        }
+    }
+    return 0;
+}
