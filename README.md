@@ -17,7 +17,7 @@ C
 
 ## Conversions
 	- binary_to_decimal
-	- decimal _to_binary
+	- decimal_to_binary
 	- decimal_to_hexa
 	- decimal_to_octal
 	- to_decimal
