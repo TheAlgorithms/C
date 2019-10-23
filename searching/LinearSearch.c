@@ -1,27 +1,27 @@
 #include <stdio.h>
 
-int linearsearch(int *arr, int size, int val){
+int linearsearch(int *arr, int length, int value){
 	int i;
-	for (i = 0; i < size; i++){
-		if (arr[i] == val)
+	for (i = 0; i <=length-1; i++){
+		if (arr[i] == value) //search element found in array
 			return 1;
 	}
 	return 0;
 }
 
 void main(){
-	int n,i,v;
-	printf("Enter the size of the array:\n");
-	scanf("%d",&n); //Taking input for the size of Array
+	int n,i,val;
+	printf("Enter the length of the array:\n");
+	scanf("%d",&n); //Taking input length of array
 
 	int a[n];
-	printf("Enter the contents for an array of size %d:\n", n);
-	for (i = 0; i < n; i++)	scanf("%d", &a[i]);// accepts the values of array elements until the loop terminates//
+	printf("Enter %d array elements:\n", n);
+	for (i = 0; i < n; i++)	scanf("%d", &a[i]);// accepts the values of array elements until the condition in loop fails//
 
 	printf("Enter the value to be searched:\n");
-	scanf("%d", &v); //Taking input the value to be searched
-	if (linearsearch(a,n,v))
-		printf("Value %d is in the array.\n", v);
+	scanf("%d", &val); //Taking input the value to be searched
+	if (linearsearch(a,n,val))
+		printf("Search element found");
 	else
-		printf("Value %d is not in the array.\n", v);
+		printf("Search element not found");
 }
