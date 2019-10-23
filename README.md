@@ -82,6 +82,7 @@ C
 	- Greatest Common Divisor	
 	- isArmstrong
 	- LongestSubSequence
+	- Multi-programming_with_Fixed_Tasks
 	- palindrome
 	- prime factorization	
 	- QUARTILE
