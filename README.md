@@ -114,3 +114,14 @@ This directory contains
 * server.c
 
 First execute server.c in a terminal and then client.c in a different terminal. Enables communication between two terminals.
+
+## Another Simple Client Server Implementation
+This directory has
+* Makefile
+* client/client.c
+* client/Makefile
+* server/server.c
+* server/Makefile
+
+type ./server 5000 to run server and ./client 127.0.0.1 5000 first.txt in a different terminal. Server will send file to the client program
+
