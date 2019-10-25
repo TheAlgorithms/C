@@ -20,7 +20,7 @@ void insertionSort(int arr[], int size) {
         
         key = arr[i];
         /* Move all elements greater than key to one position */
-        for(j=i-1;j >= 0 && key < arr[j];j--) {
+        for(j=i-1;j >= 0 && key < arr[j];j--) {    //j assigns j=i-1 bcoz we have assigned it to i=1 so for checking it from 0th position we need this
             arr[j + 1] = arr[j];
             
         }
