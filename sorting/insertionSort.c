@@ -28,7 +28,7 @@ void insertionSort(int arr[], int size) {
         arr[j + 1] = key;
     }
 }
-
+//main function compiler first goes to main function
 int main(int argc, const char * argv[]) {
     int n;
     printf("Enter size of array:\n");
