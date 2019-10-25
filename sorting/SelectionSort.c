@@ -31,7 +31,7 @@ void selectionSort(int arr[], int size){
     for(int i=0; i<size; i++) {
         int min_index = i;
         for(int j=i+1; j<size; j++) {
-            if(arr[min_index] > arr[j]) {
+            if(arr[min_index] > arr[j]) {//it checks first array value with 1th position and so on one which is smallest will come ont finally and then will be swapped
                 min_index = j;
             }
         }
