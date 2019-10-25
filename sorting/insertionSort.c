@@ -16,13 +16,13 @@ void display(int arr[], int n) {
  */
 void insertionSort(int arr[], int size) {
     int i, j, key;
-    for(i = 0; i < size; i++) {
-        j = i - 1;
+    for(i = 1; i <= size-1; i++) {
+        
         key = arr[i];
         /* Move all elements greater than key to one position */
-        while(j >= 0 && key < arr[j]) {
+        for(j=i-1;j >= 0 && key < arr[j];j--) {
             arr[j + 1] = arr[j];
-            j = j - 1;
+            
         }
         /* Find a correct position for key */
         arr[j + 1] = key;
