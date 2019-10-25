@@ -6,7 +6,7 @@ void display(int arr[], int n){
     
     int i;
     for(i = 0; i < n; i++){
-        printf("%d ", arr[i]);
+        printf("%d ", arr[i]);//prints or display the the arrays value
     }
     
     printf("\n");
@@ -28,10 +28,10 @@ void swap(int *first, int *second){
  */
 void bubbleSort(int arr[], int size){
     
-    for(int i=0; i<size-1; i++) {
+    for(int i=0; i<size-1; i++) {   //here i goes to one value less than total elements becoz we need one less round of total element in an array
         for(int j=0; j<size-1-i; j++) {
             if(arr[j]>arr[j+1]) {
-                swap(&arr[j], &arr[j+1]);
+                swap(&arr[j], &arr[j+1]);  //calls for swap function;
             }
         }
     }
