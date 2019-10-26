@@ -10,14 +10,17 @@ LeetCode
 |2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [C](./src/2.c)|Medium|
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C](./src/3.c)|Medium|
 |4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [C](./src/4.c)|Hard|
+|13|[Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C](./src/13.c)|Easy|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C](./src/20.c)|Easy|
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C](./src/21.c)|Easy|
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C](./src/24.c)|Medium|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](./src/26.c)|Easy|
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [C](./src/27.c)|Easy|
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [C](./src/28.c)|Easy|
+|29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [C](./src/29.c)|Medium|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
+|66|[Plus One](https://leetcode.com/problems/plus-one/) | [C](./src/66.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
 |83|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [C](./src/83.c)|Easy|
 |94|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [C](./src/94.c)|Medium|
@@ -38,6 +41,7 @@ LeetCode
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [C](./src/173.c)|Medium|
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C](./src/190.c)|Easy|
 |191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C](./src/191.c)|Easy|
+|201|[Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | [C](./src/201.c)|Medium|
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [C](./src/203.c)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
