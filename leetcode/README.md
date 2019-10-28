@@ -54,6 +54,7 @@ LeetCode
 |226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C](./src/226.c)|Easy|
 |231|[Power of Two](https://leetcode.com/problems/power-of-two/) | [C](./src/231.c)|Easy|
 |234|[Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [C](./src/234.c)|Easy|
+|242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C](./src/242.c)|Easy|
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C](./src/268.c)|Easy|
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [C](./src/278.c)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [C](./src/283.c)|Easy|
