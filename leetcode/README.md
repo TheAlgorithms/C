@@ -52,6 +52,7 @@ LeetCode
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C](./src/217.c)|Easy|
 |226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C](./src/226.c)|Easy|
+|231|[Power of Two](https://leetcode.com/problems/power-of-two/) | [C](./src/231.c)|Easy|
 |234|[Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [C](./src/234.c)|Easy|
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C](./src/268.c)|Easy|
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [C](./src/278.c)|Easy|
