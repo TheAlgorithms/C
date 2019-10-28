@@ -41,16 +41,10 @@ void push(struct node *p)
 	struct node *temp;
 	temp=(struct node *)malloc(sizeof(struct node));
 	printf("enter element to be inserted\n");
-			scanf("%d",&item);
-			temp->info=item;
-			
-
-    
-			temp->link=top;
-		top=temp;
-		
-	
-
+	scanf("%d",&item);
+	temp->info=item;
+	temp->link=top;
+	top=temp;
 	printf("inserted succesfully\n");
 }
 void pop(struct node *p)
@@ -82,7 +76,7 @@ void display(struct node *p)
 		{
 		printf("%d\n",p->info);
 		p=p->link;
-         }
+                }
         // printf("%d\n",p->info);
         
 	}
