@@ -40,7 +40,6 @@ LeetCode
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C](./src/190.c)|Easy|
 |191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C](./src/191.c)|Easy|
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [C](./src/203.c)|Easy|
-|204|[Count Primes](https://leetcode.com/problems/count-primes) | [C](./src/204.c)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
 |215|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [C](./src/215.c)|Medium|
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C](./src/217.c)|Easy|
