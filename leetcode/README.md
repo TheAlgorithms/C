@@ -60,6 +60,7 @@ LeetCode
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [C](./src/283.c)|Easy|
 |287|[Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [C](./src/287.c)|Medium|
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [C](./src/344.c)|Easy|
+|367|[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | [C](./src/367.c)|Easy|
 |387|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | [C](./src/387.c)|Easy|
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [C](./src/389.c)|Easy|
 |404|[Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | [C](./src/404.c)|Easy|
