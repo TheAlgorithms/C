@@ -111,7 +111,7 @@ In this directory you will find (in the right order):
 * word-count
 * rna-transcription
 
-## Simple Client Server Implementation
+## Simple Client Server Implementation 
 This directory contains
 * client.c
 * server.c
