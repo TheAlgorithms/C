@@ -10,7 +10,7 @@ char * countAndSay(int n){
     int k, j, count, convert = (int) result;
     
     //Creating array with the length calculated above
-    char * arr = malloc(result + 4);
+    char * arr = malloc(convert + 4);
     arr[0] = '1';
     arr[1] = '\0';
     
