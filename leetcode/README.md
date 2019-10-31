@@ -24,6 +24,7 @@ LeetCode
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [C](./src/28.c)|Easy|
 |29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [C](./src/29.c)|Medium|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
+|38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [C](./src/38.c)|Easy|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [C](./src/66.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
