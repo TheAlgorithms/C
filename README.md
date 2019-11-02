@@ -91,8 +91,11 @@ C
 	- QUARTILE
 	- rselect
 	- strongNumber
-	- Sudoku Solver	
-	- TowerOfHanoi	
+	- TowerOfHanoi
+	- Greatest Common Divisor
+	- Sudoku Solver
+	- prime factorization
+	- PID Controller
 
 ## Project Euler
 	- Problem 1
