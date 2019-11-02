@@ -34,7 +34,7 @@ int CArrayTests()
 	for (i = 0; i < array->size; i++) {
 		insertValueCArray(array, i, i+1);
 	}
-
+	printf("Entered array is:\n");
 	displayCArray(array);
 	printf("\nCode: %d\n", pushValueCArray(array, 11)); // 5
 
