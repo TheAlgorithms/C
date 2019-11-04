@@ -27,16 +27,16 @@ void propagate(Contour *head)
 	Contour *temp = head;
 
 	if(temp!=NULL)
-	{	
+	{
 		Contour *newNode = (Contour*)malloc(sizeof(Contour));
 		double diff = ( ((temp->end)-(temp->start)) / 3);
-	
+
 		newNode->end = temp->end;
 		temp->end = ((temp->start)+diff);
 		newNode->start = (newNode->end)-diff;
-		
+
 		newNode->next = temp->next;
-	
+
 		temp->next=newNode;
 
 		propagate(temp->next->next);
@@ -44,7 +44,6 @@ void propagate(Contour *head)
 	else
 		return;
 }
-
 
 void print(Contour *head)
 {
@@ -55,20 +54,17 @@ void print(Contour *head)
 		printf("\t");
 		printf("[%lf] -- ", temp->start);
 		printf("[%lf]", temp->end);
-	//	printf("\n");
 		temp=temp->next;
 	}
 
-printf("\n");
-	
-}
+	printf("\n");
 
+}
 
 int main(int argc, char const *argv[])
 {
 
 	head=NULL;
-	
 
 	int start_num, end_num, levels;
 
@@ -79,14 +75,13 @@ int main(int argc, char const *argv[])
 	}
 	else
 	{
-			
 		start_num = atoi(argv[1]);
 		end_num = atoi(argv[2]);
 		levels = atoi(argv[3]);
 	}
-	
+
 	startList(start_num, end_num);
-	
+
 	for (int i = 0; i < levels; i++)
 	{
 		printf("Level %d\t", i);
@@ -96,6 +91,6 @@ int main(int argc, char const *argv[])
 	}
 	printf("Level %d\t", levels);
 	print(head);
- 
+
 	return 0;
 }
