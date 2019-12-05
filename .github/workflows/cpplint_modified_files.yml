@@ -51,12 +51,12 @@ jobs:
 
           # space_files = [file for file in cpp_files if " " in file or "-" in file]
           # if space_files:
-          #   print("{len(space_files)} files contain space or dash characters:")
+          #   print(f"{len(space_files)} files contain space or dash characters:")
           #   print("\n".join(space_files) + "\n")
 
           # nodir_files = [file for file in cpp_files if file.count(os.sep) != 1]
           # if nodir_files:
-          #   print("{len(nodir_files)} files are not in one and only one directory:")
+          #   print(f"{len(nodir_files)} files are not in one and only one directory:")
           #   print("\n".join(nodir_files) + "\n")
 
           # bad_files = len(upper_files + space_files + nodir_files)
