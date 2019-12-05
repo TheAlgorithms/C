@@ -1,8 +1,8 @@
-# GitHub Action that enables a repo to achieve gradual compliance with cpplint as only
-#     those files that are added or modified (vs. origin/master) are checked.
+# GitHub Action that enables a repo to achieve gradual compliance with cpplint by
+#     linting only those files that have been added or modified (vs. origin/master).
 # 1. runs cpplint only on those files that have been modified vs. origin/master
 # 2. compiles with g++ only on those files that have been modified vs. origin/master
-# 3. Other optional filepath verifications can be commented out at the end of this file.
+# 3. other optional filepath verifications may be commented out at the end of this file.
 
 name: cpplint_modified_files
 on: [push, pull_request]
@@ -25,7 +25,7 @@ jobs:
           import subprocess
           import sys
 
-          print("Python {}.{}.{}".format(*sys.version_info))  # Python 3.8.0
+          print("Python {}.{}.{}".format(*sys.version_info))  # Python 3.8
           with open("git_diff.txt") as in_file:
             modified_files = sorted(in_file.read().splitlines())
           print("{} files were modified.".format(len(modified_files)))
