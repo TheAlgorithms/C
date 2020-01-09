@@ -15,7 +15,7 @@ jobs:
             import os
             from typing import Iterator
 
-            URL_BASE = "https://github.com/TheAlgorithms/C-Plus-Plus/blob/master"
+            URL_BASE = "https://github.com/TheAlgorithms/C/blob/master"
             g_output = []
 
 
