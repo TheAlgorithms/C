@@ -1,6 +1,8 @@
 C
 ========
 
+For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com/TheAlgorithms/C/blob/master/DIRECTORY.md)
+
 ## LeetCode Algorithm
 
 - [Solution](https://github.com/TheAlgorithms/C/tree/master/leetcode) for [LeetCode](https://leetcode.com/problemset/all/)
