@@ -244,7 +244,7 @@
   * [Bogo Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bogo_Sort.c)
   * [Bubble Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort.c)
   * [Bubble Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort_2.c)
-  * [Bucketsort](https://github.com/TheAlgorithms/C/blob/master/sorting/BucketSort.c)
+  * [Bucket Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bucket_Sort.c)
   * [Comb Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/comb_sort.c)
   * [Counting Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/counting_Sort.c)
   * [Cycle Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Cycle_Sort.c)
