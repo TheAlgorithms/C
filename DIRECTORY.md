@@ -1,4 +1,10 @@
 
+## Client Server
+  * [Client](https://github.com/TheAlgorithms/C/blob/master/client_server/client.c)
+  * [Server](https://github.com/TheAlgorithms/C/blob/master/client_server/server.c)
+  * [Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Client.c)
+  * [Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Server.c)
+
 ## Computer Oriented Statistical Methods
   * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Gauss_Elimination.c)
   * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/lagrange_theorem.C)
@@ -9,15 +15,15 @@
   * [Variance](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/variance.c)
 
 ## Conversions
-  * [Binary2Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary2octal.c)
   * [Binary To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_decimal.c)
-  * [Binary To Hexa](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexa.c)
-  * [Decimal  To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal%20_to_binary.c)
+  * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
+  * [Binary To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_octal.c)
+  * [Decimal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary.c)
   * [Decimal To Hexa](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_hexa.c)
   * [Decimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal.c)
   * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal_recursion.c)
-  * [Hexal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexal_to_octal.c)
-  * [Todecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/toDecimal.c)
+  * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
+  * [To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/to_decimal.c)
 
 ## Data Structures
   * Array
@@ -42,13 +48,13 @@
     * [Strongly Connected Components](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/strongly_connected_components.c)
     * [Topologicalsort](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/topologicalSort.c)
   * Heap
-    * [Maxheap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/maxheap.c)
-    * [Minheap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/minheap.c)
+    * [Max Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/max_heap.c)
+    * [Min Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/min_heap.c)
   * Linked List
-    * [Mergelinkedlists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/mergeLinkedLists.c)
-    * [Middleelementinlist](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/middleElementInList.c)
+    * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
+    * [Middle Element In List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
     * [Singly Link List Deletion](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/singly_link_list_deletion.c)
-    * [Stack Using Linkedlists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/stack_using_linkedlists.c)
+    * [Stack Using Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/stack_using_linked_lists.c)
   * List
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
@@ -58,23 +64,23 @@
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/main.c)
     * [Parenthesis](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/parenthesis.c)
     * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack.c)
-    * Stack Linkedlist
-      * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linkedlist/main.c)
-      * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linkedlist/stack.c)
+    * Stack Linked List
+      * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linked_list/main.c)
+      * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linked_list/stack.c)
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/master/data_structures/trie/trie.c)
 
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/master/exercism/acronym/acronym.c)
-  * Hello-World
-    * [Hello World](https://github.com/TheAlgorithms/C/blob/master/exercism/hello-world/hello_world.c)
+  * Hello World
+    * [Hello World](https://github.com/TheAlgorithms/C/blob/master/exercism/hello_world/hello_world.c)
   * Isogram
     * [Isogram](https://github.com/TheAlgorithms/C/blob/master/exercism/isogram/isogram.c)
-  * Rna-Transcription
-    * [Rna Transcription](https://github.com/TheAlgorithms/C/blob/master/exercism/rna-transcription/rna_transcription.c)
-  * Word-Count
-    * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word-count/word_count.c)
+  * Rna Transcription
+    * [Rna Transcription](https://github.com/TheAlgorithms/C/blob/master/exercism/rna_transcription/rna_transcription.c)
+  * Word Count
+    * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.c)
 
 ## Hash
   * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.c)
@@ -169,7 +175,7 @@
     * [977](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/977.c)
 
 ## Misc
-  * [Armstrongnumber](https://github.com/TheAlgorithms/C/blob/master/misc/ArmstrongNumber.c)
+  * [Armstrong Number](https://github.com/TheAlgorithms/C/blob/master/misc/armstrong_number.c)
   * [Cantor Set](https://github.com/TheAlgorithms/C/blob/master/misc/cantor_set.c)
   * [Cartesiantopolar](https://github.com/TheAlgorithms/C/blob/master/misc/cartesianToPolar.c)
   * [Catalan](https://github.com/TheAlgorithms/C/blob/master/misc/catalan.c)
@@ -178,25 +184,25 @@
   * [Factorial](https://github.com/TheAlgorithms/C/blob/master/misc/Factorial.c)
   * [Factorial Trailing Zeroes](https://github.com/TheAlgorithms/C/blob/master/misc/factorial_trailing_zeroes.c)
   * [Fibonacci](https://github.com/TheAlgorithms/C/blob/master/misc/Fibonacci.c)
-  * [Fibonaccidp](https://github.com/TheAlgorithms/C/blob/master/misc/FibonacciDP.c)
+  * [Fibonacci Dp](https://github.com/TheAlgorithms/C/blob/master/misc/Fibonacci_DP.c)
   * [Gcd](https://github.com/TheAlgorithms/C/blob/master/misc/GCD.c)
-  * [Isarmstrong](https://github.com/TheAlgorithms/C/blob/master/misc/isArmstrong.c)
+  * [Is Armstrong](https://github.com/TheAlgorithms/C/blob/master/misc/is_Armstrong.c)
   * [Large Factorials](https://github.com/TheAlgorithms/C/blob/master/misc/Large_Factorials.c)
   * [Lcm](https://github.com/TheAlgorithms/C/blob/master/misc/LCM.c)
   * [Lerp](https://github.com/TheAlgorithms/C/blob/master/misc/lerp.c)
-  * [Lexicographicpermutations](https://github.com/TheAlgorithms/C/blob/master/misc/lexicographicPermutations.c)
-  * [Longestsubsequence](https://github.com/TheAlgorithms/C/blob/master/misc/LongestSubSequence.c)
+  * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/master/misc/lexicographic_Permutations.c)
+  * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/master/misc/Longest_SubSequence.c)
   * [Mirror](https://github.com/TheAlgorithms/C/blob/master/misc/mirror.c)
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/Prime.c)
-  * [Primefactoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/PrimeFactoriziation.c)
+  * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/Prime_Factoriziation.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/QUARTILE.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/master/misc/rselect.c)
-  * [Strongnumber](https://github.com/TheAlgorithms/C/blob/master/misc/strongNumber.c)
-  * [Sudokusolver](https://github.com/TheAlgorithms/C/blob/master/misc/sudokusolver.c)
-  * [Towerofhanoi](https://github.com/TheAlgorithms/C/blob/master/misc/TowerOfHanoi.c)
-  * [Unionfind](https://github.com/TheAlgorithms/C/blob/master/misc/unionFind.c)
+  * [Strong Number](https://github.com/TheAlgorithms/C/blob/master/misc/strong_Number.c)
+  * [Sudoku Solver](https://github.com/TheAlgorithms/C/blob/master/misc/sudoku_solver.c)
+  * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/Tower_Of_Hanoi.c)
+  * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_Find.c)
 
 ## Project Euler
   * Problem 01
@@ -220,46 +226,40 @@
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Binary_Search.c)
-  * [Fibonaccisearch](https://github.com/TheAlgorithms/C/blob/master/searching/fibonacciSearch.c)
+  * [Fibonacci Search](https://github.com/TheAlgorithms/C/blob/master/searching/fibonacci_Search.c)
   * [Interpolation Search](https://github.com/TheAlgorithms/C/blob/master/searching/interpolation_search.c)
   * [Jump Search](https://github.com/TheAlgorithms/C/blob/master/searching/Jump_Search.c)
-  * [Linearsearch](https://github.com/TheAlgorithms/C/blob/master/searching/LinearSearch.c)
-  * [Modifiedbinarysearch](https://github.com/TheAlgorithms/C/blob/master/searching/modifiedBinarySearch.c)
+  * [Linear Search](https://github.com/TheAlgorithms/C/blob/master/searching/Linear_Search.c)
+  * [Modified Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/modified_Binary_Search.c)
   * [Other Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Other_Binary_Search.c)
   * Pattern Search
     * [Boyer Moore Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/boyer_moore_search.c)
     * [Naive Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/naive_search.c)
     * [Rabin Karp Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/rabin_karp_search.c)
-  * [Ternarysearch](https://github.com/TheAlgorithms/C/blob/master/searching/ternarysearch.c)
-
-## Simple Client Server
-  * [Client](https://github.com/TheAlgorithms/C/blob/master/Simple%20Client%20Server/client.c)
-  * [Server](https://github.com/TheAlgorithms/C/blob/master/Simple%20Client%20Server/server.c)
-  * [Udpclient](https://github.com/TheAlgorithms/C/blob/master/Simple%20Client%20Server/UDPClient.c)
-  * [Udpserver](https://github.com/TheAlgorithms/C/blob/master/Simple%20Client%20Server/UDPServer.c)
+  * [Ternary Search](https://github.com/TheAlgorithms/C/blob/master/searching/ternary_search.c)
 
 ## Sorting
-  * [Beadsort](https://github.com/TheAlgorithms/C/blob/master/sorting/BeadSort.c)
-  * [Binaryinsertionsort](https://github.com/TheAlgorithms/C/blob/master/sorting/binaryInsertionSort.c)
-  * [Bogosort](https://github.com/TheAlgorithms/C/blob/master/sorting/BogoSort.c)
-  * [Bubblesort](https://github.com/TheAlgorithms/C/blob/master/sorting/BubbleSort.c)
+  * [Bead Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bead_Sort.c)
+  * [Binary Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/binary_Insertion_Sort.c)
+  * [Bogo Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bogo_Sort.c)
+  * [Bubble Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort.c)
+  * [Bubble Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort_2.c)
   * [Bucketsort](https://github.com/TheAlgorithms/C/blob/master/sorting/BucketSort.c)
   * [Comb Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/comb_sort.c)
-  * [Countingsort](https://github.com/TheAlgorithms/C/blob/master/sorting/countingSort.c)
-  * [Cyclesort](https://github.com/TheAlgorithms/C/blob/master/sorting/CycleSort.c)
+  * [Counting Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/counting_Sort.c)
+  * [Cycle Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Cycle_Sort.c)
   * [Gnome Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/gnome_sort.c)
-  * [Heapsort](https://github.com/TheAlgorithms/C/blob/master/sorting/HeapSort.c)
-  * [Insertionsort](https://github.com/TheAlgorithms/C/blob/master/sorting/insertionSort.c)
-  * [Mergesort](https://github.com/TheAlgorithms/C/blob/master/sorting/mergesort.c)
+  * [Heap Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Heap_Sort.c)
+  * [Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/insertion_Sort.c)
+  * [Merge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort.c)
   * [Multikey Quicksort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quicksort.c)
-  * [Otherbubblesort](https://github.com/TheAlgorithms/C/blob/master/sorting/OtherBubbleSort.c)
-  * [Pancakesort](https://github.com/TheAlgorithms/C/blob/master/sorting/PancakeSort.c)
-  * [Partitionsort](https://github.com/TheAlgorithms/C/blob/master/sorting/partitionSort.c)
-  * [Quicksort](https://github.com/TheAlgorithms/C/blob/master/sorting/QuickSort.c)
+  * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Pancake_Sort.c)
+  * [Partition Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/partition_Sort.c)
+  * [Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Quick_Sort.c)
   * [Radix Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/radix_sort.c)
-  * [Radixsort](https://github.com/TheAlgorithms/C/blob/master/sorting/radixsort.c)
+  * [Radix Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/radix_sort_2.c)
   * [Random Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/random_quick_sort.c)
-  * [Selectionsort](https://github.com/TheAlgorithms/C/blob/master/sorting/SelectionSort.c)
+  * [Selection Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Selection_Sort.c)
   * [Shaker Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shaker_sort.c)
-  * [Shellsort](https://github.com/TheAlgorithms/C/blob/master/sorting/shellSort.c)
-  * [Stoogesort](https://github.com/TheAlgorithms/C/blob/master/sorting/StoogeSort.c)
+  * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort.c)
+  * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Stooge_Sort.c)
