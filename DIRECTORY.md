@@ -177,7 +177,7 @@
 ## Misc
   * [Armstrong Number](https://github.com/TheAlgorithms/C/blob/master/misc/armstrong_number.c)
   * [Cantor Set](https://github.com/TheAlgorithms/C/blob/master/misc/cantor_set.c)
-  * [Cartesiantopolar](https://github.com/TheAlgorithms/C/blob/master/misc/cartesianToPolar.c)
+  * [Cartesian To Polar](https://github.com/TheAlgorithms/C/blob/master/misc/cartesian_To_Polar.c)
   * [Catalan](https://github.com/TheAlgorithms/C/blob/master/misc/catalan.c)
   * [Collatz](https://github.com/TheAlgorithms/C/blob/master/misc/Collatz.c)
   * [Demonetization](https://github.com/TheAlgorithms/C/blob/master/misc/demonetization.c)
