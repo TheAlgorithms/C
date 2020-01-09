@@ -252,7 +252,7 @@
   * [Heap Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Heap_Sort.c)
   * [Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/insertion_Sort.c)
   * [Merge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort.c)
-  * [Multikey Quicksort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quicksort.c)
+  * [Multikey Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quick_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Pancake_Sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/partition_Sort.c)
   * [Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Quick_Sort.c)
