@@ -22,7 +22,6 @@
 ## Data Structures
   * Array
     * [Carray](https://github.com/TheAlgorithms/C/blob/master/data_structures/Array/CArray.c)
-    * [Carray](https://github.com/TheAlgorithms/C/blob/master/data_structures/Array/CArray.h)
     * [Carraytests](https://github.com/TheAlgorithms/C/blob/master/data_structures/Array/CArrayTests.c)
   * Binary Trees
     * [Avl](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/avl.c)
@@ -32,7 +31,6 @@
     * [Redblacktree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/redBlackTree.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
-    * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.h)
     * [Test Program](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/test_program.c)
   * Graphs
     * [Bellman-Ford](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/Bellman-Ford.c)
@@ -53,7 +51,6 @@
     * [Stack Using Linkedlists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/stack_using_linkedlists.c)
   * List
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
-    * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.h)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
   * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
@@ -61,34 +58,26 @@
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/main.c)
     * [Parenthesis](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/parenthesis.c)
     * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack.c)
-    * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack.h)
     * Stack Linkedlist
       * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linkedlist/main.c)
       * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linkedlist/stack.c)
-      * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linkedlist/stack.h)
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/master/data_structures/trie/trie.c)
 
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/master/exercism/acronym/acronym.c)
-    * [Acronym](https://github.com/TheAlgorithms/C/blob/master/exercism/acronym/acronym.h)
   * Hello-World
     * [Hello World](https://github.com/TheAlgorithms/C/blob/master/exercism/hello-world/hello_world.c)
-    * [Hello World](https://github.com/TheAlgorithms/C/blob/master/exercism/hello-world/hello_world.h)
   * Isogram
     * [Isogram](https://github.com/TheAlgorithms/C/blob/master/exercism/isogram/isogram.c)
-    * [Isogram](https://github.com/TheAlgorithms/C/blob/master/exercism/isogram/isogram.h)
   * Rna-Transcription
     * [Rna Transcription](https://github.com/TheAlgorithms/C/blob/master/exercism/rna-transcription/rna_transcription.c)
-    * [Rna Transcription](https://github.com/TheAlgorithms/C/blob/master/exercism/rna-transcription/rna_transcription.h)
   * Word-Count
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word-count/word_count.c)
-    * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word-count/word_count.h)
 
 ## Hash
   * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.c)
-  * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.h)
   * [Test Program](https://github.com/TheAlgorithms/C/blob/master/hash/test_program.c)
 
 ## Leetcode
