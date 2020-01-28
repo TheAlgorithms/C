@@ -6,7 +6,7 @@ void sort(int *numbers, int size)
     int pos = 0;
     while (pos < size)
     {
-        if (numbers[pos] >= numbers[pos-1])
+        if (numbers[pos + 1] >= numbers[pos])
             pos++;
         else 
         {
