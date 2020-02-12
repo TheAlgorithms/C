@@ -15,7 +15,7 @@ int fib(int n)
         exit(0);
     }
   //declaring array to store fibonacci numbers -- memoization 
-  int f[n+2];   //  one extra to handle edge case, n = 0 
+  int f[3];   //  one extra to handle edge case, n = 0 
   int i; 
   
   /* let 0th and 1st number of the series be 0 and 1*/
@@ -25,6 +25,8 @@ int fib(int n)
   for (i = 2; i <= n; i++) 
   { 
       // Adding the previous 2 terms to make the 3rd term 
+      f[0] = f[1];
+      f[1] = f[2];
       f[i] = f[i-1] + f[i-2]; 
   } 
   
