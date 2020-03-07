@@ -31,12 +31,17 @@ int fib(int n)
   return f[n]; 
 } 
   
-int main(){
+int main(int argc, char *argv[])
+{
 	int number;
 
 	//Asks for the number/position of term in Fibonnacci sequence
-	printf("Enter the value of n(n starts from 0 ): ");
-	scanf("%d", &number);
+    if (argc == 2)
+        number = atoi(argv[1]);
+    else {
+        printf("Enter the value of n(n starts from 0 ): ");
+        scanf("%d", &number);
+    }
 	
 	printf("The nth term is : %d \n", fib(number));
 	
