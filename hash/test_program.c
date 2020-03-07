@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    char s[] = "name";
+    char s[] = "hello";
 
     /* actual tests */
     printf("sdbm: %s --> %llX\n", s, sdbm(s));
