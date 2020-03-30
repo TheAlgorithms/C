@@ -223,6 +223,8 @@
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2006/sol.c)
   * Problem 07
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2007/sol.c)
+  * Problem 16
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2016/sol1.c)
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Binary_Search.c)
