@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     if (argc == 2)  /* if command line argument is provided */
         n = atol(argv[1]);  /* use that as the upper limit */
 
-    printf("%ld: %lld", n, sum_of_primes(n));
+    printf("%ld: %lld\n", n, sum_of_primes(n));
 
     return 0;
 }
