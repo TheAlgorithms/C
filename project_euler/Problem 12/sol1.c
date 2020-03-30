@@ -3,12 +3,21 @@
 #include <math.h>
 
 long count_divisors(long long n)
+/*
+    If x = a * b, then both a and b are divisors of x.
+    Since multiplication is commutative, we only need to search
+    till a maximum of a=b = a^2 i.e., till sqrt(x).
+    At every integer till then, there are eaxctly 2 divisors
+    and at a=b, there is only one divisor.
+*/
 {
     long num_divisors = 0;
     
     for (long long i = 1; i < sqrtl(n) + 1; i++)
-        if (n % i == 0 && i * i != n)
+        if (n % i == 0)
             num_divisors += 2;
+        else if (i * i == n)
+            num_divisors += 1;
 
     return num_divisors;
 }
