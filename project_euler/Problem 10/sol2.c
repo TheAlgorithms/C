@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
         * if i^th cell is '1', then 'i' is composite
         * if i^th cell is '0', then 'i' is prime
     */
-    for (long i = 2; i < sqrtl(n)+1; i++) 
+    for (long i = 2; i < sqrtl(n); i++) 
     {
         /* if i^th element is prime, mark all its multiples
         as composites */
@@ -35,11 +35,11 @@ int main(int argc, char* argv[])
             {
                 sieve[j] = 1;
             }
-            // sum += i;
+            sum += i;
         }
     }
 
-    for (long i = 2; i < n; i++) 
+    for (long i = sqrtl(n)+1; i < n; i++) 
         if (!sieve[i])
             sum += i;
 
