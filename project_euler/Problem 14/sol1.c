@@ -34,7 +34,10 @@ int main(int argc, char **argv)
     long long MAX_NUM = 1000000;
 
     if (argc == 2)  /* set commandline argumnet as the maximum iteration number */
+    {
         MAX_NUM = atoll(argv[1]);
+        printf("Maximum number: %lld\n", MAX_NUM);
+    }
 
     /** 
      * Since the computational values for each iteration step are independent, 
@@ -47,7 +50,6 @@ int main(int argc, char **argv)
      * Automatically detects for OPENMP using the _OPENMP macro.
      **/
     #ifdef _OPENMP
-    printf("\nUsing %d threads for parallelization.\n", omp_get_num_threads());
     #pragma omp parallel for shared(max_len, max_len_num) schedule(guided)
     #endif
     for (long long i = 1; i < MAX_NUM; i++)
@@ -55,8 +57,8 @@ int main(int argc, char **argv)
         long long L = collatz(i);
         if (L > max_len)
         {
-            max_len = L;
-            max_len_num = i;
+            max_len = L;        /* length of sequence */
+            max_len_num = i;    /* starting number */
         }
 
         #if defined(_OPENMP) && defined(DEBUG)
@@ -66,7 +68,7 @@ int main(int argc, char **argv)
         #endif
     }
 
-    printf("Max: %3lld: \t%5lld\n", max_len_num, max_len);
+    printf("Start: %3lld: \tLength: %5lld\n", max_len_num, max_len);
 
     return 0;
 }
