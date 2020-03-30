@@ -234,6 +234,14 @@
     * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2010/sol2.c)
   * Problem 12
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2012/sol1.c)
+  * Problem 13
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2013/sol1.c)
+  * Problem 14
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2014/sol1.c)
+  * Problem 15
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2015/sol1.c)
+  * Problem 16
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2016/sol1.c)
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Binary_Search.c)
