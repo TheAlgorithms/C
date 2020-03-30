@@ -35,11 +35,11 @@ int main(int argc, char* argv[])
             {
                 sieve[j] = 1;
             }
-            sum += i;
+            // sum += i;
         }
     }
 
-    for (long i = sqrtl(n)+1; i < n; i++) 
+    for (long i = 2; i < n; i++) 
         if (!sieve[i])
             sum += i;
 
