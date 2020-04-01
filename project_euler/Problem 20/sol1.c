@@ -86,6 +86,7 @@ int main(int argc, char **argv)
     big_int *ptr = add_digit(NULL, 1); /* start with 1 */
     const big_int *ptr0 = ptr;         /* save the first location */
     unsigned long sum_digits = 0;
+    unsigned long num_digits = 0;
 
     if (argc == 2)
         N = atoi(argv[1]);
@@ -152,8 +153,10 @@ int main(int argc, char **argv)
     {
         putchar(ptr->value + 0x30); /* convert digit to ASCII char */
         ptr = ptr->prev_digit;
+        num_digits++;
     } while (ptr); /* after coming to units place, there will be no valid ptr */
-    printf("\nDigit Sum = %lu\n", sum_digits);
+    printf("\nDigit Sum = %lu\tNumber of digits = %lu\tStorage space = %.3gkb\t \n",
+           sum_digits, num_digits, num_digits * sizeof(big_int) / 1024.0);
 
     remove_digits((big_int *)ptr0, -1);
     return 0;
