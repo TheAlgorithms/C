@@ -111,14 +111,24 @@ int main(int argc, char **argv)
             }
             else
                 carry = 0;
+
             if (carry > 0 && ptr->next_digit == NULL)
                 add_digit(ptr, 0);
+
             ptr->value = tmp;
+
             if (i == N)
+                /**
+                 * sum digits on the last iteration
+                 * this avoid having another loop over all digits
+                 **/
                 sum_digits += tmp;
+
             if (ptr->next_digit)
+                /* more digits available */
                 ptr = ptr->next_digit;
             else
+                /* no more digits left - reached MSB */
                 break;
         }
 #ifdef DEBUG
