@@ -90,7 +90,7 @@ int main(int argc, char **argv)
     if (argc == 2)
         N = atoi(argv[1]);
 
-    for (int i = 1; i <= N; i++)
+    for (unsigned int i = 1; i <= N; i++)
     {
         int carry = 0;
 #ifdef DEBUG
