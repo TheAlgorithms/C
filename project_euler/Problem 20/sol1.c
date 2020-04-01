@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * store arbitratily large integer values
@@ -91,6 +92,8 @@ int main(int argc, char **argv)
     if (argc == 2)
         N = atoi(argv[1]);
 
+    clock_t start_time = clock();
+
     for (unsigned int i = 1; i <= N; i++)
     {
         int carry = 0;
@@ -137,6 +140,8 @@ int main(int argc, char **argv)
 #endif
     }
 
+    clock_t end_time = clock();
+
 #ifdef DEBUG
     printf("ptr = %p\n", ptr);
     printf("%d! = ", N);
@@ -155,7 +160,9 @@ int main(int argc, char **argv)
         ptr = ptr->prev_digit;
         num_digits++;
     } while (ptr); /* after coming to units place, there will be no valid ptr */
-    printf("\nDigit Sum = %lu\tNumber of digits = %lu\tStorage space = %.3gkb\t \n",
+
+    printf("\nTime taken: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+    printf("Digit Sum = %lu\tNumber of digits = %lu\tStorage space = %.3gkb\t \n",
            sum_digits, num_digits, num_digits * sizeof(big_int) / 1024.0);
 
     remove_digits((big_int *)ptr0, -1);
