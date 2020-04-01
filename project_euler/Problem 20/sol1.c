@@ -102,7 +102,7 @@ int main(int argc, char **argv)
 #ifdef DEBUG
             printf("%p\t", ptr);
 #endif
-            int tmp = ptr->value * i + carry;
+            unsigned int tmp = ptr->value * i + carry;
             if (tmp >= 10)
             {
                 div_t tmp2 = div(tmp, 10);
