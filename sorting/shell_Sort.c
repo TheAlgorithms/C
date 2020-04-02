@@ -37,6 +37,33 @@ void shellSort(int array[], int len)
                 swap(&array[j], &array[j + gap]);
 }
 
+/**
+ * Optimized algorithm - takes half the time as other
+ **/
+void shell_sort2(int array[], int LEN)
+{
+    const int gaps[] = {701, 301, 132, 57, 23, 10, 4, 1};
+    const int gap_len = 8;
+    int i, j, g;
+
+    for (g = 0; g < gap_len; g++)
+    {
+        int gap = gaps[g];
+        for (i = gap; i < LEN; i++)
+        {
+            int tmp = array[i];
+
+            for (j = i; j >= gap && (array[j - gap] - tmp) > 0; j -= gap)
+                array[j] = array[j - gap];
+            array[j] = tmp;
+        }
+    }
+#ifdef DEBUG
+    for (i = 0; i < LEN; i++)
+        printf("%s\t", data[i]);
+#endif
+}
+
 int main(int argc, char *argv[])
 {
     int i;
