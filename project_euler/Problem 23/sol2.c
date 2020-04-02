@@ -12,6 +12,14 @@
  **/
 
 unsigned long MAX_N = 28123;
+
+/**
+ * This is the global array to be used to store a flag to identify
+ * if a particular number is abundant (1) or not (0).
+ * Using a whole byte to store a binary info would be redundant.
+ * We will use each byte to represent 8 numbers by relying on bits.
+ * This saves memory required by 1/8
+ **/
 char *abundant_flags = NULL;
 
 /**
@@ -44,7 +52,7 @@ char get_perfect_number(unsigned long N)
 }
 
 /**
- * Find the next abundant number after N and not including N
+ * Is the given number an abundant number (1) or not (0)
  **/
 char is_abundant(unsigned long N)
 {
@@ -58,6 +66,7 @@ char is_abundant(unsigned long N)
 unsigned long get_next_abundant(unsigned long N)
 {
     unsigned long i;
+    /* keep checking successive numbers till an abundant number is found */
     for (i = N + 1; !is_abundant(i); ++i)
         ;
     return i;
@@ -71,6 +80,10 @@ unsigned long get_next_abundant(unsigned long N)
  **/
 char is_sum_of_abundant(unsigned long N)
 {
+    /** optimized logic:
+     * i + j = N   where both i and j should be abundant
+     * hence we can simply check for j = N - i as we loop through i
+     **/
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1); i = get_next_abundant(i))
         if (is_abundant(N - i))
         {

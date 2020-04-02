@@ -38,7 +38,7 @@ char get_perfect_number(unsigned long N)
 }
 
 /**
- * Find the next abundant number after N and not including N
+ * Is the given number an abundant number (1) or not (0)
  **/
 unsigned long is_abundant(unsigned long N)
 {
@@ -64,6 +64,10 @@ unsigned long get_next_abundant(unsigned long N)
  **/
 char is_sum_of_abundant(unsigned long N)
 {
+    /** optimized logic:
+     * i + j = N   where both i and j should be abundant
+     * hence we can simply check for j = N - i as we loop through i
+     **/
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1); i = get_next_abundant(i))
         if (is_abundant(N - i))
         {
