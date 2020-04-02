@@ -91,21 +91,25 @@ int main(int argc, char **argv)
     printf("Not using parallleization!\n");
 #endif
 
-    clock_t start_time = clock();
+    clock_t dt = 0;
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ \
                                    : sum) schedule(runtime)
 #endif
     for (unsigned long i = 1; i <= MAX_N; i++)
     {
+        clock_t start_time = clock();
         if (!is_sum_of_abundant(i))
             sum += i;
-        // if (i % 100 == 0)
-        //     printf("... %5lu: %8lu\r", i, sum);
-    }
-    clock_t end_time = clock();
+        clock_t end_time = clock();
+        dt += end_time - start_time;
 
-    printf("\nTime taken for final sum: %.4g ms\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+        printf("... %5lu: %8lu\r", i, sum);
+        if (i % 100 == 0)
+            fflush(stdout);
+    }
+
+    printf("Time taken: %.4g ms\n", 1e3 * dt / CLOCKS_PER_SEC);
     printf("Sum of numbers that cannot be represented as sum of two abundant numbers : %lu\n", sum);
 
     return 0;
