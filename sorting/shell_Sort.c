@@ -93,7 +93,19 @@ int main(int argc, char *argv[])
     show_data(array, size);
 
     printf("%s\n", notation);
-    printf("Time spent sorting: %f\n", time_spent);
+    printf("Time spent sorting: %.4g ms\n", time_spent * 1e3);
+
+    printf("--------------------------\n");
+    start = clock();
+    shell_sort2(array2, size);
+    end = clock();
+    time_spent = (double)(end - start) / CLOCKS_PER_SEC;
+
+    printf("Data Sorted\n");
+    show_data(array2, size);
+
+    printf("%s\n", notation);
+    printf("Time spent sorting: %.4g ms\n", time_spent * 1e3);
 
     return 0;
 }
