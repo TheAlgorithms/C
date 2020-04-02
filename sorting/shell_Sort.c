@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ELEMENT_NR 20
+#define ELEMENT_NR 20000
 #define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
 const char *notation = "Shell Sort Big O Notation:\
 						\n--> Best Case: O(n log(n)) \
@@ -68,6 +68,7 @@ int main(int argc, char *argv[])
 {
     int i;
     int array[ELEMENT_NR];
+    int array2[ELEMENT_NR];
     int range = 500;
     int size;
     clock_t start, end;
@@ -75,7 +76,10 @@ int main(int argc, char *argv[])
 
     srand(time(NULL));
     for (i = 0; i < ELEMENT_NR; i++)
+    {
         array[i] = rand() % range + 1;
+        array2[i] = array[i];
+    }
 
     size = ARRAY_LEN(array);
 
