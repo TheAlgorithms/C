@@ -57,7 +57,7 @@ char get_perfect_number(unsigned long N)
 char is_abundant(unsigned long N)
 {
     // return abundant_flags[N >> 3] & (1 << N % 8) ? 1 : 0;
-    return abundant_flags[N >> 3] & (1 << (N & 7)) ? 1 : 0;
+    return abundant_flags[N >> 3] & (1 << (N & 7)) ? 1 : 0; /* optimized modulo operation */
 }
 
 /**
@@ -105,6 +105,11 @@ int main(int argc, char **argv)
      * the flags are identified by bits
      **/
     abundant_flags = (char *)calloc(MAX_N >> 3, 1);
+    if (!abundant_flags)
+    {
+        perror("Unable to allocate memoey!");
+        return -1;
+    }
 
 #ifdef _OPENMP
     printf("Using OpenMP parallleization with %d threads\n", omp_get_max_threads());
@@ -138,31 +143,38 @@ int main(int argc, char **argv)
     double t1 = 1e3 * (end_time - start_time) / CLOCKS_PER_SEC;
     printf("Time taken to get abundant numbers: %.4g ms\n", t1);
 
-    start_time = clock();
+    clock_t t2 = 0;
 #ifdef _OPENMP
 #pragma omp for schedule(runtime) private(start_time, end_time)
 #endif
     for (unsigned long i = 1; i < MAX_N; i++)
     {
+        start_time = clock();
         if (!is_sum_of_abundant(i))
 #ifdef _OPENMP
 #pragma omp critical
 #endif
             sum += i;
-        // if (i % 100 == 0)
-        //     printf("... %5lu\n", i);
+        end_time = clock();
+#ifdef _OPENMP
+#pragma omp critical
+#endif
+        t2 += end_time - start_time;
+
+        printf("... %5lu: %8lu\r", i, sum);
+        if (i % 100 == 0)
+            fflush(stdout);
     }
-    end_time = clock();
 
 #ifdef DEBUG
     putchar('\n');
 #endif
-    double t2 = 1e3 * (end_time - start_time) / CLOCKS_PER_SEC;
-    printf("Time taken for final sum: %.4g ms\nTotal Time taken: %.4g ms\n", t2, t1 + t2);
+    double t22 = 1e3 * t2 / CLOCKS_PER_SEC;
+    printf("Time taken for final sum: %.4g ms\nTotal Time taken: %.4g ms\n", t22, t1 + t22);
+    printf("Memory used: %lu bytes\n", MAX_N >> 3);
     printf("Sum of numbers that cannot be represented as sum of two abundant numbers : %lu\n", sum);
 
     free(abundant_flags);
-    // free(abundant_sum_flags);
 
     return 0;
 }
