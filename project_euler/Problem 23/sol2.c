@@ -140,12 +140,14 @@ int main(int argc, char **argv)
 
     start_time = clock();
 #ifdef _OPENMP
-#pragma omp parallel for reduction(+ \
-                                   : sum) schedule(runtime)
+#pragma omp for schedule(runtime) private(start_time, end_time)
 #endif
     for (unsigned long i = 1; i < MAX_N; i++)
     {
         if (!is_sum_of_abundant(i))
+#ifdef _OPENMP
+#pragma omp critical
+#endif
             sum += i;
         // if (i % 100 == 0)
         //     printf("... %5lu\n", i);
