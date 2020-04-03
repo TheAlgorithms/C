@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ELEMENT_NR 20
+#define ELEMENT_NR 20000
 #define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
 const char *notation = "Shell Sort Big O Notation:\
 						\n--> Best Case: O(n log(n)) \
@@ -37,10 +37,38 @@ void shellSort(int array[], int len)
                 swap(&array[j], &array[j + gap]);
 }
 
+/**
+ * Optimized algorithm - takes half the time as other
+ **/
+void shell_sort2(int array[], int LEN)
+{
+    const int gaps[] = {701, 301, 132, 57, 23, 10, 4, 1};
+    const int gap_len = 8;
+    int i, j, g;
+
+    for (g = 0; g < gap_len; g++)
+    {
+        int gap = gaps[g];
+        for (i = gap; i < LEN; i++)
+        {
+            int tmp = array[i];
+
+            for (j = i; j >= gap && (array[j - gap] - tmp) > 0; j -= gap)
+                array[j] = array[j - gap];
+            array[j] = tmp;
+        }
+    }
+#ifdef DEBUG
+    for (i = 0; i < LEN; i++)
+        printf("%s\t", data[i]);
+#endif
+}
+
 int main(int argc, char *argv[])
 {
     int i;
     int array[ELEMENT_NR];
+    int array2[ELEMENT_NR];
     int range = 500;
     int size;
     clock_t start, end;
@@ -48,7 +76,10 @@ int main(int argc, char *argv[])
 
     srand(time(NULL));
     for (i = 0; i < ELEMENT_NR; i++)
+    {
         array[i] = rand() % range + 1;
+        array2[i] = array[i];
+    }
 
     size = ARRAY_LEN(array);
 
@@ -62,7 +93,19 @@ int main(int argc, char *argv[])
     show_data(array, size);
 
     printf("%s\n", notation);
-    printf("Time spent sorting: %f\n", time_spent);
+    printf("Time spent sorting: %.4g ms\n", time_spent * 1e3);
+
+    printf("--------------------------\n");
+    start = clock();
+    shell_sort2(array2, size);
+    end = clock();
+    time_spent = (double)(end - start) / CLOCKS_PER_SEC;
+
+    printf("Data Sorted\n");
+    show_data(array2, size);
+
+    printf("%s\n", notation);
+    printf("Time spent sorting: %.4g ms\n", time_spent * 1e3);
 
     return 0;
 }

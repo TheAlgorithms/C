@@ -185,6 +185,7 @@
   * [Factorial Trailing Zeroes](https://github.com/TheAlgorithms/C/blob/master/misc/factorial_trailing_zeroes.c)
   * [Fibonacci](https://github.com/TheAlgorithms/C/blob/master/misc/Fibonacci.c)
   * [Fibonacci Dp](https://github.com/TheAlgorithms/C/blob/master/misc/Fibonacci_DP.c)
+  * [Fibonacci Fast](https://github.com/TheAlgorithms/C/blob/master/misc/Fibonacci_fast.c)
   * [Gcd](https://github.com/TheAlgorithms/C/blob/master/misc/GCD.c)
   * [Is Armstrong](https://github.com/TheAlgorithms/C/blob/master/misc/is_Armstrong.c)
   * [Large Factorials](https://github.com/TheAlgorithms/C/blob/master/misc/Large_Factorials.c)
