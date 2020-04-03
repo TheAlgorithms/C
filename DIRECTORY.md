@@ -251,6 +251,9 @@
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2021/sol1.c)
   * Problem 22
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2022/sol1.c)
+  * Problem 23
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2023/sol1.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2023/sol2.c)
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Binary_Search.c)
