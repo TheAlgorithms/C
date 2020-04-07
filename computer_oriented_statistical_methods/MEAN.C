@@ -1,46 +1,38 @@
-#include<stdio.h>
-#include<conio.h>
-#include<math.h>
-void main()
+#include <stdio.h>
+#include <math.h>
+#include <limits.h>
+
+#define MAX_LEN INT_MAX
+
+int main(int argc, char **argv)
 {
-	int a[10],n,i,j,temp,sum=0;
+	int a[MAX_LEN], n = 10, i, j, temp, sum = 0;
 	float mean;
-	clrscr();
-	printf("Enter no. for Random Numbers :");
-	scanf("%d",&n);
-	for(i=0;i<n;i++)
+
+	if (argc == 2)
 	{
-		a[i]=rand()%100;
-	}
-	printf("Random Numbers Generated are :\n");
-	for(i=0;i<n;i++)
-	{
-		printf("\n%d",a[i]);
-	}
-	printf("\n");
-	printf("\nSorted Data:");
-	for(i=0;i<n;i++)
-	{
-		for(j=0;j<n;j++)
+		n = atoi(argv[1]);
+		if (n >= MAX_LEN)
 		{
-			if(a[i]<a[j])
-			{
-				temp=a[i];
-				a[i]=a[j];
-				a[j]=temp;
-			}
+			fprintf(stderr, "Maximum %d!\n", MAX_LEN);
+			return 1;
 		}
 	}
-	for(i=0;i<n;i++)
+
+	printf("Random Numbers Generated are : ");
+	for (i = 0; i < n; i++)
 	{
-		printf("\n%d",a[i]);
-		sum=sum+a[i];
+		a[i] = rand() % 100;
+		printf("%2d, ", a[i]);
 	}
-	mean=sum/(float)n;
+	putchar('\n');
+
+	for (i = 0; i < n; i++)
+		sum = sum + a[i];
+
+	mean = sum / (float)n;
 	printf("\nMean :");
-	printf("%f",mean);
+	printf("%f", mean);
 
-	getch();
+	return 0;
 }
-
-
