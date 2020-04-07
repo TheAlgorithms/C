@@ -298,4 +298,5 @@
   * [Selection Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Selection_Sort.c)
   * [Shaker Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shaker_sort.c)
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort.c)
+  * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort2.c)
   * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Stooge_Sort.c)
