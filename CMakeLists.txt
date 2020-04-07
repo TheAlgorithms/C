@@ -5,6 +5,8 @@ project(Algorithms_in_C
     DESCRIPTION "Set of algorithms implemented in C."
 )
 
+option(USE_OPENMP "flag to use OpenMP for multithreading" ON)
+
 add_subdirectory(function_timer EXCLUDE_FROM_ALL)
 include_directories(function_timer/include)
 # link_libraries(function_timer)
@@ -13,8 +15,11 @@ include_directories(function_timer/include)
 
 add_subdirectory(conversions)
 add_subdirectory(misc)
+add_subdirectory(project_euler)
 
-find_package(OpenMP)
+if(USE_OPENMP)
+    find_package(OpenMP)
+endif()
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
