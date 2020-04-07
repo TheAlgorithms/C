@@ -9,9 +9,9 @@
  * Function to add arbitraty length decimal integers stored in an array.
  * a + b = c = new b
  **/
-unsigned int add_numbers(uint8_t *a, uint8_t *b, uint8_t *c, int N)
+unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c, int N)
 {
-    uint8_t carry = 0;
+    unsigned char carry = 0;
     unsigned int i;
 
     for (i = 0; i < N; i++)
@@ -46,7 +46,7 @@ unsigned int add_numbers(uint8_t *a, uint8_t *b, uint8_t *c, int N)
     return i;
 }
 
-int print_number(uint8_t *number, int N)
+int print_number(unsigned char *number, int N)
 {
     int start_pos = N - 1;
 
@@ -60,7 +60,7 @@ int print_number(uint8_t *number, int N)
     return 0;
 }
 
-unsigned int get_digits(uint8_t *number)
+unsigned int get_digits(unsigned char *number)
 {
     unsigned int digits = MAX_DIGITS;
     while (number[digits] == 0)
@@ -70,9 +70,9 @@ unsigned int get_digits(uint8_t *number)
 
 int main(int argc, char *argv[])
 {
-    uint8_t fn[MAX_DIGITS + 1]; /* array to store digits of a large number */
-    uint8_t fn1[MAX_DIGITS + 1];
-    uint8_t sum[MAX_DIGITS + 1];
+    unsigned char fn[MAX_DIGITS + 1]; /* array to store digits of a large number */
+    unsigned char fn1[MAX_DIGITS + 1];
+    unsigned char sum[MAX_DIGITS + 1];
 
     memset(fn, 0, MAX_DIGITS);
     memset(fn1, 0, MAX_DIGITS);
