@@ -9,7 +9,8 @@ foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE ".c" "" testname ${testsourcefile} )
     add_executable( ${testname} ${testsourcefile} )
     # Make sure YourLib is linked to each app
-    # target_link_libraries( ${testname} function_timer )
+    target_link_libraries( ${testname} function_timer )
+    set_target_properties(${testname} PROPERTIES LINKER_LANGUAGE C)
     install(TARGETS ${testname} DESTINATION "bin/conversions")
 
 endforeach( testsourcefile ${APP_SOURCES} )

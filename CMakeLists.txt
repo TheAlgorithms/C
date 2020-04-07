@@ -7,11 +7,12 @@ project(Algorithms_in_C
 
 add_subdirectory(function_timer EXCLUDE_FROM_ALL)
 include_directories(function_timer/include)
-link_libraries(function_timer)
+# link_libraries(function_timer)
 # include_directories(${CMAKE_BINARY_DIR}/include)
 # link_directories(${CMAKE_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE})
 
 add_subdirectory(conversions)
+add_subdirectory(misc)
 
 find_package(OpenMP)
 
