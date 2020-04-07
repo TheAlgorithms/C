@@ -2,3 +2,4 @@
 *.exe
 *.out
 .vscode/
+build/
