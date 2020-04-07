@@ -1,0 +1,3 @@
+[submodule "function_timer"]
+	path = function_timer
+	url = git@github.com:kvedala/function_timer.git
