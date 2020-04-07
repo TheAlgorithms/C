@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/kvedala/C.svg?branch=master)](https://travis-ci.org/kvedala/C)
 C
 ========
 
