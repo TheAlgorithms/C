@@ -16,6 +16,7 @@ include_directories(function_timer/include)
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
+add_subdirectory(sorting)
 
 if(USE_OPENMP)
     find_package(OpenMP)
