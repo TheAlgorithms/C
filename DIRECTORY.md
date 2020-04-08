@@ -5,15 +5,6 @@
   * [Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Client.c)
   * [Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Server.c)
 
-## Computer Oriented Statistical Methods
-  * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Gauss_Elimination.c)
-  * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/lagrange_theorem.C)
-  * [Mean](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEAN.C)
-  * [Median](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEDIAN.C)
-  * [Seidal](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Seidal.C)
-  * [Simpsons 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/simpsons_1-3rd%20rule.c)
-  * [Variance](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/variance.c)
-
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_decimal.c)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
@@ -205,6 +196,16 @@
   * [Sudoku Solver](https://github.com/TheAlgorithms/C/blob/master/misc/sudoku_solver.c)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/Tower_Of_Hanoi.c)
   * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_Find.c)
+
+## Numerical Methods
+  * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Gauss_Elimination.c)
+  * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/lagrange_theorem.C)
+  * [Mean](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEAN.C)
+  * [Median](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEDIAN.C)
+  * [Newton-Raphson-Root](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/newton-raphson-root.c)
+  * [Seidal](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Seidal.C)
+  * [Simpsons 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/simpsons_1-3rd%20rule.c)
+  * [Variance](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/variance.c)
 
 ## Project Euler
   * Problem 01
