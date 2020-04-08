@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         num_digits = atoi(argv[1]);
 
     /* allocate memory to store past values */
-    buffer = calloc(num_digits, sizeof(uint8_t));
+    buffer = calloc(num_digits, sizeof(unsigned char));
     if (!buffer)
     {
         perror("Unable to allocate memory for buffer");
