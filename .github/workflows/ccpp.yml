@@ -17,9 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: build directory
-      run: cmake -E make_directory ${{runner.workspace}}/build
+      run: mkdir build && cd build
     - name: configure
-      working-directory: ${{ runner.workspace }}/build
       run: cmake .
     - name: build
       run: cmake --build .
