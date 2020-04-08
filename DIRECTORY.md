@@ -11,7 +11,7 @@
   * [Mean](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEAN.C)
   * [Median](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEDIAN.C)
   * [Seidal](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Seidal.C)
-  * [Simpson'S 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/simpson's%201-3rd%20rule.c)
+  * [Simpsons 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/simpsons_1-3rd%20rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/variance.c)
 
 ## Conversions
