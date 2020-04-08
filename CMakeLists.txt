@@ -13,6 +13,9 @@ include_directories(function_timer/include)
 # include_directories(${CMAKE_BINARY_DIR}/include)
 # link_directories(${CMAKE_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE})
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
