@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     char ch;
     uint8_t num, num_prev;
     uint8_t *buffer = NULL;
-    int64_t prod = 1, max_prod = 0;
+    long long int prod = 1, max_prod = 0;
 
     /* if second command-line argument is given,
      * use it as the number of digits to compute
