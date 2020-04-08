@@ -1,0 +1,26 @@
+name: C/C++ CI
+
+on: [push]
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix: 
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build directory
+      run: cmake -E make_directory ${{runner.workspace}}/build
+    - name: configure
+      working-directory: ${{ runner.workspace }}/build
+      run: cmake .
+    - name: build
+      run: cmake --build .
+      
