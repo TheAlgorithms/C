@@ -4,7 +4,7 @@
 long long int get_product(FILE *fp, long start_pos, int num_digits)
 {
     char ch = ' ';          /* temporary variable to store character read from file */
-    uint8_t num = 0;        /* temporary variable to store digit read */
+    unsigned char num = 0;  /* temporary variable to store digit read */
     long long int prod = 1; /* product accumulator */
     int count = 0;          /* we use this variable to count number of bytes of file read */
 
