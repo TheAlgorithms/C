@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+      with:
+        submodules: true
     - name: build directory
       run: mkdir build && cd build
     - name: configure
