@@ -17,6 +17,7 @@ add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
 add_subdirectory(sorting)
+add_subdirectory(searching)
 add_subdirectory(computer_oriented_statistical_methods)
 
 if(USE_OPENMP)
