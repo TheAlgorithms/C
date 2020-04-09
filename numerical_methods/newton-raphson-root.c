@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     /* initialize random seed: */
     srand(time(NULL));
 
-    double complex root = (rand() % 100 - 50) + (random() % 100 - 50) * I;
+    double complex root = (rand() % 100 - 50) + (rand() % 100 - 50) * I;
 
     unsigned long counter = 0;
     while (delta > accuracy && counter < ULONG_MAX)
