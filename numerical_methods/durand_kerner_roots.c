@@ -113,8 +113,7 @@ int main(int argc, char **argv)
         /* initialize root approximations with random values */
         if (n < degree - 1)
         {
-            s0[n] = get_rand(coeffs[n]);
-            //+get_rand(coeffs[n]) * I;
+            s0[n] = get_rand(coeffs[n]) + get_rand(coeffs[n]) * I;
 #if defined(DEBUG) || !defined(NDEBUG)
             fprintf(log_file, "root_%d,", n);
 #endif
