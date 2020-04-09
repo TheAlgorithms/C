@@ -101,6 +101,15 @@ int main(int argc, char **argv)
         else if (coeffs[n] != 0)
             printf("(%g) x^%d = 0\n", coeffs[n], degree - n - 1);
 
+        double tmp;
+        if (n > 0)
+            coeffs[n] /= tmp; /* numerical errors less when the first coefficient is "1" */
+        else
+        {
+            tmp = coeffs[0];
+            coeffs[0] = 1;
+        }
+
         /* initialize root approximations with random values */
         if (n < degree - 1)
         {
