@@ -1,3 +1,8 @@
+
+if(USE_OPENMP)
+    find_package(OpenMP)
+endif()
+
 # If necessary, use the RELATIVE flag, otherwise each source file may be listed
 # with full pathname. RELATIVE may makes it easier to extract an executable name
 # automatically.
@@ -11,6 +16,9 @@ foreach( testsourcefile ${APP_SOURCES} )
     # Make sure YourLib is linked to each app
     target_link_libraries( ${testname} function_timer )
     set_target_properties(${testname} PROPERTIES LINKER_LANGUAGE C)
+    if(OpenMP_C_FOUND)
+        target_link_libraries(${testname} OpenMP::OpenMP_C)
+    endif()
     install(TARGETS ${testname} DESTINATION "bin/misc")
 
 endforeach( testsourcefile ${APP_SOURCES} )

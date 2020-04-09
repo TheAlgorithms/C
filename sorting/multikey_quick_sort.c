@@ -259,7 +259,7 @@ void insert2(char *s)
 
     Tptr pp, *p;
     p = &root;
-    while (pp = *p)
+    while (pp == *p)
     {
         if ((d = *s - pp->splitchar) == 0)
         {
@@ -389,7 +389,6 @@ void nearsearch(Tptr p, char *s, int d)
     if (d > 0 || *s > p->splitchar)
         nearsearch(p->hikid, s, d);
 }
-
 
 #define NUMBER_OF_STRING 3
 

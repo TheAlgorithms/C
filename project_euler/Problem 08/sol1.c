@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <stdint.h>
 #include <stdlib.h>
 
-int64_t get_product(FILE *fp, long start_pos, int num_digits)
+long long int get_product(FILE *fp, long start_pos, int num_digits)
 {
-    char ch = ' ';    /* temporary variable to store character read from file */
-    uint8_t num = 0;  /* temporary variable to store digit read */
-    int64_t prod = 1; /* product accumulator */
-    int count = 0;    /* we use this variable to count number of bytes of file read */
+    char ch = ' ';          /* temporary variable to store character read from file */
+    unsigned char num = 0;  /* temporary variable to store digit read */
+    long long int prod = 1; /* product accumulator */
+    int count = 0;          /* we use this variable to count number of bytes of file read */
 
     /* accumulate product for num_digits */
     for (int i = 0; i < num_digits; i++, count++)
@@ -49,7 +48,7 @@ int main(int argc, char *argv[])
 {
     int position = 0;
     int num_digits = 4;
-    int64_t prod, max_prod = 0;
+    long long int prod, max_prod = 0;
 
     /* if second command-line argument is ge=iven,
      * use it as the number of digits to compute

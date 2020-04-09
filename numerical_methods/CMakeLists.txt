@@ -10,6 +10,7 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
     string( REPLACE ".c" "" testname ${testsourcefile} )
+    string( REPLACE " " "_" testname ${testsourcefile} )
 
     add_executable( ${testname} ${testsourcefile} )
 
@@ -20,6 +21,6 @@ foreach( testsourcefile ${APP_SOURCES} )
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
 
-    install(TARGETS ${testname} DESTINATION "bin/conversions")
+    install(TARGETS ${testname} DESTINATION "bin/stats")
 
 endforeach( testsourcefile ${APP_SOURCES} )

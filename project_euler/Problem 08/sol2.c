@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <string.h> /* for memmove */
 
 int main(int argc, char *argv[])
@@ -8,9 +7,9 @@ int main(int argc, char *argv[])
     int position = 0, num_bad_chars = 0;
     int num_digits = 4;
     char ch;
-    uint8_t num, num_prev;
-    uint8_t *buffer = NULL;
-    int64_t prod = 1, max_prod = 0;
+    unsigned char num, num_prev;
+    unsigned char *buffer = NULL;
+    long long int prod = 1, max_prod = 0;
 
     /* if second command-line argument is given,
      * use it as the number of digits to compute
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
         num_digits = atoi(argv[1]);
 
     /* allocate memory to store past values */
-    buffer = calloc(num_digits, sizeof(uint8_t));
+    buffer = calloc(num_digits, sizeof(unsigned char));
     if (!buffer)
     {
         perror("Unable to allocate memory for buffer");

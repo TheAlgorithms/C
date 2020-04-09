@@ -1,24 +1,24 @@
 #include <stdio.h>
-void stoogesort(int [], int, int);
- 
-void main()
+void stoogesort(int[], int, int);
+
+int main()
 {
     int arr[100], i, n;
- 
+
     printf("How many elements do you want to sort: ");
     scanf("%d", &n);
-    for (i = 0;i < n; i++)
+    for (i = 0; i < n; i++)
         scanf(" %d", &arr[i]);
     stoogesort(arr, 0, n - 1);
     printf("Sorted array : \n");
-    for (i = 0;i < n;i++)
+    for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
+    return 0;
 }
- 
- 
+
 void stoogesort(int arr[], int i, int j)
 {
     int temp, k;

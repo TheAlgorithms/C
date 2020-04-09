@@ -24,13 +24,13 @@ int findMax(int arr[], int n)
 
     for (maxElementIdx = 0, i = 0; i < n; ++i)
         if (arr[i] > arr[maxElementIdx])
-                maxElementIdx = i;
+            maxElementIdx = i;
 
     return maxElementIdx;
 }
 
 // Sorts the array using flip operations
-int pancakeSort(int *arr, int n)
+void pancakeSort(int *arr, int n)
 {
     // Start from the complete array and one by one reduce current size by one
     for (int curr_size = n; curr_size > 1; --curr_size)
@@ -39,13 +39,13 @@ int pancakeSort(int *arr, int n)
         int maxElementIdx = findMax(arr, curr_size);
 
         // Move the maximum element to end of current array if it's not already at the end
-        if (maxElementIdx != curr_size-1)
-        { 
+        if (maxElementIdx != curr_size - 1)
+        {
             // To move at the end, first move maximum number to beginning
-            flip(arr, maxElementIdx); 
+            flip(arr, maxElementIdx);
 
             // Now move the maximum number to end by reversing current array
-            flip(arr, curr_size-1); 
+            flip(arr, curr_size - 1);
         }
     }
 }
@@ -53,26 +53,29 @@ int pancakeSort(int *arr, int n)
 // Displays the array, passed to this method
 void display(int arr[], int n)
 {
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
 
     printf("\n");
-} 
+}
+
+#define N 50
 
 // Driver program to test above function
 int main()
-{ 
-    int arr[] = {23, 10, 20, 11, 12, 6, 7};
-    int n = sizeof(arr)/sizeof(arr[0]); 
+{
+    int arr[N];
+    for (int i = 0; i < N; i++)
+        arr[i] = rand() % (N << 1); /* random numbers from 0 to 2N */
 
     printf("Original array: ");
-    display(arr, n);
+    display(arr, N);
 
-    pancakeSort(arr, n);
+    pancakeSort(arr, N);
     printf("Sorted array: ");
-    display(arr, n);
+    display(arr, N);
 
     return 0;
-} 
+}

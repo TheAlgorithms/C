@@ -5,15 +5,6 @@
   * [Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Client.c)
   * [Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/UDP_Server.c)
 
-## Computer Oriented Statistical Methods
-  * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Gauss_Elimination.c)
-  * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/lagrange_theorem.C)
-  * [Mean](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEAN.C)
-  * [Median](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/MEDIAN.C)
-  * [Seidal](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/Seidal.C)
-  * [Simpson'S 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/simpson's%201-3rd%20rule.c)
-  * [Variance](https://github.com/TheAlgorithms/C/blob/master/computer_oriented_statistical_methods/variance.c)
-
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_decimal.c)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
@@ -206,6 +197,16 @@
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/Tower_Of_Hanoi.c)
   * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_Find.c)
 
+## Numerical Methods
+  * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Gauss_Elimination.c)
+  * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/lagrange_theorem.C)
+  * [Mean](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEAN.C)
+  * [Median](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEDIAN.C)
+  * [Newton-Raphson-Root](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/newton-raphson-root.c)
+  * [Seidal](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Seidal.C)
+  * [Simpsons 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/simpsons_1-3rd%20rule.c)
+  * [Variance](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/variance.c)
+
 ## Project Euler
   * Problem 01
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2001/sol1.c)
@@ -257,6 +258,8 @@
     * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2023/sol2.c)
   * Problem 25
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2025/sol1.c)
+  * Problem 26
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2026/sol1.c)
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/Binary_Search.c)
@@ -296,4 +299,5 @@
   * [Selection Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Selection_Sort.c)
   * [Shaker Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shaker_sort.c)
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort.c)
+  * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort2.c)
   * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Stooge_Sort.c)

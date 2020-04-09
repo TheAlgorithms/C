@@ -13,12 +13,15 @@ include_directories(function_timer/include)
 # include_directories(${CMAKE_BINARY_DIR}/include)
 # link_directories(${CMAKE_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE})
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
+add_subdirectory(sorting)
+add_subdirectory(searching)
+add_subdirectory(numerical_methods)
 
 if(USE_OPENMP)
     find_package(OpenMP)

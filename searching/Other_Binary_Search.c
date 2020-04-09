@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define len 5
 
-
 int binarySearch(int array[], int leng, int searchX)
 {
 	int pos = -1, right, left, i = 0;
@@ -10,14 +9,14 @@ int binarySearch(int array[], int leng, int searchX)
 	left = 0;
 	right = leng - 1;
 
-	while(left <= right)
+	while (left <= right)
 	{
 		pos = left + (right - left) / 2;
-		if(array[pos] == searchX)
+		if (array[pos] == searchX)
 		{
 			return pos;
 		}
-		else if(array[pos] > searchX)
+		else if (array[pos] > searchX)
 		{
 			right = pos - 1;
 		}
@@ -29,10 +28,9 @@ int binarySearch(int array[], int leng, int searchX)
 	return -1; /* not found */
 }
 
-
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int array[len] = { 5, 8 , 10 , 14 ,16 };
+	int array[len] = {5, 8, 10, 14, 16};
 
 	int position;
 	position = binarySearch(array, len, 5);
@@ -44,5 +42,5 @@ void main(int argc, char *argv[])
 		printf("The number %d exist in array at position : %d \n", 5, position);
 	}
 
-
+	return 0;
 }
