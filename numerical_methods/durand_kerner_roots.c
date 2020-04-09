@@ -6,6 +6,11 @@
 #include <limits.h>
 #include <complex.h>
 
+/***
+ * Try the highly unstable Wilkinson's polynomial:
+ * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946 -1672280820 40171771630 -756111184500 11310276995381 -135585182899530 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640 1206647803780373360 -3599979517947607200 8037811822645051776 -12870931245150988800 13803759753640704000 -8752948036761600000 2432902008176640000
+ * */
+
 #define ACCURACY 1e-10
 
 /**
@@ -36,7 +41,7 @@ const char *complex_str(double complex x)
 double get_rand()
 {
     const double max = 10, min = -10;
-    return (double)rand() / (double)RAND_MAX * (max - min + 1);
+    return (double)rand() / (double)RAND_MAX * (max - min + 1.0);
 }
 
 /***
@@ -116,7 +121,7 @@ int main(int argc, char **argv)
     double tol_condition = 1;
     unsigned long iter = 0;
 
-    while (tol_condition > ACCURACY && iter < ULONG_MAX)
+    while (tol_condition > ACCURACY && iter < INT_MAX)
     {
         double complex delta = 0;
         tol_condition = 0;
@@ -151,6 +156,14 @@ int main(int argc, char **argv)
 #endif
         }
         tol_condition /= (degree - 1);
+
+        if (iter % 500 == 0)
+        {
+            printf("Iter: %lu\t", iter);
+            for (n = 0; n < degree - 1; n++)
+                printf("\t%s", complex_str(s0[n]));
+            printf("\t\tabsolute average change: %.4g\n", tol_condition);
+        }
 
 #if defined(DEBUG) || !defined(NDEBUG)
         fprintf(log_file, "%.4g", tol_condition);
