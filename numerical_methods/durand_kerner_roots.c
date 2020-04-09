@@ -115,7 +115,7 @@ int main(int argc, char **argv)
 
 #if defined(DEBUG) || !defined(NDEBUG)
     fprintf(log_file, "avg. correction");
-    fprintf(log_file, "0,");
+    fprintf(log_file, "\n0,");
     for (n = 0; n < degree - 1; n++)
         fprintf(log_file, "%s,", complex_str(s0[n]));
 #endif
