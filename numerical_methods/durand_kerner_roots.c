@@ -38,10 +38,13 @@ const char *complex_str(long double complex x)
     return msg;
 }
 
-double get_rand(double lim)
+char check_termination(long double delta)
 {
-    const double max = fabs(lim), min = -max;
-    return (double)rand() / (double)RAND_MAX * (max - min + 1.0);
+    static long double past_delta = INFINITY;
+    if (fabsl(past_delta - delta) <= ACCURACY || delta < ACCURACY)
+        return 1;
+    past_delta = delta;
+    return 0;
 }
 
 /***
@@ -130,7 +133,7 @@ int main(int argc, char **argv)
     double tol_condition = 1;
     unsigned long iter = 0;
 
-    while (tol_condition > ACCURACY && iter < INT_MAX)
+    while (!check_termination(tol_condition) && iter < INT_MAX)
     {
         long double complex delta = 0;
         tol_condition = 0;
@@ -152,19 +155,19 @@ int main(int argc, char **argv)
 
             if (isnan(cabsl(delta)) || isinf(cabsl(delta)))
             {
-                printf("Overflow/underrun error - got value = %Lg\n", cabsl(delta));
+                printf("\n\nOverflow/underrun error - got value = %Lg", cabsl(delta));
                 goto end;
             }
 
             s0[n] -= delta;
 
-            tol_condition += fabsl(cabsl(delta));
+            tol_condition = fmaxl(tol_condition, fabsl(cabsl(delta)));
 
 #if defined(DEBUG) || !defined(NDEBUG)
             fprintf(log_file, "%s,", complex_str(s0[n]));
 #endif
         }
-        tol_condition /= (degree - 1);
+        // tol_condition /= (degree - 1);
 
         if (iter % 500 == 0)
         {
