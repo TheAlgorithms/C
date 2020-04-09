@@ -169,6 +169,7 @@ int main(int argc, char **argv)
         }
         // tol_condition /= (degree - 1);
 
+#if defined(DEBUG) || !defined(NDEBUG)
         if (iter % 500 == 0)
         {
             printf("Iter: %lu\t", iter);
@@ -177,7 +178,6 @@ int main(int argc, char **argv)
             printf("\t\tabsolute average change: %.4g\n", tol_condition);
         }
 
-#if defined(DEBUG) || !defined(NDEBUG)
         fprintf(log_file, "%.4g", tol_condition);
 #endif
     }
