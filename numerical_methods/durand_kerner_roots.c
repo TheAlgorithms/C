@@ -5,9 +5,6 @@
 #include <string.h>
 #include <limits.h>
 #include <complex.h>
-#ifdef _OPENMP
-#include <omp.h>
-#endif
 
 #define ACCURACY 1e-10
 
@@ -19,10 +16,6 @@ double complex function(double *coeffs, unsigned int degree, double complex x)
     double complex out = 0.;
     unsigned int n;
 
-#ifdef _OPENMP
-#pragma omp parallel for reduction(+ \
-                                   : out)
-#endif
     for (n = 0; n < degree; n++)
         out += coeffs[n] * cpow(x, degree - n - 1);
 
