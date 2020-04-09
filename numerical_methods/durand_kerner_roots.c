@@ -16,9 +16,9 @@
 /**
  * define polynomial function
  **/
-double complex function(double *coeffs, unsigned int degree, double complex x)
+long double complex function(double *coeffs, unsigned int degree, long double complex x)
 {
-    double complex out = 0.;
+    long double complex out = 0.;
     unsigned int n;
 
     for (n = 0; n < degree; n++)
@@ -27,7 +27,7 @@ double complex function(double *coeffs, unsigned int degree, double complex x)
     return out;
 }
 
-const char *complex_str(double complex x)
+const char *complex_str(long double complex x)
 {
     static char msg[50];
     double r = creal(x);
@@ -38,9 +38,9 @@ const char *complex_str(double complex x)
     return msg;
 }
 
-double get_rand()
+double get_rand(double lim)
 {
-    const double max = 10, min = -10;
+    const double max = fabs(lim), min = -max;
     return (double)rand() / (double)RAND_MAX * (max - min + 1.0);
 }
 
@@ -50,7 +50,7 @@ double get_rand()
 int main(int argc, char **argv)
 {
     double *coeffs = NULL;
-    double complex *s0 = NULL;
+    long double complex *s0 = NULL;
     unsigned int degree = 0;
     unsigned int n, i;
 
@@ -60,9 +60,9 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    degree = argc - 1;                                                    /*< detected polynomial degree */
-    coeffs = (double *)malloc(degree * sizeof(double));                   /**< store all input coefficients */
-    s0 = (double complex *)malloc((degree - 1) * sizeof(double complex)); /**< number of roots = degree-1 */
+    degree = argc - 1;                                                              /*< detected polynomial degree */
+    coeffs = (double *)malloc(degree * sizeof(double));                             /**< store all input coefficients */
+    s0 = (long double complex *)malloc((degree - 1) * sizeof(long double complex)); /**< number of roots = degree-1 */
 
     /* initialize random seed: */
     srand(time(NULL));
@@ -104,7 +104,8 @@ int main(int argc, char **argv)
         /* initialize root approximations with random values */
         if (n < degree - 1)
         {
-            s0[n] = get_rand() + get_rand() * I;
+            s0[n] = get_rand(coeffs[n]);
+            //+get_rand(coeffs[n]) * I;
 #if defined(DEBUG) || !defined(NDEBUG)
             fprintf(log_file, "root_%d,", n);
 #endif
@@ -123,7 +124,7 @@ int main(int argc, char **argv)
 
     while (tol_condition > ACCURACY && iter < INT_MAX)
     {
-        double complex delta = 0;
+        long double complex delta = 0;
         tol_condition = 0;
         iter++;
 
@@ -133,23 +134,23 @@ int main(int argc, char **argv)
 
         for (n = 0; n < degree - 1; n++)
         {
-            double complex numerator = function(coeffs, degree, s0[n]);
-            double complex denominator = 1.0;
+            long double complex numerator = function(coeffs, degree, s0[n]);
+            long double complex denominator = 1.0;
             for (i = 0; i < degree - 1; i++)
                 if (i != n)
                     denominator *= s0[n] - s0[i];
 
-            if (cabs(denominator) == 0)
+            delta = numerator / denominator;
+
+            if (isnan(cabsl(delta)) || isinf(cabsl(delta)))
             {
-                printf("denominatpr = 0\n");
+                printf("Overflow/underrun error - got value = %Lg\n", cabsl(delta));
                 goto end;
             }
 
-            delta = numerator / denominator;
-
             s0[n] -= delta;
 
-            tol_condition += fabs(cabs(delta));
+            tol_condition += fabsl(cabsl(delta));
 
 #if defined(DEBUG) || !defined(NDEBUG)
             fprintf(log_file, "%s,", complex_str(s0[n]));
@@ -176,7 +177,7 @@ end:
     fclose(log_file);
 #endif
 
-    printf("Iterations: %lu\n", iter);
+    printf("\nIterations: %lu\n", iter);
     for (n = 0; n < degree - 1; n++)
         printf("\t%s\n", complex_str(s0[n]));
     printf("absolute average change: %.4g\n", tol_condition);
