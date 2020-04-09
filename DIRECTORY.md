@@ -198,6 +198,7 @@
   * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_Find.c)
 
 ## Numerical Methods
+  * [Durand Kerner Roots](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/durand_kerner_roots.c)
   * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Gauss_Elimination.c)
   * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/lagrange_theorem.C)
   * [Mean](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEAN.C)
