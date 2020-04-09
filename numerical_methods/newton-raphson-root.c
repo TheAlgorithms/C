@@ -59,7 +59,7 @@ int main(int argc, char **argv)
     }
 
     double r = creal(root);
-    double c = cimag(root);
+    double c = fabs(cimag(root)) < accuracy ? 0 : cimag(root);
 
     printf("Iter %5lu: Root: %4.4g%c%4.4gi\t\tdelta: %.4g\n", counter, r,
            c >= 0 ? '+' : '-', c >= 0 ? c : -c, delta);
