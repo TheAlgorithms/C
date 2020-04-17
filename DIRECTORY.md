@@ -38,6 +38,9 @@
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
     * [Test Program](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/test_program.c)
+  * Dynamic Array
+    * [Dynamic Array](https://github.com/TheAlgorithms/C/blob/master/data_structures/dynamic_array/dynamic_array.c)
+    * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/dynamic_array/main.c)
   * Graphs
     * [Bellman-Ford](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/Bellman-Ford.c)
     * [Bfs](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/BFS.c)
