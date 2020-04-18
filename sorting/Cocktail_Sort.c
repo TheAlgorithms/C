@@ -21,6 +21,7 @@ void cocktailSort(int arr[], int size)
         changed = TRUE;
       }
     }
+    end--;
 
     if (changed == FALSE)
     {
@@ -38,6 +39,7 @@ void cocktailSort(int arr[], int size)
         changed = TRUE;
       }
     }
+    start++;
   }
 }
 
