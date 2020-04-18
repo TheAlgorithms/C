@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int pigeonholeSort(int arr[], int size)
+void pigeonholeSort(int arr[], int size)
 {
   int i, j, min = arr[0], max = arr[0], range;
 
@@ -55,7 +55,7 @@ int main()
     scanf("%d", &arr[i]);
   }
 
-  printf("You entered: ");
+  printf("You entered:  ");
   for (i=0; i<n; i++)
   {
     printf("%d ", arr[i]);
