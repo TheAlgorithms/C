@@ -1,4 +1,4 @@
-// C Program to convert hexadecimal to binary
+// C Program to convert hexadecimal to decimal
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
