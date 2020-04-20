@@ -5,6 +5,7 @@
 #include <string.h>
 #include <limits.h>
 #include <complex.h>
+#include "function_timer.h"
 
 /***
  * Try the highly unstable Wilkinson's polynomial:
@@ -131,8 +132,11 @@ int main(int argc, char **argv)
 #endif
 
     double tol_condition = 1;
+    double dtime;
     unsigned long iter = 0;
 
+    function_timer *timer = new_timer();
+    start_timer(timer);
     while (!check_termination(tol_condition) && iter < INT_MAX)
     {
         long double complex delta = 0;
@@ -181,8 +185,9 @@ int main(int argc, char **argv)
         fprintf(log_file, "%.4g", tol_condition);
 #endif
     }
-
 end:
+
+    dtime = end_timer(timer);
 
 #if defined(DEBUG) || !defined(NDEBUG)
     fclose(log_file);
@@ -192,6 +197,7 @@ end:
     for (n = 0; n < degree - 1; n++)
         printf("\t%s\n", complex_str(s0[n]));
     printf("absolute average change: %.4g\n", tol_condition);
+    printf("Time taken: %.4g sec\n", dtime);
 
     free(coeffs);
     free(s0);
