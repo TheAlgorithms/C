@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <function_timer.h>
 
 #define ROWS 4
 #define COLUMNS 3
 
 double A[ROWS][COLUMNS] = {
-    {-3.44827586, -1.62068966, -3.03448276},
-    {-1.03448276, -0.5862069, -1.31034483},
-    {-1.55172414, -0.37931034, 0.03448276}};
+    {1, 2, 3},
+    {3, 6, 5},
+    {5, 2, 8},
+    {8, 9, 3}};
 
 void print_matrix(double A[][COLUMNS], int M, int N)
 {
@@ -137,14 +137,10 @@ int main(void)
         }
     }
 
-    function_timer *t1 = new_timer();
-    start_timer(t1);
     qr_decompose(A, Q, R, ROWS, COLUMNS);
-    double dtime = end_timer_delete(t1);
 
     print_2d(R, ROWS, COLUMNS);
     print_2d(Q, ROWS, COLUMNS);
-    printf("Time taken to compute: %.4g sec\n", dtime);
 
     for (int i = 0; i < ROWS; i++)
     {

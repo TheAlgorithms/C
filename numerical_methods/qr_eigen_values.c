@@ -2,7 +2,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#include <function_timer.h>
 
 #define LIMS 9
 
@@ -169,8 +168,6 @@ int main(int argc, char **argv)
     int counter = 0, num_eigs = rows - 1;
     double last_eig = 0;
 
-    function_timer *t1 = new_timer();
-    start_timer(t1);
     while (num_eigs > 0)
     {
         while (fabs(A[num_eigs][num_eigs - 1]) > 1e-10)
@@ -202,7 +199,6 @@ int main(int argc, char **argv)
         columns--;
     }
     eigen_vals[0] = A[0][0];
-    double dtime = end_timer_delete(t1);
 
 #if defined(DEBUG) || !defined(NDEBUG)
     print_matrix(R, mat_size, mat_size);
@@ -211,7 +207,6 @@ int main(int argc, char **argv)
     printf("Eigen vals: ");
     for (i = 0; i < mat_size; i++)
         printf("% 9.4g\t", eigen_vals[i]);
-    printf("\nTime taken to compute: % .4g sec\n", dtime);
 
     for (int i = 0; i < mat_size; i++)
     {
