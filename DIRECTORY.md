@@ -204,6 +204,8 @@
   * [Mean](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEAN.C)
   * [Median](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/MEDIAN.C)
   * [Newton-Raphson-Root](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/newton-raphson-root.c)
+  * [Qr Decomposition](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/qr_decomposition.c)
+  * [Qr Eigen Values](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/qr_eigen_values.c)
   * [Seidal](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/Seidal.C)
   * [Simpsons 1-3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/simpsons_1-3rd%20rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/variance.c)
