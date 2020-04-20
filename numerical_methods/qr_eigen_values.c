@@ -133,6 +133,12 @@ int main(int argc, char **argv)
     if (argc == 2)
         mat_size = atoi(argv[1]);
 
+    if (mat_size < 2)
+    {
+        fprintf(stderr, "Matrix size should be > 2\n");
+        return -1;
+    }
+
     int i, rows = mat_size, columns = mat_size;
 
     double **A = (double **)malloc(sizeof(double) * mat_size);
