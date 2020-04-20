@@ -7,7 +7,13 @@ project(Algorithms_in_C
 
 option(USE_OPENMP "flag to use OpenMP for multithreading" ON)
 
-add_subdirectory(function_timer EXCLUDE_FROM_ALL)
+function(function_timer)
+    set(CMAKE_BUILD_TYPE "Release")         # This is local to function
+    add_subdirectory(function_timer EXCLUDE_FROM_ALL)
+endfunction()
+
+function_timer()
+
 include_directories(function_timer/include)
 # link_libraries(function_timer)
 # include_directories(${CMAKE_BINARY_DIR}/include)
