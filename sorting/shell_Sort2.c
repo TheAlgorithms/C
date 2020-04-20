@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 
     srand(time(NULL));
     for (i = 0; i < ELEMENT_NR; i++)
-        array[i] = rand() % range + 1;
+        array[i] = (rand() % range) - range;
 
     size = ARRAY_LEN(array);
 
