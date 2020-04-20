@@ -140,7 +140,7 @@ int main(void)
     function_timer *t1 = new_timer();
     start_timer(t1);
     qr_decompose(A, Q, R, ROWS, COLUMNS);
-    double dtime = end_timer(t1);
+    double dtime = end_timer_delete(t1);
 
     print_2d(R, ROWS, COLUMNS);
     print_2d(Q, ROWS, COLUMNS);

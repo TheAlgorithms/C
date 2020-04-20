@@ -187,7 +187,7 @@ int main(int argc, char **argv)
     }
 end:
 
-    dtime = end_timer(timer);
+    dtime = end_timer_delete(timer);
 
 #if defined(DEBUG) || !defined(NDEBUG)
     fclose(log_file);

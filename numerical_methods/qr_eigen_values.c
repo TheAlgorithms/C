@@ -202,7 +202,7 @@ int main(int argc, char **argv)
         columns--;
     }
     eigen_vals[0] = A[0][0];
-    double dtime = end_timer(t1);
+    double dtime = end_timer_delete(t1);
 
 #if defined(DEBUG) || !defined(NDEBUG)
     print_matrix(R, mat_size, mat_size);
