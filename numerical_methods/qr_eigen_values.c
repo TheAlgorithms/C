@@ -1,15 +1,27 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <time.h>
 #include <function_timer.h>
 
-#define ROWS 3
-#define COLUMNS ROWS /* Ensure square matrix */
+#define LIMS 9
 
-double _A[][COLUMNS] = {
-    {-3.44827586, -1.62068966, -3.03448276},
-    {-1.03448276, -0.5862069, -1.31034483},
-    {-1.55172414, -0.37931034, 0.03448276}};
+void create_matrix(double **A, int N)
+{
+    int i, j, tmp, lim2 = LIMS >> 1;
+    srand(time(NULL));
+
+    for (i = 0; i < N; i++)
+    {
+        A[i][i] = (rand() % LIMS) - lim2;
+        for (j = i + 1; j < N; j++)
+        {
+            tmp = (rand() % LIMS) - lim2;
+            A[i][j] = tmp;
+            A[j][i] = tmp;
+        }
+    }
+}
 
 void print_matrix(double **A, int M, int N)
 {
@@ -115,37 +127,41 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2, i
     return OUT;
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
-    int i, rows = ROWS, columns = COLUMNS;
+    int mat_size = 5;
+    if (argc == 2)
+        mat_size = atoi(argv[1]);
 
-    double **A = (double **)malloc(sizeof(double) * ROWS);
-    double **R = (double **)malloc(sizeof(double) * COLUMNS);
-    double **Q = (double **)malloc(sizeof(double) * ROWS);
-    double *eigen_vals = (double *)malloc(sizeof(double) * COLUMNS);
+    int i, rows = mat_size, columns = mat_size;
+
+    double **A = (double **)malloc(sizeof(double) * mat_size);
+    double **R = (double **)malloc(sizeof(double) * mat_size);
+    double **Q = (double **)malloc(sizeof(double) * mat_size);
+    double *eigen_vals = (double *)malloc(sizeof(double) * mat_size);
     if (!Q || !R || !eigen_vals)
     {
         perror("Unable to allocate memory for Q & R!");
         return -1;
     }
-    for (i = 0; i < ROWS; i++)
+    for (i = 0; i < mat_size; i++)
     {
-        A[i] = (double *)malloc(sizeof(double) * COLUMNS);
-        R[i] = (double *)malloc(sizeof(double) * COLUMNS);
-        Q[i] = (double *)malloc(sizeof(double) * COLUMNS);
+        A[i] = (double *)malloc(sizeof(double) * mat_size);
+        R[i] = (double *)malloc(sizeof(double) * mat_size);
+        Q[i] = (double *)malloc(sizeof(double) * mat_size);
         if (!Q[i] || !R[i])
         {
             perror("Unable to allocate memory for Q & R.");
             return -1;
         }
-        for (columns = 0; columns < COLUMNS; columns++)
-            A[i][columns] = _A[i][columns];
     }
 
-    print_matrix(A, ROWS, COLUMNS);
+    create_matrix(A, mat_size);
+
+    print_matrix(A, mat_size, mat_size);
 
     int counter = 0, num_eigs = rows - 1;
-    double last_eig = 0, eig_val = 0.;
+    double last_eig = 0;
 
     function_timer *t1 = new_timer();
     start_timer(t1);
@@ -162,7 +178,7 @@ int main(void)
             print_matrix(A, rows, columns);
             print_matrix(Q, rows, columns);
             print_matrix(R, columns, columns);
-            printf("-------------------- %d ---------------------\n", counter++);
+            printf("-------------------- %d ---------------------\n", ++counter);
 #endif
             mat_mul(R, Q, A, columns, columns, rows, columns);
             for (int i = 0; i < rows; i++)
@@ -180,21 +196,18 @@ int main(void)
         columns--;
     }
     eigen_vals[0] = A[0][0];
-#if defined(DEBUG) || !defined(NDEBUG)
-    printf("========================\n");
-    printf("Eigen value: % g,\n", last_eig);
-    printf("========================\n");
-#endif
     double dtime = end_timer(t1);
 
-    print_matrix(R, ROWS, COLUMNS);
-    print_matrix(Q, ROWS, COLUMNS);
+#if defined(DEBUG) || !defined(NDEBUG)
+    print_matrix(R, mat_size, mat_size);
+    print_matrix(Q, mat_size, mat_size);
+#endif
     printf("Eigen vals: ");
-    for (i = 0; i < ROWS; i++)
-        printf("% 9.3g\t", eigen_vals[i]);
-    printf("\nTime taken to compute: %.3g sec\n", dtime);
+    for (i = 0; i < mat_size; i++)
+        printf("% 9.4g\t", eigen_vals[i]);
+    printf("\nTime taken to compute: % .4g sec\n", dtime);
 
-    for (int i = 0; i < ROWS; i++)
+    for (int i = 0; i < mat_size; i++)
     {
         free(A[i]);
         free(R[i]);
@@ -203,5 +216,6 @@ int main(void)
     free(A);
     free(R);
     free(Q);
+    free(eigen_vals);
     return 0;
 }
