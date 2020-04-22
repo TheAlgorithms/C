@@ -29,6 +29,9 @@
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
     * [Test Program](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/test_program.c)
+  * Dynamic Array
+    * [Dynamic Array](https://github.com/TheAlgorithms/C/blob/master/data_structures/dynamic_array/dynamic_array.c)
+    * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/dynamic_array/main.c)
   * Graphs
     * [Bellman-Ford](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/Bellman-Ford.c)
     * [Bfs](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/BFS.c)
@@ -285,6 +288,7 @@
   * [Bubble Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort.c)
   * [Bubble Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/Bubble_Sort_2.c)
   * [Bucket Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Bucket_Sort.c)
+  * [Cocktail Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Cocktail_Sort.c)
   * [Comb Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/comb_sort.c)
   * [Counting Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/counting_Sort.c)
   * [Cycle Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Cycle_Sort.c)
@@ -295,6 +299,7 @@
   * [Multikey Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quick_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Pancake_Sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/partition_Sort.c)
+  * [Pigeonhole Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Pigeonhole_Sort.c)
   * [Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Quick_Sort.c)
   * [Radix Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/radix_sort.c)
   * [Radix Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/radix_sort_2.c)

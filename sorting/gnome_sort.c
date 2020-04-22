@@ -6,17 +6,18 @@ void sort(int *numbers, int size)
     int pos = 0;
     while (pos < size)
     {
-        if (numbers[pos] >= numbers[pos-1])
+       if (pos == 0)
+          pos = 1;
+        if (numbers[pos] >= numbers[pos-1] || pos == 0)
             pos++;
-        else 
+        else
         {
             int tmp = numbers[pos-1];
             numbers[pos-1] = numbers[pos];
             numbers[pos] = tmp;
             pos--;
 
-            if (pos == 0)
-                pos = 1;
+
         }
     }
 }
@@ -45,4 +46,3 @@ int main()
     free(numbers);
     return 0;
 }
-

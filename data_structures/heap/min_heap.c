@@ -46,6 +46,7 @@ Heap* create_heap(Heap* heap){
 	heap->size = 1;
 	heap->p = (int *)malloc(heap->size*sizeof(int));
 	heap->count = 0;
+	return heap;
 }
 
 void down_heapify(Heap* heap, int index){

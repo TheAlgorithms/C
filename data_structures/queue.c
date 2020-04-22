@@ -66,7 +66,7 @@ void enque(int x) {
  * Takes the next item from the Queue.
  */
 int deque() {
-    int returnData;
+    int returnData = 0;
     if(head == NULL) {
         printf("ERROR: Deque from empty queue.\n");
         exit(1);
@@ -78,6 +78,7 @@ int deque() {
             head = head->pre;
         head->next = NULL;
     }
+	return returnData;
 }
 
 /**
@@ -86,40 +87,3 @@ int deque() {
 int size() {
     return count;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

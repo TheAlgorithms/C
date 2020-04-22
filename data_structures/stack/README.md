@@ -13,25 +13,35 @@ You need to only import the **stack.h**
 
 ### Public interface
 
-``` void initStack(); ```
+```c 
+void initStack();
+```
 
 Initializes the stack with a capacity of 10 elements.
 
-``` void push(void * object); ```
+```c 
+void push(void * object);
+```
 
 pushs the argument onto the stack
 
-``` void  * pop(); ```
+```c 
+void  * pop();
+```
 
 pop: pops the top element of the stack from the stack.
 
     assumes: stack not empty.
 
-``` int size(); ```
+```c 
+int size();
+```
 
 gets the number of elements of the stack.
 
-``` int isEmpty(); ```
+```c 
+int isEmpty();
+```
 
 returns 1 if stack is empty otherwise 0.
 
