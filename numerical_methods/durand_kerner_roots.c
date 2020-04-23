@@ -27,13 +27,13 @@ long double complex function(double *coeffs, unsigned int degree, long double co
     return out;
 }
 
-const char *complex_str(long double complex x)
+static inline char *complex_str(long double complex x)
 {
     static char msg[50];
     double r = creal(x);
     double c = cimag(x);
 
-    sprintf(msg, "%.04g%c%.04gi", r, c >= 0 ? '+' : '-', c >= 0 ? c : -c);
+    sprintf(msg, "% 7.04g%+7.04gj", r, c);
 
     return msg;
 }
