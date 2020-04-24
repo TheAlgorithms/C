@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int linearsearch(int *arr, int size, int val)
 {
@@ -17,7 +18,7 @@ int main()
 	printf("Enter the size of the array:\n");
 	scanf("%d", &n); //Taking input for the size of Array
 
-	int a[n];
+	int *a = (int *)malloc(n * sizeof(int));
 	printf("Enter the contents for an array of size %d:\n", n);
 	for (i = 0; i < n; i++)
 		scanf("%d", &a[i]); // accepts the values of array elements until the loop terminates//
@@ -28,5 +29,7 @@ int main()
 		printf("Value %d is in the array.\n", v);
 	else
 		printf("Value %d is not in the array.\n", v);
+
+	free(a);
 	return 0;
 }

@@ -7,7 +7,7 @@
 
 int main(int argc, char **argv)
 {
-	int a[MAX_LEN], n = 10, i, j, temp, sum = 0;
+	int *a, n = 10, i, j, temp, sum = 0;
 	float mean;
 
 	if (argc == 2)
@@ -18,6 +18,7 @@ int main(int argc, char **argv)
 			fprintf(stderr, "Maximum %d!\n", MAX_LEN);
 			return 1;
 		}
+		a = (int *)malloc(n * sizeof(int));
 	}
 
 	printf("Random Numbers Generated are : ");
@@ -35,5 +36,6 @@ int main(int argc, char **argv)
 	printf("\nMean :");
 	printf("%f", mean);
 
+	free(a);
 	return 0;
 }
