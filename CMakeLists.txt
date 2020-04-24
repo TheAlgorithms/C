@@ -22,6 +22,10 @@ include_directories(function_timer/include)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+if(MSVC)
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+endif(MSVC)
+
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
