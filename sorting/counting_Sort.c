@@ -25,7 +25,7 @@ int main()
             l = a[i];
     }
 
-    int b[l + 1];
+    int *b = (int *)malloc((l + 1) * sizeof(int));
     memset(b, 0, (l + 1) * sizeof(b[0]));
 
     for (i = 0; i < n; i++)
@@ -44,5 +44,6 @@ int main()
     }
 
     free(a);
+    free(b);
     return 0;
 }

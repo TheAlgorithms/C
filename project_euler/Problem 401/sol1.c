@@ -79,7 +79,8 @@ uint64_t sigma2(uint64_t N)
  **/
 uint64_t sigma(uint64_t N)
 {
-    uint64_t s, sum = 0, i;
+    uint64_t s, sum = 0;
+    int64_t i;
 
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ \

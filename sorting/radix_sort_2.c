@@ -20,7 +20,7 @@ int MAX(int *ar, int size)
 void countSort(int *arr, int n, int place)
 {
         int i, freq[range] = {0};
-        int output[n];
+        int *output = (int *)malloc(n * sizeof(int));
 
         // Store count of occurences in freq[]
         for (i = 0; i < n; i++)
@@ -40,6 +40,7 @@ void countSort(int *arr, int n, int place)
         // Copy the output array to arr[], so it contains numbers according to the current digit
         for (i = 0; i < n; i++)
                 arr[i] = output[i];
+        free(output);
 }
 
 /*This is where the sorting of the array takes place

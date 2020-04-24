@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     unsigned short max_digits = 0, max_idx_number = 0;
 
     clock_t start_time = clock();
-    unsigned short deno;
+    short deno;
 #ifdef _OPENMP
 #pragma omp for
 #endif
