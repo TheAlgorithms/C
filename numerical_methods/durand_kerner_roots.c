@@ -22,7 +22,7 @@
 /**
  * define polynomial function
  **/
-long double complex function(double *coeffs, unsigned int degree, long double complex x)
+long double complex poly_function(double *coeffs, unsigned int degree, long double complex x)
 {
     long double complex out = 0.;
     unsigned int n;
@@ -154,7 +154,7 @@ int main(int argc, char **argv)
 
         for (n = 0; n < degree - 1; n++)
         {
-            long double complex numerator = function(coeffs, degree, s0[n]);
+            long double complex numerator = poly_function(coeffs, degree, s0[n]);
             long double complex denominator = 1.0;
             for (i = 0; i < degree - 1; i++)
                 if (i != n)

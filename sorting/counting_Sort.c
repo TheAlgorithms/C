@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -15,26 +16,26 @@ int main()
     printf("Enter size of array = ");
     scanf("%d", &n);
 
-    int a[n];
+    int *a = (int *)malloc(n * sizeof(int));
     printf("Enter %d elements in array :\n", n);
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
-        if(a[i] > l)
+        if (a[i] > l)
             l = a[i];
     }
 
     int b[l + 1];
     memset(b, 0, (l + 1) * sizeof(b[0]));
 
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
         b[a[i]]++; //hashing number to array index
 
-    for(i = 0; i < (l + 1); i++) //unstable , stabilized by prefix sum array
+    for (i = 0; i < (l + 1); i++) //unstable , stabilized by prefix sum array
     {
-        if(b[i] > 0)
+        if (b[i] > 0)
         {
-            while(b[i] != 0) //for case when number exists more than once
+            while (b[i] != 0) //for case when number exists more than once
             {
                 printf("%d ", i);
                 b[i]--;
@@ -42,5 +43,6 @@ int main()
         }
     }
 
+    free(a);
     return 0;
 }

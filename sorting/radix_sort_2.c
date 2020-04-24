@@ -1,10 +1,11 @@
 //sorting of array list using Radix sort
 #include <stdio.h>
+#include <stdlib.h>
 
 #define range 10 // Range for integers is 10 as digits range from 0-9
 
 // Utility function to get the maximum value in ar[]
-int MAX(int ar[], int size)
+int MAX(int *ar, int size)
 {
         int i, max = ar[0];
         for (i = 0; i < size; i++)
@@ -16,7 +17,7 @@ int MAX(int ar[], int size)
 }
 
 // Counting sort according to the digit represented by place
-void countSort(int arr[], int n, int place)
+void countSort(int *arr, int n, int place)
 {
         int i, freq[range] = {0};
         int output[n];
@@ -46,7 +47,7 @@ void countSort(int arr[], int n, int place)
  n --- Array Size
  max --- Maximum element in Array
  */
-void radixsort(int arr[], int n, int max) //max is the maximum element in the array
+void radixsort2(int *arr, int n, int max) //max is the maximum element in the array
 {
         int mul = 1;
         while (max)
@@ -72,7 +73,7 @@ int main(int argc, const char *argv[])
 
         printf("Enter the elements of the array\n");
         int i;
-        int arr[n];
+        int *arr = (int *)malloc(n * sizeof(int));
         for (i = 0; i < n; i++)
         {
                 scanf("%d", &arr[i]);
@@ -84,10 +85,11 @@ int main(int argc, const char *argv[])
         int max;
         max = MAX(arr, n);
 
-        radixsort(arr, n, max);
+        radixsort2(arr, n, max);
 
         printf("Sorted array: ");
         display(arr, n); // Sorted array : 3 4 7 8 8 9 10 11
 
+        free(arr);
         return 0;
 }
