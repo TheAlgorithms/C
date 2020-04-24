@@ -110,7 +110,7 @@ int main(int argc, char **argv)
 
     long sum_score = 0;
     clock_t start_time = clock();
-    unsigned int i;
+    int i;
 
 #ifdef _OPENMP
 #pragma omp parallel for schedule(runtime) reduction(+ \

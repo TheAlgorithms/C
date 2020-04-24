@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 #endif
 
     double total_duration = 0;
-    unsigned long i;
+    long i;
     function_timer *timer = new_timer();
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ \

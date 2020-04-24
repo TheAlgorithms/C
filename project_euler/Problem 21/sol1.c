@@ -52,7 +52,7 @@ int main(int argc, char **argv)
     char *flags = (char *)calloc(MAX_N, sizeof(char));
 
     clock_t start_time = clock();
-    unsigned int i;
+    int i;
 #ifdef _OPENMP
 #pragma omp for schedule(runtime)
 #endif

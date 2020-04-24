@@ -120,7 +120,7 @@ int main(int argc, char **argv)
     clock_t start_time = clock();
 
     /* Loop to set abundant flags */
-    unsigned long N;
+    long N;
 #ifdef _OPENMP
 #pragma omp for schedule(runtime)
 #endif
