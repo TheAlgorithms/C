@@ -36,7 +36,7 @@ int main(int argc, char **argv)
         printf("Maximum number: %lld\n", MAX_NUM);
     }
 
-/**
+    /**
      * Since the computational values for each iteration step are independent,
      * we can compute them in parallel. However, the maximum values should be
      * updated in synchrony so that we do not get into a "race condition".
@@ -46,10 +46,11 @@ int main(int argc, char **argv)
      *
      * Automatically detects for OPENMP using the _OPENMP macro.
      **/
+    long long i;
 #ifdef _OPENMP
 #pragma omp parallel for shared(max_len, max_len_num) schedule(guided)
 #endif
-    for (long long i = 1; i < MAX_NUM; i++)
+    for (i = 1; i < MAX_NUM; i++)
     {
         long long L = collatz(i);
         if (L > max_len)

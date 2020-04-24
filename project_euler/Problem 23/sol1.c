@@ -92,12 +92,13 @@ int main(int argc, char **argv)
 #endif
 
     double total_duration = 0;
+    unsigned long i;
     function_timer *timer = new_timer();
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ \
                                    : sum) schedule(runtime)
 #endif
-    for (unsigned long i = 1; i <= MAX_N; i++)
+    for (i = 1; i <= MAX_N; i++)
     {
         start_timer(timer);
         if (!is_sum_of_abundant(i))

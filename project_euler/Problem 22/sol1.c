@@ -110,14 +110,16 @@ int main(int argc, char **argv)
 
     long sum_score = 0;
     clock_t start_time = clock();
+    unsigned int i;
+
 #ifdef _OPENMP
 #pragma omp parallel for schedule(runtime) reduction(+ \
                                                      : sum_score)
 #endif
 #ifdef DEBUG
-    for (unsigned int i = 935; i < 940; i++)
+    for (i = 935; i < 940; i++)
 #else
-    for (unsigned int i = 0; i < COUNT; i++)
+    for (i = 0; i < COUNT; i++)
 #endif
     {
         unsigned int score = 0;

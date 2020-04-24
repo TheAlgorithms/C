@@ -119,11 +119,12 @@ int main(int argc, char **argv)
 
     clock_t start_time = clock();
 
-/* Loop to set abundant flags */
+    /* Loop to set abundant flags */
+    unsigned long N;
 #ifdef _OPENMP
 #pragma omp for schedule(runtime)
 #endif
-    for (unsigned long N = 1; N <= MAX_N; N++)
+    for (N = 1; N <= MAX_N; N++)
     {
         char ret = get_perfect_number(N);
         if (ret == 1)

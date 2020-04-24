@@ -19,10 +19,11 @@ int main(int argc, char *argv[])
     unsigned short max_digits = 0, max_idx_number = 0;
 
     clock_t start_time = clock();
+    unsigned short deno;
 #ifdef _OPENMP
 #pragma omp for
 #endif
-    for (unsigned short deno = 2; deno < MAX_DENO; deno++)
+    for (deno = 2; deno < MAX_DENO; deno++)
     {
         unsigned short remainders[MAX_LEN];
         unsigned short rem = 1, *rem_ptr = remainders;

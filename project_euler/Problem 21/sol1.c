@@ -52,12 +52,12 @@ int main(int argc, char **argv)
     char *flags = (char *)calloc(MAX_N, sizeof(char));
 
     clock_t start_time = clock();
-
+    unsigned int i;
 #ifdef _OPENMP
 #pragma omp for schedule(runtime)
 #endif
     /* there are no such numbers till 10. Lets search from there on */
-    for (unsigned int i = 10; i < MAX_N; i++)
+    for (i = 10; i < MAX_N; i++)
     {
         if (flags[i] != 0)
             /* already processed, skip */
