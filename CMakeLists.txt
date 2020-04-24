@@ -36,6 +36,11 @@ add_subdirectory(numerical_methods)
 
 if(USE_OPENMP)
     find_package(OpenMP)
+    if (OpenMP_C_FOUND)
+        message(STATUS "Building with OpenMP Multithreading.")
+    else()
+        message(STATUS "No OpenMP found, no multithreading.")
+    endif()
 endif()
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
