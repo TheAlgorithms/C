@@ -2,6 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdint.h>
+#define __STDC_FORMAT_MACROS
+#include <inttypes.h>
 #ifdef _OPENMP
 #include <omp.h>
 #endif
@@ -110,7 +112,7 @@ int main(int argc, char **argv)
     uint64_t result = sigma(N);
     double dtime = clock() - start_time;
 
-    printf("N = %llu\nSum: %llu\n", N, result);
+    printf("N = %" PRIu64 "\nSum: %" PRIu64 "\n", N, result);
     printf("Time taken: %.4gms\n", dtime * 1e3 / CLOCKS_PER_SEC);
 
     return 0;
