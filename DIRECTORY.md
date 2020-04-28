@@ -176,7 +176,7 @@
   * [Collatz](https://github.com/kvedala/C/blob/master/misc/Collatz.c)
   * [Demonetization](https://github.com/kvedala/C/blob/master/misc/demonetization.c)
   * [Factorial](https://github.com/kvedala/C/blob/master/misc/Factorial.c)
-  * [Factorial Fast](https://github.com/kvedala/C/blob/master/misc/factorial_fast.c)
+  * [Factorial Large Number](https://github.com/kvedala/C/blob/master/misc/factorial_large_number.c)
   * [Factorial Trailing Zeroes](https://github.com/kvedala/C/blob/master/misc/factorial_trailing_zeroes.c)
   * [Fibonacci](https://github.com/kvedala/C/blob/master/misc/Fibonacci.c)
   * [Fibonacci Dp](https://github.com/kvedala/C/blob/master/misc/Fibonacci_DP.c)
