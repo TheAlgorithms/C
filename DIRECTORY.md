@@ -23,6 +23,7 @@
   * [Decimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal.c)
   * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal_recursion.c)
   * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
+  * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
   * [To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/to_decimal.c)
 
 ## Data Structures
