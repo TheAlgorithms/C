@@ -79,6 +79,9 @@ For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com
 	- xor8 (8 bit)
 	- adler_32 (32 bit)
 
+## Cryptography
+	- RC4
+
 
 ## Misc
 	- ArmstrongNumber	
