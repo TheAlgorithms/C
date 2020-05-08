@@ -28,6 +28,7 @@ For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com
 
 ## Data Structures
 	- stack
+	- infix to postfix for String
 	- queue
 	- dictionary
 	- linked_list
