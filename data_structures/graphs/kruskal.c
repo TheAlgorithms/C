@@ -27,7 +27,7 @@ struct Graph
 // Creates a graph with V vertices and E edges 
 struct Graph* createGraph(int V, int E) 
 { 
-	struct Graph* graph = new Graph; 
+	struct Graph* graph = new Graph(); 
 	graph->V = V; 
 	graph->E = E; 
 
