@@ -98,6 +98,9 @@
   * Word Count
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.c)
 
+## Greedy Approach
+  * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
+
 ## Hash
   * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.c)
   * [Test Program](https://github.com/TheAlgorithms/C/blob/master/hash/test_program.c)
