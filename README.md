@@ -38,6 +38,9 @@ For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com
 		- recursive_traversals
 	- trie
 		- trie
+	- heap
+		- min heap
+		- max heap 
 
 
 ## Searching
