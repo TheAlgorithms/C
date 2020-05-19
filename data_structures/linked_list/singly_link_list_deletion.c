@@ -35,7 +35,7 @@ void insert()//function to insert at first location
   }
 }
 ///////////////////////////////////////////////////////////
-void deleteion()//function to delete from first position
+void deletion()//function to delete from first position
 {
     struct node *t;
     if(start==NULL)
@@ -85,7 +85,7 @@ int main()
             insert();
             break;
         case 2:
-            deleteion();
+            deletion();
             break;
         case 3:
             viewlist();
