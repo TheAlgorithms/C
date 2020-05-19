@@ -16,7 +16,7 @@ void insertionSort(int *arr, int s, int e)
    {
        key = arr[i];
        j = i-1;
-       while (j >= 0 && arr[j] > key)
+       while (j >= s && arr[j] > key)
        {
            arr[j+1] = arr[j];
            j = j-1;
@@ -30,21 +30,12 @@ void insertionSort(int *arr, int s, int e)
 void concat(int * arr, int l , int m, int r)
 {
 	int lh = m-l + 1 ,  rh = r-m ;
-	int * brr = malloc(sizeof(int)*lh) , * crr = malloc(sizeof(int)*rh) ;
 	int i, j = 0, k = l;
 	
 	insertionSort(arr, l , m);
 	
 	
-	insertionSort(arr,m+1,rh);
-	
-	printf("\n\n\n");
-	for(int i = l ; i < lh ; i++ )
-		printf("%d",arr[i]); 
-	
-	printf("\n\n\n");
-	for(int i = m+1 ; i < rh ; i++)
-		printf("%d",arr[i]);	
+	insertionSort(arr,m+1,rh);	
 		
 	i=0;
 		
@@ -94,7 +85,11 @@ void merge(int * arr, int l ,int r )
 int main()
 {
 
-int * arr = malloc(sizeof(int ));
+// get the size of array
+int n;
+scanf("%d", &n);
+
+int * arr = malloc(sizeof(int)*n);
 
 int n;
 scanf("%d",&n);
