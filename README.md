@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/TheAlgorithms/C.svg?branch=master)](https://travis-ci.com/TheAlgorithms/C)  
 C
 ========
 
