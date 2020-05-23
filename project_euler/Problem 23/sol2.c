@@ -11,7 +11,7 @@
  * into a look-up array
  **/
 
-unsigned long MAX_N = 28123;
+long MAX_N = 28123;
 
 /**
  * This is the global array to be used to store a flag to identify
@@ -57,7 +57,9 @@ char get_perfect_number(unsigned long N)
 char is_abundant(unsigned long N)
 {
     // return abundant_flags[N >> 3] & (1 << N % 8) ? 1 : 0;
-    return abundant_flags[N >> 3] & (1 << (N & 7)) ? 1 : 0; /* optimized modulo operation */
+    return abundant_flags[N >> 3] & (1 << (N & 7))
+               ? 1
+               : 0; /* optimized modulo operation */
 }
 
 /**
@@ -84,7 +86,8 @@ char is_sum_of_abundant(unsigned long N)
      * i + j = N   where both i and j should be abundant
      * hence we can simply check for j = N - i as we loop through i
      **/
-    for (unsigned long i = get_next_abundant(1); i <= (N >> 1); i = get_next_abundant(i))
+    for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
+         i = get_next_abundant(i))
         if (is_abundant(N - i))
         {
 #ifdef DEBUG
@@ -112,7 +115,8 @@ int main(int argc, char **argv)
     }
 
 #ifdef _OPENMP
-    printf("Using OpenMP parallleization with %d threads\n", omp_get_max_threads());
+    printf("Using OpenMP parallleization with %d threads\n",
+           omp_get_max_threads());
 #else
     printf("Not using parallleization!\n");
 #endif
@@ -145,22 +149,23 @@ int main(int argc, char **argv)
     printf("Time taken to get abundant numbers: %.4g ms\n", t1);
 
     clock_t t2 = 0;
+    long i;
 #ifdef _OPENMP
-#pragma omp for schedule(runtime) private(start_time, end_time)
+#pragma omp parallel for schedule(runtime) reduction(+ : sum)
 #endif
-    for (unsigned long i = 1; i < MAX_N; i++)
+    for (i = 1; i < MAX_N; i++)
     {
-        start_time = clock();
+        clock_t start_time1 = clock();
         if (!is_sum_of_abundant(i))
-#ifdef _OPENMP
-#pragma omp critical
-#endif
+            // #ifdef _OPENMP
+            // #pragma omp critical
+            // #endif
             sum += i;
-        end_time = clock();
+        clock_t end_time1 = clock();
 #ifdef _OPENMP
 #pragma omp critical
 #endif
-        t2 += end_time - start_time;
+        t2 += end_time1 - start_time1;
 
         printf("... %5lu: %8lu\r", i, sum);
         if (i % 100 == 0)
@@ -171,9 +176,12 @@ int main(int argc, char **argv)
     putchar('\n');
 #endif
     double t22 = 1e3 * t2 / CLOCKS_PER_SEC;
-    printf("Time taken for final sum: %.4g ms\nTotal Time taken: %.4g ms\n", t22, t1 + t22);
+    printf("Time taken for final sum: %.4g ms\nTotal Time taken: %.4g ms\n",
+           t22, t1 + t22);
     printf("Memory used: %lu bytes\n", MAX_N >> 3);
-    printf("Sum of numbers that cannot be represented as sum of two abundant numbers : %lu\n", sum);
+    printf("Sum of numbers that cannot be represented as sum of two abundant "
+           "numbers : %lu\n",
+           sum);
 
     free(abundant_flags);
 
