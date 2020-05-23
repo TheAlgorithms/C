@@ -1,4 +1,6 @@
 
+## [872](https://github.com/kvedala/C/blob/master//872.c)
+
 ## Client Server
   * [Client](https://github.com/kvedala/C/blob/master/client_server/client.c)
   * [Server](https://github.com/kvedala/C/blob/master/client_server/server.c)
@@ -14,6 +16,7 @@
   * [Decimal To Octal](https://github.com/kvedala/C/blob/master/conversions/decimal_to_octal.c)
   * [Decimal To Octal Recursion](https://github.com/kvedala/C/blob/master/conversions/decimal_to_octal_recursion.c)
   * [Hexadecimal To Octal](https://github.com/kvedala/C/blob/master/conversions/hexadecimal_to_octal.c)
+  * [Octal To Decimal](https://github.com/kvedala/C/blob/master/conversions/octal_to_decimal.c)
   * [To Decimal](https://github.com/kvedala/C/blob/master/conversions/to_decimal.c)
 
 ## Data Structures
@@ -35,16 +38,27 @@
   * Graphs
     * [Bellman-Ford](https://github.com/kvedala/C/blob/master/data_structures/graphs/Bellman-Ford.c)
     * [Bfs](https://github.com/kvedala/C/blob/master/data_structures/graphs/BFS.c)
+    * [Bfsqueue](https://github.com/kvedala/C/blob/master/data_structures/graphs/bfsQueue.c)
     * [Dfs](https://github.com/kvedala/C/blob/master/data_structures/graphs/DFS.c)
+    * [Dfsrecursive](https://github.com/kvedala/C/blob/master/data_structures/graphs/dfsRecursive.c)
     * [Dijkstra](https://github.com/kvedala/C/blob/master/data_structures/graphs/Dijkstra.c)
+    * [Euler](https://github.com/kvedala/C/blob/master/data_structures/graphs/euler.c)
     * [Floyd-Warshall](https://github.com/kvedala/C/blob/master/data_structures/graphs/Floyd-Warshall.c)
+    * [Graph](https://github.com/kvedala/C/blob/master/data_structures/graphs/Graph.c)
+    * [Hamiltonian](https://github.com/kvedala/C/blob/master/data_structures/graphs/hamiltonian.c)
     * [Kruskal](https://github.com/kvedala/C/blob/master/data_structures/graphs/kruskal.c)
+    * [Queue](https://github.com/kvedala/C/blob/master/data_structures/graphs/queue.c)
     * [Strongly Connected Components](https://github.com/kvedala/C/blob/master/data_structures/graphs/strongly_connected_components.c)
     * [Topologicalsort](https://github.com/kvedala/C/blob/master/data_structures/graphs/topologicalSort.c)
+    * [Transitiveclosure](https://github.com/kvedala/C/blob/master/data_structures/graphs/transitiveClosure.c)
+  * Hash Set
+    * [Hash Set](https://github.com/kvedala/C/blob/master/data_structures/hash_set/hash_set.c)
+    * [Main](https://github.com/kvedala/C/blob/master/data_structures/hash_set/main.c)
   * Heap
     * [Max Heap](https://github.com/kvedala/C/blob/master/data_structures/heap/max_heap.c)
     * [Min Heap](https://github.com/kvedala/C/blob/master/data_structures/heap/min_heap.c)
   * Linked List
+    * [Circularlinkedlist](https://github.com/kvedala/C/blob/master/data_structures/linked_list/CircularLinkedList.C)
     * [Merge Linked Lists](https://github.com/kvedala/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
     * [Middle Element In List](https://github.com/kvedala/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
     * [Singly Link List Deletion](https://github.com/kvedala/C/blob/master/data_structures/linked_list/singly_link_list_deletion.c)
@@ -75,6 +89,9 @@
     * [Rna Transcription](https://github.com/kvedala/C/blob/master/exercism/rna_transcription/rna_transcription.c)
   * Word Count
     * [Word Count](https://github.com/kvedala/C/blob/master/exercism/word_count/word_count.c)
+
+## Greedy Approach
+  * [Djikstra](https://github.com/kvedala/C/blob/master/greedy_approach/djikstra.c)
 
 ## Hash
   * [Hash](https://github.com/kvedala/C/blob/master/hash/hash.c)
