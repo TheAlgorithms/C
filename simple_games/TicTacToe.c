@@ -1,4 +1,7 @@
-
+/*Tic-Tac-Toe Game,where the user can decide to play with the computer(single player mode) 
+or with other user(double player mode) , the code as a array named 'a' which is the table and user needs 
+to enter the position in the array(from 1-9) where he/she wants to place X or O on the table.
+*/
 //Header Files
 #include <stdio.h>
 #include <stdlib.h>
