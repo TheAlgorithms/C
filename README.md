@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/kvedala/C.svg?branch=master)](https://travis-ci.org/kvedala/C)
 C
-========
 
 For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com/TheAlgorithms/C/blob/master/DIRECTORY.md)
 
@@ -41,6 +40,9 @@ All the code can be executed and tested online: [![using Google Colab Notebook](
 		- recursive_traversals
 	- trie
 		- trie
+	- heap
+		- min heap
+		- max heap 
 
 
 ## Searching

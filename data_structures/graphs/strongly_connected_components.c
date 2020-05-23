@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 40//Assume 40 nodes at max in graph
+#define INT_MIN  0
 //A vertex of the graph 
 struct node
 {
@@ -195,6 +196,7 @@ struct Stack* createStack()
 {
 	struct Stack* stack=malloc(sizeof(struct Stack));
 	stack->top=-1;
+    return stack;
 }
 //Pushes element into stack
 void push(struct Stack* stack,int element)
