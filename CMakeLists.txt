@@ -7,6 +7,30 @@ project(Algorithms_in_C
 
 option(USE_OPENMP "flag to use OpenMP for multithreading" ON)
 
+cmake_policy(SET CMP0054 NEW)
+cmake_policy(SET CMP0057 NEW)
+find_package(Doxygen OPTIONAL_COMPONENTS dot dia)
+if(DOXYGEN_FOUND)
+    set(DOXYGEN_GENERATE_HTML YES)
+    set(DOXYGEN_GENERATE_ YES)
+    set(DOXYGEN_GENERATE_MAN NO)
+    set(DOXYGEN_USE_MATHJAX YES)
+    set(DOCYGEN_GENERATE_TREEVIEW YES)
+    set(DOXYGEN_INLINE_SOURCES YES)
+    set(DOXYGEN_STRIP_CODE_COMMENTS NO)
+    if(Doxygen_dot_FOUND)
+        set(DOXYGEN_HAVE_DOT YES)
+        set(DOXYGEN_DOT_IMAGE_FORMAT "svg")
+        set(DOXYGEN_INTERACTIVE_SVG YES)
+    endif()
+
+    doxygen_add_docs(
+        doc
+        ${PROJECT_SOURCE_DIR}
+        COMMENT "Generate documentation"
+    )
+endif()
+
 function(function_timer)
     set(CMAKE_BUILD_TYPE "Release")         # This is local to function
     add_subdirectory(function_timer EXCLUDE_FROM_ALL)
