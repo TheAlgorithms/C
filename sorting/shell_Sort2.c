@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "function_timer.h"
 
 #define ELEMENT_NR 20000
 #define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
@@ -61,21 +60,19 @@ int main(int argc, char *argv[])
 
     srand(time(NULL));
     for (i = 0; i < ELEMENT_NR; i++)
-        array[i] = (rand() % range) - range;
+        array[i] = rand() % range + 1;
 
     size = ARRAY_LEN(array);
 
-    function_timer *timer = new_timer();
-
     show_data(array, size);
-    start_timer(timer);
+    clock_t t1 = clock();
     shell_sort(array, size);
-    time_spent = end_timer(timer);
+    clock_t t2 = clock();
 
     printf("Data Sorted\n");
     show_data(array, size);
 
-    printf("Time spent sorting: %.4g s\n", time_spent);
+    printf("Time spent sorting: %.4g s\n", (t2 - t1) / CLOCKS_PER_SEC);
 
     return 0;
 }
