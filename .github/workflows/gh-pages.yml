@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@master
         with:
           submodules: true
+      - name: Install requirements
+        run: apt -qq install doxygen dot ninja
       - name: configure
         run: cmake -G Ninja -B ./build -S .
       - name: build
