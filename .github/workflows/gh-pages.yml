@@ -19,3 +19,9 @@ jobs:
         run: cmake -G Ninja -B ./build -S .
       - name: build
         run: cmake --build build -t doc
+      - name: gh-pages
+        run: git checkout gh-pages
+      - name: cleanup
+        run: ls -lah && rm -r !("build")
+      - name: commit
+        run: mv ./build/html . && rm -rf ./build && ls -lah
