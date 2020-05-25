@@ -1,17 +1,20 @@
+/**
+ * @file
+ * Program to compute the QR decomposition of a
+ * given matrix.
+ */
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <function_timer.h>
 
-#define ROWS 4
-#define COLUMNS 3
-
-double A[ROWS][COLUMNS] = {
-    {-3.44827586, -1.62068966, -3.03448276},
-    {-1.03448276, -0.5862069, -1.31034483},
-    {-1.55172414, -0.37931034, 0.03448276}};
-
-void print_matrix(double A[][COLUMNS], int M, int N)
+/**
+ * function to display matrix on stdout
+ */
+void print_matrix(double **A, /**< matrix to print */
+                  int M,      /**< number of rows of matrix */
+                  int N)      /**< number of columns of matrix */
 {
     for (int row = 0; row < M; row++)
     {
@@ -22,17 +25,15 @@ void print_matrix(double A[][COLUMNS], int M, int N)
     putchar('\n');
 }
 
-void print_2d(double **A, int M, int N)
-{
-    for (int row = 0; row < M; row++)
-    {
-        for (int col = 0; col < N; col++)
-            printf("% 9.3g\t", A[row][col]);
-        putchar('\n');
-    }
-    putchar('\n');
-}
-
+/**
+ * Compute dot product of two vectors of equal lengths
+ *
+ * If \f$\vec{a}=\left[a_0,a_1,a_2,...,a_L\right]\f$ and
+ * \f$\vec{b}=\left[b_0,b_1,b_1,...,b_L\right]\f$ then
+ * \f$\vec{a}\cdot\vec{b}=\displaystyle\sum_{i=0}^L a_i\times b_i\f$
+ *
+ * \returns \f$\vec{a}\cdot\vec{b}\f$
+ **/
 double vector_dot(double *a, double *b, int L)
 {
     double mag = 0.f;
@@ -42,23 +43,52 @@ double vector_dot(double *a, double *b, int L)
     return mag;
 }
 
+/**
+ * Compute magnitude of vector.
+ *
+ * If \f$\vec{a}=\left[a_0,a_1,a_2,...,a_L\right]\f$ then
+ * \f$\left|\vec{a}\right|=\sqrt{\displaystyle\sum_{i=0}^L a_i^2}\f$
+ *
+ * \returns \f$\left|\vec{a}\right|\f$
+ **/
 double vector_mag(double *vector, int L)
 {
     double dot = vector_dot(vector, vector, L);
     return sqrt(dot);
 }
 
+/**
+ * Compute projection of vector \f$\vec{a}\f$ on \f$\vec{b}\f$ defined as
+ * \f[\text{proj}_\vec{b}\vec{a}=\frac{\vec{a}\cdot\vec{b}}{\left|\vec{b}\right|^2}\vec{b}\f]
+ *
+ * \returns NULL if error, otherwise pointer to output
+ **/
 double *vector_proj(double *a, double *b, double *out, int L)
 {
-    double num = vector_dot(a, b, L);
-    double deno = vector_dot(b, b, L);
+    const double num = vector_dot(a, b, L);
+    const double deno = vector_dot(b, b, L);
+    if (deno == 0) /*! check for division by zero */
+        return NULL;
+
+    const double scalar = num / deno;
     for (int i = 0; i < L; i++)
-        out[i] = num * b[i] / deno;
+        out[i] = scalar * b[i];
 
     return out;
 }
 
-double *vector_sub(double *a, double *b, double *out, int L)
+/**
+ * Compute vector subtraction
+ *
+ * \f$\vec{c}=\vec{a}-\vec{b}\f$
+ *
+ * \returns pointer to output vector
+ **/
+double *vector_sub(double *a,   /**< minuend */
+                   double *b,   /**< subtrahend */
+                   double *out, /**< resultant vector */
+                   int L        /**< length of vectors */
+)
 {
     for (int i = 0; i < L; i++)
         out[i] = a[i] - b[i];
@@ -66,7 +96,28 @@ double *vector_sub(double *a, double *b, double *out, int L)
     return out;
 }
 
-void qr_decompose(double A[][COLUMNS], double **Q, double **R, int M, int N)
+/**
+ * Decompose matrix \f$A\f$ using [Gram-Schmidt process](https://en.wikipedia.org/wiki/QR_decomposition).
+ *
+ * \f{eqnarray*}{
+ * \text{given that}\quad A &=& \left[\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_{N-1},\right]\\
+ * \text{where}\quad\mathbf{a}_i &=& \left[a_{0i},a_{1i},a_{2i},\ldots,a_{(M-1)i}\right]^T\quad\ldots\mbox{(column vectors)}\\
+ * \text{then}\quad\mathbf{u}_i &=& \mathbf{a}_i -\sum_{j=0}^{i-1}\text{proj}_{\mathbf{u}_j}\mathbf{a}_i\\
+ * \mathbf{e}_i &=&\frac{\mathbf{u}_i}{\left|\mathbf{u}_i\right|}\\
+ * Q &=& \begin{bmatrix}\mathbf{e}_0 & \mathbf{e}_1 & \mathbf{e}_2 & \dots & \mathbf{e}_{N-1}\end{bmatrix}\\
+ * R &=& \begin{bmatrix}\langle\mathbf{e}_0\,,\mathbf{a}_0\rangle & \langle\mathbf{e}_1\,,\mathbf{a}_1\rangle & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots \\
+ *                  0 & \langle\mathbf{e}_1\,,\mathbf{a}_1\rangle & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots\\
+ *                  0 & 0 & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots\\
+ *                  \vdots & \vdots & \vdots & \ddots
+ *      \end{bmatrix}\\
+ * \f}
+ **/
+void qr_decompose(double **A, /**< input matrix to decompose */
+                  double **Q, /**< output decomposed matrix */
+                  double **R, /**< output decomposed matrix */
+                  int M,      /**< number of rows of matrix A */
+                  int N       /**< number of columns of matrix A */
+)
 {
     double *col_vector = (double *)malloc(M * sizeof(double));
     double *col_vector2 = (double *)malloc(M * sizeof(double));
@@ -111,16 +162,31 @@ void qr_decompose(double A[][COLUMNS], double **Q, double **R, int M, int N)
 
 int main(void)
 {
-    // double A[][COLUMNS] = {
-    //     {1, -1, 4},
-    //     {1, 4, -2},
-    //     {1, 4, 2},
-    //     {1, -1, 0}};
+    double **A;
+    unsigned int ROWS, COLUMNS;
+
+    printf("Enter the number of rows and columns: ");
+    scanf("%u %u", &ROWS, &COLUMNS);
+    if (ROWS < COLUMNS)
+    {
+        fprintf(stderr, "Number of rows must be greater than or equal to number of columns.\n");
+        return -1;
+    }
+
+    printf("Enter matrix elements row-wise:\n");
+
+    A = (double **)malloc(ROWS * sizeof(double *));
+    for (int i = 0; i < ROWS; i++)
+        A[i] = (double *)malloc(COLUMNS * sizeof(double));
+
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLUMNS; j++)
+            scanf("%lf", &A[i][j]);
 
     print_matrix(A, ROWS, COLUMNS);
 
-    double **R = (double **)malloc(sizeof(double) * COLUMNS * COLUMNS);
-    double **Q = (double **)malloc(sizeof(double) * ROWS * COLUMNS);
+    double **R = (double **)malloc(sizeof(double *) * ROWS);
+    double **Q = (double **)malloc(sizeof(double *) * ROWS);
     if (!Q || !R)
     {
         perror("Unable to allocate memory for Q & R!");
@@ -129,7 +195,7 @@ int main(void)
     for (int i = 0; i < ROWS; i++)
     {
         R[i] = (double *)malloc(sizeof(double) * COLUMNS);
-        Q[i] = (double *)malloc(sizeof(double) * COLUMNS);
+        Q[i] = (double *)malloc(sizeof(double) * ROWS);
         if (!Q[i] || !R[i])
         {
             perror("Unable to allocate memory for Q & R.");
@@ -142,15 +208,17 @@ int main(void)
     qr_decompose(A, Q, R, ROWS, COLUMNS);
     double dtime = end_timer_delete(t1);
 
-    print_2d(R, ROWS, COLUMNS);
-    print_2d(Q, ROWS, COLUMNS);
+    print_matrix(R, ROWS, COLUMNS);
+    print_matrix(Q, ROWS, COLUMNS);
     printf("Time taken to compute: %.4g sec\n", dtime);
 
     for (int i = 0; i < ROWS; i++)
     {
+        free(A[i]);
         free(R[i]);
         free(Q[i]);
     }
+    free(A);
     free(R);
     free(Q);
     return 0;
