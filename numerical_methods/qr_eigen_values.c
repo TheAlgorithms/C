@@ -1,6 +1,6 @@
 /**
  * @file
- * Compute eigen values and eigen vectors of a matrix using QR decomposition method.
+ * Compute real eigen values and eigen vectors of a symmetric matrix using QR decomposition method.
  */
 #include <stdio.h>
 #include <math.h>
@@ -83,6 +83,8 @@ int main(int argc, char **argv)
     double **A = (double **)malloc(sizeof(double) * mat_size);
     double **R = (double **)malloc(sizeof(double) * mat_size);
     double **Q = (double **)malloc(sizeof(double) * mat_size);
+
+    /* number of eigen values = matrix size */
     double *eigen_vals = (double *)malloc(sizeof(double) * mat_size);
     if (!Q || !R || !eigen_vals)
     {
@@ -111,8 +113,9 @@ int main(int argc, char **argv)
 
     function_timer *t1 = new_timer();
     start_timer(t1);
-    while (num_eigs > 0)
+    while (num_eigs > 0) /* continue till all eigen values are found */
     {
+        /* iterate with QR decomposition */
         while (fabs(A[num_eigs][num_eigs - 1]) > 1e-10)
         {
             last_eig = A[num_eigs][num_eigs];
@@ -131,6 +134,7 @@ int main(int argc, char **argv)
                 A[i][i] += last_eig; /* A + cI */
         }
 
+        /* store the converged eigen value */
         eigen_vals[num_eigs] = A[num_eigs][num_eigs];
 #if defined(DEBUG) || !defined(NDEBUG)
         printf("========================\n");
