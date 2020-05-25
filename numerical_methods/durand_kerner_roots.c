@@ -10,7 +10,6 @@
  * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946 -1672280820 40171771630 -756111184500 11310276995381 -135585182899530 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640 1206647803780373360 -3599979517947607200 8037811822645051776 -12870931245150988800 13803759753640704000 -8752948036761600000 2432902008176640000
  * ```
  */
-* /
 
 #include <math.h>
 #include <time.h>
@@ -23,13 +22,13 @@
 
 #define ACCURACY 1e-10 /**< maximum accuracy limit */
 
-    /**
+/**
  * Evaluate the value of a polynomial with given coefficients
  **/
-    long double complex poly_function(double *coeffs,       /**< coefficients of the polynomial */
-                                      unsigned int degree,  /**< degree of polynomial */
-                                      long double complex x /*<< point at which to evaluate the polynomial */
-    )
+long double complex poly_function(double *coeffs,       /**< coefficients of the polynomial */
+                                  unsigned int degree,  /**< degree of polynomial */
+                                  long double complex x /*<< point at which to evaluate the polynomial */
+)
 {
     long double complex out = 0.;
     unsigned int n;
