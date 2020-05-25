@@ -1,3 +1,17 @@
+/**
+ * @file
+ * Compute riots of any given polynomial.
+ *
+ * Test the algorithm online:
+ * https://gist.github.com/kvedala/27f1b0b6502af935f6917673ec43bcd7
+ *
+ * Try the highly unstable Wilkinson's polynomial:
+ * ```
+ * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946 -1672280820 40171771630 -756111184500 11310276995381 -135585182899530 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640 1206647803780373360 -3599979517947607200 8037811822645051776 -12870931245150988800 13803759753640704000 -8752948036761600000 2432902008176640000
+ * ```
+ */
+* /
+
 #include <math.h>
 #include <time.h>
 #include <stdio.h>
@@ -7,22 +21,15 @@
 #include <complex.h>
 #include "function_timer.h"
 
-/**
- * Test the algorithm online:
- * https://gist.github.com/kvedala/27f1b0b6502af935f6917673ec43bcd7
+#define ACCURACY 1e-10 /**< maximum accuracy limit */
+
+    /**
+ * Evaluate the value of a polynomial with given coefficients
  **/
-
-/***
- * Try the highly unstable Wilkinson's polynomial:
- * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946 -1672280820 40171771630 -756111184500 11310276995381 -135585182899530 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640 1206647803780373360 -3599979517947607200 8037811822645051776 -12870931245150988800 13803759753640704000 -8752948036761600000 2432902008176640000
- * */
-
-#define ACCURACY 1e-10
-
-/**
- * define polynomial function
- **/
-long double complex poly_function(double *coeffs, unsigned int degree, long double complex x)
+    long double complex poly_function(double *coeffs,       /**< coefficients of the polynomial */
+                                      unsigned int degree,  /**< degree of polynomial */
+                                      long double complex x /*<< point at which to evaluate the polynomial */
+    )
 {
     long double complex out = 0.;
     unsigned int n;
@@ -33,6 +40,10 @@ long double complex poly_function(double *coeffs, unsigned int degree, long doub
     return out;
 }
 
+/**
+ * create a textual form of complex number
+ * \returns pointer to converted string
+ */
 const char *complex_str(long double complex x)
 {
     static char msg[50];
@@ -44,6 +55,10 @@ const char *complex_str(long double complex x)
     return msg;
 }
 
+/**
+ * check for termination condition
+ * \returns 0 if termination not reached, 1 otherwise
+ */
 char check_termination(long double delta)
 {
     static long double past_delta = INFINITY;
@@ -69,9 +84,9 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    degree = argc - 1;                                                              /*< detected polynomial degree */
-    coeffs = (double *)malloc(degree * sizeof(double));                             /**< store all input coefficients */
-    s0 = (long double complex *)malloc((degree - 1) * sizeof(long double complex)); /**< number of roots = degree-1 */
+    degree = argc - 1;                                                              /* detected polynomial degree */
+    coeffs = (double *)malloc(degree * sizeof(double));                             /* store all input coefficients */
+    s0 = (long double complex *)malloc((degree - 1) * sizeof(long double complex)); /* number of roots = degree-1 */
 
     /* initialize random seed: */
     srand(time(NULL));
