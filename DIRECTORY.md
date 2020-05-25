@@ -224,6 +224,11 @@
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/Tower_Of_Hanoi.c)
   * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_Find.c)
 
+## Numerical Methods
+  * [Durand Kerner Roots](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/durand_kerner_roots.c)
+  * [Qr Decomposition](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/qr_decomposition.c)
+  * [Qr Eigen Values](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/qr_eigen_values.c)
+
 ## Project Euler
   * Problem 01
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/Problem%2001/sol1.c)
@@ -303,4 +308,5 @@
   * [Selection Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Selection_Sort.c)
   * [Shaker Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shaker_sort.c)
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_Sort.c)
+  * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort2.c)
   * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Stooge_Sort.c)
