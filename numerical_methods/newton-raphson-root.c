@@ -1,6 +1,7 @@
-/***
- * approximate solution for f(x) = 0
- * given f(x) and f'(x)
+/**
+ * @file
+ * Find approximate solution for \f$f(x) = 0\f$ using
+ * Newton-Raphson interpolation algorithm.
  **/
 
 #include <stdio.h>
@@ -10,38 +11,46 @@
 #include <limits.h>
 #include <complex.h> /* requires minimum of C99 */
 
+#define ACCURACY 1e-10 /**< solution accuracy */
+
 /**
- * f(x)
+ * Return value of the function to find the root for.
+ * \f$f(x)\f$
  */
-double complex function(double complex x)
+double complex func(double complex x)
 {
     return x * x - 3.; /* x^2 = 3 - solution is sqrt(3) */
     // return x * x - 2.; /* x^2 = 2 - solution is sqrt(2) */
 }
 
 /**
- * f'(x)
+ * Return first order derivative of the function.
+ * \f$f'(x)\f$
  */
-double complex d_function(double complex x)
+double complex d_func(double complex x)
 {
     return 2. * x;
 }
 
+/**
+ * main function
+ */
 int main(int argc, char **argv)
 {
-    const double accuracy = 1e-10;
     double delta = 1;
     double complex cdelta = 1;
 
     /* initialize random seed: */
     srand(time(NULL));
 
+    /* random initial approximation */
     double complex root = (rand() % 100 - 50) + (rand() % 100 - 50) * I;
 
     unsigned long counter = 0;
-    while (delta > accuracy && counter < ULONG_MAX)
+    /* iterate till a convergence is reached */
+    while (delta > ACCURACY && counter < ULONG_MAX)
     {
-        cdelta = function(root) / d_function(root);
+        cdelta = func(root) / d_func(root);
         root += -cdelta;
         counter++;
         delta = fabs(cabs(cdelta));
@@ -59,7 +68,7 @@ int main(int argc, char **argv)
     }
 
     double r = creal(root);
-    double c = fabs(cimag(root)) < accuracy ? 0 : cimag(root);
+    double c = fabs(cimag(root)) < ACCURACY ? 0 : cimag(root);
 
     printf("Iter %5lu: Root: %4.4g%c%4.4gi\t\tdelta: %.4g\n", counter, r,
            c >= 0 ? '+' : '-', c >= 0 ? c : -c, delta);
