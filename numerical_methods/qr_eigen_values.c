@@ -1,12 +1,22 @@
+/**
+ * @file
+ * Compute eigen values and eigen vectors of a matrix using QR decomposition method.
+ */
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+#include "qr_decompose.h"
 #include <function_timer.h>
 
 #define LIMS 9
 
-void create_matrix(double **A, int N)
+/**
+ * create a square matrix of given size with random elements
+ */
+void create_matrix(double **A, /**< matrix to create (must be pre-allocated in memory) */
+                   int N       /**< size of matrix to create */
+)
 {
     int i, j, tmp, lim2 = LIMS >> 1;
     srand(time(NULL));
@@ -23,94 +33,20 @@ void create_matrix(double **A, int N)
     }
 }
 
-void print_matrix(double **A, int M, int N)
-{
-    for (int row = 0; row < M; row++)
-    {
-        for (int col = 0; col < N; col++)
-            printf("% 9.3g\t", A[row][col]);
-        putchar('\n');
-    }
-    putchar('\n');
-}
-
-double vector_dot(double *a, double *b, int L)
-{
-    double mag = 0.f;
-    for (int i = 0; i < L; i++)
-        mag += a[i] * b[i];
-
-    return mag;
-}
-
-double vector_mag(double *vector, int L)
-{
-    double dot = vector_dot(vector, vector, L);
-    return sqrt(dot);
-}
-
-double *vector_proj(double *a, double *b, double *out, int L)
-{
-    double num = vector_dot(a, b, L);
-    double deno = vector_dot(b, b, L);
-    for (int i = 0; i < L; i++)
-        out[i] = num * b[i] / deno;
-
-    return out;
-}
-
-double *vector_sub(double *a, double *b, double *out, int L)
-{
-    for (int i = 0; i < L; i++)
-        out[i] = a[i] - b[i];
-
-    return out;
-}
-
-void qr_decompose(double **A, double **Q, double **R, int M, int N)
-{
-    double *col_vector = (double *)malloc(M * sizeof(double));
-    double *col_vector2 = (double *)malloc(M * sizeof(double));
-    double *tmp_vector = (double *)malloc(M * sizeof(double));
-    for (int i = 0; i < N; i++) /* for each column => R is a square matrix of NxN */
-    {
-        for (int j = 0; j < i; j++) /* second dimension of column */
-            R[i][j] = 0.;           /* make R upper triangular */
-
-        /* get corresponding Q vector */
-        for (int j = 0; j < M; j++)
-        {
-            tmp_vector[j] = A[j][i]; /* accumulator for uk */
-            col_vector[j] = A[j][i];
-        }
-        for (int j = 0; j < i; j++)
-        {
-            for (int k = 0; k < M; k++)
-                col_vector2[k] = Q[k][j];
-            vector_proj(col_vector, col_vector2, col_vector2, M);
-            vector_sub(tmp_vector, col_vector2, tmp_vector, M);
-        }
-        double mag = vector_mag(tmp_vector, M);
-        for (int j = 0; j < M; j++)
-            Q[j][i] = tmp_vector[j] / mag;
-
-        /* compute upper triangular values of R */
-        for (int kk = 0; kk < M; kk++)
-            col_vector[kk] = Q[kk][i];
-        for (int k = i; k < N; k++)
-        {
-            for (int kk = 0; kk < M; kk++)
-                col_vector2[kk] = A[kk][k];
-            R[i][k] = vector_dot(col_vector, col_vector2, M);
-        }
-    }
-
-    free(col_vector);
-    free(col_vector2);
-    free(tmp_vector);
-}
-
-double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2, int C2)
+/**
+ * Perform multiplication of two matrices.
+ * * R2 must be equal to C1
+ * * Resultant matrix size should be R1xC2
+ * \returns pointer to resultant matrix
+ */
+double **mat_mul(double **A,   /**< first matrix to multiply  */
+                 double **B,   /**< second matrix to multiply */
+                 double **OUT, /**< output matrix (must be pre-allocated) */
+                 int R1,       /**< number of rows of first matrix */
+                 int C1,       /**< number of columns of first matrix */
+                 int R2,       /**< number of rows of second matrix */
+                 int C2        /**< number of columns of second matrix */
+)
 {
     if (C1 != R2)
     {
@@ -127,6 +63,9 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2, i
     return OUT;
 }
 
+/**
+ * main function
+ */
 int main(int argc, char **argv)
 {
     int mat_size = 5;
@@ -162,6 +101,7 @@ int main(int argc, char **argv)
         }
     }
 
+    /* create a random matrix */
     create_matrix(A, mat_size);
 
     print_matrix(A, mat_size, mat_size);
