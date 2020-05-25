@@ -12,7 +12,7 @@ set (no_msvc "newton-raphson-root.c" "durand_kerner_roots.c")
 
 foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
-    if ( ${testsourcefile} IN_LIST no_msvc )
+    if ( ${testsourcefile} IN_LIST no_msvc AND MSVC)
         continue()
     endif()
     string( REPLACE ".c" "" testname ${testsourcefile} )
@@ -20,7 +20,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE " " "_" testname ${testname} )
 
     add_executable( ${testname} ${testsourcefile} )
-    
+
     # Make sure YourLib is linked to each app
     target_link_libraries( ${testname} function_timer )
     set_target_properties(${testname} PROPERTIES LINKER_LANGUAGE C)
