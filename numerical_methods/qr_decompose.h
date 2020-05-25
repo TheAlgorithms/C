@@ -10,6 +10,7 @@
 
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * function to display matrix on stdout
