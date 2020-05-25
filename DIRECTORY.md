@@ -1,6 +1,4 @@
 
-## [872](https://github.com/kvedala/C/blob/master//872.c)
-
 ## Client Server
   * [Client](https://github.com/kvedala/C/blob/master/client_server/client.c)
   * [Server](https://github.com/kvedala/C/blob/master/client_server/server.c)
