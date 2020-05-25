@@ -33,7 +33,7 @@ long double complex poly_function(double *coeffs, unsigned int degree, long doub
     return out;
 }
 
-static inline char *complex_str(long double complex x)
+const char *complex_str(long double complex x)
 {
     static char msg[50];
     double r = creal(x);
