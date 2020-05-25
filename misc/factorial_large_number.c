@@ -1,10 +1,15 @@
+/**
+ * @file
+ * Compute factorial of arbitrarily large numbers by
+ * storing individual digits in a byte.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "function_timer.h"
 
 /**
- * dynamically large number 
+ * dynamically large number
  **/
 typedef struct _large_num
 {
@@ -51,7 +56,7 @@ void add_digit(large_num *num, unsigned int value)
 }
 
 /**
- * multiply large number with another integer and 
+ * multiply large number with another integer and
  * store the result in the same large number
  **/
 void multiply(large_num *num, unsigned long n)
@@ -79,6 +84,9 @@ void multiply(large_num *num, unsigned long n)
     }
 }
 
+/**
+ * main function
+ */
 int main(int argc, char *argv[])
 {
     int number, i;
