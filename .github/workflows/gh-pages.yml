@@ -27,4 +27,4 @@ jobs:
       # - name: cleanup
       #   run: ls -lah && rm -r !("build")
       - name: commit
-        run: mv ./build/html . && rm -rf ./build && ls -lah
+        run: ls -lah && mv ./build/html/*.* . && rm -rf ./build && ls -lah
