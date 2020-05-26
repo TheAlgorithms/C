@@ -1,4 +1,15 @@
 /* Ascending priority queue using Linked List - Program to implement Ascending priority queue using Linked List */
+/** Input  State of Queue
+    1
+    2          2
+    1
+    3          2->3
+    2          3
+    3
+    
+    Output
+    2
+**/
 
 #include  <stdio.h>
 #include  <stdlib.h>  
