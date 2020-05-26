@@ -34,4 +34,4 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git add *.*
           git commit -am "Documentation for ${BUILD_SHA}" ||  true
-          git push --force origin HEAD:$GITHUB_REF || true
+          git push --force || true
