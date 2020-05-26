@@ -26,7 +26,7 @@ jobs:
           clean: false
       - name: Move & Commit files
         run: |
-          cp -rp ./build/html/*.* . && rm -rf ./build && rm -rf ./function_timer && ls -lah
+          cp -rp ./build/html/* . && rm -rf ./build && rm -rf ./function_timer && ls -lah
           git config --global user.name github-actions
           git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
