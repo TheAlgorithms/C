@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@master
         with:
           ref: "gh-pages"
-          clean: true
+          clean: false
       # - name: cleanup
       #   run: ls -lah && rm -r !("build")
       - name: commit
