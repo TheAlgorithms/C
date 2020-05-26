@@ -7,14 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      BUILD_SHA: ${GITHUB_SHA}
     steps:
       - uses: actions/checkout@master
         with:
           submodules: true
       - name: Install requirements
-        run: sudo apt -qq install doxygen graphviz ninja-build
+        run: |
+          sudo apt -qq -y update
+          sudo apt -qq install doxygen graphviz ninja-build
       - name: configure
         run: cmake -G Ninja -B ./build -S .
       - name: build
@@ -31,5 +31,5 @@ jobs:
           git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git add *
-          git commit -m "Documentation for $BUILD_SHA" ||  true
+          git commit -m "Documentation for $GITHUB_SHA" ||  true
           git push --force || true
