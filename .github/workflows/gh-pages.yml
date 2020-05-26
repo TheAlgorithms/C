@@ -24,7 +24,5 @@ jobs:
         with:
           ref: "gh-pages"
           clean: false
-      # - name: cleanup
-      #   run: ls -lah && rm -r !("build")
-      - name: commit
-        run: ls -lah && mv ./build/html/*.* . && rm -rf ./build && ls -lah
+      - name: move files
+        run: rm -rf !("build" | ".git") && mv ./build/html/*.* . && rm -rf ./build && ls -lah
