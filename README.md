@@ -1,4 +1,5 @@
-![Build Status](https://travis-ci.org/kvedala/C.svg?branch=master)](https://travis-ci.org/kvedala/C)
+[![Travis CI](https://travis-ci.org/kvedala/C.svg?branch=master)](https://travis-ci.org/kvedala/C)
+![C/C++ CI](https://github.com/kvedala/C/workflows/C/C++%20CI/badge.svg)
 ![Doxygen CI](https://github.com/kvedala/C/workflows/Doxygen%20CI/badge.svg)
 
 For a full list of all algorithms, please see: [DIRECTORY.md](https://github.com/TheAlgorithms/C/blob/master/DIRECTORY.md)
