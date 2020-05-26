@@ -1,15 +1,4 @@
 /* Ascending priority queue using Linked List - Program to implement Ascending priority queue using Linked List */
-/** Input  State of Queue
-    1
-    2          2
-    1
-    3          2->3
-    2          3
-    3
-    
-    Output
-    2
-**/
 
 #include  <stdio.h>
 #include  <stdlib.h>  
@@ -178,3 +167,105 @@ int  main()
   return 0;
 }
 
+/* Output of the Program*/
+
+/*
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 1
+Enter element to be inserted: 12
+Queue from front to rear is as shown:
+12
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 1
+Enter element to be inserted: 1
+Queue from front to rear is as shown:
+12 1
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 1
+Enter element to be inserted: 14
+Queue from front to rear is as shown:
+12 1 14
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 1
+Enter element to be inserted: 3
+Queue from front to rear is as shown:
+12 1 14 3
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 1
+Enter element to be inserted: 5
+Queue from front to rear is as shown:
+12 1 14 3 5
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 2
+Element removed is: 1
+Queue from front to rear is as shown:
+12 14 3 5
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 2
+Element removed is: 3
+Queue from front to rear is as shown:
+12 14 5
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 2
+Element removed is: 5
+Queue from front to rear is as shown:
+12 14
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 2
+Element removed is: 12
+Queue from front to rear is as shown:
+14
+
+
+  Menu:
+1:Insert
+2:Remove
+3:exit
+Enter your choice: 2
+Element removed is: 14
+Queue empty. No data to display
+
+*/
