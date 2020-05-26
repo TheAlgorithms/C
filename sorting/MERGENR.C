@@ -80,3 +80,22 @@ int  main() //main function
     printf("%d " , x[i]) ;
  return 0;
 }
+
+/* Output of the Program*/
+/*
+Enter the number of elements: 5
+Enter the elements:
+15
+14
+13
+12
+11
+14 15 12 13 11
+
+12 13 14 15 11
+
+11 12 13 14 15
+
+Sorted array is as shown:
+11 12 13 14 15
+*/
