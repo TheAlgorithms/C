@@ -9,6 +9,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUILD_SHA: ${GITHUB_SHA}
     steps:
       - uses: actions/checkout@master
         with:
@@ -24,5 +26,12 @@ jobs:
         with:
           ref: "gh-pages"
           clean: false
-      - name: move files
-        run: rm -rf !("build" | ".git") && mv ./build/html/*.* . && rm -rf ./build && ls -lah
+      - name: Move & Commit files
+        run: |
+          mv ./build/html/*.* . && rm -rf ./build && rm-rf function_timer && ls -lah
+          git config --global user.name github-actions
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git add *.*
+          git commit -am "Documentation for ${BUILD_SHA}" ||  true
+          git push --force origin HEAD:$GITHUB_REF || true
