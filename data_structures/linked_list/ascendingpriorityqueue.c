@@ -1,8 +1,25 @@
 /* Ascending priority queue using Linked List - Program to implement Ascending priority queue using Linked List */
 
+/*A priority queue is a special type of queue in which each element is associated with a priority and is served according 
+to its priority. If elements with the same priority occur, they are served according to their order in the queue.
+
+Generally, the value of the element itself is considered for assigning the priority.
+
+For example: The element with the highest value is considered as the highest priority element. However, in other cases, 
+we can assume the element with the lowest value as the highest priority element. In other cases, 
+we can set priorities according to our needs.
+
+In a queue, the first-in-first-out rule is implemented whereas, in a priority queue, the values are removed on the basis of priority. 
+The element with the highest priority is removed first.
+
+insert() - Would insert an element in a queue 
+delete() -  Would delete the smallest element in the queue
+*/
+
+
 #include  <stdio.h>
 #include  <stdlib.h>  
-#define  NULL  0
+#define  NULL  ((void*)0)
 
 struct  node
 {
@@ -34,7 +51,6 @@ void  insert(int  x)
   if(pnode==NULL)
   {
     printf("Memory overflow. Unable to insert.\n") ;
-    getch();
     exit(1) ;
   }
 
@@ -58,7 +74,6 @@ int  removes()
   if(empty())
   {
     printf("\nQueue Underflow. Unable to remove.") ;
-    getch() ;
     exit(1) ;
   }
 
