@@ -1,5 +1,14 @@
 /* Program to demonstrate non recursive merge sort */
 
+/* Merge sort is an effective sorting algorithm which falls under divide and conquer paradigm and produces a stable sort.
+ Merge sort repeatedly breaks down a list into several sublists until each sublist consists of a single element and merging those 
+ sublists in a manner that results into a sorted list.
+
+Bottom-Up Merge Sort Implementation:
+The Bottom-Up merge sort approach uses iterative methodology. It starts with the “single-element” array, and combines two adjacent elements and 
+also sorting the two at the same time. 
+The combined-sorted arrays are again combined and sorted with each other until one single unit of sorted array is achieved. */
+
 #include  <stdio.h>
 
 void  mergesort(int  x[ ] , int  n) ; 
