@@ -67,9 +67,11 @@
     * [Max Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/max_heap.c)
     * [Min Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/min_heap.c)
   * Linked List
+    * [Ascendingpriorityqueue](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/ascendingpriorityqueue.c)
     * [Circularlinkedlist](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/CircularLinkedList.C)
     * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
     * [Middle Element In List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
+    * [Queue Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/queue_linked_list.c)
     * [Singly Link List Deletion](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/singly_link_list_deletion.c)
     * [Stack Using Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/stack_using_linked_lists.c)
   * List
@@ -297,6 +299,7 @@
   * [Heap Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Heap_Sort.c)
   * [Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/insertion_Sort.c)
   * [Merge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort.c)
+  * [Merge Sort Nr](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort_nr.c)
   * [Multikey Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quick_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/Pancake_Sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/partition_Sort.c)
