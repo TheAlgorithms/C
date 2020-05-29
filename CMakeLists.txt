@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
 project(Algorithms_in_C
-    LANGUAGES C CXX
+    LANGUAGES C
     VERSION 1.0.0
     DESCRIPTION "Set of algorithms implemented in C."
 )
@@ -11,14 +11,18 @@ cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0057 NEW)
 find_package(Doxygen OPTIONAL_COMPONENTS dot dia)
 if(DOXYGEN_FOUND)
-    set(DOXYGEN_GENERATE_MAN NO)
+set(DOXYGEN_GENERATE_MAN NO)
     set(DOXYGEN_USE_MATHJAX YES)
     set(DOXYGEN_GENERATE_HTML YES)
+    set(DOXYGEN_EXTRACT_STATIC YES)
     set(DOXYGEN_INLINE_SOURCES YES)
     set(DOXYGEN_CREATE_SUBDIRS YES)
     set(DOCYGEN_GENERATE_TREEVIEW YES)
     set(DOXYGEN_STRIP_CODE_COMMENTS NO)
     set(DOXYGEN_OPTIMIZE_OUTPUT_FOR_C YES)
+    set(DOXYGEN_FILE_PATTERNS *.c *.h *.md)
+    set(DOXYGEN_MATHJAX_EXTENSIONS  TeX/AMSmath TeX/AMSsymbols)
+    set(DOXYGEN_TAGFILES "doc/cppreference-doxygen-web.tag.xml=http://en.cppreference.com/w/")
     set(DOXYGEN_MATHJAX_RELPATH "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML")
     if(Doxygen_dot_FOUND)
         set(DOXYGEN_HAVE_DOT YES)
@@ -34,25 +38,15 @@ if(DOXYGEN_FOUND)
     )
 endif()
 
-function(function_timer)
-    set(CMAKE_BUILD_TYPE "Release")         # This is local to function
-    add_subdirectory(function_timer EXCLUDE_FROM_ALL)
-endfunction()
-
-function_timer()
-
-include_directories(function_timer/include)
-# link_libraries(function_timer)
-# include_directories(${CMAKE_BINARY_DIR}/include)
-# link_directories(${CMAKE_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE})
-
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_STANDARD_REQUIRED YES)
 
 if(MSVC)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
     add_compile_options(/Za)
 endif(MSVC)
+
+find_library(MATH_LIBRARY m)
 
 add_subdirectory(conversions)
 add_subdirectory(misc)

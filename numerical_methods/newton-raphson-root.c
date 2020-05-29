@@ -1,15 +1,15 @@
 /**
  * @file
- * Find approximate solution for \f$f(x) = 0\f$ using
+ * \brief Find approximate solution for \f$f(x) = 0\f$ using
  * Newton-Raphson interpolation algorithm.
  **/
 
-#include <stdio.h>
+#include <complex.h> /* requires minimum of C99 */
+#include <limits.h>
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <limits.h>
-#include <complex.h> /* requires minimum of C99 */
 
 #define ACCURACY 1e-10 /**< solution accuracy */
 
@@ -27,10 +27,7 @@ double complex func(double complex x)
  * Return first order derivative of the function.
  * \f$f'(x)\f$
  */
-double complex d_func(double complex x)
-{
-    return 2. * x;
-}
+double complex d_func(double complex x) { return 2. * x; }
 
 /**
  * main function
@@ -61,8 +58,8 @@ int main(int argc, char **argv)
             double r = creal(root);
             double c = cimag(root);
 
-            printf("Iter %5lu: Root: %4.4g%c%4.4gi\t\tdelta: %.4g\n", counter, r,
-                   c >= 0 ? '+' : '-', c >= 0 ? c : -c, delta);
+            printf("Iter %5lu: Root: %4.4g%c%4.4gi\t\tdelta: %.4g\n", counter,
+                   r, c >= 0 ? '+' : '-', c >= 0 ? c : -c, delta);
         }
 #endif
     }

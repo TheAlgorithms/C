@@ -220,13 +220,13 @@
 ## Numerical Methods
   * [Durand Kerner Roots](https://github.com/kvedala/C/blob/master/numerical_methods/durand_kerner_roots.c)
   * [Gauss Elimination](https://github.com/kvedala/C/blob/master/numerical_methods/Gauss_Elimination.c)
-  * [Lagrange Theorem](https://github.com/kvedala/C/blob/master/numerical_methods/lagrange_theorem.C)
-  * [Mean](https://github.com/kvedala/C/blob/master/numerical_methods/MEAN.C)
-  * [Median](https://github.com/kvedala/C/blob/master/numerical_methods/MEDIAN.C)
+  * [Gauss Seidel Method](https://github.com/kvedala/C/blob/master/numerical_methods/gauss_seidel_method.c)
+  * [Lagrange Theorem](https://github.com/kvedala/C/blob/master/numerical_methods/lagrange_theorem.c)
+  * [Mean](https://github.com/kvedala/C/blob/master/numerical_methods/mean.c)
+  * [Median](https://github.com/kvedala/C/blob/master/numerical_methods/median.c)
   * [Newton-Raphson-Root](https://github.com/kvedala/C/blob/master/numerical_methods/newton-raphson-root.c)
   * [Qr Decomposition](https://github.com/kvedala/C/blob/master/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/kvedala/C/blob/master/numerical_methods/qr_eigen_values.c)
-  * [Seidal](https://github.com/kvedala/C/blob/master/numerical_methods/Seidal.C)
   * [Simpsons 1-3Rd Rule](https://github.com/kvedala/C/blob/master/numerical_methods/simpsons_1-3rd%20rule.c)
   * [Variance](https://github.com/kvedala/C/blob/master/numerical_methods/variance.c)
 

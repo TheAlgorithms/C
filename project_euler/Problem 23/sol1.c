@@ -4,7 +4,6 @@
 #ifdef _OPENMP
 #include <omp.h>
 #endif
-#include "function_timer.h"
 
 unsigned long MAX_N = 28123;
 
@@ -91,20 +90,19 @@ int main(int argc, char **argv)
     printf("Not using parallleization!\n");
 #endif
 
-    double total_duration = 0;
+    double total_duration = 0.f;
     long i;
-    function_timer *timer = new_timer();
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ \
                                    : sum) schedule(runtime)
 #endif
     for (i = 1; i <= MAX_N; i++)
     {
-        start_timer(timer);
+        clock_t start_time = clock();
         if (!is_sum_of_abundant(i))
             sum += i;
         clock_t end_time = clock();
-        total_duration += end_timer(timer);
+        total_duration += (double)(end_time - start_time) / CLOCKS_PER_SEC;
 
         printf("... %5lu: %8lu\r", i, sum);
         if (i % 100 == 0)
@@ -114,6 +112,5 @@ int main(int argc, char **argv)
     printf("Time taken: %.4g s\n", total_duration);
     printf("Sum of numbers that cannot be represented as sum of two abundant numbers : %lu\n", sum);
 
-    delete_timer(timer);
     return 0;
 }

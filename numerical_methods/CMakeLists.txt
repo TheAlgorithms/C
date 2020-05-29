@@ -11,7 +11,7 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 set (no_msvc "newton-raphson-root.c" "durand_kerner_roots.c")
 
 foreach( testsourcefile ${APP_SOURCES} )
-    # I used a simple string replace, to cut off .cpp.
+    # Do not compile these files that use complex.h on MSVC
     if ( ${testsourcefile} IN_LIST no_msvc AND MSVC)
         continue()
     endif()
@@ -21,13 +21,13 @@ foreach( testsourcefile ${APP_SOURCES} )
 
     add_executable( ${testname} ${testsourcefile} )
 
-    # Make sure YourLib is linked to each app
-    target_link_libraries( ${testname} function_timer )
-    set_target_properties(${testname} PROPERTIES LINKER_LANGUAGE C)
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
-
+    
+    if(MATH_LIBRARY)
+        target_link_libraries(${testname} ${MATH_LIBRARY})
+    endif()
     install(TARGETS ${testname} DESTINATION "bin/numerical_methods")
 
 endforeach( testsourcefile ${APP_SOURCES} )
