@@ -1,4 +1,4 @@
-//sorting of array list using selection sort
+// sorting of array list using selection sort
 #include <stdio.h>
 #include <stdlib.h>
 

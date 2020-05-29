@@ -5,8 +5,8 @@
  */
 
 #include "qr_decompose.h"
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -22,7 +22,8 @@ int main(void)
     scanf("%u %u", &ROWS, &COLUMNS);
     if (ROWS < COLUMNS)
     {
-        fprintf(stderr, "Number of rows must be greater than or equal to number of columns.\n");
+        fprintf(stderr, "Number of rows must be greater than or equal to "
+                        "number of columns.\n");
         return -1;
     }
 

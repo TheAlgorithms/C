@@ -6,15 +6,15 @@
     of data hiding.
 */
 
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 #include "stack.h"
 
-/* 
+/*
    actual stack data structure
-   This pointer will pointing at the actual field (of void * pointers) 
+   This pointer will pointing at the actual field (of void * pointers)
    that represents the stack.
  */
 void **array;
@@ -25,8 +25,8 @@ int max = 10;
 /* counter variable for counting the elements of the stack. */
 int counter = 0;
 
-/* 
-    offset address 
+/*
+    offset address
     points at the top element of the stack.
 */
 int offset = -1;
@@ -42,7 +42,7 @@ void initStack()
     grow: increases the stack by 10 elements.
           This utility function isn't part of the public interface
 */
-void  grow()
+void grow()
 {
     max += 10; /* increases the capacity */
 
@@ -56,7 +56,7 @@ void  grow()
     }
     /*free the memory */
     free(array);
-    array = tmp;  
+    array = tmp;
 }
 
 /* push: pushs the argument onto the stack */
@@ -70,9 +70,9 @@ void push(void *object)
 
         offset++; /* increases the element-pointer */
 
-        /* 
-            moves pointer by the offset address 
-            pushs the object onto stack 
+        /*
+            moves pointer by the offset address
+            pushs the object onto stack
          */
         *(array + offset) = object;
 
@@ -82,7 +82,7 @@ void push(void *object)
     else /* stack is full */
     {
 
-        grow(); /* lets grow stack */
+        grow();       /* lets grow stack */
         push(object); /* recursive call */
     }
 }
@@ -114,18 +114,12 @@ void *pop()
 /*
     size: gets the number of elements of the stack.
 */
-int size()
-{
-    return counter;
-}
+int size() { return counter; }
 
 /*
     isEmpty(): returns 1 if stack is empty otherwise 0.
 */
-int isEmpty()
-{
-    return counter == 0;
-}
+int isEmpty() { return counter == 0; }
 
 /*
     top: returns the top element from the stack without removing it.

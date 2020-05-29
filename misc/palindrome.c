@@ -8,11 +8,11 @@ int main()
 
     originalInteger = n;
 
-    // reversed integer is stored in variable 
-    while( n!=0 )
+    // reversed integer is stored in variable
+    while (n != 0)
     {
-        remainder = n%10;
-        reversedInteger = reversedInteger*10 + remainder;
+        remainder = n % 10;
+        reversedInteger = reversedInteger * 10 + remainder;
         n /= 10;
     }
 
@@ -21,6 +21,6 @@ int main()
         printf("%d is a palindrome.", originalInteger);
     else
         printf("%d is not a palindrome.", originalInteger);
-    
+
     return 0;
 }

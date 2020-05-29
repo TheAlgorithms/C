@@ -1,11 +1,15 @@
-char * reverseOnlyLetters(char * S){
+char *reverseOnlyLetters(char *S)
+{
     int last = strlen(S) - 1, i;
-    for(i = 0; i < last;) {
-        if(!isalpha(S[i])) {
+    for (i = 0; i < last;)
+    {
+        if (!isalpha(S[i]))
+        {
             i++;
             continue;
         }
-        if(!isalpha(S[last])) {
+        if (!isalpha(S[last]))
+        {
             last--;
             continue;
         }
@@ -17,4 +21,3 @@ char * reverseOnlyLetters(char * S){
     }
     return S;
 }
-

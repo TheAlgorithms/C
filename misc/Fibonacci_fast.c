@@ -9,9 +9,9 @@
    \f}
 */
 
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 /**
     Returns the \f$n^{th}\f$ and \f$n+1^{th}\f$ Fibonacci number.
@@ -19,7 +19,7 @@
  */
 void fib(unsigned long n, unsigned long *C, unsigned long *D)
 {
-    //Out of Range checking
+    // Out of Range checking
     if (n < 0)
     {
         printf("\nNo Such term !\n");
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
     setlocale(LC_NUMERIC, ""); // format the printf output
 
-    //Asks for the number/position of term in Fibonnacci sequence
+    // Asks for the number/position of term in Fibonnacci sequence
     if (argc == 2)
         number = atoi(argv[1]);
     else

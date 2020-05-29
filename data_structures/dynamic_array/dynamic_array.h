@@ -3,7 +3,8 @@
 #define DEFAULT_CAPACITY 1 << 4
 #define INDEX_OUT_OF_BOUNDS NULL
 
-typedef struct dynamic_array {
+typedef struct dynamic_array
+{
     void **items;
     unsigned size;
     unsigned capacity;

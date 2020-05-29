@@ -4,7 +4,7 @@
 /*
     is_isogram: returns true if the given string a isogram, otherwise false.
 */
-bool is_isogram(const char phrase[]) 
+bool is_isogram(const char phrase[])
 {
 
     /* use 'unsigned' because of the function strlen(...) */
@@ -20,18 +20,18 @@ bool is_isogram(const char phrase[])
     /* contains the length of the given string */
     unsigned int len_phrase = strlen(phrase);
 
-    for (i = 0; i < len_phrase; i++ ) 
+    for (i = 0; i < len_phrase; i++)
     {
         current_char = phrase[i];
 
         /* makes sure the current character has no repetition */
-        for (j = i+1; j < len_phrase; j++)
+        for (j = i + 1; j < len_phrase; j++)
         {
             if (current_char == phrase[j])
             {
                 status = false;
 
-                /* 
+                /*
                     because the given string is none isogram.
                     that means we can exit the nested for-loop.
                 */
@@ -40,7 +40,7 @@ bool is_isogram(const char phrase[])
         }
     }
 
-    /* exit label */
-    end:
-        return status;
+/* exit label */
+end:
+    return status;
 }

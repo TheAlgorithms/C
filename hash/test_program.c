@@ -3,8 +3,8 @@
     This file contains a simple test program for each hash-function.
 */
 
-#include <stdio.h>
 #include "hash.h"
+#include <stdio.h>
 
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
     /* actual tests */
     printf("sdbm: %s --> %llX\n", s, sdbm(s));
     printf("djb2: %s --> %llX\n", s, djb2(s));
-    printf("xor8: %s --> %X\n", s, xor8(s)); /* 8 bit */
+    printf("xor8: %s --> %X\n", s, xor8(s));         /* 8 bit */
     printf("adler_32: %s --> %X\n", s, adler_32(s)); /* 32 bit */
 
     return 0;

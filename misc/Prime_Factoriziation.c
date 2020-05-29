@@ -1,13 +1,14 @@
 /*
     AUTHOR: Christian Bender
     DATE: 12.02.2019
-    DESCRIPTION: This program calculates the prime factoriziation of a positive integer > 1
+    DESCRIPTION: This program calculates the prime factoriziation of a positive
+   integer > 1
 */
 
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 /* initial length of the dynamic array */
 #define LEN 10
@@ -22,10 +23,10 @@
 */
 typedef struct data
 {
-    int * range;
+    int *range;
     int length;
 } range;
-typedef range* Range;
+typedef range *Range;
 
 /* int_fac : calculates the prime factoriziation of positive integers */
 Range int_fact(int);
@@ -34,7 +35,7 @@ Range int_fact(int);
 void print_arr(Range);
 
 /* increase : increases the dynamic integer array */
-int * increase(int *, int);
+int *increase(int *, int);
 
 /* destroy: destroys the range-structure */
 void destroy(Range);
@@ -57,7 +58,6 @@ int main()
     return 0;
 }
 
-
 Range int_fact(int n)
 {
     assert(n > 1); /* precondition : n must be greater then 1*/
@@ -65,9 +65,9 @@ Range int_fact(int n)
     int len = LEN;
     int count = 0;
     int i = 0;
-    int * range = (int *) malloc(sizeof(int) * len);
+    int *range = (int *)malloc(sizeof(int) * len);
     assert(range);
-    Range pstr = (Range) malloc(sizeof(range));
+    Range pstr = (Range)malloc(sizeof(range));
     assert(pstr);
 
     while (n % 2 == 0)
@@ -86,11 +86,10 @@ Range int_fact(int n)
             i++;
         }
         count++;
-
     }
 
     int j = 3;
-    while (j*j <= n)
+    while (j * j <= n)
     {
         while (n % j == 0)
         {
@@ -113,7 +112,6 @@ Range int_fact(int n)
         j += 2;
     }
 
-
     if (n > 1)
     {
         if (i < len)
@@ -134,10 +132,7 @@ Range int_fact(int n)
     pstr->range = range;
     pstr->length = count;
     return pstr;
-
-
 }
-
 
 void print_arr(Range pStr)
 {
@@ -154,16 +149,14 @@ void print_arr(Range pStr)
     printf("\n");
 }
 
-
-int * increase(int * arr, int len)
+int *increase(int *arr, int len)
 {
     assert(arr); /* checks whether arr is a null-pointer */
-    int * tmp = (int*) realloc(arr, sizeof(int) * (len + STEP));
+    int *tmp = (int *)realloc(arr, sizeof(int) * (len + STEP));
     assert(tmp);
     return tmp;
-//    assert(arr);
+    //    assert(arr);
 }
-
 
 void destroy(Range r)
 {

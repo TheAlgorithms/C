@@ -1,7 +1,7 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "dynamic_array.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 dynamic_array_t *init_dynamic_array()
 {
@@ -14,8 +14,10 @@ dynamic_array_t *init_dynamic_array()
 
 void *add(dynamic_array_t *da, const void *value)
 {
-    if (da->size >= da->capacity) {
-        void **newItems = realloc(da->items, (da->capacity <<= 1) * sizeof(void **));
+    if (da->size >= da->capacity)
+    {
+        void **newItems =
+            realloc(da->items, (da->capacity <<= 1) * sizeof(void **));
         free(da->items);
 
         da->items = newItems;
@@ -52,7 +54,8 @@ void delete (dynamic_array_t *da, const unsigned index)
     if (!contains(da->size, index))
         return;
 
-    for (unsigned i = index; i < da->size; i++) {
+    for (unsigned i = index; i < da->size; i++)
+    {
         da->items[i] = da->items[i + 1];
     }
 
