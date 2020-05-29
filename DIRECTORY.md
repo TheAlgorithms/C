@@ -227,7 +227,7 @@
   * [Newton-Raphson-Root](https://github.com/kvedala/C/blob/master/numerical_methods/newton-raphson-root.c)
   * [Qr Decomposition](https://github.com/kvedala/C/blob/master/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/kvedala/C/blob/master/numerical_methods/qr_eigen_values.c)
-  * [Simpsons 1-3Rd Rule](https://github.com/kvedala/C/blob/master/numerical_methods/simpsons_1-3rd%20rule.c)
+  * [Simpsons 1-3Rd Rule](https://github.com/kvedala/C/blob/master/numerical_methods/simpsons_1-3rd_rule.c)
   * [Variance](https://github.com/kvedala/C/blob/master/numerical_methods/variance.c)
 
 ## Project Euler
