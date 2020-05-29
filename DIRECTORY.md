@@ -231,60 +231,60 @@
   * [Variance](https://github.com/kvedala/C/blob/master/numerical_methods/variance.c)
 
 ## Project Euler
-  * Problem 01
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2001/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2001/sol2.c)
-    * [Sol3](https://github.com/kvedala/C/blob/master/project_euler/Problem%2001/sol3.c)
-    * [Sol4](https://github.com/kvedala/C/blob/master/project_euler/Problem%2001/sol4.c)
-  * Problem 02
-    * [So1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2002/so1.c)
-  * Problem 03
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2003/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2003/sol2.c)
-  * Problem 04
-    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/Problem%2004/sol.c)
-  * Problem 05
-    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/Problem%2005/sol.c)
-  * Problem 06
-    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/Problem%2006/sol.c)
-  * Problem 07
-    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/Problem%2007/sol.c)
-  * Problem 08
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2008/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2008/sol2.c)
-  * Problem 09
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2009/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2009/sol2.c)
+  * Problem 1
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_1/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_1/sol2.c)
+    * [Sol3](https://github.com/kvedala/C/blob/master/project_euler/problem_1/sol3.c)
+    * [Sol4](https://github.com/kvedala/C/blob/master/project_euler/problem_1/sol4.c)
   * Problem 10
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2010/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2010/sol2.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_10/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_10/sol2.c)
   * Problem 12
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2012/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_12/sol1.c)
   * Problem 13
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2013/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_13/sol1.c)
   * Problem 14
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2014/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_14/sol1.c)
   * Problem 15
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2015/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_15/sol1.c)
   * Problem 16
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2016/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_16/sol1.c)
   * Problem 19
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2019/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_19/sol1.c)
+  * Problem 2
+    * [So1](https://github.com/kvedala/C/blob/master/project_euler/problem_2/so1.c)
   * Problem 20
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2020/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_20/sol1.c)
   * Problem 21
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2021/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_21/sol1.c)
   * Problem 22
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2022/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_22/sol1.c)
   * Problem 23
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2023/sol1.c)
-    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/Problem%2023/sol2.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_23/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_23/sol2.c)
   * Problem 25
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2025/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_25/sol1.c)
   * Problem 26
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%2026/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_26/sol1.c)
+  * Problem 3
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_3/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_3/sol2.c)
+  * Problem 4
+    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/problem_4/sol.c)
   * Problem 401
-    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/Problem%20401/sol1.c)
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_401/sol1.c)
+  * Problem 5
+    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/problem_5/sol.c)
+  * Problem 6
+    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/problem_6/sol.c)
+  * Problem 7
+    * [Sol](https://github.com/kvedala/C/blob/master/project_euler/problem_7/sol.c)
+  * Problem 8
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_8/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_8/sol2.c)
+  * Problem 9
+    * [Sol1](https://github.com/kvedala/C/blob/master/project_euler/problem_9/sol1.c)
+    * [Sol2](https://github.com/kvedala/C/blob/master/project_euler/problem_9/sol2.c)
 
 ## Searching
   * [Binary Search](https://github.com/kvedala/C/blob/master/searching/Binary_Search.c)
