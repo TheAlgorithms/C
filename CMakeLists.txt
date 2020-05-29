@@ -46,6 +46,8 @@ if(MSVC)
     add_compile_options(/Za)
 endif(MSVC)
 
+find_library(MATH_LIBRARY m)
+
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)
