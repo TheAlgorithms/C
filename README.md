@@ -11,4 +11,8 @@ Click on [Files menu](https://kvedala.github.io/C/files.html) to see the list of
 
 All the code can be executed and tested online: [![using Google Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/kvedala/27f1b0b6502af935f6917673ec43bcd7/plot-durand_kerner-log.ipynb)
 
-Code documentation: https://kvedala.github.io/C
+### Algorithms implemented in C (for education)
+The implementations are for learning purpose. They may be less efficient than the implementation in the standard library.
+
+### Contribute Guidelines
+Read our [Contribution Guidelines](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/CONTRIBUTION.md) before you contribute.
