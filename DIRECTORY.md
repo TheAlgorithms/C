@@ -61,6 +61,7 @@
     * [Middle Element In List](https://github.com/kvedala/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
     * [Singly Link List Deletion](https://github.com/kvedala/C/blob/master/data_structures/linked_list/singly_link_list_deletion.c)
     * [Stack Using Linked Lists](https://github.com/kvedala/C/blob/master/data_structures/linked_list/stack_using_linked_lists.c)
+
   * List
     * [List](https://github.com/kvedala/C/blob/master/data_structures/list/list.c)
     * [Main](https://github.com/kvedala/C/blob/master/data_structures/list/main.c)
@@ -326,3 +327,4 @@
   * [Shell Sort](https://github.com/kvedala/C/blob/master/sorting/shell_Sort.c)
   * [Shell Sort2](https://github.com/kvedala/C/blob/master/sorting/shell_Sort2.c)
   * [Stooge Sort](https://github.com/kvedala/C/blob/master/sorting/Stooge_Sort.c)
+
