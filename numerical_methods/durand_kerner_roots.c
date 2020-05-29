@@ -167,7 +167,7 @@ int main(int argc, char **argv)
     double tol_condition = 1;
     unsigned long iter = 0;
 
-    clock_t start_time = clock();
+    clock_t end_time, start_time = clock();
     while (!check_termination(tol_condition) && iter < INT_MAX)
     {
         long double complex delta = 0;
@@ -220,7 +220,7 @@ int main(int argc, char **argv)
     }
 end:
 
-    clock_t end_time = clock();
+    end_time = clock();
 
 #if defined(DEBUG) || !defined(NDEBUG)
     fclose(log_file);
