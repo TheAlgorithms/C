@@ -1,8 +1,8 @@
 name: C/C++ CI
 
-on: # [push]
-  push:
-    branches: [ master ]
+on: [push]
+#   push:
+#     branches: [ master ]
 #   pull_request:
 #     branches: [ master ]
 
