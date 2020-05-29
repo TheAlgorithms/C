@@ -18,12 +18,13 @@ jobs:
         with:
           submodules: true
       - name: Formatter
-        run: find -name '*.c' -o -name '*.h' | xargs clang-format -i -style="$line1 $line2 $line3 $line4"
-        env:
-          - line1="{ BasedOnStyle: LLVM, UseTab: Never,"
-          - line2="IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman,"
-          - line3="AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false,"
-          - line4="ColumnLimit: 80, AccessModifierOffset: -4 }"
+        run: |
+          export line1='{ BasedOnStyle: LLVM, UseTab: Never,'
+          export line2='IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman,'
+          export line3='AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false,'
+          export line4='ColumnLimit: 80, AccessModifierOffset: -4 }'
+          find -name '*.c' -o -name '*.h' | xargs clang-format -i -style="$line1 $line2 $line3 $line4"
+          
       - name: test
         run: git diff
       
