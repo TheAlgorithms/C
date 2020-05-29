@@ -4,11 +4,11 @@
  * given matrix.
  */
 
+#include "qr_decompose.h"
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "qr_decompose.h"
-#include <function_timer.h>
+#include <time.h>
 
 /**
  * main function
@@ -56,10 +56,9 @@ int main(void)
         }
     }
 
-    function_timer *t1 = new_timer();
-    start_timer(t1);
+    clock_t t1 = clock();
     qr_decompose(A, Q, R, ROWS, COLUMNS);
-    double dtime = end_timer_delete(t1);
+    double dtime = (double)(clock() - t1) / CLOCKS_PER_SEC;
 
     print_matrix(R, ROWS, COLUMNS);
     print_matrix(Q, ROWS, COLUMNS);

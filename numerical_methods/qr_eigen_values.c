@@ -1,22 +1,22 @@
 /**
  * @file
- * Compute real eigen values and eigen vectors of a symmetric matrix using QR decomposition method.
+ * Compute real eigen values and eigen vectors of a symmetric matrix using QR
+ * decomposition method.
  */
-#include <stdio.h>
+#include "qr_decompose.h"
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "qr_decompose.h"
-#include <function_timer.h>
 
-#define LIMS 9
+#define LIMS 9 /**< */
 
 /**
  * create a square matrix of given size with random elements
+ * \param[out] A matrix to create (must be pre-allocated in memory)
+ * \param[in] N matrix size
  */
-void create_matrix(double **A, /**< matrix to create (must be pre-allocated in memory) */
-                   int N       /**< size of matrix to create */
-)
+void create_matrix(double **A, int N)
 {
     int i, j, tmp, lim2 = LIMS >> 1;
     srand(time(NULL));
@@ -37,16 +37,17 @@ void create_matrix(double **A, /**< matrix to create (must be pre-allocated in m
  * Perform multiplication of two matrices.
  * * R2 must be equal to C1
  * * Resultant matrix size should be R1xC2
+ * \param[in] A first matrix to multiply
+ * \param[in] B second matrix to multiply
+ * \param[out] OUT output matrix (must be pre-allocated)
+ * \param[in] R1 number of rows of first matrix
+ * \param[in] C1 number of columns of first matrix
+ * \param[in] R2 number of rows of second matrix
+ * \param[in] C2 number of columns of second matrix
  * \returns pointer to resultant matrix
  */
-double **mat_mul(double **A,   /**< first matrix to multiply  */
-                 double **B,   /**< second matrix to multiply */
-                 double **OUT, /**< output matrix (must be pre-allocated) */
-                 int R1,       /**< number of rows of first matrix */
-                 int C1,       /**< number of columns of first matrix */
-                 int R2,       /**< number of rows of second matrix */
-                 int C2        /**< number of columns of second matrix */
-)
+double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2,
+                 int C2)
 {
     if (C1 != R2)
     {
@@ -111,8 +112,7 @@ int main(int argc, char **argv)
     int counter = 0, num_eigs = rows - 1;
     double last_eig = 0;
 
-    function_timer *t1 = new_timer();
-    start_timer(t1);
+    clock_t t1 = clock();
     while (num_eigs > 0) /* continue till all eigen values are found */
     {
         /* iterate with QR decomposition */
@@ -127,7 +127,8 @@ int main(int argc, char **argv)
             print_matrix(A, rows, columns);
             print_matrix(Q, rows, columns);
             print_matrix(R, columns, columns);
-            printf("-------------------- %d ---------------------\n", ++counter);
+            printf("-------------------- %d ---------------------\n",
+                   ++counter);
 #endif
             mat_mul(R, Q, A, columns, columns, rows, columns);
             for (int i = 0; i < rows; i++)
@@ -146,7 +147,7 @@ int main(int argc, char **argv)
         columns--;
     }
     eigen_vals[0] = A[0][0];
-    double dtime = end_timer_delete(t1);
+    double dtime = (double)(clock() - t1) / CLOCKS_PER_SEC;
 
 #if defined(DEBUG) || !defined(NDEBUG)
     print_matrix(R, mat_size, mat_size);

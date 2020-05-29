@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "function_timer.h"
 
 /**
  * dynamically large number
@@ -102,13 +101,11 @@ int main(int argc, char *argv[])
 
     large_num *result = new_number();
 
-    function_timer *timer = new_timer();
     clock_t start_time = clock();
-    start_timer(timer);
     for (i = 2; i <= number; i++)
         /* Multiply every number from 2 thru N */
         multiply(result, i);
-    double time_taken = end_timer_delete(timer) * (double)1e3;
+    double time_taken = (clock() - start_time) * (double)1e3 / CLOCKS_PER_SEC;
     // time_taken = (clock() - start_time) / (double) CLOCKS_PER_SEC;
 
     printf("%d! = ", number);
