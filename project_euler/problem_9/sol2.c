@@ -3,11 +3,10 @@
 
 /**
  Problem Statement:
-    A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
-        a^2 + b^2 = c^2
-    For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
-    There exists exactly one Pythagorean triplet for which a + b + c = 1000.
-    Find the product abc.
+    A Pythagorean triplet is a set of three natural numbers, a < b < c, for
+ which, a^2 + b^2 = c^2 For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2. There exists
+ exactly one Pythagorean triplet for which a + b + c = 1000. Find the product
+ abc.
 
 
     Given a^2 + b^2 = c^2 and a+b+c = n, we can write:
@@ -29,7 +28,7 @@ int main(void)
 
         if (a * a + b * b == c * c)
         {
-            printf("%d x %d x %d = %ld\n", a, b, c, (long int) a*b*c);
+            printf("%d x %d x %d = %ld\n", a, b, c, (long int)a * b * c);
             return 0;
         }
     }

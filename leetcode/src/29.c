@@ -1,30 +1,41 @@
-int divide(int dividend, int divisor){
+int divide(int dividend, int divisor)
+{
     int sign = 1;
     long int output = 0;
-    if (dividend < 0) {
+    if (dividend < 0)
+    {
         sign *= -1;
-
-    } else {
+    }
+    else
+    {
         dividend *= -1;
     }
-    if (divisor < 0) {
+    if (divisor < 0)
+    {
         sign *= -1;
-
-    } else {
+    }
+    else
+    {
         divisor *= -1;
     }
-    while (dividend <= divisor) {
+    while (dividend <= divisor)
+    {
         long int tmp = 0;
         long int div = divisor;
-        while (dividend <= div) {
-            tmp += (tmp+1);
+        while (dividend <= div)
+        {
+            tmp += (tmp + 1);
             dividend -= div;
             div += div;
         }
-        if (output >= INT_MAX) {
-            if (sign == -1) {
+        if (output >= INT_MAX)
+        {
+            if (sign == -1)
+            {
                 return INT_MIN;
-            } else {
+            }
+            else
+            {
                 return INT_MAX;
             }
         }

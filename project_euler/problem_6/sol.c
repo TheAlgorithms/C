@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     unsigned s1 = 0, s2 = 0, i;
-    for (i = 1; i <= 100; i++) {
+    for (i = 1; i <= 100; i++)
+    {
         s1 += i * i;
         s2 += i;
     }

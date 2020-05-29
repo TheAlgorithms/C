@@ -2,9 +2,8 @@
     author: Christian Bender
 
     This header represents the public stack-interface.
-    The stack is generic and self growing. 
+    The stack is generic and self growing.
 */
-
 
 #ifndef __STACK__
 #define __STACK__
@@ -15,15 +14,15 @@
 void initStack();
 
 /*
-    push: pushs the argument onto the stack 
+    push: pushs the argument onto the stack
 */
-void push(void * object);
+void push(void *object);
 
 /*
     pop: pops the top element of the stack from the stack.
     assumes: stack not empty.
 */
-void  * pop();
+void *pop();
 
 /*
     size: gets the number of elements of the stack.
@@ -38,6 +37,6 @@ int isEmpty();
 /*
     top: returns the top element from the stack without removing it.
 */
-void * top(); 
+void *top();
 
 #endif

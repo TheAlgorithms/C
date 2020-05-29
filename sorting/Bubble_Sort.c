@@ -1,4 +1,4 @@
-//sorting of array list using bubble sort
+// sorting of array list using bubble sort
 #include <stdio.h>
 #include <stdlib.h>
 

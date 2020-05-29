@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
          */
         if (ch < 0x30 || ch > 0x39)
         {
-            num_bad_chars++; /* this is used to get the bad characters in the sequence of 13 characters */
+            num_bad_chars++; /* this is used to get the bad characters in the
+                                sequence of 13 characters */
             continue;
         }
         else if (num_bad_chars > 0)
@@ -68,8 +69,9 @@ int main(int argc, char *argv[])
 
         if (num_prev != 0)
         {
-            /* since product is accumulated, the new product can be obtained by simply
-             * multiplying the new digit and dividing with the oldest digit
+            /* since product is accumulated, the new product can be obtained by
+             * simply multiplying the new digit and dividing with the oldest
+             * digit
              */
             prod /= num_prev; /* divide first to avoid over-flows */
             prod *= num;
@@ -96,8 +98,10 @@ int main(int argc, char *argv[])
         }
     } while (!feof(fp)); /* loop till end of file is reached */
 
-    printf("Maximum product: %lld\t Location: %d^th position\n\t", max_prod, position);
-    fseek(fp, position, SEEK_SET); /* move cursor to identified position in file */
+    printf("Maximum product: %lld\t Location: %d^th position\n\t", max_prod,
+           position);
+    fseek(fp, position,
+          SEEK_SET); /* move cursor to identified position in file */
     /* loop through all digits */
     for (; num_digits > 0; num_digits--)
     {

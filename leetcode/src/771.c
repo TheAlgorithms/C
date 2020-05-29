@@ -1,7 +1,8 @@
 // for strlen()
 #include <string.h>
 
-int numJewelsInStones(char * j, char * s) {
+int numJewelsInStones(char *j, char *s)
+{
     // as strlen is O(n), store it once rather than using it in for loop
     int cnt[500], lens = strlen(s), lenj = strlen(j), sol = 0;
     memset(cnt, 0, sizeof(cnt));
@@ -16,4 +17,3 @@ int numJewelsInStones(char * j, char * s) {
 
     return sol;
 }
-

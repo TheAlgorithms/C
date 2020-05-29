@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
     {
         unsigned short remainders[MAX_LEN];
         unsigned short rem = 1, *rem_ptr = remainders;
-        memset(remainders, (unsigned short)-1, MAX_LEN * sizeof(unsigned short));
+        memset(remainders, (unsigned short)-1,
+               MAX_LEN * sizeof(unsigned short));
         // remainders[0] = 1;
         // printf("1/%-4u\t ", deno);
         unsigned short index = 0, num_digits;
@@ -40,7 +41,8 @@ int main(int argc, char *argv[])
                 index = 0;
                 break;
             }
-            rem_ptr = (unsigned short *)bsearch(&rem, remainders, MAX_LEN, sizeof(unsigned short), compare);
+            rem_ptr = (unsigned short *)bsearch(
+                &rem, remainders, MAX_LEN, sizeof(unsigned short), compare);
             // printf("%2d, ", rem);
             // printf("(%14p), ", rem_ptr);
             if (rem_ptr != NULL)
@@ -51,7 +53,8 @@ int main(int argc, char *argv[])
         }
 
         num_digits = index - (rem_ptr - remainders);
-        // printf("\n\t(%14p, %14p, %4u, %4u)\n", rem_ptr, remainders, index, num_digits);
+        // printf("\n\t(%14p, %14p, %4u, %4u)\n", rem_ptr, remainders, index,
+        // num_digits);
 #ifdef _OPENMP
 #pragma omp critical
         {
@@ -68,8 +71,10 @@ int main(int argc, char *argv[])
     }
     clock_t end_time = clock();
 
-    printf("Time taken: %.4g ms\n", 1e3 * (double)(end_time - start_time) / CLOCKS_PER_SEC);
-    printf("Maximum digits: %hu\t Denominator: %hu\n", max_digits, max_idx_number);
+    printf("Time taken: %.4g ms\n",
+           1e3 * (double)(end_time - start_time) / CLOCKS_PER_SEC);
+    printf("Maximum digits: %hu\t Denominator: %hu\n", max_digits,
+           max_idx_number);
 
     return 0;
 }

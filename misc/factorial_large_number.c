@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 {
     int number, i;
 
-    //Asks for the number/position of term in Fibonnacci sequence
+    // Asks for the number/position of term in Fibonnacci sequence
     if (argc == 2)
         number = atoi(argv[1]);
     else

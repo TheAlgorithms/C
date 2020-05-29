@@ -90,7 +90,8 @@ int main(int argc, char **argv)
 
     clock_t end_time = clock();
 
-    printf("\nTime taken: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+    printf("\nTime taken: %.4g millisecond\n",
+           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
     printf("Sum of all numbers = %lu\n", sum);
 
     free(flags);

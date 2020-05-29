@@ -4,9 +4,9 @@
 int fibMonaccianSearch(int arr[], int x, int n)
 {
     /* Initialize fibonacci numbers */
-    int fibMMm2 = 0;   // (m-2)'th Fibonacci No.
-    int fibMMm1 = 1;   // (m-1)'th Fibonacci No.
-    int fibM = fibMMm2 + fibMMm1;  // m'th Fibonacci
+    int fibMMm2 = 0;              // (m-2)'th Fibonacci No.
+    int fibMMm1 = 1;              // (m-1)'th Fibonacci No.
+    int fibM = fibMMm2 + fibMMm1; // m'th Fibonacci
 
     /* fibM is going to store the smallest Fibonacci
        Number greater than or equal to n */
@@ -14,7 +14,7 @@ int fibMonaccianSearch(int arr[], int x, int n)
     {
         fibMMm2 = fibMMm1;
         fibMMm1 = fibM;
-        fibM  = fibMMm2 + fibMMm1;
+        fibM = fibMMm2 + fibMMm1;
     }
 
     // Marks the eliminated range from front
@@ -28,13 +28,13 @@ int fibMonaccianSearch(int arr[], int x, int n)
         // Check if fibMm2 is a valid location
 
         // sets i to the min. of (offset+fibMMm2) and (n-1)
-        int i = ((offset+fibMMm2) < (n-1)) ? (offset+fibMMm2) : (n-1);
+        int i = ((offset + fibMMm2) < (n - 1)) ? (offset + fibMMm2) : (n - 1);
 
         /* If x is greater than the value at index fibMm2,
            cut the subarray array from offset to i */
         if (arr[i] < x)
         {
-            fibM  = fibMMm1;
+            fibM = fibMMm1;
             fibMMm1 = fibMMm2;
             fibMMm2 = fibM - fibMMm1;
             offset = i;
@@ -44,30 +44,29 @@ int fibMonaccianSearch(int arr[], int x, int n)
            cut the subarray after i+1  */
         else if (arr[i] > x)
         {
-            fibM  = fibMMm2;
+            fibM = fibMMm2;
             fibMMm1 = fibMMm1 - fibMMm2;
             fibMMm2 = fibM - fibMMm1;
         }
 
         /* element found. return index */
-        else return i;
+        else
+            return i;
     }
 
     /* comparing the last element with x */
-    if(fibMMm1 && arr[offset+1]==x)return offset+1;
+    if (fibMMm1 && arr[offset + 1] == x)
+        return offset + 1;
 
     /*element not found. return -1 */
     return -1;
 }
 
-
 int main(void)
 {
-    int arr[] = {10, 22, 35, 40, 45, 50, 80, 82,
-                 85, 90, 100};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int arr[] = {10, 22, 35, 40, 45, 50, 80, 82, 85, 90, 100};
+    int n = sizeof(arr) / sizeof(arr[0]);
     int x = 85;
-    printf("Found at index: %d",
-            fibMonaccianSearch(arr, x, n));
+    printf("Found at index: %d", fibMonaccianSearch(arr, x, n));
     return 0;
 }

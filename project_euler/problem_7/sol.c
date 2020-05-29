@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int main(void)
+{
     char *sieve;
     size_t i;
     unsigned count = 0;
@@ -9,15 +10,19 @@ int main(void) {
     const unsigned target = 10001;
 
     sieve = calloc(n, sizeof *sieve);
-    for (i = 2; i < n; i++) {
-        if (!sieve[i]) {
-            size_t j; 
+    for (i = 2; i < n; i++)
+    {
+        if (!sieve[i])
+        {
+            size_t j;
             count++;
-            if (count == target) {
+            if (count == target)
+            {
                 printf("%lu\n", i);
                 break;
             }
-            for (j = i * 2; j < n; j += i) {
+            for (j = i * 2; j < n; j += i)
+            {
                 sieve[j] = 1;
             }
         }
