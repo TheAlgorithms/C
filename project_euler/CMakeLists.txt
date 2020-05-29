@@ -15,8 +15,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE "\\" "-" testname ${testname} )
     string( REPLACE " " "_" testname ${testname} )
     add_executable( ${testname} ${testsourcefile} )
-    # Make sure YourLib is linked to each app
-    target_link_libraries( ${testname} function_timer )
+    
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()

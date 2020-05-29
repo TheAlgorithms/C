@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
 project(Algorithms_in_C
-    LANGUAGES C CXX
+    LANGUAGES C
     VERSION 1.0.0
     DESCRIPTION "Set of algorithms implemented in C."
 )
@@ -37,18 +37,6 @@ set(DOXYGEN_GENERATE_MAN NO)
         COMMENT "Generate documentation"
     )
 endif()
-
-function(function_timer)
-    set(CMAKE_BUILD_TYPE "Release")         # This is local to function
-    add_subdirectory(function_timer EXCLUDE_FROM_ALL)
-endfunction()
-
-function_timer()
-
-include_directories(function_timer/include)
-# link_libraries(function_timer)
-# include_directories(${CMAKE_BINARY_DIR}/include)
-# link_directories(${CMAKE_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE})
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
