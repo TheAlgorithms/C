@@ -9,20 +9,20 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    - name: requirements
-      run: | 
-        sudo apt -qq -y update
-        sudo apt -qq install clang-format 
     steps:
-    - uses: actions/checkout@master
-      with:
-        submodules: true
-    - name: Formatter
-      run: find -name '*.c' -o -name '*.h' | \
-        xargs clang-format -i -style="{ BasedOnStyle: LLVM, UseTab: Never, \
-          IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, \
-          AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, \
-          ColumnLimit: 80, AccessModifierOffset: -4 }"
-    - name: test
-      run: git diff
+      - name: requirements
+        run: | 
+          sudo apt -qq -y update
+          sudo apt -qq install clang-format 
+      - uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Formatter
+        run: find -name '*.c' -o -name '*.h' | \
+          xargs clang-format -i -style="{ BasedOnStyle: LLVM, UseTab: Never, \
+            IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, \
+            AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, \
+            ColumnLimit: 80, AccessModifierOffset: -4 }"
+      - name: test
+        run: git diff
       
