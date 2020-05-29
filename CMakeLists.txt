@@ -47,9 +47,9 @@ if(MSVC)
 endif(MSVC)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    add_link_options(-lm)
+    link_libraries(m)
 elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    add_link_options(-lm)
+    link_libraries((m)
 endif()
 
 add_subdirectory(conversions)
