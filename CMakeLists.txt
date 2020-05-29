@@ -46,12 +46,6 @@ if(MSVC)
     add_compile_options(/Za)
 endif(MSVC)
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    link_libraries(m)
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    link_libraries(m)
-endif()
-
 add_subdirectory(conversions)
 add_subdirectory(misc)
 add_subdirectory(project_euler)

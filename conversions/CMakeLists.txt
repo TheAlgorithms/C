@@ -16,7 +16,11 @@ foreach( testsourcefile ${APP_SOURCES} )
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
-    target_link_libraries(${testname} m)
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        target_link_libraries(${testname} m)
+    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        target_link_libraries(${testname} m)
+    endif()
 
     install(TARGETS ${testname} DESTINATION "bin/conversions")
 
