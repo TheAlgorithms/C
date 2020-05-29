@@ -16,6 +16,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
+    target_link_libraries(${testname} m)
 
     install(TARGETS ${testname} DESTINATION "bin/conversions")
 
