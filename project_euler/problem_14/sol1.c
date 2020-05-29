@@ -30,7 +30,8 @@ int main(int argc, char **argv)
     long long max_len = 0, max_len_num = 0;
     long long MAX_NUM = 1000000;
 
-    if (argc == 2) /* set commandline argumnet as the maximum iteration number */
+    if (argc ==
+        2) /* set commandline argumnet as the maximum iteration number */
     {
         MAX_NUM = atoll(argv[1]);
         printf("Maximum number: %lld\n", MAX_NUM);
@@ -41,8 +42,9 @@ int main(int argc, char **argv)
      * we can compute them in parallel. However, the maximum values should be
      * updated in synchrony so that we do not get into a "race condition".
      *
-     * To compile with supporintg gcc or clang, the flag "-fopenmp" should be passes
-     * while with Microsoft C compiler, the flag "/fopenmp" should be used.
+     * To compile with supporintg gcc or clang, the flag "-fopenmp" should be
+     *passes while with Microsoft C compiler, the flag "/fopenmp" should be
+     *used.
      *
      * Automatically detects for OPENMP using the _OPENMP macro.
      **/

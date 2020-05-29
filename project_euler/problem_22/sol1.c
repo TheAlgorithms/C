@@ -26,7 +26,8 @@ void shell_sort(char data[][MAX_NAME_LEN], int LEN)
             char tmp_buffer[MAX_NAME_LEN];
             strcpy(tmp_buffer, data[i]);
 
-            for (j = i; j >= gap && strcmp(data[j - gap], tmp_buffer) > 0; j -= gap)
+            for (j = i; j >= gap && strcmp(data[j - gap], tmp_buffer) > 0;
+                 j -= gap)
                 strcpy(data[j], data[j - gap]);
             strcpy(data[j], tmp_buffer);
         }
@@ -98,14 +99,16 @@ int main(int argc, char **argv)
         clock_t start_time = clock();
         shell_sort(names, COUNT);
         clock_t end_time = clock();
-        printf("\nShell sort: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+        printf("\nShell sort: %.4g millisecond\n",
+               1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
     }
     else if (method == 1)
     {
         clock_t start_time = clock();
         lazy_sort(names, COUNT);
         clock_t end_time = clock();
-        printf("\nLazy sort: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+        printf("\nLazy sort: %.4g millisecond\n",
+               1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
     }
 
     long sum_score = 0;
@@ -113,8 +116,7 @@ int main(int argc, char **argv)
     int i;
 
 #ifdef _OPENMP
-#pragma omp parallel for schedule(runtime) reduction(+ \
-                                                     : sum_score)
+#pragma omp parallel for schedule(runtime) reduction(+ : sum_score)
 #endif
 #ifdef DEBUG
     for (i = 935; i < 940; i++)
@@ -125,14 +127,17 @@ int main(int argc, char **argv)
         unsigned int score = 0;
         /* score the alphabets in i^th name */
         for (int j = 0; names[i][j] != '\0'; j++)
-            score += names[i][j] - 'A' + 1; /* convert ASCII character to integer score */
+            score += names[i][j] - 'A' +
+                     1; /* convert ASCII character to integer score */
         sum_score += score * (i + 1);
 #ifdef DEBUG
-        printf("Name: %s\tScore: %u x %u = %lu\n", names[i], score, i + 1, (unsigned long)score * (i + 1));
+        printf("Name: %s\tScore: %u x %u = %lu\n", names[i], score, i + 1,
+               (unsigned long)score * (i + 1));
 #endif
     }
     clock_t end_time = clock();
-    printf("Scoring time: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+    printf("Scoring time: %.4g millisecond\n",
+           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
 
     printf("Total Score = %lu\n", sum_score);
 

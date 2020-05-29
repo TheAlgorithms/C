@@ -100,16 +100,25 @@ double *vector_sub(double *a,   /**< minuend */
 }
 
 /**
- * Decompose matrix \f$A\f$ using [Gram-Schmidt process](https://en.wikipedia.org/wiki/QR_decomposition).
+ * Decompose matrix \f$A\f$ using [Gram-Schmidt
+ *process](https://en.wikipedia.org/wiki/QR_decomposition).
  *
  * \f{eqnarray*}{
- * \text{given that}\quad A &=& \left[\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_{N-1},\right]\\
- * \text{where}\quad\mathbf{a}_i &=& \left[a_{0i},a_{1i},a_{2i},\ldots,a_{(M-1)i}\right]^T\quad\ldots\mbox{(column vectors)}\\
- * \text{then}\quad\mathbf{u}_i &=& \mathbf{a}_i -\sum_{j=0}^{i-1}\text{proj}_{\mathbf{u}_j}\mathbf{a}_i\\
+ * \text{given that}\quad A &=&
+ *\left[\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_{N-1},\right]\\
+ * \text{where}\quad\mathbf{a}_i &=&
+ *\left[a_{0i},a_{1i},a_{2i},\ldots,a_{(M-1)i}\right]^T\quad\ldots\mbox{(column
+ *vectors)}\\
+ * \text{then}\quad\mathbf{u}_i &=& \mathbf{a}_i
+ *-\sum_{j=0}^{i-1}\text{proj}_{\mathbf{u}_j}\mathbf{a}_i\\
  * \mathbf{e}_i &=&\frac{\mathbf{u}_i}{\left|\mathbf{u}_i\right|}\\
- * Q &=& \begin{bmatrix}\mathbf{e}_0 & \mathbf{e}_1 & \mathbf{e}_2 & \dots & \mathbf{e}_{N-1}\end{bmatrix}\\
- * R &=& \begin{bmatrix}\langle\mathbf{e}_0\,,\mathbf{a}_0\rangle & \langle\mathbf{e}_1\,,\mathbf{a}_1\rangle & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots \\
- *                  0 & \langle\mathbf{e}_1\,,\mathbf{a}_1\rangle & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots\\
+ * Q &=& \begin{bmatrix}\mathbf{e}_0 & \mathbf{e}_1 & \mathbf{e}_2 & \dots &
+ *\mathbf{e}_{N-1}\end{bmatrix}\\
+ * R &=& \begin{bmatrix}\langle\mathbf{e}_0\,,\mathbf{a}_0\rangle &
+ *\langle\mathbf{e}_1\,,\mathbf{a}_1\rangle &
+ *\langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots \\
+ *                  0 & \langle\mathbf{e}_1\,,\mathbf{a}_1\rangle &
+ *\langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots\\
  *                  0 & 0 & \langle\mathbf{e}_2\,,\mathbf{a}_2\rangle & \dots\\
  *                  \vdots & \vdots & \vdots & \ddots
  *      \end{bmatrix}\\
@@ -125,7 +134,8 @@ void qr_decompose(double **A, /**< input matrix to decompose */
     double *col_vector = (double *)malloc(M * sizeof(double));
     double *col_vector2 = (double *)malloc(M * sizeof(double));
     double *tmp_vector = (double *)malloc(M * sizeof(double));
-    for (int i = 0; i < N; i++) /* for each column => R is a square matrix of NxN */
+    for (int i = 0; i < N;
+         i++) /* for each column => R is a square matrix of NxN */
     {
         for (int j = 0; j < i; j++) /* second dimension of column */
             R[i][j] = 0.;           /* make R upper triangular */

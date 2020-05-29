@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 #include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 #ifdef _OPENMP
@@ -85,8 +85,7 @@ uint64_t sigma(uint64_t N)
     int64_t i;
 
 #ifdef _OPENMP
-#pragma omp parallel for reduction(+ \
-                                   : sum)
+#pragma omp parallel for reduction(+ : sum)
 #endif
     for (i = 0; i <= N; i++)
     {

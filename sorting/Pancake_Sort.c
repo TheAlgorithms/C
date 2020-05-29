@@ -1,6 +1,6 @@
 // Sorting of array list using pancake sort
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Reverses the array */
 void flip(int arr[], int i)
@@ -38,7 +38,8 @@ void pancakeSort(int *arr, int n)
         // Find index of the maximum element in arr[0..curr_size-1]
         int maxElementIdx = findMax(arr, curr_size);
 
-        // Move the maximum element to end of current array if it's not already at the end
+        // Move the maximum element to end of current array if it's not already
+        // at the end
         if (maxElementIdx != curr_size - 1)
         {
             // To move at the end, first move maximum number to beginning

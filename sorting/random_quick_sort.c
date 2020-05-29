@@ -1,9 +1,10 @@
 /*
 Randomised quick sort implementation in C language.
-In normal quick sort, pivot chosen to partition is either the first or the last element of the array.
-This can take time O(n*n) to sort in the worst case.
-Now in randomised quick sort, pivot is randomly chosen and then recursively sort the left and right sub-arrays.
-The expected running time of the algorithm is O(nlog(n)).
+In normal quick sort, pivot chosen to partition is either the first or the last
+element of the array. This can take time O(n*n) to sort in the worst case. Now
+in randomised quick sort, pivot is randomly chosen and then recursively sort the
+left and right sub-arrays. The expected running time of the algorithm is
+O(nlog(n)).
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -53,7 +54,8 @@ void random_quick(int *a, int left, int right)
         i = getBig(a, i, right, pivot);
         j = getSmall(a, j, left, pivot);
     }
-    // after separating the smaller and greater elements, there are 3 cases possible
+    // after separating the smaller and greater elements, there are 3 cases
+    // possible
     if (pivot_index > j && pivot_index > i)
     {
         // case 1. When the pivot element index is greater than both i and j

@@ -27,7 +27,7 @@ void swap(int *first, int *second)
   and places each element which is less than the pivot value to its left
   and the elements greater than the pivot value to its right
   arr[] --- array to be partitioned
-  lower --- lower index 
+  lower --- lower index
   upper --- upper index
 */
 int partition(int arr[], int lower, int upper)
@@ -49,15 +49,16 @@ int partition(int arr[], int lower, int upper)
         }
     }
 
-    swap(&arr[i + 1], &arr[upper]); // places the last element i.e, the pivot to its correct position
+    swap(&arr[i + 1], &arr[upper]); // places the last element i.e, the pivot to
+                                    // its correct position
 
     return (i + 1);
 }
 
 /*This is where the sorting of the array takes place
-	arr[] --- Array to be sorted
-	lower --- Starting index
-	upper --- Ending index
+    arr[] --- Array to be sorted
+    lower --- Starting index
+    upper --- Ending index
 */
 void quickSort(int arr[], int lower, int upper)
 {
@@ -65,7 +66,8 @@ void quickSort(int arr[], int lower, int upper)
     if (upper > lower)
     {
 
-        // partitioning index is returned by the partition method , partition element is at its correct poition
+        // partitioning index is returned by the partition method , partition
+        // element is at its correct poition
 
         int partitionIndex = partition(arr, lower, upper);
 

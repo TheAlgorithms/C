@@ -65,14 +65,16 @@ int adler_32(char s[])
 /* crc32 Hash-Algorithm*/
 #include <inttypes.h>
 
-uint32_t crc32(char* data){
+uint32_t crc32(char *data)
+{
     int i = 0;
     uint32_t crc = 0xffffffff;
-    while(data[i] != '\0'){
+    while (data[i] != '\0')
+    {
         uint8_t byte = data[i];
         crc = crc ^ byte;
-        for(int j = 8; j > 0; --j)
-            crc = (crc >> 1) ^ (0xEDB88320 & ( -(crc & 1)));
+        for (int j = 8; j > 0; --j)
+            crc = (crc >> 1) ^ (0xEDB88320 & (-(crc & 1)));
 
         i++;
     }

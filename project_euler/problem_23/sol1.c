@@ -67,7 +67,8 @@ char is_sum_of_abundant(unsigned long N)
      * i + j = N   where both i and j should be abundant
      * hence we can simply check for j = N - i as we loop through i
      **/
-    for (unsigned long i = get_next_abundant(1); i <= (N >> 1); i = get_next_abundant(i))
+    for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
+         i = get_next_abundant(i))
         if (is_abundant(N - i))
         {
 #ifdef DEBUG
@@ -85,7 +86,8 @@ int main(int argc, char **argv)
         MAX_N = strtoul(argv[1], NULL, 10);
 
 #ifdef _OPENMP
-    printf("Using OpenMP parallleization with %d threads\n", omp_get_max_threads());
+    printf("Using OpenMP parallleization with %d threads\n",
+           omp_get_max_threads());
 #else
     printf("Not using parallleization!\n");
 #endif
@@ -93,8 +95,7 @@ int main(int argc, char **argv)
     double total_duration = 0.f;
     long i;
 #ifdef _OPENMP
-#pragma omp parallel for reduction(+ \
-                                   : sum) schedule(runtime)
+#pragma omp parallel for reduction(+ : sum) schedule(runtime)
 #endif
     for (i = 1; i <= MAX_N; i++)
     {
@@ -110,7 +111,9 @@ int main(int argc, char **argv)
     }
 
     printf("Time taken: %.4g s\n", total_duration);
-    printf("Sum of numbers that cannot be represented as sum of two abundant numbers : %lu\n", sum);
+    printf("Sum of numbers that cannot be represented as sum of two abundant "
+           "numbers : %lu\n",
+           sum);
 
     return 0;
 }

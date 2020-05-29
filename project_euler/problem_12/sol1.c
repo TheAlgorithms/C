@@ -1,6 +1,6 @@
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 long count_divisors(long long n)
 /*
@@ -12,7 +12,7 @@ long count_divisors(long long n)
 */
 {
     long num_divisors = 0;
-    
+
     for (long long i = 1; i < sqrtl(n) + 1; i++)
         if (n % i == 0)
             num_divisors += 2;
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     if (argc == 2)
         MAX_DIVISORS = atoi(argv[1]);
 
-    while(1)
+    while (1)
     {
         i++;
         triangle_number += i;
@@ -40,7 +40,8 @@ int main(int argc, char **argv)
             break;
     }
 
-    printf("First Triangle number with more than %d divisors: %lld\n", MAX_DIVISORS, triangle_number);
+    printf("First Triangle number with more than %d divisors: %lld\n",
+           MAX_DIVISORS, triangle_number);
 
     return 0;
 }

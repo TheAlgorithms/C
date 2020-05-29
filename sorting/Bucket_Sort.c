@@ -1,13 +1,13 @@
 /*
-* Algorithm : Bucket Sort
-* Time-Complexity : O(n)
-*/
+ * Algorithm : Bucket Sort
+ * Time-Complexity : O(n)
+ */
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
-#define NARRAY 8  /* array size */
-#define NBUCKET 5 /* bucket size */
+#define NARRAY 8    /* array size */
+#define NBUCKET 5   /* bucket size */
 #define INTERVAL 10 /* bucket range */
 
 struct Node
@@ -24,32 +24,32 @@ int getBucketIndex(int value);
 
 void BucketSort(int arr[])
 {
-    int i,j;
+    int i, j;
     struct Node **buckets;
 
     /* allocate memory for array of pointers to the buckets */
-    buckets = (struct Node **)malloc(sizeof(struct Node*) * NBUCKET);
+    buckets = (struct Node **)malloc(sizeof(struct Node *) * NBUCKET);
 
     /* initialize pointers to the buckets */
-    for(i = 0; i < NBUCKET; ++i)
+    for (i = 0; i < NBUCKET; ++i)
     {
         buckets[i] = NULL;
     }
 
     /* put items into the buckets */
     /* creates a link list in each bucket slot */
-    for(i = 0; i < NARRAY; ++i)
+    for (i = 0; i < NARRAY; ++i)
     {
         struct Node *current;
         int pos = getBucketIndex(arr[i]);
-        current = (struct Node *) malloc(sizeof(struct Node));
+        current = (struct Node *)malloc(sizeof(struct Node));
         current->data = arr[i];
         current->next = buckets[pos];
         buckets[pos] = current;
     }
 
     /* check what's in each bucket */
-    for(i = 0; i < NBUCKET; i++)
+    for (i = 0; i < NBUCKET; i++)
     {
         printf("Bucket[\"%d\"] : ", i);
         printBuckets(buckets[i]);
@@ -57,7 +57,7 @@ void BucketSort(int arr[])
     }
 
     /* sorting bucket using Insertion Sort */
-    for(i = 0; i < NBUCKET; ++i)
+    for (i = 0; i < NBUCKET; ++i)
     {
         buckets[i] = InsertionSort(buckets[i]);
     }
@@ -65,7 +65,7 @@ void BucketSort(int arr[])
     /* check what's in each bucket */
     printf("--------------\n");
     printf("Buckets after sorted\n");
-    for(i = 0; i < NBUCKET; i++)
+    for (i = 0; i < NBUCKET; i++)
     {
         printf("Bucket[\"%d\"] : ", i);
         printBuckets(buckets[i]);
@@ -73,11 +73,11 @@ void BucketSort(int arr[])
     }
 
     /* put items back to original array */
-    for(j =0, i = 0; i < NBUCKET; ++i)
+    for (j = 0, i = 0; i < NBUCKET; ++i)
     {
         struct Node *node;
         node = buckets[i];
-        while(node)
+        while (node)
         {
 
             // precondition for avoiding out of bounds by the array
@@ -88,11 +88,11 @@ void BucketSort(int arr[])
     }
 
     /* free memory */
-    for(i = 0; i < NBUCKET; ++i)
+    for (i = 0; i < NBUCKET; ++i)
     {
         struct Node *node;
         node = buckets[i];
-        while(node)
+        while (node)
         {
             struct Node *tmp;
             tmp = node;
@@ -107,9 +107,9 @@ void BucketSort(int arr[])
 /* Insertion Sort */
 struct Node *InsertionSort(struct Node *list)
 {
-    struct Node *k,*nodeList;
+    struct Node *k, *nodeList;
     /* need at least two items to sort */
-    if(list == NULL || list->next == NULL)
+    if (list == NULL || list->next == NULL)
     {
         return list;
     }
@@ -117,11 +117,11 @@ struct Node *InsertionSort(struct Node *list)
     nodeList = list;
     k = list->next;
     nodeList->next = NULL; /* 1st node is new list */
-    while(k != NULL)
+    while (k != NULL)
     {
         struct Node *ptr;
         /* check if insert before first */
-        if(nodeList->data > k->data)
+        if (nodeList->data > k->data)
         {
             struct Node *tmp;
             tmp = k;
@@ -133,13 +133,14 @@ struct Node *InsertionSort(struct Node *list)
 
         // from begin up to end
         // finds [i] > [i+1]
-        for(ptr = nodeList; ptr->next != NULL; ptr = ptr->next)
+        for (ptr = nodeList; ptr->next != NULL; ptr = ptr->next)
         {
-            if(ptr->next->data > k->data) break;
+            if (ptr->next->data > k->data)
+                break;
         }
 
         // if found (above)
-        if(ptr->next != NULL)
+        if (ptr->next != NULL)
         {
             struct Node *tmp;
             tmp = k;
@@ -159,15 +160,12 @@ struct Node *InsertionSort(struct Node *list)
     return nodeList;
 }
 
-int getBucketIndex(int value)
-{
-    return value/INTERVAL;
-}
+int getBucketIndex(int value) { return value / INTERVAL; }
 
 void print(int ar[])
 {
     int i;
-    for(i = 0; i < NARRAY; ++i)
+    for (i = 0; i < NARRAY; ++i)
     {
         printf("%d ", ar[i]);
     }
@@ -177,7 +175,7 @@ void print(int ar[])
 void printBuckets(struct Node *list)
 {
     struct Node *cur = list;
-    while(cur)
+    while (cur)
     {
         printf("%d ", cur->data);
         cur = cur->next;
@@ -186,7 +184,7 @@ void printBuckets(struct Node *list)
 
 int main(void)
 {
-    int array[NARRAY] = {29,25,-1,49,9,37,21,43};
+    int array[NARRAY] = {29, 25, -1, 49, 9, 37, 21, 43};
 
     printf("Initial array\n");
     print(array);

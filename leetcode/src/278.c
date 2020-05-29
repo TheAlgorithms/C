@@ -1,13 +1,18 @@
 // Forward declaration of isBadVersion API.
 bool isBadVersion(int version);
 
-int firstBadVersion(int n) {
+int firstBadVersion(int n)
+{
     int low = 1, high = n;
-    while (low <= high) {
+    while (low <= high)
+    {
         int mid = low + (high - low) / 2;
-        if(isBadVersion(mid)) {
+        if (isBadVersion(mid))
+        {
             high = mid - 1;
-        } else {
+        }
+        else
+        {
             low = mid + 1;
         }
     }

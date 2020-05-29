@@ -3,10 +3,11 @@
 
 long long int get_product(FILE *fp, long start_pos, int num_digits)
 {
-    char ch = ' ';          /* temporary variable to store character read from file */
+    char ch = ' '; /* temporary variable to store character read from file */
     unsigned char num = 0;  /* temporary variable to store digit read */
     long long int prod = 1; /* product accumulator */
-    int count = 0;          /* we use this variable to count number of bytes of file read */
+    int count =
+        0; /* we use this variable to count number of bytes of file read */
 
     /* accumulate product for num_digits */
     for (int i = 0; i < num_digits; i++, count++)
@@ -29,8 +30,9 @@ long long int get_product(FILE *fp, long start_pos, int num_digits)
         if (num == 0)
         {
             /* If number is zero, we can skip the next 'num_digits'
-             * because this '0' will repeat in the next 'num_digit' multiplications.
-             * Hence, we also do not update the file position */
+             * because this '0' will repeat in the next 'num_digit'
+             * multiplications. Hence, we also do not update the file position
+             */
             /* NOTE: this is not needed but helps get results faster :) */
             return 0;
         }
@@ -78,8 +80,10 @@ int main(int argc, char *argv[])
         }
     } while (!feof(fp)); /* loop till end of file is reached */
 
-    printf("Maximum product: %lld\t Location: %d^th position\n\t", max_prod, position);
-    fseek(fp, position, SEEK_SET); /* move cursor to identified position in file */
+    printf("Maximum product: %lld\t Location: %d^th position\n\t", max_prod,
+           position);
+    fseek(fp, position,
+          SEEK_SET); /* move cursor to identified position in file */
     /* loop through all digits */
     for (; num_digits > 0; num_digits--)
     {

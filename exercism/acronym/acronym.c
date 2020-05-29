@@ -1,6 +1,6 @@
-#include <string.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
 char *abbreviate(const char *phrase)
 {
@@ -19,8 +19,8 @@ char *abbreviate(const char *phrase)
     /* for -loop variable */
     int i = 0;
 
-    /* 
-        counts the empty-characters. 
+    /*
+        counts the empty-characters.
         for determine the number of words
     */
     while (p_str && (i < 80))
@@ -43,7 +43,7 @@ char *abbreviate(const char *phrase)
     /* initalizes words-array with empty strings */
     for (i = 0; i < counter; i++)
     {
-        strcpy(words[i],"");
+        strcpy(words[i], "");
     }
 
     /* rewind string */

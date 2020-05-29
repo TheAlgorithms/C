@@ -16,7 +16,8 @@ typedef struct _big_int
 #ifdef DEBUG
 void print_digit(const big_int *my_int)
 {
-    printf("\tValue : %d\n\tNext : %p\n\tPrev : %p\n", my_int->value, my_int->next_digit, my_int->prev_digit);
+    printf("\tValue : %d\n\tNext : %p\n\tPrev : %p\n", my_int->value,
+           my_int->next_digit, my_int->prev_digit);
 }
 #endif
 
@@ -161,9 +162,11 @@ int main(int argc, char **argv)
         num_digits++;
     } while (ptr); /* after coming to units place, there will be no valid ptr */
 
-    printf("\nTime taken: %.4g millisecond\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
-    printf("Digit Sum = %lu\tNumber of digits = %lu\tStorage space = %.3gkb\t \n",
-           sum_digits, num_digits, num_digits * sizeof(big_int) / 1024.0);
+    printf("\nTime taken: %.4g millisecond\n",
+           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+    printf(
+        "Digit Sum = %lu\tNumber of digits = %lu\tStorage space = %.3gkb\t \n",
+        sum_digits, num_digits, num_digits * sizeof(big_int) / 1024.0);
 
     remove_digits((big_int *)ptr0, -1);
     return 0;

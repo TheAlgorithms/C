@@ -1,4 +1,4 @@
-//Fibonacci Series using Dynamic Programming
+// Fibonacci Series using Dynamic Programming
 
 /* Author: Moinak Banerjee(moinak878)
    Date : 1 October ,2019
@@ -9,14 +9,15 @@
 
 int fib(int n)
 {
-    //Out of Range checking
+    // Out of Range checking
     if (n < 0)
     {
         printf("\nNo Such term !\n");
         exit(0);
     }
-    //declaring array to store fibonacci numbers -- memoization
-    int *f = (int *)malloc((n + 2) * sizeof(int)); //  one extra to handle edge case, n = 0
+    // declaring array to store fibonacci numbers -- memoization
+    int *f = (int *)malloc(
+        (n + 2) * sizeof(int)); //  one extra to handle edge case, n = 0
     int i;
 
     /* let 0th and 1st number of the series be 0 and 1*/
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
 {
     int number;
 
-    //Asks for the number/position of term in Fibonnacci sequence
+    // Asks for the number/position of term in Fibonnacci sequence
     if (argc == 2)
         number = atoi(argv[1]);
     else

@@ -1,4 +1,4 @@
-//sorting of array list using insertion sort
+// sorting of array list using insertion sort
 #include <stdio.h>
 #include <stdlib.h>
 

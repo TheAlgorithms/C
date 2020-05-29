@@ -34,7 +34,7 @@ int main()
 
     printf("contains %d ? %d\n", v7, contains(set, &v7));
 
-    delete(set, &v6);
+    delete (set, &v6);
 
     printf("contains %d ? %d\n", v6, contains(set, &v6));
 

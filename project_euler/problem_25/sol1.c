@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #define MAX_DIGITS 1000
@@ -10,7 +10,8 @@
  * Function to add arbitraty length decimal integers stored in an array.
  * a + b = c = new b
  **/
-unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c, int N)
+unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
+                         int N)
 {
     unsigned char carry = 0;
     unsigned int i;
@@ -71,7 +72,8 @@ unsigned int get_digits(unsigned char *number)
 
 int main(int argc, char *argv[])
 {
-    unsigned char fn[MAX_DIGITS + 1]; /* array to store digits of a large number */
+    unsigned char
+        fn[MAX_DIGITS + 1]; /* array to store digits of a large number */
     unsigned char fn1[MAX_DIGITS + 1];
     unsigned char sum[MAX_DIGITS + 1];
 
@@ -102,7 +104,8 @@ int main(int argc, char *argv[])
     } while (digit_count < MAX_DIGITS);
     clock_t end_time = clock();
 
-    printf("Time taken: %.4g ms\n", 1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
+    printf("Time taken: %.4g ms\n",
+           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);
     printf("The nth term for %d digits: %u \n", MAX_DIGITS, index--);
     print_number(sum, digit_count);
 

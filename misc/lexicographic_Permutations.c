@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 void swap(char *left, char *right)
 {
@@ -9,10 +9,7 @@ void swap(char *left, char *right)
     *right = temp;
 }
 
-int compare(const void *a, const void *b)
-{
-    return (*(char *)a - *(char *)b);
-}
+int compare(const void *a, const void *b) { return (*(char *)a - *(char *)b); }
 
 void PrintSortedPermutations(char *str)
 {
@@ -33,7 +30,8 @@ void PrintSortedPermutations(char *str)
         // if we couldn't find one, we're finished, else we can swap
         if (i >= 0)
         {
-            // 3. find character at index j such that str[j] = min(str[k]) && str[k] > str[i] for all k > i
+            // 3. find character at index j such that str[j] = min(str[k]) &&
+            // str[k] > str[i] for all k > i
             int j = i + 1, k;
             for (k = j; k < strSize && str[k]; k++)
             {
@@ -52,7 +50,7 @@ void PrintSortedPermutations(char *str)
 
 int main()
 {
-    int n; //size of string
+    int n; // size of string
     scanf("%d\n", &n);
     char *str = (char *)malloc(n * sizeof(char));
     scanf("%s", str);
