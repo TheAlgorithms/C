@@ -94,6 +94,7 @@ All the code can be executed and tested online: [![using Google Colab Notebook](
 	- Greatest Common Divisor	
 	- isArmstrong
 	- LongestSubSequence
+	- Multi-programming_with_Fixed_Tasks
 	- palindrome
 	- prime factorization	
 	- QUARTILE
