@@ -7,7 +7,7 @@ int findComplement(int num)
       // standard size in memory, we cannot rely on size for that information.
         TotalBits++; // increment TotalBits till temp becomes 0
         temp >>= 1;  // shift temp right by 1 bit every iteration; temp loses 1
-                    // bit to underflow every iteration till it becomes 0
+                     // bit to underflow every iteration till it becomes 0
     }
     int i,
         flipNumber =
