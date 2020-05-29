@@ -11,7 +11,7 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 set (no_msvc "newton-raphson-root.c" "durand_kerner_roots.c")
 
 foreach( testsourcefile ${APP_SOURCES} )
-    # I used a simple string replace, to cut off .cpp.
+    # Do not compile these files that use complex.h on MSVC
     if ( ${testsourcefile} IN_LIST no_msvc AND MSVC)
         continue()
     endif()
@@ -20,7 +20,6 @@ foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE " " "_" testname ${testname} )
 
     add_executable( ${testname} ${testsourcefile} )
-    set_target_properties( ${testname} PROPERTIES LINKER_LANGUAGE C)
 
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
