@@ -20,6 +20,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE " " "_" testname ${testname} )
 
     add_executable( ${testname} ${testsourcefile} )
+    set_target_properties( ${testname} PROPERTIES LINKER_LANGUAGE C)
 
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)

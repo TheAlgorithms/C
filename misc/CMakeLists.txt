@@ -1,4 +1,3 @@
-
 if(USE_OPENMP)
     find_package(OpenMP)
 endif()
