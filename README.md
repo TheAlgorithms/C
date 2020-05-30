@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/kvedala/C-Plus-Plus?color=red&style=flat-square)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/kvedala/C?color=green&style=flat-square)
 ![Doxygen CI](https://github.com/kvedala/C/workflows/Doxygen%20CI/badge.svg)
-![C/C++ CI](https://github.com/kvedala/C/workflows/C/C++%20CI/badge.svg)
+![Awesome CI Workflow](https://github.com/kvedala/C/workflows/Awesome%20CI%20Workflow/badge.svg)
 
 [Online Documentation](https://kvedala.github.io/C).
 
