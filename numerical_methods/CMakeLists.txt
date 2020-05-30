@@ -8,7 +8,7 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 # file( GLOB APP_SOURCES ${CMAKE_SOURCE_DIR}/*.c )
 # AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} APP_SOURCES)
 
-set (no_msvc "newton-raphson-root.c" "durand_kerner_roots.c")
+set (no_msvc "newton_raphson_root.c" "durand_kerner_roots.c")
 
 foreach( testsourcefile ${APP_SOURCES} )
     # Do not compile these files that use complex.h on MSVC
