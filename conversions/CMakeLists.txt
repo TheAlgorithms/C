@@ -1,6 +1,3 @@
-if(USE_OPENMP)
-    find_package(OpenMP)
-endif(USE_OPENMP)
 # If necessary, use the RELATIVE flag, otherwise each source file may be listed
 # with full pathname. RELATIVE may makes it easier to extract an executable name
 # automatically.

@@ -48,13 +48,6 @@ endif(MSVC)
 
 find_library(MATH_LIBRARY m)
 
-add_subdirectory(conversions)
-add_subdirectory(misc)
-add_subdirectory(project_euler)
-add_subdirectory(sorting)
-add_subdirectory(searching)
-add_subdirectory(numerical_methods)
-
 if(USE_OPENMP)
     find_package(OpenMP)
     if (OpenMP_C_FOUND)
@@ -63,6 +56,13 @@ if(USE_OPENMP)
         message(STATUS "No OpenMP found, no multithreading.")
     endif()
 endif()
+
+add_subdirectory(conversions)
+add_subdirectory(misc)
+add_subdirectory(project_euler)
+add_subdirectory(sorting)
+add_subdirectory(searching)
+add_subdirectory(numerical_methods)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
