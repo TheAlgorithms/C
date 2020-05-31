@@ -241,6 +241,7 @@ void test1(double eta)
     // for (int i = 0; i < N; i++)
     //     free(X[i]);
     free(X);
+    delete_adaline(&ada);
 }
 
 /**
@@ -301,6 +302,7 @@ void test2(double eta)
         free(X[i]);
     free(X);
     free(Y);
+    delete_adaline(&ada);
 }
 
 /**
@@ -374,6 +376,7 @@ void test3(double eta)
         free(X[i]);
     free(X);
     free(Y);
+    delete_adaline(&ada);
 }
 
 /** Main function */
