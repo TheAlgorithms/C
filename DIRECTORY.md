@@ -201,6 +201,9 @@
     * [965](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/leetcode/src/965.c)
     * [977](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/leetcode/src/977.c)
 
+## Machine Learning
+  * [Adaline Learning](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/machine_learning/adaline_learning.c)
+
 ## Misc
   * [Armstrong Number](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/misc/armstrong_number.c)
   * [Cantor Set](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/misc/cantor_set.c)
