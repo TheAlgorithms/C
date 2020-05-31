@@ -18,6 +18,7 @@ typedef struct _large_num
 
 /**
  * create a new large number
+ * \returns pointer to a large number
  **/
 large_num *new_number(void)
 {
@@ -30,6 +31,7 @@ large_num *new_number(void)
 
 /**
  * delete all memory allocated for large number
+ * \param[in] num pointer to large_num to delete
  **/
 void delete_number(large_num *num)
 {
@@ -39,6 +41,8 @@ void delete_number(large_num *num)
 
 /**
  * add a digit to the large number
+ * \param[in,out] num
+ * \param[in] value value of the digit to insert
  **/
 void add_digit(large_num *num, unsigned int value)
 {
