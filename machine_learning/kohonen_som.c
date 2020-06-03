@@ -39,7 +39,7 @@ double random(double a, double b)
  * \param[in] num_points number of rows in the matrix
  * \param[in] num_features number of columns in the matrix
  */
-void save_2d_data(const char *fname, const double **X, int num_points,
+void save_2d_data(const char *fname, double const *const *X, int num_points,
                   int num_features)
 {
     FILE *fp = fopen(fname, "wt");
@@ -83,13 +83,13 @@ void get_min_1d(double *X, int N, double *val, int *idx)
  *
  * \param[in] X data point
  * \param[in,out] W weights matrix
- * \param[in] D temporary vector to store distances
+ * \param[in,out] D temporary vector to store distances
  * \param[in] num_out number of output points
  * \param[in] num_features number of features per input sample
  * \param[in] alpha learning rate \f$0<\alpha\le1\f$
  * \param[in] R neighborhood range
  */
-void update_weights(double *x, double **W, double *D, int num_out,
+void update_weights(double const *x, double **W, double *D, int num_out,
                     int num_features, double alpha, int R)
 {
     int j, k;
@@ -140,7 +140,7 @@ void update_weights(double *x, double **W, double *D, int num_out,
  * \param[in] num_out number of output points
  * \param[in] alpha_min terminal value of alpha
  */
-void kohonen_som_tracer(double **X, double **W, int num_samples,
+void kohonen_som_tracer(double const *const *X, double **W, int num_samples,
                         int num_features, int num_out, double alpha_min)
 {
     int R = num_out >> 2, iter = 0;
@@ -153,7 +153,7 @@ void kohonen_som_tracer(double **X, double **W, int num_samples,
         // Loop for each sample pattern in the data set
         for (int sample = 0; sample < num_samples; sample++)
         {
-            double *x = X[sample];
+            const double *x = X[sample];
             // update weights for the current input pattern sample
             update_weights(x, W, D, num_out, num_features, alpha, R);
         }
@@ -294,9 +294,9 @@ void test_lamniscate(double **data, int N)
  */
 void test2()
 {
-    int j, N = 200;
+    int j, N = 500;
     int features = 2;
-    int num_out = 30;
+    int num_out = 20;
     double **X = (double **)malloc(N * sizeof(double *));
     double **W = (double **)malloc(num_out * sizeof(double *));
     for (int i = 0; i < (num_out > N ? num_out : N); i++)
