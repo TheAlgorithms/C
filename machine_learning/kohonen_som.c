@@ -39,7 +39,7 @@ double random(double a, double b)
  * \param[in] num_points number of rows in the matrix
  * \param[in] num_features number of columns in the matrix
  */
-void save_2d_data(const char *fname, double const *const *X, int num_points,
+void save_2d_data(const char *fname, const double *const *X, int num_points,
                   int num_features)
 {
     FILE *fp = fopen(fname, "wt");
@@ -64,7 +64,7 @@ void save_2d_data(const char *fname, double const *const *X, int num_points,
  * \param[out] val minimum value found
  * \param[out] idx index where minimum value was found
  */
-void get_min_1d(double *X, int N, double *val, int *idx)
+void get_min_1d(double const *X, int N, double *val, int *idx)
 {
     val[0] = INFINITY; // initial min value
 
@@ -89,7 +89,7 @@ void get_min_1d(double *X, int N, double *val, int *idx)
  * \param[in] alpha learning rate \f$0<\alpha\le1\f$
  * \param[in] R neighborhood range
  */
-void update_weights(double const *x, double **W, double *D, int num_out,
+void update_weights(double const *x, double *const *W, double *D, int num_out,
                     int num_features, double alpha, int R)
 {
     int j, k;
@@ -140,8 +140,9 @@ void update_weights(double const *x, double **W, double *D, int num_out,
  * \param[in] num_out number of output points
  * \param[in] alpha_min terminal value of alpha
  */
-void kohonen_som_tracer(double const *const *X, double **W, int num_samples,
-                        int num_features, int num_out, double alpha_min)
+void kohonen_som_tracer(const double *const *X, double *const *W,
+                        int num_samples, int num_features, int num_out,
+                        double alpha_min)
 {
     int R = num_out >> 2, iter = 0;
     double alpha = 1.f;
@@ -174,7 +175,7 @@ void kohonen_som_tracer(double const *const *X, double **W, int num_samples,
  * \param[out] data matrix to store data in
  * \param[in] N number of points required
  */
-void test_circle(double **data, int N)
+void test_circle(double *const *data, int N)
 {
     const double R = 0.75, dr = 0.3;
     double a_t = 0., b_t = 2.f * M_PI; // theta random between 0 and 2*pi
@@ -255,7 +256,7 @@ void test1()
  * that finds that circular pattern. \param[out] data matrix to store data in
  * \param[in] N number of points required
  */
-void test_lamniscate(double **data, int N)
+void test_lamniscate(double *const *data, int N)
 {
     const double dr = 0.2;
     int i;
