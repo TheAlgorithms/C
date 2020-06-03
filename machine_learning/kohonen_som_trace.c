@@ -449,7 +449,7 @@ void test3()
  * Convert clock cycle difference to time in seconds
  *
  * \param[in] start_t start clock
- * \param[in] start_t end clock
+ * \param[in] end_t end clock
  * \returns time difference in seconds
  */
 double get_clock_diff(clock_t start_t, clock_t end_t)
