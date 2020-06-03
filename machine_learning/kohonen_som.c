@@ -43,7 +43,7 @@ double _random(double a, double b)
  * \returns 0 if all ok
  * \returns -1 if file creation failed
  */
-int save_nd_data(const char *fname, const double *const *X, int num_points,
+int save_nd_data(const char *fname, double **X, int num_points,
                  int num_features)
 {
     FILE *fp = fopen(fname, "wt");
@@ -153,9 +153,8 @@ void update_weights(double const *x, double *const *W, double *D, int num_out,
  * \param[in] num_out number of output points
  * \param[in] alpha_min terminal value of alpha
  */
-void kohonen_som_tracer(const double *const *X, double *const *W,
-                        int num_samples, int num_features, int num_out,
-                        double alpha_min)
+void kohonen_som_tracer(double **X, double *const *W, int num_samples,
+                        int num_features, int num_out, double alpha_min)
 {
     int R = num_out >> 2, iter = 0;
     double alpha = 1.f;
