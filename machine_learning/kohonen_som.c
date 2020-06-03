@@ -349,6 +349,115 @@ void test2()
     free(W);
 }
 
+/** Creates a random set of points distributed *near* the locus
+ * of the [Lamniscate of
+ * Gerono](https://en.wikipedia.org/wiki/Lemniscate_of_Gerono) and trains an SOM
+ * that finds that circular pattern. \param[out] data matrix to store data in
+ * \param[in] N number of points required
+ */
+void test_3d_classes(double *const *data, int N)
+{
+    const double R = 0.1; // radius of cluster
+    int i;
+    const int num_classes = 4;
+    const double centres[][3] = {
+        // centres of each class cluster
+        {.5, .5, .5},   // centre of class 1
+        {.5, -.5, -.5}, // centre of class 2
+        {-.5, .5, .5},  // centre of class 3
+        {-.5, -.5 - .5} // centre of class 4
+    };
+
+#ifdef _OPENMP
+#pragma omp for
+#endif
+    for (i = 0; i < N; i++)
+    {
+        int class = rand() % num_classes; // select a random class for the point
+
+        // create random coordinates (x,y,z) around the centre of the class
+        data[i][0] = _random(centres[class][0] - R, centres[class][0] + R);
+        data[i][1] = _random(centres[class][1] - R, centres[class][1] + R);
+        data[i][2] = _random(centres[class][2] - R, centres[class][2] + R);
+
+        /* The follosing can also be used
+        for (int j = 0; j < 3; j++)
+            data[i][j] = _random(centres[class][j] - R, centres[class][j] + R);
+        */
+    }
+}
+
+/** Test that creates a random set of points distributed in six clusters in
+ * 3D space. The following
+ * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
+ * to validate the execution:
+ * * `test3.csv`: random test samples points with a circular pattern
+ * * `w31.csv`: initial random map
+ * * `w32.csv`: trained SOM map
+ *
+ * The outputs can be readily plotted in [gnuplot](https:://gnuplot.info) using
+ * the following snippet
+ * ```gnuplot
+ * set datafile separator ','
+ * plot "test3.csv" title "original", \
+ *      "w31.csv" title "w1", \
+ *      "w32.csv" title "w2"
+ * ```
+ */
+void test3()
+{
+    int j, N = 200;
+    int features = 3;
+    int num_out = 20;
+    double **X = (double **)malloc(N * sizeof(double *));
+    double **W = (double **)malloc(num_out * sizeof(double *));
+    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    {
+        if (i < N) // only add new arrays if i < N
+            X[i] = (double *)malloc(features * sizeof(double));
+        if (i < num_out) // only add new arrays if i < num_out
+        {
+            W[i] = (double *)malloc(features * sizeof(double));
+
+#ifdef _OPENMP
+#pragma omp for
+#endif
+            // preallocate with random initial weights
+            for (j = 0; j < features; j++)
+                W[i][j] = _random(-1, 1);
+        }
+    }
+
+    test_3d_classes(X, N); // create test data around the lamniscate
+    save_nd_data("test3.csv", X, N, features); // save test data points
+    save_nd_data("w31.csv", W, num_out,
+                 features); // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
+    save_nd_data("w32.csv", W, num_out, features); // save the resultant weights
+
+    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    {
+        if (i < N)
+            free(X[i]);
+        if (i < num_out)
+            free(W[i]);
+    }
+    free(X);
+    free(W);
+}
+
+/**
+ * Convert clock cycle difference to time in seconds
+ *
+ * \param[in] start_t start clock
+ * \param[in] start_t end clock
+ * \returns time difference in seconds
+ */
+inline double get_clock_diff(clock_t start_t, clock_t end_t)
+{
+    return (double)(end_t - start_t) / (double)CLOCKS_PER_SEC;
+}
+
 /** Main function */
 int main(int argc, char **argv)
 {
@@ -366,6 +475,11 @@ int main(int argc, char **argv)
     test2();
     end_clk = clock();
     printf("Test 2 completed in %.4g sec\n",
+           get_clock_diff(start_clk, end_clk));
+    start_clk = clock();
+    test3();
+    end_clk = clock();
+    printf("Test 3 completed in %.4g sec\n",
            get_clock_diff(start_clk, end_clk));
     printf("(Note: Calculated times include: creating test sets, training "
            "model and writing files to disk.)\n\n");
