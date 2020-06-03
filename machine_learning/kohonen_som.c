@@ -453,7 +453,7 @@ void test3()
  * \param[in] start_t end clock
  * \returns time difference in seconds
  */
-inline double get_clock_diff(clock_t start_t, clock_t end_t)
+double get_clock_diff(clock_t start_t, clock_t end_t)
 {
     return (double)(end_t - start_t) / (double)CLOCKS_PER_SEC;
 }
