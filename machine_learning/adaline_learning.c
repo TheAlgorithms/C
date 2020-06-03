@@ -168,7 +168,7 @@ double fit_sample(struct adaline *ada, const double *x, const int y)
  * \param[in] y known output value for each feature vector
  * \param[in] N number of training samples
  */
-void fit(struct adaline *ada, const double **X, const int *y, const int N)
+void fit(struct adaline *ada, double **X, const int *y, const int N)
 {
     double avg_pred_error = 1.f;
 
