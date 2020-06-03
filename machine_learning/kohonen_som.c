@@ -34,16 +34,27 @@ double _random(double a, double b)
 }
 
 /**
- * Save a given data martix to file.
+ * Save a given n-dimensional data martix to file.
+ *
  * \param[in] fname filename to save in (gets overwriten without confirmation)
  * \param[in] X matrix to save
- * \param[in] num_points number of rows in the matrix
- * \param[in] num_features number of columns in the matrix
+ * \param[in] num_points rows in the matrix = number of points
+ * \param[in] num_features columns in the matrix = dimensions of points
+ * \returns 0 if all ok
+ * \returns -1 if file creation failed
  */
-void save_2d_data(const char *fname, const double *const *X, int num_points,
-                  int num_features)
+int save_nd_data(const char *fname, const double *const *X, int num_points,
+                 int num_features)
 {
     FILE *fp = fopen(fname, "wt");
+    if (!fp) // error with fopen
+    {
+        char msg[120];
+        sprintf(msg, "File error (%s): ", fname);
+        perror(msg);
+        return -1;
+    }
+
     for (int i = 0; i < num_points; i++) // for each point in the array
     {
         for (int j = 0; j < num_features; j++) // for each feature in the array
@@ -56,6 +67,7 @@ void save_2d_data(const char *fname, const double *const *X, int num_points,
             fprintf(fp, "\n");  // start a new line
     }
     fclose(fp);
+    return 0;
 }
 
 /**
@@ -237,10 +249,11 @@ void test1()
     }
 
     test_circle(X, N); // create test data around circumference of a circle
-    save_2d_data("test1.csv", X, N, 2);           // save test data points
-    save_2d_data("w11.csv", W, num_out, 2);       // save initial random weights
-    kohonen_som_tracer(X, W, N, 2, num_out, 0.1); // train the SOM
-    save_2d_data("w12.csv", W, num_out, 2);       // save the resultant weights
+    save_nd_data("test1.csv", X, N, features); // save test data points
+    save_nd_data("w11.csv", W, num_out,
+                 features); // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.1); // train the SOM
+    save_nd_data("w12.csv", W, num_out, features); // save the resultant weights
 
     for (int i = 0; i < (num_out > N ? num_out : N); i++)
     {
@@ -281,7 +294,7 @@ void test_lamniscate(double *const *data, int N)
  * that finds that circular pattern. The following
  * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
  * to validate the execution:
- * * `test2.csv`: random test samples points with a circular pattern
+ * * `test2.csv`: random test samples points with a lamniscate pattern
  * * `w21.csv`: initial random map
  * * `w22.csv`: trained SOM map
  *
@@ -319,10 +332,11 @@ void test2()
     }
 
     test_lamniscate(X, N); // create test data around the lamniscate
-    save_2d_data("test2.csv", X, N, 2);     // save test data points
-    save_2d_data("w21.csv", W, num_out, 2); // save initial random weights
-    kohonen_som_tracer(X, W, N, 2, num_out, 0.01); // train the SOM
-    save_2d_data("w22.csv", W, num_out, 2);        // save the resultant weights
+    save_nd_data("test2.csv", X, N, features); // save test data points
+    save_nd_data("w21.csv", W, num_out,
+                 features); // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
+    save_nd_data("w22.csv", W, num_out, features); // save the resultant weights
 
     for (int i = 0; i < (num_out > N ? num_out : N); i++)
     {
