@@ -27,7 +27,7 @@
  * \param[in] b upper limit
  * \returns random number in the range \f$[a,b]\f$
  */
-double random(double a, double b)
+double _random(double a, double b)
 {
     return ((b - a) * (rand() % 100) / 100.f) + a;
 }
@@ -187,9 +187,9 @@ void test_circle(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        double r = random(a_r, b_r);     // random radius
-        double theta = random(a_t, b_t); // random theta
-        data[i][0] = r * cos(theta);     // convert from polar to cartesian
+        double r = _random(a_r, b_r);     // random radius
+        double theta = _random(a_t, b_t); // random theta
+        data[i][0] = r * cos(theta);      // convert from polar to cartesian
         data[i][1] = r * sin(theta);
     }
 }
@@ -231,7 +231,7 @@ void test1()
 #endif
             // preallocate with random initial weights
             for (j = 0; j < features; j++)
-                W[i][j] = random(-1, 1);
+                W[i][j] = _random(-1, 1);
         }
     }
 
@@ -266,10 +266,10 @@ void test_lamniscate(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        double dx = random(-dr, dr);    // random change in x
-        double dy = random(-dr, dr);    // random change in y
-        double theta = random(0, M_PI); // random theta
-        data[i][0] = dx + cos(theta);   // convert from polar to cartesian
+        double dx = _random(-dr, dr);    // random change in x
+        double dy = _random(-dr, dr);    // random change in y
+        double theta = _random(0, M_PI); // random theta
+        data[i][0] = dx + cos(theta);    // convert from polar to cartesian
         data[i][1] = dy + sin(2. * theta) / 2.f;
     }
 }
@@ -313,7 +313,7 @@ void test2()
 #endif
             // preallocate with random initial weights
             for (j = 0; j < features; j++)
-                W[i][j] = random(-1, 1);
+                W[i][j] = _random(-1, 1);
         }
     }
 
