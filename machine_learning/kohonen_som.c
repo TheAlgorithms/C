@@ -12,6 +12,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #ifdef _OPENMP // check if OpenMP based parallellization is available
 #include <omp.h>
 #endif
@@ -342,7 +343,17 @@ int main(int argc, char **argv)
 #else
     printf("NOT using OpenMP based parallelization\n");
 #endif
+    clock_t start_clk = clock();
     test1();
+    clock_t end_clk = clock();
+    printf("Test 1 completed in %.4g sec\n",
+           get_clock_diff(start_clk, end_clk));
+    start_clk = clock();
     test2();
+    end_clk = clock();
+    printf("Test 2 completed in %.4g sec\n",
+           get_clock_diff(start_clk, end_clk));
+    printf("(Note: Calculated times include: creating test sets, training "
+           "model and writing files to disk.)\n\n");
     return 0;
 }
