@@ -33,4 +33,4 @@ jobs:
           cp -rp ./build/html/* . && rm -rf ./build && ls -lah
           git add .
           git commit -m "Documentation for $GITHUB_SHA" ||  true
-          # git push --force || true
+          git push --force || true
