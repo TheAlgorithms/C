@@ -12,7 +12,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#ifdef _OPENMP
+#ifdef _OPENMP // check if OpenMP based parallellization is available
 #include <omp.h>
 #endif
 
@@ -337,6 +337,11 @@ void test2()
 /** Main function */
 int main(int argc, char **argv)
 {
+#ifdef _OPENMP
+    printf("Using OpenMP based parallelization\n");
+#else
+    printf("NOT using OpenMP based parallelization\n");
+#endif
     test1();
     test2();
     return 0;
