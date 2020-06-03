@@ -1,9 +1,9 @@
 /**
  * \file
  * \brief [Kohonen self organizing
- * map](https://en.wikipedia.org/wiki/Self-organizing_map) (1D)
+ * map](https://en.wikipedia.org/wiki/Self-organizing_map) (data tracing)
  *
- * This example implements a powerful self organizing map algorithm in 1D.
+ * This example implements a powerful self organizing map algorithm.
  * The algorithm creates a connected network of weights that closely
  * follows the given data points. This this creates a chain of nodes that
  * resembles the given input shape.
@@ -455,7 +455,7 @@ void test3()
  * Convert clock cycle difference to time in seconds
  *
  * \param[in] start_t start clock
- * \param[in] start_t end clock
+ * \param[in] end_t end clock
  * \returns time difference in seconds
  */
 double get_clock_diff(clock_t start_t, clock_t end_t)
