@@ -222,6 +222,8 @@ void test_circle(double *const *data, int N)
  *      "w11.csv" title "w1", \
  *      "w12.csv" title "w2"
  * ```
+ * ![Sample execution
+ * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test1.svg)
  */
 void test1()
 {
@@ -305,6 +307,8 @@ void test_lamniscate(double *const *data, int N)
  *      "w21.csv" title "w1", \
  *      "w22.csv" title "w2"
  * ```
+ * ![Sample execution
+ * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test2.svg)
  */
 void test2()
 {
@@ -402,6 +406,8 @@ void test_3d_classes(double *const *data, int N)
  *      "w31.csv" title "w1", \
  *      "w32.csv" title "w2"
  * ```
+ * ![Sample execution
+ * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test3.svg)
  */
 void test3()
 {
