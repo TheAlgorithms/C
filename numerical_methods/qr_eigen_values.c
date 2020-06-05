@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LIMS 9 /**< */
+#define LIMS 9 /**< limit of range of matrix values */
 
 /**
  * create a square matrix of given size with random elements
@@ -82,9 +82,9 @@ int main(int argc, char **argv)
 
     int i, rows = mat_size, columns = mat_size;
 
-    double **A = (double **)malloc(sizeof(double) * mat_size);
-    double **R = (double **)malloc(sizeof(double) * mat_size);
-    double **Q = (double **)malloc(sizeof(double) * mat_size);
+    double **A = (double **)malloc(sizeof(double *) * mat_size);
+    double **R = (double **)malloc(sizeof(double *) * mat_size);
+    double **Q = (double **)malloc(sizeof(double *) * mat_size);
 
     /* number of eigen values = matrix size */
     double *eigen_vals = (double *)malloc(sizeof(double) * mat_size);
