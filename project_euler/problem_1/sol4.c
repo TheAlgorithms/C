@@ -1,8 +1,14 @@
-/*An Efficient code to print all the sum of all numbers that are multiples of 3
- * & 5 below N.*/
+/**
+ * \file
+ * \brief [Problem 1](https://projecteuler.net/problem=1) solution
+ *
+ * An Efficient code to print all the sum of all numbers that are multiples of 3
+ * & 5 below N.
+ */
 
 #include <stdio.h>
 
+/** Main function */
 int main()
 {
     int t;

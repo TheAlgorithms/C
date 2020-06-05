@@ -1,7 +1,12 @@
+/**
+ * \file
+ * \brief [Problem 8](https://projecteuler.net/problem=8) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h> /* for memmove */
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     int position = 0, num_bad_chars = 0;

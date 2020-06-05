@@ -1,6 +1,17 @@
+/**
+ * \file
+ * \brief [Problem 8](https://projecteuler.net/problem=8) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/** Compute the product of two numbers in a file
+ *
+ * \param[in] fp pointer to file that is already open
+ * \param[in] start_pos line number of the first numer
+ * \param[in] num_digits number of digits on the line to multiply
+ * \returns expected product
+ */
 long long int get_product(FILE *fp, long start_pos, int num_digits)
 {
     char ch = ' '; /* temporary variable to store character read from file */
@@ -46,6 +57,7 @@ long long int get_product(FILE *fp, long start_pos, int num_digits)
     return prod;
 }
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     int position = 0;

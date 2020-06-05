@@ -1,7 +1,12 @@
+/**
+ * \file
+ * \brief [Problem 10](https://projecteuler.net/problem=10) solution
+ */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     long n = 100;

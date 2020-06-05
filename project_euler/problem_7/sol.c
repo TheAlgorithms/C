@@ -1,6 +1,11 @@
+/**
+ * \file
+ * \brief [Problem 7](https://projecteuler.net/problem=7) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/** Main function */
 int main(void)
 {
     char *sieve;
@@ -9,7 +14,7 @@ int main(void)
     size_t n = 1000000;
     const unsigned target = 10001;
 
-    sieve = calloc(n, sizeof *sieve);
+    sieve = (char *)calloc(n, sizeof(char));
     for (i = 2; i < n; i++)
     {
         if (!sieve[i])

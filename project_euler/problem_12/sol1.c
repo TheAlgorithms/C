@@ -1,15 +1,21 @@
+/**
+ * \file
+ * \brief [Problem 11](https://projecteuler.net/problem=11) solution
+ */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * Get number of divisors of a given number
+ *
+ * If \f$x = a \times b\f$, then both \f$a\f$ and \f$b\f$ are divisors of
+ * \f$x\f$. Since multiplication is commutative, we only need to search till a
+ * maximum of \f$a=b = a^2\f$ i.e., till \f$\sqrt{x}\f$. At every integer till
+ * then, there are eaxctly 2 divisors and at \f$a=b\f$, there is only one
+ * divisor.
+ */
 long count_divisors(long long n)
-/*
-    If x = a * b, then both a and b are divisors of x.
-    Since multiplication is commutative, we only need to search
-    till a maximum of a=b = a^2 i.e., till sqrt(x).
-    At every integer till then, there are eaxctly 2 divisors
-    and at a=b, there is only one divisor.
-*/
 {
     long num_divisors = 0;
 
@@ -22,6 +28,7 @@ long count_divisors(long long n)
     return num_divisors;
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     int MAX_DIVISORS = 500;

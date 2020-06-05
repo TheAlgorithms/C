@@ -1,5 +1,13 @@
+/**
+ * \file
+ * \brief [Problem 5](https://projecteuler.net/problem=5) solution
+ */
 #include <stdio.h>
 
+/** Compute [Greatest Common Divisor
+ * (GCD)](https://en.wikipedia.org/wiki/Greatest_common_divisor) of two numbers
+ * using Euclids algorithm
+ */
 unsigned long gcd(unsigned long a, unsigned long b)
 {
     unsigned long r;
@@ -17,12 +25,16 @@ unsigned long gcd(unsigned long a, unsigned long b)
     return b;
 }
 
+/** Compute [Least Common Multiple
+ * (LCM)](https://en.wikipedia.org/wiki/Least_common_multiple) of two numbers
+ */
 unsigned long lcm(unsigned long a, unsigned long b)
 {
     unsigned long long p = (unsigned long long)a * b;
     return p / gcd(a, b);
 }
 
+/** Main function */
 int main(void)
 {
     unsigned long ans = 1;
