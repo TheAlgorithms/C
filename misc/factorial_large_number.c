@@ -1,6 +1,6 @@
 /**
  * @file
- * Compute factorial of arbitrarily large numbers by
+ * \brief Compute factorial of arbitrarily large numbers by
  * storing individual digits in a byte.
  */
 #include <stdio.h>
