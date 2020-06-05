@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LIMS 9 /**< */
+#define LIMS 9 /**< limit of range of matrix values */
 
 /**
  * create a square matrix of given size with random elements
