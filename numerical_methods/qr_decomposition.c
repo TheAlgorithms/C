@@ -1,7 +1,8 @@
 /**
  * @file
- * Program to compute the QR decomposition of a
- * given matrix.
+ * \brief Program to compute the [QR
+ * decomposition](https://en.wikipedia.org/wiki/QR_decomposition) of a given
+ * matrix.
  */
 
 #include "qr_decompose.h"

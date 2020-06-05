@@ -1,7 +1,8 @@
 /**
  * @file
- * Compute real eigen values and eigen vectors of a symmetric matrix using QR
- * decomposition method.
+ * \brief Compute real eigen values and eigen vectors of a symmetric matrix
+ * using [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition)
+ * method.
  */
 #include "qr_decompose.h"
 #include <math.h>
