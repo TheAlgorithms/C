@@ -123,3 +123,7 @@ This directory contains
 * server.c
 
 First execute server.c in a terminal and then client.c in a different terminal. Enables communication between two terminals.
+
+## Simple Games
+This directory contains
+* Tic-Tac-Toe.c
