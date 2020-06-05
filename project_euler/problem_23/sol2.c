@@ -1,4 +1,11 @@
-
+/**
+ * \file
+ * \brief [Problem 23](https://projecteuler.net/problem=23) solution -
+ * optimization using look-up array
+ *
+ * Optimization applied - compute & store abundant numbers once
+ * into a look-up array.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -6,12 +13,7 @@
 #include <omp.h>
 #endif
 
-/**
- * Optimization 1 - compute & store abundant numbers once
- * into a look-up array
- **/
-
-long MAX_N = 28123;
+long MAX_N = 28123; /**< Limit of numbers to check */
 
 /**
  * This is the global array to be used to store a flag to identify
@@ -77,8 +79,8 @@ unsigned long get_next_abundant(unsigned long N)
 /**
  * check if a given number can be represented as a sum
  * of two abundant numbers.
- * 1 - if yes
- * 0 - if not
+ * \returns 1 - if yes
+ * \returns 0 - if not
  **/
 char is_sum_of_abundant(unsigned long N)
 {
@@ -98,6 +100,7 @@ char is_sum_of_abundant(unsigned long N)
     return 0;
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     unsigned long sum = 0;

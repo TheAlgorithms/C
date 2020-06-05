@@ -1,11 +1,15 @@
+/**
+ * \file
+ * \brief [Problem 13](https://projecteuler.net/problem=13) solution
+ */
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-/* Function to read the number from a file and store it in array.
-    index 0 of output buffer => units place
-    index 1 of output buffer => tens place and so on
+/** Function to read the number from a file and store it in array.
+    \n index 0 of output buffer => units place
+    \n index 1 of output buffer => tens place and so on
     i.e., index i => 10^i th place
  */
 int get_number(FILE *fp, char *buffer, uint8_t *out_int)
@@ -73,6 +77,7 @@ int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)
     return 0;
 }
 
+/** Function to print a long number */
 int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
 {
     uint8_t start_pos = N - 1;
@@ -101,9 +106,12 @@ int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
     return 0;
 }
 
+/** number of digits of the large number */
 #define N 10
+/** number of digits in output number */
 #define N2 (N + 10)
 
+/** Main function */
 int main(void)
 {
     // const char N = 50, N2 = N+10;          /* length of numbers */

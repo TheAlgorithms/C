@@ -1,6 +1,6 @@
 /**
  * \file
- * \brief [Problem 11](https://projecteuler.net/problem=11) solution
+ * \brief [Problem 12](https://projecteuler.net/problem=12) solution
  */
 #include <math.h>
 #include <stdio.h>

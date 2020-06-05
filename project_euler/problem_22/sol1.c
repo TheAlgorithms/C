@@ -1,3 +1,7 @@
+/**
+ * \file
+ * \brief [Problem 22](https://projecteuler.net/problem=22) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,8 +10,8 @@
 #include <omp.h>
 #endif
 
-#define MAX_NAMES 6000  /* Maximum number of names to store */
-#define MAX_NAME_LEN 20 /* Maximum length of each name */
+#define MAX_NAMES 6000  /**< Maximum number of names to store */
+#define MAX_NAME_LEN 20 /**< Maximum length of each name */
 
 /**
  * Alphabetical sorting using 'shell sort' algorithm
@@ -63,6 +67,7 @@ void lazy_sort(char data[][MAX_NAME_LEN], int LEN)
 #endif
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     unsigned long COUNT = 0;
@@ -80,9 +85,9 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    /**
+    /*
      * Loops to get total number of rows and columns in the file
-     **/
+     */
     do
     {
         int ret = fscanf(fp, "\"%[^\",]\",", names[COUNT++]);

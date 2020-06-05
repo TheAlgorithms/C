@@ -1,9 +1,13 @@
+/**
+ * \file
+ * \brief [Problem 19](https://projecteuler.net/problem=19) solution
+ */
 #include <stdio.h>
 
 /**
  * returns number of days in a month.
- * Month is identified by an integer -
- * 0 = Jan and 11 = December
+ * Month is identified by an integer -\n
+ * > 0 = Jan and 11 = December\n
  * For February, adjust for leap year outside the function.
  **/
 char get_month_days(short month)
@@ -42,6 +46,7 @@ char is_leap_year(short year)
 }
 
 #ifdef DEBUG
+/** Function to convert integer month to string */
 const char *day_string(int day)
 {
     switch (day)
@@ -66,6 +71,7 @@ const char *day_string(int day)
 }
 #endif
 
+/** Main function */
 int main(int argc, char **argv)
 {
     int count_sundays = 0;

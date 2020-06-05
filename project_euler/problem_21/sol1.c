@@ -1,34 +1,29 @@
+/**
+ * \file
+ * \brief [Problem 21](https://projecteuler.net/problem=21) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#ifdef _OPENMP
-#include <omp.h>
-#endif
 
 /**
  * function to return the sum of proper divisors of N
  **/
-unsigned int sum_of_divisors(unsigned int N)
+unsigned long sum_of_divisors(unsigned int N)
 {
-    unsigned int sum = 1; /* 1 is always a divisor */
-
+    unsigned long sum = 1 + N; /* 1 and itself are always a divisor */
     /* divisors are symmertically distributed about the square-root */
-    for (unsigned int i = 2; (i * i) <= N; i++)
+    for (unsigned int i = 2; i * i < N; i++)
     {
-        if (N % i != 0)
-            /* i is not a proper divisor */
+        if ((N % i) != 0)
+            /* i is not a divisor of N */
             continue;
 
         // #ifdef DEBUG
         //         printf("%4d, %4d,", i, N / i);
         // #endif
 
-        sum += i;
-
-        if (i * i == N)
-            continue;
-
-        sum += N / i;
+        sum += i + (N / i);
     }
     // #ifdef DEBUG
     //     printf("\nSum of divisors of %4d: %4d\n", N, sum);
@@ -36,6 +31,7 @@ unsigned int sum_of_divisors(unsigned int N)
     return sum;
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     unsigned long sum = 0;
@@ -43,7 +39,7 @@ int main(int argc, char **argv)
     if (argc == 2)
         MAX_N = atoi(argv[1]);
 
-    /**
+    /**<
      * We use an array of flags to check if a number at the index was:
      * not-processed = 0
      * is amicable = 1
@@ -53,9 +49,6 @@ int main(int argc, char **argv)
 
     clock_t start_time = clock();
     int i;
-#ifdef _OPENMP
-#pragma omp for schedule(runtime)
-#endif
     /* there are no such numbers till 10. Lets search from there on */
     for (i = 10; i < MAX_N; i++)
     {

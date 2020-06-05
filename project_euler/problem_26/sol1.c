@@ -1,3 +1,7 @@
+/**
+ * \file
+ * \brief [Problem 26](https://projecteuler.net/problem=26) solution
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,14 +10,17 @@
 #include <omp.h>
 #endif
 
-#define MAX_DENO 2000
-#define MAX_LEN (MAX_DENO + 10)
+#define MAX_DENO 2000 /**< limit of unit fractions */
+#define MAX_LEN                                                                \
+    (MAX_DENO + 10) /**< length of resulting recurring fraction number */
 
+/** comparison function for use with internal `qsort` algorithm */
 int compare(const void *a, const void *b)
 {
     return (*(unsigned short *)a - *(unsigned short *)b);
 }
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     unsigned short max_digits = 0, max_idx_number = 0;

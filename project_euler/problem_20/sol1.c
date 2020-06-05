@@ -1,3 +1,10 @@
+/**
+ * \file
+ * \brief [Problem 20](https://projecteuler.net/problem=20) solution
+ *
+ * Implementation uses a custom `big_int` structure that can store arbitrarilty
+ * large integer numbers.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -14,6 +21,7 @@ typedef struct _big_int
 } big_int;
 
 #ifdef DEBUG
+/** print a digit from large integer */
 void print_digit(const big_int *my_int)
 {
     printf("\tValue : %d\n\tNext : %p\n\tPrev : %p\n", my_int->value,
@@ -82,6 +90,7 @@ char remove_digits(big_int *digit, int N)
     return remove_digits(digit->next_digit, 0);
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     unsigned int N = 5;

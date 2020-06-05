@@ -1,8 +1,13 @@
+/**
+ * \file
+ * \brief [Problem 16](https://projecteuler.net/problem=16) solution
+ */
 #include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+/** Main function */
 int main(int argc, char **argv)
 {
     const double tmp = log(10) / log(2); /* required to get number of digits */

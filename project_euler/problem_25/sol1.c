@@ -1,13 +1,18 @@
+/**
+ * \file
+ * \brief [Problem 25](https://projecteuler.net/problem=25) solution implemented
+ * using arbitrarily large numbers represented as arrays
+ */
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-#define MAX_DIGITS 1000
+#define MAX_DIGITS 1000 /**< maximum number of digits */
 
 /**
- * Function to add arbitraty length decimal integers stored in an array.
+ * Function to add arbitraty length decimal integers stored in an array.\n
  * a + b = c = new b
  **/
 unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
@@ -48,6 +53,7 @@ unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
     return i;
 }
 
+/** Print a large number */
 int print_number(unsigned char *number, int N)
 {
     int start_pos = N - 1;
@@ -62,6 +68,7 @@ int print_number(unsigned char *number, int N)
     return 0;
 }
 
+/** Get number of digits in a large number */
 unsigned int get_digits(unsigned char *number)
 {
     unsigned int digits = MAX_DIGITS;
@@ -70,6 +77,7 @@ unsigned int get_digits(unsigned char *number)
     return digits;
 }
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     unsigned char

@@ -1,3 +1,7 @@
+/**
+ * \file
+ * \brief [Problem 15](https://projecteuler.net/problem=15) solution
+ */
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,6 +25,7 @@ unsigned long long number_of_paths(int N)
     return path;
 }
 
+/** Main function */
 int main(int argc, char **argv)
 {
     int N = 20;
