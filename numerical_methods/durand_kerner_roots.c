@@ -1,6 +1,8 @@
 /**
  * @file
- * Compute riots of any given polynomial.
+ * \brief Compute all possible approximate roots of any given polynomial using
+ * [Durand Kerner
+ * algorithm](https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method)
  *
  * Test the algorithm online:
  * https://gist.github.com/kvedala/27f1b0b6502af935f6917673ec43bcd7
