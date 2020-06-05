@@ -126,4 +126,4 @@ First execute server.c in a terminal and then client.c in a different terminal. 
 
 ## Simple Games
 This directory contains
-* Tic-Tac-Toe.c
+* TicTacToe.c
