@@ -60,11 +60,11 @@ if(USE_OPENMP)
     endif()
 endif()
 
-add_subdirectory(conversions)
 add_subdirectory(misc)
-add_subdirectory(project_euler)
 add_subdirectory(sorting)
 add_subdirectory(searching)
+add_subdirectory(conversions)
+add_subdirectory(project_euler)
 add_subdirectory(machine_learning)
 add_subdirectory(numerical_methods)
 
