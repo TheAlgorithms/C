@@ -1,8 +1,8 @@
 /**
  * \file
- * \brief [Problem 401](https://projecteuler.net/problem=401) solution
- *
+ * \brief [Problem 401](https://projecteuler.net/problem=401) solution -
  * Sum of squares of divisors
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include <stdint.h>
 #include <stdio.h>

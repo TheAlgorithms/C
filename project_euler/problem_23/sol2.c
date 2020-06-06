@@ -2,6 +2,7 @@
  * \file
  * \brief [Problem 23](https://projecteuler.net/problem=23) solution -
  * optimization using look-up array
+ * \author [Krishna Vedala](https://github.com/kvedala)
  *
  * Optimization applied - compute & store abundant numbers once
  * into a look-up array.

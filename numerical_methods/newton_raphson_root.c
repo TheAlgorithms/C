@@ -2,6 +2,8 @@
  * @file
  * \brief Find approximate solution for \f$f(x) = 0\f$ using
  * Newton-Raphson interpolation algorithm.
+ *
+ * \author [Krishna Vedala](https://github.com/kvedala)
  **/
 
 #include <complex.h> /* requires minimum of C99 */

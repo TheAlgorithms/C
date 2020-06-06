@@ -1,6 +1,7 @@
 /**
  * \file
  * \brief Compute statistics for data entered in rreal-time
+ * \author [Krishna Vedala](https://github.com/kvedala)
  *
  * This algorithm is really beneficial to compute statistics on data read in
  * realtime. For example, devices reading biometrics data. The algorithm is

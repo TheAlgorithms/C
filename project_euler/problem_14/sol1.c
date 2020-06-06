@@ -1,6 +1,7 @@
 /**
  * \file
  * \brief [Problem 14](https://projecteuler.net/problem=14) solution
+ * \author [Krishna Vedala](https://github.com/kvedala)
  *
  * Since the computational values for each iteration step are independent,
  * we can compute them in parallel. However, the maximum values should be

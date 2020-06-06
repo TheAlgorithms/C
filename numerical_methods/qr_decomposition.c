@@ -3,6 +3,7 @@
  * \brief Program to compute the [QR
  * decomposition](https://en.wikipedia.org/wiki/QR_decomposition) of a given
  * matrix.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 
 #include "qr_decompose.h"

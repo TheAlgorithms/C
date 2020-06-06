@@ -2,6 +2,7 @@
  * \file
  * \brief [Problem 25](https://projecteuler.net/problem=25) solution implemented
  * using arbitrarily large numbers represented as arrays
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include <stdint.h>
 #include <stdio.h>
