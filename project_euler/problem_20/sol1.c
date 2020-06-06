@@ -1,6 +1,7 @@
 /**
  * \file
  * \brief [Problem 20](https://projecteuler.net/problem=20) solution
+ * \author [Krishna Vedala](https://github.com/kvedala)
  *
  * Implementation uses a custom `big_int` structure that can store arbitrarilty
  * large integer numbers.

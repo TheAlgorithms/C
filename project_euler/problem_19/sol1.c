@@ -1,6 +1,7 @@
 /**
  * \file
  * \brief [Problem 19](https://projecteuler.net/problem=19) solution
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include <stdio.h>
 

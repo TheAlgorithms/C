@@ -1,6 +1,6 @@
 /**
     @file
-    @author Krishna Vedala
+    @author [Krishna Vedala](https://github.com/kvedala)
     @date 2 October, 2019
     @brief Compute \f$m^{mth}\f$ Fibonacci number using the formulae:
     \f{eqnarray*}{

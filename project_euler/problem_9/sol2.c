@@ -1,6 +1,7 @@
 /**
  * \file
  * \brief [Problem 9](https://projecteuler.net/problem=9) solution
+ * \author [Krishna Vedala](https://github.com/kvedala)
  *
  Problem Statement:
     A Pythagorean triplet is a set of three natural numbers, \f$a < b < c\f$,

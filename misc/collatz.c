@@ -1,11 +1,18 @@
-/*
-collatz conjecture: a series for a number n in which if n even then the next
-number is n/2 ,but if n is odd then the next number is 3n+1. this series
-continues till it reaches 1*/
+/**
+ * \file
+ *
+ * \brief Implementation of [Collatz'
+ * conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture)
+ *
+ * Collatz conjecture: a series for a number \f$n\f$ in which if \f$n\f$ even
+ * then the next number is \f$\frac{n}{2}\f$ ,but if n is odd then the next
+ * number is \f$3n+1\f$. This series continues till \f$n\f$ reaches 1
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+/** Main function */
 int main(int argc, char *argv[])
 {
     unsigned long long n, curr_no, num_steps = 0;

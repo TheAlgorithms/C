@@ -2,6 +2,7 @@
  * \file
  * \brief [Problem 9](https://projecteuler.net/problem=9) solution - A naive
  * implementation
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include <stdio.h>
 

@@ -2,6 +2,7 @@
  * @file
  * \brief Compute factorial of arbitrarily large numbers by
  * storing individual digits in a byte.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include <stdio.h>
 #include <stdlib.h>

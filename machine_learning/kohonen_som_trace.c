@@ -3,6 +3,8 @@
  * \brief [Kohonen self organizing
  * map](https://en.wikipedia.org/wiki/Self-organizing_map) (data tracing)
  *
+ * \author [Krishna Vedala](https://github.com/kvedala)
+ *
  * This example implements a powerful self organizing map algorithm.
  * The algorithm creates a connected network of weights that closely
  * follows the given data points. This this creates a chain of nodes that

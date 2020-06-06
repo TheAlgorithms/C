@@ -3,6 +3,7 @@
  * \brief Compute real eigen values and eigen vectors of a symmetric matrix
  * using [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition)
  * method.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 #include "qr_decompose.h"
 #include <math.h>
