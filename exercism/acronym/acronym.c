@@ -38,11 +38,12 @@ char *abbreviate(const char *phrase)
 
     i = 0;
     counter++;
-    char words[counter][80];
+    char **words = (char **)malloc(counter * sizeof(char *));
 
     /* initalizes words-array with empty strings */
     for (i = 0; i < counter; i++)
     {
+        words[i] = (char *)malloc(80 * sizeof(char));
         strcpy(words[i], "");
     }
 
@@ -82,6 +83,10 @@ char *abbreviate(const char *phrase)
         words[i][1] = '\0';
         strcat(acr, words[i]);
     }
+
+    for (i = 0; i < counter; i++)
+        free(words[i]);
+    free(words);
 
     return acr;
 }

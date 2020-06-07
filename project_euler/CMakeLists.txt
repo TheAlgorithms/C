@@ -19,6 +19,6 @@ foreach( testsourcefile ${APP_SOURCES} )
     if(MATH_LIBRARY)
         target_link_libraries(${testname} ${MATH_LIBRARY})
     endif()
-    install(TARGETS ${testname} DESTINATION "bin/misc")
+    install(TARGETS ${testname} DESTINATION "bin/project_euler")
 
 endforeach( testsourcefile ${APP_SOURCES} )

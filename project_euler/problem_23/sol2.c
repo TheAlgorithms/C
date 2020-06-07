@@ -26,10 +26,9 @@ long MAX_N = 28123; /**< Limit of numbers to check */
 char *abundant_flags = NULL;
 
 /**
- * Returns:
- * -1 if N is deficient
- *  1 if N is abundant
- *  0 if N is perfect
+ * \returns -1 if N is deficient
+ * \returns 1 if N is abundant
+ * \returns 0 if N is perfect
  **/
 char get_perfect_number(unsigned long N)
 {

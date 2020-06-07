@@ -242,6 +242,7 @@
   * [Gauss Elimination](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/gauss_elimination.c)
   * [Gauss Seidel Method](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/gauss_seidel_method.c)
   * [Lagrange Theorem](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/lagrange_theorem.c)
+  * [Lu Decompose](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/lu_decompose.c)
   * [Mean](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/mean.c)
   * [Median](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/median.c)
   * [Newton Raphson Root](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/newton_raphson_root.c)
