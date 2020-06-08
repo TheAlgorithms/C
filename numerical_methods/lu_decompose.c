@@ -77,6 +77,24 @@ void display(double **A, int N)
     }
 }
 
+/**
+ * Convert a 1D array block into a 2D row-major matrix representation i.e.,
+ * elements are ordered row-wise.
+ *
+ * \param[in] array 1D array to convert
+ * \param[in] N_rows number of rows in output matrix
+ * \param[in] N_columns number of columns in output matrix
+ */
+double **array_to_matrix(const double *array, size_t N_rows, size_t N_cols)
+{
+    double **out;
+    for (size_t row = 0; row < N_rows; row += N_cols)
+    {
+        out[row] = array + (row * N_cols);
+    }
+    return out;
+}
+
 /** Main function */
 int main(int argc, char **argv)
 {
@@ -90,15 +108,17 @@ int main(int argc, char **argv)
     srand(time(NULL)); // random number initializer
 
     /* Create a square matrix with random values */
-    double **A = (double **)malloc(mat_size * sizeof(double *));
-    double **L = (double **)malloc(mat_size * sizeof(double *)); // output
-    double **U = (double **)malloc(mat_size * sizeof(double *)); // output
+    double *a = (double *)calloc(mat_size * mat_size *
+                                 sizeof(double)); // allocate 1D NxN memory
+    double *l = (double *)calloc(mat_size * mat_size *
+                                 sizeof(double)); // allocate 1D NxN memory
+    double *u = (double *)calloc(mat_size * mat_size *
+                                 sizeof(double)); // allocate 1D NxN memory
+    double **A = array_to_matrix(a, mat_size, mat_size);
+    double **L = array_to_matrix(l, mat_size, mat_size); // output
+    double **U = array_to_matrix(u, mat_size, mat_size); // output
     for (int i = 0; i < mat_size; i++)
     {
-        // calloc so that all valeus are '0' by default
-        A[i] = (double *)calloc(mat_size, sizeof(double));
-        L[i] = (double *)calloc(mat_size, sizeof(double));
-        U[i] = (double *)calloc(mat_size, sizeof(double));
         for (int j = 0; j < mat_size; j++)
             /* create random values in the limits [-range2, range-1] */
             A[i][j] = (double)(rand() % range - range2);
@@ -112,6 +132,10 @@ int main(int argc, char **argv)
     display(L, mat_size);
     printf("\nU = \n");
     display(U, mat_size);
+
+    free(a);
+    free(l);
+    free(u);
 
     return 0;
 }
