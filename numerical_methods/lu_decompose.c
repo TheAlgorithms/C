@@ -113,5 +113,16 @@ int main(int argc, char **argv)
     printf("\nU = \n");
     display(U, mat_size);
 
+    /* Free dynamically allocated memory */
+    for (int i = 0; i < mat_size; i++)
+    {
+        free(A[i]);
+        free(L[i]);
+        free(U[i]);
+    }
+    free(A);
+    free(L);
+    free(U);
+
     return 0;
 }
