@@ -1,4 +1,6 @@
 # The Algorithms - C # {#mainpage}
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/C-Plus-Plus) 
+[![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)
 [![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/kvedala/C-Plus-Plus/blob/master/CONTRIBUTION.md)&nbsp;
 ![GitHub repo size](https://img.shields.io/github/repo-size/kvedala/C-Plus-Plus?color=red&style=flat-square)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/kvedala/C?color=green&style=flat-square)
