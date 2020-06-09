@@ -1,5 +1,7 @@
 # The Algorithms - C # {#mainpage}
-[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/kvedala/C-Plus-Plus/blob/master/CONTRIBUTION.md)&nbsp;
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/C-Plus-Plus) 
+[![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)
+[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/kvedala/C-Plus-Plus/blob/master/CONTRIBUTING.md)&nbsp;
 ![GitHub repo size](https://img.shields.io/github/repo-size/kvedala/C-Plus-Plus?color=red&style=flat-square)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/kvedala/C?color=green&style=flat-square)
 ![Doxygen CI](https://github.com/kvedala/C/workflows/Doxygen%20CI/badge.svg)
@@ -15,4 +17,4 @@ All the code can be executed and tested online: [![using Google Colab Notebook](
 The implementations are for learning purpose. They may be less efficient than the implementation in the standard library.
 
 ### Contribute Guidelines
-Read our [Contribution Guidelines](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/CONTRIBUTION.md) before you contribute.
+Read our [Contribution Guidelines](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/CONTRIBUTING.md) before you contribute.
