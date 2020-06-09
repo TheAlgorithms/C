@@ -1,5 +1,6 @@
 tasks:
 - init: >
+  pip install cpplint
   cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug &&
   cmake --build build -t all
   
