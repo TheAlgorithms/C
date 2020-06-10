@@ -246,6 +246,7 @@
   * [Mean](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/mean.c)
   * [Median](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/median.c)
   * [Newton Raphson Root](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/newton_raphson_root.c)
+  * [Ode Forward Euler](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/ode_forward_euler.c)
   * [Qr Decompose](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_decompose.h)
   * [Qr Decomposition](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_eigen_values.c)
