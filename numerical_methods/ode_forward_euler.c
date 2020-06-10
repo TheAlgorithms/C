@@ -24,6 +24,7 @@
  * <img
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_forward_euler.svg"
  * alt="Implementation solution"/>
+ * \see ode_midpoint_euler.c
  */
 
 #include <math.h>
