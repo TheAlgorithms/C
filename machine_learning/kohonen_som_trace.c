@@ -277,8 +277,7 @@ void test1()
 
 /** Creates a random set of points distributed *near* the locus
  * of the [Lamniscate of
- * Gerono](https://en.wikipedia.org/wiki/Lemniscate_of_Gerono) and trains an SOM
- * that finds that circular pattern.
+ * Gerono](https://en.wikipedia.org/wiki/Lemniscate_of_Gerono).
  * \f{eqnarray*}{
  * \delta r &=& 0.2\\
  * \delta x &\in& [-\delta r, \delta r)\\
@@ -371,7 +370,7 @@ void test2()
     free(W);
 }
 
-/** creates a random set of points distributed in four clusters in
+/** Creates a random set of points distributed in four clusters in
  * 3D space with centroids at the points
  * * \f$(0,5, 0.5, 0.5)\f$
  * * \f$(0,5,-0.5, -0.5)\f$
