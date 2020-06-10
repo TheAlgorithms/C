@@ -124,6 +124,7 @@ int main(int argc, char *argv[])
     {
         fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
         midpoint_euler(dx, &x, y, dy);                  // perform integration
+        x += dx;                                        // update step
     } while (x <= X_MAX); // till upper limit of independent variable
     /* end of integration */
 
