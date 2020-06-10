@@ -6,7 +6,7 @@
  * [semi implicit Euler
  * method](https://en.wikipedia.org/wiki/Semi-implicit_Euler_method)
  *
- * \description
+ * \details
  * The ODE being solved is:
  * \f{eqnarray*}{
  * \dot{u} &=& v\\
@@ -22,7 +22,20 @@
  * The computation results are stored to a text file `semi_implicit_euler.csv`
  * and the exact soltuion results in `exact.csv` for comparison. <img
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_semi_implicit_euler.svg"
- * alt="Implementation solution"/>
+ * alt="Implementation solution" width="350"/>
+ *
+ * To implement [Van der Pol
+ * oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator), change the
+ * ::problem function to:
+ * ```cpp
+ * const double mu = 2.0;
+ * dy[0] = y[1];
+ * dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];
+ * ```
+ * <a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator"><img
+ * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/van_der_pol_implicit_euler.svg"
+ * alt="Van der Pol Oscillator solution"/></a>
+ *
  * \see ode_forward_euler.c, ode_midpoint_euler.c
  */
 
@@ -44,9 +57,12 @@
  */
 void problem(const double *x, double *y, double *dy)
 {
-    const double omega = 1.F;      // some const for the problem
-    dy[0] = y[1];                  // x dot
-    dy[1] = -omega * omega * y[0]; // y dot
+    // const double omega = 1.F;      // some const for the problem
+    // dy[0] = y[1];                  // x dot
+    // dy[1] = -omega * omega * y[0]; // y dot
+    const double mu = 2.0;
+    dy[0] = y[1];
+    dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];
 }
 
 /**
@@ -62,10 +78,8 @@ void exact_solution(const double *x, double *y)
 }
 
 /**
- * @brief Compute next step approximation using the midpoint-Euler
+ * @brief Compute next step approximation using the semi-implicit-Euler
  * method.
- * @f[y_{n+1} = y_n + dx\, f\left(x_n+\frac{1}{2}dx,
- * y_n + \frac{1}{2}dx\,f\left(x_n,y_n\right)\right)@f]
  * @param[in] 		dx	step size
  * @param[in,out] 	x	take @f$x_n@f$ and compute @f$x_{n+1}@f$
  * @param[in,out] 	y	take @f$y_n@f$ and compute @f$y_{n+1}@f$
