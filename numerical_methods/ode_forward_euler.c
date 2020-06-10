@@ -29,6 +29,7 @@
 
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #define order 2 /**< number of dependent variables in ::problem */
@@ -83,7 +84,7 @@ void forward_euler(double dx, double *x, double *y, double *dy)
 */
 int main(int argc, char *argv[])
 {
-    double X0 = 0.f;          /* initial value of f(x = x0) */
+    double X0 = 0.f;          /* initial value of x0 */
     double Y0[] = {1.f, 0.f}; /* initial value Y = y(x = x_0) */
 
     double dx, dy[order];
