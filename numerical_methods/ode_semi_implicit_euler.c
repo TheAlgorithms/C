@@ -98,7 +98,7 @@ void semi_implicit_euler_step(double dx, double *x, double *y, double *dy)
 }
 
 /**
- * @brief Compute approximation using the midpoint-Euler
+ * @brief Compute approximation using the semi-implicit-Euler
  * method in the given limits.
  * @param[in] 		dx  	step size
  * @param[in]   	x0  	initial value of independent variable
