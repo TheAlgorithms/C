@@ -248,6 +248,7 @@
   * [Newton Raphson Root](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/newton_raphson_root.c)
   * [Ode Forward Euler](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/ode_forward_euler.c)
   * [Ode Midpoint Euler](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/ode_midpoint_euler.c)
+  * [Ode Semi Implicit Euler](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/ode_semi_implicit_euler.c)
   * [Qr Decompose](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_decompose.h)
   * [Qr Decomposition](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/numerical_methods/qr_eigen_values.c)
