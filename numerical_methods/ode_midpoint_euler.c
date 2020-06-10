@@ -23,7 +23,7 @@
  * the exact soltuion results in `exact.csv` for comparison. <img
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_midpoint_euler.svg"
  * alt="Implementation solution"/>
- * \see ode_forward_euler.c
+ * \see ode_forward_euler.c, ode_semi_implicit_euler.c
  */
 
 #include <math.h>
