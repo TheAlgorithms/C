@@ -22,7 +22,7 @@
  * The computation results are stored to a text file `midpoint_euler.csv` and
  * the exact soltuion results in `exact.csv` for comparison. <img
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_midpoint_euler.svg"
- * alt="Implementation solution" width="350"/>
+ * alt="Implementation solution"/>
  *
  * To implement [Van der Pol
  * oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator), change the
