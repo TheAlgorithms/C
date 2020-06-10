@@ -24,11 +24,14 @@
  * \n Steps:
  * 1. `r1 = rand() % 100` gets a random number between 0 and 99
  * 2. `r2 = r1 / 100` converts random number to be between 0 and 0.99
- * 3. scale and offset the random number to given range of \f$[a,b]\f$
+ * 3. scale and offset the random number to given range of \f$[a,b)\f$
+ * \f[
+ * y = (b - a) \times \frac{\text{(random number between 0 and RAND_MAX)} \;
+ * \text{mod}\; 100}{100} + a \f]
  *
  * \param[in] a lower limit
  * \param[in] b upper limit
- * \returns random number in the range \f$[a,b]\f$
+ * \returns random number in the range \f$[a,b)\f$
  */
 double _random(double a, double b)
 {
@@ -184,7 +187,12 @@ void kohonen_som_tracer(double **X, double *const *W, int num_samples,
 /** Creates a random set of points distributed *near* the circumference
  * of a circle and trains an SOM that finds that circular pattern. The
  * generating function is
- * \f{eqnarray*}{ \f}
+ * \f{eqnarray*}{
+ * r &\in& [1-\delta r, 1+\delta r)\\
+ * \theta &\in& [0, 2\pi)\\
+ * x &=& r\cos\theta\\
+ * y &=& r\sin\theta
+ * \f}
  *
  * \param[out] data matrix to store data in
  * \param[in] N number of points required
@@ -270,7 +278,16 @@ void test1()
 /** Creates a random set of points distributed *near* the locus
  * of the [Lamniscate of
  * Gerono](https://en.wikipedia.org/wiki/Lemniscate_of_Gerono) and trains an SOM
- * that finds that circular pattern. \param[out] data matrix to store data in
+ * that finds that circular pattern.
+ * \f{eqnarray*}{
+ * \delta r &=& 0.2\\
+ * \delta x &\in& [-\delta r, \delta r)\\
+ * \delta y &\in& [-\delta r, \delta r)\\
+ * \theta &\in& [0, \pi)\\
+ * x &=& \delta x + \cos\theta\\
+ * y &=& \delta y + \frac{\sin(2\theta)}{2}
+ * \f}
+ * \param[out] data matrix to store data in
  * \param[in] N number of points required
  */
 void test_lamniscate(double *const *data, int N)
@@ -354,10 +371,14 @@ void test2()
     free(W);
 }
 
-/** Creates a random set of points distributed *near* the locus
- * of the [Lamniscate of
- * Gerono](https://en.wikipedia.org/wiki/Lemniscate_of_Gerono) and trains an SOM
- * that finds that circular pattern. \param[out] data matrix to store data in
+/** creates a random set of points distributed in four clusters in
+ * 3D space with centroids at the points
+ * * \f$(0,5, 0.5, 0.5)\f$
+ * * \f$(0,5,-0.5, -0.5)\f$
+ * * \f$(-0,5, 0.5, 0.5)\f$
+ * * \f$(-0,5,-0.5, -0.5)\f$
+ *
+ * \param[out] data matrix to store data in
  * \param[in] N number of points required
  */
 void test_3d_classes(double *const *data, int N)
