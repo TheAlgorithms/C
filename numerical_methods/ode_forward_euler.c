@@ -67,7 +67,6 @@ void exact_solution(double *x, double *y)
  * @param[in,out] 	x	take \f$x_n\f$ and compute \f$x_{n+1}\f$
  * @param[in,out] 	y	take \f$y_n\f$ and compute \f$y_{n+1}\f$
  * @param[in,out]	dy	compute \f$f\left(x_n,y_n\right)\f$
- * @param[in]    order  order of algorithm implementation
  */
 void forward_euler(double dx, double *x, double *y, double *dy)
 {
