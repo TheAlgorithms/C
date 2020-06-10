@@ -6,7 +6,7 @@
  * [midpoint Euler
  * method](https://en.wikipedia.org/wiki/Midpoint_method)
  *
- * \description
+ * \details
  * The ODE being solved is:
  * \f{eqnarray*}{
  * \dot{u} &=& v\\
