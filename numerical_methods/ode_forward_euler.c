@@ -6,7 +6,7 @@
  * [forward Euler
  * method](https://en.wikipedia.org/wiki/Numerical_methods_for_ordinary_differential_equations#Euler_method)
  *
- * \description
+ * \details
  * The ODE being solved is:
  * \f{eqnarray*}{
  * \dot{u} &=& v\\
@@ -23,7 +23,16 @@
  * exact soltuion results in `exact.csv` for comparison.
  * <img
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_forward_euler.svg"
- * alt="Implementation solution"/>
+ * alt="Implementation solution" width="350"/>
+ *
+ * To implement [Van der Pol
+ * oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator), change the
+ * ::problem function to:
+ * ```cpp
+ * const double mu = 2.0;
+ * dy[0] = y[1];
+ * dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];
+ * ```
  * \see ode_midpoint_euler.c, ode_semi_implicit_euler.c
  */
 
