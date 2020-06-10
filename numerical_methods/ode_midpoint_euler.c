@@ -84,7 +84,6 @@ void midpoint_euler(double dx, double *x, double *y, double *dy)
 
     for (o = 0; o < order; o++)
         y[o] += dx * dy[o];
-    (*x) += dx;
 }
 
 /**

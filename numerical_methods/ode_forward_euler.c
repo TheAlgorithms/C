@@ -76,7 +76,6 @@ void forward_euler(double dx, double *x, double *y, double *dy)
     problem(x, y, dy);
     for (o = 0; o < order; o++)
         y[o] += dx * dy[o];
-    *x += dx;
 }
 
 /**
