@@ -42,7 +42,7 @@
  * @param[in,out]	y		dependent variable(s)
  * @param[in,out]	dy	    first-derivative of dependent variable(s)
  */
-void problem(double *x, double *y, double *dy)
+void problem(const double *x, double *y, double *dy)
 {
     const double omega = 1.F;      // some const for the problem
     dy[0] = y[1];                  // x dot
@@ -55,7 +55,7 @@ void problem(double *x, double *y, double *dy)
  * @param[in] 		x 		independent variable
  * @param[in,out]	y		dependent variable
  */
-void exact_solution(double *x, double *y)
+void exact_solution(const double *x, double *y)
 {
     y[0] = cos(x[0]);
     y[1] = -sin(x[0]);
@@ -71,7 +71,7 @@ void exact_solution(double *x, double *y)
  * @param[in,out] 	y	take @f$y_n@f$ and compute @f$y_{n+1}@f$
  * @param[in,out]	dy	compute @f$y_n+\frac{1}{2}dx\,f\left(x_n,y_n\right)@f$
  */
-void midpoint_euler(double dx, double *x, double *y, double *dy)
+void midpoint_euler_step(double dx, double *x, double *y, double *dy)
 {
     problem(x, y, dy);
     double tmp_x = (*x) + 0.5 * dx;
@@ -87,71 +87,93 @@ void midpoint_euler(double dx, double *x, double *y, double *dy)
 }
 
 /**
+ * @brief Compute approximation using the midpoint-Euler
+ * method in the given limits.
+ * @param[in] 		dx  	step size
+ * @param[in]   	x0  	initial value of independent variable
+ * @param[in] 	    x_max	final value of independent variable
+ * @param[in,out] 	y	    take \f$y_n\f$ and compute \f$y_{n+1}\f$
+ * @param[in] save_to_file	flag to save results to a CSV file (1) or not (0)
+ * @returns time taken for computation in seconds
+ */
+double midpoint_euler(double dx, double x0, double x_max, double *y,
+                      char save_to_file)
+{
+    double dy[order];
+
+    FILE *fp = NULL;
+    if (save_to_file)
+    {
+        fp = fopen("midpoint_euler.csv", "w+");
+        if (fp == NULL)
+        {
+            perror("Error! ");
+            return -1;
+        }
+    }
+
+    /* start integration */
+    clock_t t1 = clock();
+    double x = x0;
+    do // iterate for each step of independent variable
+    {
+        if (save_to_file && fp)
+            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
+        midpoint_euler_step(dx, &x, y, dy); // perform integration
+        x += dx;                            // update step
+    } while (x <= x_max); // till upper limit of independent variable
+    /* end of integration */
+    clock_t t2 = clock();
+
+    if (save_to_file && fp)
+        fclose(fp);
+
+    return (double)(t2 - t1) / CLOCKS_PER_SEC;
+}
+
+/**
     Main Function
 */
 int main(int argc, char *argv[])
 {
     double X0 = 0.f;          /* initial value of x0 */
+    double X_MAX = 10.F;      /* upper limit of integration */
     double Y0[] = {1.f, 0.f}; /* initial value Y = y(x = x_0) */
-
-    double dx, dy[order];
-    double x = X0, *y = &(Y0[0]);
-    double X_MAX = 10.F; /* upper limit of integration */
+    double step_size;
 
     if (argc == 1)
     {
         printf("\nEnter the step size: ");
-        scanf("%lg", &dx);
+        scanf("%lg", &step_size);
     }
     else
         // use commandline argument as independent variable step size
-        dx = atof(argv[1]);
+        step_size = atof(argv[1]);
 
-    clock_t t1, t2;
-    double total_time;
-
-    FILE *fp = fopen("midpoint_euler.csv", "w+");
-    if (fp == NULL)
-    {
-        perror("Error! ");
-        return -1;
-    }
-    printf("Computing using 'Midpoint Euler' algorithm\n");
-
-    /* start integration */
-    t1 = clock();
-    do // iterate for each step of independent variable
-    {
-        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
-        midpoint_euler(dx, &x, y, dy);                  // perform integration
-        x += dx;                                        // update step
-    } while (x <= X_MAX); // till upper limit of independent variable
-    /* end of integration */
-
-    t2 = clock();
-    fclose(fp);
-
-    total_time = (t2 - t1) / CLOCKS_PER_SEC;
-    printf("\tTime taken = %.6g ms\n", total_time);
+    // get approximate solution
+    double total_time = midpoint_euler(step_size, X0, X_MAX, Y0, 1);
+    printf("\tTime = %.6g ms\n", total_time);
 
     /* compute exact solution for comparion */
-    fp = fopen("exact.csv", "w+");
+    FILE *fp = fopen("exact.csv", "w+");
     if (fp == NULL)
     {
         perror("Error! ");
         return -1;
     }
-    x = X0;
-    y = Y0;
+    double x = X0;
+    double *y = &(Y0[0]);
     printf("Finding exact solution\n");
-    t1 = clock();
+    clock_t t1 = clock();
+
     do
     {
         fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
         exact_solution(&x, y);
-        x += dx;
+        x += step_size;
     } while (x <= X_MAX);
-    t2 = clock();
+
+    clock_t t2 = clock();
     total_time = (t2 - t1) / CLOCKS_PER_SEC;
     printf("\tTime = %.6g ms\n", total_time);
     fclose(fp);
