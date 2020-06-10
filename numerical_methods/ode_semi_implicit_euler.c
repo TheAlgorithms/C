@@ -57,12 +57,9 @@
  */
 void problem(const double *x, double *y, double *dy)
 {
-    // const double omega = 1.F;      // some const for the problem
-    // dy[0] = y[1];                  // x dot
-    // dy[1] = -omega * omega * y[0]; // y dot
-    const double mu = 2.0;
-    dy[0] = y[1];
-    dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];
+    const double omega = 1.F;      // some const for the problem
+    dy[0] = y[1];                  // x dot
+    dy[1] = -omega * omega * y[0]; // y dot
 }
 
 /**
