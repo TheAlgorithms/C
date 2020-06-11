@@ -11,7 +11,9 @@
  * - Search
  * - Deletion
  * - Listing of node keys inorder,preorder,postorder
-
+ *
+ * -see binary_search_tree.c
+ *
  * \author [Amitha Nayak](https://github.com/amitnayakblr)
  */
 
