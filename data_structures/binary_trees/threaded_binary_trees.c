@@ -2,12 +2,16 @@
  * @file
  * \brief This file is a simple implementation of a Threaded Binary Tree
  *
+ * Threaded Binary Tree is a binary tree variant in which all left child
+ * pointers that are NULL (in Linked list representation) point to its
+ * in-order predecessor, and all right child pointers that are NULL
+ * (in Linked list representation) point to its in-order successor.
  * It has the following functionalities:
  * - Insertion
  * - Search
  * - Deletion
  * - Listing of node keys inorder,preorder,postorder
- *
+
  * \author [Amitha Nayak](https://github.com/amitnayakblr)
  */
 
