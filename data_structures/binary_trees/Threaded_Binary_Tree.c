@@ -42,7 +42,7 @@ node *create_node(int data) {
  * param[in,out] root pointer to node pointer to the topmost node of the tree
  * param[in] data value to be inserted into the tree
  */
-void insert_BT(node **root, int data) {
+void insert_bt(node **root, int data) {
   node *new_node = create_node(data);
   node *temp; // to be deleted
   node *prev; // keeps track of the parent of the element deleted
@@ -94,7 +94,7 @@ void search(node *root, int ele) {
     printf("%s\n", "Element found.");
 }
 
-/*
+/**
  * performs inorder traversal
  * param[in] curr node pointer to the topmost node of the tree
  */
@@ -106,37 +106,37 @@ void inorder_display(node *curr) {
   }
 }
 
-/*
+/**
  * performs postorder traversal
  * param[in] curr node pointer to the topmost node of the tree
  */
-void postorder_BT(node *curr) {
+void postorder_display(node *curr) {
   if (curr != NULL) {
-    postorder_BT(curr->llink);
-    postorder_BT(curr->rlink);
+    postorder_display(curr->llink);
+    postorder_display(curr->rlink);
     printf("%d\t", curr->data);
   }
 }
 
-/*
+/**
  * performs preorder traversal
  * param[in] curr node pointer to the topmost node of the tree
  */
-void preorder_BT(node *curr) {
+void preorder_display(node *curr) {
   if (curr != NULL) {
     printf("%d\t", curr->data);
-    preorder_BT(curr->llink);
-    preorder_BT(curr->rlink);
+    preorder_display(curr->llink);
+    preorder_display(curr->rlink);
   }
 }
 
-/*
+/**
  * deletion of a node from the tree
  * if the node isn't present in the tree, it takes no action.
  * param[in,out] root pointer to node pointer to the topmost node of the tree
  * param[in] ele value to be deleted from the tree
  */
-void delete_BT(node **root, int ele) {
+void delete_bt(node **root, int ele) {
   node *temp;
   node *prev;
   if (*root == NULL)
@@ -192,10 +192,10 @@ void delete_BT(node **root, int ele) {
   }
 }
 
-/*
+/**
  * main function
  */
-void main() {
+int main() {
   printf("BINARY THREADED TREE: \n");
   node *root = NULL;
   int choice, n;
@@ -213,24 +213,24 @@ void main() {
     case 1:
       printf("%s\n", "Enter a no:");
       scanf("%d", &n);
-      insert_BT(&root, n);
+      insert_bt(&root, n);
       break;
     case 2:
       inorder_display(root);
       printf("\n");
       break;
     case 3:
-      preorder_BT(root);
+      preorder_display(root);
       printf("\n");
       break;
     case 4:
-      postorder_BT(root);
+      postorder_display(root);
       printf("\n");
       break;
     case 5:
       printf("%s\n", "Enter a no:");
       scanf("%d", &n);
-      delete_BT(&root, n);
+      delete_bt(&root, n);
       break;
     case 6:
       printf("%s\n", "Enter a no:");
@@ -239,4 +239,5 @@ void main() {
       break;
     }
   } while (choice != 0);
+  return 0;
 }
