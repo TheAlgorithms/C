@@ -84,17 +84,16 @@ void exact_solution(const double *x, double *y)
  */
 void semi_implicit_euler_step(double dx, double *x, double *y, double *dy)
 {
-    problem(x, y, dy);
-    double tmp_x = (*x) + 0.5 * dx;
-    double tmp_y[order];
     int o;
-    for (o = 0; o < order; o++)
-        tmp_y[o] = y[o] + 0.5 * dx * dy[o];
 
-    problem(&tmp_x, tmp_y, dy);
+    problem(x, y, dy);  // update dy once
+    y[0] += dx * dy[0]; // update y0
 
-    for (o = 0; o < order; o++)
-        y[o] += dx * dy[o];
+    problem(x, y, dy); // update dy once more
+
+    for (o = 1; o < order; o++)
+        y[o] += dx * dy[o]; // update remaining using new dy
+    *x += dx;
 }
 
 /**
