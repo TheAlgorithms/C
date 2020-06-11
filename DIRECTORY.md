@@ -38,6 +38,7 @@
     * [Create Node](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/recursive_traversals.c)
     * [Redblacktree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/redBlackTree.c)
+    * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
     * [Test Program](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/test_program.c)
