@@ -1,7 +1,7 @@
 /**
  * \file
  * \brief Recoding the original atoi function in stdlib.h 
- * \author [Krishna Vedala](https://github.com/kvedala)
+ * \author [Mohammed YMIK](https://github.com/medymik)
  *
  * The function convert a string passed to an integer 
  */
@@ -16,12 +16,6 @@
  */
 int c_atoi(const char *str)
 {
-    /**
-    * i is a counter
-    * sign hold the sign (negative or positive)
-    * value hold the current value by default set to 0
-    * prev hold the previous value for managing the overflow
-    */
     int     i;
     int     sign;
     long    value;
