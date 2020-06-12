@@ -1,7 +1,7 @@
 /**
  * \file
  * \brief Recoding the original atoi function in stdlib.h 
- * \author [Krishna Vedala](https://github.com/kvedala)
+ * \author [Medymik](https://github.com/medymik)
  *
  * The function convert a string passed to an integer 
  */
