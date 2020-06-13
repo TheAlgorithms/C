@@ -203,6 +203,7 @@
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/machine_learning/adaline_learning.c)
+  * [Kohonen Som Image](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/machine_learning/kohonen_som_image.c)
   * [Kohonen Som Trace](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/machine_learning/kohonen_som_trace.c)
 
 ## Misc
