@@ -19,6 +19,9 @@
 #include <omp.h>
 #endif
 
+#define max(a, b) (a > b ? a : b) // shorthand for maximum value
+#define min(a, b) (a < b ? a : b) // shorthand for minimum value
+
 /**
  * Helper function to generate a random number in a given interval.
  * \n Steps:
@@ -132,8 +135,8 @@ void update_weights(double const *x, double *const *W, double *D, int num_out,
     get_min_1d(D, num_out, &d_min, &d_min_idx);
 
     // step 3a: get the neighborhood range
-    int from_node = 0 > (d_min_idx - R) ? 0 : d_min_idx - R;
-    int to_node = num_out < (d_min_idx + R + 1) ? num_out : d_min_idx + R + 1;
+    int from_node = max(0, d_min_idx - R);
+    int to_node = min(num_out, d_min_idx + R + 1);
 
     // step 3b: update the weights of nodes in the
     // neighborhood
@@ -240,10 +243,14 @@ void test1()
     int j, N = 500;
     int features = 2;
     int num_out = 50;
+
+    // 2D space, hence size = number of rows * 2
     double **X = (double **)malloc(N * sizeof(double *));
+
+    // number of clusters nodes * 2
     double **W = (double **)malloc(num_out * sizeof(double *));
-    for (int i = 0; i < (num_out > N ? num_out : N);
-         i++) // loop till max(N, num_out)
+
+    for (int i = 0; i < max(num_out, N); i++) // loop till max(N, num_out)
     {
         if (i < N) // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
@@ -266,7 +273,7 @@ void test1()
     kohonen_som_tracer(X, W, N, features, num_out, 0.1); // train the SOM
     save_nd_data("w12.csv", W, num_out, features); // save the resultant weights
 
-    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    for (int i = 0; i < max(num_out, N); i++)
     {
         if (i < N)
             free(X[i]);
@@ -335,7 +342,7 @@ void test2()
     int num_out = 20;
     double **X = (double **)malloc(N * sizeof(double *));
     double **W = (double **)malloc(num_out * sizeof(double *));
-    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    for (int i = 0; i < max(num_out, N); i++)
     {
         if (i < N) // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
@@ -359,7 +366,7 @@ void test2()
     kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
     save_nd_data("w22.csv", W, num_out, features); // save the resultant weights
 
-    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    for (int i = 0; i < max(num_out, N); i++)
     {
         if (i < N)
             free(X[i]);
@@ -438,7 +445,7 @@ void test3()
     int num_out = 20;
     double **X = (double **)malloc(N * sizeof(double *));
     double **W = (double **)malloc(num_out * sizeof(double *));
-    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    for (int i = 0; i < max(num_out, N); i++)
     {
         if (i < N) // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
@@ -462,7 +469,7 @@ void test3()
     kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
     save_nd_data("w32.csv", W, num_out, features); // save the resultant weights
 
-    for (int i = 0; i < (num_out > N ? num_out : N); i++)
+    for (int i = 0; i < max(num_out, N); i++)
     {
         if (i < N)
             free(X[i]);
