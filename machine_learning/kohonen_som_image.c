@@ -141,11 +141,11 @@ int save_u_matrix(const char *fname, struct array_3d *W)
             int to_x = min(W->dim1, i + R + 1);
             int from_y = max(0, j - R);
             int to_y = min(W->dim2, j + R + 1);
-
+            int l;
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ : distance)
 #endif
-            for (int l = from_x; l < to_x; l++)
+            for (l = from_x; l < to_x; l++)
             {
                 for (int m = from_y; m < to_y; m++)
                 {
@@ -391,7 +391,10 @@ void test1()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W = {.dim1 = num_out, .dim2 = num_out, .dim3 = features};
+    struct array_3d W;
+    W.dim1 = num_out;
+    W.dim2 = num_out;
+    W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
                               sizeof(double)); // assign rows
 
@@ -499,7 +502,10 @@ void test2()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W = {.dim1 = num_out, .dim2 = num_out, .dim3 = features};
+    struct array_3d W;
+    W.dim1 = num_out;
+    W.dim2 = num_out;
+    W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
                               sizeof(double)); // assign rows
 
@@ -608,7 +614,10 @@ void test3()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W = {.dim1 = num_out, .dim2 = num_out, .dim3 = features};
+    struct array_3d W;
+    W.dim1 = num_out;
+    W.dim2 = num_out;
+    W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
                               sizeof(double)); // assign rows
 
