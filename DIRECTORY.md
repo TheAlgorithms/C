@@ -29,6 +29,7 @@
     * [Create Node](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/binary_trees/recursive_traversals.c)
     * [Redblacktree](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/binary_trees/redblacktree.c)
+    * [Threaded Binary Trees](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/dictionary/dict.c)
     * [Dict](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/data_structures/dictionary/dict.h)
