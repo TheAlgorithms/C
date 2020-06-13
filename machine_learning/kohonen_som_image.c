@@ -15,7 +15,7 @@
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
  * />
  */
-#define _USE_MATH_DEFINES // required for MS Visual C
+#define _USE_MATH_DEFINES /**< required for MS Visual C */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,14 +24,16 @@
 #include <omp.h>
 #endif
 
-#define max(a, b) (a > b ? a : b) // shorthand for maximum value
-#define min(a, b) (a < b ? a : b) // shorthand for minimum value
+#define max(a, b) (a > b ? a : b) /**< shorthand for maximum value */
+#define min(a, b) (a < b ? a : b) /**< shorthand for minimum value */
 
 /** to store info regarding 3D arrays */
 struct array_3d
 {
-    int dim1, dim2, dim3; /**< lengths of each dimension */
-    double *data;         /**< pointer to data */
+    int dim1;     /**< lengths of first dimension */
+    int dim2;     /**< lengths of second dimension */
+    int dim3;     /**< lengths of thirddimension */
+    double *data; /**< pointer to data */
 };
 
 /** Function that returns the pointer to (x, y, z) ^th location in the
@@ -145,9 +147,9 @@ int save_u_matrix(const char *fname, struct array_3d *W)
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ : distance)
 #endif
-            for (l = from_x; l < to_x; l++)
+            for (l = from_x; l < to_x; l++) // scan neighborhoor in x
             {
-                for (int m = from_y; m < to_y; m++)
+                for (int m = from_y; m < to_y; m++) // scan neighborhood in y
                 {
                     double d = 0.f;
                     for (k = 0; k < W->dim3; k++) // for each feature
@@ -179,7 +181,8 @@ int save_u_matrix(const char *fname, struct array_3d *W)
  * \param[in] X matrix to search
  * \param[in] N number of points in the vector
  * \param[out] val minimum value found
- * \param[out] idx index where minimum value was found
+ * \param[out] idx_x x-index where minimum value was found
+ * \param[out] idx_y y-index where minimum value was found
  */
 void get_min_2d(double **X, int N, double *val, int *x_idx, int *y_idx)
 {
@@ -296,8 +299,8 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
 
     double dmin = 1.f;
     // Loop alpha from 1 to slpha_min
-    for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-9;
-         alpha -= 0.005, iter++)
+    for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-10;
+         alpha -= 0.001, iter++)
     {
         dmin = 0.f;
         // Loop for each sample pattern in the data set
@@ -309,7 +312,7 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
         }
 
         // every 20th iteration, reduce the neighborhood range
-        if (iter % 20 == 0 && R > 0)
+        if (iter % 50 == 0 && R > 1)
             R--;
 
         dmin /= num_samples;
