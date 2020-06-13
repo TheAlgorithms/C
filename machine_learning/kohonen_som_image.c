@@ -1,9 +1,8 @@
 /**
  * \file
+ * \author [Krishna Vedala](https://github.com/kvedala)
  * \brief [Kohonen self organizing
  * map](https://en.wikipedia.org/wiki/Self-organizing_map) (topological map)
- *
- * \author [Krishna Vedala](https://github.com/kvedala)
  *
  * This example implements a powerful unsupervised learning algorithm called as
  * a self organizing map. The algorithm creates a connected network of weights
@@ -14,6 +13,9 @@
  * <img alt="Trained topological maps for the test cases in the program"
  * src="https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
  * />
+ * \warning MSVC 2019 compiler generates code that does not execute as expected.
+ * However, MinGW, Clang for GCC and Clang for MSVC compilers on windows perform
+ * as expected. Any insights and suggestions should be directed to the author.
  */
 #define _USE_MATH_DEFINES /**< required for MS Visual C */
 #include <math.h>
@@ -24,8 +26,12 @@
 #include <omp.h>
 #endif
 
+#ifndef max
 #define max(a, b) (a > b ? a : b) /**< shorthand for maximum value */
+#endif
+#ifndef min
 #define min(a, b) (a < b ? a : b) /**< shorthand for minimum value */
+#endif
 
 /** to store info regarding 3D arrays */
 struct array_3d
@@ -111,11 +117,12 @@ int save_2d_data(const char *fname, double **X, int num_points,
 }
 
 /**
- * Create the distance matrix or U-matrix from the trained weights and save to
- * disk.
+ * Create the distance matrix or
+ * [U-matrix](https://en.wikipedia.org/wiki/U-matrix) from the trained weights
+ * and save to disk.
  *
- * \param[in] fname filename to save in (gets overwriten without confirmation)
- * \param[in] W model matrix to save
+ * \param [in] fname filename to save in (gets overwriten without confirmation)
+ * \param [in] W model matrix to save
  * \returns 0 if all ok
  * \returns -1 if file creation failed
  */
@@ -164,7 +171,7 @@ int save_u_matrix(const char *fname, struct array_3d *W)
                 }
             }
 
-            distance /= R * R;             // mean disntance from neighbors
+            distance /= R * R;             // mean distance from neighbors
             fprintf(fp, "%.4g", distance); // print the mean separation
             if (j < W->dim2 - 1)           // if not the last column
                 fputc(',', fp);            // suffix comma
@@ -259,16 +266,20 @@ double update_weights(const double *X, struct array_3d *W, double **D,
     {
         for (y = from_y; y < to_y; y++)
         {
+            /* you can enable the following normalization if needed.
+               personally, I found it detrimental to convergence */
+            // const double s2pi = sqrt(2.f * M_PI);
+            // double normalize = 1.f / (alpha * s2pi);
+
+            /* apply scaling inversely proportional to distance from the
+               current node */
+            double d2 =
+                (d_min_x - x) * (d_min_x - x) + (d_min_y - y) * (d_min_y - y);
+            double scale_factor = exp(-d2 / (2.f * alpha * alpha));
+
             for (k = 0; k < num_features; k++)
             {
-                // apply scaling inversely proportional to distance from the
-                // current node
-                double d2 = (d_min_x - x) * (d_min_x - x) +
-                            (d_min_y - y) * (d_min_y - y);
-                double scale_factor = exp(-d2 * 0.5 / (alpha * alpha));
-
                 double *w = data_3d(W, x, y, k);
-
                 // update weights of nodes in the neighborhood
                 w[0] += alpha * scale_factor * (X[k] - w[0]);
             }
@@ -299,25 +310,27 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
 
     double dmin = 1.f;
     // Loop alpha from 1 to slpha_min
-    for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-10;
+    for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-3;
          alpha -= 0.001, iter++)
     {
         dmin = 0.f;
         // Loop for each sample pattern in the data set
         for (int sample = 0; sample < num_samples; sample++)
         {
-            const double *x = X[sample];
             // update weights for the current input pattern sample
-            dmin = update_weights(x, W, D, num_out, num_features, alpha, R);
+            dmin += update_weights(X[sample], W, D, num_out, num_features,
+                                   alpha, R);
         }
 
         // every 20th iteration, reduce the neighborhood range
-        if (iter % 50 == 0 && R > 1)
+        if (iter % 100 == 0 && R > 1)
             R--;
 
         dmin /= num_samples;
-        printf("alpha: %.4g\t R: %d\td_min: %.4g\n", alpha, R, dmin);
+        printf("iter: %5d\t alpha: %.4g\t R: %d\td_min: %.4g\r", iter, alpha, R,
+               dmin);
     }
+    putchar('\n');
 
     for (int i = 0; i < num_out; i++)
         free(D[i]);
@@ -697,7 +710,6 @@ int main(int argc, char **argv)
     printf("Test 3 completed in %.4g sec\n",
            get_clock_diff(start_clk, end_clk));
 
-    printf("(Note: Calculated times include: creating test sets, training "
-           "model and writing files to disk.)\n\n");
+    printf("(Note: Calculated times include: writing files to disk.)\n\n");
     return 0;
 }
