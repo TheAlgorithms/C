@@ -28,10 +28,12 @@
 #endif
 
 #ifndef max
-#define max(a, b) (a > b ? a : b) /**< shorthand for maximum value */
+#define max(a, b) (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value   \
+                                             */
 #endif
 #ifndef min
-#define min(a, b) (a < b ? a : b) /**< shorthand for minimum value */
+#define min(a, b) (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value   \
+                                             */
 #endif
 
 /** to store info regarding 3D arrays */

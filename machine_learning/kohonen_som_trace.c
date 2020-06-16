@@ -9,8 +9,9 @@
  * The algorithm creates a connected network of weights that closely
  * follows the given data points. This this creates a chain of nodes that
  * resembles the given input shape.
+ * \see kohonen_som_topology.c
  */
-#define _USE_MATH_DEFINES // required for MS Visual C
+#define _USE_MATH_DEFINES /**< required for MS Visual C */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,8 +20,14 @@
 #include <omp.h>
 #endif
 
-#define max(a, b) (a > b ? a : b) // shorthand for maximum value
-#define min(a, b) (a < b ? a : b) // shorthand for minimum value
+#ifndef max
+#define max(a, b) (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value   \
+                                             */
+#endif
+#ifndef min
+#define min(a, b) (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value   \
+                                             */
+#endif
 
 /**
  * Helper function to generate a random number in a given interval.
