@@ -16,6 +16,7 @@
  * \warning MSVC 2019 compiler generates code that does not execute as expected.
  * However, MinGW, Clang for GCC and Clang for MSVC compilers on windows perform
  * as expected. Any insights and suggestions should be directed to the author.
+ * \see kohonen_som_trace.c
  */
 #define _USE_MATH_DEFINES /**< required for MS Visual C */
 #include <math.h>
@@ -27,10 +28,14 @@
 #endif
 
 #ifndef max
-#define max(a, b) (a > b ? a : b) /**< shorthand for maximum value */
+#define max(a, b)                                                              \
+    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value                 \
+                               */
 #endif
 #ifndef min
-#define min(a, b) (a < b ? a : b) /**< shorthand for minimum value */
+#define min(a, b)                                                              \
+    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value                 \
+                               */
 #endif
 
 /** to store info regarding 3D arrays */
@@ -219,6 +224,7 @@ void get_min_2d(double **X, int N, double *val, int *x_idx, int *y_idx)
  * \param[in] num_features number of features per input sample
  * \param[in] alpha learning rate \f$0<\alpha\le1\f$
  * \param[in] R neighborhood range
+ * \returns minimum distance of sample and trained weights
  */
 double update_weights(const double *X, struct array_3d *W, double **D,
                       int num_out, int num_features, double alpha, int R)
@@ -308,7 +314,8 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
     for (int i = 0; i < num_out; i++)
         D[i] = (double *)malloc(num_out * sizeof(double));
 
-    double dmin = 1.f;
+    double dmin = 1.f; // average minimum distance of all samples
+
     // Loop alpha from 1 to slpha_min
     for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-3;
          alpha -= 0.001, iter++)
@@ -383,19 +390,8 @@ void test_2d_classes(double *const *data, int N)
  * The following [CSV](https://en.wikipedia.org/wiki/Comma-separated_values)
  * files are created to validate the execution:
  * * `test1.csv`: random test samples points with a circular pattern
- * * `w11.csv`: initial random map
- * * `w12.csv`: trained SOM map
- *
- * The outputs can be readily plotted in [gnuplot](https:://gnuplot.info) using
- * the following snippet
- * ```gnuplot
- * set datafile separator ','
- * plot "test1.csv" title "original", \
- *      "w11.csv" title "w1", \
- *      "w12.csv" title "w2"
- * ```
- * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test1.svg)
+ * * `w11.csv`: initial random U-matrix
+ * * `w12.csv`: trained SOM U-matrix
  */
 void test1()
 {
@@ -493,20 +489,9 @@ void test_3d_classes1(double *const *data, int N)
  * 3D space and trains an SOM that finds the topological pattern. The following
  * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
  * to validate the execution:
- * * `test2.csv`: random test samples points with a lamniscate pattern
- * * `w21.csv`: initial random map
- * * `w22.csv`: trained SOM map
- *
- * The outputs can be readily plotted in [gnuplot](https:://gnuplot.info) using
- * the following snippet
- * ```gnuplot
- * set datafile separator ','
- * plot "test2.csv" title "original", \
- *      "w21.csv" title "w1", \
- *      "w22.csv" title "w2"
- * ```
- * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test2.svg)
+ * * `test2.csv`: random test samples points
+ * * `w21.csv`: initial random U-matrix
+ * * `w22.csv`: trained SOM U-matrix
  */
 void test2()
 {
@@ -607,20 +592,9 @@ void test_3d_classes2(double *const *data, int N)
  * 3D space and trains an SOM that finds the topological pattern. The following
  * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
  * to validate the execution:
- * * `test3.csv`: random test samples points with a circular pattern
- * * `w31.csv`: initial random map
- * * `w32.csv`: trained SOM map
- *
- * The outputs can be readily plotted in [gnuplot](https:://gnuplot.info) using
- * the following snippet
- * ```gnuplot
- * set datafile separator ','
- * plot "test3.csv" title "original", \
- *      "w31.csv" title "w1", \
- *      "w32.csv" title "w2"
- * ```
- * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test3.svg)
+ * * `test3.csv`: random test samples points
+ * * `w31.csv`: initial random U-matrix
+ * * `w32.csv`: trained SOM U-matrix
  */
 void test3()
 {
