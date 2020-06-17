@@ -28,12 +28,14 @@
 #endif
 
 #ifndef max
-#define max(a, b) (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value   \
-                                             */
+#define max(a, b)                                                              \
+    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value                 \
+                               */
 #endif
 #ifndef min
-#define min(a, b) (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value   \
-                                             */
+#define min(a, b)                                                              \
+    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value                 \
+                               */
 #endif
 
 /** to store info regarding 3D arrays */
@@ -388,8 +390,8 @@ void test_2d_classes(double *const *data, int N)
  * The following [CSV](https://en.wikipedia.org/wiki/Comma-separated_values)
  * files are created to validate the execution:
  * * `test1.csv`: random test samples points with a circular pattern
- * * `w11.csv`: initial random map
- * * `w12.csv`: trained SOM map
+ * * `w11.csv`: initial random U-matrix
+ * * `w12.csv`: trained SOM U-matrix
  */
 void test1()
 {
@@ -487,9 +489,9 @@ void test_3d_classes1(double *const *data, int N)
  * 3D space and trains an SOM that finds the topological pattern. The following
  * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
  * to validate the execution:
- * * `test2.csv`: random test samples points with a lamniscate pattern
- * * `w21.csv`: initial random map
- * * `w22.csv`: trained SOM map
+ * * `test2.csv`: random test samples points
+ * * `w21.csv`: initial random U-matrix
+ * * `w22.csv`: trained SOM U-matrix
  */
 void test2()
 {
@@ -590,9 +592,9 @@ void test_3d_classes2(double *const *data, int N)
  * 3D space and trains an SOM that finds the topological pattern. The following
  * [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files are created
  * to validate the execution:
- * * `test3.csv`: random test samples points with a circular pattern
- * * `w31.csv`: initial random map
- * * `w32.csv`: trained SOM map
+ * * `test3.csv`: random test samples points
+ * * `w31.csv`: initial random U-matrix
+ * * `w32.csv`: trained SOM U-matrix
  */
 void test3()
 {
