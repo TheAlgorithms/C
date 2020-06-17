@@ -7,16 +7,17 @@
   * [Udp Server](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/client_server/udp_server.c)
 
 ## Conversions
-  * [Binary To Decimal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/binary_to_decimal.c)
-  * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/binary_to_hexadecimal.c)
-  * [Binary To Octal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/binary_to_octal.c)
-  * [Decimal To Binary](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/decimal_to_binary.c)
-  * [Decimal To Hexa](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/decimal_to_hexa.c)
-  * [Decimal To Octal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/decimal_to_octal.c)
-  * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/decimal_to_octal_recursion.c)
-  * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/hexadecimal_to_octal.c)
-  * [Octal To Decimal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/octal_to_decimal.c)
-  * [To Decimal](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/conversions/to_decimal.c)
+  * [Binary To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_decimal.c)
+  * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
+  * [Binary To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_octal.c)
+  * [C Atoi Str To Integer](https://github.com/TheAlgorithms/C/blob/master/conversions/c_atoi_str_to_integer.c)
+  * [Decimal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary.c)
+  * [Decimal To Hexa](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_hexa.c)
+  * [Decimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal.c)
+  * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal_recursion.c)
+  * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
+  * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
+  * [To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/to_decimal.c)
 
 ## Data Structures
   * Array
