@@ -1,11 +1,11 @@
 /**
  * \file
- * \brief Recoding the original atoi function in stdlib.h 
+ * \brief Recoding the original atoi function in stdlib.h
  * \author [Mohammed YMIK](https://github.com/medymik)W
- * The function convert a string passed to an integer 
+ * The function convert a string passed to an integer
  */
-#include <stdio.h>
 #include <assert.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -15,10 +15,10 @@
  */
 int c_atoi(const char *str)
 {
-    int     i;
-    int     sign;
-    long    value;
-    long    prev;
+    int i;
+    int sign;
+    long value;
+    long prev;
 
     i = 0;
     sign = 1;
@@ -45,7 +45,7 @@ int c_atoi(const char *str)
             return (0);
         i++;
     }
-    return (value);	
+    return (value);
 }
 
 /**
@@ -63,12 +63,11 @@ int test_c_atoi()
     printf("<<<< TEST DONE >>>>\n");
 }
 
-
 /**
  * the main function take one argument of type char*
  * example : ./program 123
  */
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     if (argc == 2)
     {
