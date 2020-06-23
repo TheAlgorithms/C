@@ -6,6 +6,9 @@ the requirements below.
 Contributors guide: https://github.com/TheAlgorithms/C-Plus-Plus/CONTRIBUTING.md
 -->
 
+#### References
+<!-- Add any reference to previous pull-request or issue -->
+
 #### Checklist
 <!-- Remove items that do not apply. For completed items, change [ ] to [x]. -->
 
