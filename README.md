@@ -75,6 +75,7 @@ All the code can be executed and tested online: [![using Google Colab Notebook](
 	- QuickSort
 	- SelectionSort
 	- ShakerSort
+	- TimSort
 	- HeapSort
 	- StoogeSort
 
