@@ -49,7 +49,7 @@ jobs:
           done
           git commit -am "formatting source-code for $GITHUB_SHA" ||  true
         env:
-          line1: "{ BasedOnStyle: LLVM, UseTab: Never,"
+          line1: "{ BasedOnStyle: Google, UseTab: Never,"
           line2: "IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman,"
           line3: "AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false,"
           line4: "ColumnLimit: 80, AccessModifierOffset: -4 }"
