@@ -10,7 +10,7 @@
  * Month is identified by an integer -\n
  * > 0 = Jan and 11 = December\n
  * For February, adjust for leap year outside the function.
- **/
+ */
 char get_month_days(short month)
 {
     if (month == 1) /* February has 28 days. Adjust leap year in the loop */
@@ -37,7 +37,7 @@ char get_month_days(short month)
 /**
  * return 1 if input year is a leap year
  * otherwise, return 0
- **/
+ */
 char is_leap_year(short year)
 {
     if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
@@ -79,10 +79,10 @@ int main(int argc, char **argv)
     const short start_year = 1901;
     const short end_year = 2000;
 
-    /**
+    /*
      * Let us identify days i.e., Sunday thru Saturday with integers - 0 thru 6
-     *respectively Jan 1 1901 was a Tuesday
-     **/
+     * respectively Jan 1 1901 was a Tuesday
+     */
     char start_day = 2;
 
     for (int year = start_year; year <= end_year; year++)
@@ -90,9 +90,10 @@ int main(int argc, char **argv)
         char is_leap = is_leap_year(year);
         for (char month = 0; month < 12; month++)
         {
-            /**
+            /*
              * These two for-loops count the start of day for the next month.
-             * Hence, we have to skip the last December count */
+             * Hence, we have to skip the last December count
+             */
             if (year == end_year && month == 11)
                 continue;
 
@@ -109,11 +110,11 @@ int main(int argc, char **argv)
             }
 #endif
 
-            /** Main Algorithm:
+            /* Main Algorithm:
              * every week has 7 days hence, the start of next day would be
-             *modulo 7 add to this, the current start date and ensure the result
-             *is still modulo 7!
-             **/
+             * modulo 7 add to this, the current start date and ensure the
+             * result is still modulo 7!
+             */
             start_day = ((days % 7) + start_day) % 7;
 
             /* If start-day is a Sunday, increment counter */

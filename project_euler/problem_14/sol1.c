@@ -23,7 +23,7 @@
 /**
  * Computes the length of collatz sequence for a given
  * starting number
- **/
+ */
 long long collatz(long long start_num)
 {
     long long length = 1;

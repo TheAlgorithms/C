@@ -17,7 +17,7 @@ unsigned long MAX_N = 28123; /**< upper limit of numbers to check */
  * -1 if N is deficient
  *  1 if N is abundant
  *  0 if N is perfect
- **/
+ */
 char get_perfect_number(unsigned long N)
 {
     unsigned long sum = 1;
@@ -43,7 +43,7 @@ char get_perfect_number(unsigned long N)
 
 /**
  * Is the given number an abundant number (1) or not (0)
- **/
+ */
 unsigned long is_abundant(unsigned long N)
 {
     return get_perfect_number(N) == 1 ? 1 : 0;
@@ -51,7 +51,7 @@ unsigned long is_abundant(unsigned long N)
 
 /**
  * Find the next abundant number after N and not including N
- **/
+ */
 unsigned long get_next_abundant(unsigned long N)
 {
     unsigned long i;
@@ -65,13 +65,13 @@ unsigned long get_next_abundant(unsigned long N)
  * of two abundant numbers.
  * \returns 1 - if yes
  * \returns 0 - if not
- **/
+ */
 char is_sum_of_abundant(unsigned long N)
 {
-    /** optimized logic:
+    /* optimized logic:
      * i + j = N   where both i and j should be abundant
      * hence we can simply check for j = N - i as we loop through i
-     **/
+     */
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
          i = get_next_abundant(i))
         if (is_abundant(N - i))

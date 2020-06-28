@@ -8,8 +8,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
-
 /** Helper function to print array values */
 void show_data(int *arr, long len)
 {
@@ -29,7 +27,7 @@ inline void swap(int *a, int *b)
 
 /**
  * Optimized algorithm - takes half the time as other
- **/
+ */
 void shell_sort(int *array, long LEN)
 {
     const int gaps[] = {701, 301, 132, 57, 23, 10, 4, 1};

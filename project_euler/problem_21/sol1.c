@@ -9,7 +9,7 @@
 
 /**
  * function to return the sum of proper divisors of N
- **/
+ */
 unsigned long sum_of_divisors(unsigned int N)
 {
     unsigned long sum = 1 + N; /* 1 and itself are always a divisor */
@@ -40,12 +40,12 @@ int main(int argc, char **argv)
     if (argc == 2)
         MAX_N = atoi(argv[1]);
 
-    /**<
+    /*
      * We use an array of flags to check if a number at the index was:
      * not-processed = 0
      * is amicable = 1
      * not amicable = -1
-     **/
+     */
     char *flags = (char *)calloc(MAX_N, sizeof(char));
 
     clock_t start_time = clock();

@@ -15,7 +15,7 @@
 /**
  * Function to add arbitraty length decimal integers stored in an array.\n
  * a + b = c = new b
- **/
+ */
 unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
                          int N)
 {

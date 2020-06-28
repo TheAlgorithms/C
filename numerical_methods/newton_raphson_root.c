@@ -4,7 +4,7 @@
  * Newton-Raphson interpolation algorithm.
  *
  * \author [Krishna Vedala](https://github.com/kvedala)
- **/
+ */
 
 #include <complex.h> /* requires minimum of C99 */
 #include <limits.h>

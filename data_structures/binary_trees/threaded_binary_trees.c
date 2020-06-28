@@ -22,7 +22,7 @@
 
 /**
  * Node, the basic data structure of the tree
- **/
+ */
 typedef struct Node
 {
     int data;           /**< stores the number */
@@ -34,7 +34,7 @@ typedef struct Node
  * creates a new node
  * param[in] data value to be inserted
  * \returns a pointer to the new node
- **/
+ */
 node *create_node(int data)
 {
     node *ptr = (node *)malloc(sizeof(node));

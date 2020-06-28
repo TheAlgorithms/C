@@ -3,7 +3,7 @@
  * \brief [Problem 20](https://projecteuler.net/problem=20) solution
  * \author [Krishna Vedala](https://github.com/kvedala)
  *
- * Implementation uses a custom `big_int` structure that can store arbitrarilty
+ * Implementation uses a custom `big_int` structure that can store arbitrarily
  * large integer numbers.
  */
 #include <stdio.h>
@@ -13,12 +13,12 @@
 /**
  * store arbitratily large integer values
  * as a linked list of digits.
- **/
+ */
 typedef struct _big_int
 {
-    char value;                  /** tens place (single digit) */
-    struct _big_int *next_digit; /** hundreds place */
-    struct _big_int *prev_digit; /** units place */
+    char value;                  /**< tens place (single digit) */
+    struct _big_int *next_digit; /**< hundreds place */
+    struct _big_int *prev_digit; /**< units place */
 } big_int;
 
 #ifdef DEBUG
@@ -33,7 +33,7 @@ void print_digit(const big_int *my_int)
 /**
  * Function that allocates memory to add another
  * digit at the MSB
- **/
+ */
 big_int *add_digit(big_int *digit, char value)
 {
     if (digit == NULL)
@@ -72,7 +72,7 @@ big_int *add_digit(big_int *digit, char value)
 /**
  * Function to remove digits preceeding the
  * current digit.
- **/
+ */
 char remove_digits(big_int *digit, int N)
 {
     if (digit == NULL)
@@ -133,10 +133,10 @@ int main(int argc, char **argv)
             ptr->value = tmp;
 
             if (i == N)
-                /**
+                /*
                  * sum digits on the last iteration
                  * this avoid having another loop over all digits
-                 **/
+                 */
                 sum_digits += tmp;
 
             if (ptr->next_digit)
@@ -158,9 +158,9 @@ int main(int argc, char **argv)
     printf("%d! = ", N);
 #endif
 
-    /** Notice that in the loop above, we make sure that at the end of the loop,
+    /* Notice that in the loop above, we make sure that at the end of the loop,
      * ptr is pointing to the last digit. Thus we can avoid using another loop.
-     **/
+     */
     // ptr = &my_int;
     // /* move ptr to the MSB digit */
     // while (ptr->next_digit)
