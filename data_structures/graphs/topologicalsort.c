@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_SIZE 40 // Assume 40 nodes at max in graph
+#define MAX_SIZE 40  // Assume 40 nodes at max in graph
 #define INT_MIN 0
 // A vertex of the graph
 struct node
@@ -15,8 +15,8 @@ struct Graph
     int numVertices;
     int *visited;
     struct node *
-        *adjLists; // we need int** to store a two dimensional array. Similary,
-                   // we need struct node** to store an array of Linked lists
+        *adjLists;  // we need int** to store a two dimensional array. Similary,
+                    // we need struct node** to store an array of Linked lists
 };
 // Structure to create a stack, necessary for topological sorting
 struct Stack
@@ -97,8 +97,7 @@ void topologicalSort(struct Graph *graph)
             topologicalSortHelper(i, graph, stack);
         }
     }
-    while (stack->top != -1)
-        printf("%d ", pop(stack));
+    while (stack->top != -1) printf("%d ", pop(stack));
 }
 // Allocate memory for a node
 struct node *createNode(int v)
@@ -159,7 +158,7 @@ struct Stack *createStack()
 void push(struct Stack *stack, int element)
 {
     stack->arr[++stack->top] =
-        element; // Increment then add, as we start from -1
+        element;  // Increment then add, as we start from -1
 }
 // Removes element from stack, or returns INT_MIN if stack empty
 int pop(struct Stack *stack)

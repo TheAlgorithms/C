@@ -40,8 +40,7 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
 
     printf("Array: ");
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
+    for (int i = 0; i < n; i++) printf("%d ", arr[i]);
     printf("\nEnter the number to be searched: ");
     scanf("%d", &x); /* Element to be searched */
 

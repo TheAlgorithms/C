@@ -14,8 +14,9 @@ int main()
     printf("Input a number, this is the bigger bound of the lerp:\n");
     scanf("%f", &finish);
 
-    printf("Input a number, this is in how many steps you want to divide the "
-           "lerp:\n");
+    printf(
+        "Input a number, this is in how many steps you want to divide the "
+        "lerp:\n");
     scanf("%f", &steps);
 
     for (int i = 0; i < steps + 1; i++)

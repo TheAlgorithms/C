@@ -44,17 +44,14 @@ void mergesort(int x[], int n)
                 else
                     temp[k++] = x[j++];
 
-            while (i <= ub1)
-                temp[k++] = x[i++];
+            while (i <= ub1) temp[k++] = x[i++];
 
-            while (j <= ub2)
-                temp[k++] = x[j++];
+            while (j <= ub2) temp[k++] = x[j++];
 
             lb1 = ub2 + 1;
         }
 
-        for (i = 0; i <= ub2; i++)
-            x[i] = temp[i];
+        for (i = 0; i <= ub2; i++) x[i] = temp[i];
 
         size = size * 2;
 
@@ -66,26 +63,23 @@ void mergesort(int x[], int n)
 void show(int x[], int n)
 {
     int i;
-    for (i = 0; i < n; i++)
-        printf("%d ", x[i]);
+    for (i = 0; i < n; i++) printf("%d ", x[i]);
     printf("\n\n");
 }
 
-int main() // main function
+int main()  // main function
 {
     int i, n, x[20];
 
     printf("Enter the number of elements: ");
     scanf("%d", &n);
     printf("Enter the elements:\n");
-    for (i = 0; i < n; i++)
-        scanf("%d", &x[i]);
+    for (i = 0; i < n; i++) scanf("%d", &x[i]);
 
     mergesort(x, n);
 
     printf("Sorted array is as shown:\n");
-    for (i = 0; i < n; i++)
-        printf("%d ", x[i]);
+    for (i = 0; i < n; i++) printf("%d ", x[i]);
     return 0;
 }
 

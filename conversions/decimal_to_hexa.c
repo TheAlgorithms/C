@@ -4,7 +4,6 @@ void decimal2Hexadecimal(long num);
 
 int main()
 {
-
     long decimalnum;
 
     printf("Enter decimal number: ");
@@ -19,7 +18,6 @@ int main()
  * number****************/
 void decimal2Hexadecimal(long num)
 {
-
     long decimalnum = num;
     long quotient, remainder;
     int i, j = 0;
@@ -29,7 +27,6 @@ void decimal2Hexadecimal(long num)
 
     while (quotient != 0)
     {
-
         remainder = quotient % 16;
         if (remainder < 10)
             hexadecimalnum[j++] = 48 + remainder;

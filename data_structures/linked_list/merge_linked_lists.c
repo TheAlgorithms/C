@@ -105,7 +105,7 @@ int main()
     merge();
 
     printf("\nMerged Linked List: ");
-    printlist(head1); // list one has been modified
+    printlist(head1);  // list one has been modified
 
     return 0;
 }

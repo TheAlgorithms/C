@@ -4,7 +4,8 @@
 
 #define ELEMENT_NR 20000
 #define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
-const char *notation = "Shell Sort Big O Notation:\
+const char *notation =
+    "Shell Sort Big O Notation:\
 						\n--> Best Case: O(n log(n)) \
 						\n--> Average Case: depends on gap sequence \
 						\n--> Worst Case: O(n)";
@@ -13,8 +14,7 @@ void show_data(int arr[], int len)
 {
     int i;
 
-    for (i = 0; i < len; i++)
-        printf("%3d ", arr[i]);
+    for (i = 0; i < len; i++) printf("%3d ", arr[i]);
     printf("\n");
 }
 
@@ -47,8 +47,7 @@ int main(int argc, char *argv[])
     double time_spent;
 
     srand(time(NULL));
-    for (i = 0; i < ELEMENT_NR; i++)
-        array[i] = rand() % range + 1;
+    for (i = 0; i < ELEMENT_NR; i++) array[i] = rand() % range + 1;
 
     size = ARRAY_LEN(array);
 

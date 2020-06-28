@@ -4,7 +4,6 @@ void decimal2Octal(long decimalnum);
 
 int main()
 {
-
     long decimalnum;
 
     printf("Enter the decimal number: ");
@@ -30,9 +29,7 @@ void decimal2Octal(long decimalnum)
         quotient = quotient / 8;
     }
 
-    for (j = i - 1; j > 0; j--)
-
-        printf("%d", octalNumber[j]);
+    for (j = i - 1; j > 0; j--) printf("%d", octalNumber[j]);
 
     printf("\n");
 }

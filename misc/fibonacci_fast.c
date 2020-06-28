@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 {
     unsigned long number, result;
 
-    setlocale(LC_NUMERIC, ""); // format the printf output
+    setlocale(LC_NUMERIC, "");  // format the printf output
 
     // Asks for the number/position of term in Fibonnacci sequence
     if (argc == 2)

@@ -14,8 +14,8 @@ struct Graph
     int numVertices;
     int *visited;
     struct node *
-        *adjLists; // we need int** to store a two dimensional array. Similary,
-                   // we need struct node** to store an array of Linked lists
+        *adjLists;  // we need int** to store a two dimensional array. Similary,
+                    // we need struct node** to store an array of Linked lists
 };
 struct Graph *createGraph(int);
 void addEdge(struct Graph *, int, int);

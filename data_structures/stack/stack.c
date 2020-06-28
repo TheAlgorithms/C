@@ -33,7 +33,6 @@ int offset = -1;
 
 void initStack()
 {
-
     array = malloc(sizeof(void *) * max);
     assert(array); /* tests whether pointer is assigned to memory. */
 }
@@ -46,7 +45,7 @@ void grow()
 {
     max += 10; /* increases the capacity */
 
-    int i; // for the loop
+    int i;  // for the loop
     void **tmp = malloc(sizeof(void *) * max);
 
     /* copies the elements from the origin array in the new one. */
@@ -62,12 +61,10 @@ void grow()
 /* push: pushs the argument onto the stack */
 void push(void *object)
 {
-
     assert(object); /* tests whether pointer isn't null */
 
     if (counter < max)
     {
-
         offset++; /* increases the element-pointer */
 
         /*
@@ -81,7 +78,6 @@ void push(void *object)
     }
     else /* stack is full */
     {
-
         grow();       /* lets grow stack */
         push(object); /* recursive call */
     }
@@ -92,7 +88,6 @@ void push(void *object)
 */
 void *pop()
 {
-
     void *top = *(array + offset);
 
     /* check pointers */

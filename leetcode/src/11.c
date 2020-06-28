@@ -4,7 +4,6 @@ int min(int a, int b) { return ((a < b) ? a : b); }
 // Two pointer approach to find maximum container area
 int maxArea(int *height, int heightSize)
 {
-
     // Start with maximum container width
     int start = 0;
     int end = heightSize - 1;

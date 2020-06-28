@@ -45,7 +45,6 @@ void destroy(Range);
 */
 int main()
 {
-
     int n = 0; /* for user input */
 
     printf("\t\tPrim factoriziation\n\n");

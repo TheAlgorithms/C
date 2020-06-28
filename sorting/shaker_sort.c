@@ -31,11 +31,9 @@ int main()
     scanf("%d", &n);
     int *arr = (int *)malloc(n * sizeof(int));
     int i;
-    for (i = 0; i < n; i++)
-        scanf("%d ", &arr[i]);
+    for (i = 0; i < n; i++) scanf("%d ", &arr[i]);
     shakersort(arr, n);
-    for (i = 0; i < n; i++)
-        printf("%d ", arr[i]);
+    for (i = 0; i < n; i++) printf("%d ", arr[i]);
     free(arr);
     return 0;
 }

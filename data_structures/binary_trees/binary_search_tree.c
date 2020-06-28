@@ -12,7 +12,6 @@
 // Node, the basic data structure in the tree
 typedef struct node
 {
-
     // left child
     struct node *left;
 
@@ -27,7 +26,6 @@ typedef struct node
 // pointer
 node *newNode(int data)
 {
-
     // creates a slug
     node *tmp = (node *)malloc(sizeof(node));
 
@@ -110,7 +108,6 @@ node *delete (node *root, int data)
         // subtree and switch with the root's
         else
         {
-
             // finds the biggest node in the left branch.
             node *tmp = getMax(root->left);
 
@@ -190,7 +187,6 @@ void inOrder(node *root)
 
 void main()
 {
-
     // this reference don't change.
     // only the tree changes.
     node *root = NULL;
@@ -200,9 +196,10 @@ void main()
     // event-loop.
     while (opt != 0)
     {
-        printf("\n\n[1] Insert Node\n[2] Delete Node\n[3] Find a Node\n[4] Get "
-               "current Height\n[5] Print Tree in Crescent Order\n[0] Quit\n");
-        scanf("%d", &opt); // reads the choice of the user
+        printf(
+            "\n\n[1] Insert Node\n[2] Delete Node\n[3] Find a Node\n[4] Get "
+            "current Height\n[5] Print Tree in Crescent Order\n[0] Quit\n");
+        scanf("%d", &opt);  // reads the choice of the user
 
         // processes the choice
         switch (opt)

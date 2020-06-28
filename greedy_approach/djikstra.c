@@ -63,7 +63,6 @@ void dijkstra(int s)
 
 int main(int argc, char const *argv[])
 {
-
     printf("Enter the number of vertices: ");
     scanf(" %d", &V);
     printf("Enter the adj matrix: ");

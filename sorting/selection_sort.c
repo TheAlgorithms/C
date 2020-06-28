@@ -5,7 +5,6 @@
 /*Displays the array, passed to this method*/
 void display(int *arr, int n)
 {
-
     int i;
     for (i = 0; i < n; i++)
     {
@@ -18,7 +17,6 @@ void display(int *arr, int n)
 /*Swap function to swap two values*/
 void swap(int *first, int *second)
 {
-
     int temp = *first;
     *first = *second;
     *second = temp;
@@ -30,7 +28,6 @@ void swap(int *first, int *second)
  */
 void selectionSort(int *arr, int size)
 {
-
     for (int i = 0; i < size; i++)
     {
         int min_index = i;
@@ -49,7 +46,7 @@ int main(int argc, const char *argv[])
 {
     int n;
     printf("Enter size of array:\n");
-    scanf("%d", &n); // E.g. 8
+    scanf("%d", &n);  // E.g. 8
 
     printf("Enter the elements of the array\n");
     int i;
@@ -60,12 +57,12 @@ int main(int argc, const char *argv[])
     }
 
     printf("Original array: ");
-    display(arr, n); // Original array : 10 11 9 8 4 7 3 8
+    display(arr, n);  // Original array : 10 11 9 8 4 7 3 8
 
     selectionSort(arr, n);
 
     printf("Sorted array: ");
-    display(arr, n); // Sorted array : 3 4 7 8 8 9 10 11
+    display(arr, n);  // Sorted array : 3 4 7 8 8 9 10 11
 
     free(arr);
     return 0;

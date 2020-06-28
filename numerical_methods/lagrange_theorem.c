@@ -32,7 +32,6 @@ int main()
         p = 1.0;
         for (j = 0; j < n; j++)
         {
-
             if (i != j)
             {
                 p = p * (a - x[j]) / (x[i] - x[j]);

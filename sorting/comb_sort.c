@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SHRINK 1.3 // suggested shrink factor value
+#define SHRINK 1.3  // suggested shrink factor value
 
 void sort(int *numbers, int size)
 {
     int gap = size;
-    while (gap > 1) // gap = 1 means that the array is sorted
+    while (gap > 1)  // gap = 1 means that the array is sorted
     {
         gap = gap / SHRINK;
         int i = 0;
         while ((i + gap) < size)
-        { // similiar to the Shell Sort
+        {  // similiar to the Shell Sort
             if (numbers[i] > numbers[i + gap])
             {
                 int tmp = numbers[i];
@@ -25,8 +25,7 @@ void sort(int *numbers, int size)
 void display(int *array, int n)
 {
     int i;
-    for (i = 0; i < n; ++i)
-        printf("%d ", array[i]);
+    for (i = 0; i < n; ++i) printf("%d ", array[i]);
     printf("\n");
 }
 
@@ -36,8 +35,7 @@ int main()
     int *numbers = malloc(size * sizeof(int));
     printf("Insert %d unsorted numbers: \n", size);
     int i;
-    for (i = 0; i < size; ++i)
-        scanf("%d", &numbers[i]);
+    for (i = 0; i < size; ++i) scanf("%d", &numbers[i]);
     printf("Initial array: ");
     display(numbers, size);
     sort(numbers, size);

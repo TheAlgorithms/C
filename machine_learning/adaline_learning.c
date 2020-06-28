@@ -30,18 +30,17 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_ITER 500 // INT_MAX  ///< Maximum number of iterations to learn
+#define MAX_ITER 500  // INT_MAX  ///< Maximum number of iterations to learn
 
 /** structure to hold adaline model parameters */
 struct adaline
 {
-
-    double eta;      ///< learning rate of the algorithm
-    double *weights; ///< weights of the neural network
-    int num_weights; ///< number of weights of the neural network
+    double eta;       ///< learning rate of the algorithm
+    double *weights;  ///< weights of the neural network
+    int num_weights;  ///< number of weights of the neural network
 };
 
-#define ACCURACY 1e-5 ///< convergence accuracy \f$=1\times10^{-5}\f$
+#define ACCURACY 1e-5  ///< convergence accuracy \f$=1\times10^{-5}\f$
 
 /**
  * Default constructor
@@ -70,8 +69,7 @@ struct adaline new_adaline(const int num_features, const double eta)
     }
 
     // initialize with random weights in the range [-50, 49]
-    for (int i = 0; i < num_weights; i++)
-        ada.weights[i] = 1.f;
+    for (int i = 0; i < num_weights; i++) ada.weights[i] = 1.f;
     // ada.weights[i] = (double)(rand() % 100) - 50);
 
     return ada;
@@ -100,7 +98,7 @@ int activation(double x) { return x > 0 ? 1 : -1; }
  */
 char *get_weights_str(struct adaline *ada)
 {
-    static char out[100]; // static so the value is persistent
+    static char out[100];  // static so the value is persistent
 
     sprintf(out, "<");
     for (int i = 0; i < ada->num_weights; i++)
@@ -124,15 +122,14 @@ char *get_weights_str(struct adaline *ada)
  */
 int predict(struct adaline *ada, const double *x, double *out)
 {
-    double y = ada->weights[ada->num_weights - 1]; // assign bias value
+    double y = ada->weights[ada->num_weights - 1];  // assign bias value
 
-    for (int i = 0; i < ada->num_weights - 1; i++)
-        y += x[i] * ada->weights[i];
+    for (int i = 0; i < ada->num_weights - 1; i++) y += x[i] * ada->weights[i];
 
-    if (out) // if out variable is not NULL
+    if (out)  // if out variable is not NULL
         *out = y;
 
-    return activation(y); // quantizer: apply ADALINE threshold function
+    return activation(y);  // quantizer: apply ADALINE threshold function
 }
 
 /**
@@ -148,7 +145,7 @@ double fit_sample(struct adaline *ada, const double *x, const int y)
 {
     /* output of the model with current weights */
     int p = predict(ada, x, NULL);
-    int prediction_error = y - p; // error in estimation
+    int prediction_error = y - p;  // error in estimation
     double correction_factor = ada->eta * prediction_error;
 
     /* update each weight, the last weight is the bias term */
@@ -156,7 +153,7 @@ double fit_sample(struct adaline *ada, const double *x, const int y)
     {
         ada->weights[i] += correction_factor * x[i];
     }
-    ada->weights[ada->num_weights - 1] += correction_factor; // update bias
+    ada->weights[ada->num_weights - 1] += correction_factor;  // update bias
 
     return correction_factor;
 }
@@ -207,16 +204,16 @@ void fit(struct adaline *ada, double **X, const int *y, const int N)
  */
 void test1(double eta)
 {
-    struct adaline ada = new_adaline(2, eta); // 2 features
+    struct adaline ada = new_adaline(2, eta);  // 2 features
 
-    const int N = 10; // number of sample points
+    const int N = 10;  // number of sample points
     const double saved_X[10][2] = {{0, 1},  {1, -2},   {2, 3},   {3, -1},
                                    {4, 1},  {6, -5},   {-7, -3}, {-8, 5},
                                    {-9, 2}, {-10, -15}};
 
     double **X = (double **)malloc(N * sizeof(double *));
     const int Y[10] = {1,  -1, 1, -1, -1,
-                       -1, 1,  1, 1,  -1}; // corresponding y-values
+                       -1, 1,  1, 1,  -1};  // corresponding y-values
     for (int i = 0; i < N; i++)
     {
         X[i] = (double *)saved_X[i];
@@ -255,19 +252,18 @@ void test1(double eta)
  */
 void test2(double eta)
 {
-    struct adaline ada = new_adaline(2, eta); // 2 features
+    struct adaline ada = new_adaline(2, eta);  // 2 features
 
-    const int N = 50; // number of sample points
+    const int N = 50;  // number of sample points
 
     double **X = (double **)malloc(N * sizeof(double *));
-    int *Y = (int *)malloc(N * sizeof(int)); // corresponding y-values
-    for (int i = 0; i < N; i++)
-        X[i] = (double *)malloc(2 * sizeof(double));
+    int *Y = (int *)malloc(N * sizeof(int));  // corresponding y-values
+    for (int i = 0; i < N; i++) X[i] = (double *)malloc(2 * sizeof(double));
 
     // generate sample points in the interval
     // [-range2/100 , (range2-1)/100]
-    int range = 500;         // sample points full-range
-    int range2 = range >> 1; // sample points half-range
+    int range = 500;          // sample points full-range
+    int range2 = range >> 1;  // sample points half-range
     for (int i = 0; i < N; i++)
     {
         double x0 = ((rand() % range) - range2) / 100.f;
@@ -300,8 +296,7 @@ void test2(double eta)
         printf(" ...passed\n");
     }
 
-    for (int i = 0; i < N; i++)
-        free(X[i]);
+    for (int i = 0; i < N; i++) free(X[i]);
     free(X);
     free(Y);
     delete_adaline(&ada);
@@ -320,19 +315,18 @@ void test2(double eta)
  */
 void test3(double eta)
 {
-    struct adaline ada = new_adaline(6, eta); // 2 features
+    struct adaline ada = new_adaline(6, eta);  // 2 features
 
-    const int N = 50; // number of sample points
+    const int N = 50;  // number of sample points
 
     double **X = (double **)malloc(N * sizeof(double *));
-    int *Y = (int *)malloc(N * sizeof(int)); // corresponding y-values
-    for (int i = 0; i < N; i++)
-        X[i] = (double *)malloc(6 * sizeof(double));
+    int *Y = (int *)malloc(N * sizeof(int));  // corresponding y-values
+    for (int i = 0; i < N; i++) X[i] = (double *)malloc(6 * sizeof(double));
 
     // generate sample points in the interval
     // [-range2/100 , (range2-1)/100]
-    int range = 200;         // sample points full-range
-    int range2 = range >> 1; // sample points half-range
+    int range = 200;          // sample points full-range
+    int range2 = range >> 1;  // sample points half-range
     for (int i = 0; i < N; i++)
     {
         double x0 = ((rand() % range) - range2) / 100.f;
@@ -374,8 +368,7 @@ void test3(double eta)
         printf(" ...passed\n");
     }
 
-    for (int i = 0; i < N; i++)
-        free(X[i]);
+    for (int i = 0; i < N; i++) free(X[i]);
     free(X);
     free(Y);
     delete_adaline(&ada);
@@ -384,10 +377,10 @@ void test3(double eta)
 /** Main function */
 int main(int argc, char **argv)
 {
-    srand(time(NULL)); // initialize random number generator
+    srand(time(NULL));  // initialize random number generator
 
-    double eta = 0.1; // default value of eta
-    if (argc == 2)    // read eta value from commandline argument if present
+    double eta = 0.1;  // default value of eta
+    if (argc == 2)     // read eta value from commandline argument if present
         eta = strtof(argv[1], NULL);
 
     test1(eta);

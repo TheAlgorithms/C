@@ -84,8 +84,7 @@ char *abbreviate(const char *phrase)
         strcat(acr, words[i]);
     }
 
-    for (i = 0; i < counter; i++)
-        free(words[i]);
+    for (i = 0; i < counter; i++) free(words[i]);
     free(words);
 
     return acr;

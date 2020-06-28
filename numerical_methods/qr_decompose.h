@@ -25,8 +25,7 @@ void print_matrix(double **A, /**< matrix to print */
 {
     for (int row = 0; row < M; row++)
     {
-        for (int col = 0; col < N; col++)
-            printf("% 9.3g\t", A[row][col]);
+        for (int col = 0; col < N; col++) printf("% 9.3g\t", A[row][col]);
         putchar('\n');
     }
     putchar('\n');
@@ -49,8 +48,7 @@ double vector_dot(double *a, double *b, int L)
 // parallelize on threads
 #pragma omp parallel for reduction(+ : mag)
 #endif
-    for (i = 0; i < L; i++)
-        mag += a[i] * b[i];
+    for (i = 0; i < L; i++) mag += a[i] * b[i];
 
     return mag;
 }
@@ -88,8 +86,7 @@ double *vector_proj(double *a, double *b, double *out, int L)
 // parallelize on threads
 #pragma omp for
 #endif
-    for (i = 0; i < L; i++)
-        out[i] = scalar * b[i];
+    for (i = 0; i < L; i++) out[i] = scalar * b[i];
 
     return out;
 }
@@ -112,8 +109,7 @@ double *vector_sub(double *a,   /**< minuend */
 // parallelize on threads
 #pragma omp for
 #endif
-    for (i = 0; i < L; i++)
-        out[i] = a[i] - b[i];
+    for (i = 0; i < L; i++) out[i] = a[i] - b[i];
 
     return out;
 }
@@ -176,8 +172,7 @@ void qr_decompose(double **A, /**< input matrix to decompose */
         }
         for (j = 0; j < i; j++)
         {
-            for (int k = 0; k < M; k++)
-                col_vector2[k] = Q[k][j];
+            for (int k = 0; k < M; k++) col_vector2[k] = Q[k][j];
             vector_proj(col_vector, col_vector2, col_vector2, M);
             vector_sub(tmp_vector, col_vector2, tmp_vector, M);
         }
@@ -187,16 +182,13 @@ void qr_decompose(double **A, /**< input matrix to decompose */
 // parallelize on threads
 #pragma omp for
 #endif
-        for (j = 0; j < M; j++)
-            Q[j][i] = tmp_vector[j] / mag;
+        for (j = 0; j < M; j++) Q[j][i] = tmp_vector[j] / mag;
 
         /* compute upper triangular values of R */
-        for (int kk = 0; kk < M; kk++)
-            col_vector[kk] = Q[kk][i];
+        for (int kk = 0; kk < M; kk++) col_vector[kk] = Q[kk][i];
         for (int k = i; k < N; k++)
         {
-            for (int kk = 0; kk < M; kk++)
-                col_vector2[kk] = A[kk][k];
+            for (int kk = 0; kk < M; kk++) col_vector2[kk] = A[kk][k];
             R[i][k] = vector_dot(col_vector, col_vector2, M);
         }
     }
@@ -206,4 +198,4 @@ void qr_decompose(double **A, /**< input matrix to decompose */
     free(tmp_vector);
 }
 
-#endif // QR_DECOMPOSE_H
+#endif  // QR_DECOMPOSE_H

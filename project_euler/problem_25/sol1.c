@@ -60,11 +60,9 @@ int print_number(unsigned char *number, int N)
     int start_pos = N - 1;
 
     /* skip all initial zeros */
-    while (number[start_pos] == 0)
-        start_pos--;
+    while (number[start_pos] == 0) start_pos--;
 
-    for (int i = start_pos; i >= 0; i--)
-        putchar(number[i] + 0x30);
+    for (int i = start_pos; i >= 0; i--) putchar(number[i] + 0x30);
 
     return 0;
 }
@@ -73,8 +71,7 @@ int print_number(unsigned char *number, int N)
 unsigned int get_digits(unsigned char *number)
 {
     unsigned int digits = MAX_DIGITS;
-    while (number[digits] == 0)
-        digits--;
+    while (number[digits] == 0) digits--;
     return digits;
 }
 

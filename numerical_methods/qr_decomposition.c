@@ -6,11 +6,11 @@
  * \author [Krishna Vedala](https://github.com/kvedala)
  */
 
-#include "qr_decompose.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "qr_decompose.h"
 
 /**
  * main function
@@ -24,8 +24,9 @@ int main(void)
     scanf("%u %u", &ROWS, &COLUMNS);
     if (ROWS < COLUMNS)
     {
-        fprintf(stderr, "Number of rows must be greater than or equal to "
-                        "number of columns.\n");
+        fprintf(stderr,
+                "Number of rows must be greater than or equal to "
+                "number of columns.\n");
         return -1;
     }
 
@@ -36,8 +37,7 @@ int main(void)
         A[i] = (double *)malloc(COLUMNS * sizeof(double));
 
     for (int i = 0; i < ROWS; i++)
-        for (int j = 0; j < COLUMNS; j++)
-            scanf("%lf", &A[i][j]);
+        for (int j = 0; j < COLUMNS; j++) scanf("%lf", &A[i][j]);
 
     print_matrix(A, ROWS, COLUMNS);
 

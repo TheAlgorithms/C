@@ -4,9 +4,9 @@
 int fibMonaccianSearch(int arr[], int x, int n)
 {
     /* Initialize fibonacci numbers */
-    int fibMMm2 = 0;              // (m-2)'th Fibonacci No.
-    int fibMMm1 = 1;              // (m-1)'th Fibonacci No.
-    int fibM = fibMMm2 + fibMMm1; // m'th Fibonacci
+    int fibMMm2 = 0;               // (m-2)'th Fibonacci No.
+    int fibMMm1 = 1;               // (m-1)'th Fibonacci No.
+    int fibM = fibMMm2 + fibMMm1;  // m'th Fibonacci
 
     /* fibM is going to store the smallest Fibonacci
        Number greater than or equal to n */

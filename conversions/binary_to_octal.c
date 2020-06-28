@@ -26,7 +26,7 @@ int main(void)
     while (binary_num > 0)
     {
         if (binary_num >
-            111) // Checking if binary number is greater than three digits
+            111)  // Checking if binary number is greater than three digits
             td = three_digits(binary_num);
 
         else
@@ -45,7 +45,7 @@ int main(void)
             base *= 2;
         }
 
-        res += d * ord; // Calculating the octal value
+        res += d * ord;  // Calculating the octal value
         ord *= 10;
     }
 

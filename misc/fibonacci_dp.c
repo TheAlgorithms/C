@@ -17,7 +17,7 @@ int fib(int n)
     }
     // declaring array to store fibonacci numbers -- memoization
     int *f = (int *)malloc(
-        (n + 2) * sizeof(int)); //  one extra to handle edge case, n = 0
+        (n + 2) * sizeof(int));  //  one extra to handle edge case, n = 0
     int i;
 
     /* let 0th and 1st number of the series be 0 and 1*/

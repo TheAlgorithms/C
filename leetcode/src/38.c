@@ -1,6 +1,5 @@
 char *countAndSay(int n)
 {
-
     // Calculating the length of array
     double result = 1.0;
     for (int i = 0; i < n - 1; i++)

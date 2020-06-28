@@ -91,9 +91,9 @@ int myComp(const void *a, const void *b)
 void KruskalMST(struct Graph *graph)
 {
     int V = graph->V;
-    struct Edge result[V]; // Tnis will store the resultant MST
-    int e = 0;             // An index variable, used for result[]
-    int i = 0;             // An index variable, used for sorted edges
+    struct Edge result[V];  // Tnis will store the resultant MST
+    int e = 0;              // An index variable, used for result[]
+    int i = 0;              // An index variable, used for sorted edges
 
     // Step 1: Sort all the edges in non-decreasing
     // order of their weight. If we are not allowed to
@@ -152,8 +152,8 @@ int main()
         |	 \ |
         2--------3
             4	 */
-    int V = 4; // Number of vertices in graph
-    int E = 5; // Number of edges in graph
+    int V = 4;  // Number of vertices in graph
+    int E = 5;  // Number of edges in graph
     struct Graph *graph = createGraph(V, E);
 
     // add edge 0-1

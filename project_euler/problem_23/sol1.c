@@ -117,9 +117,10 @@ int main(int argc, char **argv)
     }
 
     printf("Time taken: %.4g s\n", total_duration);
-    printf("Sum of numbers that cannot be represented as sum of two abundant "
-           "numbers : %lu\n",
-           sum);
+    printf(
+        "Sum of numbers that cannot be represented as sum of two abundant "
+        "numbers : %lu\n",
+        sum);
 
     return 0;
 }

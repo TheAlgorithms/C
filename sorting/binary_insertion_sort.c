@@ -56,7 +56,7 @@ int main(int argc, const char *argv[])
 {
     int n;
     printf("Enter size of array:\n");
-    scanf("%d", &n); // E.g. 8
+    scanf("%d", &n);  // E.g. 8
 
     printf("Enter the elements of the array\n");
     int i;

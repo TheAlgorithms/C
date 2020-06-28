@@ -13,8 +13,7 @@ void rabin_karp_search(char *str, char *pattern, int d, int q)
     int hash_p = 0; /* hash value for pattern */
 
     /* h = pow(d, len_pat - 1) % q */
-    for (i = 0; i < len_pat - 1; i++)
-        h = d * h % q;
+    for (i = 0; i < len_pat - 1; i++) h = d * h % q;
     /* Calculating hashing of pattern and the 1st window of text */
     for (i = 0; i < len_pat; i++)
     {

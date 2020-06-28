@@ -7,9 +7,9 @@
 
 typedef struct GraphRep
 {
-    int **edges; // adjacency matrix
-    int nV;      // #vertices
-    int nE;      // #edges
+    int **edges;  // adjacency matrix
+    int nV;       // #vertices
+    int nE;       // #edges
 } GraphRep;
 
 Graph newGraph(int V)
@@ -43,7 +43,7 @@ void insertEdge(Graph g, Edge e)
     assert(g != NULL && validV(g, e.v) && validV(g, e.w));
 
     if (!g->edges[e.v][e.w])
-    { // edge e not in graph
+    {  // edge e not in graph
         g->edges[e.v][e.w] = 1;
         g->edges[e.w][e.v] = 1;
         g->nE++;
@@ -55,7 +55,7 @@ void removeEdge(Graph g, Edge e)
     assert(g != NULL && validV(g, e.v) && validV(g, e.w));
 
     if (g->edges[e.v][e.w])
-    { // edge e in graph
+    {  // edge e in graph
         g->edges[e.v][e.w] = 0;
         g->edges[e.w][e.v] = 0;
         g->nE--;
@@ -87,8 +87,7 @@ void freeGraph(Graph g)
     assert(g != NULL);
 
     int i;
-    for (i = 0; i < g->nV; i++)
-        free(g->edges[i]);
+    for (i = 0; i < g->nV; i++) free(g->edges[i]);
     free(g->edges);
     free(g);
 }

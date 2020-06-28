@@ -2,7 +2,6 @@
 
 int main()
 {
-
     int a[16500], T;
     long long int i, j;
 

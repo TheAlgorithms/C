@@ -55,25 +55,25 @@ uint64_t get_divisors(uint64_t N, uint64_t *D)
     // because after this, the pair of divisors will repeat themselves
     for (i = 1; i * i <= N + 1; i++)
     {
-        r = N % i; // get reminder
+        r = N % i;  // get reminder
 
         // reminder = 0 if 'i' is a divisor of 'N'
         if (r == 0)
         {
             q = N / i;
-            if (!is_in(i, D, num)) // if divisor was already stored
+            if (!is_in(i, D, num))  // if divisor was already stored
             {
                 D[num] = i;
                 num++;
             }
-            if (!is_in(q, D, num)) // if divisor was already stored
+            if (!is_in(q, D, num))  // if divisor was already stored
             {
                 D[num] = q;
                 num++;
             }
         }
 
-        if (num == MAX_L) // limit of array reached, allocate more space
+        if (num == MAX_L)  // limit of array reached, allocate more space
             D = (uint64_t *)realloc(D, MAX_L * sizeof(uint64_t) << 1);
     }
     return num;

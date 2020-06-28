@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_SIZE 40 // Assume 40 nodes at max in graph
+#define MAX_SIZE 40  // Assume 40 nodes at max in graph
 #define INT_MIN 0
 // A vertex of the graph
 struct node
@@ -15,8 +15,8 @@ struct Graph
     int numVertices;
     int *visited;
     struct node *
-        *adjLists; // we need int** to store a two dimensional array. Similary,
-                   // we need struct node** to store an array of Linked lists
+        *adjLists;  // we need int** to store a two dimensional array. Similary,
+                    // we need struct node** to store an array of Linked lists
 };
 // Structure to create a stack, necessary for topological sorting
 struct Stack
@@ -89,14 +89,14 @@ void fillOrder(int vertex, struct Graph *graph, struct Stack *stack)
 struct Graph *transpose(struct Graph *g)
 {
     struct Graph *graph =
-        createGraph(g->numVertices); // Number of vertices is same
+        createGraph(g->numVertices);  // Number of vertices is same
     int i = 0;
     for (i = 0; i < g->numVertices; i++)
     {
         struct node *temp = g->adjLists[i];
         while (temp != NULL)
         {
-            addEdge(graph, temp->vertex, i); // Reverse all edges
+            addEdge(graph, temp->vertex, i);  // Reverse all edges
             temp = temp->next;
         }
     }
@@ -211,7 +211,7 @@ struct Stack *createStack()
 void push(struct Stack *stack, int element)
 {
     stack->arr[++stack->top] =
-        element; // Increment then add, as we start from -1
+        element;  // Increment then add, as we start from -1
 }
 // Removes element from stack, or returns INT_MIN if stack empty
 int pop(struct Stack *stack)

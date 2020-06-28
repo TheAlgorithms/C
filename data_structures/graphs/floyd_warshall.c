@@ -18,8 +18,7 @@ void createGraph(struct Graph *G, int V)
     for (int i = 0; i < V; i++)
     {
         G->edges[i] = (int *)malloc(V * sizeof(int));
-        for (int j = 0; j < V; j++)
-            G->edges[i][j] = INT_MAX;
+        for (int j = 0; j < V; j++) G->edges[i][j] = INT_MAX;
         G->edges[i][i] = 0;
     }
 }
@@ -38,7 +37,6 @@ void print(int dist[], int V)
     {
         for (int j = 0; j < V; j++)
         {
-
             if (dist[i * V + j] != INT_MAX)
                 printf("%d\t", dist[i * V + j]);
             else
@@ -57,8 +55,7 @@ void FloydWarshall(struct Graph *graph)
 
     // Initialise distance array
     for (int i = 0; i < V; i++)
-        for (int j = 0; j < V; j++)
-            dist[i][j] = graph->edges[i][j];
+        for (int j = 0; j < V; j++) dist[i][j] = graph->edges[i][j];
 
     // Calculate distances
     for (int k = 0; k < V; k++)
@@ -79,8 +76,7 @@ void FloydWarshall(struct Graph *graph)
     // Convert 2d array to 1d array for print
     int dist1d[V * V];
     for (int i = 0; i < V; i++)
-        for (int j = 0; j < V; j++)
-            dist1d[i * V + j] = dist[i][j];
+        for (int j = 0; j < V; j++) dist1d[i * V + j] = dist[i][j];
 
     print(dist1d, V);
 }

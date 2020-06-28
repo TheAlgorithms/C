@@ -54,8 +54,7 @@ int main(int argc, char **argv)
     }
 
     printf("2^%d = ", N);
-    for (int i = MAX_NUM_DIGITS - 1; i >= 0; i--)
-        putchar(digits[i] + 0x30);
+    for (int i = MAX_NUM_DIGITS - 1; i >= 0; i--) putchar(digits[i] + 0x30);
     printf("\n\t Sum: %d\t Num. digits: %lu\n", sum, MAX_NUM_DIGITS);
 
     free(digits);

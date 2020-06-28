@@ -74,8 +74,7 @@ void BellmanFord(struct Graph *graph, int src)
 
     // Initialize distances array as INF for all except source
     // Intialize source as zero
-    for (int i = 0; i < V; i++)
-        dist[i] = INT_MAX;
+    for (int i = 0; i < V; i++) dist[i] = INT_MAX;
     dist[src] = 0;
 
     // Calculate shortest path distance from source to all edges
@@ -100,8 +99,9 @@ void BellmanFord(struct Graph *graph, int src)
 
         if (dist[u] != INT_MAX && dist[u] + w < dist[v])
         {
-            printf("Graph contains negative weight cycle. Hence, shortest "
-                   "distance not guaranteed.");
+            printf(
+                "Graph contains negative weight cycle. Hence, shortest "
+                "distance not guaranteed.");
             return;
         }
     }

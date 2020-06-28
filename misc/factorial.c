@@ -25,8 +25,7 @@ int main()
                 temp = temp / 10;
             }
         }
-        for (i = counter; i >= 0; i--)
-            printf("%d", a[i]);
+        for (i = counter; i >= 0; i--) printf("%d", a[i]);
     }
     return 0;
 }

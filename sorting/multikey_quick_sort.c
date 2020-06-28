@@ -18,11 +18,11 @@
 #define min(a, b) ((a) <= (b) ? (a) : (b))
 #endif
 
-#define swap(a, b)                                                             \
-    {                                                                          \
-        char *t = x[a];                                                        \
-        x[a] = x[b];                                                           \
-        x[b] = t;                                                              \
+#define swap(a, b)      \
+    {                   \
+        char *t = x[a]; \
+        x[a] = x[b];    \
+        x[b] = t;       \
     }
 #define i2c(i) x[i][depth]
 
@@ -98,11 +98,11 @@ void vecswap2(char **a, char **b, int n)
     }
 }
 
-#define swap2(a, b)                                                            \
-    {                                                                          \
-        t = *(a);                                                              \
-        *(a) = *(b);                                                           \
-        *(b) = t;                                                              \
+#define swap2(a, b)  \
+    {                \
+        t = *(a);    \
+        *(a) = *(b); \
+        *(b) = t;    \
     }
 #define ptr2char(i) (*(*(i) + depth))
 
@@ -146,7 +146,7 @@ void ssort2(char **a, int n, int depth)
     pm = a + (n / 2);
     pn = a + (n - 1);
     if (n > 30)
-    { // On big arrays, pseudomedian of 9
+    {  // On big arrays, pseudomedian of 9
         d = (n / 8);
         pl = med3(pl, pl + d, pl + 2 * d);
         pm = med3(pm - d, pm, pm + d);
@@ -294,8 +294,7 @@ void insert2(char *s)
 void cleanup2()
 {
     int i;
-    for (i = 0; i < freen; i++)
-        free(freearr[i]);
+    for (i = 0; i < freen; i++) free(freearr[i]);
 }
 
 // Search Algorithms
@@ -387,7 +386,6 @@ void nearsearch(Tptr p, char *s, int d)
 
 int main(int argc, char *argv[])
 {
-
     char *arr[NUMBER_OF_STRING] = {"apple", "cat", "boy"};
 
     ssort1main(arr, NUMBER_OF_STRING);

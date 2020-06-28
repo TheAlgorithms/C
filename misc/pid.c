@@ -62,8 +62,9 @@ int main()
     struct pid controller = {.lastError = 0, .integral = 0};
 
     // Take the controller gains from the user
-    printf("Please enter controller gains in format kP, kI, KD. For example, "
-           "\"1.2 2.1 3.2\"\n> ");
+    printf(
+        "Please enter controller gains in format kP, kI, KD. For example, "
+        "\"1.2 2.1 3.2\"\n> ");
     scanf("%f %f %f", &controller.kP, &controller.kI, &controller.kD);
     printf("Using kP: %f, kI: %f, kD: %f\n", controller.kP, controller.kI,
            controller.kD);

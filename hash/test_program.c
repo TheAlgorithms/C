@@ -3,8 +3,8 @@
     This file contains a simple test program for each hash-function.
 */
 
-#include "hash.h"
 #include <stdio.h>
+#include "hash.h"
 
 int main(void)
 {

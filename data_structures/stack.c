@@ -38,7 +38,6 @@ int isEmpty();
 
 int main(int argc, char const *argv[])
 {
-
     int x, y, z;
 
     create();
@@ -54,7 +53,7 @@ int main(int argc, char const *argv[])
     y = pop();
     // 3, 2. Count: 1. Empty: 0;
     printf("%d, %d.\t\tCount: %d.\tEmpty: %d.\n", x, y, size(), isEmpty());
-    pop(); // Empty the stack.
+    pop();  // Empty the stack.
 
     push(5);
     push(6);

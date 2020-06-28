@@ -8,12 +8,10 @@ int numJewelsInStones(char *j, char *s)
     memset(cnt, 0, sizeof(cnt));
 
     // lookup to know which character occurs in j
-    for (int i = 0; i < lenj; i++)
-        cnt[j[i]]++;
+    for (int i = 0; i < lenj; i++) cnt[j[i]]++;
 
     // count the characters in s
-    for (int i = 0; i < lens; i++)
-        sol += cnt[s[i]];
+    for (int i = 0; i < lens; i++) sol += cnt[s[i]];
 
     return sol;
 }

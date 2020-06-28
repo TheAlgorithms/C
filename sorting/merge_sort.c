@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int *a, int *b) // To swap the variables//
+void swap(int *a, int *b)  // To swap the variables//
 {
     int t;
     t = *a;
@@ -9,7 +9,7 @@ void swap(int *a, int *b) // To swap the variables//
     *b = t;
 }
 
-void merge(int a[], int l, int r, int n) // To merge //
+void merge(int a[], int l, int r, int n)  // To merge //
 {
     int *b = (int *)malloc(n * sizeof(int));
     int c = l;
@@ -47,8 +47,7 @@ void merge(int a[], int l, int r, int n) // To merge //
         };
     }
 
-    for (c = l; c < r - l + 1; c++)
-        a[c] = b[c];
+    for (c = l; c < r - l + 1; c++) a[c] = b[c];
 }
 
 void merge_sort(int *a, int n, int l, int r)
@@ -69,20 +68,18 @@ void merge_sort(int *a, int n, int l, int r)
     }
 }
 int main(void)
-{ // main function//
+{  // main function//
     int *a, n, i;
     scanf("%d", &n);
     a = (int *)malloc(n * sizeof(int));
     for (i = 0; i < n; i++)
     {
-
         scanf("%d", &a[i]);
     }
 
     merge_sort(a, n, 0, n - 1);
     for (i = 0; i < n; i++)
     {
-
         printf(" %d", a[i]);
     }
 

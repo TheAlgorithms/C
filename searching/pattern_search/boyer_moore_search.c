@@ -9,11 +9,9 @@ void computeArray(char *pattern, int size, int arr[NUM_OF_CHARS])
 {
     int i;
 
-    for (i = 0; i < NUM_OF_CHARS; i++)
-        arr[i] = -1;
+    for (i = 0; i < NUM_OF_CHARS; i++) arr[i] = -1;
     /* Fill the actual value of last occurrence of a character */
-    for (i = 0; i < size; i++)
-        arr[(int)pattern[i]] = i;
+    for (i = 0; i < size; i++) arr[(int)pattern[i]] = i;
 }
 /* Boyer Moore Search algorithm  */
 void boyer_moore_search(char *str, char *pattern)
@@ -27,8 +25,7 @@ void boyer_moore_search(char *str, char *pattern)
     while (shift <= (n - m))
     {
         int j = m - 1;
-        while (j >= 0 && pattern[j] == str[shift + j])
-            j--;
+        while (j >= 0 && pattern[j] == str[shift + j]) j--;
         if (j < 0)
         {
             printf("--Pattern is found at: %d\n", shift);

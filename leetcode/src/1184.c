@@ -1,7 +1,6 @@
 int distanceBetweenBusStops(int *distance, int distanceSize, int start,
                             int destination)
 {
-
     int sum1 = 0, sum2 = 0;
     if (start > destination)
     {

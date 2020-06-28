@@ -33,7 +33,6 @@ int isEmpty();
 
 int main(int argc, char const *argv[])
 {
-
     create();
     enque(5);
 

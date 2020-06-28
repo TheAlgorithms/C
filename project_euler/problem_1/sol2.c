@@ -19,7 +19,7 @@ int main()
     scanf("%d", &n);
 
     int terms = (n - 1) / 3;
-    sum += ((terms) * (6 + (terms - 1) * 3)) / 2; // sum of an A.P.
+    sum += ((terms) * (6 + (terms - 1) * 3)) / 2;  // sum of an A.P.
     terms = (n - 1) / 5;
     sum += ((terms) * (10 + (terms - 1) * 5)) / 2;
     terms = (n - 1) / 15;

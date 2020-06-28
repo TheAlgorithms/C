@@ -32,8 +32,7 @@ int lu_decomposition(double **A, double **L, double **U, int mat_size)
         {
             // Summation of L[i,j] * U[j,k]
             double lu_sum = 0.;
-            for (j = 0; j < row; j++)
-                lu_sum += L[row][j] * U[j][col];
+            for (j = 0; j < row; j++) lu_sum += L[row][j] * U[j][col];
 
             // Evaluate U[i,k]
             U[row][col] = A[row][col] - lu_sum;
@@ -53,8 +52,7 @@ int lu_decomposition(double **A, double **L, double **U, int mat_size)
 
             // Summation of L[i,j] * U[j,k]
             double lu_sum = 0.;
-            for (j = 0; j < row; j++)
-                lu_sum += L[col][j] * U[j][row];
+            for (j = 0; j < row; j++) lu_sum += L[col][j] * U[j][row];
 
             // Evaluate U[i,k]
             L[col][row] = (A[col][row] - lu_sum) / U[row][row];
@@ -80,19 +78,19 @@ void display(double **A, int N)
 /** Main function */
 int main(int argc, char **argv)
 {
-    int mat_size = 3; // default matrix size
+    int mat_size = 3;  // default matrix size
     const int range = 10;
     const int range2 = range >> 1;
 
     if (argc == 2)
         mat_size = atoi(argv[1]);
 
-    srand(time(NULL)); // random number initializer
+    srand(time(NULL));  // random number initializer
 
     /* Create a square matrix with random values */
     double **A = (double **)malloc(mat_size * sizeof(double *));
-    double **L = (double **)malloc(mat_size * sizeof(double *)); // output
-    double **U = (double **)malloc(mat_size * sizeof(double *)); // output
+    double **L = (double **)malloc(mat_size * sizeof(double *));  // output
+    double **U = (double **)malloc(mat_size * sizeof(double *));  // output
     for (int i = 0; i < mat_size; i++)
     {
         // calloc so that all valeus are '0' by default
