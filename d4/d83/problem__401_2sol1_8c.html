@@ -217,25 +217,25 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// because after this, the pair of divisors will repeat themselves</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (i = 1; i * i &lt;= <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> + 1; i++)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        r = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> % i; <span class="comment">// get reminder</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        r = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> % i;  <span class="comment">// get reminder</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// reminder = 0 if &#39;i&#39; is a divisor of &#39;N&#39;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (r == 0)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            q = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> / i;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a>(i, D, num)) <span class="comment">// if divisor was already stored</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a>(i, D, num))  <span class="comment">// if divisor was already stored</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                D[num] = i;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                num++;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a>(q, D, num)) <span class="comment">// if divisor was already stored</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a>(q, D, num))  <span class="comment">// if divisor was already stored</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                D[num] = q;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                num++;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (num == <a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#adf2a0717e3307419a9d7c52707f5631e">MAX_L</a>) <span class="comment">// limit of array reached, allocate more space</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (num == <a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#adf2a0717e3307419a9d7c52707f5631e">MAX_L</a>)  <span class="comment">// limit of array reached, allocate more space</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            D = (uint64_t *)realloc(D, <a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#adf2a0717e3307419a9d7c52707f5631e">MAX_L</a> * <span class="keyword">sizeof</span>(uint64_t) &lt;&lt; 1);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> num;</div>
@@ -450,14 +450,14 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a236548478af932f1115a71f601a68788"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788">sigma2</a></div><div class="ttdeci">uint64_t sigma2(uint64_t N)</div><div class="ttdef"><b>Definition:</b> sol1.c:87</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a7380e14d595d560007b02ce516b6b215"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215">get_divisors</a></div><div class="ttdeci">uint64_t get_divisors(uint64_t N, uint64_t *D)</div><div class="ttdef"><b>Definition:</b> sol1.c:43</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_adf2a0717e3307419a9d7c52707f5631e"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#adf2a0717e3307419a9d7c52707f5631e">MAX_L</a></div><div class="ttdeci">#define MAX_L</div><div class="ttdef"><b>Definition:</b> sol1.c:18</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:111</div></div>
+<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a4441a6d27134cf3aed05727800d99456"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a></div><div class="ttdeci">char is_in(uint64_t N, uint64_t *D, uint64_t L)</div><div class="ttdef"><b>Definition:</b> sol1.c:28</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_aaf964739be92adc2f500e7da11e3f6be"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be">sigma</a></div><div class="ttdeci">uint64_t sigma(uint64_t N)</div><div class="ttdef"><b>Definition:</b> sol1.c:108</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_b3d331eabd4234f247030c297aaf021c.html">project_euler</a></li><li class="navelem"><a class="el" href="../../dir_2f070f19f76dfadabbc24fe483d7e98d.html">problem_401</a></li><li class="navelem"><a class="el" href="../../d4/d83/problem__401_2sol1_8c.html">sol1.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

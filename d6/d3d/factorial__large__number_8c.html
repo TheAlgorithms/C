@@ -276,20 +276,19 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a> *result = <a class="code" href="../../d6/d3d/factorial__large__number_8c.html#ad8101f58545bd891ae8b6e11caadd7eb">new_number</a>();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    clock_t start_time = clock();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span> (i = 2; i &lt;= number; i++)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">/* Multiply every number from 2 thru N */</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../d6/d3d/factorial__large__number_8c.html#ad398ddbd594ca69a5e6dfc894925341e">multiply</a>(result, i);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">double</span> time_taken = (clock() - start_time) * (<span class="keywordtype">double</span>)1e3 / CLOCKS_PER_SEC;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// time_taken = (clock() - start_time) / (double) CLOCKS_PER_SEC;</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    printf(<span class="stringliteral">&quot;%d! = &quot;</span>, number);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span> (i = result-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0">num_digits</a>; i &gt; 0; i--)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        putchar(result-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a>[i - 1] + <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    printf(<span class="stringliteral">&quot;\nTime taken: %.4g ms\n&quot;</span>, time_taken);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="../../d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae">delete_number</a>(result);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span> (i = 2; i &lt;= number; i++) <span class="comment">/* Multiply every number from 2 thru N */</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d6/d3d/factorial__large__number_8c.html#ad398ddbd594ca69a5e6dfc894925341e">multiply</a>(result, i);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">double</span> time_taken = (clock() - start_time) * (<span class="keywordtype">double</span>)1e3 / CLOCKS_PER_SEC;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// time_taken = (clock() - start_time) / (double) CLOCKS_PER_SEC;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    printf(<span class="stringliteral">&quot;%d! = &quot;</span>, number);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (i = result-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0">num_digits</a>; i &gt; 0; i--)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        putchar(result-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a>[i - 1] + <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    printf(<span class="stringliteral">&quot;\nTime taken: %.4g ms\n&quot;</span>, time_taken);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae">delete_number</a>(result);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -396,7 +395,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a52f4d3d586a58b02f3a4ddf0a992157.html">misc</a></li><li class="navelem"><a class="el" href="../../d6/d3d/factorial__large__number_8c.html">factorial_large_number.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

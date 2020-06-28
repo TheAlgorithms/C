@@ -142,11 +142,11 @@ Functions</h2></td></tr>
 <p> The exact solution for the above problem is: </p><p class="formulaDsp">
 \begin{eqnarray*} u(x) &amp;=&amp; \cos(x)\\ v(x) &amp;=&amp; -\sin(x)\\ \end{eqnarray*}
 </p>
-<p> The computation results are stored to a text file <code>semi_implicit_euler.csv</code> and the exact soltuion results in <code>exact.csv</code> for comparison. <img src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_semi_implicit_euler.svg" alt="Implementation solution" style="pointer-events: none;" class="inline"/></p>
+<p> The computation results are stored to a text file <code>semi_implicit_euler.csv</code> and the exact soltuion results in <code>exact.csv</code> for comparison. <img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/ode_semi_implicit_euler.svg" alt="Implementation solution" style="pointer-events: none;" class="inline"/></p>
 <p>To implement <a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator">Van der Pol oscillator</a>, change the <a class="el" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first-order differential equations. Updates the system differenti...">problem</a> function to: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> mu = 2.0;</div>
 <div class="line">dy[0] = y[1];</div>
 <div class="line">dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];</div>
-</div><!-- fragment --><p><a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator"><img src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/van_der_pol_implicit_euler.svg" alt="Van der Pol Oscillator solution" style="pointer-events: none;" class="inline"/></a></p>
+</div><!-- fragment --><p><a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator"><img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/van_der_pol_implicit_euler.svg" alt="Van der Pol Oscillator solution" style="pointer-events: none;" class="inline"/></a></p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d4/d07/ode__forward__euler_8c.html" title="Solve a multivariable first order ordinary differential equation (ODEs) using forward Euler method">ode_forward_euler.c</a>, <a class="el" href="../../d1/dc2/ode__midpoint__euler_8c.html" title="Solve a multivariable first order ordinary differential equation (ODEs) using midpoint Euler method">ode_midpoint_euler.c</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9ceb646336224ee890a269d0b4600d09"></a>
@@ -265,7 +265,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">do</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        fprintf(fp, <span class="stringliteral">&quot;%.4g,%.4g,%.4g\n&quot;</span>, x, y[0], y[1]); <span class="comment">// write to file</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        fprintf(fp, <span class="stringliteral">&quot;%.4g,%.4g,%.4g\n&quot;</span>, x, y[0], y[1]);  <span class="comment">// write to file</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a">exact_solution</a>(&amp;x, y);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        x += step_size;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    } <span class="keywordflow">while</span> (x &lt;= X_MAX);</div>
@@ -329,9 +329,9 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> omega = 1.F;      <span class="comment">// some const for the problem</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    dy[0] = y[1];                  <span class="comment">// x dot</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    dy[1] = -omega * omega * y[0]; <span class="comment">// y dot</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> omega = 1.F;       <span class="comment">// some const for the problem</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    dy[0] = y[1];                   <span class="comment">// x dot</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    dy[1] = -omega * omega * y[0];  <span class="comment">// y dot</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
@@ -409,13 +409,13 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">/* start integration */</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    clock_t t1 = clock();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">double</span> x = x0;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">do</span> <span class="comment">// iterate for each step of independent variable</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">do</span>  <span class="comment">// iterate for each step of independent variable</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (save_to_file &amp;&amp; fp)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g,%.4g,%.4g\n&quot;</span>, x, y[0], y[1]); <span class="comment">// write to file</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb">semi_implicit_euler_step</a>(dx, &amp;x, y, dy); <span class="comment">// perform integration</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        x += dx;                                 <span class="comment">// update step</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    } <span class="keywordflow">while</span> (x &lt;= x_max); <span class="comment">// till upper limit of independent variable</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g,%.4g,%.4g\n&quot;</span>, x, y[0], y[1]);  <span class="comment">// write to file</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb">semi_implicit_euler_step</a>(dx, &amp;x, y, dy);  <span class="comment">// perform integration</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        x += dx;                                  <span class="comment">// update step</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    } <span class="keywordflow">while</span> (x &lt;= x_max);  <span class="comment">// till upper limit of independent variable</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">/* end of integration */</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    clock_t t2 = clock();</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
@@ -484,13 +484,13 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> o;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4">problem</a>(x, y, dy);  <span class="comment">// update dy once</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    y[0] += dx * dy[0]; <span class="comment">// update y0</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4">problem</a>(x, y, dy);   <span class="comment">// update dy once</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    y[0] += dx * dy[0];  <span class="comment">// update y0</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4">problem</a>(x, y, dy); <span class="comment">// update dy once more</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4">problem</a>(x, y, dy);  <span class="comment">// update dy once more</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (o = 1; o &lt; <a class="code" href="../../d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09">order</a>; o++)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        y[o] += dx * dy[o]; <span class="comment">// update remaining using new dy</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        y[o] += dx * dy[o];  <span class="comment">// update remaining using new dy</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    *x += dx;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
@@ -513,7 +513,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9c6faab82c22511b50177aa2e38e2780.html">numerical_methods</a></li><li class="navelem"><a class="el" href="../../d4/d99/ode__semi__implicit__euler_8c.html">ode_semi_implicit_euler.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

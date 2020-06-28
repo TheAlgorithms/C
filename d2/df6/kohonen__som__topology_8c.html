@@ -161,7 +161,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a href="https://en.wikipedia.org/wiki/Self-organizing_map">Kohonen self organizing map</a> (topological map) </p>
-<dl class="section author"><dt>Author</dt><dd><a href="https://github.com/kvedala">Krishna Vedala</a> This example implements a powerful unsupervised learning algorithm called as a self organizing map. The algorithm creates a connected network of weights that closely follows the given data points. This thus creates a topological map of the given data i.e., it maintains the relationship between varipus data points in a much higher dimesional space by creating an equivalent in a 2-dimensional space. <img src="https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg" alt="Trained topological maps for the test cases in the program" style="pointer-events: none;" class="inline"/> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd><a href="https://github.com/kvedala">Krishna Vedala</a> This example implements a powerful unsupervised learning algorithm called as a self organizing map. The algorithm creates a connected network of weights that closely follows the given data points. This thus creates a topological map of the given data i.e., it maintains the relationship between varipus data points in a much higher dimesional space by creating an equivalent in a 2-dimensional space. <img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg" alt="Trained topological maps for the test cases in the program" style="pointer-events: none;" class="inline"/> </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>MSVC 2019 compiler generates code that does not execute as expected. However, MinGW, Clang for GCC and Clang for MSVC compilers on windows perform as expected. Any insights and suggestions should be directed to the author. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d0/d46/kohonen__som__trace_8c.html" title="Kohonen self organizing map (data tracing)">kohonen_som_trace.c</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -373,7 +373,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>time difference in seconds </dd></dl>
-<div class="fragment"><div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;{</div>
+<div class="fragment"><div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;{</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -431,10 +431,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; j++) <span class="comment">// traverse each y-index</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; j++)  <span class="comment">// traverse each y-index</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> (X[i][j] &lt; val[0]) <span class="comment">// if a lower value is found</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            {                     <span class="comment">// save the value and its index</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> (X[i][j] &lt; val[0])  <span class="comment">// if a lower value is found</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            {                      <span class="comment">// save the value and its index</span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                x_idx[0] = i;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                y_idx[0] = j;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                val[0] = X[i][j];</div>
@@ -515,7 +515,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++)</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        D[i] = (<span class="keywordtype">double</span> *)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">double</span> dmin = 1.f; <span class="comment">// average minimum distance of all samples</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">double</span> dmin = 1.f;  <span class="comment">// average minimum distance of all samples</span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">// Loop alpha from 1 to slpha_min</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">double</span> alpha = 1.f; alpha &gt; alpha_min &amp;&amp; dmin &gt; 1e-3;</div>
@@ -540,12 +540,11 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++)</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        free(D[i]);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    free(D);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++) free(D[i]);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    free(D);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -581,9 +580,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                 : Calculated times include: writing files to disk.)\n\n<span class="stringliteral">&quot;);</span></div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="stringliteral">    return 0;</span></div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="stringliteral">}</span></div>
+<div class="fragment"><div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                 : Calculated times include: writing files to disk.)\n\n<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<span class="stringliteral">    return 0;</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="stringliteral">}</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -639,7 +638,7 @@ Here is the call graph for this function:</div>
 -1 if file creation failed </dd></dl>
 <div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    FILE *fp = fopen(fname, <span class="stringliteral">&quot;wt&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (!fp) <span class="comment">// error with fopen</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (!fp)  <span class="comment">// error with fopen</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">char</span> msg[120];</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        sprintf(msg, <span class="stringliteral">&quot;File error (%s): &quot;</span>, fname);</div>
@@ -647,16 +646,16 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_points; i++) <span class="comment">// for each point in the array</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_points; i++)  <span class="comment">// for each point in the array</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_features; j++) <span class="comment">// for each feature in the array</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_features; j++)  <span class="comment">// for each feature in the array</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g&quot;</span>, X[i][j]); <span class="comment">// print the feature value</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (j &lt; num_features - 1)     <span class="comment">// if not the last feature</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                fputc(<span class="charliteral">&#39;,&#39;</span>, fp);           <span class="comment">// suffix comma</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g&quot;</span>, X[i][j]);  <span class="comment">// print the feature value</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (j &lt; num_features - 1)      <span class="comment">// if not the last feature</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                fputc(<span class="charliteral">&#39;,&#39;</span>, fp);            <span class="comment">// suffix comma</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_points - 1) <span class="comment">// if not the last row</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            fputc(<span class="charliteral">&#39;\n&#39;</span>, fp);    <span class="comment">// start a new line</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_points - 1)  <span class="comment">// if not the last row</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            fputc(<span class="charliteral">&#39;\n&#39;</span>, fp);     <span class="comment">// start a new line</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    fclose(fp);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> 0;</div>
@@ -711,9 +710,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> R = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a>(W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#ad5d3ee546eea3c05dc8f0dc90ec194f4">dim1</a> &gt;&gt; 3, 2); <span class="comment">/* neighborhood range */</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#ad5d3ee546eea3c05dc8f0dc90ec194f4">dim1</a>; i++) <span class="comment">// for each x</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#ad5d3ee546eea3c05dc8f0dc90ec194f4">dim1</a>; i++)  <span class="comment">// for each x</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#aa431cc0a41fd379270dbd2b0e3ac1b45">dim2</a>; j++) <span class="comment">// for each y</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#aa431cc0a41fd379270dbd2b0e3ac1b45">dim2</a>; j++)  <span class="comment">// for each y</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordtype">double</span> distance = 0.f;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">int</span> k;</div>
@@ -726,12 +725,12 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#pragma omp parallel for reduction(+ : distance)</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">for</span> (l = from_x; l &lt; to_x; l++) <span class="comment">// scan neighborhoor in x</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">for</span> (l = from_x; l &lt; to_x; l++)  <span class="comment">// scan neighborhoor in x</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = from_y; m &lt; to_y; m++) <span class="comment">// scan neighborhood in y</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = from_y; m &lt; to_y; m++)  <span class="comment">// scan neighborhood in y</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    <span class="keywordtype">double</span> d = 0.f;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    <span class="keywordflow">for</span> (k = 0; k &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#ad823bd5424a0fc158da52a0497d8c10a">dim3</a>; k++) <span class="comment">// for each feature</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    <span class="keywordflow">for</span> (k = 0; k &lt; W-&gt;<a class="code" href="../../d0/dc8/structarray__3d.html#ad823bd5424a0fc158da52a0497d8c10a">dim3</a>; k++)  <span class="comment">// for each feature</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    {</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="keywordtype">double</span> *w1 = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a7237d2cf3b3f9d034477268c1d6631da">data_3d</a>(W, i, j, k);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        <span class="keywordtype">double</span> *w2 = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a7237d2cf3b3f9d034477268c1d6631da">data_3d</a>(W, l, m, k);</div>
@@ -743,13 +742,13 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            distance /= R * R;             <span class="comment">// mean distance from neighbors</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g&quot;</span>, distance); <span class="comment">// print the mean separation</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span> (j &lt; W-&gt;dim2 - 1)           <span class="comment">// if not the last column</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                fputc(<span class="charliteral">&#39;,&#39;</span>, fp);            <span class="comment">// suffix comma</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            distance /= R * R;              <span class="comment">// mean distance from neighbors</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            fprintf(fp, <span class="stringliteral">&quot;%.4g&quot;</span>, distance);  <span class="comment">// print the mean separation</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span> (j &lt; W-&gt;dim2 - 1)            <span class="comment">// if not the last column</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                fputc(<span class="charliteral">&#39;,&#39;</span>, fp);             <span class="comment">// suffix comma</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (i &lt; W-&gt;dim1 - 1) <span class="comment">// if not the last row</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            fputc(<span class="charliteral">&#39;\n&#39;</span>, fp); <span class="comment">// start a new line</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (i &lt; W-&gt;dim1 - 1)  <span class="comment">// if not the last row</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            fputc(<span class="charliteral">&#39;\n&#39;</span>, fp);  <span class="comment">// start a new line</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    fclose(fp);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> 0;</div>
@@ -779,9 +778,9 @@ Here is the call graph for this function:</div>
 <li><code>w12.csv</code>: trained SOM U-matrix </li>
 </ul>
 <div class="fragment"><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) <span class="comment">// only add new arrays if i &lt; N</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)  <span class="comment">// only add new arrays if i &lt; N</span></div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out) <span class="comment">// only add new arrays if i &lt; num_out</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        {</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num_out; k++)</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            {</div>
@@ -798,19 +797,18 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        }</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018">test_2d_classes</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>); <span class="comment">// create test data around circumference of a circle</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test1.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features); <span class="comment">// save test data points</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w11.csv&quot;</span>, &amp;W);              <span class="comment">// save initial random weights</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 1e-4); <span class="comment">// train the SOM</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w12.csv&quot;</span>, &amp;W); <span class="comment">// save the resultant weights</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018">test_2d_classes</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);  <span class="comment">// create test data around circumference of a circle</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test1.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features);  <span class="comment">// save test data points</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w11.csv&quot;</span>, &amp;W);               <span class="comment">// save initial random weights</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 1e-4);  <span class="comment">// train the SOM</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w12.csv&quot;</span>, &amp;W);  <span class="comment">// save the resultant weights</span></div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        free(X[i]);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    free(X);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    free(W.data);</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    free(X);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    free(W.data);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -834,9 +832,9 @@ Here is the call graph for this function:</div>
 <li><code>w22.csv</code>: trained SOM U-matrix </li>
 </ul>
 <div class="fragment"><div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    {</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) <span class="comment">// only add new arrays if i &lt; N</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)  <span class="comment">// only add new arrays if i &lt; N</span></div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out) <span class="comment">// only add new arrays if i &lt; num_out</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        {</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num_out; k++)</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            {</div>
@@ -844,7 +842,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                <span class="keywordflow">for</span> (j = 0; j &lt; features; j++)</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                { <span class="comment">// preallocate with random initial weights</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                {  <span class="comment">// preallocate with random initial weights</span></div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                    <span class="keywordtype">double</span> *w = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a7237d2cf3b3f9d034477268c1d6631da">data_3d</a>(&amp;W, i, k, j);</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    w[0] = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#af5ce14f026d6d231bef29161bac2b485">_random</a>(-5, 5);</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                }</div>
@@ -852,19 +850,18 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        }</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    }</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#ad9e25202bb8b481461f932668f249dbc">test_3d_classes1</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);                    <span class="comment">// create test data</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test2.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features); <span class="comment">// save test data points</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w21.csv&quot;</span>, &amp;W);              <span class="comment">// save initial random weights</span></div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 1e-4); <span class="comment">// train the SOM</span></div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w22.csv&quot;</span>, &amp;W); <span class="comment">// save the resultant weights</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#ad9e25202bb8b481461f932668f249dbc">test_3d_classes1</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);                     <span class="comment">// create test data</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test2.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features);  <span class="comment">// save test data points</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w21.csv&quot;</span>, &amp;W);               <span class="comment">// save initial random weights</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 1e-4);  <span class="comment">// train the SOM</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w22.csv&quot;</span>, &amp;W);  <span class="comment">// save the resultant weights</span></div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        free(X[i]);</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    free(X);</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    free(W.data);</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;}</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    free(X);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    free(W.data);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;}</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;<span class="comment">/** Creates a random set of points distributed in four clusters in</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -888,9 +885,9 @@ Here is the call graph for this function:</div>
 <li><code>w32.csv</code>: trained SOM U-matrix </li>
 </ul>
 <div class="fragment"><div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    {</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) <span class="comment">// only add new arrays if i &lt; N</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        <span class="keywordflow">if</span> (i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)  <span class="comment">// only add new arrays if i &lt; N</span></div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out) <span class="comment">// only add new arrays if i &lt; num_out</span></div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        {</div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num_out; k++)</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            {</div>
@@ -907,19 +904,18 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        }</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    }</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160; </div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a">test_3d_classes2</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>); <span class="comment">// create test data around the lamniscate</span></div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test3.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features); <span class="comment">// save test data points</span></div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w31.csv&quot;</span>, &amp;W);              <span class="comment">// save initial random weights</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 0.01); <span class="comment">// train the SOM</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w32.csv&quot;</span>, &amp;W); <span class="comment">// save the resultant weights</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a">test_3d_classes2</a>(X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);  <span class="comment">// create test data around the lamniscate</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a6824dc6d973eb3339af7aef5fea78b0c">save_2d_data</a>(<span class="stringliteral">&quot;test3.csv&quot;</span>, X, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features);  <span class="comment">// save test data points</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w31.csv&quot;</span>, &amp;W);               <span class="comment">// save initial random weights</span></div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a>(X, &amp;W, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, features, num_out, 0.01);  <span class="comment">// train the SOM</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a>(<span class="stringliteral">&quot;w32.csv&quot;</span>, &amp;W);  <span class="comment">// save the resultant weights</span></div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160; </div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        free(X[i]);</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    free(X);</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    free(W.data);</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;}</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    free(X);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    free(W.data);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;}</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment">/**</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -961,20 +957,21 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                                {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        {.5, .5},  <span class="comment">// centre of class 1</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {.5, -.5}, <span class="comment">// centre of class 2</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        {-.5, .5}, <span class="comment">// centre of class 3</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        {-.5, -.5} <span class="comment">// centre of class 4</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    };</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>= rand() % num_classes; <span class="comment">// select a random class for the point</span></div>
+<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                                {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        {.5, .5},   <span class="comment">// centre of class 1</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        {.5, -.5},  <span class="comment">// centre of class 2</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {-.5, .5},  <span class="comment">// centre of class 3</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        {-.5, -.5}  <span class="comment">// centre of class 4</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    };</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>=</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            rand() % num_classes;  <span class="comment">// select a random class for the point</span></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="comment">// create random coordinates (x,y,z) around the centre of the class</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="../../df/dea/structdata.html">data</a>[i][0] = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#af5ce14f026d6d231bef29161bac2b485">_random</a>(centres[<span class="keyword">class</span>][0] - R, centres[<span class="keyword">class</span>][0] + R);</div>
@@ -1029,20 +1026,21 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                                {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        {.5, .5, .5},   <span class="comment">// centre of class 1</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        {.5, -.5, -.5}, <span class="comment">// centre of class 2</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        {-.5, .5, .5},  <span class="comment">// centre of class 3</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        {-.5, -.5 - .5} <span class="comment">// centre of class 4</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    };</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>= rand() % num_classes; <span class="comment">// select a random class for the point</span></div>
+<div class="fragment"><div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                                {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        {.5, .5, .5},    <span class="comment">// centre of class 1</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        {.5, -.5, -.5},  <span class="comment">// centre of class 2</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        {-.5, .5, .5},   <span class="comment">// centre of class 3</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        {-.5, -.5 - .5}  <span class="comment">// centre of class 4</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    };</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>=</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            rand() % num_classes;  <span class="comment">// select a random class for the point</span></div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="comment">// create random coordinates (x,y,z) around the centre of the class</span></div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <a class="code" href="../../df/dea/structdata.html">data</a>[i][0] = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#af5ce14f026d6d231bef29161bac2b485">_random</a>(centres[<span class="keyword">class</span>][0] - R, centres[<span class="keyword">class</span>][0] + R);</div>
@@ -1098,24 +1096,25 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                                {</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        {.5, .5, .5},   <span class="comment">// centre of class 1</span></div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        {.5, .5, -.5},  <span class="comment">// centre of class 2</span></div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        {.5, -.5, .5},  <span class="comment">// centre of class 3</span></div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        {.5, -.5, -.5}, <span class="comment">// centre of class 4</span></div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        {-.5, .5, .5},  <span class="comment">// centre of class 5</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        {-.5, .5, -.5}, <span class="comment">// centre of class 6</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        {-.5, -.5, .5}, <span class="comment">// centre of class 7</span></div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        {-.5, -.5, -.5} <span class="comment">// centre of class 8</span></div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    };</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>= rand() % num_classes; <span class="comment">// select a random class for the point</span></div>
+<div class="fragment"><div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                                {</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="comment">// centres of each class cluster</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        {.5, .5, .5},    <span class="comment">// centre of class 1</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        {.5, .5, -.5},   <span class="comment">// centre of class 2</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        {.5, -.5, .5},   <span class="comment">// centre of class 3</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        {.5, -.5, -.5},  <span class="comment">// centre of class 4</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        {-.5, .5, .5},   <span class="comment">// centre of class 5</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        {-.5, .5, -.5},  <span class="comment">// centre of class 6</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        {-.5, -.5, .5},  <span class="comment">// centre of class 7</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        {-.5, -.5, -.5}  <span class="comment">// centre of class 8</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    };</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    {</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        <span class="keywordtype">int</span> <span class="keyword">class </span>=</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            rand() % num_classes;  <span class="comment">// select a random class for the point</span></div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160; </div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="comment">// create random coordinates (x,y,z) around the centre of the class</span></div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        <a class="code" href="../../df/dea/structdata.html">data</a>[i][0] = <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#af5ce14f026d6d231bef29161bac2b485">_random</a>(centres[<span class="keyword">class</span>][0] - R, centres[<span class="keyword">class</span>][0] + R);</div>
@@ -1284,9 +1283,9 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="akohonen__som__topology_8c_html_ad139de302fa8135a433d9c1bf971b13b"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#ad139de302fa8135a433d9c1bf971b13b">update_weights</a></div><div class="ttdeci">double update_weights(const double *X, struct array_3d *W, double **D, int num_out, int num_features, double alpha, int R)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:231</div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
 <div class="ttc" id="akohonen__som__topology_8c_html_a7237d2cf3b3f9d034477268c1d6631da"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a7237d2cf3b3f9d034477268c1d6631da">data_3d</a></div><div class="ttdeci">double * data_3d(const struct array_3d *arr, int x, int y, int z)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:64</div></div>
-<div class="ttc" id="akohonen__som__topology_8c_html_ad9e25202bb8b481461f932668f249dbc"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#ad9e25202bb8b481461f932668f249dbc">test_3d_classes1</a></div><div class="ttdeci">void test_3d_classes1(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:458</div></div>
-<div class="ttc" id="akohonen__som__topology_8c_html_a5bb02a8322d717ead1b11182c5f02a3a"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a">test_3d_classes2</a></div><div class="ttdeci">void test_3d_classes2(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:557</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:111</div></div>
+<div class="ttc" id="akohonen__som__topology_8c_html_ad9e25202bb8b481461f932668f249dbc"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#ad9e25202bb8b481461f932668f249dbc">test_3d_classes1</a></div><div class="ttdeci">void test_3d_classes1(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:457</div></div>
+<div class="ttc" id="akohonen__som__topology_8c_html_a5bb02a8322d717ead1b11182c5f02a3a"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a">test_3d_classes2</a></div><div class="ttdeci">void test_3d_classes2(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:556</div></div>
+<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <div class="ttc" id="akohonen__som__topology_8c_html_adee1bc3871c881f6e04cb9e0b1d01158"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#adee1bc3871c881f6e04cb9e0b1d01158">save_u_matrix</a></div><div class="ttdeci">int save_u_matrix(const char *fname, struct array_3d *W)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:136</div></div>
 <div class="ttc" id="astructarray__3d_html_ad823bd5424a0fc158da52a0497d8c10a"><div class="ttname"><a href="../../d0/dc8/structarray__3d.html#ad823bd5424a0fc158da52a0497d8c10a">array_3d::dim3</a></div><div class="ttdeci">int dim3</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:48</div></div>
 <div class="ttc" id="astructarray__3d_html_ad5d3ee546eea3c05dc8f0dc90ec194f4"><div class="ttname"><a href="../../d0/dc8/structarray__3d.html#ad5d3ee546eea3c05dc8f0dc90ec194f4">array_3d::dim1</a></div><div class="ttdeci">int dim1</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:46</div></div>
@@ -1296,12 +1295,12 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="akohonen__som__topology_8c_html_affe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:31</div></div>
 <div class="ttc" id="astructarray__3d_html_aa431cc0a41fd379270dbd2b0e3ac1b45"><div class="ttname"><a href="../../d0/dc8/structarray__3d.html#aa431cc0a41fd379270dbd2b0e3ac1b45">array_3d::dim2</a></div><div class="ttdeci">int dim2</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:47</div></div>
 <div class="ttc" id="akohonen__som__topology_8c_html_a1983dc0f35e734015772e9f8c0ff19f5"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5">kohonen_som</a></div><div class="ttdeci">void kohonen_som(double **X, struct array_3d *W, int num_samples, int num_features, int num_out, double alpha_min)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:311</div></div>
-<div class="ttc" id="akohonen__som__topology_8c_html_adb5ded007be1fd666fab9affe6764018"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018">test_2d_classes</a></div><div class="ttdeci">void test_2d_classes(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:359</div></div>
+<div class="ttc" id="akohonen__som__topology_8c_html_adb5ded007be1fd666fab9affe6764018"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018">test_2d_classes</a></div><div class="ttdeci">void test_2d_classes(double *const *data, int N)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:358</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_3343723ae086de42ee4ca9774da3a13f.html">machine_learning</a></li><li class="navelem"><a class="el" href="../../d2/df6/kohonen__som__topology_8c.html">kohonen_som_topology.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

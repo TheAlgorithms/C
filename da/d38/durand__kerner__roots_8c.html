@@ -141,8 +141,8 @@ Functions</h2></td></tr>
 <div class="line">-12870931245150988800 13803759753640704000 -8752948036761600000</div>
 <div class="line">2432902008176640000</div>
 </div><!-- fragment --><p>Sample implementation results to compute approximate roots of the equation \(x^4-1=0\):<br  />
-<img src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_error.svg" alt="Error evolution during root approximations computed every
-iteration." style="pointer-events: none;" width="400" class="inline"/> <img src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_roots.svg" alt="Roots evolution - shows the initial approximation of the
+<img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/durand_kerner_error.svg" alt="Error evolution during root approximations computed every
+iteration." style="pointer-events: none;" width="400" class="inline"/> <img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/durand_kerner_roots.svg" alt="Roots evolution - shows the initial approximation of the
 roots and their convergence to a final approximation along with the iterative
 approximations" style="pointer-events: none;" width="400" class="inline"/> </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -186,13 +186,13 @@ approximations" style="pointer-events: none;" width="400" class="inline"/> </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if termination not reached </dd>
 <dd>
 1 if termination reached </dd></dl>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> past_delta = INFINITY;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (fabsl(past_delta - delta) &lt;= <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a> || delta &lt; <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a>)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    past_delta = delta;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> past_delta = INFINITY;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (fabsl(past_delta - delta) &lt;= <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a> || delta &lt; <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    past_delta = delta;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,15 +218,15 @@ approximations" style="pointer-events: none;" width="400" class="inline"/> </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to converted string </dd></dl>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> msg[50];</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">double</span> r = creal(x);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">double</span> c = cimag(x);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    sprintf(msg, <span class="stringliteral">&quot;% 7.04g%+7.04gj&quot;</span>, r, c);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> msg[50];</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">double</span> r = creal(x);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">double</span> c = cimag(x);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    sprintf(msg, <span class="stringliteral">&quot;% 7.04g%+7.04gj&quot;</span>, r, c);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,16 +256,17 @@ approximations" style="pointer-events: none;" width="400" class="inline"/> </p>
       </table>
 </div><div class="memdoc">
 <p>store intermediate values to a CSV file</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">double</span> *coeffs = NULL;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> complex *s0 = NULL;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> degree = 0;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, i;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (argc &lt; 2)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        printf(<span class="stringliteral">&quot;Please pass the coefficients of the polynomial as commandline &quot;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;               <span class="stringliteral">&quot;arguments.\n&quot;</span>);</div>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">double</span> *coeffs = NULL;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> complex *s0 = NULL;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> degree = 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, i;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (argc &lt; 2)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        printf(</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="stringliteral">&quot;Please pass the coefficients of the polynomial as commandline &quot;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="stringliteral">&quot;arguments.\n&quot;</span>);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
@@ -386,34 +387,32 @@ approximations" style="pointer-events: none;" width="400" class="inline"/> </p>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (iter % 500 == 0)</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            printf(<span class="stringliteral">&quot;Iter: %lu\t&quot;</span>, iter);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">for</span> (n = 0; n &lt; degree - 1; n++)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                printf(<span class="stringliteral">&quot;\t%s&quot;</span>, <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a>(s0[n]));</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            printf(<span class="stringliteral">&quot;\t\tabsolute average change: %.4g\n&quot;</span>, tol_condition);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        fprintf(log_file, <span class="stringliteral">&quot;%.4g&quot;</span>, tol_condition);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;end:</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    end_time = clock();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#if defined(DEBUG) || !defined(NDEBUG)</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    fclose(log_file);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    printf(<span class="stringliteral">&quot;\nIterations: %lu\n&quot;</span>, iter);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">for</span> (n = 0; n &lt; degree - 1; n++)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        printf(<span class="stringliteral">&quot;\t%s\n&quot;</span>, <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a>(s0[n]));</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    printf(<span class="stringliteral">&quot;absolute average change: %.4g\n&quot;</span>, tol_condition);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    printf(<span class="stringliteral">&quot;Time taken: %.4g sec\n&quot;</span>,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;           (end_time - start_time) / (<span class="keywordtype">double</span>)CLOCKS_PER_SEC);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    free(coeffs);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    free(s0);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">for</span> (n = 0; n &lt; degree - 1; n++) printf(<span class="stringliteral">&quot;\t%s&quot;</span>, <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a>(s0[n]));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            printf(<span class="stringliteral">&quot;\t\tabsolute average change: %.4g\n&quot;</span>, tol_condition);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        fprintf(log_file, <span class="stringliteral">&quot;%.4g&quot;</span>, tol_condition);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;end:</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    end_time = clock();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">#if defined(DEBUG) || !defined(NDEBUG)</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    fclose(log_file);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    printf(<span class="stringliteral">&quot;\nIterations: %lu\n&quot;</span>, iter);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">for</span> (n = 0; n &lt; degree - 1; n++) printf(<span class="stringliteral">&quot;\t%s\n&quot;</span>, <a class="code" href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a>(s0[n]));</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    printf(<span class="stringliteral">&quot;absolute average change: %.4g\n&quot;</span>, tol_condition);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    printf(<span class="stringliteral">&quot;Time taken: %.4g sec\n&quot;</span>,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;           (end_time - start_time) / (<span class="keywordtype">double</span>)CLOCKS_PER_SEC);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    free(coeffs);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    free(s0);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -467,25 +466,24 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> complex out = 0.;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (n = 0; n &lt; degree; n++)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        out += coeffs[n] * cpow(x, degree - n - 1);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (n = 0; n &lt; degree; n++) out += coeffs[n] * cpow(x, degree - n - 1);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="adurand__kerner__roots_8c_html_adf4ae062a028c6faf2b96c9c1eb343af"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#adf4ae062a028c6faf2b96c9c1eb343af">poly_function</a></div><div class="ttdeci">long double complex poly_function(double *coeffs, unsigned int degree, long double complex x)</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:50</div></div>
-<div class="ttc" id="adurand__kerner__roots_8c_html_afa5b04ce11475d67049cba8273741fb7"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a></div><div class="ttdeci">const char * complex_str(long double complex x)</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:67</div></div>
-<div class="ttc" id="adurand__kerner__roots_8c_html_a26d5695ebed0818a3e7cf4b10aacab52"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52">check_termination</a></div><div class="ttdeci">char check_termination(long double delta)</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:84</div></div>
+<div class="ttc" id="adurand__kerner__roots_8c_html_afa5b04ce11475d67049cba8273741fb7"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7">complex_str</a></div><div class="ttdeci">const char * complex_str(long double complex x)</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:66</div></div>
+<div class="ttc" id="adurand__kerner__roots_8c_html_a26d5695ebed0818a3e7cf4b10aacab52"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52">check_termination</a></div><div class="ttdeci">char check_termination(long double delta)</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:83</div></div>
 <div class="ttc" id="adurand__kerner__roots_8c_html_af270a96662132d0385cb6b4637c5a689"><div class="ttname"><a href="../../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a></div><div class="ttdeci">#define ACCURACY</div><div class="ttdef"><b>Definition:</b> durand_kerner_roots.c:41</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9c6faab82c22511b50177aa2e38e2780.html">numerical_methods</a></li><li class="navelem"><a class="el" href="../../da/d38/durand__kerner__roots_8c.html">durand_kerner_roots.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

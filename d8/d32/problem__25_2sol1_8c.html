@@ -241,12 +241,11 @@ a + b = c = new b </p>
       </table>
 </div><div class="memdoc">
 <p>Get number of digits in a large number </p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> digits = <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">while</span> (number[digits] == 0)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        digits--;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> digits;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> digits = <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">while</span> (number[digits] == 0) digits--;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> digits;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,46 +275,46 @@ a + b = c = new b </p>
       </table>
 </div><div class="memdoc">
 <p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        fn[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1]; <span class="comment">/* array to store digits of a large number */</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> fn1[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> sum[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1];</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    memset(fn, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    memset(fn1, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    memset(sum, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        fn[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1]; <span class="comment">/* array to store digits of a large number */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> fn1[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> sum[<a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a> + 1];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    memset(fn, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    memset(fn1, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    memset(sum, 0, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    fn[0] = 1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    fn1[1] = 1;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    fn[0] = 1;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    fn1[1] = 1;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 1, digit_count = 1;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    clock_t start_time = clock();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        digit_count = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">add_numbers</a>(fn, fn1, sum, digit_count);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// digit_count = get_digits(sum);</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">// printf(&quot;%5u (%u) (%u) &quot;, index, digit_count, get_digits(sum));</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// print_number(sum, digit_count);</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">// putchar(&#39;\n&#39;);</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (digit_count == <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        memcpy(fn, fn1, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        memcpy(fn1, sum, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        index++;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    } <span class="keywordflow">while</span> (digit_count &lt; <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    clock_t end_time = clock();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    printf(<span class="stringliteral">&quot;Time taken: %.4g ms\n&quot;</span>,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    printf(<span class="stringliteral">&quot;The nth term for %d digits: %u \n&quot;</span>, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>, index--);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319">print_number</a>(sum, digit_count);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 1, digit_count = 1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    clock_t start_time = clock();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        digit_count = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">add_numbers</a>(fn, fn1, sum, digit_count);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// digit_count = get_digits(sum);</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// printf(&quot;%5u (%u) (%u) &quot;, index, digit_count, get_digits(sum));</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// print_number(sum, digit_count);</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">// putchar(&#39;\n&#39;);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (digit_count == <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        memcpy(fn, fn1, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        memcpy(fn1, sum, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        index++;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    } <span class="keywordflow">while</span> (digit_count &lt; <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    clock_t end_time = clock();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    printf(<span class="stringliteral">&quot;Time taken: %.4g ms\n&quot;</span>,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;           1e3 * (end_time - start_time) / CLOCKS_PER_SEC);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    printf(<span class="stringliteral">&quot;The nth term for %d digits: %u \n&quot;</span>, <a class="code" href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>, index--);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319">print_number</a>(sum, digit_count);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -355,20 +354,18 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> start_pos = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> - 1;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">/* skip all initial zeros */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">while</span> (number[start_pos] == 0)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        start_pos--;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = start_pos; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        putchar(number[i] + 0x30);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">while</span> (number[start_pos] == 0) start_pos--;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = start_pos; i &gt;= 0; i--) putchar(number[i] + 0x30);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:111</div></div>
+<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <div class="ttc" id="aproblem__13_2sol1_8c_html_ad51742ca5a5c99e860bdf30299163bf2"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">add_numbers</a></div><div class="ttdeci">int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)</div><div class="ttdef"><b>Definition:</b> sol1.c:44</div></div>
 <div class="ttc" id="aproblem__25_2sol1_8c_html_a001791a21d538b8b9176287ae60d9b61"><div class="ttname"><a href="../../d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a></div><div class="ttdeci">#define MAX_DIGITS</div><div class="ttdef"><b>Definition:</b> sol1.c:13</div></div>
 <div class="ttc" id="aproblem__13_2sol1_8c_html_a248adc917818cc6666d8bc679a660319"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319">print_number</a></div><div class="ttdeci">int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)</div><div class="ttdef"><b>Definition:</b> sol1.c:82</div></div>
@@ -376,7 +373,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_b3d331eabd4234f247030c297aaf021c.html">project_euler</a></li><li class="navelem"><a class="el" href="../../dir_079e1f799fb08a8a0b98cb030ab15687.html">problem_25</a></li><li class="navelem"><a class="el" href="../../d8/d32/problem__25_2sol1_8c.html">sol1.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

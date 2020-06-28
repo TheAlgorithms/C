@@ -179,12 +179,11 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; M; row++)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; col++)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            printf(<span class="stringliteral">&quot;% 9.3g\t&quot;</span>, A[row][col]);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; col++) printf(<span class="stringliteral">&quot;% 9.3g\t&quot;</span>, A[row][col]);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -245,62 +244,58 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">double</span> *col_vector = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">double</span> *col_vector2 = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">double</span> *tmp_vector = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;         i++) <span class="comment">/* for each column =&gt; R is a square matrix of NxN */</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">int</span> j;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; i; j++) <span class="comment">/* second dimension of column */</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            R[i][j] = 0.;       <span class="comment">/* make R upper triangular */</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">/* get corresponding Q vector */</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; M; j++)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            tmp_vector[j] = A[j][i]; <span class="comment">/* accumulator for uk */</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            col_vector[j] = A[j][i];</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; i; j++)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; M; k++)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                col_vector2[k] = Q[k][j];</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="../../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f">vector_proj</a>(col_vector, col_vector2, col_vector2, M);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <a class="code" href="../../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145">vector_sub</a>(tmp_vector, col_vector2, tmp_vector, M);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">double</span> mag = <a class="code" href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212">vector_mag</a>(tmp_vector, M);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; M; j++)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            Q[j][i] = tmp_vector[j] / mag;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">/* compute upper triangular values of R */</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk &lt; M; kk++)</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            col_vector[kk] = Q[kk][i];</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = i; k &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; k++)</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk &lt; M; kk++)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                col_vector2[kk] = A[kk][k];</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            R[i][k] = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(col_vector, col_vector2, M);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    free(col_vector);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    free(col_vector2);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    free(tmp_vector);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">double</span> *col_vector = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">double</span> *col_vector2 = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">double</span> *tmp_vector = (<span class="keywordtype">double</span> *)malloc(M * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         i++) <span class="comment">/* for each column =&gt; R is a square matrix of NxN */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; i; j++) <span class="comment">/* second dimension of column */</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            R[i][j] = 0.;       <span class="comment">/* make R upper triangular */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">/* get corresponding Q vector */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; M; j++)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            tmp_vector[j] = A[j][i]; <span class="comment">/* accumulator for uk */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            col_vector[j] = A[j][i];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; i; j++)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; M; k++) col_vector2[k] = Q[k][j];</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="../../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f">vector_proj</a>(col_vector, col_vector2, col_vector2, M);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <a class="code" href="../../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145">vector_sub</a>(tmp_vector, col_vector2, tmp_vector, M);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">double</span> mag = <a class="code" href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212">vector_mag</a>(tmp_vector, M);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; M; j++) Q[j][i] = tmp_vector[j] / mag;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">/* compute upper triangular values of R */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk &lt; M; kk++) col_vector[kk] = Q[kk][i];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = i; k &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; k++)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk &lt; M; kk++) col_vector2[kk] = A[kk][k];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            R[i][k] = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(col_vector, col_vector2, M);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    free(col_vector);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    free(col_vector2);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    free(tmp_vector);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -344,18 +339,17 @@ Here is the call graph for this function:</div>
 <p>Compute dot product of two vectors of equal lengths</p>
 <p>If \(\vec{a}=\left[a_0,a_1,a_2,...,a_L\right]\) and \(\vec{b}=\left[b_0,b_1,b_1,...,b_L\right]\) then \(\vec{a}\cdot\vec{b}=\displaystyle\sum_{i=0}^L a_i\times b_i\)</p>
 <dl class="section return"><dt>Returns</dt><dd>\(\vec{a}\cdot\vec{b}\) </dd></dl>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span> mag = 0.f;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma omp parallel for reduction(+ : mag)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        mag += a[i] * b[i];</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> mag;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">double</span> mag = 0.f;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#pragma omp parallel for reduction(+ : mag)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++) mag += a[i] * b[i];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> mag;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -387,10 +381,10 @@ Here is the call graph for this function:</div>
 <p>Compute magnitude of vector.</p>
 <p>If \(\vec{a}=\left[a_0,a_1,a_2,...,a_L\right]\) then \(\left|\vec{a}\right|=\sqrt{\displaystyle\sum_{i=0}^L a_i^2}\)</p>
 <dl class="section return"><dt>Returns</dt><dd>\(\left|\vec{a}\right|\) </dd></dl>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">double</span> dot = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(vector, vector, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> sqrt(dot);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">double</span> dot = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(vector, vector, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> sqrt(dot);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -442,23 +436,22 @@ Here is the call graph for this function:</div>
 </p>
 <dl class="section return"><dt>Returns</dt><dd>NULL if error, otherwise pointer to output </dd></dl>
 <p>check for division by zero</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> num = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(a, b, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> deno = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(b, b, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (deno == 0) <span class="comment">/*! check for division by zero */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> scalar = num / deno;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        out[i] = scalar * b[i];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> num = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(a, b, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> deno = <a class="code" href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a>(b, b, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (deno == 0) <span class="comment">/*! check for division by zero */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> scalar = num / deno;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++) out[i] = scalar * b[i];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -517,33 +510,32 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// parallelize on threads</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        out[i] = a[i] - b[i];</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// parallelize on threads</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++) out[i] = a[i] - b[i];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct_l_html"><div class="ttname"><a href="../../df/db3/struct_l.html">L</a></div><div class="ttdef"><b>Definition:</b> list.h:8</div></div>
-<div class="ttc" id="aqr__decompose_8h_html_abeec1f78a7a7e7251687e75340331212"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212">vector_mag</a></div><div class="ttdeci">double vector_mag(double *vector, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:66</div></div>
-<div class="ttc" id="aqr__decompose_8h_html_a82b20e027437df768d7e994cf4cae29f"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f">vector_proj</a></div><div class="ttdeci">double * vector_proj(double *a, double *b, double *out, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:78</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:111</div></div>
-<div class="ttc" id="aqr__decompose_8h_html_a3a584b79941a43d775f9d4ce446dbe05"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a></div><div class="ttdeci">double vector_dot(double *a, double *b, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:44</div></div>
-<div class="ttc" id="aqr__decompose_8h_html_a6b6a0e75e75ff7919057dd275bb69145"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145">vector_sub</a></div><div class="ttdeci">double * vector_sub(double *a, double *b, double *out, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:104</div></div>
+<div class="ttc" id="aqr__decompose_8h_html_abeec1f78a7a7e7251687e75340331212"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212">vector_mag</a></div><div class="ttdeci">double vector_mag(double *vector, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:64</div></div>
+<div class="ttc" id="aqr__decompose_8h_html_a82b20e027437df768d7e994cf4cae29f"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f">vector_proj</a></div><div class="ttdeci">double * vector_proj(double *a, double *b, double *out, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:76</div></div>
+<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
+<div class="ttc" id="aqr__decompose_8h_html_a3a584b79941a43d775f9d4ce446dbe05"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05">vector_dot</a></div><div class="ttdeci">double vector_dot(double *a, double *b, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:43</div></div>
+<div class="ttc" id="aqr__decompose_8h_html_a6b6a0e75e75ff7919057dd275bb69145"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145">vector_sub</a></div><div class="ttdeci">double * vector_sub(double *a, double *b, double *out, int L)</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:101</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9c6faab82c22511b50177aa2e38e2780.html">numerical_methods</a></li><li class="navelem"><a class="el" href="../../d4/d68/qr__decompose_8h.html">qr_decompose.h</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>

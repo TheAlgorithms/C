@@ -250,7 +250,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="../../d5/da1/structnode.html">node</a> *replacement; <span class="comment">// deleted node&#39;s replacement</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="../../d5/da1/structnode.html">node</a> *replacement;  <span class="comment">// deleted node&#39;s replacement</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="../../d5/da1/structnode.html">node</a> *t;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> (temp-&gt;llink == NULL &amp;&amp; temp-&gt;rlink == NULL)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        {</div>
@@ -266,15 +266,15 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        }</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            replacement = temp-&gt;rlink; <span class="comment">// replaced with inorder successor</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            replacement = temp-&gt;rlink;  <span class="comment">// replaced with inorder successor</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            t = replacement;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">while</span> (t-&gt;llink != NULL)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                t = t-&gt;llink;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            t-&gt;llink =</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                temp-&gt;llink; <span class="comment">// leftmost node of the replacement is linked to</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                             <span class="comment">// the left child of the deleted node</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                temp-&gt;llink;  <span class="comment">// leftmost node of the replacement is linked to</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                              <span class="comment">// the left child of the deleted node</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (temp == *root)</div>
@@ -352,8 +352,8 @@ Functions</h2></td></tr>
 <p>inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tree param[in] data value to be inserted into the tree </p>
 <div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *new_node = <a class="code" href="../../df/d3c/threaded__binary__trees_8c.html#ab21d1d36d95001defbca2f6abd4d410c">create_node</a>(<a class="code" href="../../df/dea/structdata.html">data</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *temp; <span class="comment">// to be deleted</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *prev; <span class="comment">// keeps track of the parent of the element deleted</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *temp;  <span class="comment">// to be deleted</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *prev;  <span class="comment">// keeps track of the parent of the element deleted</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (*root == NULL)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        *root = new_node;</div>
@@ -600,7 +600,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_2e746e9d06bf2d8ff842208bcc6ebcfc.html">data_structures</a></li><li class="navelem"><a class="el" href="../../dir_e39df94f82619fa5256f1786519937be.html">binary_trees</a></li><li class="navelem"><a class="el" href="../../df/d3c/threaded__binary__trees_8c.html">threaded_binary_trees.c</a></li>
-    <li class="footer">Generated on Sun Jun 28 2020 15:07:07 for Algorithms_in_C by
+    <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
   </ul>
