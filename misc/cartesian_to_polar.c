@@ -6,7 +6,7 @@ const double pi = 3.141592653589793238462643383279502884;
 /**
 give as arguments to the executable two x and y coordinates
 outputs a polar coordinate
-**/
+*/
 int main()
 {
     double x, y;

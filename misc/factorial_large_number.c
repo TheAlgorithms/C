@@ -10,7 +10,7 @@
 
 /**
  * dynamically large number
- **/
+ */
 typedef struct _large_num
 {
     char *digits;            /**< array to store individual digits */
@@ -20,7 +20,7 @@ typedef struct _large_num
 /**
  * create a new large number
  * \returns pointer to a large number
- **/
+ */
 large_num *new_number(void)
 {
     large_num *new_num = (large_num *)malloc(sizeof(large_num));
@@ -33,7 +33,7 @@ large_num *new_number(void)
 /**
  * delete all memory allocated for large number
  * \param[in] num pointer to large_num to delete
- **/
+ */
 void delete_number(large_num *num)
 {
     free(num->digits);
@@ -44,7 +44,7 @@ void delete_number(large_num *num)
  * add a digit to the large number
  * \param[in,out] num
  * \param[in] value value of the digit to insert
- **/
+ */
 void add_digit(large_num *num, unsigned int value)
 {
     if (value > 9)
@@ -62,7 +62,7 @@ void add_digit(large_num *num, unsigned int value)
 /**
  * multiply large number with another integer and
  * store the result in the same large number
- **/
+ */
 void multiply(large_num *num, unsigned long n)
 {
     int i;

@@ -13,7 +13,7 @@
  * and N right options, without preference for order.
  * Hence, the path can be be traced in N out of 2N number of ways.
  * This is the same as binomial coeeficient.
- **/
+ */
 unsigned long long number_of_paths(int N)
 {
     unsigned long long path = 1;

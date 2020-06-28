@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #include "qr_decompose.h"
 #ifdef _OPENMP
 #include <omp.h>
@@ -95,7 +96,7 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2,
  * \note The matrix \f$A\f$ gets modified
  *
  * \param[in,out] A matrix to compute eigen values for
- * \param[out] eig_vals resultant vector containing computed eigen values
+ * \param[out] eigen_vals resultant vector containing computed eigen values
  * \param[in] mat_size matrix size
  * \param[in] debug_print 1 to print intermediate Q & R matrices, 0 for not to
  * \returns time for computation in seconds

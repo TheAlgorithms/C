@@ -16,7 +16,7 @@
 
 /**
  * Alphabetical sorting using 'shell sort' algorithm
- **/
+ */
 void shell_sort(char data[][MAX_NAME_LEN], int LEN)
 {
     const int gaps[] = {701, 301, 132, 57, 23, 10, 4, 1};
@@ -44,7 +44,7 @@ void shell_sort(char data[][MAX_NAME_LEN], int LEN)
 
 /**
  * Alphabetical sorting using 'lazy sort' algorithm
- **/
+ */
 void lazy_sort(char data[][MAX_NAME_LEN], int LEN)
 {
     int i, j;

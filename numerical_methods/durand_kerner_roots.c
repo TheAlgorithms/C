@@ -46,7 +46,7 @@
  * \param[in] degree degree of polynomial
  * \param[in] x point at which to evaluate the polynomial
  * \returns \f$f(x)\f$
- **/
+ */
 long double complex poly_function(double *coeffs, unsigned int degree,
                                   long double complex x)
 {
@@ -91,7 +91,7 @@ char check_termination(long double delta)
 
 /***
  * the comandline inputs are taken as coeffiecients of a polynomial
- **/
+ */
 int main(int argc, char **argv)
 {
     double *coeffs = NULL;
@@ -130,7 +130,7 @@ int main(int argc, char **argv)
 #if defined(DEBUG) || !defined(NDEBUG)
     /**
      * store intermediate values to a CSV file
-     **/
+     */
     FILE *log_file = fopen("durand_kerner.log.csv", "wt");
     if (!log_file)
     {

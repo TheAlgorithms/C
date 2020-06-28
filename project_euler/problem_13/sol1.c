@@ -40,7 +40,7 @@ int get_number(FILE *fp, char *buffer, uint8_t *out_int)
 /**
  * Function to add arbitraty length decimal integers stored in an array.
  * a + b = c = new b
- **/
+ */
 int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)
 {
     int carry = 0;

@@ -29,8 +29,10 @@ int c_atoi(const char *str)
         i++;
 
     /* store the sign if it is negative sign */
-    if (str[i] == '-' || str[i] == '+')
-        (str[i++] == '-') ? sign = -1 : 1;
+    if (str[i] == '-')
+        sign = -1;
+    else if (str[i] == '+')
+        sign = 1;
 
     /* converting char by char to a numeric value */
     while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
@@ -51,7 +53,7 @@ int c_atoi(const char *str)
 /**
  * test the function implementation
  */
-int test_c_atoi()
+void test_c_atoi()
 {
     printf("<<<< TEST FUNCTION >>>>\n");
     assert(c_atoi("123") == atoi("123"));
@@ -59,7 +61,7 @@ int test_c_atoi()
     assert(c_atoi("") == atoi(""));
     assert(c_atoi("-h23") == atoi("-h23"));
     assert(c_atoi("         23") == atoi("         23"));
-    assert(c_atoi("999999999999") == atoi("999999999999"));
+    assert(c_atoi("999999999") == atoi("999999999"));
     printf("<<<< TEST DONE >>>>\n");
 }
 
@@ -69,6 +71,8 @@ int test_c_atoi()
  */
 int main(int argc, char **argv)
 {
+    test_c_atoi();
+
     if (argc == 2)
     {
         printf("Your number + 5 is %d\n", c_atoi(argv[1]) + 5);

@@ -30,17 +30,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_ITER 500  // INT_MAX  ///< Maximum number of iterations to learn
+/** Maximum number of iterations to learn */
+#define MAX_ITER 500  // INT_MAX
 
 /** structure to hold adaline model parameters */
 struct adaline
 {
-    double eta;       ///< learning rate of the algorithm
-    double *weights;  ///< weights of the neural network
-    int num_weights;  ///< number of weights of the neural network
+    double eta;      /**< learning rate of the algorithm */
+    double *weights; /**< weights of the neural network */
+    int num_weights; /**< number of weights of the neural network */
 };
 
-#define ACCURACY 1e-5  ///< convergence accuracy \f$=1\times10^{-5}\f$
+#define ACCURACY 1e-5 /**< convergence accuracy \f$=1\times10^{-5}\f$ */
 
 /**
  * Default constructor

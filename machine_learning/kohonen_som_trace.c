@@ -5,6 +5,7 @@
  *
  * \author [Krishna Vedala](https://github.com/kvedala)
  *
+ * \details
  * This example implements a powerful self organizing map algorithm.
  * The algorithm creates a connected network of weights that closely
  * follows the given data points. This this creates a chain of nodes that
@@ -16,23 +17,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#ifdef _OPENMP  // check if OpenMP based parallellization is available
+#ifdef _OPENMP  // check if OpenMP based parallelization is available
 #include <omp.h>
 #endif
 
 #ifndef max
-#define max(a, b)                                              \
-    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value \
-                               */
+/** shorthand for maximum value */
+#define max(a, b) (((a) > (b)) ? (a) : (b))
 #endif
 #ifndef min
-#define min(a, b)                                              \
-    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value \
-                               */
+/** shorthand for minimum value */
+#define min(a, b) (((a) < (b)) ? (a) : (b))
 #endif
 
 /**
- * Helper function to generate a random number in a given interval.
+ * \brief Helper function to generate a random number in a given interval.
+ * \details
  * \n Steps:
  * 1. `r1 = rand() % 100` gets a random number between 0 and 99
  * 2. `r2 = r1 / 100` converts random number to be between 0 and 0.99
@@ -41,22 +41,23 @@
  * y = (b - a) \times \frac{\text{(random number between 0 and RAND_MAX)} \;
  * \text{mod}\; 100}{100} + a \f]
  *
- * \param[in] a lower limit
- * \param[in] b upper limit
+ * \param a lower limit
+ * \param b upper limit
  * \returns random number in the range \f$[a,b)\f$
  */
 double _random(double a, double b)
 {
-    return ((b - a) * (rand() % 100) / 100.f) + a;
+    int r = rand() % 100;
+    return ((b - a) * r / 100.f) + a;
 }
 
 /**
  * Save a given n-dimensional data martix to file.
  *
- * \param[in] fname filename to save in (gets overwriten without confirmation)
- * \param[in] X matrix to save
- * \param[in] num_points rows in the matrix = number of points
- * \param[in] num_features columns in the matrix = dimensions of points
+ * \param [in] fname filename to save in (gets overwriten without confirmation)
+ * \param [in] X matrix to save
+ * \param [in] num_points rows in the matrix = number of points
+ * \param [in] num_features columns in the matrix = dimensions of points
  * \returns 0 if all ok
  * \returns -1 if file creation failed
  */
@@ -89,7 +90,7 @@ int save_nd_data(const char *fname, double **X, int num_points,
 
 /**
  * Get minimum value and index of the value in a vector
- * \param[in] x vector to search
+ * \param[in] X vector to search
  * \param[in] N number of points in the vector
  * \param[out] val minimum value found
  * \param[out] idx index where minimum value was found
@@ -111,7 +112,7 @@ void get_min_1d(double const *X, int N, double *val, int *idx)
 /**
  * Update weights of the SOM using Kohonen algorithm
  *
- * \param[in] X data point
+ * \param[in] x data point
  * \param[in,out] W weights matrix
  * \param[in,out] D temporary vector to store distances
  * \param[in] num_out number of output points
@@ -164,7 +165,6 @@ void update_weights(double const *x, double *const *W, double *D, int num_out,
  *
  * \param[in] X data set
  * \param[in,out] W weights matrix
- * \param[in] D temporary vector to store distances
  * \param[in] num_samples number of output points
  * \param[in] num_features number of features per input sample
  * \param[in] num_out number of output points

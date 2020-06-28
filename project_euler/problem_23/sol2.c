@@ -22,14 +22,14 @@ long MAX_N = 28123; /**< Limit of numbers to check */
  * Using a whole byte to store a binary info would be redundant.
  * We will use each byte to represent 8 numbers by relying on bits.
  * This saves memory required by 1/8
- **/
+ */
 char *abundant_flags = NULL;
 
 /**
  * \returns -1 if N is deficient
  * \returns 1 if N is abundant
  * \returns 0 if N is perfect
- **/
+ */
 char get_perfect_number(unsigned long N)
 {
     unsigned long sum = 1;
@@ -55,7 +55,7 @@ char get_perfect_number(unsigned long N)
 
 /**
  * Is the given number an abundant number (1) or not (0)
- **/
+ */
 char is_abundant(unsigned long N)
 {
     // return abundant_flags[N >> 3] & (1 << N % 8) ? 1 : 0;
@@ -66,7 +66,7 @@ char is_abundant(unsigned long N)
 
 /**
  * Find the next abundant number after N and not including N
- **/
+ */
 unsigned long get_next_abundant(unsigned long N)
 {
     unsigned long i;
@@ -81,13 +81,13 @@ unsigned long get_next_abundant(unsigned long N)
  * of two abundant numbers.
  * \returns 1 - if yes
  * \returns 0 - if not
- **/
+ */
 char is_sum_of_abundant(unsigned long N)
 {
-    /** optimized logic:
+    /* optimized logic:
      * i + j = N   where both i and j should be abundant
      * hence we can simply check for j = N - i as we loop through i
-     **/
+     */
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
          i = get_next_abundant(i))
         if (is_abundant(N - i))
@@ -107,9 +107,9 @@ int main(int argc, char **argv)
     if (argc == 2)
         MAX_N = strtoul(argv[1], NULL, 10);
 
-    /** byte array to store flags to identify abundant numbers
+    /* byte array to store flags to identify abundant numbers
      * the flags are identified by bits
-     **/
+     */
     abundant_flags = (char *)calloc(MAX_N >> 3, 1);
     if (!abundant_flags)
     {

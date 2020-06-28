@@ -52,6 +52,11 @@ int main()
 {
     int n;  // size of string
     scanf("%d\n", &n);
+    if (n <= 0 || n >= 1000)
+    {
+        perror("Input number out of range: >0 and <1000\n");
+        return -1;
+    }
     char *str = (char *)malloc(n * sizeof(char));
     scanf("%s", str);
     PrintSortedPermutations(str);

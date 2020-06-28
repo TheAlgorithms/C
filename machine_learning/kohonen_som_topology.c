@@ -28,14 +28,12 @@
 #endif
 
 #ifndef max
-#define max(a, b)                                              \
-    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value \
-                               */
+/** shorthand for maximum value */
+#define max(a, b) (((a) > (b)) ? (a) : (b))
 #endif
 #ifndef min
-#define min(a, b)                                              \
-    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value \
-                               */
+/** shorthand for minimum value */
+#define min(a, b) (((a) < (b)) ? (a) : (b))
 #endif
 
 /** to store info regarding 3D arrays */
@@ -193,8 +191,8 @@ int save_u_matrix(const char *fname, struct array_3d *W)
  * \param[in] X matrix to search
  * \param[in] N number of points in the vector
  * \param[out] val minimum value found
- * \param[out] idx_x x-index where minimum value was found
- * \param[out] idx_y y-index where minimum value was found
+ * \param[out] x_idx x-index where minimum value was found
+ * \param[out] y_idx y-index where minimum value was found
  */
 void get_min_2d(double **X, int N, double *val, int *x_idx, int *y_idx)
 {
@@ -300,7 +298,6 @@ double update_weights(const double *X, struct array_3d *W, double **D,
  *
  * \param[in] X data set
  * \param[in,out] W weights matrix
- * \param[in] D temporary vector to store distances
  * \param[in] num_samples number of output points
  * \param[in] num_features number of features per input sample
  * \param[in] num_out number of output points
