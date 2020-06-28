@@ -1,4 +1,5 @@
 *.swp
 *.exe
 *.out
+.vscode/
 build/
