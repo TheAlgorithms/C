@@ -21,7 +21,7 @@
  * \f}
  * The computation results are stored to a text file `midpoint_euler.csv` and
  * the exact soltuion results in `exact.csv` for comparison. <img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_midpoint_euler.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/ode_midpoint_euler.svg"
  * alt="Implementation solution"/>
  *
  * To implement [Van der Pol
@@ -53,9 +53,9 @@
  */
 void problem(const double *x, double *y, double *dy)
 {
-    const double omega = 1.F;      // some const for the problem
-    dy[0] = y[1];                  // x dot
-    dy[1] = -omega * omega * y[0]; // y dot
+    const double omega = 1.F;       // some const for the problem
+    dy[0] = y[1];                   // x dot
+    dy[1] = -omega * omega * y[0];  // y dot
 }
 
 /**
@@ -86,13 +86,11 @@ void midpoint_euler_step(double dx, double *x, double *y, double *dy)
     double tmp_x = (*x) + 0.5 * dx;
     double tmp_y[order];
     int o;
-    for (o = 0; o < order; o++)
-        tmp_y[o] = y[o] + 0.5 * dx * dy[o];
+    for (o = 0; o < order; o++) tmp_y[o] = y[o] + 0.5 * dx * dy[o];
 
     problem(&tmp_x, tmp_y, dy);
 
-    for (o = 0; o < order; o++)
-        y[o] += dx * dy[o];
+    for (o = 0; o < order; o++) y[o] += dx * dy[o];
 }
 
 /**
@@ -124,13 +122,13 @@ double midpoint_euler(double dx, double x0, double x_max, double *y,
     /* start integration */
     clock_t t1 = clock();
     double x = x0;
-    do // iterate for each step of independent variable
+    do  // iterate for each step of independent variable
     {
         if (save_to_file && fp)
-            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
-        midpoint_euler_step(dx, &x, y, dy); // perform integration
-        x += dx;                            // update step
-    } while (x <= x_max); // till upper limit of independent variable
+            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
+        midpoint_euler_step(dx, &x, y, dy);  // perform integration
+        x += dx;                             // update step
+    } while (x <= x_max);  // till upper limit of independent variable
     /* end of integration */
     clock_t t2 = clock();
 
@@ -177,7 +175,7 @@ int main(int argc, char *argv[])
 
     do
     {
-        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
+        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
         exact_solution(&x, y);
         x += step_size;
     } while (x <= X_MAX);

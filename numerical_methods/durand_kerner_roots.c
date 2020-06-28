@@ -21,10 +21,10 @@
  * Sample implementation results to compute approximate roots of the equation
  * \f$x^4-1=0\f$:\n
  * <img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_error.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/durand_kerner_error.svg"
  * width="400" alt="Error evolution during root approximations computed every
  * iteration."/> <img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_roots.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/durand_kerner_roots.svg"
  * width="400" alt="Roots evolution - shows the initial approximation of the
  * roots and their convergence to a final approximation along with the iterative
  * approximations" />
@@ -53,8 +53,7 @@ long double complex poly_function(double *coeffs, unsigned int degree,
     long double complex out = 0.;
     unsigned int n;
 
-    for (n = 0; n < degree; n++)
-        out += coeffs[n] * cpow(x, degree - n - 1);
+    for (n = 0; n < degree; n++) out += coeffs[n] * cpow(x, degree - n - 1);
 
     return out;
 }
@@ -102,8 +101,9 @@ int main(int argc, char **argv)
 
     if (argc < 2)
     {
-        printf("Please pass the coefficients of the polynomial as commandline "
-               "arguments.\n");
+        printf(
+            "Please pass the coefficients of the polynomial as commandline "
+            "arguments.\n");
         return 0;
     }
 
@@ -224,8 +224,7 @@ int main(int argc, char **argv)
         if (iter % 500 == 0)
         {
             printf("Iter: %lu\t", iter);
-            for (n = 0; n < degree - 1; n++)
-                printf("\t%s", complex_str(s0[n]));
+            for (n = 0; n < degree - 1; n++) printf("\t%s", complex_str(s0[n]));
             printf("\t\tabsolute average change: %.4g\n", tol_condition);
         }
 
@@ -241,8 +240,7 @@ end:
 #endif
 
     printf("\nIterations: %lu\n", iter);
-    for (n = 0; n < degree - 1; n++)
-        printf("\t%s\n", complex_str(s0[n]));
+    for (n = 0; n < degree - 1; n++) printf("\t%s\n", complex_str(s0[n]));
     printf("absolute average change: %.4g\n", tol_condition);
     printf("Time taken: %.4g sec\n",
            (end_time - start_time) / (double)CLOCKS_PER_SEC);

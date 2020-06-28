@@ -21,7 +21,7 @@
  * \f}
  * The computation results are stored to a text file `semi_implicit_euler.csv`
  * and the exact soltuion results in `exact.csv` for comparison. <img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_semi_implicit_euler.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/ode_semi_implicit_euler.svg"
  * alt="Implementation solution"/>
  *
  * To implement [Van der Pol
@@ -33,7 +33,7 @@
  * dy[1] = mu * (1.f - y[0] * y[0]) * y[1] - y[0];
  * ```
  * <a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator"><img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/van_der_pol_implicit_euler.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/van_der_pol_implicit_euler.svg"
  * alt="Van der Pol Oscillator solution"/></a>
  *
  * \see ode_forward_euler.c, ode_midpoint_euler.c
@@ -57,9 +57,9 @@
  */
 void problem(const double *x, double *y, double *dy)
 {
-    const double omega = 1.F;      // some const for the problem
-    dy[0] = y[1];                  // x dot
-    dy[1] = -omega * omega * y[0]; // y dot
+    const double omega = 1.F;       // some const for the problem
+    dy[0] = y[1];                   // x dot
+    dy[1] = -omega * omega * y[0];  // y dot
 }
 
 /**
@@ -86,13 +86,13 @@ void semi_implicit_euler_step(double dx, double *x, double *y, double *dy)
 {
     int o;
 
-    problem(x, y, dy);  // update dy once
-    y[0] += dx * dy[0]; // update y0
+    problem(x, y, dy);   // update dy once
+    y[0] += dx * dy[0];  // update y0
 
-    problem(x, y, dy); // update dy once more
+    problem(x, y, dy);  // update dy once more
 
     for (o = 1; o < order; o++)
-        y[o] += dx * dy[o]; // update remaining using new dy
+        y[o] += dx * dy[o];  // update remaining using new dy
     *x += dx;
 }
 
@@ -125,13 +125,13 @@ double semi_implicit_euler(double dx, double x0, double x_max, double *y,
     /* start integration */
     clock_t t1 = clock();
     double x = x0;
-    do // iterate for each step of independent variable
+    do  // iterate for each step of independent variable
     {
         if (save_to_file && fp)
-            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
-        semi_implicit_euler_step(dx, &x, y, dy); // perform integration
-        x += dx;                                 // update step
-    } while (x <= x_max); // till upper limit of independent variable
+            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
+        semi_implicit_euler_step(dx, &x, y, dy);  // perform integration
+        x += dx;                                  // update step
+    } while (x <= x_max);  // till upper limit of independent variable
     /* end of integration */
     clock_t t2 = clock();
 
@@ -178,7 +178,7 @@ int main(int argc, char *argv[])
 
     do
     {
-        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
+        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
         exact_solution(&x, y);
         x += step_size;
     } while (x <= X_MAX);

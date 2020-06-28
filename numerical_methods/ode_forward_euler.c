@@ -22,7 +22,7 @@
  * The computation results are stored to a text file `forward_euler.csv` and the
  * exact soltuion results in `exact.csv` for comparison.
  * <img
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/ode_forward_euler.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/numerical_methods/ode_forward_euler.svg"
  * alt="Implementation solution"/>
  *
  * To implement [Van der Pol
@@ -54,9 +54,9 @@
  */
 void problem(const double *x, double *y, double *dy)
 {
-    const double omega = 1.F;      // some const for the problem
-    dy[0] = y[1];                  // x dot
-    dy[1] = -omega * omega * y[0]; // y dot
+    const double omega = 1.F;       // some const for the problem
+    dy[0] = y[1];                   // x dot
+    dy[1] = -omega * omega * y[0];  // y dot
 }
 
 /**
@@ -83,8 +83,7 @@ void forward_euler_step(const double dx, const double *x, double *y, double *dy)
 {
     int o;
     problem(x, y, dy);
-    for (o = 0; o < order; o++)
-        y[o] += dx * dy[o];
+    for (o = 0; o < order; o++) y[o] += dx * dy[o];
 }
 
 /**
@@ -116,13 +115,13 @@ double forward_euler(double dx, double x0, double x_max, double *y,
     /* start integration */
     clock_t t1 = clock();
     double x = x0;
-    do // iterate for each step of independent variable
+    do  // iterate for each step of independent variable
     {
         if (save_to_file && fp)
-            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
-        forward_euler_step(dx, &x, y, dy); // perform integration
-        x += dx;                           // update step
-    } while (x <= x_max); // till upper limit of independent variable
+            fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
+        forward_euler_step(dx, &x, y, dy);  // perform integration
+        x += dx;                            // update step
+    } while (x <= x_max);  // till upper limit of independent variable
     /* end of integration */
     clock_t t2 = clock();
 
@@ -169,7 +168,7 @@ int main(int argc, char *argv[])
 
     do
     {
-        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]); // write to file
+        fprintf(fp, "%.4g,%.4g,%.4g\n", x, y[0], y[1]);  // write to file
         exact_solution(&x, y);
         x += step_size;
     } while (x <= X_MAX);

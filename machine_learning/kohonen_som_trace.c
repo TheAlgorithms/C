@@ -16,18 +16,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#ifdef _OPENMP // check if OpenMP based parallellization is available
+#ifdef _OPENMP  // check if OpenMP based parallellization is available
 #include <omp.h>
 #endif
 
 #ifndef max
-#define max(a, b)                                                              \
-    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value                 \
+#define max(a, b)                                              \
+    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value \
                                */
 #endif
 #ifndef min
-#define min(a, b)                                                              \
-    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value                 \
+#define min(a, b)                                              \
+    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value \
                                */
 #endif
 
@@ -64,7 +64,7 @@ int save_nd_data(const char *fname, double **X, int num_points,
                  int num_features)
 {
     FILE *fp = fopen(fname, "wt");
-    if (!fp) // error with fopen
+    if (!fp)  // error with fopen
     {
         char msg[120];
         sprintf(msg, "File error (%s): ", fname);
@@ -72,16 +72,16 @@ int save_nd_data(const char *fname, double **X, int num_points,
         return -1;
     }
 
-    for (int i = 0; i < num_points; i++) // for each point in the array
+    for (int i = 0; i < num_points; i++)  // for each point in the array
     {
-        for (int j = 0; j < num_features; j++) // for each feature in the array
+        for (int j = 0; j < num_features; j++)  // for each feature in the array
         {
-            fprintf(fp, "%.4g", X[i][j]); // print the feature value
-            if (j < num_features - 1)     // if not the last feature
-                fprintf(fp, ",");         // suffix comma
+            fprintf(fp, "%.4g", X[i][j]);  // print the feature value
+            if (j < num_features - 1)      // if not the last feature
+                fprintf(fp, ",");          // suffix comma
         }
-        if (i < num_points - 1) // if not the last row
-            fprintf(fp, "\n");  // start a new line
+        if (i < num_points - 1)  // if not the last row
+            fprintf(fp, "\n");   // start a new line
     }
     fclose(fp);
     return 0;
@@ -96,12 +96,12 @@ int save_nd_data(const char *fname, double **X, int num_points,
  */
 void get_min_1d(double const *X, int N, double *val, int *idx)
 {
-    val[0] = INFINITY; // initial min value
+    val[0] = INFINITY;  // initial min value
 
-    for (int i = 0; i < N; i++) // check each value
+    for (int i = 0; i < N; i++)  // check each value
     {
-        if (X[i] < val[0]) // if a lower value is found
-        {                  // save the value and its index
+        if (X[i] < val[0])  // if a lower value is found
+        {                   // save the value and its index
             idx[0] = i;
             val[0] = X[i];
         }
@@ -212,8 +212,8 @@ void kohonen_som_tracer(double **X, double *const *W, int num_samples,
 void test_circle(double *const *data, int N)
 {
     const double R = 0.75, dr = 0.3;
-    double a_t = 0., b_t = 2.f * M_PI; // theta random between 0 and 2*pi
-    double a_r = R - dr, b_r = R + dr; // radius random between R-dr and R+dr
+    double a_t = 0., b_t = 2.f * M_PI;  // theta random between 0 and 2*pi
+    double a_r = R - dr, b_r = R + dr;  // radius random between R-dr and R+dr
     int i;
 
 #ifdef _OPENMP
@@ -221,9 +221,9 @@ void test_circle(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        double r = _random(a_r, b_r);     // random radius
-        double theta = _random(a_t, b_t); // random theta
-        data[i][0] = r * cos(theta);      // convert from polar to cartesian
+        double r = _random(a_r, b_r);      // random radius
+        double theta = _random(a_t, b_t);  // random theta
+        data[i][0] = r * cos(theta);       // convert from polar to cartesian
         data[i][1] = r * sin(theta);
     }
 }
@@ -245,7 +245,7 @@ void test_circle(double *const *data, int N)
  *      "w12.csv" title "w2"
  * ```
  * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test1.svg)
+ * output](https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/test1.svg)
  */
 void test1()
 {
@@ -259,28 +259,28 @@ void test1()
     // number of clusters nodes * 2
     double **W = (double **)malloc(num_out * sizeof(double *));
 
-    for (int i = 0; i < max(num_out, N); i++) // loop till max(N, num_out)
+    for (int i = 0; i < max(num_out, N); i++)  // loop till max(N, num_out)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             W[i] = (double *)malloc(features * sizeof(double));
 #ifdef _OPENMP
 #pragma omp for
 #endif
             // preallocate with random initial weights
-            for (j = 0; j < features; j++)
-                W[i][j] = _random(-1, 1);
+            for (j = 0; j < features; j++) W[i][j] = _random(-1, 1);
         }
     }
 
-    test_circle(X, N); // create test data around circumference of a circle
-    save_nd_data("test1.csv", X, N, features); // save test data points
+    test_circle(X, N);  // create test data around circumference of a circle
+    save_nd_data("test1.csv", X, N, features);  // save test data points
     save_nd_data("w11.csv", W, num_out,
-                 features); // save initial random weights
-    kohonen_som_tracer(X, W, N, features, num_out, 0.1); // train the SOM
-    save_nd_data("w12.csv", W, num_out, features); // save the resultant weights
+                 features);  // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.1);  // train the SOM
+    save_nd_data("w12.csv", W, num_out,
+                 features);  // save the resultant weights
 
     for (int i = 0; i < max(num_out, N); i++)
     {
@@ -315,10 +315,10 @@ void test_lamniscate(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        double dx = _random(-dr, dr);    // random change in x
-        double dy = _random(-dr, dr);    // random change in y
-        double theta = _random(0, M_PI); // random theta
-        data[i][0] = dx + cos(theta);    // convert from polar to cartesian
+        double dx = _random(-dr, dr);     // random change in x
+        double dy = _random(-dr, dr);     // random change in y
+        double theta = _random(0, M_PI);  // random theta
+        data[i][0] = dx + cos(theta);     // convert from polar to cartesian
         data[i][1] = dy + sin(2. * theta) / 2.f;
     }
 }
@@ -342,7 +342,7 @@ void test_lamniscate(double *const *data, int N)
  *      "w22.csv" title "w2"
  * ```
  * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test2.svg)
+ * output](https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/test2.svg)
  */
 void test2()
 {
@@ -353,9 +353,9 @@ void test2()
     double **W = (double **)malloc(num_out * sizeof(double *));
     for (int i = 0; i < max(num_out, N); i++)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             W[i] = (double *)malloc(features * sizeof(double));
 
@@ -363,17 +363,17 @@ void test2()
 #pragma omp for
 #endif
             // preallocate with random initial weights
-            for (j = 0; j < features; j++)
-                W[i][j] = _random(-1, 1);
+            for (j = 0; j < features; j++) W[i][j] = _random(-1, 1);
         }
     }
 
-    test_lamniscate(X, N); // create test data around the lamniscate
-    save_nd_data("test2.csv", X, N, features); // save test data points
+    test_lamniscate(X, N);  // create test data around the lamniscate
+    save_nd_data("test2.csv", X, N, features);  // save test data points
     save_nd_data("w21.csv", W, num_out,
-                 features); // save initial random weights
-    kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
-    save_nd_data("w22.csv", W, num_out, features); // save the resultant weights
+                 features);  // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.01);  // train the SOM
+    save_nd_data("w22.csv", W, num_out,
+                 features);  // save the resultant weights
 
     for (int i = 0; i < max(num_out, N); i++)
     {
@@ -398,15 +398,15 @@ void test2()
  */
 void test_3d_classes(double *const *data, int N)
 {
-    const double R = 0.1; // radius of cluster
+    const double R = 0.1;  // radius of cluster
     int i;
     const int num_classes = 4;
     const double centres[][3] = {
         // centres of each class cluster
-        {.5, .5, .5},   // centre of class 1
-        {.5, -.5, -.5}, // centre of class 2
-        {-.5, .5, .5},  // centre of class 3
-        {-.5, -.5 - .5} // centre of class 4
+        {.5, .5, .5},    // centre of class 1
+        {.5, -.5, -.5},  // centre of class 2
+        {-.5, .5, .5},   // centre of class 3
+        {-.5, -.5 - .5}  // centre of class 4
     };
 
 #ifdef _OPENMP
@@ -414,7 +414,8 @@ void test_3d_classes(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        int class = rand() % num_classes; // select a random class for the point
+        int class =
+            rand() % num_classes;  // select a random class for the point
 
         // create random coordinates (x,y,z) around the centre of the class
         data[i][0] = _random(centres[class][0] - R, centres[class][0] + R);
@@ -445,7 +446,7 @@ void test_3d_classes(double *const *data, int N)
  *      "w32.csv" title "w2"
  * ```
  * ![Sample execution
- * output](https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/test3.svg)
+ * output](https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/test3.svg)
  */
 void test3()
 {
@@ -456,9 +457,9 @@ void test3()
     double **W = (double **)malloc(num_out * sizeof(double *));
     for (int i = 0; i < max(num_out, N); i++)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             W[i] = (double *)malloc(features * sizeof(double));
 
@@ -466,17 +467,17 @@ void test3()
 #pragma omp for
 #endif
             // preallocate with random initial weights
-            for (j = 0; j < features; j++)
-                W[i][j] = _random(-1, 1);
+            for (j = 0; j < features; j++) W[i][j] = _random(-1, 1);
         }
     }
 
-    test_3d_classes(X, N); // create test data around the lamniscate
-    save_nd_data("test3.csv", X, N, features); // save test data points
+    test_3d_classes(X, N);  // create test data around the lamniscate
+    save_nd_data("test3.csv", X, N, features);  // save test data points
     save_nd_data("w31.csv", W, num_out,
-                 features); // save initial random weights
-    kohonen_som_tracer(X, W, N, features, num_out, 0.01); // train the SOM
-    save_nd_data("w32.csv", W, num_out, features); // save the resultant weights
+                 features);  // save initial random weights
+    kohonen_som_tracer(X, W, N, features, num_out, 0.01);  // train the SOM
+    save_nd_data("w32.csv", W, num_out,
+                 features);  // save the resultant weights
 
     for (int i = 0; i < max(num_out, N); i++)
     {
@@ -524,7 +525,8 @@ int main(int argc, char **argv)
     end_clk = clock();
     printf("Test 3 completed in %.4g sec\n",
            get_clock_diff(start_clk, end_clk));
-    printf("(Note: Calculated times include: creating test sets, training "
-           "model and writing files to disk.)\n\n");
+    printf(
+        "(Note: Calculated times include: creating test sets, training "
+        "model and writing files to disk.)\n\n");
     return 0;
 }

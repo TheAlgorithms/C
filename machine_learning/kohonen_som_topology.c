@@ -11,7 +11,7 @@
  * data points in a much higher dimesional space by creating an equivalent in a
  * 2-dimensional space.
  * <img alt="Trained topological maps for the test cases in the program"
- * src="https://raw.githubusercontent.com/kvedala/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
+ * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
  * />
  * \warning MSVC 2019 compiler generates code that does not execute as expected.
  * However, MinGW, Clang for GCC and Clang for MSVC compilers on windows perform
@@ -23,18 +23,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#ifdef _OPENMP // check if OpenMP based parallellization is available
+#ifdef _OPENMP  // check if OpenMP based parallellization is available
 #include <omp.h>
 #endif
 
 #ifndef max
-#define max(a, b)                                                              \
-    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value                 \
+#define max(a, b)                                              \
+    (((a) > (b)) ? (a) : (b)) /**< shorthand for maximum value \
                                */
 #endif
 #ifndef min
-#define min(a, b)                                                              \
-    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value                 \
+#define min(a, b)                                              \
+    (((a) < (b)) ? (a) : (b)) /**< shorthand for minimum value \
                                */
 #endif
 
@@ -98,7 +98,7 @@ int save_2d_data(const char *fname, double **X, int num_points,
                  int num_features)
 {
     FILE *fp = fopen(fname, "wt");
-    if (!fp) // error with fopen
+    if (!fp)  // error with fopen
     {
         char msg[120];
         sprintf(msg, "File error (%s): ", fname);
@@ -106,16 +106,16 @@ int save_2d_data(const char *fname, double **X, int num_points,
         return -1;
     }
 
-    for (int i = 0; i < num_points; i++) // for each point in the array
+    for (int i = 0; i < num_points; i++)  // for each point in the array
     {
-        for (int j = 0; j < num_features; j++) // for each feature in the array
+        for (int j = 0; j < num_features; j++)  // for each feature in the array
         {
-            fprintf(fp, "%.4g", X[i][j]); // print the feature value
-            if (j < num_features - 1)     // if not the last feature
-                fputc(',', fp);           // suffix comma
+            fprintf(fp, "%.4g", X[i][j]);  // print the feature value
+            if (j < num_features - 1)      // if not the last feature
+                fputc(',', fp);            // suffix comma
         }
-        if (i < num_points - 1) // if not the last row
-            fputc('\n', fp);    // start a new line
+        if (i < num_points - 1)  // if not the last row
+            fputc('\n', fp);     // start a new line
     }
     fclose(fp);
     return 0;
@@ -134,7 +134,7 @@ int save_2d_data(const char *fname, double **X, int num_points,
 int save_u_matrix(const char *fname, struct array_3d *W)
 {
     FILE *fp = fopen(fname, "wt");
-    if (!fp) // error with fopen
+    if (!fp)  // error with fopen
     {
         char msg[120];
         sprintf(msg, "File error (%s): ", fname);
@@ -144,9 +144,9 @@ int save_u_matrix(const char *fname, struct array_3d *W)
 
     int R = max(W->dim1 >> 3, 2); /* neighborhood range */
 
-    for (int i = 0; i < W->dim1; i++) // for each x
+    for (int i = 0; i < W->dim1; i++)  // for each x
     {
-        for (int j = 0; j < W->dim2; j++) // for each y
+        for (int j = 0; j < W->dim2; j++)  // for each y
         {
             double distance = 0.f;
             int k;
@@ -159,12 +159,12 @@ int save_u_matrix(const char *fname, struct array_3d *W)
 #ifdef _OPENMP
 #pragma omp parallel for reduction(+ : distance)
 #endif
-            for (l = from_x; l < to_x; l++) // scan neighborhoor in x
+            for (l = from_x; l < to_x; l++)  // scan neighborhoor in x
             {
-                for (int m = from_y; m < to_y; m++) // scan neighborhood in y
+                for (int m = from_y; m < to_y; m++)  // scan neighborhood in y
                 {
                     double d = 0.f;
-                    for (k = 0; k < W->dim3; k++) // for each feature
+                    for (k = 0; k < W->dim3; k++)  // for each feature
                     {
                         double *w1 = data_3d(W, i, j, k);
                         double *w2 = data_3d(W, l, m, k);
@@ -176,13 +176,13 @@ int save_u_matrix(const char *fname, struct array_3d *W)
                 }
             }
 
-            distance /= R * R;             // mean distance from neighbors
-            fprintf(fp, "%.4g", distance); // print the mean separation
-            if (j < W->dim2 - 1)           // if not the last column
-                fputc(',', fp);            // suffix comma
+            distance /= R * R;              // mean distance from neighbors
+            fprintf(fp, "%.4g", distance);  // print the mean separation
+            if (j < W->dim2 - 1)            // if not the last column
+                fputc(',', fp);             // suffix comma
         }
-        if (i < W->dim1 - 1) // if not the last row
-            fputc('\n', fp); // start a new line
+        if (i < W->dim1 - 1)  // if not the last row
+            fputc('\n', fp);  // start a new line
     }
     fclose(fp);
     return 0;
@@ -198,14 +198,14 @@ int save_u_matrix(const char *fname, struct array_3d *W)
  */
 void get_min_2d(double **X, int N, double *val, int *x_idx, int *y_idx)
 {
-    val[0] = INFINITY; // initial min value
+    val[0] = INFINITY;  // initial min value
 
-    for (int i = 0; i < N; i++) // traverse each x-index
+    for (int i = 0; i < N; i++)  // traverse each x-index
     {
-        for (int j = 0; j < N; j++) // traverse each y-index
+        for (int j = 0; j < N; j++)  // traverse each y-index
         {
-            if (X[i][j] < val[0]) // if a lower value is found
-            {                     // save the value and its index
+            if (X[i][j] < val[0])  // if a lower value is found
+            {                      // save the value and its index
                 x_idx[0] = i;
                 y_idx[0] = j;
                 val[0] = X[i][j];
@@ -314,7 +314,7 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
     for (int i = 0; i < num_out; i++)
         D[i] = (double *)malloc(num_out * sizeof(double));
 
-    double dmin = 1.f; // average minimum distance of all samples
+    double dmin = 1.f;  // average minimum distance of all samples
 
     // Loop alpha from 1 to slpha_min
     for (double alpha = 1.f; alpha > alpha_min && dmin > 1e-3;
@@ -339,8 +339,7 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
     }
     putchar('\n');
 
-    for (int i = 0; i < num_out; i++)
-        free(D[i]);
+    for (int i = 0; i < num_out; i++) free(D[i]);
     free(D);
 }
 
@@ -356,15 +355,15 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
  */
 void test_2d_classes(double *const *data, int N)
 {
-    const double R = 0.3; // radius of cluster
+    const double R = 0.3;  // radius of cluster
     int i;
     const int num_classes = 4;
     const double centres[][2] = {
         // centres of each class cluster
-        {.5, .5},  // centre of class 1
-        {.5, -.5}, // centre of class 2
-        {-.5, .5}, // centre of class 3
-        {-.5, -.5} // centre of class 4
+        {.5, .5},   // centre of class 1
+        {.5, -.5},  // centre of class 2
+        {-.5, .5},  // centre of class 3
+        {-.5, -.5}  // centre of class 4
     };
 
 #ifdef _OPENMP
@@ -372,7 +371,8 @@ void test_2d_classes(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        int class = rand() % num_classes; // select a random class for the point
+        int class =
+            rand() % num_classes;  // select a random class for the point
 
         // create random coordinates (x,y,z) around the centre of the class
         data[i][0] = _random(centres[class][0] - R, centres[class][0] + R);
@@ -397,7 +397,7 @@ void test1()
 {
     int j, N = 300;
     int features = 2;
-    int num_out = 30; // image size - N x N
+    int num_out = 30;  // image size - N x N
 
     // 2D space, hence size = number of rows * 2
     double **X = (double **)malloc(N * sizeof(double *));
@@ -408,13 +408,13 @@ void test1()
     W.dim2 = num_out;
     W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
-                              sizeof(double)); // assign rows
+                              sizeof(double));  // assign rows
 
-    for (int i = 0; i < max(num_out, N); i++) // loop till max(N, num_out)
+    for (int i = 0; i < max(num_out, N); i++)  // loop till max(N, num_out)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             for (int k = 0; k < num_out; k++)
             {
@@ -431,14 +431,13 @@ void test1()
         }
     }
 
-    test_2d_classes(X, N); // create test data around circumference of a circle
-    save_2d_data("test1.csv", X, N, features); // save test data points
-    save_u_matrix("w11.csv", &W);              // save initial random weights
-    kohonen_som(X, &W, N, features, num_out, 1e-4); // train the SOM
-    save_u_matrix("w12.csv", &W); // save the resultant weights
+    test_2d_classes(X, N);  // create test data around circumference of a circle
+    save_2d_data("test1.csv", X, N, features);  // save test data points
+    save_u_matrix("w11.csv", &W);               // save initial random weights
+    kohonen_som(X, &W, N, features, num_out, 1e-4);  // train the SOM
+    save_u_matrix("w12.csv", &W);  // save the resultant weights
 
-    for (int i = 0; i < N; i++)
-        free(X[i]);
+    for (int i = 0; i < N; i++) free(X[i]);
     free(X);
     free(W.data);
 }
@@ -455,15 +454,15 @@ void test1()
  */
 void test_3d_classes1(double *const *data, int N)
 {
-    const double R = 0.2; // radius of cluster
+    const double R = 0.2;  // radius of cluster
     int i;
     const int num_classes = 4;
     const double centres[][3] = {
         // centres of each class cluster
-        {.5, .5, .5},   // centre of class 1
-        {.5, -.5, -.5}, // centre of class 2
-        {-.5, .5, .5},  // centre of class 3
-        {-.5, -.5 - .5} // centre of class 4
+        {.5, .5, .5},    // centre of class 1
+        {.5, -.5, -.5},  // centre of class 2
+        {-.5, .5, .5},   // centre of class 3
+        {-.5, -.5 - .5}  // centre of class 4
     };
 
 #ifdef _OPENMP
@@ -471,7 +470,8 @@ void test_3d_classes1(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        int class = rand() % num_classes; // select a random class for the point
+        int class =
+            rand() % num_classes;  // select a random class for the point
 
         // create random coordinates (x,y,z) around the centre of the class
         data[i][0] = _random(centres[class][0] - R, centres[class][0] + R);
@@ -497,7 +497,7 @@ void test2()
 {
     int j, N = 500;
     int features = 3;
-    int num_out = 30; // image size - N x N
+    int num_out = 30;  // image size - N x N
 
     // 3D space, hence size = number of rows * 3
     double **X = (double **)malloc(N * sizeof(double *));
@@ -508,13 +508,13 @@ void test2()
     W.dim2 = num_out;
     W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
-                              sizeof(double)); // assign rows
+                              sizeof(double));  // assign rows
 
-    for (int i = 0; i < max(num_out, N); i++) // loop till max(N, num_out)
+    for (int i = 0; i < max(num_out, N); i++)  // loop till max(N, num_out)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             for (int k = 0; k < num_out; k++)
             {
@@ -522,7 +522,7 @@ void test2()
 #pragma omp for
 #endif
                 for (j = 0; j < features; j++)
-                { // preallocate with random initial weights
+                {  // preallocate with random initial weights
                     double *w = data_3d(&W, i, k, j);
                     w[0] = _random(-5, 5);
                 }
@@ -530,14 +530,13 @@ void test2()
         }
     }
 
-    test_3d_classes1(X, N);                    // create test data
-    save_2d_data("test2.csv", X, N, features); // save test data points
-    save_u_matrix("w21.csv", &W);              // save initial random weights
-    kohonen_som(X, &W, N, features, num_out, 1e-4); // train the SOM
-    save_u_matrix("w22.csv", &W); // save the resultant weights
+    test_3d_classes1(X, N);                     // create test data
+    save_2d_data("test2.csv", X, N, features);  // save test data points
+    save_u_matrix("w21.csv", &W);               // save initial random weights
+    kohonen_som(X, &W, N, features, num_out, 1e-4);  // train the SOM
+    save_u_matrix("w22.csv", &W);  // save the resultant weights
 
-    for (int i = 0; i < N; i++)
-        free(X[i]);
+    for (int i = 0; i < N; i++) free(X[i]);
     free(X);
     free(W.data);
 }
@@ -554,19 +553,19 @@ void test2()
  */
 void test_3d_classes2(double *const *data, int N)
 {
-    const double R = 0.2; // radius of cluster
+    const double R = 0.2;  // radius of cluster
     int i;
     const int num_classes = 8;
     const double centres[][3] = {
         // centres of each class cluster
-        {.5, .5, .5},   // centre of class 1
-        {.5, .5, -.5},  // centre of class 2
-        {.5, -.5, .5},  // centre of class 3
-        {.5, -.5, -.5}, // centre of class 4
-        {-.5, .5, .5},  // centre of class 5
-        {-.5, .5, -.5}, // centre of class 6
-        {-.5, -.5, .5}, // centre of class 7
-        {-.5, -.5, -.5} // centre of class 8
+        {.5, .5, .5},    // centre of class 1
+        {.5, .5, -.5},   // centre of class 2
+        {.5, -.5, .5},   // centre of class 3
+        {.5, -.5, -.5},  // centre of class 4
+        {-.5, .5, .5},   // centre of class 5
+        {-.5, .5, -.5},  // centre of class 6
+        {-.5, -.5, .5},  // centre of class 7
+        {-.5, -.5, -.5}  // centre of class 8
     };
 
 #ifdef _OPENMP
@@ -574,7 +573,8 @@ void test_3d_classes2(double *const *data, int N)
 #endif
     for (i = 0; i < N; i++)
     {
-        int class = rand() % num_classes; // select a random class for the point
+        int class =
+            rand() % num_classes;  // select a random class for the point
 
         // create random coordinates (x,y,z) around the centre of the class
         data[i][0] = _random(centres[class][0] - R, centres[class][0] + R);
@@ -609,13 +609,13 @@ void test3()
     W.dim2 = num_out;
     W.dim3 = features;
     W.data = (double *)malloc(num_out * num_out * features *
-                              sizeof(double)); // assign rows
+                              sizeof(double));  // assign rows
 
-    for (int i = 0; i < max(num_out, N); i++) // loop till max(N, num_out)
+    for (int i = 0; i < max(num_out, N); i++)  // loop till max(N, num_out)
     {
-        if (i < N) // only add new arrays if i < N
+        if (i < N)  // only add new arrays if i < N
             X[i] = (double *)malloc(features * sizeof(double));
-        if (i < num_out) // only add new arrays if i < num_out
+        if (i < num_out)  // only add new arrays if i < num_out
         {
             for (int k = 0; k < num_out; k++)
             {
@@ -632,14 +632,13 @@ void test3()
         }
     }
 
-    test_3d_classes2(X, N); // create test data around the lamniscate
-    save_2d_data("test3.csv", X, N, features); // save test data points
-    save_u_matrix("w31.csv", &W);              // save initial random weights
-    kohonen_som(X, &W, N, features, num_out, 0.01); // train the SOM
-    save_u_matrix("w32.csv", &W); // save the resultant weights
+    test_3d_classes2(X, N);  // create test data around the lamniscate
+    save_2d_data("test3.csv", X, N, features);  // save test data points
+    save_u_matrix("w31.csv", &W);               // save initial random weights
+    kohonen_som(X, &W, N, features, num_out, 0.01);  // train the SOM
+    save_u_matrix("w32.csv", &W);  // save the resultant weights
 
-    for (int i = 0; i < N; i++)
-        free(X[i]);
+    for (int i = 0; i < N; i++) free(X[i]);
     free(X);
     free(W.data);
 }
