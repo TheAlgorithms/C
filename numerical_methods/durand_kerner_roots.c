@@ -1,27 +1,54 @@
+/**
+ * @file
+ * \brief Compute all possible approximate roots of any given polynomial using
+ * [Durand Kerner
+ * algorithm](https://en.wikipedia.org/wiki/Durand%E2%80%93Kerner_method)
+ *
+ * \author [Krishna Vedala](https://github.com/kvedala)
+ *
+ * Test the algorithm online:
+ * https://gist.github.com/kvedala/27f1b0b6502af935f6917673ec43bcd7
+ *
+ * Try the highly unstable Wilkinson's polynomial:
+ * ```
+ * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946
+ * -1672280820 40171771630 -756111184500 11310276995381 -135585182899530
+ * 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640
+ * 1206647803780373360 -3599979517947607200 8037811822645051776
+ * -12870931245150988800 13803759753640704000 -8752948036761600000
+ * 2432902008176640000
+ * ```
+ * Sample implementation results to compute approximate roots of the equation
+ * \f$x^4-1=0\f$:\n
+ * <img
+ * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_error.svg"
+ * width="400" alt="Error evolution during root approximations computed every
+ * iteration."/> <img
+ * src="https://raw.githubusercontent.com/kvedala/C/docs/images/numerical_methods/durand_kerner_roots.svg"
+ * width="400" alt="Roots evolution - shows the initial approximation of the
+ * roots and their convergence to a final approximation along with the iterative
+ * approximations" />
+ */
+
+#include <complex.h>
+#include <limits.h>
 #include <math.h>
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <limits.h>
-#include <complex.h>
+#include <time.h>
+
+#define ACCURACY 1e-10 /**< maximum accuracy limit */
 
 /**
- * Test the algorithm online:
- * https://gist.github.com/kvedala/27f1b0b6502af935f6917673ec43bcd7
+ * Evaluate the value of a polynomial with given coefficients
+ * \param[in] coeffs coefficients of the polynomial
+ * \param[in] degree degree of polynomial
+ * \param[in] x point at which to evaluate the polynomial
+ * \returns \f$f(x)\f$
  **/
-
-/***
- * Try the highly unstable Wilkinson's polynomial:
- * ./numerical_methods/durand_kerner_roots.c 1 -210 20615 -1256850 53327946 -1672280820 40171771630 -756111184500 11310276995381 -135585182899530 1307535010540395 -10142299865511450 63030812099294896 -311333643161390640 1206647803780373360 -3599979517947607200 8037811822645051776 -12870931245150988800 13803759753640704000 -8752948036761600000 2432902008176640000
- * */
-
-#define ACCURACY 1e-10
-
-/**
- * define polynomial function
- **/
-long double complex function(double *coeffs, unsigned int degree, long double complex x)
+long double complex poly_function(double *coeffs, unsigned int degree,
+                                  long double complex x)
 {
     long double complex out = 0.;
     unsigned int n;
@@ -32,7 +59,12 @@ long double complex function(double *coeffs, unsigned int degree, long double co
     return out;
 }
 
-static inline char *complex_str(long double complex x)
+/**
+ * create a textual form of complex number
+ * \param[in] x point at which to evaluate the polynomial
+ * \returns pointer to converted string
+ */
+const char *complex_str(long double complex x)
 {
     static char msg[50];
     double r = creal(x);
@@ -43,6 +75,12 @@ static inline char *complex_str(long double complex x)
     return msg;
 }
 
+/**
+ * check for termination condition
+ * \param[in] delta point at which to evaluate the polynomial
+ * \returns 0 if termination not reached
+ * \returns 1 if termination reached
+ */
 char check_termination(long double delta)
 {
     static long double past_delta = INFINITY;
@@ -64,13 +102,17 @@ int main(int argc, char **argv)
 
     if (argc < 2)
     {
-        printf("Please pass the coefficients of the polynomial as commandline arguments.\n");
+        printf("Please pass the coefficients of the polynomial as commandline "
+               "arguments.\n");
         return 0;
     }
 
-    degree = argc - 1;                                                              /*< detected polynomial degree */
-    coeffs = (double *)malloc(degree * sizeof(double));                             /**< store all input coefficients */
-    s0 = (long double complex *)malloc((degree - 1) * sizeof(long double complex)); /**< number of roots = degree-1 */
+    degree = argc - 1; /* detected polynomial degree */
+    coeffs = (double *)malloc(
+        degree * sizeof(double)); /* store all input coefficients */
+    s0 = (long double complex *)malloc(
+        (degree - 1) *
+        sizeof(long double complex)); /* number of roots = degree-1 */
 
     /* initialize random seed: */
     srand(time(NULL));
@@ -111,7 +153,8 @@ int main(int argc, char **argv)
 
         double tmp;
         if (n > 0)
-            coeffs[n] /= tmp; /* numerical errors less when the first coefficient is "1" */
+            coeffs[n] /= tmp; /* numerical errors less when the first
+                                 coefficient is "1" */
         else
         {
             tmp = coeffs[0];
@@ -138,6 +181,7 @@ int main(int argc, char **argv)
     double tol_condition = 1;
     unsigned long iter = 0;
 
+    clock_t end_time, start_time = clock();
     while (!check_termination(tol_condition) && iter < INT_MAX)
     {
         long double complex delta = 0;
@@ -150,7 +194,8 @@ int main(int argc, char **argv)
 
         for (n = 0; n < degree - 1; n++)
         {
-            long double complex numerator = function(coeffs, degree, s0[n]);
+            long double complex numerator =
+                poly_function(coeffs, degree, s0[n]);
             long double complex denominator = 1.0;
             for (i = 0; i < degree - 1; i++)
                 if (i != n)
@@ -160,7 +205,8 @@ int main(int argc, char **argv)
 
             if (isnan(cabsl(delta)) || isinf(cabsl(delta)))
             {
-                printf("\n\nOverflow/underrun error - got value = %Lg", cabsl(delta));
+                printf("\n\nOverflow/underrun error - got value = %Lg",
+                       cabsl(delta));
                 goto end;
             }
 
@@ -188,6 +234,8 @@ int main(int argc, char **argv)
     }
 end:
 
+    end_time = clock();
+
 #if defined(DEBUG) || !defined(NDEBUG)
     fclose(log_file);
 #endif
@@ -196,6 +244,8 @@ end:
     for (n = 0; n < degree - 1; n++)
         printf("\t%s\n", complex_str(s0[n]));
     printf("absolute average change: %.4g\n", tol_condition);
+    printf("Time taken: %.4g sec\n",
+           (end_time - start_time) / (double)CLOCKS_PER_SEC);
 
     free(coeffs);
     free(s0);

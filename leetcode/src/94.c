@@ -1,5 +1,6 @@
-void processTraversal(struct TreeNode *root, int *res, int *size) {
-    if(!root)
+void processTraversal(struct TreeNode *root, int *res, int *size)
+{
+    if (!root)
         return;
     processTraversal(root->left, res, size);
     res[*size] = root->val;
@@ -7,8 +8,9 @@ void processTraversal(struct TreeNode *root, int *res, int *size) {
     processTraversal(root->right, res, size);
 }
 
-int* inorderTraversal(struct TreeNode* root, int* returnSize){
-    int *res = malloc(256*sizeof(int));
+int *inorderTraversal(struct TreeNode *root, int *returnSize)
+{
+    int *res = malloc(256 * sizeof(int));
     *returnSize = 0;
     processTraversal(root, res, returnSize);
     return res;

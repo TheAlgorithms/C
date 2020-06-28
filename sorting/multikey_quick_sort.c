@@ -7,9 +7,9 @@
     demo <file> pmcost    Interactive partial match expers on <file>
  */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include <time.h>
 
 // MULTIKEY QUICKSORT
@@ -18,11 +18,11 @@
 #define min(a, b) ((a) <= (b) ? (a) : (b))
 #endif
 
-#define swap(a, b)      \
-    {                   \
-        char *t = x[a]; \
-        x[a] = x[b];    \
-        x[b] = t;       \
+#define swap(a, b)                                                             \
+    {                                                                          \
+        char *t = x[a];                                                        \
+        x[a] = x[b];                                                           \
+        x[b] = t;                                                              \
     }
 #define i2c(i) x[i][depth]
 
@@ -84,10 +84,7 @@ void ssort1(char *x[], int n, int depth)
     ssort1(x + n - r, r, depth);
 }
 
-void ssort1main(char *x[], int n)
-{
-    ssort1(x, n, 0);
-}
+void ssort1main(char *x[], int n) { ssort1(x, n, 0); }
 
 // ssort2 -- Faster Version of Multikey Quicksort
 
@@ -101,11 +98,11 @@ void vecswap2(char **a, char **b, int n)
     }
 }
 
-#define swap2(a, b)  \
-    {                \
-        t = *(a);    \
-        *(a) = *(b); \
-        *(b) = t;    \
+#define swap2(a, b)                                                            \
+    {                                                                          \
+        t = *(a);                                                              \
+        *(a) = *(b);                                                           \
+        *(b) = t;                                                              \
     }
 #define ptr2char(i) (*(*(i) + depth))
 
@@ -259,7 +256,7 @@ void insert2(char *s)
 
     Tptr pp, *p;
     p = &root;
-    while (pp = *p)
+    while (pp == *p)
     {
         if ((d = *s - pp->splitchar) == 0)
         {
@@ -277,8 +274,7 @@ void insert2(char *s)
         // *p = (Tptr) malloc(sizeof(Tnode));
         if (bufn-- == 0)
         {
-            buf = (Tptr)malloc(BUFSIZE *
-                               sizeof(Tnode));
+            buf = (Tptr)malloc(BUFSIZE * sizeof(Tnode));
             freearr[freen++] = (void *)buf;
             bufn = BUFSIZE - 1;
         }
@@ -364,8 +360,7 @@ void pmsearch(Tptr p, char *s)
         if (p->splitchar && *s)
             pmsearch(p->eqkid, s + 1);
     if (*s == 0 && p->splitchar == 0)
-        srcharr[srchtop++] =
-            (char *)p->eqkid;
+        srcharr[srchtop++] = (char *)p->eqkid;
     if (*s == '.' || *s > p->splitchar)
         pmsearch(p->hikid, s);
 }
@@ -380,16 +375,13 @@ void nearsearch(Tptr p, char *s, int d)
     if (p->splitchar == 0)
     {
         if ((int)strlen(s) <= d)
-            srcharr[srchtop++] =
-                (char *)p->eqkid;
+            srcharr[srchtop++] = (char *)p->eqkid;
     }
     else
-        nearsearch(p->eqkid, *s ? s + 1 : s,
-                   (*s == p->splitchar) ? d : d - 1);
+        nearsearch(p->eqkid, *s ? s + 1 : s, (*s == p->splitchar) ? d : d - 1);
     if (d > 0 || *s > p->splitchar)
         nearsearch(p->hikid, s, d);
 }
-
 
 #define NUMBER_OF_STRING 3
 

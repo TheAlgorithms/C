@@ -21,8 +21,10 @@ unsigned add(hash_set_t *set, void *value)
 
 unsigned put(hash_set_t *set, long long hash, void *value)
 {
-    if (contains_hash(set, hash)) {
-        if (set->keys[retrieve_index_from_hash(hash, set->capacity)] == value) {
+    if (contains_hash(set, hash))
+    {
+        if (set->keys[retrieve_index_from_hash(hash, set->capacity)] == value)
+        {
             return 0;
         }
 
@@ -40,7 +42,10 @@ unsigned put(hash_set_t *set, long long hash, void *value)
 
 int contains(hash_set_t *set, void *value)
 {
-    return set->keys[retrieve_index_from_hash(hash(value), set->capacity)] == value ? 1 : 0;
+    return set->keys[retrieve_index_from_hash(hash(value), set->capacity)] ==
+                   value
+               ? 1
+               : 0;
 }
 
 int contains_hash(hash_set_t *set, long long hash)
@@ -48,10 +53,10 @@ int contains_hash(hash_set_t *set, long long hash)
     return set->keys[retrieve_index_from_hash(hash, set->capacity)] ? 1 : 0;
 }
 
-void delete(hash_set_t *set, void *value) {
+void delete (hash_set_t *set, void *value)
+{
     set->keys[retrieve_index_from_hash(hash(value), set->capacity)] = NULL;
 }
-
 
 // adler_32 hash
 long long hash(void *value)
@@ -62,7 +67,8 @@ long long hash(void *value)
     int b = 0;
     const int MODADLER = 65521;
 
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++)
+    {
         a = (a + str[i]) % MODADLER;
         b = (b + a) % MODADLER;
     }
@@ -79,14 +85,17 @@ void resize(hash_set_t *set)
 {
     void **keys_resized = calloc((set->capacity <<= 1), sizeof(void **));
 
-    for (int i = 0; i < set->length; i++) {
-        keys_resized[retrieve_index_from_hash(hash(set->values[i]), set->capacity)] = set->values[i];
+    for (int i = 0; i < set->length; i++)
+    {
+        keys_resized[retrieve_index_from_hash(hash(set->values[i]),
+                                              set->capacity)] = set->values[i];
     }
 
     free(set->keys);
 
     set->keys = keys_resized;
 
-    void **new_values = (void **)realloc(set->values, set->capacity * sizeof(void **));
+    void **new_values =
+        (void **)realloc(set->values, set->capacity * sizeof(void **));
     set->values = new_values;
 }
