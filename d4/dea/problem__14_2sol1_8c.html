@@ -110,9 +110,13 @@ Include dependency graph for sol1.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a81c1df5c17cb16bcc16e346fcff6fa80"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80">collatz</a> (long long start_num)</td></tr>
+<tr class="memitem:a81c1df5c17cb16bcc16e346fcff6fa80"><td class="memItemLeft" align="right" valign="top"><a id="a81c1df5c17cb16bcc16e346fcff6fa80"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80">collatz</a> (long long start_num)</td></tr>
+<tr class="memdesc:a81c1df5c17cb16bcc16e346fcff6fa80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of collatz sequence for a given starting number. <br /></td></tr>
 <tr class="separator:a81c1df5c17cb16bcc16e346fcff6fa80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dea/problem__14_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dea/problem__14_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -121,114 +125,8 @@ Functions</h2></td></tr>
 <p>Since the computational values for each iteration step are independent, we can compute them in parallel. However, the maximum values should be updated in synchrony so that we do not get into a "race condition".</p>
 <p>To compile with supporintg gcc or clang, the flag "-fopenmp" should be passes while with Microsoft C compiler, the flag "/fopenmp" should be used. If you are using the provided CMAKE compilation, it will automatically detect OPENMP and compile with it for you.</p>
 <p>Automatically detects for OPENMP using the _OPENMP macro. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a81c1df5c17cb16bcc16e346fcff6fa80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81c1df5c17cb16bcc16e346fcff6fa80">&#9670;&nbsp;</a></span>collatz()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long collatz </td>
-          <td>(</td>
-          <td class="paramtype">long long&#160;</td>
-          <td class="paramname"><em>start_num</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Computes the length of collatz sequence for a given starting number </p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> length = 1;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">while</span> (start_num != 1) <span class="comment">/* loop till we reach 1 */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (start_num &amp; 0x01) <span class="comment">/* check for odd */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            start_num = 3 * start_num + 1;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            start_num &gt;&gt;= 1; <span class="comment">/* simpler divide by 2 */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        length++;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> length;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> max_len = 0, max_len_num = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> MAX_NUM = 1000000;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (argc ==</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        2) <span class="comment">/* set commandline argumnet as the maximum iteration number */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        MAX_NUM = atoll(argv[1]);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        printf(<span class="stringliteral">&quot;Maximum number: %lld\n&quot;</span>, MAX_NUM);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#pragma omp parallel for shared(max_len, max_len_num) schedule(guided)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (i = 1; i &lt; MAX_NUM; i++)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="../../df/db3/struct_l.html">L</a> = <a class="code" href="../../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80">collatz</a>(i);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/db3/struct_l.html">L</a> &gt; max_len)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            max_len = <a class="code" href="../../df/db3/struct_l.html">L</a>;     <span class="comment">/* length of sequence */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            max_len_num = i; <span class="comment">/* starting number */</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#if defined(_OPENMP) &amp;&amp; defined(DEBUG)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        printf(<span class="stringliteral">&quot;Thread: %2d\t %3lld: \t%5lld\n&quot;</span>, omp_get_thread_num(), i, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#elif defined(DEBUG)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        printf(<span class="stringliteral">&quot;%3lld: \t%5lld\n&quot;</span>, i, <a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    printf(<span class="stringliteral">&quot;Start: %3lld: \tLength: %5lld\n&quot;</span>, max_len_num, max_len);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dea/problem__14_2sol1_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="170" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astruct_l_html"><div class="ttname"><a href="../../df/db3/struct_l.html">L</a></div><div class="ttdef"><b>Definition:</b> list.h:8</div></div>
-<div class="ttc" id="aproblem__14_2sol1_8c_html_a81c1df5c17cb16bcc16e346fcff6fa80"><div class="ttname"><a href="../../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80">collatz</a></div><div class="ttdeci">long long collatz(long long start_num)</div><div class="ttdef"><b>Definition:</b> sol1.c:27</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

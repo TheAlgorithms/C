@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4" target="_top" xlink:title="Problem statement for a system with first&#45;order differential equations. Updates the system differenti...">
+<g id="a_node2"><a xlink:href="../../d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4" target="_top" xlink:title="Problem statement for a system with first&#45;order differential equations.">
 <polygon fill="white" stroke="black" points="140,-0.5 140,-19.5 191,-19.5 191,-0.5 140,-0.5"/>
 <text text-anchor="middle" x="165.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">problem</text>
 </a>

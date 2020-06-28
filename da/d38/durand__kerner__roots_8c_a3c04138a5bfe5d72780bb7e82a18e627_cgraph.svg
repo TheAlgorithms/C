@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52" target="_top" xlink:title="check for termination condition">
 <polygon fill="white" stroke="black" points="74,-76.5 74,-95.5 170,-95.5 170,-76.5 74,-76.5"/>
 <text text-anchor="middle" x="122" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">check_termination</text>
 </a>
@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7" target="_top" xlink:title="create a textual form of complex number">
 <polygon fill="white" stroke="black" points="87,-38.5 87,-57.5 157,-57.5 157,-38.5 87,-38.5"/>
 <text text-anchor="middle" x="122" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">complex_str</text>
 </a>
@@ -51,7 +51,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#adf4ae062a028c6faf2b96c9c1eb343af" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#adf4ae062a028c6faf2b96c9c1eb343af" target="_top" xlink:title="Evaluate the value of a polynomial with given coefficients.">
 <polygon fill="white" stroke="black" points="85,-0.5 85,-19.5 159,-19.5 159,-0.5 85,-0.5"/>
 <text text-anchor="middle" x="122" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">poly_function</text>
 </a>

@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="store arbitratily large integer values as a linked list of digits.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-1.5 0,-20.5 50,-20.5 50,-1.5 0,-1.5"/>
 <text text-anchor="middle" x="25" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">_big_int</text>
 </a>

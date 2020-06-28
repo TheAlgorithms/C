@@ -112,8 +112,11 @@ Include dependency graph for fibonacci_fast.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a> (unsigned long n, unsigned long *C, unsigned long *D)</td></tr>
+<tr class="memdesc:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the \(n^{th}\) and \(n+1^{th}\) Fibonacci number.  <a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">More...</a><br /></td></tr>
 <tr class="separator:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d99/fibonacci__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d99/fibonacci__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">main function <br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -155,7 +158,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the \(n^{th}\) and \(n+1^{th}\) Fibonacci number. The return variables are C &amp; D respectively. </p>
+
+<p>Returns the \(n^{th}\) and \(n+1^{th}\) Fibonacci number. </p>
+<p>The return variables are C &amp; D respectively. </p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Out of Range checking</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (n &lt; 0)</div>
@@ -195,64 +200,9 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>main function </p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> number, result;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    setlocale(LC_NUMERIC, <span class="stringliteral">&quot;&quot;</span>);  <span class="comment">// format the printf output</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Asks for the number/position of term in Fibonnacci sequence</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (argc == 2)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        number = atoi(argv[1]);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        printf(<span class="stringliteral">&quot;Enter the value of n(n starts from 0 ): &quot;</span>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        scanf(<span class="stringliteral">&quot;%lu&quot;</span>, &amp;number);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a>(number, &amp;result, NULL);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    printf(<span class="stringliteral">&quot;The nth term is : %&#39;lu \n&quot;</span>, result);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d99/fibonacci__fast_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph.svg" width="148" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="afibonacci__fast_8c_html_a7a3d55bd19854075cba2eed6b63cb2d3"><div class="ttname"><a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a></div><div class="ttdeci">void fib(unsigned long n, unsigned long *C, unsigned long *D)</div><div class="ttdef"><b>Definition:</b> fibonacci_fast.c:20</div></div>
+<div class="ttc" id="afibonacci__fast_8c_html_a7a3d55bd19854075cba2eed6b63cb2d3"><div class="ttname"><a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a></div><div class="ttdeci">void fib(unsigned long n, unsigned long *C, unsigned long *D)</div><div class="ttdoc">Returns the  and  Fibonacci number.</div><div class="ttdef"><b>Definition:</b> fibonacci_fast.c:20</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="compute sum of squares of all integer factors of a number">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 48,-19.5 48,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="24" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigma2</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" target="_top" xlink:title="Get all integer divisors of a number.">
 <polygon fill="white" stroke="black" points="84,-0.5 84,-19.5 153,-19.5 153,-0.5 84,-0.5"/>
 <text text-anchor="middle" x="118.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">get_divisors</text>
 </a>
@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" target="_top" xlink:title="Check if a number is present in given array.">
 <polygon fill="white" stroke="black" points="189,-0.5 189,-19.5 226,-19.5 226,-0.5 189,-0.5"/>
 <text text-anchor="middle" x="207.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">is_in</text>
 </a>

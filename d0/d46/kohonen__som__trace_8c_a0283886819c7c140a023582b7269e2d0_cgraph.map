@@ -1,0 +1,9 @@
+<map id="test2" name="test2">
+<area shape="rect" id="node1" title="Test that creates a random set of points distributed near the locus of the Lamniscate of Gerono and t..." alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node2" href="$d0/d46/kohonen__som__trace_8c.html#af5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="315,107,387,133"/>
+<area shape="rect" id="node3" href="$d0/d46/kohonen__som__trace_8c.html#aeaeffbff2be4d5d15b0d4f10f846abde" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="104,5,247,32"/>
+<area shape="rect" id="node6" href="$d0/d46/kohonen__som__trace_8c.html#a7b84b14e60f47812b581d1f93057c85a" title="Save a given n&#45;dimensional data martix to file." alt="" coords="124,107,227,133"/>
+<area shape="rect" id="node7" href="$d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614" title="Creates a random set of points distributed near the locus of the Lamniscate of Gerono." alt="" coords="118,157,233,184"/>
+<area shape="rect" id="node4" href="$d0/d46/kohonen__som__trace_8c.html#a9c98203f55242ff7a8f45a6370840e66" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="295,5,408,32"/>
+<area shape="rect" id="node5" href="$d0/d46/kohonen__som__trace_8c.html#a0a292ebd954c568934b1fd06666d27e6" title="Get minimum value and index of the value in a vector." alt="" coords="456,5,545,32"/>
+</map>

@@ -112,55 +112,21 @@ Include dependency graph for lu_decompose.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aae40b90a8efd645c749128cf8072bbb4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4">lu_decomposition</a> (double **A, double **<a class="el" href="../../df/db3/struct_l.html">L</a>, double **U, int mat_size)</td></tr>
+<tr class="memdesc:aae40b90a8efd645c749128cf8072bbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform LU decomposition on matrix.  <a href="../../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4">More...</a><br /></td></tr>
 <tr class="separator:aae40b90a8efd645c749128cf8072bbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0789beb8d3396582d77b7aedf5e5554a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a> (double **A, int <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
+<tr class="memitem:a0789beb8d3396582d77b7aedf5e5554a"><td class="memItemLeft" align="right" valign="top"><a id="a0789beb8d3396582d77b7aedf5e5554a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a> (double **A, int <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
+<tr class="memdesc:a0789beb8d3396582d77b7aedf5e5554a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to display square matrix. <br /></td></tr>
 <tr class="separator:a0789beb8d3396582d77b7aedf5e5554a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2e/lu__decompose_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2e/lu__decompose_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a href="https://en.wikipedia.org/wiki/LU_decompositon">LU decomposition</a> of a square matrix </p>
 <dl class="section author"><dt>Author</dt><dd><a href="https://github.com/kvedala">Krishna Vedala</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a0789beb8d3396582d77b7aedf5e5554a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0789beb8d3396582d77b7aedf5e5554a">&#9670;&nbsp;</a></span>display()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void display </td>
-          <td>(</td>
-          <td class="paramtype">double **&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Function to display square matrix </p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; j++)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            printf(<span class="stringliteral">&quot;% 3.3g \t&quot;</span>, A[i][j]);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="aae40b90a8efd645c749128cf8072bbb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae40b90a8efd645c749128cf8072bbb4">&#9670;&nbsp;</a></span>lu_decomposition()</h2>
 
@@ -198,7 +164,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Perform LU decomposition on matrix </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Perform LU decomposition on matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>matrix to decompose </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname"><a class="el" href="../../df/db3/struct_l.html">L</a></td><td>output <a class="el" href="../../df/db3/struct_l.html">L</a> matrix </td></tr>
@@ -253,95 +221,9 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> mat_size = 3;  <span class="comment">// default matrix size</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/dea/structdata.html">range</a> = 10;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> range2 = <a class="code" href="../../df/dea/structdata.html">range</a> &gt;&gt; 1;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (argc == 2)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        mat_size = atoi(argv[1]);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    srand(time(NULL));  <span class="comment">// random number initializer</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">/* Create a square matrix with random values */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">double</span> **A = (<span class="keywordtype">double</span> **)malloc(mat_size * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">double</span> **<a class="code" href="../../df/db3/struct_l.html">L</a> = (<span class="keywordtype">double</span> **)malloc(mat_size * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));  <span class="comment">// output</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">double</span> **U = (<span class="keywordtype">double</span> **)malloc(mat_size * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));  <span class="comment">// output</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mat_size; i++)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// calloc so that all valeus are &#39;0&#39; by default</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        A[i] = (<span class="keywordtype">double</span> *)calloc(mat_size, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="../../df/db3/struct_l.html">L</a>[i] = (<span class="keywordtype">double</span> *)calloc(mat_size, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        U[i] = (<span class="keywordtype">double</span> *)calloc(mat_size, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; mat_size; j++)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">/* create random values in the limits [-range2, range-1] */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            A[i][j] = (<span class="keywordtype">double</span>)(rand() % <a class="code" href="../../df/dea/structdata.html">range</a> - range2);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4">lu_decomposition</a>(A, <a class="code" href="../../df/db3/struct_l.html">L</a>, U, mat_size);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    printf(<span class="stringliteral">&quot;A = \n&quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a>(A, mat_size);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    printf(<span class="stringliteral">&quot;\nL = \n&quot;</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a>(<a class="code" href="../../df/db3/struct_l.html">L</a>, mat_size);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    printf(<span class="stringliteral">&quot;\nU = \n&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a>(U, mat_size);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">/* Free dynamically allocated memory */</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mat_size; i++)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        free(A[i]);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        free(<a class="code" href="../../df/db3/struct_l.html">L</a>[i]);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        free(U[i]);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    free(A);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    free(<a class="code" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    free(U);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d2e/lu__decompose_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="232" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct_l_html"><div class="ttname"><a href="../../df/db3/struct_l.html">L</a></div><div class="ttdef"><b>Definition:</b> list.h:8</div></div>
-<div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
-<div class="ttc" id="alu__decompose_8c_html_aae40b90a8efd645c749128cf8072bbb4"><div class="ttname"><a href="../../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4">lu_decomposition</a></div><div class="ttdeci">int lu_decomposition(double **A, double **L, double **U, int mat_size)</div><div class="ttdef"><b>Definition:</b> lu_decompose.c:20</div></div>
-<div class="ttc" id="alu__decompose_8c_html_a0789beb8d3396582d77b7aedf5e5554a"><div class="ttname"><a href="../../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a">display</a></div><div class="ttdeci">void display(double **A, int N)</div><div class="ttdef"><b>Definition:</b> lu_decompose.c:66</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

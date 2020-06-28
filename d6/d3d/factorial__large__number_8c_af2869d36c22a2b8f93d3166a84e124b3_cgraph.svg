@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="add a digit to the large number">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 56,-19.5 56,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="28" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">add_digit</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" target="_top" xlink:title="delete all memory allocated for large number">
 <polygon fill="white" stroke="black" points="92,-0.5 92,-19.5 172,-19.5 172,-0.5 92,-0.5"/>
 <text text-anchor="middle" x="132" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">delete_number</text>
 </a>

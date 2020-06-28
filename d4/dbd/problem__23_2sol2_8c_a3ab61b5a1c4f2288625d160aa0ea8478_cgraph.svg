@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="check if a given number can be represented as a sum of two abundant numbers.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 107,-19.5 107,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="53.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">is_sum_of_abundant</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" target="_top" xlink:title="Find the next abundant number after N and not including N.">
 <polygon fill="white" stroke="black" points="143,-19.5 143,-38.5 242,-38.5 242,-19.5 143,-19.5"/>
 <text text-anchor="middle" x="192.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">get_next_abundant</text>
 </a>
@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d4/dbd/problem__23_2sol2_8c.html#a34f4ad85151e3a43368ae67f42347f56" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d4/dbd/problem__23_2sol2_8c.html#a34f4ad85151e3a43368ae67f42347f56" target="_top" xlink:title="Is the given number an abundant number (1) or not (0)">
 <polygon fill="white" stroke="black" points="278,-0.5 278,-19.5 347,-19.5 347,-0.5 278,-0.5"/>
 <text text-anchor="middle" x="312.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">is_abundant</text>
 </a>

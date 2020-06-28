@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Compute magnitude of vector.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 68,-19.5 68,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="34" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector_mag</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" target="_top" xlink:title="Compute dot product of two vectors of equal lengths.">
 <polygon fill="white" stroke="black" points="104,-0.5 104,-19.5 166,-19.5 166,-0.5 104,-0.5"/>
 <text text-anchor="middle" x="135" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector_dot</text>
 </a>

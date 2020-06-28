@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Get all integer divisors of a number.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 69,-19.5 69,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="34.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">get_divisors</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" target="_top" xlink:title="Check if a number is present in given array.">
 <polygon fill="white" stroke="black" points="105,-0.5 105,-19.5 142,-19.5 142,-0.5 105,-0.5"/>
 <text text-anchor="middle" x="123.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">is_in</text>
 </a>

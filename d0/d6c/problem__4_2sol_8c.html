@@ -110,8 +110,11 @@ Include dependency graph for sol.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adf9bea8d35848959bde5b3f277edf0c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a> (unsigned int n)</td></tr>
+<tr class="memdesc:adf9bea8d35848959bde5b3f277edf0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if number is palindromic.  <a href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">More...</a><br /></td></tr>
 <tr class="separator:adf9bea8d35848959bde5b3f277edf0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/problem__4_2sol_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top"><a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/problem__4_2sol_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -132,7 +135,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if number is palindromic </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Check if number is palindromic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number to check </td></tr>
   </table>
@@ -154,51 +159,8 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, j, <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a> = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> (i = 100; i &lt;= 999; i++)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">for</span> (j = 100; j &lt;= 999; j++)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p = i * j;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a>(p) &amp;&amp; p &gt; <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a> = p;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    printf(<span class="stringliteral">&quot;%u\n&quot;</span>, <a class="code" href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d6c/problem__4_2sol_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.svg" width="215" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aproblem__4_2sol_8c_html_adf9bea8d35848959bde5b3f277edf0c4"><div class="ttname"><a href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a></div><div class="ttdeci">int is_palindromic(unsigned int n)</div><div class="ttdef"><b>Definition:</b> sol.c:12</div></div>
-<div class="ttc" id="akohonen__som__topology_8c_html_affe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#affe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:31</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

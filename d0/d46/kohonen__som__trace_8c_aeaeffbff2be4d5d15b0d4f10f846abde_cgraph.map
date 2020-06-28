@@ -1,5 +1,5 @@
 <map id="kohonen_som_tracer" name="kohonen_som_tracer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node2" href="$d0/d46/kohonen__som__trace_8c.html#a9c98203f55242ff7a8f45a6370840e66" title=" " alt="" coords="196,5,309,32"/>
-<area shape="rect" id="node3" href="$d0/d46/kohonen__som__trace_8c.html#a0a292ebd954c568934b1fd06666d27e6" title=" " alt="" coords="357,5,447,32"/>
+<area shape="rect" id="node1" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$d0/d46/kohonen__som__trace_8c.html#a9c98203f55242ff7a8f45a6370840e66" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="196,5,309,32"/>
+<area shape="rect" id="node3" href="$d0/d46/kohonen__som__trace_8c.html#a0a292ebd954c568934b1fd06666d27e6" title="Get minimum value and index of the value in a vector." alt="" coords="357,5,447,32"/>
 </map>

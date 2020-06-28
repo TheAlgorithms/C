@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" target="_top" xlink:title="Problem statement for a system with first&#45;order differential equations. Updates the system differenti...">
+<g id="a_node3"><a xlink:href="../../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" target="_top" xlink:title="Problem statement for a system with first&#45;order differential equations.">
 <polygon fill="white" stroke="black" points="296,-0.5 296,-19.5 347,-19.5 347,-0.5 296,-0.5"/>
 <text text-anchor="middle" x="321.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">problem</text>
 </a>

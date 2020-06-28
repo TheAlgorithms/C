@@ -118,12 +118,14 @@ Include dependency graph for adaline_learning.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/daa/structadaline.html">adaline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to hold adaline model parameters  <a href="../../d2/daa/structadaline.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:acd517c6f195c75b9dd0f3aad65326f3b"><td class="memItemLeft" align="right" valign="top"><a id="acd517c6f195c75b9dd0f3aad65326f3b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_ITER</b>&#160;&#160;&#160;500</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#acd517c6f195c75b9dd0f3aad65326f3b">MAX_ITER</a>&#160;&#160;&#160;500</td></tr>
+<tr class="memdesc:acd517c6f195c75b9dd0f3aad65326f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of iterations to learn. <br /></td></tr>
 <tr class="separator:acd517c6f195c75b9dd0f3aad65326f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af270a96662132d0385cb6b4637c5a689"><td class="memItemLeft" align="right" valign="top"><a id="af270a96662132d0385cb6b4637c5a689"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a>&#160;&#160;&#160;1e-5</td></tr>
@@ -133,26 +135,40 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acd88962c5f6341e43cbc69b4a7d3485b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a> (const int num_features, const double eta)</td></tr>
+<tr class="memdesc:acd88962c5f6341e43cbc69b4a7d3485b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">More...</a><br /></td></tr>
 <tr class="separator:acd88962c5f6341e43cbc69b4a7d3485b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f35caa3084772cc126ac7b20f67f665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada)</td></tr>
+<tr class="memdesc:a6f35caa3084772cc126ac7b20f67f665"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete dynamically allocated memory  <a href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">More...</a><br /></td></tr>
 <tr class="separator:a6f35caa3084772cc126ac7b20f67f665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b12b6513314c975303b5a698608322f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a> (double x)</td></tr>
+<tr class="memitem:a7b12b6513314c975303b5a698608322f"><td class="memItemLeft" align="right" valign="top"><a id="a7b12b6513314c975303b5a698608322f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a> (double x)</td></tr>
+<tr class="memdesc:a7b12b6513314c975303b5a698608322f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://en.wikipedia.org/wiki/Heaviside_step_function">Heaviside activation function</a> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Dirac_distribution_CDF.svg" alt="" style="pointer-events: none;" width="200px" class="inline"/> <br /></td></tr>
 <tr class="separator:a7b12b6513314c975303b5a698608322f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00dc6134ca22a12e0fd9cac54d601c2d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada)</td></tr>
+<tr class="memitem:a00dc6134ca22a12e0fd9cac54d601c2d"><td class="memItemLeft" align="right" valign="top"><a id="a00dc6134ca22a12e0fd9cac54d601c2d"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada)</td></tr>
+<tr class="memdesc:a00dc6134ca22a12e0fd9cac54d601c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to print the weights of the model. <br /></td></tr>
 <tr class="separator:a00dc6134ca22a12e0fd9cac54d601c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db1ba00a7f282100ea31a94e32bd7a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada, const double *x, double *out)</td></tr>
+<tr class="memdesc:a4db1ba00a7f282100ea31a94e32bd7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">predict the output of the model for given set of features  <a href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">More...</a><br /></td></tr>
 <tr class="separator:a4db1ba00a7f282100ea31a94e32bd7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa953e811eaae199d121a7ddb619d604"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">fit_sample</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada, const double *x, const int y)</td></tr>
+<tr class="memdesc:afa953e811eaae199d121a7ddb619d604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the weights of the model using supervised learning for one feature vector.  <a href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">More...</a><br /></td></tr>
 <tr class="separator:afa953e811eaae199d121a7ddb619d604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355fda53c238a0c0c07f03dcc021caed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a> (struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *ada, double **X, const int *y, const int <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
+<tr class="memdesc:a355fda53c238a0c0c07f03dcc021caed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the weights of the model using supervised learning for an array of vectors.  <a href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">More...</a><br /></td></tr>
 <tr class="separator:a355fda53c238a0c0c07f03dcc021caed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ecb3accf5d9e0263087e7265bbe3a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9">test1</a> (double eta)</td></tr>
+<tr class="memdesc:ab4ecb3accf5d9e0263087e7265bbe3a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">test function to predict points in a 2D coordinate system above the line \(x=y\) as +1 and others as -1.  <a href="../../dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9">More...</a><br /></td></tr>
 <tr class="separator:ab4ecb3accf5d9e0263087e7265bbe3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05cc9a0acb524fde727a4d7b4a747ee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6">test2</a> (double eta)</td></tr>
+<tr class="memdesc:a05cc9a0acb524fde727a4d7b4a747ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">test function to predict points in a 2D coordinate system above the line \(x+3y=-1\) as +1 and others as -1.  <a href="../../dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6">More...</a><br /></td></tr>
 <tr class="separator:a05cc9a0acb524fde727a4d7b4a747ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f37b9f073f7e57fd0b39d70718af1b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1">test3</a> (double eta)</td></tr>
+<tr class="memdesc:a3f37b9f073f7e57fd0b39d70718af1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">test function to predict points in a 3D coordinate system lying within the sphere of radius 1 and centre at origin as +1 and others as -1.  <a href="../../dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1">More...</a><br /></td></tr>
 <tr class="separator:a3f37b9f073f7e57fd0b39d70718af1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/adaline__learning_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -163,26 +179,6 @@ Functions</h2></td></tr>
 </p>
 <p> where \(x_j\) are the input features of a sample, \(w_j\) are the coefficients of the linear function and \(\theta\) is a constant. If we know the \(w_j\), then for any given set of features, \(y\) can be computed. Computing the \(w_j\) is a supervised learning algorithm wherein a set of features and their corresponding outputs are given and weights are computed using stochastic gradient descent method. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7b12b6513314c975303b5a698608322f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b12b6513314c975303b5a698608322f">&#9670;&nbsp;</a></span>activation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int activation </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p><a href="https://en.wikipedia.org/wiki/Heaviside_step_function">Heaviside activation function</a> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Dirac_distribution_CDF.svg" alt="" style="pointer-events: none;" width="200px" class="inline"/> </p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{ <span class="keywordflow">return</span> x &gt; 0 ? 1 : -1; }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a6f35caa3084772cc126ac7b20f67f665"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f35caa3084772cc126ac7b20f67f665">&#9670;&nbsp;</a></span>delete_adaline()</h2>
 
@@ -198,18 +194,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>delete dynamically allocated memory </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>delete dynamically allocated memory </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ada</td><td>model from which the memory is to be freeed. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (ada == NULL)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    free(ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (ada == NULL)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    free(ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,7 +248,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update the weights of the model using supervised learning for an array of vectors.</p>
+
+<p>Update the weights of the model using supervised learning for an array of vectors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ada</td><td>adaline model to train </td></tr>
@@ -260,34 +259,40 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">double</span> avg_pred_error = 1.f;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">int</span> iter;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">for</span> (iter = 0; (iter &lt; MAX_ITER) &amp;&amp; (avg_pred_error &gt; <a class="code" href="../../dd/d8c/adaline__learning_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a>); iter++)</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        avg_pred_error = 0.f;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// perform fit for each sample</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">double</span> err = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">fit_sample</a>(ada, X[i], y[i]);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            avg_pred_error += fabs(err);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        avg_pred_error /= <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// Print updates every 200th iteration</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// if (iter % 100 == 0)</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        printf(<span class="stringliteral">&quot;\tIter %3d: Training weights: %s\tAvg error: %.4f\n&quot;</span>, iter,</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;               <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(ada), avg_pred_error);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (iter &lt; MAX_ITER)</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        printf(<span class="stringliteral">&quot;Converged after %d iterations.\n&quot;</span>, iter);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        printf(<span class="stringliteral">&quot;Did not converged after %d iterations.\n&quot;</span>, iter);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">double</span> avg_pred_error = 1.f;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">int</span> iter;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">for</span> (iter = 0; (iter &lt; <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd517c6f195c75b9dd0f3aad65326f3b">MAX_ITER</a>) &amp;&amp; (avg_pred_error &gt; <a class="code" href="../../dd/d8c/adaline__learning_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a>); iter++)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        avg_pred_error = 0.f;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">// perform fit for each sample</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">double</span> err = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">fit_sample</a>(ada, X[i], y[i]);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            avg_pred_error += fabs(err);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        avg_pred_error /= <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// Print updates every 200th iteration</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">// if (iter % 100 == 0)</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        printf(<span class="stringliteral">&quot;\tIter %3d: Training weights: %s\tAvg error: %.4f\n&quot;</span>, iter,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;               <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(ada), avg_pred_error);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">if</span> (iter &lt; <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd517c6f195c75b9dd0f3aad65326f3b">MAX_ITER</a>)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        printf(<span class="stringliteral">&quot;Converged after %d iterations.\n&quot;</span>, iter);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        printf(<span class="stringliteral">&quot;Did not converged after %d iterations.\n&quot;</span>, iter);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a355fda53c238a0c0c07f03dcc021caed_cgraph.svg" width="448" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="afa953e811eaae199d121a7ddb619d604"></a>
@@ -321,7 +326,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update the weights of the model using supervised learning for one feature vector</p>
+
+<p>Update the weights of the model using supervised learning for one feature vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ada</td><td>adaline model to fit </td></tr>
@@ -331,113 +337,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>correction factor </dd></dl>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">/* output of the model with current weights */</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">int</span> p = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(ada, x, NULL);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">int</span> prediction_error = y - p;  <span class="comment">// error in estimation</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">double</span> correction_factor = ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a> * prediction_error;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">/* update each weight, the last weight is the bias term */</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1; i++)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[i] += correction_factor * x[i];</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1] += correction_factor;  <span class="comment">// update bias</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> correction_factor;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">/* output of the model with current weights */</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">int</span> p = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(ada, x, NULL);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> prediction_error = y - p;  <span class="comment">// error in estimation</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">double</span> correction_factor = ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a> * prediction_error;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">/* update each weight, the last weight is the bias term */</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1; i++)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[i] += correction_factor * x[i];</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1] += correction_factor;  <span class="comment">// update bias</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> correction_factor;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_afa953e811eaae199d121a7ddb619d604_cgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a00dc6134ca22a12e0fd9cac54d601c2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00dc6134ca22a12e0fd9cac54d601c2d">&#9670;&nbsp;</a></span>get_weights_str()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* get_weights_str </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="../../d2/daa/structadaline.html">adaline</a> *&#160;</td>
-          <td class="paramname"><em>ada</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Operator to print the weights of the model </p>
-<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> out[100];  <span class="comment">// static so the value is persistent</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    sprintf(out, <span class="stringliteral">&quot;&lt;&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>; i++)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        sprintf(out, <span class="stringliteral">&quot;%s%.4g&quot;</span>, out, ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[i]);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (i &lt; ada-&gt;num_weights - 1)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            sprintf(out, <span class="stringliteral">&quot;%s, &quot;</span>, out);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    sprintf(out, <span class="stringliteral">&quot;%s&gt;&quot;</span>, out);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Main function </p>
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    srand(time(NULL));  <span class="comment">// initialize random number generator</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">double</span> eta = 0.1;  <span class="comment">// default value of eta</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">if</span> (argc == 2)     <span class="comment">// read eta value from commandline argument if present</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        eta = strtof(argv[1], NULL);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9">test1</a>(eta);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    printf(<span class="stringliteral">&quot;Press ENTER to continue...\n&quot;</span>);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    getchar();</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6">test2</a>(eta);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    printf(<span class="stringliteral">&quot;Press ENTER to continue...\n&quot;</span>);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    getchar();</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1">test3</a>(eta);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="450" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -468,7 +386,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default constructor </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Default constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">num_features</td><td>number of features present </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">eta</td><td>learning rate (optional, default=0.1) </td></tr>
@@ -476,31 +396,31 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>new adaline model </dd></dl>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (eta &lt;= 0.f || eta &gt;= 1.f)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;learning rate should be &gt; 0 and &lt; 1\n&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// additional weight is for the constant bias term</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> num_weights = num_features + 1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ada.<a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a> = <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ada.num_weights = <a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ada.weights = (<span class="keywordtype">double</span> *)malloc(<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (!ada.weights)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        perror(<span class="stringliteral">&quot;Unable to allocate error for weights!&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> ada;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// initialize with random weights in the range [-50, 49]</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>; i++) ada.weights[i] = 1.f;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// ada.weights[i] = (double)(rand() % 100) - 50);</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> ada;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (eta &lt;= 0.f || eta &gt;= 1.f)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;learning rate should be &gt; 0 and &lt; 1\n&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// additional weight is for the constant bias term</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> num_weights = num_features + 1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ada.<a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a> = <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ada.num_weights = <a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ada.weights = (<span class="keywordtype">double</span> *)malloc(<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (!ada.weights)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        perror(<span class="stringliteral">&quot;Unable to allocate error for weights!&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> ada;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// initialize with random weights in the range [-50, 49]</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>; i++) ada.weights[i] = 1.f;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// ada.weights[i] = (double)(rand() % 100) - 50);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> ada;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -535,7 +455,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>predict the output of the model for given set of features</p>
+
+<p>predict the output of the model for given set of features </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ada</td><td>adaline model to predict </td></tr>
@@ -545,16 +466,16 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>model prediction output </dd></dl>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">double</span> y = ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1];  <span class="comment">// assign bias value</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1; i++) y += x[i] * ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[i];</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    if (out)  <span class="comment">// if out variable is not NULL</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        *out = y;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a>(y);  <span class="comment">// quantizer: apply ADALINE threshold function</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">double</span> y = ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1];  <span class="comment">// assign bias value</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> - 1; i++) y += x[i] * ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>[i];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    if (out)  <span class="comment">// if out variable is not NULL</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        *out = y;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a>(y);  <span class="comment">// quantizer: apply ADALINE threshold function</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -579,55 +500,57 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>test function to predict points in a 2D coordinate system above the line \(x=y\) as +1 and others as -1. Note that each point is defined by 2 values or 2 features. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>test function to predict points in a 2D coordinate system above the line \(x=y\) as +1 and others as -1. </p>
+<p>Note that each point is defined by 2 values or 2 features. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">eta</td><td>learning rate (optional, default=0.01) </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(2, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 10;  <span class="comment">// number of sample points</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> saved_X[10][2] = {{0, 1},  {1, -2},   {2, 3},   {3, -1},</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                   {4, 1},  {6, -5},   {-7, -3}, {-8, 5},</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                   {-9, 2}, {-10, -15}};</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> Y[10] = {1,  -1, 1, -1, -1,</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                       -1, 1,  1, 1,  -1};  <span class="comment">// corresponding y-values</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        X[i] = (<span class="keywordtype">double</span> *)saved_X[i];</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 1 -------\n&quot;</span>);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">double</span> test_x[] = {5, -3};</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    printf(<span class="stringliteral">&quot;Predict for x=(5,-3): % d&quot;</span>, pred);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    assert(pred == -1);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">double</span> test_x2[] = {5, 8};</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x2, NULL);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    printf(<span class="stringliteral">&quot;Predict for x=(5, 8): % d&quot;</span>, pred);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    assert(pred == 1);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// for (int i = 0; i &lt; N; i++)</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//     free(X[i]);</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    free(X);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(2, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 10;  <span class="comment">// number of sample points</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> saved_X[10][2] = {{0, 1},  {1, -2},   {2, 3},   {3, -1},</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                   {4, 1},  {6, -5},   {-7, -3}, {-8, 5},</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                   {-9, 2}, {-10, -15}};</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> Y[10] = {1,  -1, 1, -1, -1,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                       -1, 1,  1, 1,  -1};  <span class="comment">// corresponding y-values</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        X[i] = (<span class="keywordtype">double</span> *)saved_X[i];</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 1 -------\n&quot;</span>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">double</span> test_x[] = {5, -3};</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    printf(<span class="stringliteral">&quot;Predict for x=(5,-3): % d&quot;</span>, pred);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    assert(pred == -1);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">double</span> test_x2[] = {5, 8};</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x2, NULL);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    printf(<span class="stringliteral">&quot;Predict for x=(5, 8): % d&quot;</span>, pred);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    assert(pred == 1);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// for (int i = 0; i &lt; N; i++)</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">//     free(X[i]);</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    free(X);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_ab4ecb3accf5d9e0263087e7265bbe3a9_cgraph.svg" width="351" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_ab4ecb3accf5d9e0263087e7265bbe3a9_cgraph.svg" width="614" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -648,66 +571,68 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>test function to predict points in a 2D coordinate system above the line \(x+3y=-1\) as +1 and others as -1. Note that each point is defined by 2 values or 2 features. The function will create random sample points for training and test purposes. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>test function to predict points in a 2D coordinate system above the line \(x+3y=-1\) as +1 and others as -1. </p>
+<p>Note that each point is defined by 2 values or 2 features. The function will create random sample points for training and test purposes. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">eta</td><td>learning rate (optional, default=0.01) </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;{</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(2, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 50;  <span class="comment">// number of sample points</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(2 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/dea/structdata.html">range</a> = 500;          <span class="comment">// sample points full-range</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">int</span> range2 = <a class="code" href="../../df/dea/structdata.html">range</a> &gt;&gt; 1;  <span class="comment">// sample points half-range</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        X[i][0] = x0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        X[i][1] = x1;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        Y[i] = (x0 + 3. * x1) &gt; -1 ? 1 : -1;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 2 -------\n&quot;</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">int</span> N_test_cases = 5;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">double</span> test_x[2];</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N_test_cases; i++)</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        test_x[0] = x0;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        test_x[1] = x1;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        printf(<span class="stringliteral">&quot;Predict for x=(% 3.2f,% 3.2f): % d&quot;</span>, x0, x1, pred);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordtype">int</span> expected_val = (x0 + 3. * x1) &gt; -1 ? 1 : -1;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        assert(pred == expected_val);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    free(X);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    free(Y);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(2, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 50;  <span class="comment">// number of sample points</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(2 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/dea/structdata.html">range</a> = 500;          <span class="comment">// sample points full-range</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">int</span> range2 = <a class="code" href="../../df/dea/structdata.html">range</a> &gt;&gt; 1;  <span class="comment">// sample points half-range</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        X[i][0] = x0;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        X[i][1] = x1;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        Y[i] = (x0 + 3. * x1) &gt; -1 ? 1 : -1;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 2 -------\n&quot;</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">int</span> N_test_cases = 5;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">double</span> test_x[2];</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N_test_cases; i++)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        test_x[0] = x0;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        test_x[1] = x1;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        printf(<span class="stringliteral">&quot;Predict for x=(% 3.2f,% 3.2f): % d&quot;</span>, x0, x1, pred);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">int</span> expected_val = (x0 + 3. * x1) &gt; -1 ? 1 : -1;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        assert(pred == expected_val);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    free(X);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    free(Y);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a05cc9a0acb524fde727a4d7b4a747ee6_cgraph.svg" width="351" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a05cc9a0acb524fde727a4d7b4a747ee6_cgraph.svg" width="614" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -728,76 +653,78 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>test function to predict points in a 3D coordinate system lying within the sphere of radius 1 and centre at origin as +1 and others as -1. Note that each point is defined by 3 values but we use 6 features. The function will create random sample points for training and test purposes. The sphere centred at origin and radius 1 is defined as: \(x^2+y^2+z^2=r^2=1\) and if the \(r^2&lt;1\), point lies within the sphere else, outside.</p>
+
+<p>test function to predict points in a 3D coordinate system lying within the sphere of radius 1 and centre at origin as +1 and others as -1. </p>
+<p>Note that each point is defined by 3 values but we use 6 features. The function will create random sample points for training and test purposes. The sphere centred at origin and radius 1 is defined as: \(x^2+y^2+z^2=r^2=1\) and if the \(r^2&lt;1\), point lies within the sphere else, outside.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">eta</td><td>learning rate (optional, default=0.01) </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(6, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 50;  <span class="comment">// number of sample points</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(6 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/dea/structdata.html">range</a> = 200;          <span class="comment">// sample points full-range</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">int</span> range2 = <a class="code" href="../../df/dea/structdata.html">range</a> &gt;&gt; 1;  <span class="comment">// sample points half-range</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordtype">double</span> x2 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        X[i][0] = x0;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        X[i][1] = x1;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        X[i][2] = x2;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        X[i][3] = x0 * x0;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        X[i][4] = x1 * x1;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        X[i][5] = x2 * x2;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        Y[i] = (x0 * x0 + x1 * x1 + x2 * x2) &lt;= 1 ? 1 : -1;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 3 -------\n&quot;</span>);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">int</span> N_test_cases = 5;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">double</span> test_x[6];</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N_test_cases; i++)</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">double</span> x2 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        test_x[0] = x0;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        test_x[1] = x1;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        test_x[2] = x2;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        test_x[3] = x0 * x0;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        test_x[4] = x1 * x1;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        test_x[5] = x2 * x2;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        printf(<span class="stringliteral">&quot;Predict for x=(% 3.2f,% 3.2f): % d&quot;</span>, x0, x1, pred);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">int</span> expected_val = (x0 * x0 + x1 * x1 + x2 * x2) &lt;= 1 ? 1 : -1;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        assert(pred == expected_val);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    free(X);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    free(Y);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;{</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a>(6, <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>);  <span class="comment">// 2 features</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> = 50;  <span class="comment">// number of sample points</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(6 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/dea/structdata.html">range</a> = 200;          <span class="comment">// sample points full-range</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">int</span> range2 = <a class="code" href="../../df/dea/structdata.html">range</a> &gt;&gt; 1;  <span class="comment">// sample points half-range</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordtype">double</span> x2 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        X[i][0] = x0;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        X[i][1] = x1;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        X[i][2] = x2;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        X[i][3] = x0 * x0;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        X[i][4] = x1 * x1;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        X[i][5] = x2 * x2;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        Y[i] = (x0 * x0 + x1 * x1 + x2 * x2) &lt;= 1 ? 1 : -1;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    printf(<span class="stringliteral">&quot;------- Test 3 -------\n&quot;</span>);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    printf(<span class="stringliteral">&quot;Model before fit: %s&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a>(&amp;ada, X, Y, <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    printf(<span class="stringliteral">&quot;Model after fit: %s\n&quot;</span>, <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a>(&amp;ada));</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">int</span> N_test_cases = 5;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">double</span> test_x[6];</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N_test_cases; i++)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">double</span> x0 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">double</span> x1 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordtype">double</span> x2 = ((rand() % <a class="code" href="../../df/dea/structdata.html">range</a>) - range2) / 100.f;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        test_x[0] = x0;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        test_x[1] = x1;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        test_x[2] = x2;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        test_x[3] = x0 * x0;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        test_x[4] = x1 * x1;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        test_x[5] = x2 * x2;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordtype">int</span> pred = <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a>(&amp;ada, test_x, NULL);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        printf(<span class="stringliteral">&quot;Predict for x=(% 3.2f,% 3.2f): % d&quot;</span>, x0, x1, pred);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordtype">int</span> expected_val = (x0 * x0 + x1 * x1 + x2 * x2) &lt;= 1 ? 1 : -1;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        assert(pred == expected_val);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++) free(X[i]);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    free(X);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    free(Y);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a3f37b9f073f7e57fd0b39d70718af1b1_cgraph.svg" width="351" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d8c/adaline__learning_8c_a3f37b9f073f7e57fd0b39d70718af1b1_cgraph.svg" width="614" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -805,23 +732,21 @@ Here is the call graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aadaline__learning_8c_html_a00dc6134ca22a12e0fd9cac54d601c2d"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a></div><div class="ttdeci">char * get_weights_str(struct adaline *ada)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:99</div></div>
-<div class="ttc" id="astructadaline_html_a32e58c03fd9258709eae6138ad0ec657"><div class="ttname"><a href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">adaline::weights</a></div><div class="ttdeci">double * weights</div><div class="ttdoc">weights of the neural network</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:39</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a6f35caa3084772cc126ac7b20f67f665"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a></div><div class="ttdeci">void delete_adaline(struct adaline *ada)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:81</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_acd517c6f195c75b9dd0f3aad65326f3b"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#acd517c6f195c75b9dd0f3aad65326f3b">MAX_ITER</a></div><div class="ttdeci">#define MAX_ITER</div><div class="ttdoc">Maximum number of iterations to learn.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:34</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_a00dc6134ca22a12e0fd9cac54d601c2d"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d">get_weights_str</a></div><div class="ttdeci">char * get_weights_str(struct adaline *ada)</div><div class="ttdoc">Operator to print the weights of the model.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:100</div></div>
+<div class="ttc" id="astructadaline_html_a32e58c03fd9258709eae6138ad0ec657"><div class="ttname"><a href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">adaline::weights</a></div><div class="ttdeci">double * weights</div><div class="ttdoc">weights of the neural network</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:40</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_a6f35caa3084772cc126ac7b20f67f665"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665">delete_adaline</a></div><div class="ttdeci">void delete_adaline(struct adaline *ada)</div><div class="ttdoc">delete dynamically allocated memory</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:82</div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
-<div class="ttc" id="astructadaline_html_a85dbd7cce6195d11ebb388220b96bde2"><div class="ttname"><a href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">adaline::eta</a></div><div class="ttdeci">double eta</div><div class="ttdoc">learning rate of the algorithm</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:38</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a4db1ba00a7f282100ea31a94e32bd7a3"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a></div><div class="ttdeci">int predict(struct adaline *ada, const double *x, double *out)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:123</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_acd88962c5f6341e43cbc69b4a7d3485b"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a></div><div class="ttdeci">struct adaline new_adaline(const int num_features, const double eta)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:51</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a3f37b9f073f7e57fd0b39d70718af1b1"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1">test3</a></div><div class="ttdeci">void test3(double eta)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:316</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_afa953e811eaae199d121a7ddb619d604"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">fit_sample</a></div><div class="ttdeci">double fit_sample(struct adaline *ada, const double *x, const int y)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:144</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a7b12b6513314c975303b5a698608322f"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a></div><div class="ttdeci">int activation(double x)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:94</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_ab4ecb3accf5d9e0263087e7265bbe3a9"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9">test1</a></div><div class="ttdeci">void test1(double eta)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:205</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a05cc9a0acb524fde727a4d7b4a747ee6"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6">test2</a></div><div class="ttdeci">void test2(double eta)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:253</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_a355fda53c238a0c0c07f03dcc021caed"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a></div><div class="ttdeci">void fit(struct adaline *ada, double **X, const int *y, const int N)</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:170</div></div>
-<div class="ttc" id="astructadaline_html"><div class="ttname"><a href="../../d2/daa/structadaline.html">adaline</a></div><div class="ttdef"><b>Definition:</b> adaline_learning.c:37</div></div>
-<div class="ttc" id="aadaline__learning_8c_html_af270a96662132d0385cb6b4637c5a689"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a></div><div class="ttdeci">#define ACCURACY</div><div class="ttdoc">convergence accuracy</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:43</div></div>
-<div class="ttc" id="astructadaline_html_a53314e737a0a5ff4552a03bcc9dafbc1"><div class="ttname"><a href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">adaline::num_weights</a></div><div class="ttdeci">int num_weights</div><div class="ttdoc">number of weights of the neural network</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:40</div></div>
+<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">number of digits of the large number</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
+<div class="ttc" id="astructadaline_html_a85dbd7cce6195d11ebb388220b96bde2"><div class="ttname"><a href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">adaline::eta</a></div><div class="ttdeci">double eta</div><div class="ttdoc">learning rate of the algorithm</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:39</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_a4db1ba00a7f282100ea31a94e32bd7a3"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3">predict</a></div><div class="ttdeci">int predict(struct adaline *ada, const double *x, double *out)</div><div class="ttdoc">predict the output of the model for given set of features</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:124</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_acd88962c5f6341e43cbc69b4a7d3485b"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a></div><div class="ttdeci">struct adaline new_adaline(const int num_features, const double eta)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:52</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_afa953e811eaae199d121a7ddb619d604"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604">fit_sample</a></div><div class="ttdeci">double fit_sample(struct adaline *ada, const double *x, const int y)</div><div class="ttdoc">Update the weights of the model using supervised learning for one feature vector.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:145</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_a7b12b6513314c975303b5a698608322f"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f">activation</a></div><div class="ttdeci">int activation(double x)</div><div class="ttdoc">Heaviside activation function</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:95</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_a355fda53c238a0c0c07f03dcc021caed"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed">fit</a></div><div class="ttdeci">void fit(struct adaline *ada, double **X, const int *y, const int N)</div><div class="ttdoc">Update the weights of the model using supervised learning for an array of vectors.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:171</div></div>
+<div class="ttc" id="astructadaline_html"><div class="ttname"><a href="../../d2/daa/structadaline.html">adaline</a></div><div class="ttdoc">structure to hold adaline model parameters</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:38</div></div>
+<div class="ttc" id="aadaline__learning_8c_html_af270a96662132d0385cb6b4637c5a689"><div class="ttname"><a href="../../dd/d8c/adaline__learning_8c.html#af270a96662132d0385cb6b4637c5a689">ACCURACY</a></div><div class="ttdeci">#define ACCURACY</div><div class="ttdoc">convergence accuracy</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:44</div></div>
+<div class="ttc" id="astructadaline_html_a53314e737a0a5ff4552a03bcc9dafbc1"><div class="ttname"><a href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">adaline::num_weights</a></div><div class="ttdeci">int num_weights</div><div class="ttdoc">number of weights of the neural network</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:41</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

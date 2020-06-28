@@ -1,9 +1,10 @@
 <map id="test2" name="test2">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,56,133"/>
-<area shape="rect" id="node2" href="$dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665" title=" " alt="" coords="109,5,214,32"/>
-<area shape="rect" id="node3" href="$dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed" title=" " alt="" coords="142,56,181,83"/>
-<area shape="rect" id="node4" href="$dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d" title=" " alt="" coords="104,107,219,133"/>
-<area shape="rect" id="node5" href="$dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b" title=" " alt="" coords="114,157,209,184"/>
-<area shape="rect" id="node6" href="$dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3" title=" " alt="" coords="131,208,192,235"/>
-<area shape="rect" id="node7" href="$dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f" title=" " alt="" coords="267,208,345,235"/>
+<area shape="rect" id="node1" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="5,107,56,133"/>
+<area shape="rect" id="node2" href="$dd/d8c/adaline__learning_8c.html#a6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="104,5,209,32"/>
+<area shape="rect" id="node3" href="$dd/d8c/adaline__learning_8c.html#a355fda53c238a0c0c07f03dcc021caed" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="137,56,176,83"/>
+<area shape="rect" id="node5" href="$dd/d8c/adaline__learning_8c.html#a4db1ba00a7f282100ea31a94e32bd7a3" title="predict the output of the model for given set of features" alt="" coords="420,107,481,133"/>
+<area shape="rect" id="node7" href="$dd/d8c/adaline__learning_8c.html#a00dc6134ca22a12e0fd9cac54d601c2d" title="Operator to print the weights of the model." alt="" coords="257,107,372,133"/>
+<area shape="rect" id="node8" href="$dd/d8c/adaline__learning_8c.html#acd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="109,208,204,235"/>
+<area shape="rect" id="node4" href="$dd/d8c/adaline__learning_8c.html#afa953e811eaae199d121a7ddb619d604" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="273,56,356,83"/>
+<area shape="rect" id="node6" href="$dd/d8c/adaline__learning_8c.html#a7b12b6513314c975303b5a698608322f" title="Heaviside activation function" alt="" coords="529,107,608,133"/>
 </map>
