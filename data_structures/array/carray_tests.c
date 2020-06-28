@@ -13,10 +13,10 @@
  *
  */
 
-#include "CArray.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "CArray.h"
 
 int CArrayTests()
 {
@@ -37,7 +37,7 @@ int CArrayTests()
     }
     printf("Entered array is:\n");
     displayCArray(array);
-    printf("\nCode: %d\n", pushValueCArray(array, 11)); // 5
+    printf("\nCode: %d\n", pushValueCArray(array, 11));  // 5
 
     for (i = 0; i < array->size; i++)
     {
@@ -46,8 +46,8 @@ int CArrayTests()
 
     displayCArray(array);
 
-    printf("\nCode: %d", removeValueCArray(array, -1));      // 1
-    printf("\nCode: %d\n", insertValueCArray(array, -1, 1)); // 1
+    printf("\nCode: %d", removeValueCArray(array, -1));       // 1
+    printf("\nCode: %d\n", insertValueCArray(array, -1, 1));  // 1
 
     // Erase
     for (i = 0; i < array->size; i++)
@@ -55,7 +55,7 @@ int CArrayTests()
         insertValueCArray(array, i, i + 1);
     }
     eraseCArray(array);
-    displayCArray(array); // Should give all 0s
+    displayCArray(array);  // Should give all 0s
 
     // Switching
     CArray *arr = getCArray(13);

@@ -11,7 +11,6 @@ int a[100], top = -1;
 
 int main()
 {
-
     int x;
     while (1)
     {

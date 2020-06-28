@@ -5,7 +5,6 @@
 // Displays the array, passed to this method
 void display(int *arr, int n)
 {
-
     int i;
     for (i = 0; i < n; i++)
     {
@@ -18,7 +17,6 @@ void display(int *arr, int n)
 // Swap function to swap two values
 void swap(int *first, int *second)
 {
-
     int temp = *first;
     *first = *second;
     *second = temp;
@@ -49,8 +47,7 @@ void cycleSort(int *arr, int n)
             continue;
 
         // ignore all duplicate elements
-        while (item == arr[pos])
-            pos += 1;
+        while (item == arr[pos]) pos += 1;
 
         // put the item to it's right position
         if (pos != cycle_start)
@@ -70,8 +67,7 @@ void cycleSort(int *arr, int n)
                     pos += 1;
 
             // ignore all duplicate elements
-            while (item == arr[pos])
-                pos += 1;
+            while (item == arr[pos]) pos += 1;
 
             // put the item to it's right position
             if (item != arr[pos])
@@ -86,10 +82,10 @@ void cycleSort(int *arr, int n)
 // Driver program to test above function
 int main()
 {
-    int n; // Size of array elements
+    int n;  // Size of array elements
 
     printf("Enter size of array:\n");
-    scanf("%d", &n); // E.g. 8
+    scanf("%d", &n);  // E.g. 8
 
     printf("Enter the elements of the array\n");
     int i;

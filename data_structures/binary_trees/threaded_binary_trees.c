@@ -51,8 +51,8 @@ node *create_node(int data)
 void insert_bt(node **root, int data)
 {
     node *new_node = create_node(data);
-    node *temp; // to be deleted
-    node *prev; // keeps track of the parent of the element deleted
+    node *temp;  // to be deleted
+    node *prev;  // keeps track of the parent of the element deleted
     if (*root == NULL)
     {
         *root = new_node;
@@ -204,7 +204,7 @@ void delete_bt(node **root, int ele)
         return;
     else
     {
-        node *replacement; // deleted node's replacement
+        node *replacement;  // deleted node's replacement
         node *t;
         if (temp->llink == NULL && temp->rlink == NULL)
         {
@@ -220,15 +220,15 @@ void delete_bt(node **root, int ele)
         }
         else
         {
-            replacement = temp->rlink; // replaced with inorder successor
+            replacement = temp->rlink;  // replaced with inorder successor
             t = replacement;
             while (t->llink != NULL)
             {
                 t = t->llink;
             }
             t->llink =
-                temp->llink; // leftmost node of the replacement is linked to
-                             // the left child of the deleted node
+                temp->llink;  // leftmost node of the replacement is linked to
+                              // the left child of the deleted node
         }
 
         if (temp == *root)

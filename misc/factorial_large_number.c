@@ -107,8 +107,7 @@ int main(int argc, char *argv[])
     large_num *result = new_number();
 
     clock_t start_time = clock();
-    for (i = 2; i <= number; i++)
-        /* Multiply every number from 2 thru N */
+    for (i = 2; i <= number; i++) /* Multiply every number from 2 thru N */
         multiply(result, i);
     double time_taken = (clock() - start_time) * (double)1e3 / CLOCKS_PER_SEC;
     // time_taken = (clock() - start_time) / (double) CLOCKS_PER_SEC;

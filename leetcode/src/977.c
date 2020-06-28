@@ -26,8 +26,7 @@ int cmpval(const void *a, const void *b) { return *(int *)a - *(int *)b; }
 int *sortedSquares(int *A, int ASize, int *returnSize)
 {
     int *res = malloc(ASize * sizeof(int));
-    for (int i = 0; i < ASize; i++)
-        res[i] = A[i] * A[i];
+    for (int i = 0; i < ASize; i++) res[i] = A[i] * A[i];
     *returnSize = ASize;
     qsort(res, ASize, sizeof(int), cmpval);
     return res;

@@ -26,8 +26,7 @@ void shuffle(int *a, int n)
 
 void sort(int *a, int n)
 {
-    while (!check_sorted(a, n))
-        shuffle(a, n);
+    while (!check_sorted(a, n)) shuffle(a, n);
 }
 
 int main()
@@ -40,7 +39,6 @@ int main()
         scanf("%d", &numbers[i]);
     }
     sort(numbers, 6);
-    for (i = 0; i < 6; i++)
-        printf("%d ", numbers[i]);
+    for (i = 0; i < 6; i++) printf("%d ", numbers[i]);
     printf("\n");
 }

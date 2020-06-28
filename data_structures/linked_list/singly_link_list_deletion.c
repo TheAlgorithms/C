@@ -11,14 +11,14 @@ struct node
 };
 struct node *start = NULL;
 ///////////////////////////////////////////////////////////
-struct node *createnode() // function to create node
+struct node *createnode()  // function to create node
 {
     struct node *t;
     t = (struct node *)malloc(sizeof(struct node));
     return (t);
 }
 ////////////////////////////////////////////////////////
-void insert() // function to insert at first location
+void insert()  // function to insert at first location
 {
     struct node *p;
     p = createnode();
@@ -36,7 +36,7 @@ void insert() // function to insert at first location
     }
 }
 ///////////////////////////////////////////////////////////
-void deletion() // function to delete from first position
+void deletion()  // function to delete from first position
 {
     struct node *t;
     if (start == NULL)
@@ -52,7 +52,7 @@ void deletion() // function to delete from first position
     }
 }
 ///////////////////////////////////////////////////////
-void viewlist() // function to display values
+void viewlist()  // function to display values
 {
     struct node *p;
     if (start == NULL)

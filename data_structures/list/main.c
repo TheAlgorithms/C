@@ -1,14 +1,13 @@
-#include "list.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "list.h"
 
 void print_list(char **array)
 {
     int i;
-    for (i = 0; array[i]; i++)
-        printf("%s", array[i]);
+    for (i = 0; array[i]; i++) printf("%s", array[i]);
     printf("\n");
 }
 

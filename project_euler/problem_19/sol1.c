@@ -122,9 +122,10 @@ int main(int argc, char **argv)
         }
     }
 
-    printf("Total number of Sundays that happened on the 1st of a month in the "
-           "last century: %d\n",
-           count_sundays);
+    printf(
+        "Total number of Sundays that happened on the 1st of a month in the "
+        "last century: %d\n",
+        count_sundays);
 
     return 0;
 }

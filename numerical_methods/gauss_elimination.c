@@ -65,7 +65,6 @@ int main(void)
     printf("\n");
     for (i = 0; i < n; i++)
     {
-
         printf("Enter Co-efficient Of Equations %d & Total --->>>\n", i + 1);
         for (j = 0; j <= n; j++)
         {

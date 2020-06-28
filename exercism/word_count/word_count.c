@@ -41,7 +41,6 @@ int word_count(const char *input_text, word_count_word_t *words)
             input[index] = '\0';
             if (strlen(p_str) <= MAX_WORD_LENGTH)
             {
-
                 if (index_list <= MAX_WORDS)
                 {
                     strcpy(word_list[index_list], p_str);

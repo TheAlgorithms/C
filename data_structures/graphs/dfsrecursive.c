@@ -1,11 +1,11 @@
-#include "Graph.h"
 #include <stdbool.h>
 #include <stdio.h>
+#include "Graph.h"
 
 #define MAX_NODES 1000
 
-int visited[MAX_NODES]; // array to store visiting order
-                        // indexed by vertex 0..nV-1
+int visited[MAX_NODES];  // array to store visiting order
+                         // indexed by vertex 0..nV-1
 
 bool dfsPathCheck(Graph g, int nV, Vertex v, Vertex dest)
 {
@@ -25,8 +25,7 @@ bool dfsPathCheck(Graph g, int nV, Vertex v, Vertex dest)
 bool findPathDFS(Graph g, int nV, Vertex src, Vertex dest)
 {
     Vertex v;
-    for (v = 0; v < nV; v++)
-        visited[v] = -1;
+    for (v = 0; v < nV; v++) visited[v] = -1;
     visited[src] = src;
     return dfsPathCheck(g, nV, src, dest);
 }

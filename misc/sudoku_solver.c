@@ -83,8 +83,7 @@ int main()
     scanf("%d%d%d", &N, &R, &C);
     int a[M], i, j;
     for (i = 0; i < N; i++)
-        for (j = 0; j < N; j++)
-            scanf("%d", &a[i * N + j]);
+        for (j = 0; j < N; j++) scanf("%d", &a[i * N + j]);
 
     if (solve(a))
         print(a);

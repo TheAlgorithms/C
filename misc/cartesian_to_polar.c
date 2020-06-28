@@ -19,25 +19,25 @@ int main()
         {
             theta = atan(y / x);
             if ((x > 0 && y > 0) || (x == -y))
-            { // Q1
+            {  // Q1
                 thetaFinal = theta;
             }
             else if (x < 0 && y > 0)
-            { // Q2
+            {  // Q2
                 thetaFinal = theta + pi;
             }
             else if (x < 0 && y < 0)
-            { // Q3
+            {  // Q3
                 thetaFinal = theta - pi;
             }
             else if (x > 0 && y < 0)
-            { // Q4
+            {  // Q4
                 thetaFinal = 2 * pi - theta;
             }
         }
     }
     if (x == 0)
-    { // exceptions when no actual angle is present
+    {  // exceptions when no actual angle is present
         if (y > 0)
         {
             thetaFinal = pi / 2;

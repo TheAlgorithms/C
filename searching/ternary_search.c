@@ -6,7 +6,6 @@ int ternarySearch(int l, int r, int key, int ar[])
 {
     if (r >= l)
     {
-
         // Find the mid1 and mid2
         int mid1 = l + (r - l) / 3;
         int mid2 = r - (r - l) / 3;
@@ -28,19 +27,16 @@ int ternarySearch(int l, int r, int key, int ar[])
 
         if (key < ar[mid1])
         {
-
             // The key lies in between l and mid1
             return ternarySearch(l, mid1 - 1, key, ar);
         }
         else if (key > ar[mid2])
         {
-
             // The key lies in between mid2 and r
             return ternarySearch(mid2 + 1, r, key, ar);
         }
         else
         {
-
             // The key lies in between mid1 and mid2
             return ternarySearch(mid1 + 1, mid2 - 1, key, ar);
         }

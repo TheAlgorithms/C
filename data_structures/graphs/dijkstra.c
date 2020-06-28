@@ -18,8 +18,7 @@ void createGraph(struct Graph *G, int V)
     for (int i = 0; i < V; i++)
     {
         G->edges[i] = (int *)malloc(V * sizeof(int));
-        for (int j = 0; j < V; j++)
-            G->edges[i][j] = INT_MAX;
+        for (int j = 0; j < V; j++) G->edges[i][j] = INT_MAX;
         G->edges[i][i] = 0;
     }
 }
@@ -63,13 +62,12 @@ void print(int dist[], int V)
 void Dijkstra(struct Graph *graph, int src)
 {
     int V = graph->vertexNum;
-    int mdist[V]; // Stores updated distances to vertex
-    int vset[V];  // vset[i] is true if the vertex i included
-                  // in the shortest path tree
+    int mdist[V];  // Stores updated distances to vertex
+    int vset[V];   // vset[i] is true if the vertex i included
+                   // in the shortest path tree
 
     // Initialise mdist and vset. Set distance of source as zero
-    for (int i = 0; i < V; i++)
-        mdist[i] = INT_MAX, vset[i] = 0;
+    for (int i = 0; i < V; i++) mdist[i] = INT_MAX, vset[i] = 0;
 
     mdist[src] = 0;
 

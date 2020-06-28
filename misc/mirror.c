@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <string.h> // we include the library string.h to the use of string
+#include <string.h>  // we include the library string.h to the use of string
 
 void saisie(
-    char *cpointeur); // Prototypes of the three functions used in the program
+    char *cpointeur);  // Prototypes of the three functions used in the program
 int compte(char *s);
 char *miroir(char *s);
 

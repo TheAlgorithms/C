@@ -21,18 +21,18 @@ int main(int argc, char *argv[])
     else
     {
         printf("Enter starting number: ");
-        scanf("%lu", &n); // input number
+        scanf("%lu", &n);  // input number
     }
 
-    curr_no = n;         // curr_no stores input number n
-    while (curr_no != 1) // loop till series reaches 1
+    curr_no = n;          // curr_no stores input number n
+    while (curr_no != 1)  // loop till series reaches 1
     {
         num_steps++;
         printf("%llu->", curr_no);
-        if (curr_no % 2 == 0) // condition   for even number
+        if (curr_no % 2 == 0)  // condition   for even number
             curr_no = curr_no / 2;
         else
-            curr_no = (curr_no * 3) + 1; // condition for odd number
+            curr_no = (curr_no * 3) + 1;  // condition for odd number
     }
     printf("1\nNumber of steps: %llu\n", num_steps);
     return 0;

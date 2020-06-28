@@ -91,7 +91,6 @@ Node *rightRotate(Node *node)
 // Check the node after the insertion step
 void checkNode(Node *node)
 {
-
     // If the node is the root
     if (node == NULL || node->par == NULL)
     {
@@ -166,7 +165,7 @@ void checkNode(Node *node)
                 grandParent->color = 1;
             }
             else
-            { // Right Left Case
+            {  // Right Left Case
                 // First step -> Parent Child Rotation
                 parent->left = child->right;
                 if (child->right != NULL)
@@ -206,7 +205,7 @@ void checkNode(Node *node)
             }
         }
         else
-        { // Left Case
+        {  // Left Case
             // Left Left Case
             if (parent->left == node)
             {
@@ -238,7 +237,7 @@ void checkNode(Node *node)
                 grandParent->color = 1;
             }
             else
-            { // Left Right Case
+            {  // Left Right Case
 
                 // First step -> Parent Child Rotation
                 parent->right = child->left;
@@ -307,7 +306,6 @@ void insertNode(int val, Node **root)
         }
         else
         {
-
             // Go right
             if (buffRoot->right != NULL)
             {
@@ -344,7 +342,6 @@ void insertNode(int val, Node **root)
 
 void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
 {
-
     if (toDelete == (*root))
     {
         (*root)->color = 0;
@@ -374,7 +371,7 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
     // Get the sibling for further inspection
     Node *sibling;
     Node *parent = toDelete->par;
-    int locateChild = 0; // 0 if toDeleted is left of its parent else 1
+    int locateChild = 0;  // 0 if toDeleted is left of its parent else 1
     if (parent->right == toDelete)
     {
         sibling = parent->left;
@@ -391,11 +388,9 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
     {
         if (sibling->right != NULL && sibling->right->color == 1)
         {
-
             // Sibling is left and child is right. i.e. LEFT RIGHT ROTATION
             if (locateChild == 1)
             {
-
                 int parColor = parent->color;
 
                 // Step 1: Left rotate sibling
@@ -427,8 +422,8 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
                 }
             }
             else
-            { // Sibling is right and child is also right. i.e. LEFT LEFT
-              // ROTATION
+            {  // Sibling is right and child is also right. i.e. LEFT LEFT
+               // ROTATION
 
                 int parColor = parent->color;
 
@@ -460,11 +455,9 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
         }
         else
         {
-
             // Sibling is right and child is left. i.e. RIGHT LEFT ROTATION
             if (locateChild == 0)
             {
-
                 int parColor = parent->color;
 
                 // Step 1: Right rotate sibling
@@ -499,8 +492,8 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
                 }
             }
             else
-            { // Sibling is left and child is also left. i.e. RIGHT RIGHT
-              // ROTATION
+            {  // Sibling is left and child is also left. i.e. RIGHT RIGHT
+               // ROTATION
 
                 int parColor = parent->color;
 
@@ -532,7 +525,7 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
         }
     }
     else if (sibling->color == 0)
-    { // Make the sibling red and recur for its parent
+    {  // Make the sibling red and recur for its parent
 
         // Recolor the sibling
         sibling->color = 1;
@@ -561,9 +554,9 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
         checkForCase2(parent, 0, locateChild, root);
     }
     else
-    { // Bring the sibling on top and apply 2.1 or 2.2 accordingly
+    {  // Bring the sibling on top and apply 2.1 or 2.2 accordingly
         if (locateChild)
-        { // Right Rotate
+        {  // Right Rotate
 
             toDelete->par->right = toDelete->left;
             if (toDelete->left != NULL)
@@ -584,7 +577,7 @@ void checkForCase2(Node *toDelete, int delete, int fromDirection, Node **root)
             checkForCase2(parent->right, 0, 1, root);
         }
         else
-        { // Left Rotate
+        {  // Left Rotate
 
             toDelete->par->left = toDelete->right;
             if (toDelete->right != NULL)
@@ -616,7 +609,6 @@ void deleteNode(int val, Node **root)
     // Search for the element in the tree
     while (1)
     {
-
         if (val == buffRoot->val)
         {
             // Node Found
@@ -684,7 +676,6 @@ void deleteNode(int val, Node **root)
         (toDelete->left != NULL && toDelete->left->color == 1) ||
         (toDelete->right != NULL && toDelete->right->color == 1))
     {
-
         // if it is a leaf
         if (toDelete->left == NULL && toDelete->right == NULL)
         {
@@ -699,7 +690,7 @@ void deleteNode(int val, Node **root)
             }
         }
         else
-        { // else its child should be red
+        {  // else its child should be red
 
             // Check for the exitstence of left node
             if (toDelete->left != NULL)
@@ -710,7 +701,7 @@ void deleteNode(int val, Node **root)
                 toDelete->left->color = 1;
             }
             else
-            { // else the right node should be red
+            {  // else the right node should be red
                 toDelete->par->left = toDelete->right;
                 toDelete->right->par = toDelete->par;
                 toDelete->right->color = 1;
@@ -721,7 +712,7 @@ void deleteNode(int val, Node **root)
         free(toDelete);
     }
     else
-    { // Case 2
+    {  // Case 2
         checkForCase2(toDelete, 1, ((toDelete->par->right == toDelete)), root);
     }
 }
@@ -755,8 +746,9 @@ int main()
 {
     Node *root = NULL;
     int scanValue, choice = 1;
-    printf("1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - Quit\n\nPlease "
-           "Enter the Choice - ");
+    printf(
+        "1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - Quit\n\nPlease "
+        "Enter the Choice - ");
     scanf("%d", &choice);
     while (choice)
     {
@@ -795,8 +787,9 @@ int main()
                 printf("Root - %d\n", root->val);
             }
         }
-        printf("1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - "
-               "Quit\n\nPlease Enter the Choice - ");
+        printf(
+            "1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - "
+            "Quit\n\nPlease Enter the Choice - ");
         scanf("%d", &choice);
     }
 }

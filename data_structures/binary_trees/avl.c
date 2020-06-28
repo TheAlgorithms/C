@@ -50,8 +50,7 @@ avlNode *minNode(avlNode *node)
 {
     avlNode *temp = node;
 
-    while (temp->left != NULL)
-        temp = temp->left;
+    while (temp->left != NULL) temp = temp->left;
 
     return temp;
 }
@@ -64,8 +63,7 @@ void printAVL(avlNode *node, int level)
         printAVL(node->right, level + 1);
         printf("\n\n");
 
-        for (i = 0; i < level; i++)
-            printf("\t");
+        for (i = 0; i < level; i++) printf("\t");
 
         printf("%d", node->key);
 
@@ -117,7 +115,6 @@ avlNode *RightLeftRotate(avlNode *z)
 
 avlNode *insert(avlNode *node, int key)
 {
-
     if (node == NULL)
         return (newNode(key));
 
@@ -310,7 +307,6 @@ int main()
 
         case 1:
         {
-
             printf("\n\tEnter the Number to insert: ");
             scanf("%d", &insertNum);
 

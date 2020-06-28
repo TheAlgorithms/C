@@ -47,7 +47,6 @@ void propagate(Contour *head)
 
 void print(Contour *head)
 {
-
     Contour *temp = head;
     while (temp != NULL)
     {
@@ -62,7 +61,6 @@ void print(Contour *head)
 
 int main(int argc, char const *argv[])
 {
-
     head = NULL;
 
     int start_num, end_num, levels;

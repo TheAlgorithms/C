@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int n, m; // size of the matrix
+int n, m;  // size of the matrix
 
 // This function does Binary search for x in i-th row from j_low to j_high.
 void binarySearch(int **mat, int i, int j_low, int j_high, int x)
@@ -28,7 +28,7 @@ void binarySearch(int **mat, int i, int j_low, int j_high, int x)
 // Function to perform binary search on the mid values of row to get the desired
 // pair of rows where the element can be found
 void modifiedBinarySearch(int **mat, int n, int m, int x)
-{ // If Single row matrix
+{  // If Single row matrix
     if (n == 1)
     {
         binarySearch(mat, 0, 0, m - 1, x);
@@ -77,11 +77,10 @@ void modifiedBinarySearch(int **mat, int n, int m, int x)
 
 int main()
 {
-    int x; // element to be searched
+    int x;  // element to be searched
     scanf("%d %d %d\n", &n, &m, &x);
     int **mat = (int **)malloc(n * sizeof(int *));
-    for (x = 0; x < n; x++)
-        mat[x] = (int *)malloc(m * sizeof(int));
+    for (x = 0; x < n; x++) mat[x] = (int *)malloc(m * sizeof(int));
 
     for (int i = 0; i < n; i++)
     {
@@ -92,8 +91,7 @@ int main()
     }
     modifiedBinarySearch(mat, n, m, x);
 
-    for (x = 0; x < n; x++)
-        free(mat[x]);
+    for (x = 0; x < n; x++) free(mat[x]);
     free(mat);
     return 0;
 }

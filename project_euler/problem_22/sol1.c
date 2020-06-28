@@ -38,8 +38,7 @@ void shell_sort(char data[][MAX_NAME_LEN], int LEN)
         }
     }
 #ifdef DEBUG
-    for (i = 0; i < LEN; i++)
-        printf("%s\t", data[i]);
+    for (i = 0; i < LEN; i++) printf("%s\t", data[i]);
 #endif
 }
 
@@ -63,8 +62,7 @@ void lazy_sort(char data[][MAX_NAME_LEN], int LEN)
         }
     }
 #ifdef DEBUG
-    for (i = 0; i < LEN; i++)
-        printf("%s\t", data[i]);
+    for (i = 0; i < LEN; i++) printf("%s\t", data[i]);
 #endif
 }
 

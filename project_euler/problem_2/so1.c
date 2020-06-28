@@ -25,7 +25,7 @@ int main()
 
     while (j <= n)
     {
-        if ((j & 1) == 0) // can also use(j%2 == 0)
+        if ((j & 1) == 0)  // can also use(j%2 == 0)
             sum += j;
         temp = i;
         i = j;

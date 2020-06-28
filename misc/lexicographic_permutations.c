@@ -50,7 +50,7 @@ void PrintSortedPermutations(char *str)
 
 int main()
 {
-    int n; // size of string
+    int n;  // size of string
     scanf("%d\n", &n);
     char *str = (char *)malloc(n * sizeof(char));
     scanf("%s", str);

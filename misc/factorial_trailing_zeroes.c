@@ -2,7 +2,7 @@
 programme for computing number of zeroes at the end of factorial of a given
 number n
 */
-#include <math.h> //including math.h header file to use pow function
+#include <math.h>  //including math.h header file to use pow function
 #include <stdio.h>
 int main()
 {
@@ -16,14 +16,14 @@ int main()
         test =
             n /
             pow(5,
-                i); // division of n by ith power of 5(storing in integer form)
+                i);  // division of n by ith power of 5(storing in integer form)
         if (test !=
-            0) // condition for zeroes at end corresponding individual ith case
+            0)  // condition for zeroes at end corresponding individual ith case
         {
             count = count + test;
         }
         else
-            break; // break the loop for if test=0
+            break;  // break the loop for if test=0
     }
     printf("%d\n", count);
     return 0;

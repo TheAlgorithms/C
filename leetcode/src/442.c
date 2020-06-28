@@ -2,7 +2,6 @@ int cmpval(const void *a, const void *b) { return *(int *)a - *(int *)b; }
 
 int *findDuplicates(int *nums, int numsSize, int *returnSize)
 {
-
     int i;
     qsort(nums, numsSize, sizeof(int), cmpval);
     int *retArr = malloc(numsSize * sizeof(int));

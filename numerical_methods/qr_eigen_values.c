@@ -5,12 +5,12 @@
  * method.
  * \author [Krishna Vedala](https://github.com/kvedala)
  */
-#include "qr_decompose.h"
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "qr_decompose.h"
 #ifdef _OPENMP
 #include <omp.h>
 #endif
@@ -72,8 +72,7 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2,
         for (int j = 0; j < C2; j++)
         {
             OUT[i][j] = 0.f;
-            for (int k = 0; k < C1; k++)
-                OUT[i][j] += A[i][k] * B[k][j];
+            for (int k = 0; k < C1; k++) OUT[i][j] += A[i][k] * B[k][j];
         }
     return OUT;
 }
@@ -144,8 +143,7 @@ double eigen_values(double **A, double *eigen_vals, int mat_size,
         while (fabs(A[num_eigs][num_eigs - 1]) > EPSILON)
         {
             last_eig = A[num_eigs][num_eigs];
-            for (int i = 0; i < rows; i++)
-                A[i][i] -= last_eig; /* A - cI */
+            for (int i = 0; i < rows; i++) A[i][i] -= last_eig; /* A - cI */
             qr_decompose(A, Q, R, rows, columns);
 
             if (debug_print)
@@ -158,8 +156,7 @@ double eigen_values(double **A, double *eigen_vals, int mat_size,
             }
 
             mat_mul(R, Q, A, columns, columns, rows, columns);
-            for (int i = 0; i < rows; i++)
-                A[i][i] += last_eig; /* A + cI */
+            for (int i = 0; i < rows; i++) A[i][i] += last_eig; /* A + cI */
         }
 
         /* store the converged eigen value */
@@ -209,13 +206,12 @@ void test1()
 {
     int mat_size = 2;
     double X[][2] = {{5, 7}, {7, 11}};
-    double y[] = {15.56158, 0.384227}; // corresponding y-values
+    double y[] = {15.56158, 0.384227};  // corresponding y-values
     double eig_vals[2];
 
     // The following steps are to convert a "double[][]" to "double **"
     double **A = (double **)malloc(mat_size * sizeof(double *));
-    for (int i = 0; i < mat_size; i++)
-        A[i] = X[i];
+    for (int i = 0; i < mat_size; i++) A[i] = X[i];
 
     printf("------- Test 1 -------\n");
 
@@ -262,13 +258,12 @@ void test2()
                      {0, -3, 3, -1, -3},
                      {-3, -1, -3, -3, 0}};
     double y[] = {9.27648, -9.26948, 2.0181, -1.03516,
-                  -5.98994}; // corresponding y-values
+                  -5.98994};  // corresponding y-values
     double eig_vals[5];
 
     // The following steps are to convert a "double[][]" to "double **"
     double **A = (double **)malloc(mat_size * sizeof(double *));
-    for (int i = 0; i < mat_size; i++)
-        A[i] = X[i];
+    for (int i = 0; i < mat_size; i++) A[i] = X[i];
 
     printf("------- Test 2 -------\n");
 
@@ -306,7 +301,7 @@ int main(int argc, char **argv)
     if (argc == 2)
         mat_size = atoi(argv[1]);
     else
-    { // if invalid input argument is given run tests
+    {  // if invalid input argument is given run tests
         test1();
         test2();
         printf("Usage: ./qr_eigen_values [mat_size]\n");
@@ -341,12 +336,10 @@ int main(int argc, char **argv)
 
     double dtime = eigen_values(A, eigen_vals, mat_size, 0);
     printf("Eigen vals: ");
-    for (i = 0; i < mat_size; i++)
-        printf("% 9.4g\t", eigen_vals[i]);
+    for (i = 0; i < mat_size; i++) printf("% 9.4g\t", eigen_vals[i]);
     printf("\nTime taken to compute: % .4g sec\n", dtime);
 
-    for (int i = 0; i < mat_size; i++)
-        free(A[i]);
+    for (int i = 0; i < mat_size; i++) free(A[i]);
     free(A);
     free(eigen_vals);
     return 0;

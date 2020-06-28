@@ -79,7 +79,6 @@ void BucketSort(int arr[])
         node = buckets[i];
         while (node)
         {
-
             // precondition for avoiding out of bounds by the array
             assert(j < NARRAY);
             arr[j++] = node->data;
@@ -125,7 +124,7 @@ struct Node *InsertionSort(struct Node *list)
         {
             struct Node *tmp;
             tmp = k;
-            k = k->next; // important for the while
+            k = k->next;  // important for the while
             tmp->next = nodeList;
             nodeList = tmp;
             continue;
@@ -144,7 +143,7 @@ struct Node *InsertionSort(struct Node *list)
         {
             struct Node *tmp;
             tmp = k;
-            k = k->next; // important for the while
+            k = k->next;  // important for the while
             tmp->next = ptr->next;
             ptr->next = tmp;
             continue;
@@ -152,7 +151,7 @@ struct Node *InsertionSort(struct Node *list)
         else
         {
             ptr->next = k;
-            k = k->next; // important for the while
+            k = k->next;  // important for the while
             ptr->next->next = NULL;
             continue;
         }

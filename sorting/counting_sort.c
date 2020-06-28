@@ -28,14 +28,13 @@ int main()
     int *b = (int *)malloc((l + 1) * sizeof(int));
     memset(b, 0, (l + 1) * sizeof(b[0]));
 
-    for (i = 0; i < n; i++)
-        b[a[i]]++; // hashing number to array index
+    for (i = 0; i < n; i++) b[a[i]]++;  // hashing number to array index
 
-    for (i = 0; i < (l + 1); i++) // unstable , stabilized by prefix sum array
+    for (i = 0; i < (l + 1); i++)  // unstable , stabilized by prefix sum array
     {
         if (b[i] > 0)
         {
-            while (b[i] != 0) // for case when number exists more than once
+            while (b[i] != 0)  // for case when number exists more than once
             {
                 printf("%d ", i);
                 b[i]--;

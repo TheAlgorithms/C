@@ -182,9 +182,10 @@ int main(int argc, char **argv)
     printf("Time taken for final sum: %.4g ms\nTotal Time taken: %.4g ms\n",
            t22, t1 + t22);
     printf("Memory used: %lu bytes\n", MAX_N >> 3);
-    printf("Sum of numbers that cannot be represented as sum of two abundant "
-           "numbers : %lu\n",
-           sum);
+    printf(
+        "Sum of numbers that cannot be represented as sum of two abundant "
+        "numbers : %lu\n",
+        sum);
 
     free(abundant_flags);
 

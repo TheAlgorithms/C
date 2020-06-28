@@ -6,7 +6,6 @@
 */
 bool is_isogram(const char phrase[])
 {
-
     /* use 'unsigned' because of the function strlen(...) */
     unsigned int i = 0;
     unsigned int j = 0;

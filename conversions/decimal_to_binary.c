@@ -5,7 +5,6 @@
 
 int main()
 {
-
     // input of the user
     int inputNumber;
 
@@ -35,7 +34,6 @@ int main()
     // actual processing
     while (inputNumber > 0)
     {
-
         // computes the remainder by modulo 2
         re = inputNumber % 2;
 

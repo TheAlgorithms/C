@@ -29,8 +29,7 @@ L List_push(L list, void *val)
 int List_length(L list)
 {
     int n;
-    for (n = 0; list; list = list->next)
-        n++;
+    for (n = 0; list; list = list->next) n++;
     return n;
 }
 

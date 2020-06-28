@@ -1,6 +1,6 @@
-#include "Graph.h"
 #include <stdbool.h>
 #include <stdio.h>
+#include "Graph.h"
 
 #define MAX_NODES 1000
 
@@ -38,8 +38,7 @@ bool hamiltonR(Graph g, int nV, Vertex v, Vertex dest, int d)
 bool hasHamiltonianPath(Graph g, int nV, Vertex src, Vertex dest)
 {
     Vertex v;
-    for (v = 0; v < nV; v++)
-        visited[v] = false;
+    for (v = 0; v < nV; v++) visited[v] = false;
     return hamiltonR(g, nV, src, dest, nV - 1);
 }
 

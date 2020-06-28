@@ -12,7 +12,7 @@
 #endif
 
 #define MAX_DENO 2000 /**< limit of unit fractions */
-#define MAX_LEN                                                                \
+#define MAX_LEN \
     (MAX_DENO + 10) /**< length of resulting recurring fraction number */
 
 /** comparison function for use with internal `qsort` algorithm */

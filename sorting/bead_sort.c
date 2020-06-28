@@ -5,7 +5,6 @@
 /*Displays the array, passed to this method*/
 void display(int *arr, int n)
 {
-
     int i;
     for (i = 0; i < n; i++)
     {
@@ -33,8 +32,7 @@ void bead_sort(int *a, int len)
 
     /* mark the beads */
     for (i = 0; i < len; i++)
-        for (j = 0; j < a[i]; j++)
-            BEAD(i, j) = 1;
+        for (j = 0; j < a[i]; j++) BEAD(i, j) = 1;
 
     for (j = 0; j < max; j++)
     {
@@ -45,8 +43,7 @@ void bead_sort(int *a, int len)
             BEAD(i, j) = 0;
         }
         /* mark bottom sum beads */
-        for (i = len - sum; i < len; i++)
-            BEAD(i, j) = 1;
+        for (i = len - sum; i < len; i++) BEAD(i, j) = 1;
     }
 
     for (i = 0; i < len; i++)
@@ -62,7 +59,7 @@ int main(int argc, const char *argv[])
 {
     int n;
     printf("Enter size of array:\n");
-    scanf("%d", &n); // E.g. 8 1 2 3
+    scanf("%d", &n);  // E.g. 8 1 2 3
 
     printf("Enter the elements of the array\n");
     int i;

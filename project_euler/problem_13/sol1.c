@@ -85,8 +85,7 @@ int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
     uint8_t end_pos;
 
     /* skip all initial zeros */
-    while (number[start_pos] == 0)
-        start_pos--;
+    while (number[start_pos] == 0) start_pos--;
 
     /* if end_pos < 0, print all digits */
     if (num_digits_to_print < 0)
@@ -99,8 +98,7 @@ int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
         return -1;
     }
 
-    for (int i = start_pos; i >= end_pos; i--)
-        putchar(number[i] + 0x30);
+    for (int i = start_pos; i >= end_pos; i--) putchar(number[i] + 0x30);
 
     putchar('\n');
 

@@ -29,8 +29,7 @@ int main(int argc, char **argv)
     }
     putchar('\n');
 
-    for (i = 0; i < n; i++)
-        sum = sum + a[i];
+    for (i = 0; i < n; i++) sum = sum + a[i];
 
     mean = sum / (float)n;
     printf("\nMean :");
