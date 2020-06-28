@@ -50,8 +50,9 @@ void PrintSortedPermutations(char *str)
 
 int main()
 {
-    int n;  // size of string
-    scanf("%d\n", &n);
+    unsigned int n;  // size of string
+    scanf("%u\n", &n);
+
     char *str = (char *)malloc(n * sizeof(char));
     scanf("%s", str);
     PrintSortedPermutations(str);
