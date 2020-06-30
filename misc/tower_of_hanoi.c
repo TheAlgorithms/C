@@ -5,11 +5,7 @@
 // Function for Tower of Hanoi algorithm
 void hanoi(int noOfDisks, char where, char to, char extra)
 {
-    if (noOfDisks == 0)
-    {
-        return;
-    }
-    else
+    if (noOfDisks != 0)
     {
         hanoi(noOfDisks - 1, where, extra, to);
         printf("Move disk : %d from %c to %c\n", noOfDisks, where, to);
