@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief function to generate [Cantor ternary
+ * @brief Program to generate [Cantor ternary
  * set](https://en.wikipedia.org/wiki/Cantor_set)
  */
 #include <stdio.h>
