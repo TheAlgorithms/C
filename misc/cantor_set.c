@@ -8,28 +8,28 @@
 #include <string.h>
 
 /** structure to define Cantor set */
-typedef struct contour
+typedef struct _cantor_set
 {
-    double start;         /**< start of interval */
-    double end;           /**< end of interval */
-    struct contour *next; /**< pointer to next set */
-} Contour;
+    double start;             /**< start of interval */
+    double end;               /**< end of interval */
+    struct _cantor_set *next; /**< pointer to next set */
+} CantorSet;
 
 /** Iterative constructor of all sets in the current level. This function
  * dynamically allocates memory when creating new sets. These are freed by the
  * function ::free_memory.
  * @param head pointer to interval set instance to update
  */
-void propagate(Contour *head)
+void propagate(CantorSet *head)
 {
     // if input is NULL, ignore the process
     if (head == NULL)
         return;
 
-    Contour *temp = head;  // local pointer to track propagation
+    CantorSet *temp = head;  // local pointer to track propagation
 
     // create new node for the new set
-    Contour *newNode = (Contour *)malloc(sizeof(Contour));
+    CantorSet *newNode = (CantorSet *)malloc(sizeof(CantorSet));
 
     // get 1/3rd of interval
     double diff = (((temp->end) - (temp->start)) / 3);
@@ -52,9 +52,9 @@ void propagate(Contour *head)
 /** Print sets in the current range to `stdout`
  * @param head pointer to first set in the current level
  */
-void print(Contour *head)
+void print(CantorSet *head)
 {
-    Contour *temp = head;
+    CantorSet *temp = head;
     while (temp != NULL)  // print while a valid set is found
     {
         printf("\t");
@@ -69,7 +69,7 @@ void print(Contour *head)
 /** Clear memory allocated by ::propagate function.
  * @param head pointer to first allocated instance.
  */
-void free_memory(Contour *head)
+void free_memory(CantorSet *head)
 {
     if (!head)
         return;
@@ -103,7 +103,7 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    Contour head = {.start = start_num, .end = end_num, .next = NULL};
+    CantorSet head = {.start = start_num, .end = end_num, .next = NULL};
 
     // loop to propagate each level from top to bottom
     for (int i = 0; i < levels; i++)
