@@ -129,7 +129,7 @@ int main(int argc, char **argv)
 
     if (argc == 2)
         N = strtoll(argv[1], NULL, 10);
-    else if (N > 2)
+    else if (argc > 2)
     {
         fprintf(stderr, "Wrong number of input arguments!\n");
         printf("Usage:\t ./sol1.c [N=1000]");
