@@ -16,7 +16,7 @@
  * @authors [Anuj Shah](https://github.com/anujms1999)
  * @authors [Krishna Vedala](https://github.com/kvedala)
  */
-
+#include <assert.h>
 #include <inttypes.h>
 #include <math.h>
 #include <stdbool.h>
@@ -186,13 +186,13 @@ bool solve(struct sudoku *a)
     /* try all possible values for the unknown */
     for (uint8_t v = 1; v <= a->N; v++)
     { /* try all possible values 1 thru N */
-        printf("%sTry (%d,%d) = %d... ", prefix, i, j, v);
+        printf("%sTry (%d,%d) = %" SCNu8 "... ", prefix, i, j, v);
         counter++;
         if (OK(a, i, j, v))
         {
             /* if assignment checks satisfy, set the value and
              continue with remaining elements */
-            printf("passed (counter=%lu)\n", counter);
+            printf("passed (counter=%" SCNu32 ")\n", counter);
             a->a[i * a->N + j] = v;
             strcat(prefix, "  ");
             if (solve(a))
@@ -200,9 +200,11 @@ bool solve(struct sudoku *a)
                 /* solution found */
                 return true;
             }
-            printf("%sBacktrack (%d,%d) <- %d (counter=%lu)\n", prefix, i, j,
-                   a->a[i * a->N + j], counter);
-            prefix[strlen(prefix) - 2] = '\0';
+
+            printf("%sBacktrack (%d,%d) <- %" SCNu8 " (counter=%" SCNu32 ")\n",
+                   prefix, i, j, a->a[i * a->N + j], counter);
+
+            prefix[strlen(prefix) - 2] = '\0';  // truncate the prefix
             a->a[i * a->N + j] = 0;
         }
         else
@@ -216,9 +218,35 @@ bool solve(struct sudoku *a)
 
 /** @} */
 
+void test()
+{
+    printf("Test begin...\n");
+
+    uint8_t test_array[] = {3, 0, 6, 5, 0, 8, 4, 0, 0, 5, 2, 0, 0, 0, 0, 0, 0,
+                            0, 0, 8, 7, 0, 0, 0, 0, 3, 1, 0, 0, 3, 0, 1, 0, 0,
+                            8, 0, 9, 0, 0, 8, 6, 3, 0, 0, 5, 0, 5, 0, 0, 9, 0,
+                            6, 0, 0, 1, 3, 0, 0, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0,
+                            0, 0, 7, 4, 0, 0, 5, 2, 0, 6, 3, 0, 0};
+    struct sudoku a = {.N = 9, .N2 = 3, .a = test_array};
+    assert(solve(&a));  // ensure that solution is obtained
+
+    uint8_t expected[] = {3, 1, 6, 5, 7, 8, 4, 9, 2, 5, 2, 9, 1, 3, 4, 7, 6,
+                          8, 4, 8, 7, 6, 2, 9, 5, 3, 1, 2, 6, 3, 4, 1, 5, 9,
+                          8, 7, 9, 7, 4, 8, 6, 3, 1, 2, 5, 8, 5, 1, 7, 9, 2,
+                          6, 4, 3, 1, 3, 8, 9, 4, 7, 2, 5, 6, 6, 9, 2, 3, 5,
+                          1, 8, 7, 4, 7, 4, 5, 2, 8, 6, 3, 1, 9};
+    for (int i = 0; i < a.N; i++)
+        for (int j = 0; j < a.N; j++)
+            assert(a.a[i * a.N + j] == expected[i * a.N + j]);
+
+    printf("Test passed\n");
+}
+
 /** \brief Main function */
 int main()
 {
+    test();
+
     struct sudoku a;  // store the matrix as a 1D array
     scanf("%" SCNu8, &(a.N));
     a.a = (uint8_t *)malloc(a.N * a.N * sizeof(uint8_t));
