@@ -128,7 +128,8 @@ void print(const struct sudoku *a)
     int i, j;
     for (i = 0; i < a->N; i++)
         for (j = 0; j < a->N; j++)
-            printf("%d%c", a->a[i * a->N + j], (j == a->N - 1 ? '\n' : ' '));
+            printf("%" SCNu8 "%c", a->a[i * a->N + j],
+                   (j == a->N - 1 ? '\n' : ' '));
 }
 
 /**
@@ -172,7 +173,7 @@ bool solve(struct sudoku *a)
 {
     static uint32_t counter = 0;
     int i, j;
-    static char prefix[10] = "";
+    static char prefix[100] = "";  // enough memory
 
     if (!get_next_unknown(a, &i, &j))
     {
@@ -219,14 +220,15 @@ bool solve(struct sudoku *a)
 int main()
 {
     struct sudoku a;  // store the matrix as a 1D array
-    scanf("%u", &(a.N));
+    scanf("%" SCNu8, &(a.N));
     a.a = (uint8_t *)malloc(a.N * a.N * sizeof(uint8_t));
-    a.N2 = sqrt(a.N);
+    a.N2 = (uint8_t)sqrt(a.N);
 
     for (int i = 0; i < a.N; i++)
-        for (int j = 0; j < a.N; j++) scanf("%u", &(a.a[i * a.N + j]));
+        for (int j = 0; j < a.N; j++) scanf("%" SCNu8, &(a.a[i * a.N + j]));
 
-    printf("Entered a %dx%d matrix with block size: %d\n", a.N, a.N, a.N2);
+    printf("Entered a %udx%ud matrix with block size: %" SCNu8 "\n", a.N, a.N,
+           a.N2);
     // print(&a);
     printf("\n\n");
     if (solve(&a))
