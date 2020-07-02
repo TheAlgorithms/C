@@ -1,12 +1,23 @@
-// sorting of array list using bead sort
+/**
+ * @file
+ * @brief  sorting of array list using bead sort
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Displays the array, passed to this method*/
-void display(int *arr, int n)
+/** Create easy access of elements from a 2D matrix stored in memory as a 1D
+ * array
+ */
+#define BEAD(i, j) beads[i * max + j]
+
+/**
+ * Displays the array, passed to this method
+ * @param [in,out] arr array to display
+ * @param [in] n number of elements in the array
+ */
+void display(const int *arr, int n)
 {
-    int i;
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
@@ -14,15 +25,14 @@ void display(int *arr, int n)
     printf("\n");
 }
 
-/*This is where the sorting of the array takes place
- a --- Array to be sorted
- len --- Array Size
+/** This is where the sorting of the array takes place
+ * @param [in,out] a array to be sorted
+ * @param [in] len Array Size
  */
-void bead_sort(int *a, int len)
+void bead_sort(int *a, size_t len)
 {
     int i, j, max, sum;
     unsigned char *beads;
-#define BEAD(i, j) beads[i * max + j]
 
     for (i = 1, max = a[0]; i < len; i++)
         if (a[i] > max)
@@ -55,6 +65,7 @@ void bead_sort(int *a, int len)
     free(beads);
 }
 
+/** Main function */
 int main(int argc, const char *argv[])
 {
     int n;
