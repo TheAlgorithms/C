@@ -133,7 +133,7 @@ void print(const struct sudoku *a)
 }
 
 /**
- * @brief Get the location for next unknown location
+ * @brief Find and get the location for next empty cell.
  *
  * @param [in] a pointer to sudoku instance
  * @param [out] x pointer to row index of next unknown
