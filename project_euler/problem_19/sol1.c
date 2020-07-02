@@ -6,10 +6,11 @@
 #include <stdio.h>
 
 /**
- * returns number of days in a month.
- * Month is identified by an integer -\n
- * > 0 = Jan and 11 = December\n
- * For February, adjust for leap year outside the function.
+ * Function to get the number of days in a month.
+ * \param month month identified by an integer -\n
+ * > 0 = Jan and 11 = December
+ * \returns number of days in given month
+ * \note For February, adjust for leap year outside the function.
  */
 char get_month_days(short month)
 {
@@ -22,21 +23,20 @@ char get_month_days(short month)
         else
             return 31;
     }
-    else if (month >= 7) /* odd months after July have 31 days*/
-    {
-        if (month & 0x01)
-            return 31;
-        else
-            return 30;
-    }
-    /* should never reach here! */
-    perror("Should never have reached this point!\n");
-    return -1;
+
+    // else if (month >= 7) /* odd months after July have 31 days*/
+
+    if (month & 0x01)
+        return 31;
+
+    return 30;
 }
 
 /**
- * return 1 if input year is a leap year
- * otherwise, return 0
+ * @brief Check if input year is a leap year.
+ * \param year year to check
+ * \return 1 if input year is a leap year
+ * \return 0 if input year is not a leap year
  */
 char is_leap_year(short year)
 {
@@ -47,7 +47,10 @@ char is_leap_year(short year)
 }
 
 #ifdef DEBUG
-/** Function to convert integer month to string */
+/** Function to convert integer month to string
+ * \param day integer identifier of day (0 = Sunday and 7 = Saturday
+ * \return pointer to string representation)
+ */
 const char *day_string(int day)
 {
     switch (day)
@@ -67,7 +70,7 @@ const char *day_string(int day)
     case 6:
         return "Saturday";
     default:
-        return "Shouldnt see this!";
+        return "Shouldn't see this!";
     }
 }
 #endif
