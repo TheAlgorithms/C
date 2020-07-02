@@ -147,9 +147,9 @@ int main(int argc, char **argv)
     {
         coeffs[n] = strtod(argv[n + 1], NULL);
         if (n < degree - 1 && coeffs[n] != 0)
-            printf("(%g) x^%d + ", coeffs[n], degree - n - 1);
+            printf("(%Lg) x^%d + ", coeffs[n], degree - n - 1);
         else if (coeffs[n] != 0)
-            printf("(%g) x^%d = 0\n", coeffs[n], degree - n - 1);
+            printf("(%Lg) x^%d = 0\n", coeffs[n], degree - n - 1);
 
         double tmp;
         if (n > 0)
