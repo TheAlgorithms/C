@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['c_5fatoi_256',['c_atoi',['../d7/dd8/c__atoi__str__to__integer_8c.html#ad19049ebfc2088bc1e75e7e958f7b60f',1,'c_atoi_str_to_integer.c']]],
-  ['check_5ftermination_257',['check_termination',['../da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52',1,'durand_kerner_roots.c']]],
-  ['collatz_258',['collatz',['../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80',1,'sol1.c']]],
-  ['compare_259',['compare',['../d1/df9/problem__26_2sol1_8c.html#ac70138609ef6aa6fabca57aca8681e83',1,'sol1.c']]],
-  ['complex_5fstr_260',['complex_str',['../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7',1,'durand_kerner_roots.c']]],
-  ['count_5fdivisors_261',['count_divisors',['../d7/d1f/problem__12_2sol1_8c.html#aa6ce6271f6156e219f9b290717f5a222',1,'sol1.c']]],
-  ['create_5fmatrix_262',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
-  ['create_5fnode_263',['create_node',['../df/d3c/threaded__binary__trees_8c.html#ab21d1d36d95001defbca2f6abd4d410c',1,'threaded_binary_trees.c']]]
+  ['binarysearch1_270',['binarysearch1',['../df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582',1,'binary_search.c']]],
+  ['binarysearch2_271',['binarysearch2',['../df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032',1,'binary_search.c']]]
 ];

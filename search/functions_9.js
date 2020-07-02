@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['lazy_5fsort_301',['lazy_sort',['../dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d',1,'sol1.c']]],
-  ['lcm_302',['lcm',['../df/de7/problem__5_2sol_8c.html#ae9606f1867e9921867d6572f51377b4c',1,'sol.c']]],
-  ['lu_5fdecomposition_303',['lu_decomposition',['../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4',1,'lu_decompose.c']]]
+  ['kohonen_5fsom_316',['kohonen_som',['../d2/df6/kohonen__som__topology_8c.html#a1983dc0f35e734015772e9f8c0ff19f5',1,'kohonen_som_topology.c']]],
+  ['kohonen_5fsom_5ftracer_317',['kohonen_som_tracer',['../d0/d46/kohonen__som__trace_8c.html#aeaeffbff2be4d5d15b0d4f10f846abde',1,'kohonen_som_trace.c']]]
 ];

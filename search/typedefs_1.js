@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['large_5fnum_369',['large_num',['../d6/d3d/factorial__large__number_8c.html#ab54882961780c41a4929a6d390f6522d',1,'factorial_large_number.c']]]
+  ['cantorset_392',['CantorSet',['../dc/d80/cantor__set_8c.html#a2b95c356aff8a282eaad255008fa5a94',1,'cantor_set.c']]]
 ];

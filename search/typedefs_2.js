@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_370',['node',['../df/d3c/threaded__binary__trees_8c.html#ad8ecdcce462dd8e170ae1f164935aaa6',1,'threaded_binary_trees.c']]]
+  ['large_5fnum_393',['large_num',['../d6/d3d/factorial__large__number_8c.html#ab54882961780c41a4929a6d390f6522d',1,'factorial_large_number.c']]]
 ];

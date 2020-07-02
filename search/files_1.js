@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['c_5fatoi_5fstr_5fto_5finteger_2ec_228',['c_atoi_str_to_integer.c',['../d7/dd8/c__atoi__str__to__integer_8c.html',1,'']]],
-  ['collatz_2ec_229',['collatz.c',['../dc/d80/collatz_8c.html',1,'']]]
+  ['binary_5fsearch_2ec_240',['binary_search.c',['../df/d3b/binary__search_8c.html',1,'']]]
 ];
