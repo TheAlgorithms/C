@@ -47,7 +47,7 @@
  * \param[in] x point at which to evaluate the polynomial
  * \returns \f$f(x)\f$
  */
-long double complex poly_function(double *coeffs, unsigned int degree,
+long double complex poly_function(long double *coeffs, unsigned int degree,
                                   long double complex x)
 {
     long double complex out = 0.;
@@ -94,7 +94,7 @@ char check_termination(long double delta)
  */
 int main(int argc, char **argv)
 {
-    double *coeffs = NULL;
+    long double *coeffs = NULL;
     long double complex *s0 = NULL;
     unsigned int degree = 0;
     unsigned int n, i;
@@ -108,8 +108,8 @@ int main(int argc, char **argv)
     }
 
     degree = argc - 1; /* detected polynomial degree */
-    coeffs = (double *)malloc(
-        degree * sizeof(double)); /* store all input coefficients */
+    coeffs = (long double *)malloc(
+        degree * sizeof(long double)); /* store all input coefficients */
     s0 = (long double complex *)malloc(
         (degree - 1) *
         sizeof(long double complex)); /* number of roots = degree-1 */
@@ -147,9 +147,9 @@ int main(int argc, char **argv)
     {
         coeffs[n] = strtod(argv[n + 1], NULL);
         if (n < degree - 1 && coeffs[n] != 0)
-            printf("(%g) x^%d + ", coeffs[n], degree - n - 1);
+            printf("(%Lg) x^%d + ", coeffs[n], degree - n - 1);
         else if (coeffs[n] != 0)
-            printf("(%g) x^%d = 0\n", coeffs[n], degree - n - 1);
+            printf("(%Lg) x^%d = 0\n", coeffs[n], degree - n - 1);
 
         double tmp;
         if (n > 0)
