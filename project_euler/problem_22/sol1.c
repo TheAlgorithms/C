@@ -128,7 +128,7 @@ int main(int argc, char **argv)
     for (i = 0; i < COUNT; i++)
 #endif
     {
-        unsigned int score = 0;
+        long score = 0;
         /* score the alphabets in i^th name */
         for (int j = 0; names[i][j] != '\0'; j++)
             score += names[i][j] - 'A' +
