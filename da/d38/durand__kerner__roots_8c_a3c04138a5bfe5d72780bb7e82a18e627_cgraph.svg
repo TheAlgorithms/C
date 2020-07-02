@@ -51,7 +51,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#adf4ae062a028c6faf2b96c9c1eb343af" target="_top" xlink:title="Evaluate the value of a polynomial with given coefficients.">
+<g id="a_node4"><a xlink:href="../../da/d38/durand__kerner__roots_8c.html#a321f9781a9744ccdaf0aba89f35ec29c" target="_top" xlink:title="Evaluate the value of a polynomial with given coefficients.">
 <polygon fill="white" stroke="black" points="85,-0.5 85,-19.5 159,-19.5 159,-0.5 85,-0.5"/>
 <text text-anchor="middle" x="122" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">poly_function</text>
 </a>

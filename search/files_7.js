@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newton_5fraphson_5froot_2ec_250',['newton_raphson_root.c',['../dd/d08/newton__raphson__root_8c.html',1,'']]]
+  ['modified_5fbinary_5fsearch_2ec_257',['modified_binary_search.c',['../d3/d47/modified__binary__search_8c.html',1,'']]]
 ];

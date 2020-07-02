@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['order_411',['order',['../d4/d07/ode__forward__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_semi_implicit_euler.c']]]
+  ['n_421',['N',['../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4',1,'sol1.c']]],
+  ['n2_422',['N2',['../db/d01/problem__13_2sol1_8c.html#acd864640121c7df2c19f61f7baa507e4',1,'sol1.c']]]
 ];
