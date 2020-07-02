@@ -31,7 +31,7 @@
  */
 struct sudoku
 {
-    uint8_t *a; /**< matrix asa flattened 1D row-major array */
+    uint8_t *a; /**< matrix as a flattened 1D row-major array */
     uint8_t N;  /**< number of elements */
     uint8_t N2; /**< block of elements */
 };
