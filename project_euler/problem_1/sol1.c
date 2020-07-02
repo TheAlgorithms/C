@@ -1,7 +1,7 @@
 /**
  * \file
  * \brief [Problem 1](https://projecteuler.net/problem=1) solution
- *
+ * \details
  * An Efficient code to print all the sum of all numbers that are multiples of 3
  * & 5 below N.
  */

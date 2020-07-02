@@ -47,7 +47,7 @@ set(CMAKE_C_STANDARD_REQUIRED YES)
 
 if(MSVC)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
-    add_compile_options(/Za)
+    # add_compile_options(/Za)
 endif(MSVC)
 
 find_library(MATH_LIBRARY m)
