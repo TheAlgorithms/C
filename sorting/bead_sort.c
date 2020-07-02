@@ -1,6 +1,7 @@
 /**
  * @file
- * @brief  sorting of array list using bead sort
+ * @brief Sorting of array list using [bead
+ * sort](https://en.wikipedia.org/wiki/Bead_sort)
  */
 #include <stdio.h>
 #include <stdlib.h>
