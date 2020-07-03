@@ -55,6 +55,7 @@ var NAVTREE =
     [ "Hash algorithms", "d4/dcb/md_hash__r_e_a_d_m_e.html", null ],
     [ "LeetCode", "df/d58/md_leetcode__r_e_a_d_m_e.html", null ],
     [ "ProjectEuler", "d8/d81/md_project_euler__r_e_a_d_m_e.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -79,8 +80,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d42/structdynamic__array.html#a7e3fbd203b3b86401c17dede7a33f781",
-"dir_d9112ab06cf4d4e5a25d385a268d1949.html"
+"d5/db4/struct_edge.html#ad7df434ff7710e69f28bb31e91a35f82",
+"dir_2b14f32f14b51065d3a322bea21da3c0.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

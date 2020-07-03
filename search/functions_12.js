@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['update_5fweights_378',['update_weights',['../d2/df6/kohonen__som__topology_8c.html#ad139de302fa8135a433d9c1bf971b13b',1,'update_weights(const double *X, struct array_3d *W, double **D, int num_out, int num_features, double alpha, int R):&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a9c98203f55242ff7a8f45a6370840e66',1,'update_weights(double const *x, double *const *W, double *D, int num_out, int num_features, double alpha, int R):&#160;kohonen_som_trace.c']]]
+  ['vector_5fdot_383',['vector_dot',['../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05',1,'qr_decompose.h']]],
+  ['vector_5fmag_384',['vector_mag',['../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212',1,'qr_decompose.h']]],
+  ['vector_5fproj_385',['vector_proj',['../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f',1,'qr_decompose.h']]],
+  ['vector_5fsub_386',['vector_sub',['../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145',1,'qr_decompose.h']]]
 ];

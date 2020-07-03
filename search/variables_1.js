@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['data_384',['data',['../db/d8b/struct_node.html#a87c003c9f600e3fc58e6e90835f0b605',1,'Node::data()'],['../d0/dc8/structarray__3d.html#ac8967b2c72769f839c09fb4cebb4339f',1,'array_3d::data()']]],
-  ['digits_385',['digits',['../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9',1,'_large_num']]],
-  ['dim1_386',['dim1',['../d0/dc8/structarray__3d.html#ad5d3ee546eea3c05dc8f0dc90ec194f4',1,'array_3d']]],
-  ['dim2_387',['dim2',['../d0/dc8/structarray__3d.html#aa431cc0a41fd379270dbd2b0e3ac1b45',1,'array_3d']]],
-  ['dim3_388',['dim3',['../d0/dc8/structarray__3d.html#ad823bd5424a0fc158da52a0497d8c10a',1,'array_3d']]]
+  ['data_388',['data',['../db/d8b/struct_node.html#a87c003c9f600e3fc58e6e90835f0b605',1,'Node::data()'],['../d8/db8/structkohonen__array__3d.html#ad546baa2e81c6196d5f1dc0fe2e5bd59',1,'kohonen_array_3d::data()']]],
+  ['digits_389',['digits',['../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9',1,'_large_num']]],
+  ['dim1_390',['dim1',['../d8/db8/structkohonen__array__3d.html#a16720581653fa9a34d1029e7229a7377',1,'kohonen_array_3d']]],
+  ['dim2_391',['dim2',['../d8/db8/structkohonen__array__3d.html#a888d7e007b38c91c7933e12a9566af1d',1,'kohonen_array_3d']]],
+  ['dim3_392',['dim3',['../d8/db8/structkohonen__array__3d.html#a160f14830bdfbbf9f422f382ee754dbf',1,'kohonen_array_3d']]]
 ];

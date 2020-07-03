@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d2/df6/kohonen__som__topology_8c.html#af5ce14f026d6d231bef29161bac2b485" target="_top" xlink:title="Helper function to generate a random number in a given interval.">
+<g id="a_node2"><a xlink:href="../../d1/d6b/group__kohonen__2d.html#gaf5ce14f026d6d231bef29161bac2b485" target="_top" xlink:title="Helper function to generate a random number in a given interval.">
 <polygon fill="white" stroke="black" points="129,-0.5 129,-19.5 183,-19.5 183,-0.5 129,-0.5"/>
 <text text-anchor="middle" x="156" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_random</text>
 </a>
