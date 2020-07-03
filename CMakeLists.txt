@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.6)
 project(Algorithms_in_C
     LANGUAGES C
     VERSION 1.0.0
@@ -63,6 +63,7 @@ endif()
 
 add_subdirectory(misc)
 add_subdirectory(sorting)
+add_subdirectory(graphics)
 add_subdirectory(searching)
 add_subdirectory(conversions)
 add_subdirectory(project_euler)
