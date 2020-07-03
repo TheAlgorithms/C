@@ -2,9 +2,7 @@
  * \file
  * \brief [Adaptive Linear Neuron
  * (ADALINE)](https://en.wikipedia.org/wiki/ADALINE) implementation
- *
- * \author [Krishna Vedala](https://github.com/kvedala)
- *
+ * \details
  * <img
  * src="https://upload.wikimedia.org/wikipedia/commons/b/be/Adaline_flow_chart.gif"
  * width="200px">
@@ -20,6 +18,7 @@
  * computed. Computing the \f$w_j\f$ is a supervised learning algorithm wherein
  * a set of features and their corresponding outputs are given and weights are
  * computed using stochastic gradient descent method.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 
 #include <assert.h>
@@ -30,8 +29,15 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * @addtogroup machine_learning Machine learning algorithms
+ * @{
+ * @addtogroup adaline Adaline learning algorithm
+ * @{
+ */
+
 /** Maximum number of iterations to learn */
-#define MAX_ITER 500  // INT_MAX
+#define MAX_ADALINE_ITER 500  // INT_MAX
 
 /** structure to hold adaline model parameters */
 struct adaline
@@ -41,7 +47,8 @@ struct adaline
     int num_weights; /**< number of weights of the neural network */
 };
 
-#define ACCURACY 1e-5 /**< convergence accuracy \f$=1\times10^{-5}\f$ */
+/** convergence accuracy \f$=1\times10^{-5}\f$ */
+#define ADALINE_ACCURACY 1e-5
 
 /**
  * Default constructor
@@ -77,7 +84,7 @@ struct adaline new_adaline(const int num_features, const double eta)
 }
 
 /** delete dynamically allocated memory
- * \param[in] ada model from which the memory is to be freeed.
+ * \param[in] ada model from which the memory is to be freed.
  */
 void delete_adaline(struct adaline *ada)
 {
@@ -91,13 +98,18 @@ void delete_adaline(struct adaline *ada)
  * function](https://en.wikipedia.org/wiki/Heaviside_step_function) <img
  * src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Dirac_distribution_CDF.svg"
  * width="200px"/>
+ * @param x activation function input
+ * @returns \f$f(x)= \begin{cases}1 & \forall\; x > 0\\ -1 & \forall\; x \le0
+ * \end{cases}\f$
  */
-int activation(double x) { return x > 0 ? 1 : -1; }
+int adaline_activation(double x) { return x > 0 ? 1 : -1; }
 
 /**
  * Operator to print the weights of the model
+ * @param ada model for which the values to print
+ * @returns pointer to a NULL terminated string of formatted weights
  */
-char *get_weights_str(struct adaline *ada)
+char *adaline_get_weights_str(const struct adaline *ada)
 {
     static char out[100];  // static so the value is persistent
 
@@ -121,7 +133,7 @@ char *get_weights_str(struct adaline *ada)
  * activation function (`NULL` to ignore)
  * \returns model prediction output
  */
-int predict(struct adaline *ada, const double *x, double *out)
+int adaline_predict(struct adaline *ada, const double *x, double *out)
 {
     double y = ada->weights[ada->num_weights - 1];  // assign bias value
 
@@ -130,7 +142,8 @@ int predict(struct adaline *ada, const double *x, double *out)
     if (out)  // if out variable is not NULL
         *out = y;
 
-    return activation(y);  // quantizer: apply ADALINE threshold function
+    // quantizer: apply ADALINE threshold function
+    return adaline_activation(y);
 }
 
 /**
@@ -142,10 +155,10 @@ int predict(struct adaline *ada, const double *x, double *out)
  * \param[in] y known output  value
  * \returns correction factor
  */
-double fit_sample(struct adaline *ada, const double *x, const int y)
+double adaline_fit_sample(struct adaline *ada, const double *x, const int y)
 {
     /* output of the model with current weights */
-    int p = predict(ada, x, NULL);
+    int p = adaline_predict(ada, x, NULL);
     int prediction_error = y - p;  // error in estimation
     double correction_factor = ada->eta * prediction_error;
 
@@ -168,19 +181,21 @@ double fit_sample(struct adaline *ada, const double *x, const int y)
  * \param[in] y known output value for each feature vector
  * \param[in] N number of training samples
  */
-void fit(struct adaline *ada, double **X, const int *y, const int N)
+void adaline_fit(struct adaline *ada, double **X, const int *y, const int N)
 {
     double avg_pred_error = 1.f;
 
     int iter;
-    for (iter = 0; (iter < MAX_ITER) && (avg_pred_error > ACCURACY); iter++)
+    for (iter = 0;
+         (iter < MAX_ADALINE_ITER) && (avg_pred_error > ADALINE_ACCURACY);
+         iter++)
     {
         avg_pred_error = 0.f;
 
         // perform fit for each sample
         for (int i = 0; i < N; i++)
         {
-            double err = fit_sample(ada, X[i], y[i]);
+            double err = adaline_fit_sample(ada, X[i], y[i]);
             avg_pred_error += fabs(err);
         }
         avg_pred_error /= N;
@@ -188,14 +203,18 @@ void fit(struct adaline *ada, double **X, const int *y, const int N)
         // Print updates every 200th iteration
         // if (iter % 100 == 0)
         printf("\tIter %3d: Training weights: %s\tAvg error: %.4f\n", iter,
-               get_weights_str(ada), avg_pred_error);
+               adaline_get_weights_str(ada), avg_pred_error);
     }
 
-    if (iter < MAX_ITER)
+    if (iter < MAX_ADALINE_ITER)
         printf("Converged after %d iterations.\n", iter);
     else
         printf("Did not converged after %d iterations.\n", iter);
 }
+
+/** @}
+ *  @}
+ */
 
 /**
  * test function to predict points in a 2D coordinate system above the line
@@ -221,19 +240,19 @@ void test1(double eta)
     }
 
     printf("------- Test 1 -------\n");
-    printf("Model before fit: %s", get_weights_str(&ada));
+    printf("Model before fit: %s", adaline_get_weights_str(&ada));
 
-    fit(&ada, X, Y, N);
-    printf("Model after fit: %s\n", get_weights_str(&ada));
+    adaline_fit(&ada, X, Y, N);
+    printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
 
     double test_x[] = {5, -3};
-    int pred = predict(&ada, test_x, NULL);
+    int pred = adaline_predict(&ada, test_x, NULL);
     printf("Predict for x=(5,-3): % d", pred);
     assert(pred == -1);
     printf(" ...passed\n");
 
     double test_x2[] = {5, 8};
-    pred = predict(&ada, test_x2, NULL);
+    pred = adaline_predict(&ada, test_x2, NULL);
     printf("Predict for x=(5, 8): % d", pred);
     assert(pred == 1);
     printf(" ...passed\n");
@@ -275,10 +294,10 @@ void test2(double eta)
     }
 
     printf("------- Test 2 -------\n");
-    printf("Model before fit: %s", get_weights_str(&ada));
+    printf("Model before fit: %s", adaline_get_weights_str(&ada));
 
-    fit(&ada, X, Y, N);
-    printf("Model after fit: %s\n", get_weights_str(&ada));
+    adaline_fit(&ada, X, Y, N);
+    printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
 
     int N_test_cases = 5;
     double test_x[2];
@@ -289,7 +308,7 @@ void test2(double eta)
 
         test_x[0] = x0;
         test_x[1] = x1;
-        int pred = predict(&ada, test_x, NULL);
+        int pred = adaline_predict(&ada, test_x, NULL);
         printf("Predict for x=(% 3.2f,% 3.2f): % d", x0, x1, pred);
 
         int expected_val = (x0 + 3. * x1) > -1 ? 1 : -1;
@@ -343,10 +362,10 @@ void test3(double eta)
     }
 
     printf("------- Test 3 -------\n");
-    printf("Model before fit: %s", get_weights_str(&ada));
+    printf("Model before fit: %s", adaline_get_weights_str(&ada));
 
-    fit(&ada, X, Y, N);
-    printf("Model after fit: %s\n", get_weights_str(&ada));
+    adaline_fit(&ada, X, Y, N);
+    printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
 
     int N_test_cases = 5;
     double test_x[6];
@@ -361,7 +380,7 @@ void test3(double eta)
         test_x[3] = x0 * x0;
         test_x[4] = x1 * x1;
         test_x[5] = x2 * x2;
-        int pred = predict(&ada, test_x, NULL);
+        int pred = adaline_predict(&ada, test_x, NULL);
         printf("Predict for x=(% 3.2f,% 3.2f): % d", x0, x1, pred);
 
         int expected_val = (x0 * x0 + x1 * x1 + x2 * x2) <= 1 ? 1 : -1;
