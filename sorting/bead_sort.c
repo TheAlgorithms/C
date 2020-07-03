@@ -17,7 +17,7 @@
 
 /**
  * Displays the array, passed to this method
- * @param [in,out] arr array to display
+ * @param [in] arr array to display
  * @param [in] n number of elements in the array
  */
 void display(const int *arr, int n)
