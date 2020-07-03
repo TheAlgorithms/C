@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * @addtogroup sorting Sorting algorithms
+ * @{
+ */
 /** Helper function to print array values */
 void show_data(int *arr, long len)
 {
@@ -50,6 +54,7 @@ void shell_sort(int *array, long LEN)
     for (i = 0; i < LEN; i++) printf("%s\t", data[i]);
 #endif
 }
+/** @} */
 
 /** Main function */
 int main(int argc, char *argv[])

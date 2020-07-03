@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @addtogroup sorting Sorting algorithms
+ * @{
+ */
 /** Create easy access of elements from a 2D matrix stored in memory as a 1D
  * array
  */
@@ -65,6 +69,7 @@ void bead_sort(int *a, size_t len)
     }
     free(beads);
 }
+/** @} */
 
 /** Main function */
 int main(int argc, const char *argv[])
