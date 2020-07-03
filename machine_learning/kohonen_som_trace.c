@@ -3,13 +3,12 @@
  * \brief [Kohonen self organizing
  * map](https://en.wikipedia.org/wiki/Self-organizing_map) (data tracing)
  *
- * \author [Krishna Vedala](https://github.com/kvedala)
- *
  * \details
  * This example implements a powerful self organizing map algorithm.
  * The algorithm creates a connected network of weights that closely
  * follows the given data points. This this creates a chain of nodes that
  * resembles the given input shape.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  * \see kohonen_som_topology.c
  */
 #define _USE_MATH_DEFINES /**< required for MS Visual C */
@@ -20,6 +19,13 @@
 #ifdef _OPENMP  // check if OpenMP based parallelization is available
 #include <omp.h>
 #endif
+
+/**
+ * @addtogroup machine_learning Machine learning algorithms
+ * @{
+ * @addtogroup kohonen_1d Kohonen SOM trace/chain algorithm
+ * @{
+ */
 
 #ifndef max
 /** shorthand for maximum value */
@@ -95,7 +101,7 @@ int save_nd_data(const char *fname, double **X, int num_points,
  * \param[out] val minimum value found
  * \param[out] idx index where minimum value was found
  */
-void get_min_1d(double const *X, int N, double *val, int *idx)
+void kohonen_get_min_1d(double const *X, int N, double *val, int *idx)
 {
     val[0] = INFINITY;  // initial min value
 
@@ -120,8 +126,8 @@ void get_min_1d(double const *X, int N, double *val, int *idx)
  * \param[in] alpha learning rate \f$0<\alpha\le1\f$
  * \param[in] R neighborhood range
  */
-void update_weights(double const *x, double *const *W, double *D, int num_out,
-                    int num_features, double alpha, int R)
+void kohonen_update_weights(double const *x, double *const *W, double *D,
+                            int num_out, int num_features, double alpha, int R)
 {
     int j, k;
 
@@ -138,11 +144,11 @@ void update_weights(double const *x, double *const *W, double *D, int num_out,
             D[j] += (W[j][k] - x[k]) * (W[j][k] - x[k]);
     }
 
-    // step 2:  get closest node i.e., node with snallest Euclidian distance to
+    // step 2:  get closest node i.e., node with smallest Euclidian distance to
     // the current pattern
     int d_min_idx;
     double d_min;
-    get_min_1d(D, num_out, &d_min, &d_min_idx);
+    kohonen_get_min_1d(D, num_out, &d_min, &d_min_idx);
 
     // step 3a: get the neighborhood range
     int from_node = max(0, d_min_idx - R);
@@ -177,7 +183,7 @@ void kohonen_som_tracer(double **X, double *const *W, int num_samples,
     double alpha = 1.f;
     double *D = (double *)malloc(num_out * sizeof(double));
 
-    // Loop alpha from 1 to slpha_min
+    // Loop alpha from 1 to alpha_min
     for (; alpha > alpha_min; alpha -= 0.01, iter++)
     {
         // Loop for each sample pattern in the data set
@@ -185,7 +191,7 @@ void kohonen_som_tracer(double **X, double *const *W, int num_samples,
         {
             const double *x = X[sample];
             // update weights for the current input pattern sample
-            update_weights(x, W, D, num_out, num_features, alpha, R);
+            kohonen_update_weights(x, W, D, num_out, num_features, alpha, R);
         }
 
         // every 10th iteration, reduce the neighborhood range
@@ -195,6 +201,11 @@ void kohonen_som_tracer(double **X, double *const *W, int num_samples,
 
     free(D);
 }
+
+/**
+ * @}
+ * @}
+ */
 
 /** Creates a random set of points distributed *near* the circumference
  * of a circle and trains an SOM that finds that circular pattern. The

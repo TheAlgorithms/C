@@ -1,6 +1,5 @@
 /**
  * \file
- * \author [Krishna Vedala](https://github.com/kvedala)
  * \brief [Kohonen self organizing
  * map](https://en.wikipedia.org/wiki/Self-organizing_map) (topological map)
  *
@@ -13,6 +12,7 @@
  * <img alt="Trained topological maps for the test cases in the program"
  * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
  * />
+ * \author [Krishna Vedala](https://github.com/kvedala)
  * \warning MSVC 2019 compiler generates code that does not execute as expected.
  * However, MinGW, Clang for GCC and Clang for MSVC compilers on windows perform
  * as expected. Any insights and suggestions should be directed to the author.

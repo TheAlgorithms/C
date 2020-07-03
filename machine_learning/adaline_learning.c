@@ -2,9 +2,7 @@
  * \file
  * \brief [Adaptive Linear Neuron
  * (ADALINE)](https://en.wikipedia.org/wiki/ADALINE) implementation
- *
- * \author [Krishna Vedala](https://github.com/kvedala)
- *
+ * \details
  * <img
  * src="https://upload.wikimedia.org/wikipedia/commons/b/be/Adaline_flow_chart.gif"
  * width="200px">
@@ -20,6 +18,7 @@
  * computed. Computing the \f$w_j\f$ is a supervised learning algorithm wherein
  * a set of features and their corresponding outputs are given and weights are
  * computed using stochastic gradient descent method.
+ * \author [Krishna Vedala](https://github.com/kvedala)
  */
 
 #include <assert.h>
