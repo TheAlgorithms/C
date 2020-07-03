@@ -7,8 +7,8 @@
  * This example implements a powerful unsupervised learning algorithm called as
  * a self organizing map. The algorithm creates a connected network of weights
  * that closely follows the given data points. This thus creates a topological
- * map of the given data i.e., it maintains the relationship between varipus
- * data points in a much higher dimesional space by creating an equivalent in a
+ * map of the given data i.e., it maintains the relationship between various
+ * data points in a much higher dimensional space by creating an equivalent in a
  * 2-dimensional space.
  * <img alt="Trained topological maps for the test cases in the program"
  * src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/kohonen/2D_Kohonen_SOM.svg"
@@ -27,6 +27,13 @@
 #include <omp.h>
 #endif
 
+/**
+ * @addtogroup machine_learning Machine learning algorithms
+ * @{
+ * @addtogroup kohonen_2d Kohonen SOM topology algorithm
+ * @{
+ */
+
 #ifndef max
 /** shorthand for maximum value */
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -37,7 +44,7 @@
 #endif
 
 /** to store info regarding 3D arrays */
-struct array_3d
+struct kohonen_array_3d
 {
     int dim1;     /**< lengths of first dimension */
     int dim2;     /**< lengths of second dimension */
@@ -51,13 +58,13 @@ struct array_3d
  * X_{i,j,k} = i\times M\times N + j\times N + k
  * \f]
  * where \f$L\f$, \f$M\f$ and \f$N\f$ are the 3D matrix dimensions.
- * \param[in] arr pointer to ::array_3d structure
+ * \param[in] arr pointer to ::kohonen_array_3d structure
  * \param[in] x     first index
  * \param[in] y     second index
  * \param[in] z     third index
  * \returns pointer to (x,y,z)^th location of data
  */
-double *data_3d(const struct array_3d *arr, int x, int y, int z)
+double *kohonen_data_3d(const struct kohonen_array_3d *arr, int x, int y, int z)
 {
     int offset = (x * arr->dim2 * arr->dim3) + (y * arr->dim3) + z;
     return arr->data + offset;
@@ -85,7 +92,7 @@ double _random(double a, double b)
 /**
  * Save a given n-dimensional data martix to file.
  *
- * \param[in] fname filename to save in (gets overwriten without confirmation)
+ * \param[in] fname filename to save in (gets overwritten without confirmation)
  * \param[in] X matrix to save
  * \param[in] num_points rows in the matrix = number of points
  * \param[in] num_features columns in the matrix = dimensions of points
@@ -129,7 +136,7 @@ int save_2d_data(const char *fname, double **X, int num_points,
  * \returns 0 if all ok
  * \returns -1 if file creation failed
  */
-int save_u_matrix(const char *fname, struct array_3d *W)
+int save_u_matrix(const char *fname, struct kohonen_array_3d *W)
 {
     FILE *fp = fopen(fname, "wt");
     if (!fp)  // error with fopen
@@ -164,8 +171,8 @@ int save_u_matrix(const char *fname, struct array_3d *W)
                     double d = 0.f;
                     for (k = 0; k < W->dim3; k++)  // for each feature
                     {
-                        double *w1 = data_3d(W, i, j, k);
-                        double *w2 = data_3d(W, l, m, k);
+                        double *w1 = kohonen_data_3d(W, i, j, k);
+                        double *w2 = kohonen_data_3d(W, l, m, k);
                         d += (w1[0] - w2[0]) * (w1[0] - w2[0]);
                         // distance += w1[0] * w1[0];
                     }
@@ -224,8 +231,9 @@ void get_min_2d(double **X, int N, double *val, int *x_idx, int *y_idx)
  * \param[in] R neighborhood range
  * \returns minimum distance of sample and trained weights
  */
-double update_weights(const double *X, struct array_3d *W, double **D,
-                      int num_out, int num_features, double alpha, int R)
+double kohonen_update_weights(const double *X, struct kohonen_array_3d *W,
+                              double **D, int num_out, int num_features,
+                              double alpha, int R)
 {
     int x, y, k;
     double d_min = 0.f;
@@ -243,7 +251,7 @@ double update_weights(const double *X, struct array_3d *W, double **D,
             // point from the current sample
             for (k = 0; k < num_features; k++)
             {
-                double *w = data_3d(W, x, y, k);
+                double *w = kohonen_data_3d(W, x, y, k);
                 D[x][y] += (w[0] - X[k]) * (w[0] - X[k]);
             }
             D[x][y] = sqrt(D[x][y]);
@@ -283,7 +291,7 @@ double update_weights(const double *X, struct array_3d *W, double **D,
 
             for (k = 0; k < num_features; k++)
             {
-                double *w = data_3d(W, x, y, k);
+                double *w = kohonen_data_3d(W, x, y, k);
                 // update weights of nodes in the neighborhood
                 w[0] += alpha * scale_factor * (X[k] - w[0]);
             }
@@ -303,7 +311,7 @@ double update_weights(const double *X, struct array_3d *W, double **D,
  * \param[in] num_out number of output points
  * \param[in] alpha_min terminal value of alpha
  */
-void kohonen_som(double **X, struct array_3d *W, int num_samples,
+void kohonen_som(double **X, struct kohonen_array_3d *W, int num_samples,
                  int num_features, int num_out, double alpha_min)
 {
     int R = num_out >> 2, iter = 0;
@@ -322,8 +330,8 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
         for (int sample = 0; sample < num_samples; sample++)
         {
             // update weights for the current input pattern sample
-            dmin += update_weights(X[sample], W, D, num_out, num_features,
-                                   alpha, R);
+            dmin += kohonen_update_weights(X[sample], W, D, num_out,
+                                           num_features, alpha, R);
         }
 
         // every 20th iteration, reduce the neighborhood range
@@ -339,6 +347,11 @@ void kohonen_som(double **X, struct array_3d *W, int num_samples,
     for (int i = 0; i < num_out; i++) free(D[i]);
     free(D);
 }
+
+/**
+ * @}
+ * @}
+ */
 
 /** Creates a random set of points distributed in four clusters in
  * 3D space with centroids at the points
@@ -400,7 +413,7 @@ void test1()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W;
+    struct kohonen_array_3d W;
     W.dim1 = num_out;
     W.dim2 = num_out;
     W.dim3 = features;
@@ -421,7 +434,7 @@ void test1()
                 // preallocate with random initial weights
                 for (j = 0; j < features; j++)
                 {
-                    double *w = data_3d(&W, i, k, j);
+                    double *w = kohonen_data_3d(&W, i, k, j);
                     w[0] = _random(-5, 5);
                 }
             }
@@ -500,7 +513,7 @@ void test2()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W;
+    struct kohonen_array_3d W;
     W.dim1 = num_out;
     W.dim2 = num_out;
     W.dim3 = features;
@@ -520,7 +533,7 @@ void test2()
 #endif
                 for (j = 0; j < features; j++)
                 {  // preallocate with random initial weights
-                    double *w = data_3d(&W, i, k, j);
+                    double *w = kohonen_data_3d(&W, i, k, j);
                     w[0] = _random(-5, 5);
                 }
             }
@@ -601,7 +614,7 @@ void test3()
     double **X = (double **)malloc(N * sizeof(double *));
 
     // cluster nodex in 'x' * cluster nodes in 'y' * 2
-    struct array_3d W;
+    struct kohonen_array_3d W;
     W.dim1 = num_out;
     W.dim2 = num_out;
     W.dim3 = features;
@@ -622,7 +635,7 @@ void test3()
                 // preallocate with random initial weights
                 for (j = 0; j < features; j++)
                 {
-                    double *w = data_3d(&W, i, k, j);
+                    double *w = kohonen_data_3d(&W, i, k, j);
                     w[0] = _random(-5, 5);
                 }
             }
