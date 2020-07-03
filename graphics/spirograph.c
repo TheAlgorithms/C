@@ -62,6 +62,8 @@ void spirograph(double *x, double *y, double l, double k, double N, double rot)
     }
 }
 
+void test() {}
+
 /** Main function */
 int main(int argc, char **argv)
 {
