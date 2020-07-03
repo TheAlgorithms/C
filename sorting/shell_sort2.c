@@ -19,7 +19,10 @@ void show_data(int *arr, long len)
     printf("\n");
 }
 
-/** Function to swap values of two integers */
+/** Function to swap values of two integers
+ * @param [in,out] a reference to first variable
+ * @param [in,out] b reference to second variable
+ */
 inline void swap(int *a, int *b)
 {
     int tmp;
@@ -30,7 +33,10 @@ inline void swap(int *a, int *b)
 }
 
 /**
+ * Shell sort algorithm.\n
  * Optimized algorithm - takes half the time as other
+ * @param [in,out] array array to sort
+ * @param [in] LEN length of the array
  */
 void shell_sort(int *array, long LEN)
 {
