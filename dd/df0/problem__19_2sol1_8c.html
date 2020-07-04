@@ -110,11 +110,10 @@ Include dependency graph for sol1.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab7f9ad087f124b8e0615aa535b4c8a75"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75">get_month_days</a> (short month)</td></tr>
-<tr class="memdesc:ab7f9ad087f124b8e0615aa535b4c8a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns number of days in a month.  <a href="../../dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75">More...</a><br /></td></tr>
+<tr class="memdesc:ab7f9ad087f124b8e0615aa535b4c8a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the number of days in a month.  <a href="../../dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75">More...</a><br /></td></tr>
 <tr class="separator:ab7f9ad087f124b8e0615aa535b4c8a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6561b1adc8a19c092679b9874da24e2e"><td class="memItemLeft" align="right" valign="top"><a id="a6561b1adc8a19c092679b9874da24e2e"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e">is_leap_year</a> (short year)</td></tr>
-<tr class="memdesc:a6561b1adc8a19c092679b9874da24e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return 1 if input year is a leap year otherwise, return 0 <br /></td></tr>
+<tr class="memitem:a6561b1adc8a19c092679b9874da24e2e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e">is_leap_year</a> (short year)</td></tr>
+<tr class="memdesc:a6561b1adc8a19c092679b9874da24e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if input year is a leap year.  <a href="../../dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e">More...</a><br /></td></tr>
 <tr class="separator:a6561b1adc8a19c092679b9874da24e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df0/problem__19_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
@@ -141,34 +140,72 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
       </table>
 </div><div class="memdoc">
 
-<p>returns number of days in a month. </p>
-<p>Month is identified by an integer -<br  />
-</p><blockquote class="doxtable">
-<p>0 = Jan and 11 = December<br  />
-</p>
+<p>Function to get the number of days in a month. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">month</td><td>month identified by an integer -<br  />
+<blockquote class="doxtable">
+<p>0 = Jan and 11 = December </p>
 </blockquote>
-<p>For February, adjust for leap year outside the function. </p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> (month == 1) <span class="comment">/* February has 28 days. Adjust leap year in the loop */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span> 28;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (month &lt;= 6) <span class="comment">/* odd months till July have 30 days - Jan = 0 (even)*/</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (month &amp; 0x01)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> 30;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> 31;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (month &gt;= 7) <span class="comment">/* odd months after July have 31 days*/</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (month &amp; 0x01)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> 31;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> 30;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/* should never reach here! */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    perror(<span class="stringliteral">&quot;Should never have reached this point!\n&quot;</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of days in given month </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For February, adjust for leap year outside the function. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (month == 1) <span class="comment">/* February has 28 days. Adjust leap year in the loop */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> 28;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (month &lt;= 6) <span class="comment">/* odd months till July have 30 days - Jan = 0 (even)*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (month &amp; 0x01)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> 30;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> 31;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// else if (month &gt;= 7) /* odd months after July have 31 days*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (month &amp; 0x01)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> 31;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> 30;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6561b1adc8a19c092679b9874da24e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6561b1adc8a19c092679b9874da24e2e">&#9670;&nbsp;</a></span>is_leap_year()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char is_leap_year </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>year</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if input year is a leap year. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if input year is a leap year </dd>
+<dd>
+0 if input year is not a leap year </dd></dl>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> ((year % 400 == 0) || ((year % 4 == 0) &amp;&amp; (year % 100 != 0)))</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

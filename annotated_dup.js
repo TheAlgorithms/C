@@ -26,6 +26,7 @@ var annotated_dup =
     [ "QueueRep", "d0/d10/struct_queue_rep.html", "d0/d10/struct_queue_rep" ],
     [ "Stack", "dd/d10/struct_stack.html", "dd/d10/struct_stack" ],
     [ "subset", "dc/de5/structsubset.html", "dc/de5/structsubset" ],
+    [ "sudoku", "dc/d18/structsudoku.html", "dc/d18/structsudoku" ],
     [ "T", "d5/d7e/struct_t.html", "d5/d7e/struct_t" ],
     [ "tnode", "d8/d7a/structtnode.html", "d8/d7a/structtnode" ],
     [ "TrieNode", "da/d9b/struct_trie_node.html", "da/d9b/struct_trie_node" ],

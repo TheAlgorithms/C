@@ -112,7 +112,7 @@ Include dependency graph for fibonacci_fast.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a> (unsigned long n, unsigned long *C, unsigned long *D)</td></tr>
-<tr class="memdesc:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the \(n^{th}\) and \(n+1^{th}\) Fibonacci number.  <a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">More...</a><br /></td></tr>
+<tr class="memdesc:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the \(n^{th}\) and \(n+1^{th}\) Fibonacci number using recursive half-interval decimation.  <a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">More...</a><br /></td></tr>
 <tr class="separator:a7a3d55bd19854075cba2eed6b63cb2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d99/fibonacci__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
@@ -159,50 +159,58 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
       </table>
 </div><div class="memdoc">
 
-<p>Returns the \(n^{th}\) and \(n+1^{th}\) Fibonacci number. </p>
-<p>The return variables are C &amp; D respectively. </p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Out of Range checking</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (n &lt; 0)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        printf(<span class="stringliteral">&quot;\nNo Such term !\n&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        exit(0);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> a, b, c, d;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (n == 0)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        C[0] = 0;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (D)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            D[0] = 1;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a>(n &gt;&gt; 1, &amp;c, &amp;d); <span class="comment">/* Compute F(n/2) */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    a = c * ((d &lt;&lt; 1) - c);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    b = c * c + d * d;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (n % 2 == 0) <span class="comment">/* If n is even */</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        C[0] = a;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (D)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            D[0] = b;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /**&lt; If n is odd */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    C[0] = b;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (D)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        D[0] = a + b;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<p>Get the \(n^{th}\) and \(n+1^{th}\) Fibonacci number using recursive half-interval decimation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>index of Fibonacci number to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">C</td><td>left half interval value - end result here. Cannot be NULL </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">D</td><td>right half interval can be discarded at end and can be NULL </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// Out of Range checking</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// commented out since `n` is unsigned integer</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// if (n &lt; 0)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// {</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//     printf(&quot;\nNo Such term !\n&quot;);</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//     exit(0);</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> a, b, c, d;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (n == 0)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        C[0] = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (D) <span class="comment">/* if D is not NULL */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            D[0] = 1;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a>(n &gt;&gt; 1, &amp;c, &amp;d); <span class="comment">/* Compute F(n/2) */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    a = c * ((d &lt;&lt; 1) - c);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    b = c * c + d * d;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (n % 2 == 0) <span class="comment">/* If n is even */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        C[0] = a;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (D)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            D[0] = b;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /**&lt; If n is odd */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    C[0] = b;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (D) <span class="comment">/* if D is not NULL */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        D[0] = a + b;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="afibonacci__fast_8c_html_a7a3d55bd19854075cba2eed6b63cb2d3"><div class="ttname"><a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a></div><div class="ttdeci">void fib(unsigned long n, unsigned long *C, unsigned long *D)</div><div class="ttdoc">Returns the  and  Fibonacci number.</div><div class="ttdef"><b>Definition:</b> fibonacci_fast.c:20</div></div>
+<div class="ttc" id="afibonacci__fast_8c_html_a7a3d55bd19854075cba2eed6b63cb2d3"><div class="ttname"><a href="../../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3">fib</a></div><div class="ttdeci">void fib(unsigned long n, unsigned long *C, unsigned long *D)</div><div class="ttdoc">Get the  and  Fibonacci number using recursive half-interval decimation.</div><div class="ttdef"><b>Definition:</b> fibonacci_fast.c:23</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

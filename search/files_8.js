@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newton_5fraphson_5froot_2ec_263',['newton_raphson_root.c',['../dd/d08/newton__raphson__root_8c.html',1,'']]]
+  ['newton_5fraphson_5froot_2ec_277',['newton_raphson_root.c',['../dd/d08/newton__raphson__root_8c.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['remove_5fdigits_356',['remove_digits',['../db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1',1,'sol1.c']]]
+  ['qr_5fdecompose_377',['qr_decompose',['../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56',1,'qr_decompose.h']]]
 ];
