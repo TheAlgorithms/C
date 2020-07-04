@@ -115,7 +115,7 @@ void glutBitmapString(void *font, char *string)
 }
 
 #else
-#include <gl/glut.h>
+#include <GL/glut.h>
 #endif
 
 /**
