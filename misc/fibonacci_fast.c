@@ -14,24 +14,28 @@
 #include <stdlib.h>
 
 /**
-    Returns the \f$n^{th}\f$ and \f$n+1^{th}\f$ Fibonacci number.
-    The return variables are C & D respectively.
+ * Get the \f$n^{th}\f$ and \f$n+1^{th}\f$ Fibonacci number using recursive
+ * half-interval decimation.
+ * \param [in] n index of Fibonacci number to get
+ * \param [out] C left half interval value - end result here. Cannot be NULL
+ * \param [out] D right half interval can be discarded at end and can be NULL
  */
 void fib(unsigned long n, unsigned long *C, unsigned long *D)
 {
     // Out of Range checking
-    if (n < 0)
-    {
-        printf("\nNo Such term !\n");
-        exit(0);
-    }
+    // commented out since `n` is unsigned integer
+    // if (n < 0)
+    // {
+    //     printf("\nNo Such term !\n");
+    //     exit(0);
+    // }
 
     unsigned long a, b, c, d;
 
     if (n == 0)
     {
         C[0] = 0;
-        if (D)
+        if (D) /* if D is not NULL */
             D[0] = 1;
         return;
     }
@@ -50,7 +54,7 @@ void fib(unsigned long n, unsigned long *C, unsigned long *D)
 
     /**< If n is odd */
     C[0] = b;
-    if (D)
+    if (D) /* if D is not NULL */
         D[0] = a + b;
     return;
 }
