@@ -19,7 +19,7 @@
 #include <stdlib.h>
 
 #ifdef USE_GLUT  // this is set by CMAKE automatically, if available
-#if __MAC__
+#ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
 #include <gl/glut.h>
