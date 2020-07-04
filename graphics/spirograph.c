@@ -111,7 +111,7 @@ void test()
  */
 void glutBitmapString(void *font, char *string)
 {
-    for (char *ch = string; *ch != '\0'; ch++) glutBitmapCharacter(font, ch);
+    for (char *ch = string; *ch != '\0'; ch++) glutBitmapCharacter(font, *ch);
 }
 
 #else
