@@ -19,7 +19,7 @@
 #include <stdlib.h>
 
 #ifdef USE_GLUT  // this is set by CMAKE automatically, if available
-#include <gl/freeglut.h>
+#include <gl/glut.h>
 
 /**
  * @brief Function to graph (x,y) points on the OpenGL graphics window.
@@ -103,7 +103,7 @@ void test()
     size_t N = 500;
     double l = 0.3, k = 0.75, rot = 10.;
     char fname[50];
-    sprintf_s(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l, k, rot);
+    snprintf(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l, k, rot);
     FILE *fp = fopen(fname, "wt");
     if (!fp)
     {
