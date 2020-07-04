@@ -106,6 +106,13 @@ void test()
 #ifdef USE_GLUT  // this is set by CMAKE automatically, if available
 #ifdef __APPLE__
 #include <GLUT/glut.h>  // include path on Macs is different
+
+/** A wrapper that is not implemented on MacOS
+ */
+void glutBitmapString(void *font, char *string) {
+    for (char *ch = string; *ch != '\0'; ch++) glutBitmapCharacter(font, ch);
+}
+
 #else
 #include <gl/glut.h>
 #endif
