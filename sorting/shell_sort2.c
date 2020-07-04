@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * @addtogroup sorting Sorting algorithms
+ * @{
+ */
 /** Helper function to print array values */
 void show_data(int *arr, long len)
 {
@@ -15,7 +19,10 @@ void show_data(int *arr, long len)
     printf("\n");
 }
 
-/** Function to swap values of two integers */
+/** Function to swap values of two integers
+ * @param [in,out] a reference to first variable
+ * @param [in,out] b reference to second variable
+ */
 inline void swap(int *a, int *b)
 {
     int tmp;
@@ -26,7 +33,10 @@ inline void swap(int *a, int *b)
 }
 
 /**
+ * Shell sort algorithm.\n
  * Optimized algorithm - takes half the time as other
+ * @param [in,out] array array to sort
+ * @param [in] LEN length of the array
  */
 void shell_sort(int *array, long LEN)
 {
@@ -50,6 +60,7 @@ void shell_sort(int *array, long LEN)
     for (i = 0; i < LEN; i++) printf("%s\t", data[i]);
 #endif
 }
+/** @} */
 
 /** Main function */
 int main(int argc, char *argv[])
@@ -80,5 +91,6 @@ int main(int argc, char *argv[])
 
     printf("Time spent sorting: %.4g s\n", (t2 - t1) / CLOCKS_PER_SEC);
 
+    free(array);
     return 0;
 }
