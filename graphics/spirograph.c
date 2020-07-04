@@ -109,7 +109,8 @@ void test()
 
 /** A wrapper that is not implemented on MacOS
  */
-void glutBitmapString(void *font, char *string) {
+void glutBitmapString(void *font, char *string)
+{
     for (char *ch = string; *ch != '\0'; ch++) glutBitmapCharacter(font, ch);
 }
 
