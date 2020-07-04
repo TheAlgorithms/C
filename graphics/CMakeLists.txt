@@ -19,7 +19,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
     string( REPLACE ".c" "" testname ${testsourcefile} )
     add_executable( ${testname} ${testsourcefile} )
-    
+
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
@@ -27,8 +27,12 @@ foreach( testsourcefile ${APP_SOURCES} )
         target_link_libraries(${testname} ${MATH_LIBRARY})
     endif()
     if (GLUT_FOUND)
+        if(APPLE)
+            target_compile_options(${testname} PUBLIC -Wno-deprecated)
+        endif(APPLE)
         target_compile_definitions(${testname} PUBLIC USE_GLUT)
-        target_link_libraries(${testname} OpenGL::GL GLUT::GLUT)
+        target_include_directories(${testname} PUBLIC ${GLUT_INCLUDE_DIRS})
+        target_link_libraries(${testname} OpenGL::GL ${GLUT_LIBRARIES})
     endif(GLUT_FOUND)
     install(TARGETS ${testname} DESTINATION "bin/graphics")
 
