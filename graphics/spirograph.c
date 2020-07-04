@@ -1,7 +1,7 @@
 /**
  * @file
  * @author [Krishna Vedala](https://github.com/kvedala)
- * @brief Program to generate plots from
+ * @brief Implementation of
  * [Spirograph](https://en.wikipedia.org/wiki/Spirograph)
  *
  * @details
@@ -15,42 +15,10 @@
  */
 #define _USE_MATH_DEFINES /**< required for MSVC compiler */
 #include <math.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-#ifdef USE_GLUT  // this is set by CMAKE automatically, if available
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#else
-#include <gl/glut.h>
-#endif
-
-/**
- * @brief Function to graph (x,y) points on the OpenGL graphics window.
- *
- * @param x array containing absicca of points (must be pre-allocated)
- * @param y array containing ordinates of points (must be pre-allocated)
- * @param N number of points in the the arrays
- */
-void display_graph(const double *x, const double *y, size_t N)
-{
-    glClearColor(1.0f, 1.0f, 1.0f,
-                 0.0f);            // Set background color to white and opaque
-    glClear(GL_COLOR_BUFFER_BIT);  // Clear the color buffer (background)
-
-    glBegin(GL_LINES);         // draw line segments
-    glColor3f(0.f, 0.f, 1.f);  // blue
-    glPointSize(2.f);          // point size in pixels
-
-    for (size_t i = 1; i < N; i++)
-    {
-        glVertex2f(x[i - 1], y[i - 1]);  // line from
-        glVertex2f(x[i], y[i]);          // line to
-    }
-    glEnd();
-    glFlush();
-}
-#endif
+#include <time.h>
 
 /** Generate spirograph curve into arrays `x` and `y` such that the i^th point
  * in 2D is represented by `(x[i],y[i])`. The generating function is given by:
@@ -87,7 +55,7 @@ void display_graph(const double *x, const double *y, size_t N)
  */
 void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
 {
-    double dt = rot * M_PI / N;
+    double dt = rot * 2.f * M_PI / N;
     double t = 0.f, R = 1.f;
     const double k1 = 1.f - k;
 
@@ -99,7 +67,7 @@ void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
 }
 
 /**
- * @brief Test function
+ * @brief Test function to save resulting points to a CSV file.
  *
  */
 void test()
@@ -131,22 +99,130 @@ void test()
 
     fclose(fp);
 
-#ifdef USE_GLUT
-    display_graph(x, y, N);
-#endif
-
     free(x);
     free(y);
 }
+
+#ifdef USE_GLUT  // this is set by CMAKE automatically, if available
+#ifdef __APPLE__
+#include <GLUT/glut.h>  // include path on Macs is different
+#else
+#include <gl/glut.h>
+#endif
+
+/**
+ * @brief Function to graph (x,y) points on the OpenGL graphics window.
+ *
+ * @param x array containing absicca of points (must be pre-allocated)
+ * @param y array containing ordinates of points (must be pre-allocated)
+ * @param N number of points in the the arrays
+ */
+void display_graph(const double *x, const double *y, size_t N, double l,
+                   double k)
+{
+    glClearColor(1.0f, 1.0f, 1.0f,
+                 0.0f);            // Set background color to white and opaque
+    glClear(GL_COLOR_BUFFER_BIT);  // Clear the color buffer (background)
+
+    glBegin(GL_LINES);         // draw line segments
+    glColor3f(0.f, 0.f, 1.f);  // blue
+    glPointSize(2.f);          // point size in pixels
+
+    for (size_t i = 1; i < N; i++)
+    {
+        glVertex2f(x[i - 1], y[i - 1]);  // line from
+        glVertex2f(x[i], y[i]);          // line to
+    }
+    glEnd();
+
+    glColor3f(0.f, 0.f, 0.f);
+    char buffer[20];
+    snprintf(buffer, 20, "l = %.3f", l);
+    glRasterPos2f(-.85, .85);
+    glutBitmapString(GLUT_BITMAP_HELVETICA_18, buffer);
+    snprintf(buffer, 20, "k = %.3f", k);
+    glRasterPos2f(-.85, .75);
+    glutBitmapString(GLUT_BITMAP_HELVETICA_18, buffer);
+
+    glutSwapBuffers();
+}
+
+/**
+ * @brief Test function with animation
+ *
+ */
+void test2()
+{
+    const size_t N = 1000;     // number of samples
+    const double step = 0.01;  // animation steps
+    static double l = step * 10, k = step, rot = 20.;
+
+    static bool direction1 = true;  // increment if true, otherwise decrement
+    static bool direction2 = true;  // increment if true, otherwise decrement
+
+    double *x = (double *)malloc(N * sizeof(double));
+    double *y = (double *)malloc(N * sizeof(double));
+
+    spirograph(x, y, l, k, N, rot);
+    display_graph(x, y, N, l, k);
+
+    if (direction1)  // increment k
+    {
+        if (k >= (1.f - step))   // maximum limit
+            direction1 = false;  // reverse direction of k
+        else
+            k += step;
+    }
+    else  // decrement k
+    {
+        if (k <= step)  // minimum limit
+        {
+            direction1 = true;  // reverse direction of k
+
+            if (direction2)  // increment l
+            {
+                if (l >= (1.f - step))   // max limit of l
+                    direction2 = false;  // reverse direction of l
+                else
+                    l += step;
+            }
+            else  // decrement l
+            {
+                if (l <= step)          // minimum limit of l
+                    direction2 = true;  // reverse direction of l
+                else
+                    l -= step;
+            }
+        }
+        else  // no min limit of k
+            k -= step;
+    }
+
+    free(x);  // free dynamic memories
+    free(y);
+}
+
+/**
+ * @brief GLUT timer callback function to add animation delay.
+ */
+void timer_cb(int t)
+{
+    glutTimerFunc(25, timer_cb, 0);
+    glutPostRedisplay();
+}
+#endif
 
 /** Main function */
 int main(int argc, char **argv)
 {
 #ifdef USE_GLUT
     glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutCreateWindow("Spirograph");
     glutInitWindowSize(400, 400);
-    glutDisplayFunc(test);
+    // glutIdleFunc(glutPostRedisplay);
+    glutTimerFunc(25, timer_cb, 0);
+    glutDisplayFunc(test2);
     glutMainLoop();
 #else
     test();
