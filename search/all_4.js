@@ -10,7 +10,7 @@ var searchData=
   ['dim1_49',['dim1',['../d8/db8/structkohonen__array__3d.html#a16720581653fa9a34d1029e7229a7377',1,'kohonen_array_3d']]],
   ['dim2_50',['dim2',['../d8/db8/structkohonen__array__3d.html#a888d7e007b38c91c7933e12a9566af1d',1,'kohonen_array_3d']]],
   ['dim3_51',['dim3',['../d8/db8/structkohonen__array__3d.html#a160f14830bdfbbf9f422f382ee754dbf',1,'kohonen_array_3d']]],
-  ['display_52',['display',['../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a',1,'display(double **A, int N):&#160;lu_decompose.c'],['../d2/da8/bead__sort_8c.html#ad7ed8cc4603f500d610054680d28b971',1,'display(const int *arr, int n):&#160;bead_sort.c']]],
+  ['display_52',['display',['../dc/d2e/lu__decompose_8c.html#a0789beb8d3396582d77b7aedf5e5554a',1,'display(double **A, int N):&#160;lu_decompose.c'],['../d5/d4c/group__sorting.html#gad7ed8cc4603f500d610054680d28b971',1,'display(const int *arr, int n):&#160;bead_sort.c']]],
   ['durand_5fkerner_5froots_2ec_53',['durand_kerner_roots.c',['../da/d38/durand__kerner__roots_8c.html',1,'']]],
   ['dynamic_5farray_54',['dynamic_array',['../d6/d42/structdynamic__array.html',1,'']]],
   ['dictionary_55',['Dictionary',['../de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html',1,'']]]

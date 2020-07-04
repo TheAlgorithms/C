@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['bead_19',['BEAD',['../d2/da8/bead__sort_8c.html#a4fdb8af29a07ac8f496e49a11bf9f1bd',1,'bead_sort.c']]],
-  ['bead_5fsort_20',['bead_sort',['../d2/da8/bead__sort_8c.html#a2fb01e00dedb437a42010f6309e7eba8',1,'bead_sort.c']]],
+  ['bead_19',['BEAD',['../d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd',1,'bead_sort.c']]],
+  ['bead_5fsort_20',['bead_sort',['../d5/d4c/group__sorting.html#ga2fb01e00dedb437a42010f6309e7eba8',1,'bead_sort.c']]],
   ['bead_5fsort_2ec_21',['bead_sort.c',['../d2/da8/bead__sort_8c.html',1,'']]],
   ['big_5fint_22',['big_int',['../db/d80/problem__20_2sol1_8c.html#a62cbbd106aad52daadb9403a07d0da32',1,'sol1.c']]],
   ['binary_5fsearch_2ec_23',['binary_search.c',['../df/d3b/binary__search_8c.html',1,'']]],
