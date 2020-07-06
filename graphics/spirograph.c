@@ -103,7 +103,7 @@ void test()
     free(y);
 }
 
-#ifdef USE_GLUT  // this is set by CMAKE automatically, if available
+#ifdef GLUT_FOUND  // this is set by CMAKE automatically, if available
 #ifdef __APPLE__
 #include <GLUT/glut.h>  // include path on Macs is different
 #else
@@ -222,7 +222,7 @@ void timer_cb(int t)
 /** Main function */
 int main(int argc, char **argv)
 {
-#ifdef USE_GLUT
+#ifdef GLUT_FOUND
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutCreateWindow("Spirograph");
