@@ -46,23 +46,25 @@
  * pre-allocated)
  * @param [out] y output array containing ordinates of points (must be
  * pre-allocated)
- * @param l the relative distance of marker from the centre of
+ * @param l_ratio the relative distance of marker from the centre of
  * inner circle and \f$0\le l\le1\f$
- * @param k the ratio of radius of inner circle to outer circle and \f$0<k<1\f$
+ * @param k_ratio the ratio of radius of inner circle to outer circle and
+ * \f$0<k<1\f$
  * @param N number of sample points along the trajectory (higher = better
  * resolution but consumes more time and memory)
- * @param rot the number of rotations to perform (can be fractional value)
+ * @param num_rot the number of rotations to perform (can be fractional value)
  */
-void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
+void spirograph(double *x, double *y, double l_ratio, double k_ratio, size_t N,
+                double num_rot)
 {
-    double dt = rot * 2.f * M_PI / N;
+    double dt = num_rot * 2.f * M_PI / N;
     double t = 0.f, R = 1.f;
-    const double k1 = 1.f - k;
+    const double k1 = 1.f - k_ratio;
 
     for (size_t step = 0; step < N; step++, t += dt)
     {
-        x[step] = R * (k1 * cos(t) + l * k * cos(k1 * t / k));
-        y[step] = R * (k1 * sin(t) - l * k * sin(k1 * t / k));
+        x[step] = R * (k1 * cos(t) + l_ratio * k_ratio * cos(k1 * t / k_ratio));
+        y[step] = R * (k1 * sin(t) - l_ratio * k_ratio * sin(k1 * t / k_ratio));
     }
 }
 
@@ -73,9 +75,10 @@ void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
 void test()
 {
     size_t N = 500;
-    double l = 0.3, k = 0.75, rot = 10.;
+    double l_ratio = 0.3, k_ratio = 0.75, num_rot = 10.;
     char fname[50];
-    snprintf(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l, k, rot);
+    snprintf(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l_ratio, k_ratio,
+             num_rot);
     FILE *fp = fopen(fname, "wt");
     if (!fp)
     {
@@ -86,7 +89,7 @@ void test()
     double *x = (double *)malloc(N * sizeof(double));
     double *y = (double *)malloc(N * sizeof(double));
 
-    spirograph(x, y, l, k, N, rot);
+    spirograph(x, y, l_ratio, k_ratio, N, num_rot);
 
     for (size_t i = 0; i < N; i++)
     {
@@ -110,6 +113,14 @@ void test()
 #include <GL/glut.h>
 #endif
 
+static bool paused = 0; /**< flag to set pause/unpause animation */
+static const int animation_speed = 25; /**< animation delate in ms */
+
+static const double step = 0.01;   /**< animation step size */
+static double l_ratio = step * 10; /**< the l-ratio defined in docs */
+static double k_ratio = step;      /**< the k-ratio defined in docs */
+static const double num_rot = 20.; /**< number of rotations to simulate */
+
 /** A wrapper that is not available in all GLUT implementations.
  */
 static inline void glutBitmapString(void *font, char *string)
@@ -131,17 +142,19 @@ void display_graph(const double *x, const double *y, size_t N, double l,
                  0.0f);            // Set background color to white and opaque
     glClear(GL_COLOR_BUFFER_BIT);  // Clear the color buffer (background)
 
-    glBegin(GL_LINES);         // draw line segments
-    glColor3f(0.f, 0.f, 1.f);  // blue
-    glPointSize(2.f);          // point size in pixels
-
-    for (size_t i = 1; i < N; i++)
+    if (x && y)
     {
-        glVertex2f(x[i - 1], y[i - 1]);  // line from
-        glVertex2f(x[i], y[i]);          // line to
-    }
-    glEnd();
+        glBegin(GL_LINES);         // draw line segments
+        glColor3f(0.f, 0.f, 1.f);  // blue
+        glPointSize(2.f);          // point size in pixels
 
+        for (size_t i = 1; i < N; i++)
+        {
+            glVertex2f(x[i - 1], y[i - 1]);  // line from
+            glVertex2f(x[i], y[i]);          // line to
+        }
+        glEnd();
+    }
     glColor3f(0.f, 0.f, 0.f);
     char buffer[20];
     snprintf(buffer, 20, "l = %.3f", l);
@@ -160,9 +173,7 @@ void display_graph(const double *x, const double *y, size_t N, double l,
  */
 void test2()
 {
-    const size_t N = 1000;     // number of samples
-    const double step = 0.01;  // animation steps
-    static double l = step * 10, k = step, rot = 20.;
+    const size_t N = 1000;  // number of samples
 
     static bool direction1 = true;  // increment if true, otherwise decrement
     static bool direction2 = true;  // increment if true, otherwise decrement
@@ -170,52 +181,91 @@ void test2()
     double *x = (double *)malloc(N * sizeof(double));
     double *y = (double *)malloc(N * sizeof(double));
 
-    spirograph(x, y, l, k, N, rot);
-    display_graph(x, y, N, l, k);
-
-    if (direction1)  // increment k
-    {
-        if (k >= (1.f - step))   // maximum limit
-            direction1 = false;  // reverse direction of k
-        else
-            k += step;
-    }
-    else  // decrement k
-    {
-        if (k <= step)  // minimum limit
-        {
-            direction1 = true;  // reverse direction of k
-
-            if (direction2)  // increment l
-            {
-                if (l >= (1.f - step))   // max limit of l
-                    direction2 = false;  // reverse direction of l
-                else
-                    l += step;
-            }
-            else  // decrement l
-            {
-                if (l <= step)          // minimum limit of l
-                    direction2 = true;  // reverse direction of l
-                else
-                    l -= step;
-            }
-        }
-        else  // no min limit of k
-            k -= step;
-    }
+    spirograph(x, y, l_ratio, k_ratio, N, num_rot);
+    display_graph(x, y, N, l_ratio, k_ratio);
 
     free(x);  // free dynamic memories
     free(y);
+
+    if (paused)
+        // if paused, do not update l_ratio and k_ratio
+        return;
+
+    if (direction1)  // increment k_ratio
+    {
+        if (k_ratio >= (1.f - step))  // maximum limit
+            direction1 = false;       // reverse direction of k_ratio
+        else
+            k_ratio += step;
+    }
+    else  // decrement k_ratio
+    {
+        if (k_ratio <= step)  // minimum limit
+        {
+            direction1 = true;  // reverse direction of k_ratio
+
+            if (direction2)  // increment l_ratio
+            {
+                if (l_ratio >= (1.f - step))  // max limit of l_ratio
+                    direction2 = false;       // reverse direction of l_ratio
+                else
+                    l_ratio += step;
+            }
+            else  // decrement l_ratio
+            {
+                if (l_ratio <= step)    // minimum limit of l_ratio
+                    direction2 = true;  // reverse direction of l_ratio
+                else
+                    l_ratio -= step;
+            }
+        }
+        else  // no min limit of k_ratio
+            k_ratio -= step;
+    }
 }
 
 /**
  * @brief GLUT timer callback function to add animation delay.
  */
-void timer_cb(int t)
+void timer_cb(int id)
 {
-    glutTimerFunc(25, timer_cb, 0);
     glutPostRedisplay();
+    glutTimerFunc(animation_speed, timer_cb, 0);
+}
+
+/**
+ * @brief Keypress event call back function.
+ *
+ * @param key ID of the key pressed
+ * @param x mouse pointer position at event
+ * @param y mouse pointer position at event
+ */
+void keyboard_cb(int key, int x, int y)
+{
+    switch (key)
+    {
+    case ' ':              // spacebar toggles pause
+        paused = !paused;  // toggle
+        break;
+    case GLUT_KEY_UP:  // up arrow key
+        k_ratio += step;
+        display_graph(NULL, NULL, 1, l_ratio, k_ratio);
+        break;
+    case GLUT_KEY_DOWN:  // down arrow key
+        k_ratio -= step;
+        display_graph(NULL, NULL, 1, l_ratio, k_ratio);
+        break;
+    case GLUT_KEY_LEFT:  // left arrow key
+        l_ratio += step;
+        display_graph(NULL, NULL, 1, l_ratio, k_ratio);
+        break;
+    case GLUT_KEY_RIGHT:  // right arrow key
+        l_ratio -= step;
+        display_graph(NULL, NULL, 1, l_ratio, k_ratio);
+        break;
+    case 0x1B:  // escape key exits
+        exit(EXIT_SUCCESS);
+    }
 }
 #endif
 
@@ -228,7 +278,8 @@ int main(int argc, char **argv)
     glutCreateWindow("Spirograph");
     glutInitWindowSize(400, 400);
     // glutIdleFunc(glutPostRedisplay);
-    glutTimerFunc(25, timer_cb, 0);
+    glutTimerFunc(animation_speed, timer_cb, 0);
+    glutKeyboardFunc(keyboard_cb);
     glutDisplayFunc(test2);
     glutMainLoop();
 #else
