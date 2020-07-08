@@ -46,25 +46,24 @@
  * pre-allocated)
  * @param [out] y output array containing ordinates of points (must be
  * pre-allocated)
- * @param l_ratio the relative distance of marker from the centre of
+ * @param l the relative distance of marker from the centre of
  * inner circle and \f$0\le l\le1\f$
- * @param k_ratio the ratio of radius of inner circle to outer circle and
+ * @param k the ratio of radius of inner circle to outer circle and
  * \f$0<k<1\f$
  * @param N number of sample points along the trajectory (higher = better
  * resolution but consumes more time and memory)
  * @param num_rot the number of rotations to perform (can be fractional value)
  */
-void spirograph(double *x, double *y, double l_ratio, double k_ratio, size_t N,
-                double num_rot)
+void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
 {
-    double dt = num_rot * 2.f * M_PI / N;
+    double dt = rot * 2.f * M_PI / N;
     double t = 0.f, R = 1.f;
-    const double k1 = 1.f - k_ratio;
+    const double k1 = 1.f - k;
 
-    for (size_t step = 0; step < N; step++, t += dt)
+    for (size_t dk = 0; dk < N; dk++, t += dt)
     {
-        x[step] = R * (k1 * cos(t) + l_ratio * k_ratio * cos(k1 * t / k_ratio));
-        y[step] = R * (k1 * sin(t) - l_ratio * k_ratio * sin(k1 * t / k_ratio));
+        x[dk] = R * (k1 * cos(t) + l * k * cos(k1 * t / k));
+        y[dk] = R * (k1 * sin(t) - l * k * sin(k1 * t / k));
     }
 }
 
@@ -75,10 +74,9 @@ void spirograph(double *x, double *y, double l_ratio, double k_ratio, size_t N,
 void test()
 {
     size_t N = 500;
-    double l_ratio = 0.3, k_ratio = 0.75, num_rot = 10.;
+    double l = 0.3, k = 0.75, rot = 10.;
     char fname[50];
-    snprintf(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l_ratio, k_ratio,
-             num_rot);
+    snprintf(fname, 50, "spirograph_%.2f_%.2f_%.2f.csv", l, k, rot);
     FILE *fp = fopen(fname, "wt");
     if (!fp)
     {
@@ -89,7 +87,7 @@ void test()
     double *x = (double *)malloc(N * sizeof(double));
     double *y = (double *)malloc(N * sizeof(double));
 
-    spirograph(x, y, l_ratio, k_ratio, N, num_rot);
+    spirograph(x, y, l, k, N, rot);
 
     for (size_t i = 0; i < N; i++)
     {
@@ -240,26 +238,26 @@ void timer_cb(int id)
  * @param x mouse pointer position at event
  * @param y mouse pointer position at event
  */
-void keyboard_cb(int key, int x, int y)
+void keyboard_cb(unsigned char key, int x, int y)
 {
     switch (key)
     {
     case ' ':              // spacebar toggles pause
         paused = !paused;  // toggle
         break;
-    case GLUT_KEY_UP:  // up arrow key
+    case '+':  // up arrow key
         k_ratio += step;
         display_graph(NULL, NULL, 1, l_ratio, k_ratio);
         break;
-    case GLUT_KEY_DOWN:  // down arrow key
+    case '_':  // down arrow key
         k_ratio -= step;
         display_graph(NULL, NULL, 1, l_ratio, k_ratio);
         break;
-    case GLUT_KEY_LEFT:  // left arrow key
+    case '=':  // left arrow key
         l_ratio += step;
         display_graph(NULL, NULL, 1, l_ratio, k_ratio);
         break;
-    case GLUT_KEY_RIGHT:  // right arrow key
+    case '-':  // right arrow key
         l_ratio -= step;
         display_graph(NULL, NULL, 1, l_ratio, k_ratio);
         break;
