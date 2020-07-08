@@ -1,7 +1,5 @@
 var group__machine__learning =
 [
-    [ "Algorithms implemented in C (for education)", "index.html#autotoc_md32", null ],
-    [ "Contribute Guidelines", "index.html#autotoc_md33", null ],
     [ "Overview about functions", "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md9", null ],
     [ "Content", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md11", null ],
     [ "Public interface", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md12", null ],

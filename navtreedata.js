@@ -25,7 +25,12 @@
 var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
-    [ "The Algorithms - C", "index.html", null ],
+    [ "The Algorithms - C", "index.html", [
+      [ "Overview", "index.html#autotoc_md32", null ],
+      [ "Features", "index.html#autotoc_md33", null ],
+      [ "Documentation", "index.html#autotoc_md34", null ],
+      [ "Contributions", "index.html#autotoc_md35", null ]
+    ] ],
     [ "Code style convention", "dc/d64/md__coding_guidelines.html", [
       [ "User-interface", "dc/d64/md__coding_guidelines.html#autotoc_md2", null ],
       [ "Code style conventions", "dc/d64/md__coding_guidelines.html#autotoc_md4", null ]
