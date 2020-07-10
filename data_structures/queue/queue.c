@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/** Content of header file begins */
+/* Content of header file begins */
 
 /** Structure of a node in queue */
 struct node
@@ -50,7 +50,7 @@ extern struct Queue *queue_new();
 /**
  * Destroy and free up all the data in queue
  *
- * \param[in] queue pointer to the queue, returned by queue_new
+ * \param[in,out] queue pointer to the queue, returned by queue_new
  * \param[in] function callback function which is used to free the entries in
  * queue
  */
@@ -59,7 +59,7 @@ extern void queue_destroy(struct Queue *queue, QueueDataFreeFunc function);
 /**
  * Enqueue the data at the end of queue
  *
- * \param[in] queue pointer to the queue, returned by queue_new
+ * \param[in,out] queue pointer to the queue, returned by queue_new
  * \param[in] data pointer to the data to be queued
  *
  * \return 0       enqueu is successful
@@ -71,16 +71,16 @@ extern int queue_push_tail(struct Queue *queue, void *data);
 /**
  * Dequeue the data at the start of queue
  *
- * \param[in] queue pointer to the queue, returned by queue_new
+ * \param[in,out] queue pointer to the queue, returned by queue_new
  *
  * \return pointer pointer to data
  * \return NULL if parameter queue is null or queue is empty
  */
 extern void *queue_pop_head(struct Queue *queue);
 
-/** Content of header file ends */
+/* Content of header file ends */
 
-/** Content of implementation begins */
+/* Content of implementation begins */
 
 /**
  * Get the length of queue
@@ -213,9 +213,9 @@ cleanup:
     free(queue);
 }
 
-/** Content of implementation ends */
+/* Content of implementation ends */
 
-/** Content of Unit Test case begins */
+/* Content of Unit Test case begins */
 
 static void print_len(struct Queue *q)
 {
@@ -270,4 +270,4 @@ int main(int argc, char **argv)
     return 0;
 }
 
-/** Centent of Unit Test Case ends */
+/* Centent of Unit Test Case ends */
