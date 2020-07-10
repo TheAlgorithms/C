@@ -4,41 +4,44 @@
  * \author [shubham patil](https://github.com/shubhamdp)
  */
 
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
 
 /** Content of header file begins */
 
 /** Structure of a node in queue */
-struct node {
-	/** Pointer data in a node */
-	void *data;
-	/** Pointer to next node in queue */
-	struct node *next;
+struct node
+{
+    /** Pointer data in a node */
+    void *data;
+    /** Pointer to next node in queue */
+    struct node *next;
 };
 
 /** Structure of a queue */
-struct Queue {
-	/** Length of a queue */
-	int length;
-	/** Head pointer of a queue */
-	struct node *head;
-	/** Tail pointer of a queue */
-	struct node *tail;
+struct Queue
+{
+    /** Length of a queue */
+    int length;
+    /** Head pointer of a queue */
+    struct node *head;
+    /** Tail pointer of a queue */
+    struct node *tail;
 };
 
 /**
  * Prototype for Queue Data Free Function
  *
- * \param[in] data arguments to free function, this will be the data entry in queue
+ * \param[in] data arguments to free function, this will be the data entry in
+ * queue
  */
-typedef void (* QueueDataFreeFunc)(void *data);
+typedef void (*QueueDataFreeFunc)(void *data);
 
 /**
  * Creates and initialise the queue
- * 
+ *
  * \return pointer pointer to newly created queue
  * \return NULL in case of no memory
  */
@@ -48,7 +51,8 @@ extern struct Queue *queue_new();
  * Destroy and free up all the data in queue
  *
  * \param[in] queue pointer to the queue, returned by queue_new
- * \param[in] function callback function which is used to free the entries in queue
+ * \param[in] function callback function which is used to free the entries in
+ * queue
  */
 extern void queue_destroy(struct Queue *queue, QueueDataFreeFunc function);
 
@@ -68,7 +72,7 @@ extern int queue_push_tail(struct Queue *queue, void *data);
  * Dequeue the data at the start of queue
  *
  * \param[in] queue pointer to the queue, returned by queue_new
- * 
+ *
  * \return pointer pointer to data
  * \return NULL if parameter queue is null or queue is empty
  */
@@ -78,7 +82,7 @@ extern void *queue_pop_head(struct Queue *queue);
 
 /** Content of implementation begins */
 
-/** 
+/**
  * Get the length of queue
  *
  * \param[in] queue pointer to the queue, returned by queue_new
@@ -96,111 +100,117 @@ extern int queue_get_length(struct Queue *queue);
  */
 static struct node *createnode(void *data)
 {
-	struct node *entry;
+    struct node *entry;
 
-	entry = (struct node *)malloc(sizeof(struct node));
-	if(entry == NULL) {
-		fprintf(stderr, "failed to allocate memory\n");
-		return NULL;
-	}
+    entry = (struct node *)malloc(sizeof(struct node));
+    if (entry == NULL)
+    {
+        fprintf(stderr, "failed to allocate memory\n");
+        return NULL;
+    }
 
-	entry->data = data;
-	entry->next = NULL;
+    entry->data = data;
+    entry->next = NULL;
 
-	return entry;
+    return entry;
 }
 
 int queue_push_tail(struct Queue *queue, void *data)
 {
-	struct node *entry;
+    struct node *entry;
 
-	if(queue == NULL)
-		return -1;
+    if (queue == NULL)
+        return -1;
 
-	entry = createnode(data);
-	if(entry == NULL) {
-		return -ENOMEM;
-	}
+    entry = createnode(data);
+    if (entry == NULL)
+    {
+        return -ENOMEM;
+    }
 
-	/* For empty queue */
-	if(queue->head == NULL)
-		queue->head = entry;
-	else
-		queue->tail->next = entry;
-	queue->tail = entry;
+    /* For empty queue */
+    if (queue->head == NULL)
+        queue->head = entry;
+    else
+        queue->tail->next = entry;
+    queue->tail = entry;
 
-	queue->length++;
-	return 0;
+    queue->length++;
+    return 0;
 }
 
 void *queue_pop_head(struct Queue *queue)
 {
-	void *data;
-	struct node *entry;
+    void *data;
+    struct node *entry;
 
-	if(queue == NULL || queue->length == 0)
-		return NULL;
+    if (queue == NULL || queue->length == 0)
+        return NULL;
 
-	if(queue->head == NULL) {
-		return NULL;
-	}
+    if (queue->head == NULL)
+    {
+        return NULL;
+    }
 
-	entry = queue->head;
-	queue->head = queue->head->next;
-	data = entry->data;
-	queue->length--;
-	free(entry);
+    entry = queue->head;
+    queue->head = queue->head->next;
+    data = entry->data;
+    queue->length--;
+    free(entry);
 
-	return data;
+    return data;
 }
 
 int queue_get_length(struct Queue *queue)
 {
-	if (queue == NULL)
-		return 0;
+    if (queue == NULL)
+        return 0;
 
-	return queue->length;
+    return queue->length;
 }
 
 struct Queue *queue_new()
 {
-	struct Queue *queue;
+    struct Queue *queue;
 
-	queue = (struct Queue *)malloc(sizeof(struct Queue));
-	if(queue == NULL) {
-		fprintf(stderr, "failed to allocate memory\n");
-		return NULL;
-	}
+    queue = (struct Queue *)malloc(sizeof(struct Queue));
+    if (queue == NULL)
+    {
+        fprintf(stderr, "failed to allocate memory\n");
+        return NULL;
+    }
 
-	queue->length = 0;
-	queue->head = NULL;
-	queue->tail = NULL;
+    queue->length = 0;
+    queue->head = NULL;
+    queue->tail = NULL;
 
-	return queue;
+    return queue;
 }
 
 void queue_destroy(struct Queue *queue, QueueDataFreeFunc function)
 {
-	struct node *tmp;
+    struct node *tmp;
 
-	if(queue == NULL || queue->length == 0)
-		goto cleanup;
+    if (queue == NULL || queue->length == 0)
+        goto cleanup;
 
-	if(queue->head == NULL)
-		free(queue);
-	else {
-		tmp = queue->head;
-		while(queue->head != NULL) {
-			tmp = queue->head->next;
-			if (function != NULL)
-				function(queue->head->data);
-			free(queue->head);
-			queue->head=tmp;
-		}
-	}
+    if (queue->head == NULL)
+        free(queue);
+    else
+    {
+        tmp = queue->head;
+        while (queue->head != NULL)
+        {
+            tmp = queue->head->next;
+            if (function != NULL)
+                function(queue->head->data);
+            free(queue->head);
+            queue->head = tmp;
+        }
+    }
 
 cleanup:
-	free(queue);
+    free(queue);
 }
 
 /** Content of implementation ends */
@@ -209,7 +219,7 @@ cleanup:
 
 static void print_len(struct Queue *q)
 {
-	printf("queue_len: %d\n", queue_get_length(q));
+    printf("queue_len: %d\n", queue_get_length(q));
 }
 
 /**
@@ -217,48 +227,47 @@ static void print_len(struct Queue *q)
  */
 int main(int argc, char **argv)
 {
-	char *str;
-	char *entry;
-	struct Queue *q_str = queue_new();
+    char *str;
+    char *entry;
+    struct Queue *q_str = queue_new();
 
-	entry = "hello";
-	printf("enqueue: %s\n", entry);
-	queue_push_tail(q_str, strdup(entry));
-	print_len(q_str);
+    entry = "hello";
+    printf("enqueue: %s\n", entry);
+    queue_push_tail(q_str, strdup(entry));
+    print_len(q_str);
 
-	entry = "world";
-	printf("enqueue: %s\n", entry);
-	queue_push_tail(q_str, strdup(entry));
-	print_len(q_str);
+    entry = "world";
+    printf("enqueue: %s\n", entry);
+    queue_push_tail(q_str, strdup(entry));
+    print_len(q_str);
 
-	entry = "in";
-	printf("enqueue: %s\n", entry);
-	queue_push_tail(q_str, strdup(entry));
-	print_len(q_str);
+    entry = "in";
+    printf("enqueue: %s\n", entry);
+    queue_push_tail(q_str, strdup(entry));
+    print_len(q_str);
 
-	entry = "C";
-	printf("enqueue: %s\n", entry);
-	queue_push_tail(q_str, strdup(entry));
-	print_len(q_str);
+    entry = "C";
+    printf("enqueue: %s\n", entry);
+    queue_push_tail(q_str, strdup(entry));
+    print_len(q_str);
 
-	str = queue_pop_head(q_str);
-	printf("dequeue: %s\n", str);
-	free(str);
-	print_len(q_str);
+    str = queue_pop_head(q_str);
+    printf("dequeue: %s\n", str);
+    free(str);
+    print_len(q_str);
 
-	str = queue_pop_head(q_str);
-	printf("dequeue: %s\n", str);
-	free(str);
-	print_len(q_str);
+    str = queue_pop_head(q_str);
+    printf("dequeue: %s\n", str);
+    free(str);
+    print_len(q_str);
 
-	entry = "bye";
-	printf("enqueue: %s\n", entry);
-	queue_push_tail(q_str, strdup(entry));
-	print_len(q_str);
-	queue_destroy(q_str, free);
+    entry = "bye";
+    printf("enqueue: %s\n", entry);
+    queue_push_tail(q_str, strdup(entry));
+    print_len(q_str);
+    queue_destroy(q_str, free);
 
-	return 0;
+    return 0;
 }
 
 /** Centent of Unit Test Case ends */
-
