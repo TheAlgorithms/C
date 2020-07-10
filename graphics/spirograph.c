@@ -104,7 +104,7 @@ void test()
     free(y);
 }
 
-#ifdef GLUT_FOUND  // this is set by CMAKE automatically, if available
+#ifdef USE_GLUT  // this is set by CMAKE automatically, if available
 #ifdef __APPLE__
 #include <GLUT/glut.h>  // include path on Macs is different
 #else
@@ -270,7 +270,9 @@ void keyboard_cb(unsigned char key, int x, int y)
 /** Main function */
 int main(int argc, char **argv)
 {
-#ifdef GLUT_FOUND
+    test();
+
+#ifdef USE_GLUT
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutCreateWindow("Spirograph");
@@ -280,8 +282,6 @@ int main(int argc, char **argv)
     glutKeyboardFunc(keyboard_cb);
     glutDisplayFunc(test2);
     glutMainLoop();
-#else
-    test();
 #endif
 
     return 0;
