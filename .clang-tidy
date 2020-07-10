@@ -1,5 +1,5 @@
 ---
-Checks:          '-*,google-*,clang-analyzer-*,-clang-analyzer-security.insecureAPI.rand,openmp-*,performance-*,portability-*,modernize-*'
+Checks:          '-*,google-*,clang-analyzer-*,-clang-analyzer-security.insecureAPI.*,openmp-*,performance-*,portability-*,modernize-*'
 WarningsAsErrors: '*'
 HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
