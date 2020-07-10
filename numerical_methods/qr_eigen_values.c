@@ -70,11 +70,13 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2,
 #pragma omp for
 #endif
     for (i = 0; i < R1; i++)
+    {
         for (int j = 0; j < C2; j++)
         {
             OUT[i][j] = 0.f;
             for (int k = 0; k < C1; k++) OUT[i][j] += A[i][k] * B[k][j];
         }
+    }
     return OUT;
 }
 
@@ -104,17 +106,24 @@ double **mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2,
 double eigen_values(double **A, double *eigen_vals, int mat_size,
                     char debug_print)
 {
-    double **R = (double **)malloc(sizeof(double *) * mat_size);
-    double **Q = (double **)malloc(sizeof(double *) * mat_size);
-
     if (!eigen_vals)
     {
         perror("Output eigen value vector cannot be NULL!");
         return -1;
     }
-    else if (!Q || !R)
+    double **R = (double **)malloc(sizeof(double *) * mat_size);
+    double **Q = (double **)malloc(sizeof(double *) * mat_size);
+    if (!Q || !R)
     {
         perror("Unable to allocate memory for Q & R!");
+        if (Q)
+        {
+            free(Q);
+        }
+        if (R)
+        {
+            free(R);
+        }
         return -1;
     }
 
@@ -126,12 +135,21 @@ double eigen_values(double **A, double *eigen_vals, int mat_size,
         if (!Q[i] || !R[i])
         {
             perror("Unable to allocate memory for Q & R.");
+            for (; i >= 0; i--)
+            {
+                free(R[i]);
+                free(Q[i]);
+            }
+            free(Q);
+            free(R);
             return -1;
         }
     }
 
     if (debug_print)
+    {
         print_matrix(A, mat_size, mat_size);
+    }
 
     int rows = mat_size, columns = mat_size;
     int counter = 0, num_eigs = rows - 1;
@@ -208,7 +226,7 @@ void test1()
     int mat_size = 2;
     double X[][2] = {{5, 7}, {7, 11}};
     double y[] = {15.56158, 0.384227};  // corresponding y-values
-    double eig_vals[2];
+    double eig_vals[2] = {0, 0};
 
     // The following steps are to convert a "double[][]" to "double **"
     double **A = (double **)malloc(mat_size * sizeof(double *));
@@ -300,7 +318,9 @@ int main(int argc, char **argv)
 
     int mat_size = 5;
     if (argc == 2)
+    {
         mat_size = atoi(argv[1]);
+    }
     else
     {  // if invalid input argument is given run tests
         test1();
@@ -315,7 +335,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    int i, rows = mat_size, columns = mat_size;
+    int i;
 
     double **A = (double **)malloc(sizeof(double *) * mat_size);
     /* number of eigen values = matrix size */
@@ -323,11 +343,13 @@ int main(int argc, char **argv)
     if (!eigen_vals)
     {
         perror("Unable to allocate memory for eigen values!");
+        free(A);
         return -1;
     }
     for (i = 0; i < mat_size; i++)
     {
         A[i] = (double *)malloc(sizeof(double) * mat_size);
+        eigen_vals[i] = 0.f;
     }
 
     /* create a random matrix */
