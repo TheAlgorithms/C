@@ -71,7 +71,7 @@ void spirograph(double *x, double *y, double l, double k, size_t N, double rot)
  * @brief Test function to save resulting points to a CSV file.
  *
  */
-void test()
+void test(void)
 {
     size_t N = 500;
     double l = 0.3, k = 0.75, rot = 10.;
@@ -115,8 +115,8 @@ static bool paused = 0; /**< flag to set pause/unpause animation */
 static const int animation_speed = 25; /**< animation delate in ms */
 
 static const double step = 0.01;   /**< animation step size */
-static double l_ratio = step * 10; /**< the l-ratio defined in docs */
-static double k_ratio = step;      /**< the k-ratio defined in docs */
+static double l_ratio = 0.1;       /**< the l-ratio defined in docs */
+static double k_ratio = 0.1;       /**< the k-ratio defined in docs */
 static const double num_rot = 20.; /**< number of rotations to simulate */
 
 /** A wrapper that is not available in all GLUT implementations.
@@ -169,7 +169,7 @@ void display_graph(const double *x, const double *y, size_t N, double l,
  * @brief Test function with animation
  *
  */
-void test2()
+void test2(void)
 {
     const size_t N = 1000;  // number of samples
 
