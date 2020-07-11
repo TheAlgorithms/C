@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['realtime_5fstats_2ec_286',['realtime_stats.c',['../dc/d47/realtime__stats_8c.html',1,'']]]
+  ['qr_5fdecompose_2eh_294',['qr_decompose.h',['../d4/d68/qr__decompose_8h.html',1,'']]],
+  ['qr_5fdecomposition_2ec_295',['qr_decomposition.c',['../d5/d23/qr__decomposition_8c.html',1,'']]],
+  ['qr_5feigen_5fvalues_2ec_296',['qr_eigen_values.c',['../d7/d50/qr__eigen__values_8c.html',1,'']]]
 ];

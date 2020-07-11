@@ -74,7 +74,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Macros", "globals_defs.html", null ]
@@ -87,7 +87,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/da1/structnode.html#a1aa632fdf50713d86192a96f8191851b",
-"df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582"
+"de/dac/sudoku__solver_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

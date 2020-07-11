@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['ode_5fforward_5feuler_2ec_150',['ode_forward_euler.c',['../d4/d07/ode__forward__euler_8c.html',1,'']]],
-  ['ode_5fmidpoint_5feuler_2ec_151',['ode_midpoint_euler.c',['../d1/dc2/ode__midpoint__euler_8c.html',1,'']]],
-  ['ode_5fsemi_5fimplicit_5feuler_2ec_152',['ode_semi_implicit_euler.c',['../d4/d99/ode__semi__implicit__euler_8c.html',1,'']]],
-  ['ok_153',['OK',['../d5/df4/group__sudoku.html#ga3a0ec150ac9d0cb6b28279d36d95d72f',1,'sudoku_solver.c']]],
-  ['okbox_154',['OKbox',['../d5/df4/group__sudoku.html#ga1cd43df3f4187845ce186042fe53e6f1',1,'sudoku_solver.c']]],
-  ['okcol_155',['OKcol',['../d5/df4/group__sudoku.html#ga6503128d4f5ce0a0826f72f73f9e0b2a',1,'sudoku_solver.c']]],
-  ['okrow_156',['OKrow',['../d5/df4/group__sudoku.html#ga85d25d3b40017436f264a103685e4c55',1,'sudoku_solver.c']]],
-  ['order_157',['order',['../d4/d07/ode__forward__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09',1,'order():&#160;ode_semi_implicit_euler.c']]]
+  ['n_146',['N',['../dc/d18/structsudoku.html#a160365012280c3e10f1b31e914e8f129',1,'sudoku::N()'],['../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4',1,'N():&#160;sol1.c']]],
+  ['n2_147',['N2',['../dc/d18/structsudoku.html#a0f01e2782e82306e6fab9a8578006f56',1,'sudoku::N2()'],['../db/d01/problem__13_2sol1_8c.html#acd864640121c7df2c19f61f7baa507e4',1,'N2():&#160;sol1.c']]],
+  ['new_5fadaline_148',['new_adaline',['../da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b',1,'adaline_learning.c']]],
+  ['new_5fnumber_149',['new_number',['../d6/d3d/factorial__large__number_8c.html#ad8101f58545bd891ae8b6e11caadd7eb',1,'factorial_large_number.c']]],
+  ['newton_5fraphson_5froot_2ec_150',['newton_raphson_root.c',['../dd/d08/newton__raphson__root_8c.html',1,'']]],
+  ['next_151',['next',['../d9/dd7/struct__cantor__set.html#a2f7f9f19125725d3e5673fdb4ac8cfb1',1,'_cantor_set']]],
+  ['next_5fdigit_152',['next_digit',['../dc/d77/struct__big__int.html#a187538b984c86d7cfdb13e297e7f3564',1,'_big_int']]],
+  ['node_153',['Node',['../db/d8b/struct_node.html',1,'Node'],['../d5/da1/structnode.html',1,'node'],['../df/d3c/threaded__binary__trees_8c.html#ad8ecdcce462dd8e170ae1f164935aaa6',1,'node():&#160;threaded_binary_trees.c']]],
+  ['num_5fdigits_154',['num_digits',['../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0',1,'_large_num']]],
+  ['num_5fweights_155',['num_weights',['../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1',1,'adaline']]],
+  ['number_5fof_5fpaths_156',['number_of_paths',['../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6',1,'sol1.c']]]
 ];

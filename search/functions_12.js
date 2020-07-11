@@ -1,15 +1,20 @@
 var searchData=
 [
-  ['test_399',['test',['../d7/d98/spirograph_8c.html#a708a4c1a4d0c4acc4c447310dd4db27f',1,'test(void):&#160;spirograph.c'],['../df/d3b/binary__search_8c.html#ae1a3968e7947464bee7714f6d43b7002',1,'test():&#160;binary_search.c']]],
-  ['test1_400',['test1',['../dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9',1,'test1(double eta):&#160;adaline_learning.c'],['../d2/df6/kohonen__som__topology_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0',1,'test1():&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0',1,'test1():&#160;kohonen_som_trace.c'],['../d7/d50/qr__eigen__values_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0',1,'test1():&#160;qr_eigen_values.c']]],
-  ['test2_401',['test2',['../dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6',1,'test2(double eta):&#160;adaline_learning.c'],['../d2/df6/kohonen__som__topology_8c.html#a0283886819c7c140a023582b7269e2d0',1,'test2():&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a0283886819c7c140a023582b7269e2d0',1,'test2():&#160;kohonen_som_trace.c'],['../d7/d50/qr__eigen__values_8c.html#a0283886819c7c140a023582b7269e2d0',1,'test2():&#160;qr_eigen_values.c']]],
-  ['test3_402',['test3',['../dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1',1,'test3(double eta):&#160;adaline_learning.c'],['../d2/df6/kohonen__som__topology_8c.html#a6d0455dd5c30adda100e95f0423c786e',1,'test3():&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a6d0455dd5c30adda100e95f0423c786e',1,'test3():&#160;kohonen_som_trace.c']]],
-  ['test_5f2d_5fclasses_403',['test_2d_classes',['../d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018',1,'kohonen_som_topology.c']]],
-  ['test_5f3d_5fclasses_404',['test_3d_classes',['../d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0',1,'kohonen_som_trace.c']]],
-  ['test_5f3d_5fclasses1_405',['test_3d_classes1',['../d2/df6/kohonen__som__topology_8c.html#ad9e25202bb8b481461f932668f249dbc',1,'kohonen_som_topology.c']]],
-  ['test_5f3d_5fclasses2_406',['test_3d_classes2',['../d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a',1,'kohonen_som_topology.c']]],
-  ['test_5fc_5fatoi_407',['test_c_atoi',['../d7/dd8/c__atoi__str__to__integer_8c.html#a8c66c03637e48e375b80b5d7791e57be',1,'c_atoi_str_to_integer.c']]],
-  ['test_5fcircle_408',['test_circle',['../d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8',1,'kohonen_som_trace.c']]],
-  ['test_5ffunction_409',['test_function',['../dc/d47/realtime__stats_8c.html#aa54c915581fcc495489175a4386d59fd',1,'realtime_stats.c']]],
-  ['test_5flamniscate_410',['test_lamniscate',['../d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614',1,'kohonen_som_trace.c']]]
+  ['save_5f2d_5fdata_398',['save_2d_data',['../d1/d6b/group__kohonen__2d.html#ga6824dc6d973eb3339af7aef5fea78b0c',1,'kohonen_som_topology.c']]],
+  ['save_5fnd_5fdata_399',['save_nd_data',['../d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a',1,'kohonen_som_trace.c']]],
+  ['save_5fu_5fmatrix_400',['save_u_matrix',['../d1/d6b/group__kohonen__2d.html#ga49d35f68f5d11d8ef6f8cce0d0e7bcba',1,'kohonen_som_topology.c']]],
+  ['search_401',['search',['../df/d3c/threaded__binary__trees_8c.html#a306d567466f22e1e927aaed97d8bb58c',1,'threaded_binary_trees.c']]],
+  ['semi_5fimplicit_5feuler_402',['semi_implicit_euler',['../d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55',1,'ode_semi_implicit_euler.c']]],
+  ['semi_5fimplicit_5feuler_5fstep_403',['semi_implicit_euler_step',['../d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb',1,'ode_semi_implicit_euler.c']]],
+  ['shell_5fsort_404',['shell_sort',['../dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63',1,'shell_sort(char data[][MAX_NAME_LEN], int LEN):&#160;sol1.c'],['../d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0',1,'shell_sort(int *array, long LEN):&#160;shell_sort2.c']]],
+  ['show_5fdata_405',['show_data',['../d5/d4c/group__sorting.html#gaeccaf61ff47279384d1dba8d869d5c2f',1,'shell_sort2.c']]],
+  ['sigma_406',['sigma',['../d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be',1,'sol1.c']]],
+  ['sigma2_407',['sigma2',['../d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788',1,'sol1.c']]],
+  ['solve_408',['solve',['../d5/df4/group__sudoku.html#gadfe0ed5085b4775d8fa00b434cc0fdfc',1,'sudoku_solver.c']]],
+  ['spirograph_409',['spirograph',['../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3',1,'spirograph.c']]],
+  ['stats_5fcomputer1_410',['stats_computer1',['../dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628',1,'realtime_stats.c']]],
+  ['stats_5fcomputer2_411',['stats_computer2',['../dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96',1,'realtime_stats.c']]],
+  ['sum_5fof_5fdivisors_412',['sum_of_divisors',['../df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93',1,'sol1.c']]],
+  ['sum_5fof_5fprimes_413',['sum_of_primes',['../d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5',1,'sol1.c']]],
+  ['swap_414',['swap',['../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8',1,'merge_sort.c']]]
 ];

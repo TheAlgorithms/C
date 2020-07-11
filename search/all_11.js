@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['realtime_5fstats_2ec_175',['realtime_stats.c',['../dc/d47/realtime__stats_8c.html',1,'']]],
-  ['remove_5fdigits_176',['remove_digits',['../db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1',1,'sol1.c']]],
-  ['rlink_177',['rlink',['../db/d8b/struct_node.html#a0ed3c7305b43527f0f237bbfd438b8f7',1,'Node']]]
+  ['qr_5fdecompose_176',['qr_decompose',['../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56',1,'qr_decompose.h']]],
+  ['qr_5fdecompose_2eh_177',['qr_decompose.h',['../d4/d68/qr__decompose_8h.html',1,'']]],
+  ['qr_5fdecomposition_2ec_178',['qr_decomposition.c',['../d5/d23/qr__decomposition_8c.html',1,'']]],
+  ['qr_5feigen_5fvalues_2ec_179',['qr_eigen_values.c',['../d7/d50/qr__eigen__values_8c.html',1,'']]],
+  ['queue_180',['queue',['../d2/d36/structqueue.html',1,'']]],
+  ['queuerep_181',['QueueRep',['../d0/d10/struct_queue_rep.html',1,'']]]
 ];
