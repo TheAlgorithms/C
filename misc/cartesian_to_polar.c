@@ -1,7 +1,10 @@
+/**
+ * @file
+ * @brief Function to convert a Cartesian co-ordinate to polar form.
+ */
+#define _USE_MATH_DEFINES /**< required for MS Visual C */
 #include <math.h>
 #include <stdio.h>
-
-const double pi = 3.141592653589793238462643383279502884;
 
 /**
 give as arguments to the executable two x and y coordinates
@@ -24,15 +27,15 @@ int main()
             }
             else if (x < 0 && y > 0)
             {  // Q2
-                thetaFinal = theta + pi;
+                thetaFinal = theta + M_PI;
             }
             else if (x < 0 && y < 0)
             {  // Q3
-                thetaFinal = theta - pi;
+                thetaFinal = theta - M_PI;
             }
             else if (x > 0 && y < 0)
             {  // Q4
-                thetaFinal = 2 * pi - theta;
+                thetaFinal = 2 * M_PI - theta;
             }
         }
     }
@@ -40,11 +43,11 @@ int main()
     {  // exceptions when no actual angle is present
         if (y > 0)
         {
-            thetaFinal = pi / 2;
+            thetaFinal = M_PI / 2;
         }
         else
         {
-            thetaFinal = -(pi / 2);
+            thetaFinal = -(M_PI / 2);
         }
     }
     if (y == 0)
@@ -55,7 +58,7 @@ int main()
         }
         else
         {
-            thetaFinal = -pi;
+            thetaFinal = -M_PI;
         }
     }
     printf("%.2f %.2f\n", r, atan2(y, x));
