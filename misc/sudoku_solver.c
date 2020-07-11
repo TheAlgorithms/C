@@ -37,7 +37,7 @@ struct sudoku
 };
 
 /**
- * Function to check if `x`^th row is valid
+ * Check if `x`^th row is valid
  * @param a ::sudoku to check
  * @param x row to check
  * @param y ignored column
