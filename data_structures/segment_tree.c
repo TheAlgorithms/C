@@ -1,3 +1,11 @@
+/**
+ * @file 
+ * @brief Data structure usefull in case you have queries and updates on segments
+ * @details 
+ * The algorithm is well described on the link bekow:
+ * https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
+ * @author [vakhokoto](https://github.com/vakhokoto)
+ */
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
