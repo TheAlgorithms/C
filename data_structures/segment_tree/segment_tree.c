@@ -6,12 +6,12 @@
 */
 struct segment_tree
 {
-    comp_func_t comp_func;      // compare function
-    oper_func_t oper_func;      // operation function
-    size_t elem_size;           // size of single element
-    size_t size;                // size of data
-    void *data;                 // data of tree
-    void *t;                    // segment tree
+    comp_func_t comp_func;      /**< compare function */
+    oper_func_t oper_func;      /**< operation function */
+    size_t elem_size;           /**< size of single element */
+    size_t size;                /**< size of data */
+    void *data;                 /**< data of tree */
+    void *t;                    /**< segment tree */
 };
 
 
