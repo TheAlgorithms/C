@@ -121,7 +121,7 @@ jobs:
             sys.exit(0)
 
           for cpp_file in cpp_files:
-            subprocess.run(["clang-tidy-10", "--fix", "-p=build", cpp_file, "--"],
+            subprocess.run(["clang-tidy-10", "-p=build", cpp_file, "--"],
               check=True, text=True, stderr=subprocess.STDOUT)
 
           # print("g++:")
