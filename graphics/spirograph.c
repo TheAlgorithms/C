@@ -84,6 +84,7 @@ void test(void)
         exit(EXIT_FAILURE);
     }
 
+    // arrays to store points (x,y)
     double *x = (double *)malloc(N * sizeof(double));
     double *y = (double *)malloc(N * sizeof(double));
 
