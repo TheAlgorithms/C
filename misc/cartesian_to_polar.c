@@ -21,7 +21,7 @@
  */
 void to_polar(double x, double y, double *r, double *theta)
 {
-    double thetaFinal;
+    double thetaFinal = 0.f;
 
     *r = sqrt(x * x + y * y);
 
@@ -46,9 +46,13 @@ void to_polar(double x, double y, double *r, double *theta)
             {  // Q4
                 thetaFinal = 2 * M_PI - *theta;
             }
+            else
+            {
+                fprintf(stderr, "Should not reach here!\n");
+            }
         }
     }
-    if (x == 0)
+    else
     {  // exceptions when no actual angle is present
         if (y > 0)
         {
