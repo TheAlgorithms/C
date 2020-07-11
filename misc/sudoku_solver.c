@@ -49,13 +49,9 @@ bool OKrow(const struct sudoku *a, int x, int y, int v)
 {
     int offset = x * a->N;
     for (int j = 0; j < a->N; j++)
-    {
         if (a->a[offset + j] == v)
-        {
             // if the value is found in the row
             return false;
-        }
-    }
     return true;
 }
 
@@ -71,13 +67,9 @@ bool OKrow(const struct sudoku *a, int x, int y, int v)
 bool OKcol(const struct sudoku *a, int x, int y, int v)
 {
     for (int i = 0; i < a->N; i++)
-    {
         if (a->a[i * a->N + y] == v)
-        {
             // if the value is found in the column
             return false;
-        }
-    }
     return true;
 }
 
@@ -100,16 +92,10 @@ bool OKbox(const struct sudoku *a, int x, int y, int v)
     // printf("Checking box: (%d,%d)\n", bi, bj);
 
     for (int i = bi; i < (bi + a->N2); i++)
-    {
         for (int j = bj; j < (bj + a->N2); j++)
-        {
             if (a->a[i * a->N + j] == v)
-            {
                 // if the value is found in the box
                 return false;
-            }
-        }
-    }
     return true;
 }
 
@@ -126,13 +112,9 @@ bool OK(const struct sudoku *a, int x, int y, int v)
 {
     bool result = OKrow(a, x, y, v);
     if (result)
-    {
         result = OKcol(a, x, y, v);
-    }
     if (result)
-    {
         result = OKbox(a, x, y, v);
-    }
 
     return result;
 }
@@ -145,13 +127,9 @@ void print(const struct sudoku *a)
 {
     int i, j;
     for (i = 0; i < a->N; i++)
-    {
         for (j = 0; j < a->N; j++)
-        {
             printf("%" SCNu8 "%c", a->a[i * a->N + j],
                    (j == a->N - 1 ? '\n' : ' '));
-        }
-    }
 }
 
 /**
@@ -258,12 +236,8 @@ void test()
                           6, 4, 3, 1, 3, 8, 9, 4, 7, 2, 5, 6, 6, 9, 2, 3, 5,
                           1, 8, 7, 4, 7, 4, 5, 2, 8, 6, 3, 1, 9};
     for (int i = 0; i < a.N; i++)
-    {
         for (int j = 0; j < a.N; j++)
-        {
             assert(a.a[i * a.N + j] == expected[i * a.N + j]);
-        }
-    }
 
     printf("Test passed\n");
 }
@@ -279,22 +253,16 @@ int main()
     a.N2 = (uint8_t)sqrt(a.N);
 
     for (int i = 0; i < a.N; i++)
-    {
         for (int j = 0; j < a.N; j++) scanf("%" SCNu8, &(a.a[i * a.N + j]));
-    }
 
     printf("Entered a %udx%ud matrix with block size: %" SCNu8 "\n", a.N, a.N,
            a.N2);
     // print(&a);
     printf("\n\n");
     if (solve(&a))
-    {
         printf("Valid solution found!\n");
-    }
     else
-    {
         printf("Invalid\n");
-    }
     print(&a);
 
     free(a.a);
