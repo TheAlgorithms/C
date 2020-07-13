@@ -26,19 +26,23 @@ int get_number(FILE *fp, char *buffer, uint8_t *out_int)
     long L = strlen(buffer);
 
     for (int i = 0; i < L; i++)
+    {
         if (buffer[i] < 0x30 || buffer[i] > 0x39)
         {
             perror("found inavlid character in the number!");
             return -1;
         }
         else
+        {
             out_int[L - i - 1] = buffer[i] - 0x30;
+        }
+    }
 
     return 0;
 }
 
 /**
- * Function to add arbitraty length decimal integers stored in an array.
+ * Function to add arbitrary length decimal integers stored in an array.
  * a + b = c = new b
  */
 int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)
@@ -49,21 +53,25 @@ int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)
     for (int i = 0; i < N; i++)
     {
         // printf("\t%d + %d + %d ", a[i], b[i], carry);
-        c[i] = carry + a[i] + b[i];
-        if (c[i] > 9) /* check for carry */
+        c[i] = carry + a[i] + b[i];  // NOLINT // This is a known false-positive
+        if (c[i] > 9)                /* check for carry */
         {
             carry = 1;
             c[i] -= 10;
         }
         else
+        {
             carry = 0;
+        }
         // printf("= %d, %d\n", carry, c[i]);
     }
 
     for (int i = N; i < N + 10; i++)
     {
         if (carry == 0)
+        {
             break;
+        }
         // printf("\t0 + %d + %d ", b[i], carry);
         c[i] = carry + c[i];
         if (c[i] > 9)
@@ -72,7 +80,9 @@ int add_numbers(uint8_t *a, uint8_t *b, uint8_t N)
             c[i] -= 10;
         }
         else
+        {
             carry = 0;
+        }
         // printf("= %d, %d\n", carry, c[i]);
     }
     return 0;
@@ -89,9 +99,13 @@ int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
 
     /* if end_pos < 0, print all digits */
     if (num_digits_to_print < 0)
+    {
         end_pos = 0;
+    }
     else if (num_digits_to_print <= start_pos)
+    {
         end_pos = start_pos - num_digits_to_print + 1;
+    }
     else
     {
         fprintf(stderr, "invalid number of digits argumet!\n");
@@ -105,14 +119,14 @@ int print_number(uint8_t *number, uint8_t N, int8_t num_digits_to_print)
     return 0;
 }
 
-/** number of digits of the large number */
-#define N 10
-/** number of digits in output number */
-#define N2 (N + 10)
-
 /** Main function */
 int main(void)
 {
+    /* number of digits of the large number */
+    const int N = 10;
+    /* number of digits in output number */
+    const int N2 = N + 10;
+
     // const char N = 50, N2 = N+10;          /* length of numbers */
     char txt_buffer[N + 5]; /* temporary buffer */
     uint8_t number[N];      /* array to store digits of a large number */
@@ -134,7 +148,9 @@ int main(void)
     {
         count++;
         if (get_number(fp, txt_buffer, number) != 0)
+        {
             break;
+        }
         add_numbers(number, sum, N);
     } while (!feof(fp));
 

@@ -14,8 +14,6 @@
 #include <omp.h>
 #endif
 
-long MAX_N = 28123; /**< Limit of numbers to check */
-
 /**
  * This is the global array to be used to store a flag to identify
  * if a particular number is abundant (1) or not (0).
@@ -42,7 +40,9 @@ char get_perfect_number(unsigned long N)
             sum += i;
             unsigned long tmp = N / i;
             if (tmp != i)
+            {
                 sum += tmp;
+            }
         }
     }
 
@@ -72,7 +72,9 @@ unsigned long get_next_abundant(unsigned long N)
     unsigned long i;
     /* keep checking successive numbers till an abundant number is found */
     for (i = N + 1; !is_abundant(i); ++i)
+    {
         ;
+    }
     return i;
 }
 
@@ -90,6 +92,7 @@ char is_sum_of_abundant(unsigned long N)
      */
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
          i = get_next_abundant(i))
+    {
         if (is_abundant(N - i))
         {
 #ifdef DEBUG
@@ -97,15 +100,20 @@ char is_sum_of_abundant(unsigned long N)
 #endif
             return 1;
         }
+    }
     return 0;
 }
 
 /** Main function */
 int main(int argc, char **argv)
 {
+    long MAX_N = 28123; /* Limit of numbers to check */
+
     unsigned long sum = 0;
     if (argc == 2)
+    {
         MAX_N = strtoul(argv[1], NULL, 10);
+    }
 
     /* byte array to store flags to identify abundant numbers
      * the flags are identified by bits
@@ -160,10 +168,12 @@ int main(int argc, char **argv)
     {
         clock_t start_time1 = clock();
         if (!is_sum_of_abundant(i))
+        {
             // #ifdef _OPENMP
             // #pragma omp critical
             // #endif
             sum += i;
+        }
         clock_t end_time1 = clock();
 #ifdef _OPENMP
 #pragma omp critical
@@ -172,7 +182,9 @@ int main(int argc, char **argv)
 
         printf("... %5lu: %8lu\r", i, sum);
         if (i % 100 == 0)
+        {
             fflush(stdout);
+        }
     }
 
 #ifdef DEBUG

@@ -32,7 +32,9 @@ unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
             c[i] -= 10;
         }
         else
+        {
             carry = 0;
+        }
         // printf("= %d, %d\n", carry, c[i]);
     }
 
@@ -47,7 +49,9 @@ unsigned int add_numbers(unsigned char *a, unsigned char *b, unsigned char *c,
             c[i] -= 10;
         }
         else
+        {
             carry = 0;
+        }
         // printf("= %d, %d\n", carry, c[i]);
         i++;
     }
@@ -103,7 +107,9 @@ int main(int argc, char *argv[])
         // putchar('\n');
 
         if (digit_count == MAX_DIGITS)
+        {
             break;
+        }
         memcpy(fn, fn1, MAX_DIGITS);
         memcpy(fn1, sum, MAX_DIGITS);
         index++;
