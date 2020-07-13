@@ -140,6 +140,9 @@ numbers. For safety, we make it twice the length of a number. */
     if (!fp)
     {
         perror("Unable to open file 'num.txt'.");
+        free(txt_buffer);
+        free(sum);
+        free(number);
         return -1;
     }
 
