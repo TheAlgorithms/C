@@ -128,12 +128,13 @@ int main(void)
     const int N2 = N + 10;
 
     // const char N = 50, N2 = N+10;          /* length of numbers */
-    char txt_buffer[N + 5]; /* temporary buffer */
-    uint8_t number[N];      /* array to store digits of a large number */
-    uint8_t sum[N2];        /* array to store the sum of the large numbers. For
-                                safety, we make it twice the length of a number. */
-
-    memset(sum, 0, sizeof(sum)); /* initialize sum array with 0 */
+    char *txt_buffer =
+        (char *)calloc(N + 5, sizeof(char)); /* temporary buffer */
+    uint8_t *number = (uint8_t *)calloc(
+        N, sizeof(uint8_t)); /* array to store digits of a large number */
+    uint8_t *sum = (uint8_t *)calloc(
+        N2, sizeof(uint8_t)); /* array to store the sum of the large
+numbers. For safety, we make it twice the length of a number. */
 
     FILE *fp = fopen("num.txt", "rt"); /* open text file to read */
     if (!fp)
@@ -161,5 +162,8 @@ int main(void)
     print_number(sum, N2, 10);
 
     fclose(fp); /* close file */
+    free(txt_buffer);
+    free(sum);
+    free(number);
     return 0;
 }
