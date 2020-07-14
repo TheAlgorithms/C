@@ -21,7 +21,9 @@ bool isValidSudoku(char** board, int boardSize, int* boardColSize)
 
                 if (used_col[cur][j] || used_row[i][cur] ||
                     used_subbox[sub_idx][cur])
+                {
                     return false;
+                }
 
                 used_col[cur][j] = 1, used_row[i][cur] = 1;
                 used_subbox[sub_idx][cur] = 1;

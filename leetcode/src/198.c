@@ -5,11 +5,17 @@
 int rob(int* nums, int numsSize)
 {
     if (!numsSize)
+    {
         return 0;
+    }
     if (numsSize == 1)
+    {
         return nums[0];
+    }
     if (numsSize == 2)
+    {
         return max(nums[0], nums[1]);
+    }
 
     int day1 = max(nums[0], nums[1]);
     int day2 = nums[0];
