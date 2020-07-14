@@ -24,7 +24,9 @@ LeetCode
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [C](./src/28.c)|Easy|
 |29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [C](./src/29.c)|Medium|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
+|36|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [C](./src/36.c)|Medium|
 |38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [C](./src/38.c)|Easy|
+|48|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C](./src/48.c)|Medium|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [C](./src/66.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
@@ -48,6 +50,7 @@ LeetCode
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array) | [C](./src/189.c)|Easy|
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C](./src/190.c)|Easy|
 |191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C](./src/191.c)|Easy|
+|198|[House Robber](https://leetcode.com/problems/house-robber/) | [C](./src/198.c)|Easy|
 |201|[Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | [C](./src/201.c)|Medium|
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [C](./src/203.c)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C](./src/206.c)|Easy|
