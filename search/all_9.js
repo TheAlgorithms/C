@@ -8,5 +8,6 @@ var searchData=
   ['is_5fpalindromic_94',['is_palindromic',['../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4',1,'sol.c']]],
   ['is_5fprime_95',['is_prime',['../d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f',1,'sol1.c']]],
   ['is_5fsum_5fof_5fabundant_96',['is_sum_of_abundant',['../d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478',1,'is_sum_of_abundant(unsigned long N):&#160;sol1.c'],['../d4/dbd/problem__23_2sol2_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478',1,'is_sum_of_abundant(unsigned long N):&#160;sol2.c']]],
-  ['isprime_97',['isprime',['../d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305',1,'sol1.c']]]
+  ['ispalindrome_97',['isPalindrome',['../df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba',1,'palindrome.c']]],
+  ['isprime_98',['isprime',['../d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305',1,'sol1.c']]]
 ];
