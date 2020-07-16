@@ -10,8 +10,6 @@
 #include <omp.h>
 #endif
 
-unsigned long MAX_N = 28123; /**< upper limit of numbers to check */
-
 /**
  * Returns:
  * -1 if N is deficient
@@ -30,7 +28,9 @@ char get_perfect_number(unsigned long N)
             sum += i;
             unsigned long tmp = N / i;
             if (tmp != i)
+            {
                 sum += tmp;
+            }
         }
     }
 
@@ -56,7 +56,9 @@ unsigned long get_next_abundant(unsigned long N)
 {
     unsigned long i;
     for (i = N + 1; !is_abundant(i); i++)
+    {
         ;
+    }
     return i;
 }
 
@@ -74,6 +76,7 @@ char is_sum_of_abundant(unsigned long N)
      */
     for (unsigned long i = get_next_abundant(1); i <= (N >> 1);
          i = get_next_abundant(i))
+    {
         if (is_abundant(N - i))
         {
 #ifdef DEBUG
@@ -81,15 +84,20 @@ char is_sum_of_abundant(unsigned long N)
 #endif
             return 1;
         }
+    }
     return 0;
 }
 
 /** Main function */
 int main(int argc, char **argv)
 {
+    unsigned long MAX_N = 28123; /* upper limit of numbers to check */
+
     unsigned long sum = 0;
     if (argc == 2)
+    {
         MAX_N = strtoul(argv[1], NULL, 10);
+    }
 
 #ifdef _OPENMP
     printf("Using OpenMP parallleization with %d threads\n",
@@ -107,13 +115,17 @@ int main(int argc, char **argv)
     {
         clock_t start_time = clock();
         if (!is_sum_of_abundant(i))
+        {
             sum += i;
+        }
         clock_t end_time = clock();
         total_duration += (double)(end_time - start_time) / CLOCKS_PER_SEC;
 
         printf("... %5lu: %8lu\r", i, sum);
         if (i % 100 == 0)
+        {
             fflush(stdout);
+        }
     }
 
     printf("Time taken: %.4g s\n", total_duration);

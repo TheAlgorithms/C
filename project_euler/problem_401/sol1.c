@@ -14,8 +14,8 @@
 #include <omp.h>
 #endif
 
-#define MOD (uint64_t)1e9 /**< modulo limit */
-#define MAX_L 5000        /**< chunk size of array allocation */
+#define MOD_LIMIT (uint64_t)1e9 /**< modulo limit */
+#define MAX_LENGTH 5000         /**< chunk size of array allocation */
 
 /**
  * Check if a number is present in given array
@@ -29,8 +29,12 @@ char is_in(uint64_t N, uint64_t *D, uint64_t L)
 {
     uint64_t i;
     for (i = 0; i < L; i++)
+    {
         if (D[i] == N)
+        {
             return 1;
+        }
+    }
     return 0;
 }
 
@@ -73,8 +77,10 @@ uint64_t get_divisors(uint64_t N, uint64_t *D)
             }
         }
 
-        if (num == MAX_L)  // limit of array reached, allocate more space
-            D = (uint64_t *)realloc(D, MAX_L * sizeof(uint64_t) << 1);
+        if (num == MAX_LENGTH)
+        {  // limit of array reached, allocate more space
+            D = (uint64_t *)realloc(D, MAX_LENGTH * sizeof(uint64_t) << 1);
+        }
     }
     return num;
 }
@@ -88,17 +94,17 @@ uint64_t sigma2(uint64_t N)
 {
     uint64_t sum = 0, L;
     int64_t i;
-    uint64_t *D = (uint64_t *)malloc(MAX_L * sizeof(uint64_t));
+    uint64_t *D = (uint64_t *)malloc(MAX_LENGTH * sizeof(uint64_t));
 
     L = get_divisors(N, D);
     for (i = 1; i < L; i++)
     {
-        uint64_t DD = (D[i] * D[i]) % MOD;
+        uint64_t DD = (D[i] * D[i]) % MOD_LIMIT;
         sum += DD;
     }
 
     free(D);
-    return sum % MOD;
+    return sum % MOD_LIMIT;
 }
 
 /**
@@ -119,7 +125,7 @@ uint64_t sigma(uint64_t N)
         s = sigma2(i);
         sum += s;
     }
-    return sum % MOD;
+    return sum % MOD_LIMIT;
 }
 
 /** Main function */
@@ -128,7 +134,9 @@ int main(int argc, char **argv)
     uint64_t N = 1000;
 
     if (argc == 2)
+    {
         N = strtoll(argv[1], NULL, 10);
+    }
     else if (argc > 2)
     {
         fprintf(stderr, "Wrong number of input arguments!\n");
