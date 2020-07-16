@@ -121,7 +121,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0daa148091ec953809fc172289f773d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3">spirograph</a> (double *x, double *y, double l, double k, size_t <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, double rot)</td></tr>
+<tr class="memitem:a0daa148091ec953809fc172289f773d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3">spirograph</a> (double *x, double *y, double l, double k, size_t N, double rot)</td></tr>
 <tr class="memdesc:a0daa148091ec953809fc172289f773d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate spirograph curve into arrays <code>x</code> and <code>y</code> such that the i^th point in 2D is represented by <code>(x[i],y[i])</code>.  <a href="../../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3">More...</a><br /></td></tr>
 <tr class="separator:a0daa148091ec953809fc172289f773d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a708a4c1a4d0c4acc4c447310dd4db27f"><td class="memItemLeft" align="right" valign="top"><a id="a708a4c1a4d0c4acc4c447310dd4db27f"></a>
@@ -215,11 +215,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">double</span> dt = rot * 2.f * M_PI / <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">double</span> dt = rot * 2.f * M_PI / N;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">double</span> t = 0.f, R = 1.f;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> k1 = 1.f - k;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> dk = 0; dk &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; dk++, t += dt)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> dk = 0; dk &lt; N; dk++, t += dt)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        x[dk] = R * (k1 * cos(t) + l * k * cos(k1 * t / k));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        y[dk] = R * (k1 * sin(t) - l * k * sin(k1 * t / k));</div>
@@ -230,7 +230,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">number of digits of the large number</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

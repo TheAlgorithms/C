@@ -126,7 +126,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0">create_matrix</a> (double **A, int <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
+<tr class="memitem:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0">create_matrix</a> (double **A, int N)</td></tr>
 <tr class="memdesc:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a square matrix of given size with random elements  <a href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0">More...</a><br /></td></tr>
 <tr class="separator:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741477692f001a805b0fea942c9dc2b9"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a741477692f001a805b0fea942c9dc2b9">mat_mul</a> (double **A, double **B, double **OUT, int R1, int C1, int R2, int C2)</td></tr>
@@ -190,10 +190,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; N; i++)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        A[i][i] = (rand() % <a class="code" href="../../d7/d50/qr__eigen__values_8c.html#aee57a411f07599034f5ceb8cc7d65b40">LIMS</a>) - lim2;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span> (j = i + 1; j &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; j++)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span> (j = i + 1; j &lt; N; j++)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            tmp = (rand() % <a class="code" href="../../d7/d50/qr__eigen__values_8c.html#aee57a411f07599034f5ceb8cc7d65b40">LIMS</a>) - lim2;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            A[i][j] = tmp;</div>
@@ -620,7 +620,6 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aqr__eigen__values_8c_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="../../d7/d50/qr__eigen__values_8c.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdoc">accuracy tolerance limit</div><div class="ttdef"><b>Definition:</b> qr_eigen_values.c:20</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">number of digits of the large number</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <div class="ttc" id="aqr__decompose_8h_html_a45c7640d9d22c89c11beb1f567843c56"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56">qr_decompose</a></div><div class="ttdeci">void qr_decompose(double **A, double **Q, double **R, int M, int N)</div><div class="ttdoc">Decompose matrix  using Gram-Schmidt process.</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:142</div></div>
 <div class="ttc" id="aqr__decompose_8h_html_a90562ce8c3707401e9c5809dece68d6a"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html#a90562ce8c3707401e9c5809dece68d6a">print_matrix</a></div><div class="ttdeci">void print_matrix(double **A, int M, int N)</div><div class="ttdoc">function to display matrix on stdout</div><div class="ttdef"><b>Definition:</b> qr_decompose.h:22</div></div>
 <div class="ttc" id="aqr__eigen__values_8c_html_a741477692f001a805b0fea942c9dc2b9"><div class="ttname"><a href="../../d7/d50/qr__eigen__values_8c.html#a741477692f001a805b0fea942c9dc2b9">mat_mul</a></div><div class="ttdeci">double ** mat_mul(double **A, double **B, double **OUT, int R1, int C1, int R2, int C2)</div><div class="ttdoc">Perform multiplication of two matrices.</div><div class="ttdef"><b>Definition:</b> qr_eigen_values.c:59</div></div>

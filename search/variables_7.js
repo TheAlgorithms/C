@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rlink_454',['rlink',['../db/d8b/struct_node.html#a0ed3c7305b43527f0f237bbfd438b8f7',1,'Node']]]
+  ['start_453',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
 ];

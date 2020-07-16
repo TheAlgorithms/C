@@ -111,7 +111,7 @@ Include dependency graph for sol1.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4650d1d3897633d84253f93433f601d6"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6">number_of_paths</a> (int <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
+<tr class="memitem:a4650d1d3897633d84253f93433f601d6"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6">number_of_paths</a> (int N)</td></tr>
 <tr class="memdesc:a4650d1d3897633d84253f93433f601d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">At every node, there are 2 possible ways to move -&gt; down or right.  <a href="../../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6">More...</a><br /></td></tr>
 <tr class="separator:a4650d1d3897633d84253f93433f601d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
@@ -143,9 +143,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <p>Since it is a square grid, there are in all, 2N steps with N down and N right options, without preference for order. Hence, the path can be be traced in N out of 2N number of ways. This is the same as binomial coeeficient. </p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> path = 1;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        path *= (<a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> &lt;&lt; 1) - i;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        path *= (N &lt;&lt; 1) - i;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        path /= i + 1;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
@@ -156,7 +156,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">number of digits of the large number</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

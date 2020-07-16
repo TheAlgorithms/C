@@ -86,8 +86,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/da1/structnode.html#a1aa632fdf50713d86192a96f8191851b",
-"de/dac/sudoku__solver_8c.html"
+"d5/da1/structnode.html#a2783f1aec750191646305988f7e28756",
+"de/dce/structmin__heap.html#a456c6372c103c6d1bb430f581f5d3c71"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

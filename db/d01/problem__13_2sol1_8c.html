@@ -91,7 +91,6 @@ $(document).ready(function(){initNavTree('db/d01/problem__13_2sol1_8c.html','../
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sol1.c File Reference</div>  </div>
@@ -111,27 +110,16 @@ Include dependency graph for sol1.c:</div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top"><a id="a0240ac851181b84ac374872dc5434ee4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;10</td></tr>
-<tr class="memdesc:a0240ac851181b84ac374872dc5434ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of digits of the large number <br /></td></tr>
-<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd864640121c7df2c19f61f7baa507e4"><td class="memItemLeft" align="right" valign="top"><a id="acd864640121c7df2c19f61f7baa507e4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#acd864640121c7df2c19f61f7baa507e4">N2</a>&#160;&#160;&#160;(<a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> + 10)</td></tr>
-<tr class="memdesc:acd864640121c7df2c19f61f7baa507e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of digits in output number <br /></td></tr>
-<tr class="separator:acd864640121c7df2c19f61f7baa507e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac260f58785fb20eb09bb35385a7d47f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#ac260f58785fb20eb09bb35385a7d47f8">get_number</a> (FILE *fp, char *buffer, uint8_t *out_int)</td></tr>
 <tr class="memdesc:ac260f58785fb20eb09bb35385a7d47f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to read the number from a file and store it in array.  <a href="../../db/d01/problem__13_2sol1_8c.html#ac260f58785fb20eb09bb35385a7d47f8">More...</a><br /></td></tr>
 <tr class="separator:ac260f58785fb20eb09bb35385a7d47f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad51742ca5a5c99e860bdf30299163bf2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">add_numbers</a> (uint8_t *a, uint8_t *b, uint8_t <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>)</td></tr>
-<tr class="memdesc:ad51742ca5a5c99e860bdf30299163bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add arbitraty length decimal integers stored in an array.  <a href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">More...</a><br /></td></tr>
+<tr class="memitem:ad51742ca5a5c99e860bdf30299163bf2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">add_numbers</a> (uint8_t *a, uint8_t *b, uint8_t N)</td></tr>
+<tr class="memdesc:ad51742ca5a5c99e860bdf30299163bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add arbitrary length decimal integers stored in an array.  <a href="../../db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2">More...</a><br /></td></tr>
 <tr class="separator:ad51742ca5a5c99e860bdf30299163bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248adc917818cc6666d8bc679a660319"><td class="memItemLeft" align="right" valign="top"><a id="a248adc917818cc6666d8bc679a660319"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319">print_number</a> (uint8_t *number, uint8_t <a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, int8_t num_digits_to_print)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319">print_number</a> (uint8_t *number, uint8_t N, int8_t num_digits_to_print)</td></tr>
 <tr class="memdesc:a248adc917818cc6666d8bc679a660319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print a long number. <br /></td></tr>
 <tr class="separator:a248adc917818cc6666d8bc679a660319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top"><a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
@@ -175,43 +163,49 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
       </table>
 </div><div class="memdoc">
 
-<p>Function to add arbitraty length decimal integers stored in an array. </p>
+<p>Function to add arbitrary length decimal integers stored in an array. </p>
 <p>a + b = c = new b </p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> carry = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    uint8_t *c = b; <span class="comment">/* accumulate the result in the array &#39;b&#39; */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// printf(&quot;\t%d + %d + %d &quot;, a[i], b[i], carry);</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        c[i] = carry + a[i] + b[i];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (c[i] &gt; 9) <span class="comment">/* check for carry */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            carry = 1;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            c[i] -= 10;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            carry = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// printf(&quot;= %d, %d\n&quot;, carry, c[i]);</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i &lt; <a class="code" href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> + 10; i++)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> (carry == 0)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// printf(&quot;\t0 + %d + %d &quot;, b[i], carry);</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        c[i] = carry + c[i];</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (c[i] &gt; 9)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            carry = 1;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            c[i] -= 10;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            carry = 0;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// printf(&quot;= %d, %d\n&quot;, carry, c[i]);</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> carry = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    uint8_t *c = b; <span class="comment">/* accumulate the result in the array &#39;b&#39; */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">// printf(&quot;\t%d + %d + %d &quot;, a[i], b[i], carry);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        c[i] = carry + a[i] + b[i];  <span class="comment">// NOLINT // This is a known false-positive</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (c[i] &gt; 9)                <span class="comment">/* check for carry */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            carry = 1;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            c[i] -= 10;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            carry = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// printf(&quot;= %d, %d\n&quot;, carry, c[i]);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = N; i &lt; N + 10; i++)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (carry == 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// printf(&quot;\t0 + %d + %d &quot;, b[i], carry);</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        c[i] = carry + c[i];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span> (c[i] &gt; 9)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            carry = 1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            c[i] -= 10;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            carry = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// printf(&quot;= %d, %d\n&quot;, carry, c[i]);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -263,23 +257,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="../../df/db3/struct_l.html">L</a> = strlen(buffer);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (buffer[i] &lt; 0x30 || buffer[i] &gt; 0x39)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            perror(<span class="stringliteral">&quot;found inavlid character in the number!&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            out_int[<a class="code" href="../../df/db3/struct_l.html">L</a> - i - 1] = buffer[i] - 0x30;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (buffer[i] &lt; 0x30 || buffer[i] &gt; 0x39)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            perror(<span class="stringliteral">&quot;found inavlid character in the number!&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            out_int[<a class="code" href="../../df/db3/struct_l.html">L</a> - i - 1] = buffer[i] - 0x30;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct_l_html"><div class="ttname"><a href="../../df/db3/struct_l.html">L</a></div><div class="ttdef"><b>Definition:</b> list.h:8</div></div>
-<div class="ttc" id="aproblem__13_2sol1_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="../../db/d01/problem__13_2sol1_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">number of digits of the large number</div><div class="ttdef"><b>Definition:</b> sol1.c:109</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
