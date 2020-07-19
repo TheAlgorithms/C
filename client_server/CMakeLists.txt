@@ -21,23 +21,23 @@ foreach( testsourcefile ${APP_SOURCES} )
     add_executable( ${testname} ${testsourcefile} )
     
     if(OpenMP_C_FOUND)
-        target_link_libraries(${testname} OpenMP::OpenMP_C)
+        target_link_libraries(${testname} PRIVATE OpenMP::OpenMP_C)
     endif()
     if(MATH_LIBRARY)
-        target_link_libraries(${testname} ${MATH_LIBRARY})
+        target_link_libraries(${testname} PRIVATE ${MATH_LIBRARY})
     endif()
     
     if(HAS_UNISTD)
-        target_compile_definitions(${testname} HAS_UNISTD)
+        target_compile_definitions(${testname} PRIVATE HAS_UNISTD)
     endif()
     # if(ARPA_HEADERS)
-    #     target_compile_definitions(${testname} ARPA_HEADERS)
+    #     target_compile_definitions(${testname} PRIVATE ARPA_HEADERS)
     # else()
-    #     target_compile_definitions(${testname} WINSOCK_HEADER)
+    #     target_compile_definitions(${testname} PRIVATE WINSOCK_HEADER)
     # endif()
 
     if(WIN32)
-        target_link_libraries(${testname} ws2_32)   # link winsock library on windows
+        target_link_libraries(${testname} PRIVATE ws2_32)   # link winsock library on windows
     endif()
 
     install(TARGETS ${testname} DESTINATION "bin/client_server")
