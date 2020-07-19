@@ -1,0 +1,45 @@
+include(CheckIncludeFile)
+check_include_file(arpa/inet.h ARPA_HEADERS)
+if(NOT ARPA_HEADERS)
+    check_include_file(winsock2.h WINSOCK_HEADER)
+    if(NOT WINSOCK_HEADER)
+        message(FATAL_ERROR "socket headers not found in system.")
+    endif()
+endif()
+
+check_include_file(unistd.h HAS_UNISTD)
+
+# If necessary, use the RELATIVE flag, otherwise each source file may be listed
+# with full pathname. RELATIVE may makes it easier to extract an executable name
+# automatically.
+file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
+# file( GLOB APP_SOURCES ${CMAKE_SOURCE_DIR}/*.c )
+# AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} APP_SOURCES)
+foreach( testsourcefile ${APP_SOURCES} )
+    # I used a simple string replace, to cut off .cpp.
+    string( REPLACE ".c" "" testname ${testsourcefile} )
+    add_executable( ${testname} ${testsourcefile} )
+    
+    if(OpenMP_C_FOUND)
+        target_link_libraries(${testname} OpenMP::OpenMP_C)
+    endif()
+    if(MATH_LIBRARY)
+        target_link_libraries(${testname} ${MATH_LIBRARY})
+    endif()
+    
+    if(HAS_UNISTD)
+        target_compile_definitions(${testname} HAS_UNISTD)
+    endif()
+    # if(ARPA_HEADERS)
+    #     target_compile_definitions(${testname} ARPA_HEADERS)
+    # else()
+    #     target_compile_definitions(${testname} WINSOCK_HEADER)
+    # endif()
+
+    if(WIN32)
+        target_link_libraries(${testname} ws2_32)   # link winsock library on windows
+    endif()
+
+    install(TARGETS ${testname} DESTINATION "bin/client_server")
+
+endforeach( testsourcefile ${APP_SOURCES} )
