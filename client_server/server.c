@@ -1,14 +1,37 @@
-#include <netdb.h>
-#include <netinet/in.h>
+// Write CPP code here
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <sys/types.h>
+
+#ifdef HAS_UNISTD
 #include <unistd.h>
+#endif
+
+#ifdef _WIN32
+#define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
+                                         // MSVC compiler versions
+#include <winsock2.h>
+#define bzero(b, len) \
+    (memset((b), '\0', (len)), (void)0)  // not defined in windows
+
+#define read(a, b, c) recv(a, b, c, 0)
+#define write(a, b, c) send(a, b, c, 0)
+#define close closesocket
+#else
+// if not windows platform
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#endif
+
 #define MAX 80
 #define PORT 8080
 #define SA struct sockaddr
+
+#ifdef _WIN32
+/** Cleanup function will be automatically called on program exit */
+inline void cleanup() { WSACleanup(); }
+#endif
 
 // Function designed for chat between client and server.
 void func(int sockfd)
@@ -45,6 +68,18 @@ void func(int sockfd)
 // Driver function
 int main()
 {
+#ifdef _WIN32
+    // when using winsock2.h, startup required
+    WSADATA wsData;
+    if (WSAStartup(MAKEWORD(2, 2), &wsData) != 0)
+    {
+        perror("WSA Startup error: \n");
+        return 0;
+    }
+
+    atexit(cleanup);  // register at-exit function
+#endif
+
     int sockfd, connfd, len;
     struct sockaddr_in servaddr, cli;
 
