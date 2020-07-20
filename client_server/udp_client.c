@@ -65,7 +65,8 @@ int main()
     servaddr.sin_port = htons(PORT);
     servaddr.sin_addr.s_addr = INADDR_ANY;
 
-    int n, len;
+    int n;
+    unsigned int len;
 
     sendto(sockfd, (const char *)hello, strlen(hello), 0,
            (const struct sockaddr *)&servaddr, sizeof(servaddr));
