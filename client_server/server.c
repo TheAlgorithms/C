@@ -82,7 +82,7 @@ int main()
 #endif
 
     int sockfd, connfd;
-    size_t len;
+    unsigned int len;
     struct sockaddr_in servaddr, cli;
 
     // socket create and verification
