@@ -81,7 +81,8 @@ int main()
     atexit(cleanup);  // register at-exit function
 #endif
 
-    int sockfd, connfd, len;
+    int sockfd, connfd;
+    size_t len;
     struct sockaddr_in servaddr, cli;
 
     // socket create and verification
