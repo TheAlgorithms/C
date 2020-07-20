@@ -1,4 +1,10 @@
-// Write CPP code here
+/**
+ * @file server.c
+ * @author [Nairit11](https://github.com/Nairit11)
+ * @author [Krishna Vedala](https://github.com/kvedala)
+ * @brief Server side implementation of Server-Client system.
+ * @see client.c
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -31,7 +37,7 @@
 
 #ifdef _WIN32
 /** Cleanup function will be automatically called on program exit */
-inline void cleanup() { WSACleanup(); }
+void cleanup() { WSACleanup(); }
 #endif
 
 // Function designed for chat between client and server.
@@ -91,7 +97,7 @@ int main()
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd == -1)
     {
-        printf("socket creation failed...\n");
+        perror("socket creation failed...\n");
         exit(0);
     }
     else
@@ -108,7 +114,7 @@ int main()
     // Binding newly created socket to given IP and verification
     if ((bind(sockfd, (SA *)&servaddr, sizeof(servaddr))) != 0)
     {
-        printf("socket bind failed...\n");
+        perror("socket bind failed...\n");
         exit(0);
     }
     else
@@ -119,7 +125,7 @@ int main()
     // Now server is ready to listen and verification
     if ((listen(sockfd, 5)) != 0)
     {
-        printf("Listen failed...\n");
+        perror("Listen failed...\n");
         exit(0);
     }
     else
@@ -132,7 +138,7 @@ int main()
     connfd = accept(sockfd, (SA *)&cli, &len);
     if (connfd < 0)
     {
-        printf("server acccept failed...\n");
+        perror("server acccept failed...\n");
         exit(0);
     }
     else
@@ -145,4 +151,5 @@ int main()
 
     // After chatting close the socket
     close(sockfd);
+    return 0;
 }

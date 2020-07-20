@@ -1,19 +1,51 @@
-// Client side implementation of UDP client-server model
+/**
+ * @file udp_client.c
+ * @author [TheShubham99](https://github.com/TheShubham99)
+ * @author [Krishna Vedala](https://github.com/kvedala)
+ * @brief Client side implementation of UDP client-server model
+ * @see udp_server.c
+ */
+#ifdef _WIN32                            // if compiling for Windows
+#define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
+                                         // MSVC compiler versions
+#include <winsock2.h>
+#define close closesocket
+#else  // if not windows platform
 #include <arpa/inet.h>
+#include <netdb.h>
 #include <netinet/in.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
+#endif
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define PORT 8080
 #define MAXLINE 1024
 
+#ifdef _WIN32
+/** Cleanup function will be automatically called on program exit */
+void cleanup() { WSACleanup(); }
+#endif
+
 // Driver code
 int main()
 {
+#ifdef _WIN32
+    // when using winsock2.h, startup required
+    WSADATA wsData;
+    if (WSAStartup(MAKEWORD(2, 2), &wsData) != 0)
+    {
+        perror("WSA Startup error: \n");
+        return 0;
+    }
+
+    atexit(cleanup);  // register at-exit function
+#endif
+
     int sockfd;
     char buffer[MAXLINE];
     char *hello = "Hello from client";
@@ -35,7 +67,7 @@ int main()
 
     int n, len;
 
-    sendto(sockfd, (const char *)hello, strlen(hello), MSG_CONFIRM,
+    sendto(sockfd, (const char *)hello, strlen(hello), 0,
            (const struct sockaddr *)&servaddr, sizeof(servaddr));
     printf("Hello message sent.\n");
 

@@ -1,4 +1,10 @@
-// Write CPP code here
+/**
+ * @file client.c
+ * @author [Nairit11](https://github.com/Nairit11)
+ * @author [Krishna Vedala](https://github.com/kvedala)
+ * @brief Client side implementation of Server-Client system.
+ * @see server.c
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -50,7 +56,7 @@ void func(int sockfd)
 
 #ifdef _WIN32
 /** Cleanup function will be automatically called on program exit */
-inline void cleanup() { WSACleanup(); }
+void cleanup() { WSACleanup(); }
 #endif
 
 int main()
@@ -104,4 +110,5 @@ int main()
 
     // close the socket
     close(sockfd);
+    return 0;
 }
