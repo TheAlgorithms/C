@@ -1,11 +1,11 @@
 include(CheckIncludeFile)
-check_include_file(arpa/inet.h ARPA_HEADERS)
-if(NOT ARPA_HEADERS)
-    check_include_file(winsock2.h WINSOCK_HEADER)
-    if(NOT WINSOCK_HEADER)
-        message(FATAL_ERROR "socket headers not found in system.")
-    endif()
-endif()
+# check_include_file(arpa/inet.h ARPA_HEADERS)
+# if(NOT ARPA_HEADERS)
+#     check_include_file(winsock2.h WINSOCK_HEADER)
+#     if(NOT WINSOCK_HEADER)
+#         message(FATAL_ERROR "socket headers not found in system.")
+#     endif()
+# endif()
 
 check_include_file(unistd.h HAS_UNISTD)
 

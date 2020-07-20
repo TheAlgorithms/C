@@ -3,25 +3,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifdef HAS_UNISTD
-#include <unistd.h>
-#endif
-
-#ifdef _WIN32
+#ifdef _WIN32                            // if compiling for Windows
 #define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
                                          // MSVC compiler versions
 #include <winsock2.h>
 #define bzero(b, len) \
     (memset((b), '\0', (len)), (void)0)  // not defined in windows
-
 #define read(a, b, c) recv(a, b, c, 0)
 #define write(a, b, c) send(a, b, c, 0)
 #define close closesocket
-#else
-// if not windows platform
+#else  // if not windows platform
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <sys/socket.h>
+#include <unistd.h>
 #endif
 
 #define MAX 80

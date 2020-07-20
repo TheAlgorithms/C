@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifdef HAS_UNISTD
-#include <unistd.h>
-#endif
+// #ifdef HAS_UNISTD
+// #include <unistd.h>
+// #endif
 
 #ifdef _WIN32
 #define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
@@ -22,6 +22,7 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <sys/socket.h>
+#include <unistd.h>
 #endif
 
 #define MAX 80
