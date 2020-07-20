@@ -33,7 +33,9 @@ void func(int sockfd)
         printf("Enter the string : ");
         n = 0;
         while ((buff[n++] = getchar()) != '\n')
+        {
             ;
+        }
         write(sockfd, buff, sizeof(buff));
         bzero(buff, sizeof(buff));
         read(sockfd, buff, sizeof(buff));
@@ -76,7 +78,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("Socket successfully created..\n");
+    }
     bzero(&servaddr, sizeof(servaddr));
 
     // assign IP, PORT
@@ -91,7 +95,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("connected to the server..\n");
+    }
 
     // function for chat
     func(sockfd);

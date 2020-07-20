@@ -52,7 +52,9 @@ void func(int sockfd)
         n = 0;
         // copy server message in the buffer
         while ((buff[n++] = getchar()) != '\n')
+        {
             ;
+        }
 
         // and send that buffer to client
         write(sockfd, buff, sizeof(buff));
@@ -93,7 +95,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("Socket successfully created..\n");
+    }
     bzero(&servaddr, sizeof(servaddr));
 
     // assign IP, PORT
@@ -108,7 +112,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("Socket successfully binded..\n");
+    }
 
     // Now server is ready to listen and verification
     if ((listen(sockfd, 5)) != 0)
@@ -117,7 +123,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("Server listening..\n");
+    }
     len = sizeof(cli);
 
     // Accept the data packet from client and verification
@@ -128,7 +136,9 @@ int main()
         exit(0);
     }
     else
+    {
         printf("server acccept the client...\n");
+    }
 
     // Function for chatting between client and server
     func(connfd);
