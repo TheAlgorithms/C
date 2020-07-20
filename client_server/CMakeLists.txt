@@ -1,4 +1,4 @@
-include(CheckIncludeFile)
+# include(CheckIncludeFile)
 # check_include_file(arpa/inet.h ARPA_HEADERS)
 # if(NOT ARPA_HEADERS)
 #     check_include_file(winsock2.h WINSOCK_HEADER)
@@ -7,7 +7,7 @@ include(CheckIncludeFile)
 #     endif()
 # endif()
 
-check_include_file(unistd.h HAS_UNISTD)
+# check_include_file(unistd.h HAS_UNISTD)
 
 # If necessary, use the RELATIVE flag, otherwise each source file may be listed
 # with full pathname. RELATIVE may makes it easier to extract an executable name

@@ -1,9 +1,9 @@
 /**
- * @file client.c
+ * @file
  * @author [Nairit11](https://github.com/Nairit11)
  * @author [Krishna Vedala](https://github.com/kvedala)
  * @brief Client side implementation of Server-Client system.
- * @see server.c
+ * @see client_server/server.c
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,21 +14,26 @@
                                          // MSVC compiler versions
 #include <winsock2.h>
 #define bzero(b, len) \
-    (memset((b), '\0', (len)), (void)0)  // not defined in windows
-#define read(a, b, c) recv(a, b, c, 0)
-#define write(a, b, c) send(a, b, c, 0)
-#define close closesocket
-#else  // if not windows platform
+    (memset((b), '\0', (len)), (void)0) /**< BSD name not in windows */
+#define read(a, b, c) recv(a, b, c, 0)  /**< map BSD name to Winsock */
+#define write(a, b, c) send(a, b, c, 0) /**< map BSD name to Winsock */
+#define close closesocket               /**< map BSD name to Winsock */
+#else                                   // if not windows platform
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <sys/socket.h>
 #include <unistd.h>
 #endif
 
-#define MAX 80
-#define PORT 8080
-#define SA struct sockaddr
+#define MAX 80             /**< max. characters per message */
+#define PORT 8080          /**< port number to connect to */
+#define SA struct sockaddr /**< shortname for sockaddr */
 
+/**
+ * Continuous loop to send and receive over the socket.
+ * Exits when "exit" is sent from commandline.
+ * @param sockfd socket handle number
+ */
 void func(int sockfd)
 {
     char buff[MAX];
@@ -59,6 +64,9 @@ void func(int sockfd)
 void cleanup() { WSACleanup(); }
 #endif
 
+/**
+ * Driver code
+ */
 int main()
 {
 #ifdef _WIN32

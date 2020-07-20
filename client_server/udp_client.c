@@ -1,16 +1,16 @@
 /**
- * @file udp_client.c
+ * @file
  * @author [TheShubham99](https://github.com/TheShubham99)
  * @author [Krishna Vedala](https://github.com/kvedala)
  * @brief Client side implementation of UDP client-server model
- * @see udp_server.c
+ * @see client_server/udp_server.c
  */
 #ifdef _WIN32                            // if compiling for Windows
 #define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
                                          // MSVC compiler versions
 #include <winsock2.h>
-#define close closesocket
-#else  // if not windows platform
+#define close closesocket /**< map BSD name to Winsock */
+#else                     // if not windows platform
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <netinet/in.h>
@@ -23,15 +23,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define PORT 8080
-#define MAXLINE 1024
+#define PORT 8080    /**< port number to connect to */
+#define MAXLINE 1024 /**< maximum characters per line */
 
 #ifdef _WIN32
 /** Cleanup function will be automatically called on program exit */
 void cleanup() { WSACleanup(); }
 #endif
 
-// Driver code
+/** Driver code */
 int main()
 {
 #ifdef _WIN32
