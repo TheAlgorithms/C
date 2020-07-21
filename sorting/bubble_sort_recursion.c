@@ -53,7 +53,7 @@ void bubbleSort(int *arr, int size)
 void test()
 {
     const int size = 10;
-    int arr[size];
+    int *arr = (int *)calloc(size, sizeof(int));
 
     /* generate size random numbers from 0 to 100 */
     for (int i = 0; i < size; i++)
@@ -65,6 +65,7 @@ void test()
     {
         assert(arr[i] <= arr[i + 1]);
     }
+    free(arr);
 }
 
 /** Driver Code */
