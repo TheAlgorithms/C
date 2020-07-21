@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"dd/de4/bubble__sort_8c.html#ae1a3968e7947464bee7714f6d43b7002":[12,0,10,1,4],
+"dd/df0/problem__19_2sol1_8c.html":[12,0,8,7,0],
+"dd/df0/problem__19_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[12,0,8,7,0,2],
+"dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e":[12,0,8,7,0,1],
+"dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75":[12,0,8,7,0,0],
+"de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html":[3],
 "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md9":[0],
 "de/dac/sudoku__solver_8c.html":[12,0,6,6],
 "de/dac/sudoku__solver_8c.html#ae1a3968e7947464bee7714f6d43b7002":[12,0,6,6,8],
@@ -150,8 +156,8 @@ var NAVTREEINDEX2 =
 "globals_type.html":[12,1,3],
 "globals_v.html":[12,1,0,20],
 "globals_vars.html":[12,1,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#autotoc_md33":[0,0],
 "index.html#autotoc_md34":[0,1],
 "index.html#autotoc_md35":[0,2],

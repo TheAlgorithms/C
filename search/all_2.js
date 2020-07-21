@@ -9,6 +9,7 @@ var searchData=
   ['binarysearch1_26',['binarysearch1',['../df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582',1,'binary_search.c']]],
   ['binarysearch2_27',['binarysearch2',['../df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032',1,'binary_search.c']]],
   ['bstiterator_28',['BSTIterator',['../d4/d02/struct_b_s_t_iterator.html',1,'']]],
-  ['bubble_5fsort_5frecursion_2ec_29',['bubble_sort_recursion.c',['../d5/d38/bubble__sort__recursion_8c.html',1,'']]],
-  ['bubblesort_30',['bubbleSort',['../d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubble_sort_recursion.c']]]
+  ['bubble_5fsort_2ec_29',['bubble_sort.c',['../dd/de4/bubble__sort_8c.html',1,'']]],
+  ['bubble_5fsort_5frecursion_2ec_30',['bubble_sort_recursion.c',['../d5/d38/bubble__sort__recursion_8c.html',1,'']]],
+  ['bubblesort_31',['bubbleSort',['../dd/de4/bubble__sort_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort_recursion.c']]]
 ];
