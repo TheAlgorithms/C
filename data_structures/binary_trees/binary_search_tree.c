@@ -49,17 +49,16 @@ node *insert(node *root, int data)
     if (root == NULL)
     {
         root = newNode(data);
-        // If it isn't null and the input key is greater than the root key,
-        // insert in the right leaf
     }
     else if (data > root->data)
     {
+        // If it isn't null and the input key is greater than the root key,
+        // insert in the right leaf
         root->right = insert(root->right, data);
-        // If it isn't null and the input key is lower than the root key, insert
-        // in the left leaf
     }
     else if (data < root->data)
-    {
+    {  // If it isn't null and the input key is lower than the root key, insert
+       // in the left leaf
         root->left = insert(root->left, data);
     }
     // Returns the modified tree
@@ -92,32 +91,29 @@ node *delete (node *root, int data)
     if (root == NULL)
     {
         return root;
-        // If the input key is greater than the root's, search in the right
-        // subtree
     }
     else if (data > root->data)
-    {
+    {  // If the input key is greater than the root's, search in the right
+        // subtree
         root->right = delete (root->right, data);
-        // If the input key is lower than the root's, search in the left subtree
     }
     else if (data < root->data)
-    {
+    {  // If the input key is lower than the root's, search in the left subtree
         root->left = delete (root->left, data);
-        // If the input key matches the root's, check the following cases
-        // termination condition
     }
     else if (data == root->data)
     {
-        // Case 1: the root has no leaves, remove the node
+        // If the input key matches the root's, check the following cases
+        // termination condition
         if ((root->left == NULL) && (root->right == NULL))
-        {
+        {  // Case 1: the root has no leaves, remove the node
             free(root);
             return NULL;
         }
-        // Case 2: the root has one leaf, make the leaf the new root and remove
-        // the old root
         else if (root->left == NULL)
-        {
+        {  // Case 2: the root has one leaf, make the leaf the new root and
+            // remove
+            // the old root
             node *tmp = root;
             root = root->right;
             free(tmp);
@@ -130,10 +126,10 @@ node *delete (node *root, int data)
             free(tmp);
             return root;
         }
-        // Case 3: the root has 2 leaves, find the greatest key in the left
-        // subtree and switch with the root's
         else
-        {
+        {  // Case 3: the root has 2 leaves, find the greatest key in the left
+            // subtree and switch with the root's
+
             // finds the biggest node in the left branch.
             node *tmp = getMax(root->left);
 
@@ -159,21 +155,21 @@ int find(node *root, int data)
     if (root == NULL)
     {
         return 0;
-        // If the input key is greater than the root's, search in the right
-        // subtree
     }
     else if (data > root->data)
     {
+        // If the input key is greater than the root's, search in the right
+        // subtree
         return find(root->right, data);
-        // If the input key is lower than the root's, search in the left subtree
     }
     else if (data < root->data)
     {
+        // If the input key is lower than the root's, search in the left subtree
         return find(root->left, data);
-        // If the input and the root key match, return 1
     }
     else if (data == root->data)
     {
+        // If the input and the root key match, return 1
         return 1;
     }
     else
