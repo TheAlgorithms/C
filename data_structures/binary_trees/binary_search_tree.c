@@ -47,15 +47,21 @@ node *insert(node *root, int data)
 {
     // If the root of the subtree is null, insert key here
     if (root == NULL)
+    {
         root = newNode(data);
-    // If it isn't null and the input key is greater than the root key, insert
-    // in the right leaf
+        // If it isn't null and the input key is greater than the root key,
+        // insert in the right leaf
+    }
     else if (data > root->data)
+    {
         root->right = insert(root->right, data);
-    // If it isn't null and the input key is lower than the root key, insert in
-    // the left leaf
+        // If it isn't null and the input key is lower than the root key, insert
+        // in the left leaf
+    }
     else if (data < root->data)
+    {
         root->left = insert(root->left, data);
+    }
     // Returns the modified tree
     return root;
 }
@@ -68,7 +74,9 @@ node *getMax(node *root)
 {
     // If there's no leaf to the right, then this is the maximum key value
     if (root->right != NULL)
+    {
         return getMax(root->right);
+    }
     return root;
 }
 
@@ -82,15 +90,22 @@ node *delete (node *root, int data)
 {
     // If the root is null, nothing to be done
     if (root == NULL)
+    {
         return root;
-    // If the input key is greater than the root's, search in the right subtree
+        // If the input key is greater than the root's, search in the right
+        // subtree
+    }
     else if (data > root->data)
+    {
         root->right = delete (root->right, data);
-    // If the input key is lower than the root's, search in the left subtree
+        // If the input key is lower than the root's, search in the left subtree
+    }
     else if (data < root->data)
+    {
         root->left = delete (root->left, data);
-    // If the input key matches the root's, check the following cases
-    // termination condition
+        // If the input key matches the root's, check the following cases
+        // termination condition
+    }
     else if (data == root->data)
     {
         // Case 1: the root has no leaves, remove the node
@@ -142,16 +157,29 @@ int find(node *root, int data)
 {
     // If the root is null, the key's not present
     if (root == NULL)
+    {
         return 0;
-    // If the input key is greater than the root's, search in the right subtree
+        // If the input key is greater than the root's, search in the right
+        // subtree
+    }
     else if (data > root->data)
+    {
         return find(root->right, data);
-    // If the input key is lower than the root's, search in the left subtree
+        // If the input key is lower than the root's, search in the left subtree
+    }
     else if (data < root->data)
+    {
         return find(root->left, data);
-    // If the input and the root key match, return 1
+        // If the input and the root key match, return 1
+    }
     else if (data == root->data)
+    {
         return 1;
+    }
+    else
+    {  // unknown result!!
+        return 0;
+    }
 }
 
 /** Utilitary procedure to measure the height of the binary tree
@@ -164,7 +192,9 @@ int height(node *root)
 {
     // If the root is null, this is the bottom of the tree (height 0)
     if (root == NULL)
+    {
         return 0;
+    }
     else
     {
         // Get the height from both left and right subtrees to check which is
@@ -175,9 +205,13 @@ int height(node *root)
         // The final height is the height of the greatest subtree(left or right)
         // plus 1(which is the root's level)
         if (right_h > left_h)
+        {
             return (right_h + 1);
+        }
         else
+        {
             return (left_h + 1);
+        }
     }
 }
 
@@ -189,9 +223,13 @@ void purge(node *root)
     if (root != NULL)
     {
         if (root->left != NULL)
+        {
             purge(root->left);
+        }
         if (root->right != NULL)
+        {
             purge(root->right);
+        }
         free(root);
     }
 }
@@ -244,7 +282,9 @@ int main()
                 root = delete (root, data);
             }
             else
+            {
                 printf("Tree is already empty!\n");
+            }
             break;
 
         case 3:
