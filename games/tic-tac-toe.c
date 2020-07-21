@@ -114,9 +114,13 @@ void singlemode()
         if (o == -1 || o == -2)
         {
             if (o == -1)
+            {
                 printf("YOU WIN\n");
+            }
             if (o == -2)
+            {
                 printf("YOU LOSE\n");
+            }
 
             break;
         }
@@ -179,9 +183,13 @@ void doublemode()
         if (o == -1 || o == -2)
         {
             if (o == -1)
+            {
                 printf("Player 1 WIN\n");
+            }
             if (o == -2)
+            {
                 printf("Player 2 WIN\n");
+            }
 
             break;
         }
@@ -204,8 +212,9 @@ void placex(int m)
     if (m >= 1 && m <= 9)
     {
         if (game_table[m - 1] != 'x' && game_table[m - 1] != 'o')
+        {
             game_table[m - 1] = 'x';
-
+        }
         else
         {
             printf("Invalid move\n");
@@ -240,7 +249,9 @@ void place()
             printf("\n Computer placed at %d position\n", e + 1);
         }
         else
+        {
             place();
+        }
     }
 }
 
@@ -250,7 +261,9 @@ void placey(int e1)
     if (e1 >= 1 && e1 <= 9)
     {
         if (game_table[e1 - 1] != 'x' && game_table[e1 - 1] != 'o')
+        {
             game_table[e1 - 1] = 'o';
+        }
         else
         {
             printf("Invalid move \n");
@@ -278,82 +291,113 @@ int checkwin()
     {
         if (game_table[0] == 'x' && game_table[1] == 'x' &&
             game_table[2] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[0] == 'o' && game_table[1] == 'o' &&
             game_table[2] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[0] == game_table[4] && game_table[4] == game_table[8])
     {
         if (game_table[0] == 'x' && game_table[4] == 'x' &&
             game_table[8] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[0] == 'o' && game_table[4] == 'o' &&
             game_table[8] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[0] == game_table[3] && game_table[3] == game_table[6])
     {
         if (game_table[0] == 'x' && game_table[3] == 'x' &&
             game_table[6] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[0] == 'o' && game_table[3] == 'o' &&
             game_table[6] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[3] == game_table[4] && game_table[4] == game_table[5])
     {
         if (game_table[3] == 'x' && game_table[4] == 'x' &&
             game_table[5] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[3] == 'o' && game_table[4] == 'o' &&
             game_table[5] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[6] == game_table[7] && game_table[7] == game_table[8])
     {
         if (game_table[6] == 'x' && game_table[7] == 'x' &&
             game_table[8] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[6] == 'o' && game_table[7] == 'o' &&
             game_table[8] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[1] == game_table[4] && game_table[4] == game_table[7])
     {
         if (game_table[1] == 'x' && game_table[4] == 'x' &&
             game_table[7] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[1] == 'o' && game_table[4] == 'o' &&
             game_table[7] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[2] == game_table[5] && game_table[5] == game_table[8])
     {
         if (game_table[2] == 'x' && game_table[5] == 'x' &&
             game_table[8] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[2] == 'o' && game_table[5] == 'o' &&
             game_table[8] == 'o')
+        {
             return -2;
+        }
     }
     else if (game_table[2] == game_table[4] && game_table[4] == game_table[6])
     {
         if (game_table[2] == 'x' && game_table[4] == 'x' &&
             game_table[6] == 'x')
+        {
             return -1;
+        }
 
         if (game_table[2] == 'o' && game_table[4] == 'o' &&
             game_table[6] == 'o')
+        {
             return -2;
+        }
     }
-    else
-        return 0;
+    return 0;
 }
