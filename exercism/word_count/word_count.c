@@ -2,7 +2,7 @@
 #include <string.h>
 
 /*
-    word_count: returns the full number of words in the input_text, 
+    word_count: returns the full number of words in the input_text,
                 otherwise an error code: (see below)
 
     error codes: EXCESSIVE_LENGTH_WORD     -1
@@ -41,7 +41,6 @@ int word_count(const char *input_text, word_count_word_t *words)
             input[index] = '\0';
             if (strlen(p_str) <= MAX_WORD_LENGTH)
             {
-
                 if (index_list <= MAX_WORDS)
                 {
                     strcpy(word_list[index_list], p_str);
@@ -80,7 +79,7 @@ int word_count(const char *input_text, word_count_word_t *words)
 
         for (i = 0; i <= index_list; i++)
         {
-            if (strcmp(word_list[i],words->text) == 0)
+            if (strcmp(word_list[i], words->text) == 0)
             {
                 words->count++;
             }

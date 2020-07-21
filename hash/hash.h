@@ -46,6 +46,4 @@ int adler_32(char[]);
 */
 int crc32(char[]);
 
-
-
 #endif

@@ -1,19 +1,20 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 #include <string.h>
 #include "list.h"
 
-void print_list(char **array) {
+void print_list(char **array)
+{
     int i;
-    for( i = 0; array[i]; i++)
-        printf("%s", array[i]);
+    for (i = 0; array[i]; i++) printf("%s", array[i]);
     printf("\n");
 }
 
-int main() {
+int main()
+{
     List_T list1, list2, list3;
-    char **str1 = (char **)malloc(100* sizeof(char *));
+    char **str1 = (char **)malloc(100 * sizeof(char *));
 
     list1 = List_init();
     list1 = List_push(list1, "Dang ");

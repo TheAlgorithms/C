@@ -3,17 +3,15 @@
 
 #define NUM_OF_CHARS 256
 
-int max(int a, int b) {return (a>b)? a:b;}
+int max(int a, int b) { return (a > b) ? a : b; }
 
 void computeArray(char *pattern, int size, int arr[NUM_OF_CHARS])
 {
     int i;
 
-    for(i = 0; i < NUM_OF_CHARS; i++)
-        arr[i] = -1;
+    for (i = 0; i < NUM_OF_CHARS; i++) arr[i] = -1;
     /* Fill the actual value of last occurrence of a character */
-    for(i = 0; i < size; i++)
-        arr[(int) pattern[i]] = i;
+    for (i = 0; i < size; i++) arr[(int)pattern[i]] = i;
 }
 /* Boyer Moore Search algorithm  */
 void boyer_moore_search(char *str, char *pattern)
@@ -24,17 +22,18 @@ void boyer_moore_search(char *str, char *pattern)
     int arr[NUM_OF_CHARS];
 
     computeArray(pattern, m, arr);
-    while(shift <= (n - m))
+    while (shift <= (n - m))
     {
         int j = m - 1;
-        while (j >= 0 && pattern[j] == str[shift + j])
-            j--;
+        while (j >= 0 && pattern[j] == str[shift + j]) j--;
         if (j < 0)
         {
             printf("--Pattern is found at: %d\n", shift);
             shift += (shift + m < n) ? m - arr[str[shift + m]] : 1;
-        } else {
-            shift += max(1, j - arr[str[shift +j]]);
+        }
+        else
+        {
+            shift += max(1, j - arr[str[shift + j]]);
         }
     }
 }

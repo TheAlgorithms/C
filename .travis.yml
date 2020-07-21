@@ -1,5 +1,0 @@
-language: c
-compiler:
-- clang
-- gcc
-script: true

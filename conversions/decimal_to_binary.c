@@ -5,7 +5,6 @@
 
 int main()
 {
-
     // input of the user
     int inputNumber;
 
@@ -17,13 +16,13 @@ int main()
 
     // for the loops
     int j;
-    int i=0;
+    int i = 0;
 
     printf("\t\tConverter decimal --> binary\n\n");
 
     // reads a decimal number from the user.
     printf("\nenter a positive integer number: ");
-    scanf("%d",&inputNumber);
+    scanf("%d", &inputNumber);
 
     // make sure the input number is a positive integer.
     if (inputNumber < 0)
@@ -33,9 +32,8 @@ int main()
     }
 
     // actual processing
-    while(inputNumber>0)
+    while (inputNumber > 0)
     {
-
         // computes the remainder by modulo 2
         re = inputNumber % 2;
 
@@ -44,15 +42,14 @@ int main()
 
         bits[i] = re;
         i++;
-
     }
 
     printf("\n the number in binary is: ");
 
     // iterates backwards over all bits
-    for(j=i-1; j>=0; j--)
+    for (j = i - 1; j >= 0; j--)
     {
-        printf("%d",bits[j]);
+        printf("%d", bits[j]);
     }
 
     // for the case the input number is 0
@@ -63,4 +60,3 @@ int main()
 
     return 0;
 }
-

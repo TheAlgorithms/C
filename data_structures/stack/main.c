@@ -1,4 +1,4 @@
-//program for stack using array
+// program for stack using array
 
 #include <stdio.h>
 
@@ -11,7 +11,6 @@ int a[100], top = -1;
 
 int main()
 {
-
     int x;
     while (1)
     {
@@ -45,7 +44,7 @@ int main()
     return (0);
 }
 
-//function for pushing the element
+// function for pushing the element
 void push()
 {
     int n = 0;
@@ -55,7 +54,7 @@ void push()
     a[top] = n;
 }
 
-//function for poping the element out
+// function for poping the element out
 void pop()
 {
     if (top == -1)
@@ -71,7 +70,7 @@ void pop()
     }
 }
 
-//function for peeping the element from top of the stack
+// function for peeping the element from top of the stack
 void peek()
 {
     if (top >= 0)
@@ -80,7 +79,7 @@ void peek()
         printf("\nstack is empty");
 }
 
-//function to update the element of stack
+// function to update the element of stack
 void update()
 {
     int i, n;

@@ -4,27 +4,28 @@
  */
 
 ////////////////////////////////////////////////////////////////////////////////
-//INCLUDES
+// INCLUDES
 #include <stdio.h>
 #include <stdlib.h>
 
 ////////////////////////////////////////////////////////////////////////////////
-//MACROS: CONSTANTS
+// MACROS: CONSTANTS
 
 ////////////////////////////////////////////////////////////////////////////////
-//DATA STRUCTURES
-struct node {
+// DATA STRUCTURES
+struct node
+{
     int data;
-    struct node* next;
-    struct node* pre;
-} *head, *tmp;
+    struct node *next;
+    struct node *pre;
+} * head, *tmp;
 
 ////////////////////////////////////////////////////////////////////////////////
-//GLOBAL VARIABLES
+// GLOBAL VARIABLES
 int count = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
-//FUNCTION PROTOTYPES
+// FUNCTION PROTOTYPES
 void create();
 void push(int x);
 int pop();
@@ -33,10 +34,10 @@ int size();
 int isEmpty();
 
 ////////////////////////////////////////////////////////////////////////////////
-//MAIN ENTRY POINT
+// MAIN ENTRY POINT
 
-int main(int argc, char const *argv[]) {
-
+int main(int argc, char const *argv[])
+{
     int x, y, z;
 
     create();
@@ -64,26 +65,28 @@ int main(int argc, char const *argv[]) {
     // 1, 6, 7, 8. Count: 2. Empty: 0.
     printf("%d, %d, %d.\tCount: %d.\tEmpty: %d.\n", x, y, z, size(), isEmpty());
 
-	return 0;
+    return 0;
 }
 
 /**
  * Initialize the stack to NULL.
  */
-void create() {
-    head = NULL;
-}
+void create() { head = NULL; }
 
 /**
  * Push data onto the stack.
  */
-void push(int x) {
-    if(head == NULL) {
+void push(int x)
+{
+    if (head == NULL)
+    {
         head = (struct node *)malloc(1 * sizeof(struct node));
         head->next = NULL;
         head->pre = NULL;
         head->data = x;
-    } else {
+    }
+    else
+    {
         tmp = (struct node *)malloc(1 * sizeof(struct node));
         tmp->data = x;
         tmp->next = NULL;
@@ -97,19 +100,25 @@ void push(int x) {
 /**
  * Pop data from the stack
  */
-int pop() {
+int pop()
+{
     int returnData;
-    if(head == NULL) {
+    if (head == NULL)
+    {
         printf("ERROR: Pop from empty stack.\n");
         exit(1);
-    } else {
+    }
+    else
+    {
         returnData = head->data;
 
-        if(head->pre == NULL){
+        if (head->pre == NULL)
+        {
             free(head);
             head = NULL;
         }
-        else {
+        else
+        {
             head = head->pre;
             free(head->next);
         }
@@ -121,10 +130,12 @@ int pop() {
 /**
  * Returns the next value to be popped.
  */
-int peek() {
-    if(head != NULL)
+int peek()
+{
+    if (head != NULL)
         return head->data;
-    else {
+    else
+    {
         printf("ERROR: Peeking from empty stack.");
         exit(1);
     }
@@ -133,15 +144,14 @@ int peek() {
 /**
  * Returns the size of the stack.
  */
-int size() {
-    return count;
-}
+int size() { return count; }
 
 /**
  * Returns 1 if stack is empty, returns 0 if not empty.
  */
-int isEmpty() {
-    if(count == 0)
+int isEmpty()
+{
+    if (count == 0)
         return 1;
     return 0;
 }

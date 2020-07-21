@@ -1,7 +1,7 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 #define SIZE 100
 
@@ -11,15 +11,16 @@ struct node
     struct node *link;
 };
 
-int c = 0;         // c used as counter to check if stack is empty or not
-struct node *head; //declaring head pointer globally assigned to NULL
+int c = 0;          // c used as counter to check if stack is empty or not
+struct node *head;  // declaring head pointer globally assigned to NULL
 
-void push(char x) //function for pushing
+void push(char x)  // function for pushing
 {
     struct node *p = head, *temp;
     temp = (struct node *)malloc(sizeof(struct node));
     temp->data = x;
-    if (head == NULL) //will be execute only one time i.e, 1st time push is called
+    if (head ==
+        NULL)  // will be execute only one time i.e, 1st time push is called
     {
         head = temp;
         p = head;
@@ -35,7 +36,7 @@ void push(char x) //function for pushing
     }
 }
 
-char pop(void) //function for pop
+char pop(void)  // function for pop
 {
     char x;
     struct node *p = head;
@@ -50,14 +51,16 @@ int isBalanced(char *s)
 {
     int i = 0;
     char x;
-    while (s[i] != '\0') //loop for covering entire string of brackets
+    while (s[i] != '\0')  // loop for covering entire string of brackets
     {
         // printf("\t s[i]=%c\n", s[i]); //DEBUG
-        if (s[i] == '{' || s[i] == '(' || s[i] == '[') //if opening bracket then push
+        if (s[i] == '{' || s[i] == '(' ||
+            s[i] == '[')  // if opening bracket then push
             push(s[i]);
         else
         {
-            if (c <= 0) //i.e, stack is empty as only opening brackets are added to stack
+            if (c <= 0)  // i.e, stack is empty as only opening brackets are
+                         // added to stack
                 return 0;
 
             x = pop();
@@ -71,7 +74,8 @@ int isBalanced(char *s)
         i++;
     }
 
-    //at end if stack is empy which means whole process has been performed correctly so return 1
+    // at end if stack is empy which means whole process has been performed
+    // correctly so return 1
     return (c == 0) ? 1 : 0;
 }
 

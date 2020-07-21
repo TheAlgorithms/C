@@ -1,12 +1,13 @@
-#include "dynamic_array.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "dynamic_array.h"
 
 int main()
 {
     dynamic_array_t *da = init_dynamic_array();
 
-    for (int i = 1; i <= 50; i++) {
+    for (int i = 1; i <= 50; i++)
+    {
         add(da, &i);
     }
 
@@ -22,7 +23,8 @@ int main()
 
     add(da, &another_value);
 
-    for (int i = 0; i < da->size; i++) {
+    for (int i = 0; i < da->size; i++)
+    {
         printf("value %d\n", *(int *)get(da, i));
     }
 

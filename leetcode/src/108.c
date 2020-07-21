@@ -7,10 +7,12 @@
  * };
  */
 
-struct TreeNode* convertBST(int *nums, int left, int right) {
+struct TreeNode *convertBST(int *nums, int left, int right)
+{
     if (left > right)
         return NULL;
-    else {
+    else
+    {
         int mid = (right + left) / 2;
         struct TreeNode *new_val = malloc(sizeof(struct TreeNode));
         new_val->val = nums[mid];
@@ -20,10 +22,10 @@ struct TreeNode* convertBST(int *nums, int left, int right) {
     }
 }
 
-struct TreeNode* sortedArrayToBST(int* nums, int numsSize){
-    if(numsSize == 0)
+struct TreeNode *sortedArrayToBST(int *nums, int numsSize)
+{
+    if (numsSize == 0)
         return NULL;
     else
-        return convertBST(nums, 0, numsSize -1);
+        return convertBST(nums, 0, numsSize - 1);
 }
-

@@ -1,26 +1,40 @@
+/**
+ * @file
+ * @brief Program to identify if a number is [palindrome
+ * number](https://en.wikipedia.org/wiki/Palindrome) or not.
+ * @see project_euler/problem_4/sol1.c
+ */
+#include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
+
+bool isPalindrome(int number);
+
+/** Driver Code */
 int main()
 {
-    int n, reversedInteger = 0, remainder, originalInteger;
-
-    printf("Enter an integer: ");
-    scanf("%d", &n);
-
-    originalInteger = n;
-
-    // reversed integer is stored in variable 
-    while( n!=0 )
-    {
-        remainder = n%10;
-        reversedInteger = reversedInteger*10 + remainder;
-        n /= 10;
-    }
-
-    // palindrome if orignalInteger and reversedInteger are equal
-    if (originalInteger == reversedInteger)
-        printf("%d is a palindrome.", originalInteger);
-    else
-        printf("%d is not a palindrome.", originalInteger);
-    
+    assert(isPalindrome(0));
+    assert(isPalindrome(1));
+    assert(isPalindrome(12321));
+    assert(!isPalindrome(1234));
     return 0;
+}
+
+/**
+ * Check given number whether is palindrome number or not
+ * @param number number to check
+ * @return `true` if given number is palindrome number
+ * @return `false` if number is not a palindrome number
+ */
+bool isPalindrome(int number)
+{
+    int reversedNumber = 0;
+    int originalNumber = number;
+    while (number != 0)
+    {
+        int remainder = number % 10;
+        reversedNumber = reversedNumber * 10 + remainder;
+        number /= 10;
+    }
+    return originalNumber == reversedNumber;
 }

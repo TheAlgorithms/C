@@ -4,7 +4,6 @@
 
 char *to_rna(const char s[])
 {
-
     /* determines the length of the given string */
     int len = strlen(s);
 

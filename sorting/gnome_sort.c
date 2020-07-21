@@ -6,18 +6,17 @@ void sort(int *numbers, int size)
     int pos = 0;
     while (pos < size)
     {
-       if (pos == 0)
-          pos = 1;
-        if (numbers[pos] >= numbers[pos-1] || pos == 0)
+        if (numbers[pos] >= numbers[pos - 1])
             pos++;
         else
         {
-            int tmp = numbers[pos-1];
-            numbers[pos-1] = numbers[pos];
+            int tmp = numbers[pos - 1];
+            numbers[pos - 1] = numbers[pos];
             numbers[pos] = tmp;
             pos--;
 
-
+            if (pos == 0)
+                pos = 1;
         }
     }
 }
@@ -25,8 +24,7 @@ void sort(int *numbers, int size)
 void display(int *array, int n)
 {
     int i;
-    for (i = 0; i < n; ++i)
-        printf("%d ", array[i]);
+    for (i = 0; i < n; ++i) printf("%d ", array[i]);
     printf("\n");
 }
 
@@ -34,10 +32,9 @@ int main()
 {
     int size = 6;
     int i;
-    int *numbers = malloc(size*sizeof(int));
+    int *numbers = malloc(size * sizeof(int));
     printf("Insert %d unsorted numbers: \n", size);
-    for (i = 0; i < size; ++i)
-        scanf("%d", &numbers[i]);
+    for (i = 0; i < size; ++i) scanf("%d", &numbers[i]);
     printf("Initial array: ");
     display(numbers, size);
     sort(numbers, size);

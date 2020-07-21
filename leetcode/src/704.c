@@ -1,12 +1,19 @@
-int search(int* nums, int numsSize, int target){
+int search(int *nums, int numsSize, int target)
+{
     int low = 0, high = numsSize - 1;
-    while (low <= high) {
+    while (low <= high)
+    {
         int mid = low + (high - low) / 2;
-        if (target > nums[mid]) {
+        if (target > nums[mid])
+        {
             low = mid + 1;
-        } else if (target < nums[mid]) {
+        }
+        else if (target < nums[mid])
+        {
             high = mid - 1;
-        } else {
+        }
+        else
+        {
             return mid;
         }
     }
@@ -14,15 +21,13 @@ int search(int* nums, int numsSize, int target){
 }
 
 /* Another solution: Using bsearch() */
-int cmpint (const void *a, const void *b) {
-    return *(int *) a - *(int *)b;
-}
+int cmpint(const void *a, const void *b) { return *(int *)a - *(int *)b; }
 
-int search(int* nums, int numsSize, int target){
+int search(int *nums, int numsSize, int target)
+{
     int *ret = bsearch(&target, nums, numsSize, sizeof(int), cmpint);
     if (ret)
         return (ret - nums);
     else
         return -1;
 }
-
