@@ -26,6 +26,7 @@ if(USE_OPENMP)
 endif()
 
 add_subdirectory(misc)
+add_subdirectory(games)
 add_subdirectory(sorting)
 add_subdirectory(graphics)
 add_subdirectory(searching)
