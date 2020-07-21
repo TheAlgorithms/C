@@ -65,7 +65,7 @@ void cleanup() { WSACleanup(); }
 #endif
 
 /**
- * Driver code
+ * @brief Driver code
  */
 int main()
 {
@@ -84,7 +84,7 @@ int main()
     int sockfd, connfd;
     struct sockaddr_in servaddr, cli;
 
-    // socket create and varification
+    // socket create and verification
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd == -1)
     {
