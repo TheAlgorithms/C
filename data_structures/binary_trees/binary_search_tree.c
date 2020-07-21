@@ -227,6 +227,7 @@ void purge(node *root)
             purge(root->right);
         }
         free(root);
+        root = NULL;  // reset pointer
     }
 }
 
