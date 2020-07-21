@@ -338,6 +338,7 @@
   * [Bogo Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/bogo_sort.c)
   * [Bubble Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/bubble_sort.c)
   * [Bubble Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/bubble_sort_2.c)
+  * [Bubble Sort Recursion](https://github.com/TheAlgorithms/C/blob/master/sorting/bubble_sort_recursion.c)
   * [Bucket Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/bucket_sort.c)
   * [Cocktail Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/cocktail_sort.c)
   * [Comb Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/comb_sort.c)
