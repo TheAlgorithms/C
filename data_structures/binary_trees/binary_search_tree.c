@@ -1,29 +1,30 @@
+/**
+ * @file
+ * @brief A basic unbalanced binary search tree implementation in C.
+ * @details The implementation has the following functionalities implemented:
+ * - Insertion
+ * - Deletion
+ * - Search by key value
+ * - Listing of node keys in order of value (from left to right)
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
-/* A basic unbalanced binary search tree implementation in C, with the following
- functionalities implemented:
- - Insertion
- - Deletion
- - Search by key value
- - Listing of node keys in order of value (from left to right)
-*/
-
-// Node, the basic data structure in the tree
+/** Node, the basic data structure in the tree */
 typedef struct node
 {
-    // left child
-    struct node *left;
-
-    // right child
-    struct node *right;
-
-    // data of the node
-    int data;
+    struct node *left;  /**< left child */
+    struct node *right; /**< right child */
+    int data;           /**< data of the node */
 } node;
 
-// The node constructor, which receives the key value input and returns a node
-// pointer
+/** The node constructor, which receives the key value input and returns a node
+ * pointer
+ * @param data data to store in a new node
+ * @returns new node with the provided data
+ * @note the node must be deleted before program terminates to avoid memory
+ * leaks
+ */
 node *newNode(int data)
 {
     // creates a slug
@@ -37,7 +38,11 @@ node *newNode(int data)
     return tmp;
 }
 
-// Insertion procedure, which inserts the input key in a new node in the tree
+/** Insertion procedure, which inserts the input key in a new node in the tree
+ * @param root pointer to parent node
+ * @param data value to store int he new node
+ * @returns pointer to parent node
+ */
 node *insert(node *root, int data)
 {
     // If the root of the subtree is null, insert key here
@@ -55,18 +60,24 @@ node *insert(node *root, int data)
     return root;
 }
 
-// Utilitary procedure to find the greatest key in the left subtree
+/** Utilitary procedure to find the greatest key in the left subtree
+ * @param root pointer to parent node
+ * @returns pointer to parent node
+ */
 node *getMax(node *root)
 {
     // If there's no leaf to the right, then this is the maximum key value
-    if (root->right == NULL)
-        return root;
-    else
-        root->right = getMax(root->right);
+    if (root->right != NULL)
+        return getMax(root->right);
+    return root;
 }
 
-// Deletion procedure, which searches for the input key in the tree and removes
-// it if present
+/** Deletion procedure, which searches for the input key in the tree and removes
+ * it if present
+ * @param root pointer to parent node
+ * @param data value to search for int the node
+ * @returns pointer to parent node
+ */
 node *delete (node *root, int data)
 {
     // If the root is null, nothing to be done
@@ -120,8 +131,13 @@ node *delete (node *root, int data)
     return root;
 }
 
-// Search procedure, which looks for the input key in the tree and returns 1 if
-// it's present or 0 if it's not in the tree
+/** Search procedure, which looks for the input key in the tree and returns 1 if
+ * it's present or 0 if it's not in the tree
+ * @param root pointer to parent node
+ * @param data value to store int he new node
+ * @returns 0 if value not found in the nodes
+ * @returns 1 if value was found
+ */
 int find(node *root, int data)
 {
     // If the root is null, the key's not present
@@ -138,7 +154,12 @@ int find(node *root, int data)
         return 1;
 }
 
-// Utilitary procedure to measure the height of the binary tree
+/** Utilitary procedure to measure the height of the binary tree
+ * @param root pointer to parent node
+ * @param data value to store int he new node
+ * @returns 0 if value not found in the nodes
+ * @returns height of nodes to get to data from parent node
+ */
 int height(node *root)
 {
     // If the root is null, this is the bottom of the tree (height 0)
@@ -160,7 +181,9 @@ int height(node *root)
     }
 }
 
-// Utilitary procedure to free all nodes in a tree
+/** Utilitary procedure to free all nodes in a tree
+ * @param root pointer to parent node
+ */
 void purge(node *root)
 {
     if (root != NULL)
@@ -173,8 +196,10 @@ void purge(node *root)
     }
 }
 
-// Traversal procedure to list the current keys in the tree in order of value
-// (from the left to the right)
+/** Traversal procedure to list the current keys in the tree in order of value
+ * (from the left to the right)
+ * @param root pointer to parent node
+ */
 void inOrder(node *root)
 {
     if (root != NULL)
@@ -185,7 +210,8 @@ void inOrder(node *root)
     }
 }
 
-void main()
+/** Main funcion */
+int main()
 {
     // this reference don't change.
     // only the tree changes.
@@ -240,4 +266,6 @@ void main()
 
     // deletes the tree from the heap.
     purge(root);
+
+    return 0;
 }
