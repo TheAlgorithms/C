@@ -30,6 +30,7 @@ uint8_t xor8(const char* s)
 
 /**
  * @brief Test function for ::xor8
+ * \returns None
  */
 void test_xor8()
 {

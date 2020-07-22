@@ -33,17 +33,14 @@ uint32_t adler32(const char* s)
 
 /**
  * @brief Test function for ::adler32
+ * \returns None
  */
 void test_adler32()
 {
-    const uint32_t test1 = 403375133;
-    assert(adler32("Hello World") == test1);
-    const uint32_t test2 = 474547262;
-    assert(adler32("Hello World!") == test2);
-    const uint32_t test3 = 413860925;
-    assert(adler32("Hello world") == test3);
-    const uint32_t test4 = 487130206;
-    assert(adler32("Hello world!") == test4);
+    assert(adler32("Hello World") == 403375133);
+    assert(adler32("Hello World!") == 474547262);
+    assert(adler32("Hello world") == 413860925);
+    assert(adler32("Hello world!") == 487130206);
     printf("Tests passed\n");
 }
 

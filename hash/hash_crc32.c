@@ -37,17 +37,14 @@ uint32_t crc32(const char* s)
 
 /**
  * @brief Test function for ::crc32
+ * \returns None
  */
 void test_crc32()
 {
-    const uint32_t test1 = 1243066710;
-    assert(crc32("Hello World") == test1);
-    const uint32_t test2 = 472456355;
-    assert(crc32("Hello World!") == test2);
-    const uint32_t test3 = 2346098258;
-    assert(crc32("Hello world") == test3);
-    const uint32_t test4 = 461707669;
-    assert(crc32("Hello world!") == test4);
+    assert(crc32("Hello World") == 1243066710);
+    assert(crc32("Hello World!") == 472456355);
+    assert(crc32("Hello world") == 2346098258);
+    assert(crc32("Hello world!") == 461707669);
     // printf("%" PRIu32 "\n", crc32("Hello World"));
     // printf("%" PRIu32 "\n", crc32("Hello World!"));
     // printf("%" PRIu32 "\n", crc32("Hello world"));
