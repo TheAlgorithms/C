@@ -28,7 +28,7 @@ uint64_t djb2(const char* s)
 }
 
 /**
- * @brief Test function for ::sdbm
+ * @brief Test function for ::djb2
  */
 void test_djb2()
 {
