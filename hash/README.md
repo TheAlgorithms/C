@@ -1,6 +1,5 @@
 # Hash algorithms
 
-Overview files **hash.h** and **hash.c**
 * sdbm
 * djb2
 * xor8 (8 bit)
