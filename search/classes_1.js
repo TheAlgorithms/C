@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['adaline_251',['adaline',['../d2/daa/structadaline.html',1,'']]],
-  ['avlnode_252',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
+  ['adaline_258',['adaline',['../d2/daa/structadaline.html',1,'']]],
+  ['avlnode_259',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
 ];
