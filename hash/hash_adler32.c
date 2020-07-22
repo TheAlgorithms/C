@@ -36,10 +36,10 @@ uint32_t adler32(const char* s)
  */
 void test_adler32()
 {
-    assert(adler32("Hello World") == 403375133);
-    assert(adler32("Hello World!") == 474547262);
-    assert(adler32("Hello world") == 413860925);
-    assert(adler32("Hello world!") == 487130206);
+    assert(adler32("Hello World") == (const uint32_t)403375133);
+    assert(adler32("Hello World!") == (const uint32_t)474547262);
+    assert(adler32("Hello world") == (const uint32_t)413860925);
+    assert(adler32("Hello world!") == (const uint32_t)487130206);
     printf("Tests passed\n");
 }
 
