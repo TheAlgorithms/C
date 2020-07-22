@@ -13,12 +13,12 @@
  * @brief SDBM algorithm implementation
  *
  * @param s NULL terminated string to hash
- * @return 64-bit
+ * @return 64-bit hash result
  */
 uint64_t sdbm(const char* s)
 {
     uint64_t hash = 0;
-    int i = 0;
+    size_t i = 0;
     while (s[i] != '\0')
     {
         hash = s[i] + (hash << 6) + (hash << 16) - hash;
