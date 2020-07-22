@@ -26,7 +26,9 @@ uint32_t crc32(const char* s)
         uint8_t byte = s[i];
         crc = crc ^ byte;
         for (uint8_t j = 8; j > 0; --j)
+        {
             crc = (crc >> 1) ^ (0xEDB88320 & (-(crc & 1)));
+        }
 
         i++;
     }
