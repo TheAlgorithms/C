@@ -1,19 +1,51 @@
-// Client side implementation of UDP client-server model
+/**
+ * @file
+ * @author [TheShubham99](https://github.com/TheShubham99)
+ * @author [Krishna Vedala](https://github.com/kvedala)
+ * @brief Client side implementation of UDP client-server model
+ * @see client_server/udp_server.c
+ */
+#ifdef _WIN32                            // if compiling for Windows
+#define _WINSOCK_DEPRECATED_NO_WARNINGS  // will make the code invalid for next
+                                         // MSVC compiler versions
+#include <winsock2.h>
+#define close closesocket /**< map BSD name to Winsock */
+#else                     // if not windows platform
 #include <arpa/inet.h>
+#include <netdb.h>
 #include <netinet/in.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
+#endif
 
-#define PORT 8080
-#define MAXLINE 1024
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Driver code
+#define PORT 8080    /**< port number to connect to */
+#define MAXLINE 1024 /**< maximum characters per line */
+
+#ifdef _WIN32
+/** Cleanup function will be automatically called on program exit */
+void cleanup() { WSACleanup(); }
+#endif
+
+/** Driver code */
 int main()
 {
+#ifdef _WIN32
+    // when using winsock2.h, startup required
+    WSADATA wsData;
+    if (WSAStartup(MAKEWORD(2, 2), &wsData) != 0)
+    {
+        perror("WSA Startup error: \n");
+        return 0;
+    }
+
+    atexit(cleanup);  // register at-exit function
+#endif
+
     int sockfd;
     char buffer[MAXLINE];
     char *hello = "Hello from client";
@@ -33,9 +65,10 @@ int main()
     servaddr.sin_port = htons(PORT);
     servaddr.sin_addr.s_addr = INADDR_ANY;
 
-    int n, len;
+    int n;
+    unsigned int len;
 
-    sendto(sockfd, (const char *)hello, strlen(hello), MSG_CONFIRM,
+    sendto(sockfd, (const char *)hello, strlen(hello), 0,
            (const struct sockaddr *)&servaddr, sizeof(servaddr));
     printf("Hello message sent.\n");
 
