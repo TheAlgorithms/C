@@ -3,7 +3,6 @@
  * @{
  * @file hash_adler32.c
  * @author [Christian Bender](https://github.com/christianbender)
- * @author [Krishna Vedala](https://github.com/kvedala)
  * @brief 32-bit [Adler hash](https://en.wikipedia.org/wiki/Adler-32) algorithm
  */
 #include <assert.h>
