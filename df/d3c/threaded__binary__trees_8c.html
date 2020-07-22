@@ -163,7 +163,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <li>Deletion</li>
 <li>Listing of node keys inorder,preorder,postorder</li>
 </ul>
-<p>-see binary_search_tree.c</p>
+<p>-see <a class="el" href="../../da/d02/binary__search__tree_8c.html" title="A basic unbalanced binary search tree implementation in C.">binary_search_tree.c</a></p>
 <dl class="section author"><dt>Author</dt><dd><a href="https://github.com/amitnayakblr">Amitha Nayak</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab21d1d36d95001defbca2f6abd4d410c"></a>
@@ -187,7 +187,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *ptr = (<a class="code" href="../../d5/da1/structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/da1/structnode.html">node</a>));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ptr-&gt;rlink = ptr-&gt;llink = NULL;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ptr-&gt;data = <a class="code" href="../../df/dea/structdata.html">data</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ptr-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a> = <a class="code" href="../../df/dea/structdata.html">data</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> ptr;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment -->
@@ -233,11 +233,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// search</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">while</span> (temp != NULL)</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (temp-&gt;data == ele)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a> == ele)</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ele &gt; temp-&gt;data)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ele &gt; temp-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a>)</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                prev = temp;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                temp = temp-&gt;rlink;</div>
@@ -339,11 +339,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *temp = root;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">while</span> (temp != NULL)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (temp-&gt;data == ele)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a> == ele)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ele &gt; temp-&gt;data)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ele &gt; temp-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a>)</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            temp = temp-&gt;rlink;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
@@ -366,7 +366,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
-<div class="ttc" id="astructnode_html"><div class="ttname"><a href="../../d5/da1/structnode.html">node</a></div><div class="ttdoc">Kyler Smith, 2017 Stack data structure implementation.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:14</div></div>
+<div class="ttc" id="astructnode_html"><div class="ttname"><a href="../../d5/da1/structnode.html">node</a></div><div class="ttdoc">Node, the basic data structure in the tree.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:15</div></div>
+<div class="ttc" id="astructnode_html_a2d890bb9f6af0ffd73fe79b21124c2a2"><div class="ttname"><a href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">node::data</a></div><div class="ttdeci">int data</div><div class="ttdoc">data of the node</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:18</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
