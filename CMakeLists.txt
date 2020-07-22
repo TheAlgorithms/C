@@ -25,6 +25,7 @@ if(USE_OPENMP)
     endif()
 endif()
 
+add_subdirectory(hash)
 add_subdirectory(misc)
 add_subdirectory(sorting)
 add_subdirectory(graphics)
