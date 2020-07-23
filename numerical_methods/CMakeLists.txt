@@ -5,11 +5,15 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 # file( GLOB APP_SOURCES ${CMAKE_SOURCE_DIR}/*.c )
 # AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} APP_SOURCES)
 
-set (no_msvc "newton_raphson_root.c" "durand_kerner_roots.c")
+# List of files that use complex.h and complex data type
+set (NEED_COMPLEX 
+    "newton_raphson_root.c" 
+    "durand_kerner_roots.c"
+)
 
 foreach( testsourcefile ${APP_SOURCES} )
-    # Do not compile these files that use complex.h on MSVC
-    if ( ${testsourcefile} IN_LIST no_msvc AND MSVC)
+    # compile files that use complex.h only if available
+    if ( ${testsourcefile} IN_LIST NEED_COMPLEX AND NOT HAS_COMPLEX_TYPE)
         continue()
     endif()
     string( REPLACE ".c" "" testname ${testsourcefile} )

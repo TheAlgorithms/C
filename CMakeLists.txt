@@ -5,6 +5,7 @@ project(Algorithms_in_C
     DESCRIPTION "Set of algorithms implemented in C."
 )
 
+# Set compilation standards
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 
@@ -13,8 +14,12 @@ if(MSVC)
     # add_compile_options(/Za)
 endif(MSVC)
 
+# check for math library
+# addresses a bug when linking on OSX
 find_library(MATH_LIBRARY m)
 
+# Optional flag - can be set by user 
+# Default "ON"
 option(USE_OPENMP "flag to use OpenMP for multithreading" ON)
 if(USE_OPENMP)
     find_package(OpenMP)
@@ -25,6 +30,24 @@ if(USE_OPENMP)
     endif()
 endif()
 
+## Check for some required header files
+include(CheckIncludeFile)
+include(CheckSymbolExists)
+check_include_file(stdbool.h HAS_STDBOOL_H)
+check_include_file(inttypes.h HAS_INTTYPES_H)
+check_include_file(complex.h HAS_COMPLEX_H)
+if(HAS_COMPLEX_H)
+    check_symbol_exists(complex complex.h HAS_COMPLEX_TYPE)
+endif(HAS_COMPLEX_H)
+if (NOT HAS_STDBOOL_H)
+    message(FATAL_ERROR "Missing required header: 'stdbool.h'")
+endif()
+if (NOT HAS_INTTYPES_H)
+    message(FATAL_ERROR "Missing required header: 'inttypes.h'")
+endif()
+
+## Add subdirectories containing CMakeLists.txt 
+# to configure and compile files in the respective folders
 add_subdirectory(misc)
 add_subdirectory(sorting)
 add_subdirectory(graphics)
@@ -35,6 +58,7 @@ add_subdirectory(project_euler)
 add_subdirectory(machine_learning)
 add_subdirectory(numerical_methods)
 
+## Configure Doxygen documentation system
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0057 NEW)
 find_package(Doxygen OPTIONAL_COMPONENTS dot dia)
@@ -77,7 +101,7 @@ if(DOXYGEN_FOUND)
     )
 endif()
 
-
+## Enable tool to generate binary distribution files
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
