@@ -13,7 +13,7 @@ set (NEED_COMPLEX
 
 foreach( testsourcefile ${APP_SOURCES} )
     # compile files that use complex.h only if available
-    if ( ${testsourcefile} IN_LIST NEED_COMPLEX AND HAS_COMPLEX_TYPE)
+    if ( ${testsourcefile} IN_LIST NEED_COMPLEX AND NOT HAS_COMPLEX_TYPE)
         continue()
     endif()
     string( REPLACE ".c" "" testname ${testsourcefile} )
