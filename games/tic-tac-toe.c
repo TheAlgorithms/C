@@ -29,7 +29,7 @@ int checkwin();  // checks everytime when a player or computer places X or O
 static char game_table[9];
 
 int main()
-{
+{   srand(time(NULL));
     int l = 0;
     do
     {
@@ -77,6 +77,7 @@ void singlemode()
 {
     int m;
     int k = 0;
+    int table_fill_count=0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -97,7 +98,10 @@ void singlemode()
         scanf("%d", &m);
 
         placex(m);
-        place();
+        if(table_fill_count<4)
+        {
+          place();
+        }
 
         for (int i = 0; i < 3; i++)
         {
@@ -105,10 +109,12 @@ void singlemode()
             {
                 printf("%c ", game_table[k]);
                 k++;
+
             }
 
             printf("\n");
         }
+        table_fill_count++;
         int o = checkwin();
 
         if (o == -1 || o == -2)
@@ -125,9 +131,9 @@ void singlemode()
             break;
         }
 
-        if (o == 0 && x == 9)
+        if (table_fill_count==4)
         {
-            printf("\nDRAW");
+            printf("\nDRAW ");
             break;
         }
     }
@@ -142,6 +148,7 @@ void doublemode()
     int m;
     int e1;
     int k = 0;
+    int doublemode_table_count=0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -161,11 +168,13 @@ void doublemode()
         scanf("%d", &m);
 
         placex(m);
-
+        if(doublemode_table_count<4)
+        {
         printf("PLAYER2 - where would you like to place 'o' : ");
         scanf("%d", &e1);
 
         placey(e1);
+        }
 
         for (int i = 0; i < 3; i++)
         {
@@ -177,7 +186,7 @@ void doublemode()
 
             printf("\n");
         }
-
+        doublemode_table_count++;
         int o = checkwin();
 
         if (o == -1 || o == -2)
@@ -193,9 +202,9 @@ void doublemode()
 
             break;
         }
-        if (o == 0 && x == 9)
+        if (doublemode_table_count==4)
         {
-            printf("\nDRAW");
+            printf("\nDRAW ");
             break;
         }
     }
@@ -238,7 +247,7 @@ void placex(int m)
 
 void place()
 {
-    srand(time(NULL));
+
     int e = rand() % 9;
 
     if (e >= 0 && e <= 8)
