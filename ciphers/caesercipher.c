@@ -1,4 +1,4 @@
-//Code y Rishabh Patel
+//Code by Rishabh Patel
 
 #include<stdio.h>
 #include<conio.h>
