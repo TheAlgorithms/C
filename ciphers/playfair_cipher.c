@@ -1,7 +1,6 @@
 //Code by Rishabh Patel
 
 #include <stdio.h>
-#include <conio.h>
 #include <string.h>
 #include <ctype.h>
 #define MX 5
@@ -70,7 +69,6 @@ void main() {
     };
 
 	char alpa[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-	clrscr();
 	printf("\t\t\t\tPlayFair Cipher");
 	printf("\n1.Encryption\n2.Decryption\n\nChoice(1 or 2):");
 	scanf("%d",&choice);
@@ -85,15 +83,15 @@ void main() {
 
 	//convert the characters to uppertext
 	for (i = 0; i < n; i++) {
-		if (keystr[i] == 'j') keystr[i] = 'i';
-		else if (keystr[i] == 'J') keystr[i] = 'I';
+		if (keystr[i] == 'j') {keystr[i] = 'i';}
+		else if (keystr[i] == 'J'){ keystr[i] = 'I';}
 			keystr[i] = toupper(keystr[i]);
 	}
 
 	//convert all the characters of plaintext to uppertext
 	for (i = 0; i < strlen(str); i++) {
-		if (str[i] == 'j') str[i] = 'i';
-		else if (str[i] == 'J') str[i] = 'I';
+		if (str[i] == 'j') {str[i] = 'i';}
+		else if (str[i] == 'J') {str[i] = 'I';}
 		str[i] = toupper(str[i]);
 	}
 
@@ -101,8 +99,8 @@ void main() {
 	j = 0;
 	for (i = 0; i < 26; i++) {
 		for (k = 0; k < n; k++) {
-			if (keystr[k] == alpa[i]) break;
-			else if (alpa[i] == 'J') break;
+			if (keystr[k] == alpa[i]) {break;}
+			else if (alpa[i] == 'J') {break;}
 		}
 		if (k == n) {
 			keyminus[j] = alpa[i];
@@ -129,11 +127,11 @@ void main() {
 	// construct diagram and convert to cipher text
 	printf("\nEntered text :%s\nOutput Text :", str);
 	for (i = 0; i < strlen(str); i++) {
-		if (str[i] == 'J') str[i] = 'I';
-			if (str[i + 1] == '\0') playfair(str[i], 'X', key);
+		if (str[i] == 'J') {str[i] = 'I';}
+			if (str[i + 1] == '\0') {playfair(str[i], 'X', key);}
 			else {
-				if (str[i + 1] == 'J') str[i + 1] = 'I';
-					if (str[i] == str[i + 1]) playfair(str[i], 'X', key);
+				if (str[i + 1] == 'J') {str[i + 1] = 'I';}
+					if (str[i] == str[i + 1]) {playfair(str[i], 'X', key);}
 					else {
 						playfair(str[i], str[i + 1], key);
 						i++;
