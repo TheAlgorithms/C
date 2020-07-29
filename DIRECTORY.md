@@ -114,9 +114,11 @@
   * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
 
 ## Hash
-  * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.c)
-  * [Hash](https://github.com/TheAlgorithms/C/blob/master/hash/hash.h)
-  * [Test Program](https://github.com/TheAlgorithms/C/blob/master/hash/test_program.c)
+  * [Hash Adler32](https://github.com/TheAlgorithms/C/blob/master/hash/hash_adler32.c)
+  * [Hash Crc32](https://github.com/TheAlgorithms/C/blob/master/hash/hash_crc32.c)
+  * [Hash Djb2](https://github.com/TheAlgorithms/C/blob/master/hash/hash_djb2.c)
+  * [Hash Sdbm](https://github.com/TheAlgorithms/C/blob/master/hash/hash_sdbm.c)
+  * [Hash Xor8](https://github.com/TheAlgorithms/C/blob/master/hash/hash_xor8.c)
 
 ## Leetcode
   * Src
