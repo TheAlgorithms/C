@@ -1,7 +1,6 @@
 //Code by Rishabh Patel
 
 #include<stdio.h>
-#include<conio.h>
 
 void encrypt()
 {
@@ -77,18 +76,17 @@ void main()
 	int choice;
 	while(1)
 	{
-		clrscr();
 		printf("Enter \n 1.Encrytpion\n 2.Decryption\n 3.Exit");
 		printf("\nEnter your choice : ");
 		scanf("%d",&choice);
-		if(choice==1)
-		encrypt();
-		else if(choice==2)
-		decrypt();
-		else if(choice==3)
-		exit(0);
-		else
-		printf("\nWrong choice! Enter again");
+		if(choice==1){
+		encrypt();}
+		else if(choice==2){
+		decrypt();}
+		else if(choice==3){
+		exit(0);}
+		else{
+		printf("\nWrong choice! Enter again");}
 		getch();
 	}
 }
