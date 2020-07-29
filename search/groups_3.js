@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sorting_20algorithms_519',['Sorting algorithms',['../d5/d4c/group__sorting.html',1,'']]],
-  ['sudoku_20solver_520',['Sudoku solver',['../d5/df4/group__sudoku.html',1,'']]]
+  ['machine_20learning_20algorithms_550',['Machine learning algorithms',['../d9/d66/group__machine__learning.html',1,'']]]
 ];
