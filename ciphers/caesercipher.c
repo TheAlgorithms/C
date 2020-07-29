@@ -1,3 +1,5 @@
+//Code y Rishabh Patel
+
 #include<stdio.h>
 #include<conio.h>
 
