@@ -316,7 +316,9 @@ void placey(int e1)
 /**
  * @brief Implementation of win conditon checker for 'X' or 'O' whenever the table is updated
  *
- * @returns -1: if 'X' won , -2: if 'O' won , 0: if there is no win condition for 'X' or 'O' 
+ * @returns -1: if 'X' won 
+ * @returns -2: if 'O' won
+ * @returns 0: if there is no win condition for 'X' or 'O' 
  */
 int checkwin()
 {
