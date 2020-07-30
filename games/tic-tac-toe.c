@@ -6,8 +6,8 @@
  * implementation in C
  * @details  Tic-Tac-Toe Game,where the user can decide to play with the
  * computer(single player mode) or with other user(double player mode) , the
- * code as an array named 'a' which is the table and user needs to enter the
- * position inside the array(from 1-9) where he/she wants to place X or O on the
+ * code as an array named 'game_table' which is the table and user needs to enter the
+ * position inside the array(from 1-9) where he/she wants to place 'X' or 'O' on the
  * table.
  */
 #include <stdio.h>
@@ -21,9 +21,9 @@ static void placex(int);  // used for placing position of X by the 1st player
 static void place();      // used by the computer to place O
 static void placey(int);  // used in Double Player mode by the 2nd player to
                           // place the position of O
-int checkwin();  // checks everytime when a player or computer places X or O
+int checkwin();  // checks everytime when a player or computer places 'X' or 'O'
 
-/** Tic-Tac-Toe table, so basically we are using variable 'a' as the table and
+/** Tic-Tac-Toe table, so basically we are using variable 'game_table' as the table(size:3X3) and
  * updating it regularly
  */
 static char game_table[9];
@@ -77,6 +77,8 @@ int main()
 
 /**
  * @brief Implementation of game vs computer
+ *
+ * @returns None
  */
 void singlemode()
 {
@@ -147,6 +149,7 @@ void singlemode()
 /**
  * @brief Implementation of game vs another player.
  *
+ * @returns None
  */
 void doublemode()
 {
@@ -219,6 +222,8 @@ void doublemode()
  * @brief Update table by placing an `X`
  *
  * @param m location to place `X`
+ *
+ * @returns None
  */
 void placex(int m)
 {
@@ -249,7 +254,11 @@ void placex(int m)
         placex(n1);
     }
 }
-
+/**
+ * @brief Update table by placing an `O`
+ *
+ * @returns None
+ */
 void place()
 {
 
@@ -268,7 +277,13 @@ void place()
         }
     }
 }
-
+/**
+ * @brief Update table by placing an `O`
+ *
+ * @param e1 location to place `O`
+ *
+ * @returns None
+ */
 void placey(int e1)
 {
     int n1;
@@ -298,7 +313,11 @@ void placey(int e1)
         placey(n1);
     }
 }
-
+/**
+ * @brief Implementation of win conditon checker for 'X' or 'O' whenever the table is updated
+ *
+ * @returns -1: if 'X' won , -2: if 'O' won , 0: if there is no win condition for 'X' or 'O' 
+ */
 int checkwin()
 {
     if (game_table[0] == game_table[1] && game_table[1] == game_table[2])
