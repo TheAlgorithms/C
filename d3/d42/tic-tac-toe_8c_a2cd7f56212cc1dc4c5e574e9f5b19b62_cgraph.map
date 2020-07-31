@@ -1,6 +1,0 @@
-<map id="singlemode" name="singlemode">
-<area shape="rect" id="node1" title="Implementation of game vs computer." alt="" coords="5,56,93,83"/>
-<area shape="rect" id="node2" href="$d3/d42/tic-tac-toe_8c.html#adfca19e26f5e1292cceb1de891215469" title="Implementation of win conditon checker for &#39;X&#39; or &#39;O&#39; whenever the table is updated." alt="" coords="141,5,219,32"/>
-<area shape="rect" id="node3" href="$d3/d42/tic-tac-toe_8c.html#a75face5dba6916d362d786f08489d39b" title="Update table by placing an O" alt="" coords="153,56,207,83"/>
-<area shape="rect" id="node4" href="$d3/d42/tic-tac-toe_8c.html#add64ac1add50f657d9ac3fe01b5d5c0d" title="Update table by placing an X" alt="" coords="150,107,210,133"/>
-</map>

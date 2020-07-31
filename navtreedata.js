@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
     [ "The Algorithms - C", "index.html", [
-      [ "Overview", "index.html#autotoc_md33", null ],
-      [ "Features", "index.html#autotoc_md34", null ],
-      [ "Documentation", "index.html#autotoc_md35", null ],
-      [ "Contributions", "index.html#autotoc_md36", null ]
+      [ "Overview", "index.html#autotoc_md34", null ],
+      [ "Features", "index.html#autotoc_md35", null ],
+      [ "Documentation", "index.html#autotoc_md36", null ],
+      [ "Contributions", "index.html#autotoc_md37", null ]
     ] ],
     [ "Code style convention", "dc/d64/md__coding_guidelines.html", [
       [ "User-interface", "dc/d64/md__coding_guidelines.html#autotoc_md2", null ],
@@ -46,16 +46,17 @@ var NAVTREE =
       [ "Conversions", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md15", null ],
       [ "Data Structures", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md16", null ],
       [ "Exercism", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md17", null ],
-      [ "Graphics", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md18", null ],
-      [ "Greedy Approach", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md19", null ],
-      [ "Hash", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md20", null ],
-      [ "Leetcode", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md21", null ],
-      [ "Machine Learning", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md22", null ],
-      [ "Misc", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md23", null ],
-      [ "Numerical Methods", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md24", null ],
-      [ "Project Euler", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md25", null ],
-      [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md26", null ],
-      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md27", null ]
+      [ "Games", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md18", null ],
+      [ "Graphics", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md19", null ],
+      [ "Greedy Approach", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md20", null ],
+      [ "Hash", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md21", null ],
+      [ "Leetcode", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md22", null ],
+      [ "Machine Learning", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md23", null ],
+      [ "Misc", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md24", null ],
+      [ "Numerical Methods", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md25", null ],
+      [ "Project Euler", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md26", null ],
+      [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md27", null ],
+      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md28", null ]
     ] ],
     [ "Sample solutions for <a href=\"http://exercism.io/\">exercism.io</a>", "d7/db5/md_exercism__r_e_a_d_m_e.html", null ],
     [ "Hash algorithms", "d4/dcb/md_hash__r_e_a_d_m_e.html", null ],
@@ -86,8 +87,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43",
-"db/d80/problem__20_2sol1_8c.html#a62cbbd106aad52daadb9403a07d0da32"
+"d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md14",
+"dc/d18/structsudoku.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

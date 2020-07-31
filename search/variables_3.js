@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['game_5ftable_529',['game_table',['../d3/d42/tic-tac-toe_8c.html#abaee412672248f9b1eeccd63953c231a',1,'tic-tac-toe.c']]]
+  ['left_518',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node']]],
+  ['llink_519',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]]
 ];
