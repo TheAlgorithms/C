@@ -50,6 +50,7 @@ endif()
 # to configure and compile files in the respective folders
 add_subdirectory(hash)
 add_subdirectory(misc)
+add_subdirectory(games)
 add_subdirectory(sorting)
 add_subdirectory(graphics)
 add_subdirectory(searching)
