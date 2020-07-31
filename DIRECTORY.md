@@ -108,6 +108,9 @@
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.c)
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.h)
 
+## Games
+  * [Tic Tac Toe](https://github.com/TheAlgorithms/C/blob/master/games/tic_tac_toe.c)
+
 ## Graphics
   * [Spirograph](https://github.com/TheAlgorithms/C/blob/master/graphics/spirograph.c)
 
