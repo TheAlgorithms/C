@@ -1,0 +1,6 @@
+<map id="doublemode" name="doublemode">
+<area shape="rect" id="node1" title="Implementation of game vs another player." alt="" coords="5,56,97,83"/>
+<area shape="rect" id="node2" href="$d3/d42/tic-tac-toe_8c.html#adfca19e26f5e1292cceb1de891215469" title="Implementation of win conditon checker for &#39;X&#39; or &#39;O&#39; whenever the table is updated." alt="" coords="145,5,223,32"/>
+<area shape="rect" id="node3" href="$d3/d42/tic-tac-toe_8c.html#add64ac1add50f657d9ac3fe01b5d5c0d" title="Update table by placing an X" alt="" coords="154,56,214,83"/>
+<area shape="rect" id="node4" href="$d3/d42/tic-tac-toe_8c.html#aa4ac360139e9047b280bde3ed18e5c12" title="Update table by placing an O" alt="" coords="154,107,214,133"/>
+</map>
