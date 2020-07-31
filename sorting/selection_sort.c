@@ -1,20 +1,18 @@
-// sorting of array list using selection sort
+/**
+ * @file
+ * @brief [Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
+ * algorithm implementation.
+ */
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-/*Displays the array, passed to this method*/
-void display(int *arr, int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-
-    printf("\n");
-}
-
-/*Swap function to swap two values*/
+/**
+ * Swapped two numbers using pointer
+ * @param first first pointer of first number
+ * @param second second pointer of second number
+ */
 void swap(int *first, int *second)
 {
     int temp = *first;
@@ -22,13 +20,14 @@ void swap(int *first, int *second)
     *second = temp;
 }
 
-/*This is where the sorting of the array takes place
- arr[] --- Array to be sorted
- size --- Array Size
+/**
+ * Selection sort algorithm implements
+ * @param arr array to be sorted
+ * @param size size of array
  */
 void selectionSort(int *arr, int size)
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         int min_index = i;
         for (int j = i + 1; j < size; j++)
@@ -38,32 +37,39 @@ void selectionSort(int *arr, int size)
                 min_index = j;
             }
         }
-        swap(&arr[i], &arr[min_index]);
+        if (min_index != i)
+        {
+            swap(arr + i, arr + min_index);
+        }
     }
 }
 
+/** Test function
+  * @returns None
+  */
+static void test()
+{
+    const int size = rand() % 500; /* random array size */
+    int *arr = (int *)calloc(size, sizeof(int));
+
+    /* generate size random numbers from -50 to 49 */
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = (rand() % 100) - 50; /* signed random numbers */
+    }
+    selectionSort(arr, size);
+    for (int i = 0; i < size - 1; ++i)
+    {
+        assert(arr[i] <= arr[i + 1]);
+    }
+    free(arr);
+}
+
+/** Driver Code */
 int main(int argc, const char *argv[])
 {
-    int n;
-    printf("Enter size of array:\n");
-    scanf("%d", &n);  // E.g. 8
-
-    printf("Enter the elements of the array\n");
-    int i;
-    int *arr = (int *)malloc(n * sizeof(int));
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("Original array: ");
-    display(arr, n);  // Original array : 10 11 9 8 4 7 3 8
-
-    selectionSort(arr, n);
-
-    printf("Sorted array: ");
-    display(arr, n);  // Sorted array : 3 4 7 8 8 9 10 11
-
-    free(arr);
+    /* Intializes random number generator */
+    srand(time(NULL));
+    test();
     return 0;
 }

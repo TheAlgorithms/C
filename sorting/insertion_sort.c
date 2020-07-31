@@ -1,29 +1,24 @@
-// sorting of array list using insertion sort
+/**
+ * @file
+ * @brief [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
+ * algorithm implementation.
+ */
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-/*Displays the array, passed to this method*/
-void display(int *arr, int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
-/*This is where the sorting of the array takes place
- arr[] --- Array to be sorted
- size --- Array Size
+/**
+ * Insertion sort algorithm implements
+ * @param arr array to be sorted
+ * @param size size of array
  */
 void insertionSort(int *arr, int size)
 {
-    int i, j, key;
-    for (i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
-        j = i - 1;
-        key = arr[i];
+        int j = i - 1;
+        int key = arr[i];
         /* Move all elements greater than key to one position */
         while (j >= 0 && key < arr[j])
         {
@@ -35,28 +30,30 @@ void insertionSort(int *arr, int size)
     }
 }
 
+/** Test function
+  * @returns None
+  */
+static void test()
+{
+    const int size = rand() % 500; /* random array size */
+    int *arr = (int *)calloc(size, sizeof(int));
+
+    /* generate size random numbers from -50 to 49 */  
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = (rand() % 100) - 50; /* signed random numbers */
+    }
+    insertionSort(arr, size);
+    for (int i = 0; i < size - 1; ++i)
+    {
+        assert(arr[i] <= arr[i + 1]);
+    }
+    free(arr);
+}
 int main(int argc, const char *argv[])
 {
-    int n;
-    printf("Enter size of array:\n");
-    scanf("%d", &n);  // E.g. 8
-
-    printf("Enter the elements of the array\n");
-    int i;
-    int *arr = (int *)malloc(n * sizeof(int));
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("Original array: ");
-    display(arr, n);
-
-    insertionSort(arr, n);
-
-    printf("Sorted array: ");
-    display(arr, n);
-
-    free(arr);
+    /* Intializes random number generator */
+    srand(time(NULL));
+    test();
     return 0;
 }
