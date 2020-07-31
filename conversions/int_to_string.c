@@ -1,4 +1,3 @@
-
 /**
  * @file
  * @brief Convert a positive integer to string (non-standard function)
@@ -52,26 +51,26 @@ char *int_to_string(uint16_t value, char *dest, int base)
 static void test()
 {
     const int MAX_SIZE = 100;
-    for (int i = 1; i <= 100; ++i)
-    {
-        char *str1 = (char *)calloc(sizeof(char), MAX_SIZE);
-        char *str2 = (char *)calloc(sizeof(char), MAX_SIZE);
+    char *str1 = (char *)calloc(sizeof(char), MAX_SIZE);
+    char *str2 = (char *)calloc(sizeof(char), MAX_SIZE);
 
+    for (int i = 1; i <= 100; ++i) /* test 100 random numbers */
+    {
         /* Generate value from 0 to 100 */
         int value = rand() % 100;
 
         // assert(strcmp(itoa(value, str1, 2), int_to_string(value, str2, 2)) ==
         //        0);
-        snprintf(str1, MAX_SIZE, "%o", value);
+        snprintf(str1, MAX_SIZE, "%o", value);  //* standard C - to octal */
         assert(strcmp(str1, int_to_string(value, str2, 8)) == 0);
-        snprintf(str1, MAX_SIZE, "%d", value);
+        snprintf(str1, MAX_SIZE, "%d", value); /* standard C - to decimal */
         assert(strcmp(str1, int_to_string(value, str2, 10)) == 0);
-        snprintf(str1, MAX_SIZE, "%x", value);
+        snprintf(str1, MAX_SIZE, "%x", value); /* standard C - to hexadecimal */
         assert(strcmp(str1, int_to_string(value, str2, 16)) == 0);
-
-        free(str1);
-        free(str2);
     }
+
+    free(str1);
+    free(str2);
 }
 
 /** Driver Code */
