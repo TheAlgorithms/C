@@ -88,7 +88,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md14",
-"dc/d18/structsudoku.html"
+"db/ddf/insertion__sort_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
