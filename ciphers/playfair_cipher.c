@@ -1,4 +1,9 @@
-// Code by Rishabh Patel
+/**
+ * @file
+ * 
+ *
+ * \author [Rishabh Patel](https://github.com/Rishabhpatel803)
+ */
 
 #include <ctype.h>
 #include <stdio.h>
