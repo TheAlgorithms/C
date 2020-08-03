@@ -1,4 +1,10 @@
-// Code by Rishabh Patel
+/**
+ * @file
+ * \brief Find approximate solution for \f$f(x) = 0\f$ using
+ * Newton-Raphson interpolation algorithm.
+ *
+ * \author [Rishabh Patel](https://github.com/Rishabhpatel803)
+ */
 
 #include <stdio.h>
 
