@@ -1,7 +1,8 @@
 /**
  * @file
- * 
- *
+ * @brief: Playfair cipher was the first practical digraph substitution cipher
+ * @details: The scheme was invented in 1854 by Charles Wheatstone but was named after Lord Playfair who promoted the use of the cipher.
+ * In playfair cipher unlike traditional cipher we encrypt a pair of alphabets(digraphs) instead of a single alphabet
  * \author [Rishabh Patel](https://github.com/Rishabhpatel803)
  */
 
@@ -11,7 +12,10 @@
 #define MX 5
 
 int choice;
-
+/*
+* designing the function of encryption and
+* decryption using playfair cipher
+*/
 void playfair(char ch1, char ch2, char key[MX][MX]) {
   int i, j, w, x, y, z;
   for (i = 0; i < MX; i++) {
@@ -47,6 +51,9 @@ void playfair(char ch1, char ch2, char key[MX][MX]) {
     printf("%c%c", key[w][z], key[y][x]);
   }
 }
+/*
+* implementung matrix and removing duplicates
+*/
 void removeDuplicates(char str[]) {
   int hash[256] = {0};
   int currentIndex = 0;
