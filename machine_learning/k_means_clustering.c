@@ -180,7 +180,7 @@ cluster* kMeans(observation observations[], size_t size, int k) {
     clusters = malloc(sizeof(cluster) * k);
     /* STEP 1 */
     for (size_t j = 0; j < size; j++) {
-      (observations + j)->group = rand() % k;
+      observations[j].group = rand() % k;
     }
     size_t changed = 0;
     size_t minAcceptedError =
