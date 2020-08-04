@@ -167,25 +167,17 @@ void calculateCentroid(observation observations[], size_t size,
  * @returns pointer to cluster object
  */
 cluster* kMeans(observation observations[], size_t size, int k) {
-  cluster* clusters = (cluster*)malloc(sizeof(cluster) * k);
-  if (k == 1) {
+  cluster* clusters = NULL;
+  if (k <= 1) {
     /*
     If we have to cluster them only in one group
     then calculate centroid of observations and
     that will be a ingle cluster
     */
+    clusters = (cluster*)malloc(sizeof(cluster));
     calculateCentroid(observations, size, clusters);
-  } else if (k >= size) {
-    /* If no of clusters is more than observations
-       each observation can be its own cluster
-    */
-    for (int j = 0; j < size; j++) {
-      clusters[j].x = observations[j].x;
-      clusters[j].y = observations[j].y;
-      clusters[j].count = 1;
-      observations[j].group = j;
-    }
-  } else {
+  } else if (k < size) {
+    clusters = malloc(sizeof(cluster) * k);
     /* STEP 1 */
     for (size_t j = 0; j < size; j++) {
       (observations + j)->group = rand() % k;
@@ -223,6 +215,22 @@ cluster* kMeans(observation observations[], size_t size, int k) {
       }
     } while (changed > minAcceptedError);  // Keep on grouping until we have
                                            // got almost best clustering
+  } else {
+    /* If no of clusters is more than observations
+       each observation can be its own cluster
+    */
+    clusters = (cluster*)malloc(sizeof(cluster) * k);
+    for (int j = 0; j < size; j++) {
+      clusters[j].x = observations[j].x;
+      clusters[j].y = observations[j].y;
+      clusters[j].count = 1;
+      observations[j].group = j;
+    }
+    for (int j = size; j < k; j++) {
+      clusters[j].x = 0;
+      clusters[j].y = 0;
+      clusters[j].count = 0;
+    }
   }
   return clusters;
 }
