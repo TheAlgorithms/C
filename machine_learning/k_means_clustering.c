@@ -10,8 +10,9 @@
 #include <math.h>    // PI, sin, cos
 #include <stdio.h>   // printf
 #include <stdlib.h>  // rand
+#include <string.h>  // memset
 
-/*! \struct observation
+/*! @struct observation
  *  a class to store points in 2d plane
  *  the name observation is used to denote
  *  a random point in plane
@@ -21,7 +22,7 @@ typedef struct observation {
   int group;    // the group no in which this observation would go
 } observation;
 
-/*! \struct cluster
+/*! @struct cluster
  *  this class stores the coordinates
  *  of centroid of all the points
  *  in that cluster it also
@@ -33,7 +34,7 @@ typedef struct cluster {
   size_t count;  // count of observations present in this cluster
 } cluster;
 
-/*! \fn printEPS
+/*! @fn printEPS
  * A function to print observations and clusters
  * The code is taken from
  * @link http://rosettacode.org/wiki/K-means%2B%2B_clustering
@@ -42,10 +43,10 @@ typedef struct cluster {
  *
  * to print in a file use pipeline operator ( ./a.out > image.eps )
  *
- * @param observations - observations array
- * @param len - size of observation array
- * @param cent - clusters centroid's array
- * @param k - size of cent array
+ * @param observations  observations array
+ * @param len  size of observation array
+ * @param cent  clusters centroid's array
+ * @param k  size of cent array
  */
 void printEPS(observation pts[], size_t len, cluster cent[], int k) {
   int W = 400, H = 400;
@@ -99,13 +100,15 @@ void printEPS(observation pts[], size_t len, cluster cent[], int k) {
   free(colors);
 }
 
-/*! \fn calculateNearest
+/*! @fn calculateNearest
  * Returns the index of centroid nearest to
  * given observation
  *
- * @param o - observation
- * @param clusters - array of cluster having centroids coordinates
- * @param k - size of clusters array
+ * @param o  observation
+ * @param clusters  array of cluster having centroids coordinates
+ * @param k  size of clusters array
+ *
+ * @returns the index of nearest centroid for given observation
  */
 int calculateNearst(observation* o, cluster clusters[], int k) {
   double minD = __DBL_MAX__;
@@ -124,12 +127,12 @@ int calculateNearst(observation* o, cluster clusters[], int k) {
   return index;
 }
 
-/*! \fn calculateCentroid
+/*! @fn calculateCentroid
  * Calculate centoid and assign it to the cluster variable
  *
- * @param observations - an array of observations whose centroid is calculated
- * @param size - size of the observations array
- * @param centroid - a reference to cluster object to store information of
+ * @param observations  an array of observations whose centroid is calculated
+ * @param size  size of the observations array
+ * @param centroid  a reference to cluster object to store information of
  * centroid
  */
 void calculateCentroid(observation observations[], size_t size,
@@ -147,7 +150,7 @@ void calculateCentroid(observation observations[], size_t size,
   centroid->y /= centroid->count;
 }
 
-/*!  \fn kMeans
+/*!  @fn kMeans
  *   --K Means Algorithm--
  * 1. Assign each observation to one of k groups
  *    creating a random initial clustering
@@ -160,9 +163,9 @@ void calculateCentroid(observation observations[], size_t size,
  * 5. Repeat step 2,3,4 until there is no change
  *    the current clustering and is same as last
  *    clustering.
- * @param observations - an array of observations to cluster
- * @param size - size of observations array
- * @param k - no of clusters to be made
+ * @param observations  an array of observations to cluster
+ * @param size  size of observations array
+ * @param k  no of clusters to be made
  *
  * @returns pointer to cluster object
  */
@@ -175,9 +178,11 @@ cluster* kMeans(observation observations[], size_t size, int k) {
     that will be a ingle cluster
     */
     clusters = (cluster*)malloc(sizeof(cluster));
+    memset(clusters, 0, sizeof(cluster));
     calculateCentroid(observations, size, clusters);
   } else if (k < size) {
     clusters = malloc(sizeof(cluster) * k);
+    memset(clusters, 0, k * sizeof(cluster));
     /* STEP 1 */
     for (size_t j = 0; j < size; j++) {
       observations[j].group = rand() % k;
@@ -220,26 +225,25 @@ cluster* kMeans(observation observations[], size_t size, int k) {
        each observation can be its own cluster
     */
     clusters = (cluster*)malloc(sizeof(cluster) * k);
+    memset(clusters, 0, k * sizeof(cluster));
     for (int j = 0; j < size; j++) {
       clusters[j].x = observations[j].x;
       clusters[j].y = observations[j].y;
       clusters[j].count = 1;
       observations[j].group = j;
     }
-    for (int j = size; j < k; j++) {
-      clusters[j].x = 0;
-      clusters[j].y = 0;
-      clusters[j].count = 0;
-    }
   }
   return clusters;
 }
 
-/*! \fn test
+/*! @fn test
  * A function to test the kMeans function
  * Generates 100000 points in square
  * (0,0),(10,0),(10,10),(0,10)
  * and cluster them into 10 clusters
+ *
+ * ![Sample
+ * Output](https://raw.githubusercontent.com/Lakhan-Nad/hello/master/test.jpg)
  */
 void test() {
   size_t size = 100000L;
@@ -262,7 +266,7 @@ void test() {
   free(clusters);
 }
 
-/*! \fn main
+/*! @fn main
  * This function calls the test
  * function
  */
@@ -270,3 +274,4 @@ int main() {
   test();
   return 0;
 }
+
