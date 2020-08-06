@@ -75,7 +75,7 @@ void playfaircipher(char *str,char *keystr)
 {
     int i, j, k = 0, l, m = 0, n;
     char key[MX][MX], keyminus[25];
-
+    n = strlen(keystr);
     char alpa[26] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                      'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
                      'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
@@ -193,7 +193,6 @@ void test()
     playfaircipher(msg1, key1);
 }
 int main() {
-  
   test();
   return 0;
 }
