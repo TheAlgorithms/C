@@ -5,12 +5,17 @@
  * This file has K Means algorithm implemmented
  * It prints test output in eps format
  * @author [Lakhan Nad](https://github.com/Lakhan-Nad)
+ * Thanks to [Krishna Vedala](https://github.com/kvedala)
  */
 
+#define _USE_MATH_DEFINES  // to use math constants like PI
+
+#include <float.h>   // DBL_MAX, DBL_MIN
 #include <math.h>    // PI, sin, cos
 #include <stdio.h>   // printf
 #include <stdlib.h>  // rand
 #include <string.h>  // memset
+
 
 /*! @struct observation
  *  a class to store points in 2d plane
@@ -50,8 +55,8 @@ typedef struct cluster {
  */
 void printEPS(observation pts[], size_t len, cluster cent[], int k) {
   int W = 400, H = 400;
-  double min_x = __DBL_MAX__, max_x = __DBL_MIN__, min_y = __DBL_MAX__,
-         max_y = __DBL_MIN__;
+  double min_x = DBL_MAX, max_x = DBL_MIN, min_y = DBL_MAX,
+         max_y = DBL_MIN;
   double scale = 0, cx = 0, cy = 0;
   double* colors = (double*)malloc(sizeof(double) * (k * 3));
   int i;
@@ -111,7 +116,7 @@ void printEPS(observation pts[], size_t len, cluster cent[], int k) {
  * @returns the index of nearest centroid for given observation
  */
 int calculateNearst(observation* o, cluster clusters[], int k) {
-  double minD = __DBL_MAX__;
+  double minD = DBL_MAX;
   double dist = 0;
   int index = -1;
   int i = 0;
