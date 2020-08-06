@@ -8,16 +8,13 @@
 
 #include <stdio.h>
 
+void decrypt(char *msg, int key);
 /*
-* Encrypt function encrypts the message to the required one
-*/
-void encrypt() {
-  char msg[100], ch;//msg is used to store the message
-  int i, key;
-  printf("Enter a plaintext : ");
-  scanf("%s", &*msg);//Inputting of message
-  printf("\nEnter key : ");
-  scanf("%d", &key);//Inoutting key
+ * Encrypt function encrypts the message to the required one
+ */
+void encrypt(char *msg,int key) {
+  char ch;//msg is used to store the message
+  int i;
   for (i = 0; msg[i] != '\0'; i++) {
     ch = msg[i];
     if (ch >= 'a' && ch <= 'z') {
@@ -35,19 +32,16 @@ void encrypt() {
     }
   }
   printf("\nEncrypted message: %s", msg);
+  decrypt(msg, key);
   printf("\nPress Enter to continue....");
 }
 
 /*
 * Decrypt function encrypts the message to the required one
 */
-void decrypt() {
-  char msg[100], ch;//msg is for storing message
-  int i, key;
-  printf("Enter a Encrypted message : ");
-  scanf("%s", &*msg);//reading enccypted message
-  printf("\nEnter key : ");
-  scanf("%d", &key);//reading key
+void decrypt(char *msg,int key) {
+  char ch;//msg is for storing message
+  int i;
   for (i = 0; msg[i] != '\0'; i++) {
     ch = msg[i];
     if (ch >= 'a' && ch <= 'z') {
@@ -67,23 +61,20 @@ void decrypt() {
   printf("\nDycrypted message: %s", msg);
   printf("\nPress Enter to continue....");
 }
+
+/*
+    Test cases for testing the program
+*/
+void test() 
+{
+    char msg[] = "Grofers";
+    printf("First Texst case");
+    encrypt(msg, 5);
+    char msg1[] = "lalaland";
+    printf("Second Test Case");
+    encrypt(msg1, 15);
+}
 int main() {
-  int choice;
-  while (1) {
-    //Giving user choice that he wants to encrypt or decrypt
-    printf("Enter \n 1.Encrytpion\n 2.Decryption");
-    printf("\nEnter your choice : ");
-    scanf("%d", &choice);
-    if (choice == 1) {
-      encrypt();
-    } else if (choice == 2) {
-      decrypt();
-    }
-    /*else if(choice==3){
-    exit(0);}*/
-    else {
-      printf("\nWrong choice! Enter again");
-    }
-  }
-  return 0;
+    test();
+    return 0;
 }
