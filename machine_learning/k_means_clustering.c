@@ -80,7 +80,7 @@ void printEPS(observation pts[], size_t len, cluster cent[], int k) {
   cx = (max_x + min_x) / 2;
   cy = (max_y + min_y) / 2;
 
-  printf("%%!PS-Adobe-3.0\n%%%%BoundingBox: -5 -5 %d %d\n", W + 10, H + 10);
+  printf("%%!PS-Adobe-3.0 EPSF-3.0\n%%%%BoundingBox: -5 -5 %d %d\n", W + 10, H + 10);
   printf(
       "/l {rlineto} def /m {rmoveto} def\n"
       "/c { .25 sub exch .25 sub exch .5 0 360 arc fill } def\n"
