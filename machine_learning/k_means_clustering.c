@@ -5,17 +5,15 @@
  * This file has K Means algorithm implemmented
  * It prints test output in eps format
  * @author [Lakhan Nad](https://github.com/Lakhan-Nad)
- * Thanks to [Krishna Vedala](https://github.com/kvedala)
  */
 
 #define _USE_MATH_DEFINES  // to use math constants like PI
 
-#include <float.h>   // DBL_MAX, DBL_MIN
-#include <math.h>    // PI, sin, cos
-#include <stdio.h>   // printf
-#include <stdlib.h>  // rand
-#include <string.h>  // memset
-
+#include <float.h>  /* DBL_MAX, DBL_MIN */
+#include <math.h>   /* PI, sin, cos */
+#include <stdio.h>  /* printf */
+#include <stdlib.h> /* rand */
+#include <string.h> /* memset */
 
 /*! @struct observation
  *  a class to store points in 2d plane
@@ -25,7 +23,7 @@
 typedef struct observation {
   double x;  /**< abscissa of 2D data point */
   double y;  /**< ordinate of 2D data point */
-  int group;    // the group no in which this observation would go
+  int group; /**< the group no in which this observation would go */
 } observation;
 
 /*! @struct cluster
@@ -36,8 +34,9 @@ typedef struct observation {
  *  belonging to this cluster
  */
 typedef struct cluster {
-  double x, y;   // Coordinates of centroid of this cluster
-  size_t count;  // count of observations present in this cluster
+  double x;     /**< abscissa centroid of this cluster */
+  double y;     /**< ordinate of centroid of this cluster */
+  size_t count; /**< count of observations present in this cluster */
 } cluster;
 
 /*! @fn printEPS
@@ -56,8 +55,7 @@ typedef struct cluster {
  */
 void printEPS(observation pts[], size_t len, cluster cent[], int k) {
   int W = 400, H = 400;
-  double min_x = DBL_MAX, max_x = DBL_MIN, min_y = DBL_MAX,
-         max_y = DBL_MIN;
+  double min_x = DBL_MAX, max_x = DBL_MIN, min_y = DBL_MAX, max_y = DBL_MIN;
   double scale = 0, cx = 0, cy = 0;
   double* colors = (double*)malloc(sizeof(double) * (k * 3));
   int i;
@@ -244,12 +242,12 @@ cluster* kMeans(observation observations[], size_t size, int k) {
 
 /*! @fn test
  * A function to test the kMeans function
- * Generates 100000 points in square
- * (0,0),(10,0),(10,10),(0,10)
- * and cluster them into 10 clusters
+ * Generates 100000 points in a circle of
+ * radius 20.0 with center at (0,0)
+ * and cluster them into 5 clusters
  *
  * ![Sample
- * Output](https://raw.githubusercontent.com/Lakhan-Nad/hello/master/test.jpg)
+ * Output](https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/image.jpg)
  */
 void test() {
   size_t size = 100000L;
@@ -272,11 +270,42 @@ void test() {
   free(clusters);
 }
 
+/*! @fn test2
+ * A function to test the kMeans function
+ * Generates 1000000 points in a circle of
+ * radius 20.0 with center at (0,0)
+ * and cluster them into 11 clusters
+ *
+ * ![Sample
+ * Output](https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/image2.jpg)
+ */
+void test2() {
+  size_t size = 1000000L;
+  observation* observations = (observation*)malloc(sizeof(observation) * size);
+  double maxRadius = 20.00;
+  double radius = 0;
+  double ang = 0;
+  size_t i = 0;
+  for (; i < size; i++) {
+    radius = (maxRadius * rand()) / RAND_MAX;
+    ang = (2 * M_PI * rand()) / RAND_MAX;
+    observations[i].x = radius * cos(ang);
+    observations[i].y = radius * sin(ang);
+  }
+  int k = 11;  // No of clusters
+  cluster* clusters = kMeans(observations, size, k);
+  printEPS(observations, size, clusters, k);
+  // Free the accquired memory
+  free(observations);
+  free(clusters);
+}
+
 /*! @fn main
  * This function calls the test
  * function
  */
 int main() {
   test();
+  /* test2(); */
   return 0;
 }
