@@ -23,7 +23,8 @@
  *  a random point in plane
  */
 typedef struct observation {
-  double x, y;  // for coordinates in 2D Plane
+  double x;  /**< abscissa of 2D data point */
+  double y;  /**< ordinate of 2D data point */
   int group;    // the group no in which this observation would go
 } observation;
 
@@ -279,4 +280,3 @@ int main() {
   test();
   return 0;
 }
-
