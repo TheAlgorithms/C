@@ -305,6 +305,7 @@ void test2() {
  * function
  */
 int main() {
+  srand(time(NULL));
   test();
   /* test2(); */
   return 0;
