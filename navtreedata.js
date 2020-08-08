@@ -88,8 +88,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/d4c/group__sorting.html#gad7ed8cc4603f500d610054680d28b971",
-"db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1",
-"index.html"
+"da/de6/udp__client_8c.html",
+"globals_o.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
