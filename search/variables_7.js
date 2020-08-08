@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['start_537',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
+  ['prev_5fdigit_545',['prev_digit',['../dc/d77/struct__big__int.html#ad8405989a924410942b39ec0e9fef30b',1,'_big_int']]]
 ];

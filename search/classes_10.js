@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['word_5fcount_5fword_318',['word_count_word',['../df/ddb/structword__count__word.html',1,'']]]
+  ['t_324',['T',['../d5/d7e/struct_t.html',1,'']]],
+  ['tnode_325',['tnode',['../d8/d7a/structtnode.html',1,'']]],
+  ['trienode_326',['TrieNode',['../da/d9b/struct_trie_node.html',1,'']]]
 ];

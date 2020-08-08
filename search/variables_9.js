@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weights_539',['weights',['../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657',1,'adaline']]]
+  ['start_548',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
 ];

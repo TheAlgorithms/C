@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['right_535',['right',['../d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c',1,'node']]],
-  ['rlink_536',['rlink',['../db/d8b/struct_node.html#a0ed3c7305b43527f0f237bbfd438b8f7',1,'Node']]]
+  ['n_539',['N',['../dc/d18/structsudoku.html#a160365012280c3e10f1b31e914e8f129',1,'sudoku']]],
+  ['n2_540',['N2',['../dc/d18/structsudoku.html#a0f01e2782e82306e6fab9a8578006f56',1,'sudoku']]],
+  ['next_541',['next',['../d9/dd7/struct__cantor__set.html#a2f7f9f19125725d3e5673fdb4ac8cfb1',1,'_cantor_set']]],
+  ['next_5fdigit_542',['next_digit',['../dc/d77/struct__big__int.html#a187538b984c86d7cfdb13e297e7f3564',1,'_big_int']]],
+  ['num_5fdigits_543',['num_digits',['../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0',1,'_large_num']]],
+  ['num_5fweights_544',['num_weights',['../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1',1,'adaline']]]
 ];

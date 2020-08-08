@@ -112,10 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acbbe6358ec95b3201865a72b2ac522c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8">decimal_to_binary</a> (unsigned int number)</td></tr>
 <tr class="memdesc:acbbe6358ec95b3201865a72b2ac522c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decimal to binary using recursion algorithm.  <a href="../../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8">More...</a><br /></td></tr>
 <tr class="separator:acbbe6358ec95b3201865a72b2ac522c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1a3968e7947464bee7714f6d43b7002"><td class="memItemLeft" align="right" valign="top"><a id="ae1a3968e7947464bee7714f6d43b7002"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/decimal__to__binary__recursion_8c.html#ae1a3968e7947464bee7714f6d43b7002">test</a> ()</td></tr>
-<tr class="memdesc:ae1a3968e7947464bee7714f6d43b7002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test function. <br /></td></tr>
-<tr class="separator:ae1a3968e7947464bee7714f6d43b7002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69dd4607977cae05ebe19d1ae604fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/decimal__to__binary__recursion_8c.html#ad69dd4607977cae05ebe19d1ae604fb1">test</a> ()</td></tr>
+<tr class="memdesc:ad69dd4607977cae05ebe19d1ae604fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test function.  <a href="../../d8/d30/decimal__to__binary__recursion_8c.html#ad69dd4607977cae05ebe19d1ae604fb1">More...</a><br /></td></tr>
+<tr class="separator:ad69dd4607977cae05ebe19d1ae604fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/decimal__to__binary__recursion_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver Code. <br /></td></tr>
@@ -152,6 +151,44 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> number == 0 ? 0 : number % 2 + 10 * <a class="code" href="../../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8">decimal_to_binary</a>(number / 2);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="ad69dd4607977cae05ebe19d1ae604fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69dd4607977cae05ebe19d1ae604fb1">&#9670;&nbsp;</a></span>test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test function. </p>
+<p>A function to test the kMeans function Generates 100000 points in a circle of radius 20.0 with center at (0,0) and cluster them into 5 clusters</p>
+<p><img src="https://raw.githubusercontent.com/TheAlgorithms/C/docs/images/machine_learning/k_means_clustering/kMeansTest1.png" alt="Output for 100000 points divided in 5 clusters" width="400px" heiggt="400px" class="inline"/> </p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> sets[][2] = {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {0, 0}, {1, 1}, {2, 10}, {3, 11}, {4, 100}, {6, 110}, {7, 111},</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">/* add more data sets to test */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, size = <span class="keyword">sizeof</span>(sets) / <span class="keyword">sizeof</span>(sets[0]); i &lt; size; ++i)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        assert(<a class="code" href="../../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8">decimal_to_binary</a>(sets[i][0]) == sets[i][1]);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d30/decimal__to__binary__recursion_8c_ad69dd4607977cae05ebe19d1ae604fb1_cgraph.svg" width="230" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

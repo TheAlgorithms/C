@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['stack_312',['Stack',['../dd/d10/struct_stack.html',1,'']]],
-  ['subset_313',['subset',['../dc/de5/structsubset.html',1,'']]],
-  ['sudoku_314',['sudoku',['../dc/d18/structsudoku.html',1,'']]]
+  ['queue_319',['queue',['../d2/d36/structqueue.html',1,'']]],
+  ['queuerep_320',['QueueRep',['../d0/d10/struct_queue_rep.html',1,'']]]
 ];
