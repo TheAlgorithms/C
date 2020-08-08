@@ -215,6 +215,7 @@
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C/blob/master/machine_learning/adaline_learning.c)
+  * [K Means Clustering](https://github.com/TheAlgorithms/C/blob/master/machine_learning/k_means_clustering.c)
   * [Kohonen Som Topology](https://github.com/TheAlgorithms/C/blob/master/machine_learning/kohonen_som_topology.c)
   * [Kohonen Som Trace](https://github.com/TheAlgorithms/C/blob/master/machine_learning/kohonen_som_trace.c)
 
