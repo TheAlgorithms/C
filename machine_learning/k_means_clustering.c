@@ -1,5 +1,5 @@
 /**
- * @file k_means_clustering.cpp
+ * @file k_means_clustering.c
  * @brief K Means Clustering Algorithm implemented
  * @details
  * This file has K Means algorithm implemmented
