@@ -23,14 +23,12 @@
 #include <string.h>       /* memset */
 #include <time.h>         /* time */
 
-/**
+/*!
  * @addtogroup machine_learning Machine Learning Algorithms
  * @{
  * @addtogroup k_means K-Means Clustering Algorithm
  * @{
- *
- * /
-
+ */
 
 /*! @struct observation
  *  a class to store points in 2d plane
