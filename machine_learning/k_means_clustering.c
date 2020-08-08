@@ -253,13 +253,21 @@ void printEPS(observation pts[], size_t len, cluster cent[], int k)
     for (j = 0; j < len; j++)
     {
         if (max_x < pts[j].x)
+        {
             max_x = pts[j].x;
+        }
         if (min_x > pts[j].x)
+        {
             min_x = pts[j].x;
+        }
         if (max_y < pts[j].y)
+        {
             max_y = pts[j].y;
+        }
         if (min_y > pts[j].y)
+        {
             min_y = pts[j].y;
+        }
     }
     scale = W / (max_x - min_x);
     if (scale > (H / (max_y - min_y)))
@@ -284,7 +292,9 @@ void printEPS(observation pts[], size_t len, cluster cent[], int k)
         for (j = 0; j < len; j++)
         {
             if (pts[j].group != i)
+            {
                 continue;
+            }
             printf("%.3f %.3f c\n", (pts[j].x - cx) * scale + W / 2,
                    (pts[j].y - cy) * scale + H / 2);
         }
