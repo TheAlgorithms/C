@@ -133,9 +133,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ac17020a38607ab29ce18939d5194a32a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">func</a> (int sockfd)</td></tr>
 <tr class="memdesc:ac17020a38607ab29ce18939d5194a32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continuous loop to send and receive over the socket.  <a href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">More...</a><br /></td></tr>
 <tr class="separator:ac17020a38607ab29ce18939d5194a32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51af30a60f9f02777c6396b8247e356f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d93/client_8c.html#a51af30a60f9f02777c6396b8247e356f">main</a> ()</td></tr>
-<tr class="memdesc:a51af30a60f9f02777c6396b8247e356f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver code.  <a href="../../dd/d93/client_8c.html#a51af30a60f9f02777c6396b8247e356f">More...</a><br /></td></tr>
-<tr class="separator:a51af30a60f9f02777c6396b8247e356f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d93/client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver code. <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Client side implementation of Server-Client system. </p>
@@ -211,84 +212,6 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a51af30a60f9f02777c6396b8247e356f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51af30a60f9f02777c6396b8247e356f">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">main </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Driver code. </p>
-<p>This function calls the test function </p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// when using winsock2.h, startup required</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    WSADATA wsData;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (WSAStartup(MAKEWORD(2, 2), &amp;wsData) != 0)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        perror(<span class="stringliteral">&quot;WSA Startup error: \n&quot;</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    atexit(cleanup);  <span class="comment">// register at-exit function</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> sockfd, connfd;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">struct </span>sockaddr_in servaddr, cli;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// socket create and verification</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    sockfd = socket(AF_INET, SOCK_STREAM, 0);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (sockfd == -1)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        printf(<span class="stringliteral">&quot;socket creation failed...\n&quot;</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        exit(0);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        printf(<span class="stringliteral">&quot;Socket successfully created..\n&quot;</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    bzero(&amp;servaddr, <span class="keyword">sizeof</span>(servaddr));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// assign IP, PORT</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    servaddr.sin_family = AF_INET;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    servaddr.sin_addr.s_addr = inet_addr(<span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    servaddr.sin_port = htons(<a class="code" href="../../dd/d93/client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// connect the client socket to server socket</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (connect(sockfd, (<a class="code" href="../../dd/d93/client_8c.html#a1e43924adac4ae865aa0acf79710261c">SA</a> *)&amp;servaddr, <span class="keyword">sizeof</span>(servaddr)) != 0)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        printf(<span class="stringliteral">&quot;connection with the server failed...\n&quot;</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        exit(0);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        printf(<span class="stringliteral">&quot;connected to the server..\n&quot;</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// function for chat</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">func</a>(sockfd);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// close the socket</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    close(sockfd);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d93/client_8c_a51af30a60f9f02777c6396b8247e356f_cgraph.svg" width="156" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aselection__sort_8c_html_ac0f2228420376f4db7e1274f2b41667c"><div class="ttname"><a href="../../df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c">main</a></div><div class="ttdeci">int main(int argc, const char *argv[])</div><div class="ttdoc">Driver Code.</div><div class="ttdef"><b>Definition:</b> selection_sort.c:69</div></div>
@@ -336,7 +259,6 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aproblem__22_2sol1_8c_html_a6cb9b08aacb61416795ee78bfceacd38"><div class="ttname"><a href="../../dd/d8b/problem__22_2sol1_8c.html#a6cb9b08aacb61416795ee78bfceacd38">MAX_NAMES</a></div><div class="ttdeci">#define MAX_NAMES</div><div class="ttdoc">Maximum number of names to store.</div><div class="ttdef"><b>Definition:</b> sol1.c:14</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a4441a6d27134cf3aed05727800d99456"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456">is_in</a></div><div class="ttdeci">char is_in(uint64_t N, uint64_t *D, uint64_t L)</div><div class="ttdoc">Check if a number is present in given array.</div><div class="ttdef"><b>Definition:</b> sol1.c:28</div></div>
 <div class="ttc" id="astruct_node_html_a87c003c9f600e3fc58e6e90835f0b605"><div class="ttname"><a href="../../db/d8b/struct_node.html#a87c003c9f600e3fc58e6e90835f0b605">Node::data</a></div><div class="ttdeci">int data</div><div class="ttdoc">stores the number</div><div class="ttdef"><b>Definition:</b> threaded_binary_trees.c:28</div></div>
-<div class="ttc" id="aclient_8c_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="../../dd/d93/client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdoc">port number to connect to</div><div class="ttdef"><b>Definition:</b> client.c:29</div></div>
 <div class="ttc" id="aproblem__23_2sol2_8c_html_ac5d600bf3077f4188afc4c5cd2c40eaf"><div class="ttname"><a href="../../d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf">get_next_abundant</a></div><div class="ttdeci">unsigned long get_next_abundant(unsigned long N)</div><div class="ttdoc">Find the next abundant number after N and not including N.</div><div class="ttdef"><b>Definition:</b> sol2.c:70</div></div>
 <div class="ttc" id="astruct_node_html"><div class="ttname"><a href="../../db/d8b/struct_node.html">Node</a></div><div class="ttdoc">Node, the basic data structure of the tree.</div><div class="ttdef"><b>Definition:</b> threaded_binary_trees.c:27</div></div>
 <div class="ttc" id="aqr__eigen__values_8c_html_a1440a7779ac56f47a3f355ce4a8c7da0"><div class="ttname"><a href="../../d7/d50/qr__eigen__values_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0">test1</a></div><div class="ttdeci">void test1()</div><div class="ttdoc">test function to compute eigen values of a 2x2 matrix</div><div class="ttdef"><b>Definition:</b> qr_eigen_values.c:224</div></div>
@@ -347,6 +269,7 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="abubble__sort__recursion_8c_html_aa8989f6c9bfd1f040854fa18b180114f"><div class="ttname"><a href="../../d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f">bubbleSort</a></div><div class="ttdeci">void bubbleSort(int *arr, int size)</div><div class="ttdoc">Bubble sort algorithm implements using recursion.</div><div class="ttdef"><b>Definition:</b> bubble_sort_recursion.c:29</div></div>
 <div class="ttc" id="agroup__sorting_html_ga8dc3ec66cb3350313fdb34bfd1674729"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a></div><div class="ttdeci">void merge(int *a, int l, int r, int n)</div><div class="ttdoc">Perform merge of segments.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:33</div></div>
 <div class="ttc" id="aproblem__5_2sol_8c_html_ae9606f1867e9921867d6572f51377b4c"><div class="ttname"><a href="../../df/de7/problem__5_2sol_8c.html#ae9606f1867e9921867d6572f51377b4c">lcm</a></div><div class="ttdeci">unsigned long lcm(unsigned long a, unsigned long b)</div><div class="ttdoc">Compute Least Common Multiple (LCM) of two numbers.</div><div class="ttdef"><b>Definition:</b> sol.c:31</div></div>
+<div class="ttc" id="aclient_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="../../dd/d93/client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Driver code.</div><div class="ttdef"><b>Definition:</b> client.c:70</div></div>
 <div class="ttc" id="aqr__decompose_8h_html"><div class="ttname"><a href="../../d4/d68/qr__decompose_8h.html">qr_decompose.h</a></div><div class="ttdoc">Library functions to compute QR decomposition of a given matrix.</div></div>
 <div class="ttc" id="abubble__sort_8c_html_ad126fa7239be97373c96861adc70b1d3"><div class="ttname"><a href="../../dd/de4/bubble__sort_8c.html#ad126fa7239be97373c96861adc70b1d3">swap</a></div><div class="ttdeci">void swap(int *first, int *second)</div><div class="ttdoc">Swap two values by using pointer.</div><div class="ttdef"><b>Definition:</b> bubble_sort.c:31</div></div>
 <div class="ttc" id="astruct__big__int_html_a187538b984c86d7cfdb13e297e7f3564"><div class="ttname"><a href="../../dc/d77/struct__big__int.html#a187538b984c86d7cfdb13e297e7f3564">_big_int::next_digit</a></div><div class="ttdeci">struct _big_int * next_digit</div><div class="ttdoc">hundreds place</div><div class="ttdef"><b>Definition:</b> sol1.c:20</div></div>
@@ -362,7 +285,6 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_aaf964739be92adc2f500e7da11e3f6be"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be">sigma</a></div><div class="ttdeci">uint64_t sigma(uint64_t N)</div><div class="ttdoc">sum of squares of factors of numbers from 1 thru N</div><div class="ttdef"><b>Definition:</b> sol1.c:114</div></div>
 <div class="ttc" id="aproblem__3_2sol1_8c_html_aa0f4796aa2e89c327f827bd55f5cb305"><div class="ttname"><a href="../../d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305">isprime</a></div><div class="ttdeci">char isprime(int no)</div><div class="ttdoc">Check if the given number is prime.</div><div class="ttdef"><b>Definition:</b> sol1.c:15</div></div>
 <div class="ttc" id="aproblem__20_2sol1_8c_html_a62cbbd106aad52daadb9403a07d0da32"><div class="ttname"><a href="../../db/d80/problem__20_2sol1_8c.html#a62cbbd106aad52daadb9403a07d0da32">big_int</a></div><div class="ttdeci">struct _big_int big_int</div><div class="ttdoc">store arbitratily large integer values as a linked list of digits.</div></div>
-<div class="ttc" id="aclient_8c_html_a51af30a60f9f02777c6396b8247e356f"><div class="ttname"><a href="../../dd/d93/client_8c.html#a51af30a60f9f02777c6396b8247e356f">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Driver code.</div><div class="ttdef"><b>Definition:</b> client.c:70</div></div>
 <div class="ttc" id="aqr__decomposition_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="../../d5/d23/qr__decomposition_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdoc">main function</div><div class="ttdef"><b>Definition:</b> qr_decomposition.c:18</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a7a9a231e30b47bc0345749c8bd1e5077"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a7a9a231e30b47bc0345749c8bd1e5077">MAX_LENGTH</a></div><div class="ttdeci">#define MAX_LENGTH</div><div class="ttdoc">chunk size of array allocation</div><div class="ttdef"><b>Definition:</b> sol1.c:18</div></div>
 <div class="ttc" id="arealtime__stats_8c_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/d47/realtime__stats_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> realtime_stats.c:128</div></div>
@@ -395,7 +317,6 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="ashell__sort2_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="../../d6/ded/shell__sort2_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> shell_sort2.c:66</div></div>
 <div class="ttc" id="abinary__search_8c_html_ae1a3968e7947464bee7714f6d43b7002"><div class="ttname"><a href="../../df/d3b/binary__search_8c.html#ae1a3968e7947464bee7714f6d43b7002">test</a></div><div class="ttdeci">void test()</div><div class="ttdoc">Test implementations.</div><div class="ttdef"><b>Definition:</b> binary_search.c:75</div></div>
 <div class="ttc" id="asol4_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="../../d6/d1b/sol4_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> sol4.c:12</div></div>
-<div class="ttc" id="aclient_8c_html_ac17020a38607ab29ce18939d5194a32a"><div class="ttname"><a href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">func</a></div><div class="ttdeci">void func(int sockfd)</div><div class="ttdoc">Continuous loop to send and receive over the socket.</div><div class="ttdef"><b>Definition:</b> client.c:37</div></div>
 <div class="ttc" id="abinary__search__tree_8c_html_af4aeda155dbe167f1c1cf38cb65bf324"><div class="ttname"><a href="../../da/d02/binary__search__tree_8c.html#af4aeda155dbe167f1c1cf38cb65bf324">node</a></div><div class="ttdeci">struct node node</div><div class="ttdoc">Node, the basic data structure in the tree.</div></div>
 <div class="ttc" id="amodified__binary__search_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="../../d3/d47/modified__binary__search_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> modified_binary_search.c:97</div></div>
 <div class="ttc" id="aproblem__20_2sol1_8c_html_afc373c28da6b17636528edcc97fb5f86"><div class="ttname"><a href="../../db/d80/problem__20_2sol1_8c.html#afc373c28da6b17636528edcc97fb5f86">add_digit</a></div><div class="ttdeci">big_int * add_digit(big_int *digit, char value)</div><div class="ttdoc">Function that allocates memory to add another digit at the MSB.</div><div class="ttdef"><b>Definition:</b> sol1.c:37</div></div>
@@ -404,7 +325,6 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="abinary__search_8c_html_a908fd6d2ad0bba33f63f8454888a0032"><div class="ttname"><a href="../../df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032">binarysearch2</a></div><div class="ttdeci">int binarysearch2(const int *arr, int l, int r, int x)</div><div class="ttdoc">Iterative implementation.</div><div class="ttdef"><b>Definition:</b> binary_search.c:51</div></div>
 <div class="ttc" id="aqr__eigen__values_8c_html_a0d8ed79786d17df48396b333c09d05bb"><div class="ttname"><a href="../../d7/d50/qr__eigen__values_8c.html#a0d8ed79786d17df48396b333c09d05bb">eigen_values</a></div><div class="ttdeci">double eigen_values(double **A, double *eigen_vals, int mat_size, char debug_print)</div><div class="ttdoc">Compute eigen values using iterative shifted QR decomposition algorithm as follows:</div><div class="ttdef"><b>Definition:</b> qr_eigen_values.c:106</div></div>
 <div class="ttc" id="agroup__sorting_html_ga4fdb8af29a07ac8f496e49a11bf9f1bd"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd">BEAD</a></div><div class="ttdeci">#define BEAD(i, j)</div><div class="ttdoc">Create easy access of elements from a 2D matrix stored in memory as a 1D array.</div><div class="ttdef"><b>Definition:</b> bead_sort.c:16</div></div>
-<div class="ttc" id="aclient_8c_html_a1e43924adac4ae865aa0acf79710261c"><div class="ttname"><a href="../../dd/d93/client_8c.html#a1e43924adac4ae865aa0acf79710261c">SA</a></div><div class="ttdeci">#define SA</div><div class="ttdoc">shortname for sockaddr</div><div class="ttdef"><b>Definition:</b> client.c:30</div></div>
 <div class="ttc" id="agroup__sorting_html_ga5bc16eaf3ffe6a6ab66780dd445904c0"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0">shell_sort</a></div><div class="ttdeci">void shell_sort(int *array, long LEN)</div><div class="ttdoc">Shell sort algorithm.</div><div class="ttdef"><b>Definition:</b> shell_sort2.c:41</div></div>
 <div class="ttc" id="abubble__sort__recursion_8c_html_ad126fa7239be97373c96861adc70b1d3"><div class="ttname"><a href="../../d5/d38/bubble__sort__recursion_8c.html#ad126fa7239be97373c96861adc70b1d3">swap</a></div><div class="ttdeci">void swap(int *first, int *second)</div><div class="ttdoc">Swapped two numbers using pointer.</div><div class="ttdef"><b>Definition:</b> bubble_sort_recursion.c:17</div></div>
 <div class="ttc" id="aproblem__19_2sol1_8c_html_a6561b1adc8a19c092679b9874da24e2e"><div class="ttname"><a href="../../dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e">is_leap_year</a></div><div class="ttdeci">char is_leap_year(short year)</div><div class="ttdoc">Check if input year is a leap year.</div><div class="ttdef"><b>Definition:</b> sol1.c:41</div></div>

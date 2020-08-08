@@ -123,19 +123,281 @@ typedef struct <a class="el" href="../../d1/d99/structcluster.html">cluster</a>&
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gad339c41d3ee9e6729aca9e9ab3f7d2d9"><td class="memItemLeft" align="right" valign="top"><a id="gad339c41d3ee9e6729aca9e9ab3f7d2d9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>calculateNearst</b> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> *o, <a class="el" href="../../d1/d99/structcluster.html">cluster</a> clusters[], int k)</td></tr>
+<tr class="memitem:gad339c41d3ee9e6729aca9e9ab3f7d2d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9">calculateNearst</a> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> *o, <a class="el" href="../../d1/d99/structcluster.html">cluster</a> clusters[], int k)</td></tr>
 <tr class="separator:gad339c41d3ee9e6729aca9e9ab3f7d2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadee39a3f17bf5144df5592e48dbfc9f7"><td class="memItemLeft" align="right" valign="top"><a id="gadee39a3f17bf5144df5592e48dbfc9f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calculateCentroid</b> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> observations[], size_t size, <a class="el" href="../../d1/d99/structcluster.html">cluster</a> *centroid)</td></tr>
+<tr class="memitem:gadee39a3f17bf5144df5592e48dbfc9f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7">calculateCentroid</a> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> observations[], size_t size, <a class="el" href="../../d1/d99/structcluster.html">cluster</a> *centroid)</td></tr>
 <tr class="separator:gadee39a3f17bf5144df5592e48dbfc9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad229b1dc406cb5ea510f26a373ed8bfd"><td class="memItemLeft" align="right" valign="top"><a id="gad229b1dc406cb5ea510f26a373ed8bfd"></a>
-<a class="el" href="../../d1/d99/structcluster.html">cluster</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>kMeans</b> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> observations[], size_t size, int k)</td></tr>
+<tr class="memitem:gad229b1dc406cb5ea510f26a373ed8bfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d99/structcluster.html">cluster</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d71/group__k__means.html#gad229b1dc406cb5ea510f26a373ed8bfd">kMeans</a> (<a class="el" href="../../d1/d5e/structobservation.html">observation</a> observations[], size_t size, int k)</td></tr>
 <tr class="separator:gad229b1dc406cb5ea510f26a373ed8bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gadee39a3f17bf5144df5592e48dbfc9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadee39a3f17bf5144df5592e48dbfc9f7">&#9670;&nbsp;</a></span>calculateCentroid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calculateCentroid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d5e/structobservation.html">observation</a>&#160;</td>
+          <td class="paramname"><em>observations</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d99/structcluster.html">cluster</a> *&#160;</td>
+          <td class="paramname"><em>centroid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate centoid and assign it to the cluster variable</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observations</td><td>an array of observations whose centroid is calculated </td></tr>
+    <tr><td class="paramname">size</td><td>size of the observations array </td></tr>
+    <tr><td class="paramname">centroid</td><td>a reference to cluster object to store information of centroid </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> = 0;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a> = size;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">for</span> (; i &lt; size; i++)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> += observations[i].<a class="code" href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">x</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> += observations[i].<a class="code" href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">y</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        observations[i].<a class="code" href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">group</a> = 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> /= centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> /= centroid-&gt;<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gad339c41d3ee9e6729aca9e9ab3f7d2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad339c41d3ee9e6729aca9e9ab3f7d2d9">&#9670;&nbsp;</a></span>calculateNearst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calculateNearst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d5e/structobservation.html">observation</a> *&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d99/structcluster.html">cluster</a>&#160;</td>
+          <td class="paramname"><em>clusters</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the index of centroid nearest to given observation</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>observation </td></tr>
+    <tr><td class="paramname">clusters</td><td>array of cluster having centroids coordinates </td></tr>
+    <tr><td class="paramname">k</td><td>size of clusters array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of nearest centroid for given observation </dd></dl>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">double</span> minD = DBL_MAX;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">double</span> dist = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> index = -1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (; i &lt; k; i++)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">/* Calculate Squared Distance*/</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        dist = (clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> - o-&gt;<a class="code" href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">x</a>) * (clusters[i].x - o-&gt;<a class="code" href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">x</a>) +</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;               (clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> - o-&gt;<a class="code" href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">y</a>) * (clusters[i].y - o-&gt;<a class="code" href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">y</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (dist &lt; minD)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            minD = dist;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            index = i;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gad229b1dc406cb5ea510f26a373ed8bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad229b1dc406cb5ea510f26a373ed8bfd">&#9670;&nbsp;</a></span>kMeans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d99/structcluster.html">cluster</a>* kMeans </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d5e/structobservation.html">observation</a>&#160;</td>
+          <td class="paramname"><em>observations</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&ndash;K Means Algorithm&ndash;</p><ol type="1">
+<li>Assign each observation to one of k groups creating a random initial clustering</li>
+<li>Find the centroid of observations for each cluster to form new centroids</li>
+<li>Find the centroid which is nearest for each observation among the calculated centroids</li>
+<li>Assign the observation to its nearest centroid to create a new clustering.</li>
+<li>Repeat step 2,3,4 until there is no change the current clustering and is same as last clustering.</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observations</td><td>an array of observations to cluster </td></tr>
+    <tr><td class="paramname">size</td><td>size of observations array </td></tr>
+    <tr><td class="paramname">k</td><td>no of clusters to be made</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to cluster object </dd></dl>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="../../d1/d99/structcluster.html">cluster</a>* clusters = NULL;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (k &lt;= 1)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">        If we have to cluster them only in one group</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">        then calculate centroid of observations and</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">        that will be a ingle cluster</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        clusters = (<a class="code" href="../../d1/d99/structcluster.html">cluster</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        memset(clusters, 0, <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="../../d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7">calculateCentroid</a>(observations, size, clusters);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k &lt; size)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        clusters = malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>) * k);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        memset(clusters, 0, k * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>));</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">/* STEP 1 */</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; size; j++)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">group</a> = rand() % k;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">size_t</span> changed = 0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">size_t</span> minAcceptedError =</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            size /</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            10000;  <span class="comment">// Do until 99.99 percent points are in correct cluster</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">int</span> t = 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="comment">/* Initialize clusters */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k; i++)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> = 0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                clusters[i].<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a> = 0;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="comment">/* STEP 2*/</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; size; j++)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                t = observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">group</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                clusters[t].<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> += observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">x</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                clusters[t].<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> += observations[j].<a class="code" href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">y</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                clusters[t].<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a>++;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k; i++)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> /= clusters[i].<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                clusters[i].<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> /= clusters[i].<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">/* STEP 3 and 4 */</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            changed = 0;  <span class="comment">// this variable stores change in clustering</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; size; j++)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                t = <a class="code" href="../../d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9">calculateNearst</a>(observations + j, clusters, k);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">if</span> (t != observations[j].group)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    changed++;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">group</a> = t;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">while</span> (changed &gt; minAcceptedError);  <span class="comment">// Keep on grouping until we have</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                               <span class="comment">// got almost best clustering</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">/* If no of clusters is more than observations</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">           each observation can be its own cluster</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        clusters = (<a class="code" href="../../d1/d99/structcluster.html">cluster</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>) * k);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        memset(clusters, 0, k * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d99/structcluster.html">cluster</a>));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; size; j++)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            clusters[j].<a class="code" href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">x</a> = observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">x</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            clusters[j].<a class="code" href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">y</a> = observations[j].<a class="code" href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">y</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            clusters[j].<a class="code" href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">count</a> = 1;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            observations[j].<a class="code" href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">group</a> = j;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">return</span> clusters;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d71/group__k__means_gad229b1dc406cb5ea510f26a373ed8bfd_cgraph.svg" width="250" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructobservation_html_a2db8ace685c08aa7b52f5a28b0843aab"><div class="ttname"><a href="../../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab">observation::group</a></div><div class="ttdeci">int group</div><div class="ttdoc">the group no in which this observation would go</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:42</div></div>
+<div class="ttc" id="agroup__k__means_html_gad339c41d3ee9e6729aca9e9ab3f7d2d9"><div class="ttname"><a href="../../d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9">calculateNearst</a></div><div class="ttdeci">int calculateNearst(observation *o, cluster clusters[], int k)</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:69</div></div>
+<div class="ttc" id="agroup__k__means_html_gadee39a3f17bf5144df5592e48dbfc9f7"><div class="ttname"><a href="../../d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7">calculateCentroid</a></div><div class="ttdeci">void calculateCentroid(observation observations[], size_t size, cluster *centroid)</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:97</div></div>
+<div class="ttc" id="astructobservation_html_a04f3dcfd59dd91353395e35c9831fade"><div class="ttname"><a href="../../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade">observation::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">abscissa of 2D data point</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:40</div></div>
+<div class="ttc" id="astructcluster_html"><div class="ttname"><a href="../../d1/d99/structcluster.html">cluster</a></div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:53</div></div>
+<div class="ttc" id="astructcluster_html_a10fa7010c12d0f03a422d68321495479"><div class="ttname"><a href="../../d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479">cluster::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">ordinate of centroid of this cluster</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:55</div></div>
+<div class="ttc" id="astructcluster_html_aaacf0562ee2d9e8866c66ddaa6527c2b"><div class="ttname"><a href="../../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b">cluster::count</a></div><div class="ttdeci">size_t count</div><div class="ttdoc">count of observations present in this cluster</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:56</div></div>
+<div class="ttc" id="astructcluster_html_a13278ef636c1d9bd9ce8fad736f4c570"><div class="ttname"><a href="../../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570">cluster::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">abscissa centroid of this cluster</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:54</div></div>
+<div class="ttc" id="astructobservation_html_ab6be1fa7024b2d5f3a30d6c6b70efdd7"><div class="ttname"><a href="../../d1/d5e/structobservation.html#ab6be1fa7024b2d5f3a30d6c6b70efdd7">observation::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">ordinate of 2D data point</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:41</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

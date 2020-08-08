@@ -9,5 +9,8 @@ var group__k__means =
       [ "count", "d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b", null ],
       [ "x", "d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570", null ],
       [ "y", "d1/d99/structcluster.html#a10fa7010c12d0f03a422d68321495479", null ]
-    ] ]
+    ] ],
+    [ "calculateCentroid", "d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7", null ],
+    [ "calculateNearst", "d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9", null ],
+    [ "kMeans", "d8/d71/group__k__means.html#gad229b1dc406cb5ea510f26a373ed8bfd", null ]
 ];
