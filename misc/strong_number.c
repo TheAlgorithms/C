@@ -27,7 +27,9 @@ bool isStrong(int number)
 
         /* calculate factorial of n */
         for (int i = 1; i <= remainder; factorial *= i, i++)
+        {
             ;
+        }
         sum += factorial;
         originalNumber /= 10;
     }
