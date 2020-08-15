@@ -1,38 +1,57 @@
 /**
- * Modified on 07/12/2017, Kyler Smith
- *
- * A number is called strong number if sum of the
- * 	factorial of its digit is equal to number itself.
+ * @file
+ * @brief Strong number is a number whose sum of all digits’ factorial is equal
+ * to the number n For example: 145 = 1!(1) + 4!(24) + 5!(120)
  */
-
+#include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
 
-void strng(int a)
+/**
+ * Check if given number is strong number or not
+ * @param number
+ * @return `true` if given number is strong number, otherwise `false`
+ */
+bool isStrong(int number)
 {
-    int j = a;
-    int sum = 0;
-    int b, i, fact = 1;
-    while (a > 0)
+    if (number < 0)
     {
-        fact = 1;
-        b = a % 10;
-        for (i = 1; i <= b; i++)
-        {
-            fact = fact * i;
-        }
-        a = a / 10;
-        sum = sum + fact;
+        return false;
     }
-    if (sum == j)
-        printf("%d is a strong number", j);
-    else
-        printf("%d is not a strong number", j);
+    int sum = 0;
+    int originalNumber = number;
+    while (originalNumber != 0)
+    {
+        int remainder = originalNumber % 10;
+        int factorial = remainder == 0 ? 0 : 1; /* 0! == 1 */
+
+        /* calculate factorial of n */
+        for (int i = 1; i <= remainder; factorial *= i, i++)
+        {
+            ;
+        }
+        sum += factorial;
+        originalNumber /= 10;
+    }
+    return number == sum;
 }
+
+/**
+ * Test function
+ * @return void
+ */
+void test()
+{
+    assert(isStrong(145));  /* 145 = 1! + 4! + 5! */
+    assert(!isStrong(543)); /* 543 != 5!+ 4! + 3! */
+}
+
+/**
+ * Driver Code
+ * @return None
+ */
 int main()
 {
-    int a;
-    printf("Enter the number to check");
-    scanf("%d", &a);
-    strng(a);
+    test();
     return 0;
 }
