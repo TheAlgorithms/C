@@ -206,21 +206,21 @@ static void test()
 
     d = vector_norm(&a);
     // printf("|a| = %.4g\n", d);
-    assert(fabs(d - 3.742) < 0.01);
+    assert(fabsf(d - 3.742) < 0.01);
     d = vector_norm(&b);
     // printf("|b| = %.4g\n", d);
-    assert(fabs(d - 1.732) < 0.01);
+    assert(fabsf(d - 1.732) < 0.01);
 
     d = dot_prod(&a, &b);
     // printf("Dot product: %f\n", d);
-    assert(fabs(d - 6.f) < 0.01);
+    assert(fabsf(d - 6.f) < 0.01);
 
     vec_3d c = vector_prod(&a, &b);
     // printf("Vector product ");
     // printf("%s", print_vector(&c, "c"));
-    assert(fabs(c.x - (-1)) < 0.01);
-    assert(fabs(c.y - (2)) < 0.01);
-    assert(fabs(c.z - (-1)) < 0.01);
+    assert(fabsf(c.x - (-1)) < 0.01);
+    assert(fabsf(c.y - (2)) < 0.01);
+    assert(fabsf(c.z - (-1)) < 0.01);
 }
 
 /**

@@ -160,10 +160,10 @@ static void test()
     printf("Quaternion: %.4g %+.4g %+.4g %+.4g\n", test_quat.w,
            test_quat.dual.x, test_quat.dual.y, test_quat.dual.z);
 
-    assert(fabs(test_quat.w - quat.w) < .01);
-    assert(fabs(test_quat.q1 - quat.q1) < .01);
-    assert(fabs(test_quat.q2 - quat.q2) < .01);
-    assert(fabs(test_quat.q3 - quat.q3) < .01);
+    assert(fabsf(test_quat.w - quat.w) < .01);
+    assert(fabsf(test_quat.q1 - quat.q1) < .01);
+    assert(fabsf(test_quat.q2 - quat.q2) < .01);
+    assert(fabsf(test_quat.q3 - quat.q3) < .01);
 }
 
 int main()
