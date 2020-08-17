@@ -75,9 +75,22 @@ typedef struct quaternion_
 /** 3D Euler or Tait-Bryan angles (in radian) */
 typedef struct euler_
 {
-    float roll;  /**< or bank \f$\phi\f$ = rotation about X axis */
-    float pitch; /**< or elevation \f$\theta\f$ = rotation about Y axis */
-    float yaw;   /**< or heading \f$\psi\f$ = rotation about Z axis */
+    union
+    {
+        float roll; /**< or bank \f$\phi\f$ = rotation about X axis */
+        float bank; /**< or bank \f$\phi\f$ = rotation about X axis */
+    };
+    union
+    {
+        float pitch; /**< or elevation \f$\theta\f$ = rotation about Y axis */
+        float
+            elevation; /**< or elevation \f$\theta\f$ = rotation about Y axis */
+    };
+    union
+    {
+        float yaw;     /**< or heading \f$\psi\f$ = rotation about Z axis */
+        float heading; /**< or heading \f$\psi\f$ = rotation about Z axis */
+    };
 } euler;
 
 /** @} */
