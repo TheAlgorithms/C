@@ -59,7 +59,11 @@ typedef struct mat_3x3_
  */
 typedef struct quaternion_
 {
-    float w; /**< real part of quaternion */
+    union
+    {
+        float w;  /**< real part of quaternion */
+        float q0; /**< real part of quaternion */
+    };
     /**< dual part of quaternion */
     union
     {
