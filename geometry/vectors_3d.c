@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief API Functions related to 3D vector operations.
+ * @brief Functions related to 3D vector operations.
  * @author Krishna Vedala
  */
 
