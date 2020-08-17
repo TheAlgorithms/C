@@ -78,18 +78,17 @@ typedef struct euler_
     union
     {
         float roll; /**< or bank \f$\phi\f$ = rotation about X axis */
-        float bank; /**< or bank \f$\phi\f$ = rotation about X axis */
+        float bank; /**< or roll \f$\phi\f$ = rotation about X axis */
     };
     union
     {
         float pitch; /**< or elevation \f$\theta\f$ = rotation about Y axis */
-        float
-            elevation; /**< or elevation \f$\theta\f$ = rotation about Y axis */
+        float elevation; /**< or pitch \f$\theta\f$ = rotation about Y axis */
     };
     union
     {
         float yaw;     /**< or heading \f$\psi\f$ = rotation about Z axis */
-        float heading; /**< or heading \f$\psi\f$ = rotation about Z axis */
+        float heading; /**< or yaw \f$\psi\f$ = rotation about Z axis */
     };
 } euler;
 
