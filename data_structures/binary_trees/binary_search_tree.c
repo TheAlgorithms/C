@@ -245,6 +245,32 @@ void inOrder(node *root)
     }
 }
 
+/** Traversal procedure that can be used for copying the tree
+ * @param root pointer to parent node
+ */
+void preOrder(node *root)
+{
+    if (root != NULL)
+    {
+        printf("\t[ %d ]\t", root->data);
+        preOrder(root->left);
+        preOrder(root->right);
+    }
+}
+
+/** Traversal procedure that can be used for delete the tree
+ * @param root pointer to parent node
+ */
+void postOrder(node *root)
+{
+    if (root != NULL)
+    {
+        postOrder(root->left);
+        postOrder(root->right);
+        printf("\t[ %d ]\t", root->data);
+    }
+}
+
 /** Main funcion */
 int main()
 {
