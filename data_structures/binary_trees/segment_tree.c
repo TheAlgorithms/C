@@ -40,20 +40,20 @@ typedef struct segment_tree
     void *root;       /**< the root of formed segment tree */
     void *identity;   /**< identity element for combine function */
     size_t elem_size; /**< size of each data element */
-    size_t size;      /**< total size of array which segment tree represents*/
+    size_t length;    /**< total size of array which segment tree represents*/
     combine_function combine; /**< the function to be used to combine two node's
                                  data to form parent's data */
 } segment_tree;
 
 /**
- * @fn Builds a Segment tree
+ * Builds a Segment tree
  * It is assumed that leaves of tree already contains data.
  * @param tree pointer to segment tree to be build
  */
 void segment_tree_build(segment_tree *tree)
 {
     size_t elem_size = tree->elem_size;
-    int index = (tree->size - 2);
+    int index = (tree->length - 2);
     size_t b, l, r;
     char *ptr = (char *)tree->root;
     for (; index >= 0; index--)
@@ -66,7 +66,7 @@ void segment_tree_build(segment_tree *tree)
 }
 
 /**
- * @fn For point updates
+ * For point updates
  * This function updates the element at given index and also updates segment
  * tree accordingly
  *
@@ -77,7 +77,7 @@ void segment_tree_build(segment_tree *tree)
 void segment_tree_update(segment_tree *tree, size_t index, void *val)
 {
     size_t elem_size = tree->elem_size;
-    index = index + tree->size - 1;
+    index = index + tree->length - 1;
     char *base = (char *)tree->root;
     char *t = base + index * elem_size;
     memcpy(t, val, elem_size);
@@ -91,7 +91,7 @@ void segment_tree_update(segment_tree *tree, size_t index, void *val)
 }
 
 /**
- * @fn Query the segment tree
+ * Query the segment tree
  * This function helps in range query of segment tree
  * This function assumes that the given range is valid
  * Performs the query in range [l,r]
@@ -106,8 +106,8 @@ void segment_tree_query(segment_tree *tree, long long l, long long r, void *res)
     memcpy(res, tree->identity, elem_size);
     elem_size = tree->elem_size;
     char *root = (char *)tree->root;
-    l += tree->size - 1;
-    r += tree->size - 1;
+    l += tree->length - 1;
+    r += tree->length - 1;
     while (l <= r)
     {
         if (!(l & 1))
@@ -124,36 +124,36 @@ void segment_tree_query(segment_tree *tree, long long l, long long r, void *res)
 }
 
 /**
- * @fn Initializes Segment Tree
+ * Initializes Segment Tree
  * Accquires memory for segment tree
  * and fill the leaves of segment tree with data from array
  * @param arr the array data upon which segment tree is build
  * @param elem_size size of each element in segment tree
- * @param size total no of elements in array
+ * @param len total no of elements in array
  * @param identity the identity element for combine_function
  * @param func the combine_function used to build segment tree
  *
  * @returns pointer to sgement tree build
  */
-segment_tree *segment_tree_init(void *arr, size_t elem_size, size_t size,
+segment_tree *segment_tree_init(void *arr, size_t elem_size, size_t len,
                                 void *identity, combine_function func)
 {
     segment_tree *tree = malloc(sizeof(segment_tree));
     tree->elem_size = elem_size;
-    tree->size = size;
+    tree->length = len;
     tree->combine = func;
-    tree->root = malloc(sizeof(char) * elem_size * (2 * size - 1));
+    tree->root = malloc(sizeof(char) * elem_size * (2 * len - 1));
     tree->identity = malloc(sizeof(char) * elem_size);
     char *ptr = (char *)tree->root;
-    memset(ptr, 0, (size - 1) * elem_size);  // Initializing memory
-    ptr = ptr + (size - 1) * elem_size;
-    memcpy(ptr, arr, elem_size * size);  // copy the leaf nodes i.e. array data
+    memset(ptr, 0, (len - 1) * elem_size);  // Initializing memory
+    ptr = ptr + (len - 1) * elem_size;
+    memcpy(ptr, arr, elem_size * len);  // copy the leaf nodes i.e. array data
     memcpy(tree->identity, identity, elem_size);  // copy identity element
     return tree;
 }
 
 /**
- * @fn Dispose Segment Tree
+ * Dispose Segment Tree
  * Frees all heap memory accquired by segment tree
  * @param tree pointer to segment tree
  */
@@ -164,7 +164,7 @@ void segment_tree_dispose(segment_tree *tree)
 }
 
 /**
- * @fn Prints the data in segment tree
+ * Prints the data in segment tree
  * The data should be of int type
  * A utility to print segment tree
  * with data type of int
@@ -174,7 +174,7 @@ void segment_tree_print_int(segment_tree *tree)
 {
     char *base = (char *)tree->root;
     size_t i = 0;
-    for (; i < 2 * tree->size - 1; i++)
+    for (; i < 2 * tree->length - 1; i++)
     {
         printf("%d ", *(int *)(base + i * tree->elem_size));
     }
@@ -182,7 +182,7 @@ void segment_tree_print_int(segment_tree *tree)
 }
 
 /**
- * @fn utility for test
+ * Utility for test
  * A function compare for minimum between two integers
  * This function is used as combine_function for RMQ
  * @param a pointer to integer a
@@ -195,7 +195,7 @@ void minimum(const void *a, const void *b, void *c)
 }
 
 /**
- * @fn test RMQ
+ * Test RMQ
  * Testing Segment tree using
  * Range Minimum Queries
  */
