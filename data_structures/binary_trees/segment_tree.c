@@ -11,19 +11,20 @@
  * @author [Lakhan Nad](https://github.com/Lakhan-Nad)
  */
 
-#include <assert.h> /* for assert */
-#include <stdio.h>  /* for scanf printf */
-#include <stdlib.h> /* for malloc, free */
-#include <string.h> /* for memcpy, memset */
+#include <assert.h>   /* for assert */
+#include <inttypes.h> /* for int32 */
+#include <stdio.h>    /* for scanf printf */
+#include <stdlib.h>   /* for malloc, free */
+#include <string.h>   /* for memcpy, memset */
 
 /**
  * Function that combines two data to generate a new one
  * The name of function might be misleading actually combine here signifies the
  * fact that in segment trees we take partial result from two ranges and using
- * paetial results we derive the result for joint range of those two ranges
+ * partial results we derive the result for joint range of those two ranges
  * For Example: array(1,2,3,4,5,6) sum of range [0,2] = 6
  * and sum of range [3,5] = 15 the combined sum of two range is 6+15=21
- * Note: The function is same to binary function in Discrete Mathematics
+ * @note The function is same to binary function in Discrete Mathematics
  * @param a pointer to first data
  * @param b pointer to second data
  * @param result pointer to memory location where result of combining a and b is
@@ -32,17 +33,18 @@
 typedef void (*combine_function)(const void *a, const void *b, void *result);
 
 /**
- * @struct Segment tree
  * This structures holds all the data that is required by a segment tree
  */
 typedef struct segment_tree
 {
     void *root;       /**< the root of formed segment tree */
     void *identity;   /**< identity element for combine function */
-    size_t elem_size; /**< size of each data element */
+    size_t elem_size; /**< size in bytes of each data element */
     size_t length;    /**< total size of array which segment tree represents*/
-    combine_function combine; /**< the function to be used to combine two node's
-                                 data to form parent's data */
+    /** the function to be used to combine two node's
+     * data to form parent's data
+     */
+    combine_function combine;
 } segment_tree;
 
 /**
@@ -198,15 +200,16 @@ void minimum(const void *a, const void *b, void *c)
  * Test RMQ
  * Testing Segment tree using
  * Range Minimum Queries
+ * @returns void
  */
 static void test()
 {
-    int arr[10] = {1, 0, 3, 5, 7, 2, 11, 6, -2, 8};
-    int identity = __INT32_MAX__;
+    int32_t arr[10] = {1, 0, 3, 5, 7, 2, 11, 6, -2, 8};
+    int32_t identity = __INT32_MAX__;
     segment_tree *tree =
-        segment_tree_init(arr, sizeof(int), 10, &identity, minimum);
+        segment_tree_init(arr, sizeof(*arr), 10, &identity, minimum);
     segment_tree_build(tree);
-    int result;
+    int32_t result;
     segment_tree_query(tree, 3, 6, &result);
     assert(result == 2);
     segment_tree_query(tree, 8, 9, &result);
