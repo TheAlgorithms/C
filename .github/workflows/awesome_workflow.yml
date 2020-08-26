@@ -16,7 +16,7 @@ jobs:
       - name: requirements
         run: |
           sudo apt -qq -y update
-          sudo apt -qq install clang-tidy-10
+          sudo apt -qq install clang-tidy-10 clang-format-10
       - name: Setup Git Specs
         run: |
           git config --global user.name github-actions
@@ -40,7 +40,7 @@ jobs:
               git "mv" "${fname}" ${new_fname}
             fi
           done
-          git commit -am "formatting filenames $GITHUB_SHA" ||  true
+          git commit -am "formatting filenames ${GITHUB_SHA::8}" ||  true
       - name: Update DIRECTORY.md
         shell: python
         run: |
@@ -120,17 +120,11 @@ jobs:
           if not cpp_files:
             sys.exit(0)
 
-          subprocess.run(["clang-tidy-10", "-p=build", "--fix", *cpp_files, "--"],
-              check=True, text=True, stderr=subprocess.STDOUT)
-          # for cpp_file in cpp_files:
-          #   subprocess.run(["clang-tidy-10", "-p=build", cpp_file, "--"],
-          #     check=True, text=True, stderr=subprocess.STDOUT)
-
-          # print("g++:")
-          # compile_exts = tuple(".c .c++ .cc .cpp .cu .cxx".split())
-          # compile_files = [file for file in cpp_files if file.lower().endswith(compile_exts)]
-          # for cpp_file in cpp_files:
-          #   subprocess.run(["g++", cpp_file], check=True, text=True)
+            subprocess.run(["clang-tidy-10", "-p=build", "--fix", *cpp_files, "--"],
+                check=True, text=True, stderr=subprocess.STDOUT)
+            
+            subprocess.run(["clang-format-10", "-i", *cpp_files],
+                check=True, text=True, stderr=subprocess.STDOUT)
 
           upper_files = [file for file in cpp_files if file != file.lower()]
           if upper_files:
@@ -152,7 +146,7 @@ jobs:
             sys.exit(bad_files)
       - name: Commit and push changes
         run: |
-          git commit -am "clang-tidy fixes for $GITHUB_SHA" ||  true
+          git commit -am "clang-format and clang-tidy fixes for ${GITHUB_SHA::8}" ||  true
           git push --force origin HEAD:$GITHUB_REF || true
 
   build:
