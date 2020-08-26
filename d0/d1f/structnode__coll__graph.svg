@@ -23,13 +23,13 @@
 <title>Node1&#45;&gt;Node1</title>
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M48.25,-47.44C52.86,-46.93 56,-45.79 56,-44 56,-41.07 47.53,-39.86 38.04,-40.36"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="47.97,-43.95 38.04,-47.64 48.1,-50.95 47.97,-43.95"/>
-<text text-anchor="middle" x="77.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00"> leftNode</text>
-<text text-anchor="middle" x="77.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">next</text>
-<text text-anchor="middle" x="77.5" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00">right</text>
-<text text-anchor="middle" x="77.5" y="-47" font-family="Helvetica,sans-Serif" font-size="10.00">left</text>
+<text text-anchor="middle" x="77.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00"> left</text>
+<text text-anchor="middle" x="77.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">leftNode</text>
+<text text-anchor="middle" x="77.5" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00">link</text>
+<text text-anchor="middle" x="77.5" y="-47" font-family="Helvetica,sans-Serif" font-size="10.00">next</text>
 <text text-anchor="middle" x="77.5" y="-36" font-family="Helvetica,sans-Serif" font-size="10.00">par</text>
-<text text-anchor="middle" x="77.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">link</text>
-<text text-anchor="middle" x="77.5" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00">pre</text>
+<text text-anchor="middle" x="77.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">pre</text>
+<text text-anchor="middle" x="77.5" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00">right</text>
 <text text-anchor="middle" x="77.5" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00">rightNode</text>
 </g>
 </g>

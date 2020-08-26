@@ -24,8 +24,8 @@
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M51.32,-19.9C55.9,-19.37 59,-18.24 59,-16.5 59,-13.65 50.65,-12.42 41.1,-12.82"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="51,-16.41 41.1,-20.18 51.19,-23.41 51,-16.41"/>
 <text text-anchor="middle" x="72.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00"> eqkid</text>
-<text text-anchor="middle" x="72.5" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00">lokid</text>
-<text text-anchor="middle" x="72.5" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00">hikid</text>
+<text text-anchor="middle" x="72.5" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00">hikid</text>
+<text text-anchor="middle" x="72.5" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00">lokid</text>
 </g>
 </g>
 </svg>

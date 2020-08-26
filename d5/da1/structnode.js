@@ -1,8 +1,8 @@
 var structnode =
 [
     [ "color", "d5/da1/structnode.html#a310a09cb5a882788781a5287096ad425", null ],
-    [ "data", "d5/da1/structnode.html#a6f9100a3fe81d82776ce47ecdba94691", null ],
     [ "data", "d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2", null ],
+    [ "data", "d5/da1/structnode.html#a6f9100a3fe81d82776ce47ecdba94691", null ],
     [ "info", "d5/da1/structnode.html#ac8973feda870a119ccdc25910254db0c", null ],
     [ "left", "d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0", null ],
     [ "leftNode", "d5/da1/structnode.html#a2783f1aec750191646305988f7e28756", null ],

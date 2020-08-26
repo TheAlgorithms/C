@@ -23,8 +23,8 @@
 <title>Node1&#45;&gt;Node1</title>
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M60.45,-14.28C65,-13.71 68,-12.62 68,-11 68,-8.34 59.91,-7.1 50.18,-7.26"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="60.01,-10.8 50.18,-14.74 60.32,-17.79 60.01,-10.8"/>
-<text text-anchor="middle" x="91" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00"> prev_digit</text>
-<text text-anchor="middle" x="91" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00">next_digit</text>
+<text text-anchor="middle" x="91" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00"> next_digit</text>
+<text text-anchor="middle" x="91" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00">prev_digit</text>
 </g>
 </g>
 </svg>
