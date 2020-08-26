@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['gcd_88',['gcd',['../df/de7/problem__5_2sol_8c.html#a59347107cbfdf48d51108e50280e760d',1,'sol.c']]],
-  ['get_5fclock_5fdiff_89',['get_clock_diff',['../d2/df6/kohonen__som__topology_8c.html#a2256c10b16edba377b64a44b6c656908',1,'get_clock_diff(clock_t start_t, clock_t end_t):&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908',1,'get_clock_diff(clock_t start_t, clock_t end_t):&#160;kohonen_som_trace.c']]],
-  ['get_5fdigits_90',['get_digits',['../d8/d32/problem__25_2sol1_8c.html#a2b90df6bfbf0d18cd9a19c1a71453783',1,'sol1.c']]],
-  ['get_5fdivisors_91',['get_divisors',['../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215',1,'sol1.c']]],
-  ['get_5fmin_5f2d_92',['get_min_2d',['../d1/d6b/group__kohonen__2d.html#gadc22d512c00a9f5799ee067f4fb90b4b',1,'kohonen_som_topology.c']]],
-  ['get_5fmonth_5fdays_93',['get_month_days',['../dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75',1,'sol1.c']]],
-  ['get_5fnext_5fabundant_94',['get_next_abundant',['../d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf',1,'get_next_abundant(unsigned long N):&#160;sol1.c'],['../d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf',1,'get_next_abundant(unsigned long N):&#160;sol2.c']]],
-  ['get_5fnext_5funknown_95',['get_next_unknown',['../d5/df4/group__sudoku.html#ga62e94fc39f116e2c81daed8f5437431b',1,'sudoku_solver.c']]],
-  ['get_5fnumber_96',['get_number',['../db/d01/problem__13_2sol1_8c.html#ac260f58785fb20eb09bb35385a7d47f8',1,'sol1.c']]],
-  ['get_5fperfect_5fnumber_97',['get_perfect_number',['../d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b',1,'get_perfect_number(unsigned long N):&#160;sol1.c'],['../d4/dbd/problem__23_2sol2_8c.html#a1aca7f530f82b27100262adba9e7556b',1,'get_perfect_number(unsigned long N):&#160;sol2.c']]],
-  ['get_5fproduct_98',['get_product',['../dc/d63/problem__8_2sol1_8c.html#a9ffc8845f17b01a353767a40a3adf7bd',1,'sol1.c']]],
-  ['get_5frand_99',['get_rand',['../d6/d2e/cartesian__to__polar_8c.html#a60e62b809ca9dcb1b20a140b30d30f60',1,'cartesian_to_polar.c']]],
-  ['getmax_100',['getMax',['../da/d02/binary__search__tree_8c.html#ad297e528a7bb8604ca93af149d609150',1,'binary_search_tree.c']]],
-  ['graph_101',['Graph',['../d4/dd4/struct_graph.html',1,'']]],
-  ['graphrep_102',['GraphRep',['../d2/d6a/struct_graph_rep.html',1,'']]],
-  ['group_103',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]]
+  ['factorial_5flarge_5fnumber_2ec_92',['factorial_large_number.c',['../d6/d3d/factorial__large__number_8c.html',1,'']]],
+  ['fib_93',['fib',['../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3',1,'fibonacci_fast.c']]],
+  ['fibonacci_5ffast_2ec_94',['fibonacci_fast.c',['../d4/d99/fibonacci__fast_8c.html',1,'']]],
+  ['find_95',['find',['../da/d02/binary__search__tree_8c.html#adff4c6248834a9944a1fb03a20230c9c',1,'find(node *root, int data):&#160;binary_search_tree.c'],['../df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86',1,'find(int *p, int x):&#160;union_find.c']]],
+  ['forward_5feuler_96',['forward_euler',['../d4/d07/ode__forward__euler_8c.html#aaf88ad8f9f7c39fc38f3f03d6fea9df9',1,'ode_forward_euler.c']]],
+  ['forward_5feuler_5fstep_97',['forward_euler_step',['../d4/d07/ode__forward__euler_8c.html#ae6c9413953c8d9d4bc9e374b29586350',1,'ode_forward_euler.c']]],
+  ['free_5fmemory_98',['free_memory',['../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d',1,'cantor_set.c']]],
+  ['func_99',['func',['../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;client.c'],['../d1/d20/server_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;server.c'],['../dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925',1,'func(double complex x):&#160;newton_raphson_root.c']]]
 ];

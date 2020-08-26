@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['prev_5fdigit_561',['prev_digit',['../dc/d77/struct__big__int.html#ad8405989a924410942b39ec0e9fef30b',1,'_big_int']]]
+  ['left_617',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node']]],
+  ['llink_618',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]]
 ];

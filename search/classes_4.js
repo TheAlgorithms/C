@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['data_312',['data',['../df/dea/structdata.html',1,'']]],
-  ['dict_313',['Dict',['../d4/dfe/struct_dict.html',1,'']]],
-  ['dynamic_5farray_314',['dynamic_array',['../d6/d42/structdynamic__array.html',1,'']]]
+  ['data_354',['data',['../df/dea/structdata.html',1,'']]],
+  ['dict_355',['Dict',['../d4/dfe/struct_dict.html',1,'']]],
+  ['dual_5fquat_5f_356',['dual_quat_',['../d7/dfd/structdual__quat__.html',1,'']]],
+  ['dynamic_5farray_357',['dynamic_array',['../d6/d42/structdynamic__array.html',1,'']]]
 ];

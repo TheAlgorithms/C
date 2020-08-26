@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['qr_5fdecompose_2eh_371',['qr_decompose.h',['../d4/d68/qr__decompose_8h.html',1,'']]],
-  ['qr_5fdecomposition_2ec_372',['qr_decomposition.c',['../d5/d23/qr__decomposition_8c.html',1,'']]],
-  ['qr_5feigen_5fvalues_2ec_373',['qr_eigen_values.c',['../d7/d50/qr__eigen__values_8c.html',1,'']]]
+  ['palindrome_2ec_417',['palindrome.c',['../df/d16/palindrome_8c.html',1,'']]],
+  ['prime_2ec_418',['prime.c',['../da/d93/prime_8c.html',1,'']]]
 ];

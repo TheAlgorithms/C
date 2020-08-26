@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['l_146',['L',['../df/db3/struct_l.html',1,'']]],
-  ['large_5fnum_147',['large_num',['../d6/d3d/factorial__large__number_8c.html#ab54882961780c41a4929a6d390f6522d',1,'factorial_large_number.c']]],
-  ['lazy_5fsort_148',['lazy_sort',['../dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d',1,'sol1.c']]],
-  ['lcm_149',['lcm',['../df/de7/problem__5_2sol_8c.html#ae9606f1867e9921867d6572f51377b4c',1,'sol.c']]],
-  ['left_150',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node']]],
-  ['lims_151',['LIMS',['../d7/d50/qr__eigen__values_8c.html#aee57a411f07599034f5ceb8cc7d65b40',1,'qr_eigen_values.c']]],
-  ['llink_152',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]],
-  ['lu_5fdecompose_2ec_153',['lu_decompose.c',['../dc/d2e/lu__decompose_8c.html',1,'']]],
-  ['lu_5fdecomposition_154',['lu_decomposition',['../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4',1,'lu_decompose.c']]],
-  ['list_20of_20all_20files_155',['List of all files',['../d5/d88/md__d_i_r_e_c_t_o_r_y.html',1,'']]],
-  ['leetcode_156',['LeetCode',['../df/d58/md_leetcode__r_e_a_d_m_e.html',1,'']]]
+  ['k_2dmeans_20clustering_20algorithm_148',['K-Means Clustering Algorithm',['../d8/d71/group__k__means.html',1,'']]],
+  ['k_5fmeans_5fclustering_2ec_149',['k_means_clustering.c',['../d6/d76/k__means__clustering_8c.html',1,'']]],
+  ['kmeans_150',['kMeans',['../d8/d71/group__k__means.html#gad229b1dc406cb5ea510f26a373ed8bfd',1,'k_means_clustering.c']]],
+  ['kohonen_20som_20trace_2fchain_20algorithm_151',['Kohonen SOM trace/chain algorithm',['../d0/dcb/group__kohonen__1d.html',1,'']]],
+  ['kohonen_20som_20topology_20algorithm_152',['Kohonen SOM topology algorithm',['../d1/d6b/group__kohonen__2d.html',1,'']]],
+  ['kohonen_5farray_5f3d_153',['kohonen_array_3d',['../d8/db8/structkohonen__array__3d.html',1,'']]],
+  ['kohonen_5fdata_5f3d_154',['kohonen_data_3d',['../d1/d6b/group__kohonen__2d.html#ga8df35f04c1762a01dcf108fa13b897d6',1,'kohonen_som_topology.c']]],
+  ['kohonen_5fget_5fmin_5f1d_155',['kohonen_get_min_1d',['../d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586',1,'kohonen_som_trace.c']]],
+  ['kohonen_5fsom_156',['kohonen_som',['../d1/d6b/group__kohonen__2d.html#gacb42eda8af6ebd6a141a34ab00a0b710',1,'kohonen_som_topology.c']]],
+  ['kohonen_5fsom_5ftopology_2ec_157',['kohonen_som_topology.c',['../d2/df6/kohonen__som__topology_8c.html',1,'']]],
+  ['kohonen_5fsom_5ftrace_2ec_158',['kohonen_som_trace.c',['../d0/d46/kohonen__som__trace_8c.html',1,'']]],
+  ['kohonen_5fsom_5ftracer_159',['kohonen_som_tracer',['../d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde',1,'kohonen_som_trace.c']]],
+  ['kohonen_5fupdate_5fweights_160',['kohonen_update_weights',['../d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123',1,'kohonen_update_weights(const double *X, struct kohonen_array_3d *W, double **D, int num_out, int num_features, double alpha, int R):&#160;kohonen_som_topology.c'],['../d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f',1,'kohonen_update_weights(double const *x, double *const *W, double *D, int num_out, int num_features, double alpha, int R):&#160;kohonen_som_trace.c']]]
 ];

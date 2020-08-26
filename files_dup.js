@@ -4,6 +4,7 @@ var files_dup =
     [ "conversions", "dir_9babc524d57e25f3d9f4179cabc3599e.html", "dir_9babc524d57e25f3d9f4179cabc3599e" ],
     [ "data_structures", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc.html", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc" ],
     [ "exercism", "dir_48bf5503321d91c557399989fed5dabd.html", "dir_48bf5503321d91c557399989fed5dabd" ],
+    [ "geometry", "dir_e3380d2178455503f266746fb14246a5.html", "dir_e3380d2178455503f266746fb14246a5" ],
     [ "graphics", "dir_e79632891301b850df87e9c0030293fa.html", "dir_e79632891301b850df87e9c0030293fa" ],
     [ "hash", "dir_72aaf47615111200018c039a56ef48be.html", "dir_72aaf47615111200018c039a56ef48be" ],
     [ "machine_learning", "dir_3343723ae086de42ee4ca9774da3a13f.html", "dir_3343723ae086de42ee4ca9774da3a13f" ],

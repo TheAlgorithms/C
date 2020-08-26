@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['machine_20learning_20algorithms_596',['Machine learning algorithms',['../d9/d66/group__machine__learning.html',1,'']]]
+  ['k_2dmeans_20clustering_20algorithm_675',['K-Means Clustering Algorithm',['../d8/d71/group__k__means.html',1,'']]],
+  ['kohonen_20som_20trace_2fchain_20algorithm_676',['Kohonen SOM trace/chain algorithm',['../d0/dcb/group__kohonen__1d.html',1,'']]],
+  ['kohonen_20som_20topology_20algorithm_677',['Kohonen SOM topology algorithm',['../d1/d6b/group__kohonen__2d.html',1,'']]]
 ];

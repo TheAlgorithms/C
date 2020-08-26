@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sorting_20algorithms_597',['Sorting algorithms',['../d5/d4c/group__sorting.html',1,'']]],
-  ['sudoku_20solver_598',['Sudoku solver',['../d5/df4/group__sudoku.html',1,'']]]
+  ['library_20for_203d_20vectors_20_26_20quaternions_678',['Library for 3D Vectors &amp; Quaternions',['../de/d5a/group__quaternions.html',1,'']]]
 ];

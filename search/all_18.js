@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['x_301',['x',['../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade',1,'observation::x()'],['../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570',1,'cluster::x()']]],
-  ['xor8_302',['xor8',['../d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb',1,'hash_xor8.c']]]
+  ['w_338',['w',['../de/d58/structquaternion__.html#a835e2ba72517fbb29d0d4e3cb4c2914f',1,'quaternion_']]],
+  ['weights_339',['weights',['../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657',1,'adaline']]],
+  ['word_5fcount_5fword_340',['word_count_word',['../df/ddb/structword__count__word.html',1,'']]]
 ];

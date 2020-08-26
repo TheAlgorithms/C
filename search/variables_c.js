@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_567',['x',['../d1/d5e/structobservation.html#a04f3dcfd59dd91353395e35c9831fade',1,'observation::x()'],['../d1/d99/structcluster.html#a13278ef636c1d9bd9ce8fad736f4c570',1,'cluster::x()']]]
+  ['start_635',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
 ];

@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['factorial_5flarge_5fnumber_2ec_80',['factorial_large_number.c',['../d6/d3d/factorial__large__number_8c.html',1,'']]],
-  ['fib_81',['fib',['../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3',1,'fibonacci_fast.c']]],
-  ['fibonacci_5ffast_2ec_82',['fibonacci_fast.c',['../d4/d99/fibonacci__fast_8c.html',1,'']]],
-  ['find_83',['find',['../da/d02/binary__search__tree_8c.html#adff4c6248834a9944a1fb03a20230c9c',1,'find(node *root, int data):&#160;binary_search_tree.c'],['../df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86',1,'find(int *p, int x):&#160;union_find.c']]],
-  ['forward_5feuler_84',['forward_euler',['../d4/d07/ode__forward__euler_8c.html#aaf88ad8f9f7c39fc38f3f03d6fea9df9',1,'ode_forward_euler.c']]],
-  ['forward_5feuler_5fstep_85',['forward_euler_step',['../d4/d07/ode__forward__euler_8c.html#ae6c9413953c8d9d4bc9e374b29586350',1,'ode_forward_euler.c']]],
-  ['free_5fmemory_86',['free_memory',['../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d',1,'cantor_set.c']]],
-  ['func_87',['func',['../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;client.c'],['../d1/d20/server_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;server.c'],['../dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925',1,'func(double complex x):&#160;newton_raphson_root.c']]]
+  ['edge_81',['Edge',['../d5/db4/struct_edge.html',1,'']]],
+  ['eigen_5fvalues_82',['eigen_values',['../d7/d50/qr__eigen__values_8c.html#a0d8ed79786d17df48396b333c09d05bb',1,'qr_eigen_values.c']]],
+  ['elem_83',['elem',['../d0/d6b/structelem.html',1,'']]],
+  ['elevation_84',['elevation',['../d2/de8/structeuler__.html#abbbf12f0a960faf783d219f9012cdce6',1,'euler_']]],
+  ['end_85',['end',['../d9/dd7/struct__cantor__set.html#acfc25ab716a3c79be8a5a4cab94e8def',1,'_cantor_set']]],
+  ['epsilon_86',['EPSILON',['../de/d5a/group__quaternions.html#ga002b2f4894492820fe708b1b7e7c5e70',1,'EPSILON():&#160;geometry_datatypes.h'],['../d7/d50/qr__eigen__values_8c.html#a002b2f4894492820fe708b1b7e7c5e70',1,'EPSILON():&#160;qr_eigen_values.c']]],
+  ['eta_87',['eta',['../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2',1,'adaline']]],
+  ['euler_88',['euler',['../dc/d9a/group__quats.html#ga8cc5e5b7a5fa492423ecf034c8bb52bd',1,'geometry_datatypes.h']]],
+  ['euler_5f_89',['euler_',['../d2/de8/structeuler__.html',1,'']]],
+  ['euler_5ffrom_5fquat_90',['euler_from_quat',['../dc/d9a/group__quats.html#ga1afd165100e9b02b86e3bd11b50f3b06',1,'quaternions.c']]],
+  ['exact_5fsolution_91',['exact_solution',['../d4/d07/ode__forward__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_semi_implicit_euler.c']]]
 ];

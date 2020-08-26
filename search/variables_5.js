@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['left_553',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node']]],
-  ['llink_554',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]]
+  ['group_615',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]]
 ];

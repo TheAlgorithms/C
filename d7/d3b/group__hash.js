@@ -1,10 +1,5 @@
 var group__hash =
 [
-    [ "Overview about functions", "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md9", null ],
-    [ "Content", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md11", null ],
-    [ "Public interface", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md12", null ],
-    [ "Overview", "d7/db5/md_exercism__r_e_a_d_m_e.html#autotoc_md30", null ],
-    [ "LeetCode Algorithm", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md32", null ],
     [ "hash_adler32.c", "d3/d39/hash__adler32_8c.html", null ],
     [ "hash_crc32.c", "d9/dc9/hash__crc32_8c.html", null ],
     [ "hash_djb2.c", "d4/de3/hash__djb2_8c.html", null ],

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['value_294',['value',['../dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008',1,'_big_int']]],
-  ['vector_5fdot_295',['vector_dot',['../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05',1,'qr_decompose.h']]],
-  ['vector_5fmag_296',['vector_mag',['../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212',1,'qr_decompose.h']]],
-  ['vector_5fproj_297',['vector_proj',['../d4/d68/qr__decompose_8h.html#a82b20e027437df768d7e994cf4cae29f',1,'qr_decompose.h']]],
-  ['vector_5fsub_298',['vector_sub',['../d4/d68/qr__decompose_8h.html#a6b6a0e75e75ff7919057dd275bb69145',1,'qr_decompose.h']]]
+  ['udp_5fclient_2ec_323',['udp_client.c',['../da/de6/udp__client_8c.html',1,'']]],
+  ['udp_5fserver_2ec_324',['udp_server.c',['../d8/dca/udp__server_8c.html',1,'']]],
+  ['union_5ffind_2ec_325',['union_find.c',['../df/df3/union__find_8c.html',1,'']]],
+  ['unit_5fvec_326',['unit_vec',['../de/d7b/group__vec__3d.html#ga3cdfd8378a0b115563ea6c561bb46b7e',1,'vectors_3d.c']]]
 ];

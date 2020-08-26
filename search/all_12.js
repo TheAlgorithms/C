@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['realtime_5fstats_2ec_225',['realtime_stats.c',['../dc/d47/realtime__stats_8c.html',1,'']]],
-  ['remove_5fdigits_226',['remove_digits',['../db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1',1,'sol1.c']]],
-  ['right_227',['right',['../d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c',1,'node']]],
-  ['rlink_228',['rlink',['../db/d8b/struct_node.html#a0ed3c7305b43527f0f237bbfd438b8f7',1,'Node']]]
+  ['q0_240',['q0',['../de/d58/structquaternion__.html#a37819eb7d76c65c37a9c2a63f01f65b2',1,'quaternion_']]],
+  ['qr_5fdecompose_241',['qr_decompose',['../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56',1,'qr_decompose.h']]],
+  ['qr_5fdecompose_2eh_242',['qr_decompose.h',['../d4/d68/qr__decompose_8h.html',1,'']]],
+  ['qr_5fdecomposition_2ec_243',['qr_decomposition.c',['../d5/d23/qr__decomposition_8c.html',1,'']]],
+  ['qr_5feigen_5fvalues_2ec_244',['qr_eigen_values.c',['../d7/d50/qr__eigen__values_8c.html',1,'']]],
+  ['quat_5ffrom_5feuler_245',['quat_from_euler',['../dc/d9a/group__quats.html#ga4779f448daaf806ce5e750c13b3e0965',1,'quaternions.c']]],
+  ['quaternion_246',['quaternion',['../dc/d9a/group__quats.html#gaacd70a16b61dd47a19eb5fb729c2669b',1,'geometry_datatypes.h']]],
+  ['quaternion_5f_247',['quaternion_',['../de/d58/structquaternion__.html',1,'']]],
+  ['quaternion_5fmultiply_248',['quaternion_multiply',['../dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1',1,'quaternions.c']]],
+  ['quaternions_2ec_249',['quaternions.c',['../df/d98/quaternions_8c.html',1,'']]],
+  ['queue_250',['queue',['../d2/d36/structqueue.html',1,'']]],
+  ['queuerep_251',['QueueRep',['../d0/d10/struct_queue_rep.html',1,'']]]
 ];
