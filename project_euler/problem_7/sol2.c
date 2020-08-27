@@ -1,7 +1,7 @@
 /**
  * \file
  * \brief [Problem 7](https://projecteuler.net/problem=7) solution.
- * @see Faster version sol.c
+ * @see Faster version problem_7/sol.c
  */
 #include <stdio.h>
 

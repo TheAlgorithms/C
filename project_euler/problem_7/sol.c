@@ -1,6 +1,7 @@
 /**
  * \file
- * \brief [Problem 7](https://projecteuler.net/problem=7) solution
+ * \brief [Problem 7](https://projecteuler.net/problem=7) solution.
+ * @see Another version: problem_7/sol2.c
  */
 #include <stdio.h>
 #include <stdlib.h>
