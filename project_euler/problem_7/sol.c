@@ -5,7 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** Main function */
+/** Main function
+ * @return 0 on exit
+ */
 int main(void)
 {
     char *sieve;

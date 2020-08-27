@@ -1,4 +1,13 @@
+/**
+ * \file
+ * \brief [Problem 7](https://projecteuler.net/problem=7) solution.
+ * @see Faster version sol.c
+ */
 #include <stdio.h>
+
+/** Main function
+ * @return 0 on exit
+ */
 int main()
 {
     int n;
@@ -24,4 +33,6 @@ int main()
             }
         }
     }
+
+    return 0;
 }
