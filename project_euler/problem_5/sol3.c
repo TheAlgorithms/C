@@ -1,7 +1,7 @@
 /**
  * \file
  * \brief [Problem 5](https://projecteuler.net/problem=5) solution (Fastest).
- * Solution is the LCM of all numbers between 1 and 20.
+ * @details Solution is the LCM of all numbers between 1 and 20.
  *
  * \see Slowest: problem_5/sol1.c
  * \see Slower: problem_5/sol2.c

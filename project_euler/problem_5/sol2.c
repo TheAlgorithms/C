@@ -7,8 +7,10 @@
  * Also we don't have to check against any number, since most of them are
  * implied by other divisions (i.e. if a number is divisable by 20, it's also
  * divisable by 2, 5, and 10). This all gives a 97% perfomance increase on my
- * machine (9.562 vs 0.257) \see Slower: problem_5/sol1.c \see Faster:
- * problem_5/sol3.c
+ * machine (9.562 vs 0.257)
+ *
+ * \see Slower: problem_5/sol1.c
+ * \see Faster: problem_5/sol3.c
  */
 #include <stdio.h>
 #include <stdlib.h>
