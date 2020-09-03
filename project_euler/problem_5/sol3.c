@@ -1,12 +1,19 @@
 /**
  * \file
- * \brief [Problem 5](https://projecteuler.net/problem=5) solution
+ * \brief [Problem 5](https://projecteuler.net/problem=5) solution (Fastest).
+ * @details Solution is the LCM of all numbers between 1 and 20.
+ *
+ * \see Slowest: problem_5/sol1.c
+ * \see Slower: problem_5/sol2.c
  */
 #include <stdio.h>
 
 /** Compute [Greatest Common Divisor
  * (GCD)](https://en.wikipedia.org/wiki/Greatest_common_divisor) of two numbers
  * using Euclids algorithm
+ * @param a first number
+ * @param b second number
+ * @return GCD of `a` and `b`
  */
 unsigned long gcd(unsigned long a, unsigned long b)
 {
@@ -27,6 +34,9 @@ unsigned long gcd(unsigned long a, unsigned long b)
 
 /** Compute [Least Common Multiple
  * (LCM)](https://en.wikipedia.org/wiki/Least_common_multiple) of two numbers
+ * @param a first number
+ * @param b second number
+ * @return LCM of `a` and `b`
  */
 unsigned long lcm(unsigned long a, unsigned long b)
 {
@@ -34,7 +44,9 @@ unsigned long lcm(unsigned long a, unsigned long b)
     return p / gcd(a, b);
 }
 
-/** Main function */
+/** Main function
+ * @returns 0 on exit
+ */
 int main(void)
 {
     unsigned long ans = 1;
