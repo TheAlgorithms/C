@@ -324,6 +324,7 @@
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_6/sol.c)
   * Problem 7
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol2.c)
   * Problem 8
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol1.c)
     * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol2.c)
