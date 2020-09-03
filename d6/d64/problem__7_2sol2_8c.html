@@ -141,15 +141,15 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> number_of_prime = 0;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2;; i++)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> divisors = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/d3d/problem__5_2sol2_8c.html#adb59595677da81f071c34f3847fdbaa6">divisors</a> = 0;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt;= i; j++)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (i % j == 0)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                divisors++;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="../../d5/d3d/problem__5_2sol2_8c.html#adb59595677da81f071c34f3847fdbaa6">divisors</a>++;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (divisors == 2)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d5/d3d/problem__5_2sol2_8c.html#adb59595677da81f071c34f3847fdbaa6">divisors</a> == 2)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            number_of_prime++;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (number_of_prime == n)</div>
@@ -167,6 +167,7 @@ Functions</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aproblem__5_2sol2_8c_html_adb59595677da81f071c34f3847fdbaa6"><div class="ttname"><a href="../../d5/d3d/problem__5_2sol2_8c.html#adb59595677da81f071c34f3847fdbaa6">divisors</a></div><div class="ttdeci">static unsigned int divisors[]</div><div class="ttdoc">Hack to store divisors between 1 &amp; 20.</div><div class="ttdef"><b>Definition:</b> sol2.c:21</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
