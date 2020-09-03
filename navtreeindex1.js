@@ -8,8 +8,8 @@ var NAVTREEINDEX1 =
 "d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8":[10,4,7],
 "d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8":[12,0,12,4,3],
 "d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8":[12,0,12,6,3],
-"d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd":[10,4,0],
 "d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd":[12,0,12,0,0],
+"d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd":[10,4,0],
 "d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0":[10,4,5],
 "d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0":[12,0,12,6,1],
 "d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729":[10,4,3],
@@ -104,6 +104,8 @@ var NAVTREEINDEX1 =
 "d6/d42/structdynamic__array.html#a7e3fbd203b3b86401c17dede7a33f781":[11,0,11,1],
 "d6/d42/structdynamic__array.html#a9ddb0f64ade5d5e74b7fd091158958e4":[11,0,11,0],
 "d6/d48/isogram_8h_source.html":[12,0,3,2,0],
+"d6/d64/problem__7_2sol2_8c.html":[12,0,10,20,1],
+"d6/d64/problem__7_2sol2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[12,0,10,20,1,0],
 "d6/d76/k__means__clustering_8c.html":[12,0,7,1],
 "d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0":[12,0,7,1,9],
 "d6/d76/k__means__clustering_8c.html#a525335710b53cb064ca56b936120431e":[12,0,7,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "da/d02/binary__search__tree_8c.html#a01151353aa2d9688934ed39208133241":[12,0,2,1,0,10],
 "da/d02/binary__search__tree_8c.html#a0f18adaaca5ecc410cfa16dd2a3684dc":[12,0,2,1,0,6],
 "da/d02/binary__search__tree_8c.html#a73152b9ccb4aa5cd4c1bacd4188bb2de":[12,0,2,1,0,7],
-"da/d02/binary__search__tree_8c.html#a748f3966920e2fd197906be1e151b127":[12,0,2,1,0,2],
-"da/d02/binary__search__tree_8c.html#ac73c73be92dbbeeaad942c0103b9540d":[12,0,2,1,0,9],
-"da/d02/binary__search__tree_8c.html#ad297e528a7bb8604ca93af149d609150":[12,0,2,1,0,4]
+"da/d02/binary__search__tree_8c.html#a748f3966920e2fd197906be1e151b127":[12,0,2,1,0,2]
 };
