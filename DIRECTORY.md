@@ -78,6 +78,7 @@
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.h)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
+  * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/data_structures/poly_add.c)
   * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
   * Stack
