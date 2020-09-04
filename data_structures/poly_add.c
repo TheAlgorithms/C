@@ -12,10 +12,13 @@
 #include<stdio.h>  // for io operations
 #include<stdlib.h>
 
+/**
+ * @brief identifier for single-variable polynomial coefficients as a linked list
+ */
 struct term {
-    int coef;
-    int pow;
-    struct term *next;
+    int coef;		/**< coefficient value */
+    int pow;		/**< power of the polynomial term */
+    struct term *next;	/**< pointer to the successive term */
 };
 
 /**
