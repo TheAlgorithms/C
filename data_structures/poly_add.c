@@ -156,8 +156,9 @@ void display_polynomial(struct term* poly)
 	{
 		printf("%d x^%d", poly->coef, poly->pow);
 		poly = poly->next;
-		if(poly != NULL)
+		if(poly != NULL) {
 			printf(" + ");
+		}
 	}
 }
 
