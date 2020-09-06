@@ -162,12 +162,15 @@ void display_polynomial(struct term* poly)
 }
 
 /**
- * Test function 1
+ * @brief Test function 1
+ *
+ * @details
  * Polynomial 1 is 5 x^2 + 3 x^1 + 2 x^0
  * Polynomial 2 is 7 x^3 + 9 x^1 + 10 x^0
  * Resultant polynomial is 7 x^3 + 5 x^2 + 12 x^1 + 12 x^0
+ * @returns void
  */
-void test1(struct term *poly1, struct term *poly2, struct term *poly3)
+static void test1(struct term *poly1, struct term *poly2, struct term *poly3)
 {
 	printf("\n----Test 1----\n");
 	printf ("\nFirst Polynomial:\n") ;	//Defining the 1st polynomial
@@ -189,12 +192,15 @@ void test1(struct term *poly1, struct term *poly2, struct term *poly3)
 }
 
 /**
- * Test function 2
+ * @brief Test function 2
+ *
+ * @details
  * Polynomial 1 is 3 x^5 + 1 x^4 + 2 x^3 + -2 x^1 + 5 x^0
  * Polynomial 2 is 2 x^5 + 3 x^3 + 7 x^1 + 2 x^0
  * Resultant polynomial is 5 x^5 + 1 x^4 + 5 x^3 + 5 x^1 + 7 x^0
+ * @returns void
  */
-void test2(struct term *poly1, struct term *poly2, struct term *poly3)
+static void test2(struct term *poly1, struct term *poly2, struct term *poly3)
 {
 	printf("\n----Test 2----\n");
 	printf ("\nFirst Polynomial:\n") ;		//Defining the 1st polynomial
@@ -221,12 +227,15 @@ void test2(struct term *poly1, struct term *poly2, struct term *poly3)
 }
 
 /**
- * Test function 3
+ * @brief Test function 3
+ *
+ * @details
  * Polynomial 1 is -12 x^0 + 8 x^1 + 4 x^3
  * Polynomial 2 is 5 x^0 + -13 x^1 + 3 x^3
  * Resultant polynomial is -7 x^0 + -5 x^1 + 7 x^3
+ * @returns void
  */
-void test3(struct term *poly1, struct term *poly2, struct term *poly3)
+static void test3(struct term *poly1, struct term *poly2, struct term *poly3)
 {
 	printf("\n----Test 3----\n");
 	printf ("\nFirst Polynomial:\n") ;		//Defining the 1st polynomial
@@ -250,7 +259,8 @@ void test3(struct term *poly1, struct term *poly2, struct term *poly3)
 }
 
 /**
- * Main function
+ * @brief Main function
+ * @returns 0 on exit
  */
 int main(void) 
 {
