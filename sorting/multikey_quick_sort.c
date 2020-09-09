@@ -256,6 +256,7 @@ void insert2(char *s)
 
     Tptr pp, *p;
     p = &root;
+    pp = *p;
     while (pp == *p)
     {
         if ((d = *s - pp->splitchar) == 0)
