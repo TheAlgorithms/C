@@ -225,7 +225,8 @@ static void test()
 }
 
 /**
- * Main Function
+ * @brief Main Function
+ * @returns 0 on exit
  */
 int main()
 {
