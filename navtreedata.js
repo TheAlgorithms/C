@@ -90,7 +90,7 @@ var NAVTREEINDEX =
 "annotated.html",
 "d5/d38/bubble__sort__recursion_8c.html#ae1a3968e7947464bee7714f6d43b7002",
 "d9/dd7/struct__cantor__set.html#acfc25ab716a3c79be8a5a4cab94e8def",
-"df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86"
+"df/d83/selection__sort_8c.html#aeafe7419cfceaeccaf49f22842d9a617"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

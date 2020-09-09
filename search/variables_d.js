@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_640',['value',['../dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008',1,'_big_int']]]
+  ['start_668',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
 ];
