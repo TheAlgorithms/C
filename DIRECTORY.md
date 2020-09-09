@@ -78,7 +78,6 @@
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.h)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
-  * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/data_structures/poly_add.c)
   * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
   * Stack
@@ -248,6 +247,7 @@
   * [Mirror](https://github.com/TheAlgorithms/C/blob/master/misc/mirror.c)
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
+  * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/quartile.c)
