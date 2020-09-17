@@ -8,13 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef STRING_STRUCT
-#define STRING_STRUCT
-
-// String.
+// String declaration.
 typedef char* STRING;
-
-#endif  // STRING_STRUCT
 
 // Returns true(1) if value is null or only whitespace, returns false(0) if not.
 int isNullOrWhitespace(char* val);
