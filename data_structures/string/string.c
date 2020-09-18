@@ -74,7 +74,7 @@ char* trim(char* val) { return trimStart(trimEnd(val)); }
 
 char* concat(char* val1, char* val2)
 {
-    char* result = malloc(strlen(val1) + strlen(val2 + 1));
+    char* result = malloc(strlen(val1) + strlen(val2));
     strcpy(result, val1);
     strcat(result, val2);
     return result;
