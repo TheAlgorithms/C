@@ -1,11 +1,16 @@
 #include "string.h"
 
+/**
+ * 1 is true
+ * 2 is false
+ */
+
 int isNullOrWhitespace(char* val)
 {
     if (val == NULL)
         return 1;
 
-    char* cpy = malloc(strlen(val));
+    char* cpy = calloc(strlen(val), sizeof(char));
     strcpy(cpy, val);
     int result = strtok(cpy, " ") == NULL;
     free(cpy);
@@ -41,7 +46,7 @@ char* substrf(char* val, int start)
 char* substrsep(char* val, char* sep)
 {
     for (int index = 0; index < strlen(val); index++)
-        if (startsWith(substrf(val, index), sep))
+        if (startsWith(substrf(val, index), sep) == 1)
             return substr(val, 0, index);
     return val;
 }
@@ -74,7 +79,7 @@ char* trim(char* val) { return trimStart(trimEnd(val)); }
 
 char* concat(char* val1, char* val2)
 {
-    char* result = malloc(strlen(val1) + strlen(val2 + 1));
+    char* result = calloc(strlen(val1) + strlen(val2), sizeof(char));
     strcpy(result, val1);
     strcat(result, val2);
     return result;
@@ -82,7 +87,7 @@ char* concat(char* val1, char* val2)
 
 char* concatc(char* val1, char ch)
 {
-    char* result = malloc(strlen(val1) + 1);
+    char* result = calloc(strlen(val1) + 1, sizeof(char));
     char* cht = &ch;
     strcpy(result, val1);
     char chr[2] = {ch, 0};
@@ -92,7 +97,7 @@ char* concatc(char* val1, char ch)
 
 char* clonestr(char* val)
 {
-    char* value = malloc(strlen(val));
+    char* value = calloc(strlen(val), sizeof(char));
     strcpy(value, val);
     return value;
 }
@@ -113,13 +118,13 @@ int endsWith(char* val, char* endval)
     int vallength = strlen(val);
     int length = strlen(endval);
     char* result = substr(val, vallength - length, length);
-    int state = strcmp(result, endval) == 0 ? 1 : 0;
+    int state = strcmp(result, endval) == __STR_FULLMATCH__ ? 1 : 0;
     return state;
 }
 
 char* toStr(char* format, void* val)
 {
-    char* str = malloc(sizeof(val) * sizeof(char));
+    char* str = calloc(sizeof(val), sizeof(char));
     sprintf(str, format, val);
     return str;
 }

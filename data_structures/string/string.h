@@ -2,52 +2,119 @@
 #define STRING_H
 
 #include <ctype.h>
-#include <malloc.h>
 #include <memory.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// String declaration.
+/**
+ * @brief Full match state of string compare result
+ */
+#define __STR_FULLMATCH__ 0
+
+/**
+ * @brief char* delegate
+ */
 typedef char* STRING;
 
-// Returns true(1) if value is null or only whitespace, returns false(0) if not.
+/**
+ * @brief Check if the string is empty or not
+ * @param val Value to check
+ * @return True if value is null or only whitespace, returns false if not
+ */
 int isNullOrWhitespace(char* val);
 
-// Remove spaces at start and end.
+/**
+ * @brief Remove spaces at both
+ * @param val Value to trim
+ * @return Trimmed value
+ */
 char* trim(char* val);
 
-// Remove spaces at start.
+/**
+ * @brief Remove spaces at start
+ * @param val Value to trim
+ * @return Trimmed value
+ */
 char* trimStart(char* val);
 
-// Remove spaces at end.
+/**
+ * @brief Remove spaces at end
+ * @param val Value to trim
+ * @return Trimmed value
+ */
 char* trimEnd(char* val);
 
-// Substring with start index and count.
+/**
+ * @brief Substring with start index and count
+ * @param val Value to sub
+ * @param start Index of start
+ * @param count Count of taken chars
+ * @return Subbed value
+ */
 char* substr(char* val, int start, int count);
 
-// Substring with start index.
+/**
+ * @brief Substring with start index
+ * @param val Value to sub
+ * @param start Index of start
+ * @return Subbed value
+ */
 char* substrf(char* val, int start);
 
-// Substrig with seperator.
+/**
+ * @brief Substrig with seperator
+ * @param val Value to sub
+ * @param sep Seperator
+ * @return Subbed value
+ */
 char* substrsep(char* val, char* sep);
 
-// Contcat strings.
+/**
+ * @brief Concatenate strings
+ * @param val1 Base value
+ * @param val2 Secondary value
+ * @return Concatenated value
+ */
 char* concat(char* val1, char* val2);
 
-// Concat string and char.
+/**
+ * @brief Concat string and char
+ * @param val1 Base value
+ * @param ch Char
+ * @return Concatenated value
+ */
 char* concatc(char* val1, char ch);
 
-// Clone string.
+/**
+ * @brief Clone string
+ * @param val Value to clone
+ * @return Clonned string
+ */
 char* clonestr(char* val);
 
-// Returns true(1) if success, returns false(0) if not.
+/**
+ * @brief Check value if starts with or not
+ * @param val Value to check
+ * @param startval Check value
+ * @return True if success, returns false if not
+ */
 int startsWith(char* val, char* startval);
 
-// Returns true(1) if success, returns false(0) if not.
+/**
+ * @brief Check value if ends with or not
+ * @param val Value to check
+ * @param endval Check value
+ * @return True if success, returns false if not
+ */
 int endsWith(char* val, char* endval);
 
-// Convert to string.
+/**
+ * @brief Convert to string
+ * @param format Value format(see: printf)
+ * @param val Value to convert
+ * @return char* value of val
+ */
 char* toStr(char* format, void* val);
 
 #endif  // STRING_H
