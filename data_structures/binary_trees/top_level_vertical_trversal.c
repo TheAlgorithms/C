@@ -1,13 +1,29 @@
+/*
+this file have compelete implementation of a binary search tree and has all function defined 
+including insert,find,findMax,delet_tree,delete(to delete a node),inOrder,height,level-order-traversal and top-view .
+which is required for compelete implementation of a tree
+*/
+/*This header files are required to take user input and it has some predefined function which enable us to use them in our code (*if required)*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <bits/stdc++.h>
 
 using namespace std;
+/*this is a struct method in c/c++ through which we create our own datatype and this datatype would create a memory block or lets name it by NODE
+with three portion in it two part of a node will store address of any other node of same datatype (*Node) 
+=> left= stores address of left part of each subtree in a tree
+=> right= stores address of right part of each subtree in a tree
+=> data= contains value of each node of datatype int.
+and remaining one part of each node will store data of type integer.*/
 
 struct tree {
 	int data;
 	struct tree *left,*right;
 };
+
+/*the function createtree defining below will create a node of of datatype struct tree and 
+put *left=NULL and *right=NULL at the time of creating a new node and returns the address of that newly created node as its return type is Node*
+*/
 
 struct tree* createtree(struct tree *root,int data)
 {
@@ -27,6 +43,11 @@ struct tree* createtree(struct tree *root,int data)
 	return root;
 }
 
+/*
+this inOrder function would print value (stored at data part of the node) and this prints the value in following manner
+left-subtree  ->  head/root ->  right-subtree
+*/
+
 void inorder(struct tree *root)
 {
 	if(root!=NULL)
@@ -37,6 +58,10 @@ void inorder(struct tree *root)
 	}
 }
 
+/* 
+function Height return the height of the tree which is the highest number of node lieing in any path from root/head node to a leaf node(having no child)
+return type oviously would be integer.
+*/
 
 int height(struct tree *root)
 {
@@ -57,6 +82,10 @@ int height(struct tree *root)
 	return x+1;
 }
 
+/*
+function defined below would returns nothing it just recursively call itself and print the data lieing in particuler level in a binary search tree
+*/
+
 void currentleveltraversal(struct tree *root,int level)
 {
 	if(root==NULL)
@@ -70,7 +99,10 @@ void currentleveltraversal(struct tree *root,int level)
 		currentleveltraversal(root->right,level-1);
 	}
 }
-
+/*
+function printlevel have void return type but it call currentleveltraversal() function to print values of each level it just provide the level number(which has maximum value 
+to the height of the tree) to this function 
+*/
 
 void printlevel(struct tree *root)
 {
@@ -82,27 +114,6 @@ void printlevel(struct tree *root)
 //	printf("%d ->",root->data);
 }
 
-/*void verticalordertraversal(struct tree *root,int column)
-{
-	if(root==NULL)
-	return;
-	int min=1000,max=0;
-	queue<tree*> q;
-	struct tree *temp;
-	q.push(root);
-	while(q.empty())
-	{
-		temp=q.front();
-		printf("%d ",temp->data);
-		q.pop();
-		hash[column]+=temp->data;
-		if(temp->left!=NULL)
-		q.push(root->left);
-		if(temp->right!=NULL)
-		q.push(root->right);
-	}
-	printf("\ndone....\n");
-}*/
 
 void findminnmax(struct tree *root,int *min,int *max,int hd)
 {
@@ -116,6 +127,9 @@ void findminnmax(struct tree *root,int *min,int *max,int hd)
 	findminnmax(root->right,min,max,hd+1);
 }
 
+/*
+function printverticalorder() call itself recursively and print value when until it reaches a leaf node in each vertical traversal
+*/
 void printverticalorder(struct tree *root,int level,int hd)
 {
 	if(root==NULL)
@@ -125,7 +139,9 @@ void printverticalorder(struct tree *root,int level,int hd)
 	printverticalorder(root->left,level,hd-1);
 	printverticalorder(root->right,level,hd+1);
 }
-
+/*
+function verticalorder prints the vertical view of a tree by taking help of a printverticalorder
+*/
 void verticalorder(struct tree *root)
 {
 	if(root==NULL)
@@ -141,7 +157,7 @@ void verticalorder(struct tree *root)
 	}
 }
 
-
+/*printleft prints left part of each subtree calling itself recursively until it reaches a leaf node so it has void return data type*/
 void printleft(struct tree *root){
     	if (root == NULL){
         	return;
@@ -149,7 +165,7 @@ void printleft(struct tree *root){
     	printleft(root->left);
 		printf("%d ",root->data);
 }
-
+/*printright prints right part of each subtree calling itself recursively until it reaches a leaf node so it has void return data type*/
 void printright(struct tree *root){
     	if(root == NULL){
         	return;
@@ -157,12 +173,16 @@ void printright(struct tree *root){
     	printf("%d ",root->data);
     	printright(root->right);
 }
-
+/*function top_view() prints top view of a tree using printleft and printright function which works seperatly i.e. print left subtree and right subtree respectively*/
 void top_view(struct tree *root)
 {
 	printleft(root);
-    printright(root->right);
+    	printright(root->right);
 }
+
+/*
+Here is the main function which has a menu driven (switch-vases)  list of each type of traversal
+*/
 
 int main()
 {
@@ -202,6 +222,7 @@ int main()
 			printf("Level order traversal:- ");
 			printlevel(root);
 			break;
+		
 	}}
 	printf("done:)");
 	return 0;
