@@ -2,6 +2,8 @@
  * @file
  * @brief [Absolute value](https://en.wikipedia.org/wiki/Absolute_value)
  * algorithm implementation
+ *
+ * @author [Du Yuanchao](https://github.com/shellhub)
  */
 #include <assert.h>
 #include <stdlib.h>
