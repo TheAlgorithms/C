@@ -25,7 +25,7 @@ long power(int a, int b)
 }
 
 /**
- * Test function
+ * @brief Test function
  * @return void
  */
 static void test()
