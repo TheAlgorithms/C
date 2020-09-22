@@ -3,6 +3,8 @@
  * @brief Program to calculate
  * [exponentiation](https://en.wikipedia.org/wiki/Exponentiation) using
  * recursion algorithm.
+ *
+ * @author [Du Yuanchao](https://github.com/shellhub)
  */
 #include <assert.h>
 
