@@ -11,7 +11,7 @@
  * second argument using recursion.
  * @param a the base.
  * @param b the exponent.
- * @return the value {@code a}<sup>{@code b}</sup>.
+ * @returns the value {@code a}<sup>{@code b}</sup>.
  */
 long power(int a, int b) { return b == 0 ? 1 : a * power(a, b - 1); }
 
