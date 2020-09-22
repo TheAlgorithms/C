@@ -16,7 +16,7 @@
 long power(int a, int b) { return b == 0 ? 1 : a * power(a, b - 1); }
 
 /**
- * Test function
+ * @brief Test function
  * @return void
  */
 static void test()
