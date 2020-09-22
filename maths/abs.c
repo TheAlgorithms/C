@@ -8,7 +8,7 @@
 #include <time.h>
 
 /**
- * Calculate the absolute value of given number
+ * @brief Calculate the absolute value of given number
  * @param number given number to calculate
  * @return absolute value of given number
  */
