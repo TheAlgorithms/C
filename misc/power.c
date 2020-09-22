@@ -12,7 +12,7 @@
  * second argument.
  * @param a the base.
  * @param b the exponent.
- * @return the value {@code a}<sup>{@code b}</sup>.
+ * @returns the value {@code a}<sup>{@code b}</sup>.
  */
 long power(int a, int b)
 {
