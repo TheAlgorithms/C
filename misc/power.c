@@ -8,7 +8,7 @@
 #include <assert.h>
 
 /**
- * Returns the value of the first argument raised to the power of the
+ * @brief Returns the value of the first argument raised to the power of the
  * second argument.
  * @param a the base.
  * @param b the exponent.
