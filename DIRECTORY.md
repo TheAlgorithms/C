@@ -249,6 +249,8 @@
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
+  * [Power](https://github.com/TheAlgorithms/C/blob/master/misc/power.c)
+  * [Power Recursion](https://github.com/TheAlgorithms/C/blob/master/misc/power_recursion.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/quartile.c)
