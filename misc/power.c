@@ -4,8 +4,6 @@
  * [exponentiation](https://en.wikipedia.org/wiki/Exponentiation)
  *
  * @author [Du Yuanchao](https://github.com/shellhub)
- *
- * @author [Du Yuanchao](https://github.com/shellhub)
  */
 #include <assert.h>
 
