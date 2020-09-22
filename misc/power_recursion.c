@@ -19,7 +19,7 @@ long power(int a, int b) { return b == 0 ? 1 : a * power(a, b - 1); }
  * Test function
  * @return void
  */
-void test()
+static void test()
 {
     assert(power(0, 2) == 0);
     assert(power(2, 3) == 8);
