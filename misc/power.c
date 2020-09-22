@@ -26,7 +26,7 @@ long power(int a, int b)
  * Test function
  * @return void
  */
-void test()
+static void test()
 {
     assert(power(0, 2) == 0);
     assert(power(2, 3) == 8);
