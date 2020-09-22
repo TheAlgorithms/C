@@ -218,8 +218,8 @@
   * [Kohonen Som Topology](https://github.com/TheAlgorithms/C/blob/master/machine_learning/kohonen_som_topology.c)
   * [Kohonen Som Trace](https://github.com/TheAlgorithms/C/blob/master/machine_learning/kohonen_som_trace.c)
 
-## Maths
-  * [Abs](https://github.com/TheAlgorithms/C/blob/master/maths/abs.c)
+## Math
+  * [Abs](https://github.com/TheAlgorithms/C/blob/master/math/abs.c)
 
 ## Misc
   * [Armstrong Number](https://github.com/TheAlgorithms/C/blob/master/misc/armstrong_number.c)
