@@ -18,7 +18,7 @@ int absVal(int number) { return number < 0 ? -number : number; }
  * @brief Test function
  * @returns void
  */
-void test()
+static void test()
 {
     int n = rand() % 100; /* random times to test */
     for (int i = 1; i <= n; i++)
