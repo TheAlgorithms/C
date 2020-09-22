@@ -15,7 +15,8 @@
 int absVal(int number) { return number < 0 ? -number : number; }
 
 /**
- * Test function
+ * @brief Test function
+ * @returns void
  */
 void test()
 {
