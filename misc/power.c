@@ -1,0 +1,45 @@
+/**
+ * @file
+ * @brief Program to calculate
+ * [exponentiation](https://en.wikipedia.org/wiki/Exponentiation)
+ */
+#include <assert.h>
+
+/**
+ * Returns the value of the first argument raised to the power of the
+ * second argument.
+ * @param a the base.
+ * @param b the exponent.
+ * @return the value {@code a}<sup>{@code b}</sup>.
+ */
+long power(int a, int b)
+{
+    long result = 1;
+    for (int i = 1; i <= b; ++i)
+    {
+        result *= a;
+    }
+    return result;
+}
+
+/**
+ * Test function
+ * @return void
+ */
+void test()
+{
+    assert(power(0, 2) == 0);
+    assert(power(2, 3) == 8);
+    assert(power(2, 10) == 1024);
+    assert(power(3, 3) == 27);
+}
+
+/**
+ * Driver Code
+ * @return None
+ */
+int main()
+{
+    test();
+    return 0;
+}
