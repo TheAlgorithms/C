@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
     [ "The Algorithms - C", "index.html", [
-      [ "Overview", "index.html#autotoc_md35", null ],
-      [ "Features", "index.html#autotoc_md36", null ],
-      [ "Documentation", "index.html#autotoc_md37", null ],
-      [ "Contributions", "index.html#autotoc_md38", null ]
+      [ "Overview", "index.html#autotoc_md36", null ],
+      [ "Features", "index.html#autotoc_md37", null ],
+      [ "Documentation", "index.html#autotoc_md38", null ],
+      [ "Contributions", "index.html#autotoc_md39", null ]
     ] ],
     [ "Code style convention", "dc/d64/md__coding_guidelines.html", [
       [ "User-interface", "dc/d64/md__coding_guidelines.html#autotoc_md2", null ],
@@ -57,7 +57,8 @@ var NAVTREE =
       [ "Numerical Methods", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md26", null ],
       [ "Project Euler", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md27", null ],
       [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md28", null ],
-      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md29", null ]
+      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md29", null ],
+      [ "Strings", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md30", null ]
     ] ],
     [ "Sample solutions for <a href=\"http://exercism.io/\">exercism.io</a>", "d7/db5/md_exercism__r_e_a_d_m_e.html", null ],
     [ "Hash algorithms", "d4/dcb/md_hash__r_e_a_d_m_e.html", null ],
@@ -88,9 +89,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/de3/hash__djb2_8c.html",
-"d9/d8b/structmat__3x3__.html#a083420b13a87ebece08b6c7d49081e8a",
-"df/d3b/binary__search_8c.html#ae1a3968e7947464bee7714f6d43b7002"
+"d4/dd4/struct_graph.html#a268ba18d421817ad8713c2e92f19d82a",
+"d8/dca/udp__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2",
+"df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

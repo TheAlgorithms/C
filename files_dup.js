@@ -12,5 +12,6 @@ var files_dup =
     [ "numerical_methods", "dir_9c6faab82c22511b50177aa2e38e2780.html", "dir_9c6faab82c22511b50177aa2e38e2780" ],
     [ "project_euler", "dir_b3d331eabd4234f247030c297aaf021c.html", "dir_b3d331eabd4234f247030c297aaf021c" ],
     [ "searching", "dir_da574daf9ce9c05b45556bdc871ed1e3.html", "dir_da574daf9ce9c05b45556bdc871ed1e3" ],
-    [ "sorting", "dir_bb1b521853a9c46347182a9d10420771.html", "dir_bb1b521853a9c46347182a9d10420771" ]
+    [ "sorting", "dir_bb1b521853a9c46347182a9d10420771.html", "dir_bb1b521853a9c46347182a9d10420771" ],
+    [ "strings", "dir_73a3cc5065b223eb41b02873c0e19f0e.html", "dir_73a3cc5065b223eb41b02873c0e19f0e" ]
 ];

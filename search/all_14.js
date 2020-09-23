@@ -40,11 +40,13 @@ var searchData=
   ['start_317',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]],
   ['stats_5fcomputer1_318',['stats_computer1',['../dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628',1,'realtime_stats.c']]],
   ['stats_5fcomputer2_319',['stats_computer2',['../dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96',1,'realtime_stats.c']]],
-  ['strong_5fnumber_2ec_320',['strong_number.c',['../d4/dcc/strong__number_8c.html',1,'']]],
-  ['subset_321',['subset',['../dc/de5/structsubset.html',1,'']]],
-  ['sudoku_322',['sudoku',['../dc/d18/structsudoku.html',1,'sudoku'],['../d5/df4/group__sudoku.html',1,'(Global Namespace)']]],
-  ['sudoku_5fsolver_2ec_323',['sudoku_solver.c',['../de/dac/sudoku__solver_8c.html',1,'']]],
-  ['sum_5fof_5fdivisors_324',['sum_of_divisors',['../df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93',1,'sol1.c']]],
-  ['sum_5fof_5fprimes_325',['sum_of_primes',['../d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5',1,'sol1.c']]],
-  ['swap_326',['swap',['../dd/de4/bubble__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort_recursion.c'],['../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8',1,'swap(int *a, int *b):&#160;merge_sort.c'],['../df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;selection_sort.c']]]
+  ['strlen_2ec_320',['strlen.c',['../d3/d67/strlen_8c.html',1,'']]],
+  ['strlen_5frecursion_2ec_321',['strlen_recursion.c',['../d1/dfd/strlen__recursion_8c.html',1,'']]],
+  ['strong_5fnumber_2ec_322',['strong_number.c',['../d4/dcc/strong__number_8c.html',1,'']]],
+  ['subset_323',['subset',['../dc/de5/structsubset.html',1,'']]],
+  ['sudoku_324',['sudoku',['../dc/d18/structsudoku.html',1,'sudoku'],['../d5/df4/group__sudoku.html',1,'(Global Namespace)']]],
+  ['sudoku_5fsolver_2ec_325',['sudoku_solver.c',['../de/dac/sudoku__solver_8c.html',1,'']]],
+  ['sum_5fof_5fdivisors_326',['sum_of_divisors',['../df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93',1,'sol1.c']]],
+  ['sum_5fof_5fprimes_327',['sum_of_primes',['../d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5',1,'sol1.c']]],
+  ['swap_328',['swap',['../dd/de4/bubble__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort_recursion.c'],['../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8',1,'swap(int *a, int *b):&#160;merge_sort.c'],['../df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;selection_sort.c']]]
 ];
