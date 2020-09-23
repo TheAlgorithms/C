@@ -8,7 +8,7 @@
 #include <string.h>
 
 /**
- * Returns the length of string.
+ * @brief Returns the length of string
  * @param str the pointer of string.
  * @return the length of string.
  */
