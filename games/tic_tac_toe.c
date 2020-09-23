@@ -128,11 +128,11 @@ void singlemode()
         {
             if (o == -1)
             {
-                printf("YOU WIN\n");
+                printf("Hooray You Win And Congragulation to you \n");
             }
             if (o == -2)
             {
-                printf("YOU LOSE\n");
+                printf("Oh no YOU LOSE Better luck next time\n");
             }
 
             break;
