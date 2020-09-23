@@ -382,7 +382,3 @@
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort.c)
   * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort2.c)
   * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/stooge_sort.c)
-
-## Strings
-  * [Strlen](https://github.com/TheAlgorithms/C/blob/master/strings/strlen.c)
-  * [Strlen Recursion](https://github.com/TheAlgorithms/C/blob/master/strings/strlen_recursion.c)
