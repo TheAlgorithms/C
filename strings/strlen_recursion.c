@@ -8,7 +8,7 @@
 #include <string.h>
 
 /**
- * Returns the length of string using recursion.
+ * @brief Returns the length of string using recursion
  * @param str the pointer of string.
  * @return the length of string.
  */
