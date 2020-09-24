@@ -4,4 +4,7 @@
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
+    "files.associations": {
+        "functional": "c"
+    },
 }
