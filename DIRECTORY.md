@@ -90,6 +90,9 @@
       * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linked_list/main.c)
       * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linked_list/stack.c)
       * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/stack_linked_list/stack.h)
+  * String
+    * [String](https://github.com/TheAlgorithms/C/blob/master/data_structures/string/string.c)
+    * [String](https://github.com/TheAlgorithms/C/blob/master/data_structures/string/string.h)
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/master/data_structures/trie/trie.c)
 
