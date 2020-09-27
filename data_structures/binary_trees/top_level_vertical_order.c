@@ -1,8 +1,8 @@
-/*
-@file
-@brief has complete implementation of bst with diffrent traversal approach 
-@include level-order traversal, top view, inorder and vertical order traversal
-*/
+/**
+*@file
+*@brief has complete implementation of bst with diffrent traversal approach 
+*@include level-order traversal, top view, inorder and vertical order traversal
+**/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,12 +11,12 @@
 using namespace std;
 
 /**
-@brief this is a struct method in c/c++ through which we create our own datatype 
-@note with three portion in it two part of a node will store address of any other node of same datatype (*Node) 
-=> left stores address of left part of each subtree in a tree
-=> right stores address of right part of each subtree in a tree
-=> data contains value of each node of datatype int.
-@note data should of type integer only in this case
+*@brief this is a struct method in c/c++ through which we create our own datatype 
+*@note with three portion in it two part of a node will store address of any other node of same datatype (*Node) 
+*=> left stores address of left part of each subtree in a tree
+*=> right stores address of right part of each subtree in a tree
+*=> data contains value of each node of datatype int.
+*@note data should of type integer only in this case
 **/
 
 struct tree {
@@ -24,12 +24,12 @@ struct tree {
 	struct tree *left,*right;
 };
 /**
-@brief the function 'createtree' defining below will create a node of datatype 'struct tree' 
+*@brief the function 'createtree' defining below will create a node of datatype 'struct tree' 
 put *left=NULL and *right=NULL at the time of creating a new node 
-@param root address of head/root node of the tree
-@param data has tha value which is to be kept in new node
-@returns address of that newly created node 
-*/
+*@param root address of head/root node of the tree
+*@param data has tha value which is to be kept in new node
+*@returns address of that newly created node 
+**/
 
 
 struct tree* createtree(struct tree *root,int data)
@@ -50,12 +50,12 @@ struct tree* createtree(struct tree *root,int data)
 	return root;
 }
 
-/*
-@brief inOrder function would print value (stored at data part of the node) and this prints the value in following manner
-@note left-subtree  ->  head/root ->  right-subtree
-@param address of root node
-@returns 'void'
-*/
+/**
+*@brief inOrder function would print value (stored at data part of the node) and this prints the value in following manner
+*@note left-subtree  ->  head/root ->  right-subtree
+*@param address of root node
+*@returns 'void'
+**/
 void inorder(struct tree *root)
 {
 	if(root!=NULL)
@@ -65,11 +65,11 @@ void inorder(struct tree *root)
 		inorder(root->right);
 	}
 }
-/* 
-@brief function Height return the height of the tree which is the highest number of node lieing in any path from root/head node to a leaf node(having no child)
-@param root address of the tree
-@returns 'int'
-*/
+/** 
+*@brief function Height return the height of the tree which is the highest number of node lieing in any path from root/head node to a leaf node(having no child)
+*@param root address of the tree
+*@returns 'int'
+**/
 
 
 int height(struct tree *root)
@@ -91,12 +91,12 @@ int height(struct tree *root)
 	return x+1;
 }
 
-/*
-@brief function defined below would returns nothing it just recursively call itself and print the data present in particuler level in a binary search tree
-@param root address of tree
-@param level provides which level need to traverse leading from 1 to height of the tree
-@returns 'void'
-*/
+/**
+*@brief function defined below would returns nothing it just recursively call itself and print the data present in particuler level in a binary search tree
+*@param root address of tree
+*@param level provides which level need to traverse leading from 1 to height of the tree
+*@returns 'void'
+**/
 
 void currentleveltraversal(struct tree *root,int level)
 {
@@ -111,10 +111,10 @@ void currentleveltraversal(struct tree *root,int level)
 		currentleveltraversal(root->right,level-1);
 	}
 }
-/*
-@brief function 'printlevel' provide level number to 'currentleveltraversal' function 
-@param root address of the tree
-@returns 'void'
+/**
+*@brief function 'printlevel' provide level number to 'currentleveltraversal' function 
+*@param root address of the tree
+*@returns 'void'
 **/
 
 void printlevel(struct tree *root)
@@ -127,13 +127,13 @@ void printlevel(struct tree *root)
 //	printf("%d ->",root->data);
 }
 /**
-@brief a kind of supprotive function in vertical-order-traversal
-@param min minimum horizontal distance from root node
-@param max maximum horizontal distance from root node
-@param hd horizontal distance of a node from root node
+*@brief a kind of supprotive function in vertical-order-traversal
+*@param min minimum horizontal distance from root node
+*@param max maximum horizontal distance from root node
+*@param hd horizontal distance of a node from root node
 
 @returns 'void'
-*/
+**/
 
 void findminnmax(struct tree *root,int *min,int *max,int hd)
 {
@@ -147,14 +147,14 @@ void findminnmax(struct tree *root,int *min,int *max,int hd)
 	findminnmax(root->right,min,max,hd+1);
 }
 
-/*
-@brief function 'printverticalorder' call itself recursively and print value when until it reaches a leaf node in each vertical traversal
-@param root address of the tree
-@param level has the value between 1 to height of the tree 
-@param hd initially passed as 0 this give far we are going from root node to either directions basically horizontal distance of a node from root node
-@note if hd<0 moving towards left if hd>0 moving towards right
-@returns 'void'
-*/
+/**
+*@brief function 'printverticalorder' call itself recursively and print value when until it reaches a leaf node in each vertical traversal
+*@param root address of the tree
+*@param level has the value between 1 to height of the tree 
+*@param hd initially passed as 0 this give far we are going from root node to either directions basically horizontal distance of a node from root node
+*@note if hd<0 moving towards left if hd>0 moving towards right
+*@returns 'void'
+**/
 void printverticalorder(struct tree *root,int level,int hd)
 {
 	if(root==NULL)
@@ -164,11 +164,11 @@ void printverticalorder(struct tree *root,int level,int hd)
 	printverticalorder(root->left,level,hd-1);
 	printverticalorder(root->right,level,hd+1);
 }
-/*
-@brief function 'verticalorder' prints the vertical view of a tree by taking help of supportive function 'printverticalorder'
-@param root address of the tree
-@returns 'void'
-*/
+/**
+*@brief function 'verticalorder' prints the vertical view of a tree by taking help of supportive function 'printverticalorder'
+*@param root address of the tree
+*@returns 'void'
+**/
 void verticalorder(struct tree *root)
 {
 	if(root==NULL)
@@ -185,10 +185,10 @@ void verticalorder(struct tree *root)
 }
 
 /**
-@brief 'printleft' prints left part of each subtree calling itself recursively until it reaches a leaf node 
-@param root address of the tree
-@returns 'void'
-*/
+*@brief 'printleft' prints left part of each subtree calling itself recursively until it reaches a leaf node 
+*@param root address of the tree
+*@returns 'void'
+**/
 void printleft(struct tree *root){
     	if (root == NULL){
         	return;
@@ -197,10 +197,10 @@ void printleft(struct tree *root){
 		printf("%d ",root->data);
 }
 /**
-@brief 'printright' prints right part of each subtree calling itself recursively until it reaches a leaf node 
-@param root address of the tree
-@returns 'void'
-*/
+*@brief 'printright' prints right part of each subtree calling itself recursively until it reaches a leaf node 
+*@param root address of the tree
+*@returns 'void'
+**/
 
 void printright(struct tree *root){
     	if(root == NULL){
@@ -210,11 +210,11 @@ void printright(struct tree *root){
     	printright(root->right);
 }
 
-/*
-@brief 'top_view' gives the top image of the tree
-@param root address of the tree
-@returns 'void'
-*/
+/**
+*@brief 'top_view' gives the top image of the tree
+*@param root address of the tree
+*@returns 'void'
+**/
 
 void top_view(struct tree *root)
 {
