@@ -8,7 +8,7 @@ int knuth_moris_pratt(char*, char*);
 void main()
 {
 	puts("Knuth-Moris-Pratt Algorithm\n");
-    
+
 	char* alphabet = "abcdefghijklmnopqrstuvwxyz";
 	check_kmp(alphabet, "mno", 12);
 	check_kmp(alphabet, "abc", 0);
@@ -17,6 +17,7 @@ void main()
 	check_kmp(text, "bbccc", 4);
 }
 
+//Validate the Knuth-Moris-Pratt algorithm
 void check_kmp(char* text, char* search_string, int expect)
 {
 	printf("Find: '%s' in:\n%s\n", search_string, text);
@@ -43,6 +44,7 @@ void check_kmp(char* text, char* search_string, int expect)
 		puts("\nExpected result found. Test is valid.\n");
 }
 
+//Knuth-Moris-Pratt text search algorithm
 int knuth_moris_pratt(char* text, char* search_string)
 {
 	int text_length = strlen(text);
@@ -54,6 +56,7 @@ int knuth_moris_pratt(char* text, char* search_string)
 	memset(pexamine_array, 0, search_string_length);
 	char* pexamine = pexamine_array;
 	
+	//Calculate the search string's failure offset array.
 	int look_up = 0, iterator = 1;
 	while (iterator < search_string_length)
 	{
@@ -69,6 +72,7 @@ int knuth_moris_pratt(char* text, char* search_string)
 		*pexamine = (char)look_up;
 	}
 
+	//Find search string. Partial matches are skipped by the calculated amount in the failure offset array.
 	iterator = 0;
 	int sampler = 0;
 	while (iterator < text_length)
@@ -78,7 +82,7 @@ int knuth_moris_pratt(char* text, char* search_string)
 			if (sampler == search_string_length - 1)
 			{
 				free(pexamine_array);
-				return iterator - search_string_length + 1;
+				return iterator - search_string_length + 1;	//Search string is found.
 			}
 			sampler++;
 		}
@@ -91,5 +95,5 @@ int knuth_moris_pratt(char* text, char* search_string)
 	}
 
 	free(pexamine_array);
-	return -1;
+	return -1;	//Search string is not found.
 }
