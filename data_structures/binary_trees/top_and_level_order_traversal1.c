@@ -1,7 +1,7 @@
-/*
-@file
-@brief has complete implementation of bst with diffrent traversal approach
-*/
+/**
+*@file
+*@brief has complete implementation of bst with diffrent traversal approach
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <bits/stdc++.h>
@@ -9,12 +9,12 @@
 using namespace std;
 
 /**
-@brief this is a struct method in c/c++ through which we create our own datatype 
-@note with three portion in it two part of a node will store address of any other node of same datatype (*Node) 
-=> left stores address of left part of each subtree in a tree
-=> right stores address of right part of each subtree in a tree
-=> data contains value of each node of datatype int.
-@note data should of type integer only in this case
+*@brief this is a struct method in c/c++ through which we create our own datatype 
+*@note with three portion in it two part of a node will store address of any other node of same datatype (*Node) 
+*=> left stores address of left part of each subtree in a tree
+*=> right stores address of right part of each subtree in a tree
+*=> data contains value of each node of datatype int.
+*@note data should of type integer only in this case
 **/
 
 struct tree {
@@ -23,12 +23,12 @@ struct tree {
 };
 
 /**
-@brief the function 'createtree' defining below will create a node of datatype 'struct tree' 
+*@brief the function 'createtree' defining below will create a node of datatype 'struct tree' 
 put *left=NULL and *right=NULL at the time of creating a new node 
-@param root address of head/root node of the tree
-@param data has tha value which is to be kept in new node
-@returns address of that newly created node 
-*/
+*@param root address of head/root node of the tree
+*@param data has tha value which is to be kept in new node
+*@returns address of that newly created node 
+**/
 
 struct tree* createtree(struct tree *root,int data)
 {
@@ -47,13 +47,13 @@ struct tree* createtree(struct tree *root,int data)
 	root->right=createtree(root->right,data);
 	return root;
 }
-/*
-@brief inOrder function would print value (stored at data part of the node) and this prints the value in following manner
-@note left-subtree  ->  head/root ->  right-subtree
+/**
+*@brief inOrder function would print value (stored at data part of the node) and this prints the value in following manner
+*@note left-subtree  ->  head/root ->  right-subtree
 
-@param address of root node
-@returns 'void'
-*/
+*@param address of root node
+*@returns 'void'
+**/
 
 void inorder(struct tree *root)
 {
@@ -65,11 +65,11 @@ void inorder(struct tree *root)
 	}
 }
 
-/* 
-@brief function Height return the height of the tree which is the highest number of node lieing in any path from root/head node to a leaf node(having no child)
-@param root address of the tree
-@returns 'int'
-*/
+/**
+*@brief function Height return the height of the tree which is the highest number of node lieing in any path from root/head node to a leaf node(having no child)
+*@param root address of the tree
+*@returns 'int'
+**/
 
 int height(struct tree *root)
 {
@@ -89,12 +89,12 @@ int height(struct tree *root)
 	x=rhgt;
 	return x+1;
 }
-/*
-@brief function defined below would returns nothing it just recursively call itself and print the data present in particuler level in a binary search tree
-@param root address of tree
-@param level provides which level need to traverse leading from 1 to height of the tree
-@returns 'void'
-*/
+/**
+*@brief function defined below would returns nothing it just recursively call itself and print the data present in particuler level in a binary search tree
+*@param root address of tree
+*@param level provides which level need to traverse leading from 1 to height of the tree
+*@returns 'void'
+**/
 
 void currentleveltraversal(struct tree *root,int level)
 {
@@ -110,10 +110,10 @@ void currentleveltraversal(struct tree *root,int level)
 	}
 }
 
-/*
-@brief function 'printlevel' provide level number to 'currentleveltraversal' function 
-@param root address of the tree
-@returns 'void'
+/**
+*@brief function 'printlevel' provide level number to 'currentleveltraversal' function 
+*@param root address of the tree
+*@returns 'void'
 **/
 
 void printlevel(struct tree *root)
@@ -127,10 +127,10 @@ void printlevel(struct tree *root)
 }
 
 /**
-@brief 'printleft' prints left part of each subtree calling itself recursively until it reaches a leaf node 
-@param root address of the tree
-@returns 'void'
-*/
+*@brief 'printleft' prints left part of each subtree calling itself recursively until it reaches a leaf node 
+*@param root address of the tree
+*@returns 'void'
+**/
 
 void printleft(struct tree *root){
     	if (root == NULL){
@@ -141,10 +141,10 @@ void printleft(struct tree *root){
 }
 
 /**
-@brief 'printright' prints right part of each subtree calling itself recursively until it reaches a leaf node 
-@param root address of the tree
-@returns 'void'
-*/
+*@brief 'printright' prints right part of each subtree calling itself recursively until it reaches a leaf node 
+*@param root address of the tree
+*@returns 'void'
+**/
 
 void printright(struct tree *root){
     	if(root == NULL){
@@ -154,11 +154,11 @@ void printright(struct tree *root){
     	printright(root->right);
 }
 
-/*
-@brief 'top_view' gives the top image of the tree
-@param root address of the tree
-@returns 'void'
-*/
+/**
+*@brief 'top_view' gives the top image of the tree
+*@param root address of the tree
+*@returns 'void'
+**/
 
 void top_view(struct tree *root)
 {
