@@ -1,8 +1,3 @@
-/**
- * max_heapify takes O(logn).
- * build_maxheap takes O(n).
- * heapsort takes O(nlogn) since it requires above mentioned functions.
- */
 #include <stdio.h>
 
 void max_heapify(int *a, int i, int n);
