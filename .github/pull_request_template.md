@@ -4,7 +4,7 @@
 Thank you for your Pull Request. Please provide a description above and review
 the requirements below.
 
-Contributors guide: https://github.com/TheAlgorithms/C/blob/master/.github/CONTRIBUTING.md
+Contributors guide: https://github.com/TheAlgorithms/C/blob/master/CONTRIBUTING.md
 -->
 
 #### References
