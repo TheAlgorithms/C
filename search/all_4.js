@@ -25,5 +25,6 @@ var searchData=
   ['create_5fmatrix_60',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
   ['create_5fnode_61',['create_node',['../df/d3c/threaded__binary__trees_8c.html#ab21d1d36d95001defbca2f6abd4d410c',1,'threaded_binary_trees.c']]],
   ['create_5fpolynomial_62',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]],
-  ['code_20style_20convention_63',['Code style convention',['../dc/d64/md__coding_guidelines.html',1,'']]]
+  ['code_20style_20convention_63',['Code style convention',['../dc/d64/md__coding_guidelines.html',1,'']]],
+  ['contribution_20guidelines_64',['CONTRIBUTION GUIDELINES',['../d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]]
 ];

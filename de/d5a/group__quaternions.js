@@ -1,10 +1,10 @@
 var group__quaternions =
 [
-    [ "Overview about functions", "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md9", null ],
-    [ "Content", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md11", null ],
-    [ "Public interface", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md12", null ],
-    [ "Overview", "d7/db5/md_exercism__r_e_a_d_m_e.html#autotoc_md31", null ],
-    [ "LeetCode Algorithm", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md33", null ],
+    [ "Overview about functions", "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md27", null ],
+    [ "Content", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md29", null ],
+    [ "Public interface", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html#autotoc_md30", null ],
+    [ "Overview", "d7/db5/md_exercism__r_e_a_d_m_e.html#autotoc_md49", null ],
+    [ "LeetCode Algorithm", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md51", null ],
     [ "3D Vector operations", "de/d7b/group__vec__3d.html", "de/d7b/group__vec__3d" ],
     [ "Matrix operations", "dd/d7a/group__matrix.html", "dd/d7a/group__matrix" ],
     [ "3D Quaternion operations", "dc/d9a/group__quats.html", "dc/d9a/group__quats" ],
