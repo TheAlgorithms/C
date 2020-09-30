@@ -43,7 +43,7 @@ void push(struct node *p)
 {
     int item;
     struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node)); //creating memory for temp node.
+    temp = (struct node *)malloc(sizeof(struct node)); 
     printf("enter element to be inserted\n");
     scanf("%d", &item);
     temp->info = item;
@@ -62,21 +62,21 @@ void pop(struct node *p)
     int item;
     struct node *temp;
 
-    if (top == NULL) // Underflow condition 
+    if (top == NULL)  
         printf("stack is empty\n");
     else
     {
         item = top->info;
         temp = top;
-        top = top->link; // new top will be the node pointed by previous top.
-        free(temp); // free the memory of node using free().
+        top = top->link; 
+        free(temp); 
         printf("Element popped is%d\n", item);
     }
 }
 
 void display(struct node *p)
 {
-    if (top == NULL) // Underflow condition 
+    if (top == NULL) 
         printf("stack is empty\n");
     else
     {
