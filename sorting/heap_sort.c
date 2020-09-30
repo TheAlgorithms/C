@@ -8,7 +8,9 @@
 void max_heapify(int *a, int i, int n);
 void heapsort(int *a, int n);
 void build_maxheap(int *a, int n);
-
+/**
+ * max_heapify takes O(logn).
+ */
 void max_heapify(int *a, int i, int n)
 {
     int j, temp;
@@ -43,7 +45,9 @@ void heapsort(int *a, int n)
         max_heapify(a, 1, i - 1);
     }
 }
-
+/**
+ * build_maxheap takes O(n).
+ */
 void build_maxheap(int *a, int n)
 {
     int i;
