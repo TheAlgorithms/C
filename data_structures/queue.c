@@ -8,7 +8,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 // DATA STRUCTURES
-struct node
+/**
+ * Defining the structure of the node which contains 'data' (type : integer), two pointers 'next' and 'pre' (type : struct node).
+ */
+struct node                                          
 {
     int data;
     struct node *next;
