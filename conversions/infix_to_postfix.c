@@ -6,7 +6,6 @@
  * @author [Harsh Karande](https://github.com/harshcut)
  */
 
-#include <conio.h>
 #include <stdio.h>
 
 // globally declared structure
