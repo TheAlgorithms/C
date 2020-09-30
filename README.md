@@ -2,23 +2,23 @@
 <!-- the suffix in the above line is required for doxygen to consider this as the index page of the generated documentation site -->
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/C)
-[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/TheAlgorithms/C.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/TheAlgorithms/C/context:cpp) 
+[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/TheAlgorithms/C.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/TheAlgorithms/C/context:cpp)
 [![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)
-[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/CONTRIBUTING.md)
+[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/C/blob/master/CONTRIBUTING.md)
 ![GitHub repo size](https://img.shields.io/github/repo-size/TheAlgorithms/C?color=red&style=flat-square)
 [![Doxygen CI](https://github.com/TheAlgorithms/C/workflows/Doxygen%20CI/badge.svg)](https://TheAlgorithms.github.io/C)
 [![Awesome CI](https://github.com/TheAlgorithms/C/workflows/Awesome%20CI%20Workflow/badge.svg)](https://github.com/TheAlgorithms/C/actions?query=workflow%3A%22Awesome+CI+Workflow%22)
 
 ## Overview
 
-The repository is a collection of open-source implementation of a variety of algorithms implemented in C and licensed under [GPLv3 License](https://github.com/TheAlgorithms/C/blob/master/LICENSE). The algorithms span a variety of topics from computer science, mathematics and statistics, data science, machine learning, engineering, etc.. The implementations and the associated documentation are meant to provide a learning resource for educators and students. Hence, one may find more than one implementation for the same objective but using a different algorithm strategies and optimizations. 
+The repository is a collection of open-source implementation of a variety of algorithms implemented in C and licensed under [GPLv3 License](https://github.com/TheAlgorithms/C/blob/master/LICENSE). The algorithms span a variety of topics from computer science, mathematics and statistics, data science, machine learning, engineering, etc.. The implementations and the associated documentation are meant to provide a learning resource for educators and students. Hence, one may find more than one implementation for the same objective but using a different algorithm strategies and optimizations.
 
 ## Features
 
 * The repository provides implementations of various algorithms in one of the most fundamental general purpose languages - [C](https://en.wikipedia.org/wiki/C_(programming_language)).
 * Well documented source code with detailed explanations provide a valuable resource for educators and students alike.
 * Each source code is atomic using standard C library [`libc`](https://en.wikipedia.org/wiki/C_standard_library) and _no external libraries_ are required for their compilation and execution. Thus the fundamentals of the algorithms can be studied in much depth.
-* Source codes are [compiled and tested](https://github.com/TheAlgorithms/C/actions?query=workflow%3A%22Awesome+CI+Workflow%22) for every commit on the latest versions of three major operating systems viz., Windows, MacOS and Ubuntu (Linux) using MSVC 16 2019, AppleClang 11.0 and GNU 7.5.0 respectively. 
+* Source codes are [compiled and tested](https://github.com/TheAlgorithms/C/actions?query=workflow%3A%22Awesome+CI+Workflow%22) for every commit on the latest versions of three major operating systems viz., Windows, MacOS and Ubuntu (Linux) using MSVC 16 2019, AppleClang 11.0 and GNU 7.5.0 respectively.
 * Strict adherence to [C11](https://en.wikipedia.org/wiki/C11_(C_standard_revision)) standard ensures portability of code to embedded systems as well like ESP32, ARM Cortex, etc. with little to no changes.
 * Self-checks within programs ensure correct implementations with confidence.
 * Modular implementations and OpenSource licensing enable the functions to be utilized conveniently in other applications.
