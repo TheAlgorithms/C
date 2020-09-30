@@ -37,15 +37,15 @@ int main()
 }
 
 /**
- * push function will add a new node at the head of the list, time complexity O(1).
- * @param p pointer to the top of the stack.
- * @returns void.
+ * push function will add a new node at the head of the list, time complexity O(1)
+ * @param p pointer to the top of the stack
+ * @returns void
  */
 void push(struct node *p) 
 {
     int item;
     struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node)); 
+    temp = (struct node *)malloc(sizeof(struct node));
     printf("enter element to be inserted\n");
     scanf("%d", &item);
     temp->info = item;
@@ -57,16 +57,16 @@ void push(struct node *p)
 }
 
 /**
- * pop function deletes the first node from the head, time complexity O(1).
- * @param p pointer to the top of the stack.
- * @returns void.
+ * pop function deletes the first node from the head, time complexity O(1)
+ * @param p pointer to the top of the stack
+ * @returns void
  */
-void pop(struct node *p)  
+void pop(struct node *p) 
 {
     int item;
     struct node *temp;
 
-    if (top == NULL)  
+    if (top == NULL)
         printf("stack is empty\n");
     else
     {
