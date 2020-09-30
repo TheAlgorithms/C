@@ -36,40 +36,40 @@ int main()
     }
 }
 
-void push(struct node *p)
+void push(struct node *p) // push function will add a new node at the head of the list, time complexity O(1).
 {
     int item;
     struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node));
+    temp = (struct node *)malloc(sizeof(struct node)); //creating memory for temp node.
     printf("enter element to be inserted\n");
     scanf("%d", &item);
     temp->info = item;
 
     temp->link = top;
-    top = temp;
+    top = temp; //top of the stack points to newly added node.
 
     printf("inserted succesfully\n");
 }
-void pop(struct node *p)
+void pop(struct node *p) // pop function deletes the first node from the head, time complexity O(1).
 {
     int item;
     struct node *temp;
 
-    if (top == NULL)
+    if (top == NULL) // Underflow condition 
         printf("stack is empty\n");
     else
     {
         item = top->info;
         temp = top;
-        top = top->link;
-        free(temp);
+        top = top->link; // new top will be the node pointed by previous top.
+        free(temp); // free the memory of node using free().
         printf("Element popped is%d\n", item);
     }
 }
 
 void display(struct node *p)
 {
-    if (top == NULL)
+    if (top == NULL) // Underflow condition 
         printf("stack is empty\n");
     else
     {
@@ -79,6 +79,5 @@ void display(struct node *p)
             printf("%d\n", p->info);
             p = p->link;
         }
-        // printf("%d\n",p->info);
     }
 }
