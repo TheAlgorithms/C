@@ -51,7 +51,7 @@ void push(struct node *p)
     temp->info = item;
 
     temp->link = top;
-    top = temp; 
+    top = temp;
 
     printf("inserted succesfully\n");
 }
