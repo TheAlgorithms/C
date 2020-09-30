@@ -72,8 +72,8 @@ void pop(struct node *p)
     {
         item = top->info;
         temp = top;
-        top = top->link; 
-        free(temp); 
+        top = top->link;
+        free(temp);
         printf("Element popped is%d\n", item);
     }
 }
