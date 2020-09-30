@@ -5,11 +5,11 @@ void heapsort(int *a, int n);
 void build_maxheap(int *a, int n);
 
 /**
- * max_heapify takes O(logn).
- * @param a pointer to array a containing heap elements.
- * @param i element at which max_heapify needs to be performed.
- * @param n where n is number of elemnts in array a.
- * @returns void.
+ * max_heapify takes O(logn)
+ * @param a pointer to array a containing heap elements
+ * @param i element at which max_heapify needs to be performed
+ * @param n where n is number of elemnts in array a
+ * @returns void
  */
 void max_heapify(int *a, int i, int n)
 {
