@@ -38,6 +38,8 @@ int main()
 
 /**
  * push function will add a new node at the head of the list, time complexity O(1).
+ * @param p pointer to the top of the stack.
+ * @returns void.
  */
 void push(struct node *p) 
 {
@@ -56,6 +58,8 @@ void push(struct node *p)
 
 /**
  * pop function deletes the first node from the head, time complexity O(1).
+ * @param p pointer to the top of the stack.
+ * @returns void.
  */
 void pop(struct node *p)  
 {
