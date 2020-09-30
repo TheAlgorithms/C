@@ -80,7 +80,7 @@ void pop(struct node *p)
 
 void display(struct node *p)
 {
-    if (top == NULL) 
+    if (top == NULL)
         printf("stack is empty\n");
     else
     {
