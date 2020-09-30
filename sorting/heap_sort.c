@@ -47,10 +47,10 @@ void heapsort(int *a, int n)
 }
 
 /**
- * build_maxheap takes O(n).
- * @param a pointer to array a containing heap elements.
- * @param n where n is number of elemnts in array a.
- * @returns void.
+ * build_maxheap takes O(n)
+ * @param a pointer to array a containing heap elements
+ * @param n where n is number of elemnts in array a
+ * @returns void
  */
 void build_maxheap(int *a, int n)
 {
