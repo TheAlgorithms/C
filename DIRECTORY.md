@@ -154,6 +154,7 @@
     * [142](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/142.c)
     * [153](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/153.c)
     * [160](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/160.c)
+    * [162](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/162.c)
     * [169](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/169.c)
     * [173](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/173.c)
     * [189](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/189.c)
