@@ -1,6 +1,5 @@
 /**
- * Program documentation
- * @name infix_to_postfix
+ * @file
  * @brief Infix to Postfix Expression Conversion
  * @details Convert Infixed expressions to Postfix expression.
  * @author [Harsh Karande](https://github.com/harshcut)
@@ -18,47 +17,50 @@ struct Stack
 // function headers
 void push(struct Stack *p, char ch);  // pust element in stack
 char pop(struct Stack *p);            // pop topmost element from the stack
-int isOprnd(char ch);                 // chack if element is operand or not
+int isOprnd(char ch);                 // check if element is operand or not
 int isEmpty(struct Stack s);          // check if stack is empty
 int prcnd(char op1, char op2);        // check operator precedence
 void convert(char infix[],
              char postfix[]);  // convert infix to postfix expression
 
 /**
- * @brief Main function
+ * @brief main function
  * @returns 0 on exit
  */
 int main()
 {
-    char infix[20], postfix[20];
+    char infix[20], postfix[20];  // initialize empty infix and postfix array
 
-    printf("Enter infix expression: ");
-    scanf("%s", infix);
+    printf("Enter infix expression: ");  // example : A+B-C*D/E$F
+    scanf("%s", infix);                  // get values for infix array
 
     convert(infix, postfix);
-    printf("Postfix expression is %s", postfix);
+    printf("Postfix expression is %s", postfix);  // output : AB+CD*EF$/-
 
     return 0;
 }
 
 /**
  * @brief push function
+ * @param *p : used as a pointer variable of stack
+ * @param x : char to be pushed in stack
  * @returns void
  */
 void push(struct Stack *p, char x)
 {
-    if (p->tos == 9)
+    if (p->tos == 9)  // check if stack has reached its max limit
     {
         printf("Stack Overflow!");
         return;
     }
 
-    p->tos += 1;
-    p->arr[p->tos] = x;
+    p->tos += 1;         // increment tos
+    p->arr[p->tos] = x;  // assign char x to index of stack pointed by tos
 }
 
 /**
  * @brief pop function
+ * @param *p : used as a pointer variable of stack
  * @returns x or \0 on exit
  */
 char pop(struct Stack *p)
@@ -71,53 +73,58 @@ char pop(struct Stack *p)
         return '\0';
     }
 
-    x = p->arr[p->tos];
-    p->tos -= 1;
+    x = p->arr[p->tos];  // assign the value of stack at index tos to x
+    p->tos -= 1;         // decrement tos
 
     return x;
 }
 
 /**
  * @brief isOprnd function
+ * @param ch : this is the element from the infix array
  * @returns 1 or 0 on exit
  */
 int isOprnd(char ch)
 {
-    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) ||
-        (ch >= 48 && ch <= 57))
+    if ((ch >= 65 && ch <= 90) ||
+        (ch >= 97 && ch <= 122) ||  // check if ch is an operator or
+        (ch >= 48 && ch <= 57))     // operand using ASCII values
     {
-        return 1;
+        return 1;  // return for true result
     }
     else
     {
-        return 0;
+        return 0;  // return for false result
     }
 }
 
 /**
  * @brief isEmpty function
+ * @param s : it is the object reference of stack
  * @returns 1 or 0 on exit
  */
 int isEmpty(struct Stack s)
 {
-    if (s.tos == -1)
+    if (s.tos == -1)  // check if stack is empty
     {
-        return 1;
+        return 1;  // return for true result
     }
     else
     {
-        return 0;
+        return 0;  // return for false result
     }
 }
 
 /**
  * @brief convert function
+ * @param infix[] : infix array provided by user
+ * @param postfix[] : empty array to be given to convert()
  * @returns postfixed expresion or \0 on exit
  */
 void convert(char infix[], char postfix[])
 {
-    struct Stack s;
-    s.tos = -1;
+    struct Stack s;  // initialze object reference of stack
+    s.tos = -1;      // initalize the tos
 
     int i, j = 0, pr;
     char ch;
@@ -126,31 +133,31 @@ void convert(char infix[], char postfix[])
     {
         ch = infix[i];
 
-        if (isOprnd(ch) == 1)
+        if (isOprnd(ch) == 1)  // check if char is operand or operator
         {
-            postfix[j] = ch;
-            j++;
+            postfix[j] = ch;  // assign ch to postfix array with index j
+            j++;              // incement j
         }
         else
         {
-            while (isEmpty(s) == 0)
+            while (isEmpty(s) == 0)  // check if stack is empty
             {
-                pr = prcnd(ch, s.arr[s.tos]);
+                pr = prcnd(ch, s.arr[s.tos]);  // check operator precedence
 
                 if (pr == 1)
                 {
-                    break;
+                    break;  // if ch has a greater precedence than s.arr[s.tos]
                 }
 
                 postfix[j] = pop(&s);
                 j++;
             }
 
-            push(&s, ch);
+            push(&s, ch);  // push ch to stack
         }
     }
 
-    while (isEmpty(s) == 0)
+    while (isEmpty(s) == 0)  // check if stack is empty
     {
         postfix[j] = pop(&s);
         j++;
@@ -161,6 +168,8 @@ void convert(char infix[], char postfix[])
 
 /**
  * @brief prcnd function
+ * @param op1 : first operator
+ * @param op2 : second operator
  * @returns 1 or 0 on exit
  */
 int prcnd(char op1, char op2)
