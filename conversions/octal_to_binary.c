@@ -3,7 +3,7 @@
  * @details
  * The octalTobinary function take the octal number as long  
  * return a long binary nuber after conversion
- * @author Vishnu P(https://github.com/vishnu0pothan)
+ * @author [Vishnu P](https://github.com/vishnu0pothan)
  */
 #include <stdio.h>
 #include <math.h>
