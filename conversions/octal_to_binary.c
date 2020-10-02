@@ -36,7 +36,7 @@ long octalToBinary(int octalnum)
      */
     while (decimalnum != 0)
     {
-	binarynum = binarynum + (decimalnum % 2) * i;
+	binarynum = binarynum + (long)(decimalnum % 2) * i;
 	decimalnum = decimalnum / 2;
 	i = i * 10;
     }
