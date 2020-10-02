@@ -8,7 +8,11 @@
 #include <stdio.h>
 #include <math.h>
 
-//This function converts octal number to binary number
+/**
+ * @brief Converet  octal number to binary
+ * @param octalnum octal value that need to convert
+ * @returns A binary number after conversion
+ */
 long octalToBinary(int octalnum)
 {
     int decimalnum = 0, i = 0;
@@ -42,7 +46,7 @@ long octalToBinary(int octalnum)
 }
 
 /**
- * @brief Main function
+ * @brief Main function  
  * @returns 0 on exit
  */
 int main()
