@@ -24,3 +24,5 @@ for (n=n1;n<=n2;n++)
   }
 }
 }
+
+// test case- for n1=1 and n2=10 we get that 6 is the ony perfect number
