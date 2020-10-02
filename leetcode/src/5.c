@@ -66,3 +66,27 @@ char* longestPalindrome(char* inputString)
 
     return res;
 }
+
+/**
+ * @brief Test function
+ * @returns void
+ */
+static void test()
+{
+    /* First leetcode example */
+    assert(strcmp(longestPalindrome("babad"), "bab") == 0 ||
+           strcmp(longestPalindrome("babad"), "aba") == 0);
+    /* Second leetcode example */
+    assert(strcmp(longestPalindrome("cbbd"), "bb") == 0);
+}
+
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
+int main()
+{
+    test();  // execute the tests
+    // code here
+    return 0;
+}
