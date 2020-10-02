@@ -58,6 +58,5 @@ int main()
 
     //Calling the function octaltoBinary
     printf("Equivalent binary number is: %ld", octalToBinary(octalnum));
-
     return 0;
 }
