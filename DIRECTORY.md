@@ -192,6 +192,7 @@
     * [442](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/442.c)
     * [461](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/461.c)
     * [476](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/476.c)
+    * [5](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/5.c)
     * [509](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/509.c)
     * [520](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/53.c)
