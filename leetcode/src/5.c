@@ -1,16 +1,36 @@
-char* longestPalindrome(char* s)
+/**
+ * @file
+ * @brief Leetcode problem #5
+ * @details
+ * This is a working solution for the "Longest Palindromic Substring" problem.
+ * Runtime: 8ms, memory: 7.2 MB, outperforms 90.45% of C submissions.
+ * @author [Gabriele Bruno Franco](https://github.com/gbrunofranco)
+ */
+
+#include "assert.h"
+#include "stdlib.h"
+
+/**
+ * Function documentation
+ * @param inputString
+ * @returns `NULL` if inputString is NULL
+ * @returns `inputString' if inputString is one character long
+ * @returns the longest palindrome sub-string if inputString is more than one
+ * character long
+ */
+char* longestPalindrome(char* inputString)
 {
     int stringSize;
     int subStringSize = 0, j, k;
     int max = 1;
     int head = 0;
 
-    stringSize = strlen(s);
+    stringSize = strlen(inputString);
 
-    if (s == NULL)
+    if (inputString == NULL)
         return NULL;
     if (stringSize == 1)
-        return s;
+        return inputString;
 
     for (subStringSize = 0;
          subStringSize < stringSize && (stringSize - subStringSize) > max / 2;)
@@ -18,12 +38,13 @@ char* longestPalindrome(char* s)
         j = subStringSize;
         k = subStringSize;
 
-        while (k < stringSize - 1 && s[k] == s[k + 1])
+        while (k < stringSize - 1 && inputString[k] == inputString[k + 1])
         {
             k++;
         }
         subStringSize = k + 1;
-        while (j > 0 && k < stringSize - 1 && s[j - 1] == s[k + 1])
+        while (j > 0 && k < stringSize - 1 &&
+               inputString[j - 1] == inputString[k + 1])
         {
             j--;
             k++;
@@ -39,7 +60,7 @@ char* longestPalindrome(char* s)
     if (res == NULL)
         return NULL;
     for (subStringSize = 0; subStringSize < max; ++subStringSize)
-        res[subStringSize] = s[head + subStringSize];
+        res[subStringSize] = inputString[head + subStringSize];
 
     res[max] = '\0';
 
