@@ -132,6 +132,7 @@
   * [Hash Xor8](https://github.com/TheAlgorithms/C/blob/master/hash/hash_xor8.c)
 
 ## Leetcode
+  * [5](https://github.com/TheAlgorithms/C/blob/master/leetcode/5.c)
   * Src
     * [1](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1.c)
     * [101](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/101.c)
