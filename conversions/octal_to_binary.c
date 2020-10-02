@@ -40,6 +40,11 @@ long octalToBinary(int octalnum)
     //Returning the binary number that we got from octal number
     return binarynum;
 }
+
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     int octalnum;
