@@ -1,20 +1,15 @@
 ---
-name: Feature request
-about: Suggest features, propose improvements, discuss new ideas.
-title: "[FEATURE]"
+name: articulation points
+about: adding new feature in the graph data structure
+title: "articulation points"
 labels: enhancement
 assignees: ''
 
 ---
 
-<!--- Provide a general summary of the issue in the Title above -->
+"adding a new algorithm that finds the cut point of the graph"
 
 ## Detailed Description
-<!--- Provide a detailed description of the change or addition you are proposing -->
-
+"A vertex in an undirected connected graph is an articulation point (or cut vertex) iff removing it (and edges through it) disconnects the graph. Articulation points represent vulnerabilities in a connected network – single points whose failure would split the network into 2 or more components."
 ## Context
-<!--- Why is this change important to you? How would you use it? -->
-<!--- How can it benefit other users? -->
-
-## Possible Implementation
-<!--- Not obligatory, but suggest an idea for implementing addition or change -->
+ They are useful for designing reliable networks.
