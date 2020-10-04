@@ -244,7 +244,7 @@ void cleanup1(Tptr p)
 // Insert 2 -- Faster version of Insert
 
 #define BUFSIZE 1000
-Tptr buf;
+Tptr buffer;
 int bufn, freen;
 void *freearr[10000];
 int storestring = 0;
@@ -256,6 +256,7 @@ void insert2(char *s)
 
     Tptr pp, *p;
     p = &root;
+    pp = *p;
     while (pp == *p)
     {
         if ((d = *s - pp->splitchar) == 0)
@@ -274,11 +275,11 @@ void insert2(char *s)
         // *p = (Tptr) malloc(sizeof(Tnode));
         if (bufn-- == 0)
         {
-            buf = (Tptr)malloc(BUFSIZE * sizeof(Tnode));
-            freearr[freen++] = (void *)buf;
+            buffer = (Tptr)malloc(BUFSIZE * sizeof(Tnode));
+            freearr[freen++] = (void *)buffer;
             bufn = BUFSIZE - 1;
         }
-        *p = buf++;
+        *p = buffer++;
         pp = *p;
         pp->splitchar = *s;
         pp->lokid = pp->eqkid = pp->hikid = 0;
