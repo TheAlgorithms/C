@@ -18,6 +18,7 @@
   * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal_recursion.c)
   * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
   * [Int To String](https://github.com/TheAlgorithms/C/blob/master/conversions/int_to_string.c)
+  * [Octal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_binary.c)
   * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
   * [To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/to_decimal.c)
 
@@ -32,6 +33,7 @@
     * [Create Node](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/recursive_traversals.c)
     * [Redblacktree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/redblacktree.c)
+    * [Segment Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/segment_tree.c)
     * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
@@ -247,6 +249,7 @@
   * [Mirror](https://github.com/TheAlgorithms/C/blob/master/misc/mirror.c)
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
+  * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/quartile.c)
@@ -319,11 +322,14 @@
   * Problem 401
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_401/sol1.c)
   * Problem 5
-    * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol.c)
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol1.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol2.c)
+    * [Sol3](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol3.c)
   * Problem 6
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_6/sol.c)
   * Problem 7
     * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol2.c)
   * Problem 8
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol1.c)
     * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol2.c)
