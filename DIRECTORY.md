@@ -112,6 +112,11 @@
 ## Games
   * [Tic Tac Toe](https://github.com/TheAlgorithms/C/blob/master/games/tic_tac_toe.c)
 
+## Geometry
+  * [Geometry Datatypes](https://github.com/TheAlgorithms/C/blob/master/geometry/geometry_datatypes.h)
+  * [Quaternions](https://github.com/TheAlgorithms/C/blob/master/geometry/quaternions.c)
+  * [Vectors 3D](https://github.com/TheAlgorithms/C/blob/master/geometry/vectors_3d.c)
+
 ## Graphics
   * [Spirograph](https://github.com/TheAlgorithms/C/blob/master/graphics/spirograph.c)
 
