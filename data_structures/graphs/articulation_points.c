@@ -1,3 +1,18 @@
+/**
+ * @file
+ * @brief implementation of the articulation_point
+ * @details
+ * A vertex in an undirected connected graph is an articulation point (or cut
+ * vertex) iff removing it (and edges through it) disconnects the graph.
+ * Articulation points represent vulnerabilities in a connected network – single
+ * points whose failure would split the network into 2 or more components. They
+ * are useful for designing reliable networks. For a disconnected undirected
+ * graph, an articulation point is a vertex removing which increases number of
+ * connected components. for more information see
+ * (https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph)
+ * @author [Guy Rozenberg](https://github.com/guyroznb)
+ */
+
 #include <malloc.h>
 #include <stdio.h>
 
