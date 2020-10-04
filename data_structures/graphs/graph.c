@@ -1,16 +1,10 @@
 // Graph ADT
 // Adjacency Matrix Representation
 #include "Graph.h"
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct GraphRep
-{
-    int **edges;  // adjacency matrix
-    int nV;       // #vertices
-    int nE;       // #edges
-} GraphRep;
 
 Graph newGraph(int V)
 {

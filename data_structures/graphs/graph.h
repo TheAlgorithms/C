@@ -7,6 +7,14 @@ typedef struct GraphRep *Graph;
 typedef int Vertex;
 
 // edges are pairs of vertices (end-points)
+
+typedef struct GraphRep
+{
+    int **edges;  // adjacency matrix
+    int nV;       // #vertices
+    int nE;       // #edges
+} GraphRep;
+
 typedef struct Edge
 {
     Vertex v;
