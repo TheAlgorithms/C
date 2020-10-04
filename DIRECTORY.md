@@ -352,6 +352,7 @@
   * [Ternary Search](https://github.com/TheAlgorithms/C/blob/master/searching/ternary_search.c)
 
 ## Sorting
+  * [American Flag Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/american_flag_sort.c)
   * [Bead Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/bead_sort.c)
   * [Binary Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/binary_insertion_sort.c)
   * [Bogo Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/bogo_sort.c)
