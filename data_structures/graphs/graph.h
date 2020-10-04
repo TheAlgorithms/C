@@ -3,6 +3,13 @@
 
 typedef struct GraphRep *Graph;
 
+typedef struct GraphRep
+{
+    int **edges;  // adjacency matrix
+    int nV;       // #vertices
+    int nE;       // #edges
+} GraphRep;
+
 // vertices are ints
 typedef int Vertex;
 
