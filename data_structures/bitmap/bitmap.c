@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @brief bitmap implementation
+ * @author [Alysson Cirilo](https://github.com/alyssoncs)
+ * @see bitmap.h
+ */
+ 
 #include <stdlib.h>
 #include "bitmap.h"
 
