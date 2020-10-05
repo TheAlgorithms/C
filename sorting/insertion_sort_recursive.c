@@ -47,10 +47,6 @@ static void test()
     for (int i = 0; i < size; i++)
     {
         arr[i] = (rand() % 100) - 50;/* signed random numbers */
-        // convert -ve no. to positive
-        if(arr[i] < 0){
-            arr[i] *= -1;
-        }
     }
     RecursionInsertionSort(arr, size);
     for (int i = 0; i < size  ; ++i)
