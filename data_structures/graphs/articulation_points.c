@@ -22,6 +22,7 @@
 int *articulation_point(Graph g);
 int *aux_function(Graph g, Vertex v, Vertex p, int *iscutpoint);
 
+// set up global variables
 int *visited;
 int *tin, *low;
 int timer = 0;
@@ -82,16 +83,22 @@ int main(void)
 
 int *articulation_point(Graph g)
 {
-    /* get the unweigted graph g and return the articulation point*/
+    /* get the unweigted graph g and return the articulation points list*/
+
     /* set the variables and allocate mamory */
     int nV = g->nV;
     int *iscutpoint = NULL;
     visited = (int *)malloc(nV * sizeof(int));
+
+    // mark all the vertices as unvisited
     for (int v = 0; v < nV; v++) visited[v] = 0;
     tin = (int *)malloc(nV * sizeof(int));
     low = (int *)malloc(nV * sizeof(int));
     iscutpoint = (int *)malloc(nV * sizeof(int));
     for (int v = 0; v < nV; v++) iscutpoint[v] = 0;
+
+    // go through all the vertex in the graph and check if they arn't visited.
+    // If not then use DFS auxillary function and find the cut vertices
     for (int i = 0; i < nV; i++)
     {
         if (visited[i] == 0)
@@ -102,31 +109,55 @@ int *articulation_point(Graph g)
 
 int *aux_function(Graph g, Vertex v, Vertex p, int *iscutpoint)
 {
+    /* A recursive auxillary function that find articulation points using DFS
+    traversal v --> the tested vertex p --> the parent of v visited[] --> keeps
+    tract of visited vertices tin --> Stores discovery times of visited vertices
+    iscutpoint[] --> Store articulation points
+    children --> counts the number of chilrders of vertex v
+    low[u] = min(tin[u], tin[w])  where w is an ancestor of u and there is a
+    back edge in the graph from some descendant of u to w.
+    */
     int children = 0;
     visited[v] = 1;
     timer++;
     tin[v] = timer;
     low[v] = timer;
     int nV = g->nV;
+    /* go only through the vertices adjacent to v*/
     for (int i = 0; i < nV; i++)
     {
-        /* go only through the vertices adjacent to v*/
+        // Go through all vertices adjaecnt to v
         if (g->edges[i][v] != 0)
         {
+            // if the vertex is the parent then continue
             if (i == p)
                 continue;
+
+            // Update low value of u for parent function calls.
             if (visited[i])
                 low[v] = MIN(low[v], tin[i]);
+
+            // // If i is not visited yet, then make it a child of u in DFS tree
+            // and continue with the dfs
             else
             {
                 aux_function(g, i, v, iscutpoint);
+
+                // Check if the subtree rooted with v has a connection to one of
+                // the ancestors of v
                 low[v] = MIN(low[v], low[i]);
+
+                // If v is not root and low value of one of its child is more
+                // than discovery value of v, v is an articulation point
                 if ((low[i] >= tin[v]) && (p != -1))
                     iscutpoint[v] = 1;
                 children++;
             }
         }
     }
+
+    // v is root of DFS tree and has two or more chilren then it is an
+    // articulation point
     if ((p == -1) && (children > 1))
         iscutpoint[v] = 1;
     return iscutpoint;
