@@ -59,6 +59,7 @@ static void test()
     }
     free(arr);
 }
+
 /** Main function
  *  @returns integer 0
  */
