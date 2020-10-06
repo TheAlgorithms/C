@@ -13,13 +13,11 @@ bool isHappy(int n)
 {
     int slow, fast;
     slow = fast = n;
-    
     do
     {
         slow = numSquareSum(slow);
         fast = numSquareSum(numSquareSum(fast));
     } 
     while (slow != fast);
-
     return (slow == 1); 
 }
