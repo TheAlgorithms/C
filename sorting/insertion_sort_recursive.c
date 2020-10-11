@@ -9,6 +9,10 @@
 #include <time.h>
 
 /**
+ * @addtogroup sorting Sorting algorithms
+ * @{
+ */
+/**
  * Insertion sort algorithm implements using Recursion 
  * @param arr array to be sorted
  * @param size size of array
