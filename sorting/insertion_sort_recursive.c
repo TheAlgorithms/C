@@ -27,7 +27,6 @@ void RecursionInsertionSort(int *arr, int size)
     // marking recursive call to reach starting element
     RecursionInsertionSort(arr,size-1);
     
-    
     int key = arr[size-1];
     int j = size-2;
     // swapping logic for insertion sort
