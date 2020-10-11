@@ -1,8 +1,8 @@
 /**
  * \file
  * \brief Project Euler problem 107 (https://projecteuler.net/problem=107)
- * solution using Kruskals \author [David
- * Santamaria](https://github.com/Daves1245)
+ * solution using Kruskals
+ * \author [David Santamaria](https://github.com/Daves1245)
  */
 #include <stdio.h>
 #include <stdlib.h>
