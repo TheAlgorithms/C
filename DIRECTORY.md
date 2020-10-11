@@ -287,6 +287,8 @@
   * Problem 10
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_10/sol1.c)
     * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_10/sol2.c)
+  * Problem 107
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_107/sol1.c)
   * Problem 12
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_12/sol1.c)
   * Problem 13
