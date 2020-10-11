@@ -34,7 +34,7 @@ void RecursionInsertionSort(int *arr, int size)
     }
     arr[j+1] = key;
 }
-
+/** @} */
 /** Test function
   * @returns None
   */
