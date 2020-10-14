@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *ptr, n, src, loc=0, num;
+    printf("enter the number of elements in the array ");
+    scanf("%d", &n);
+
+    ptr = (int *)malloc((n) * sizeof(int));
+    
+    printf("enter %d elements \n", n);
+    for (int i = 0; i < n; i++)
+        scanf("%d", &ptr[i]);
+    printf("Enter the array you want to search: ");
+    scanf("%d", &num);
+    
+    src=0;
+	for(int i = 0; i < n; i++){
+	    if(num == ptr[i]){
+	        loc = i;
+	        printf("Element %d is found at %d\n", num, loc+1);
+	    }
+	    else{ 
+	       loc = i; 
+	       printf("Element %d is not found at position %d\n", num, loc+1);
+	    }
+	}
+    return 0;
+	
+}
