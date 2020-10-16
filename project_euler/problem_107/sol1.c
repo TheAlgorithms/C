@@ -42,7 +42,7 @@ struct ufds {
 /** Find the representative item of a vertex
  * @param i the queried vertex
  * @param the union find that i belongs within
- * @returnss the index of the vertex that represents
+ * @returns the index of the vertex that represents
  * the set that i belongs to
  */
 int find_set(int i, struct ufds *uf) {
