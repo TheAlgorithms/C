@@ -4,6 +4,11 @@
  * solution using Kruskals
  * \author [David Santamaria](https://github.com/Daves1245)
  */
+
+/**
+ * @addtogroup project_euler_107 Project Euler 107
+ * @{
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,7 +18,7 @@
 #define NUM_LINES 40
 #define MAX_LINE_LEN 4 * 40 // a line is at most 40 3-digit numbers and a comma
 
-/*
+/**
  * We represent an edge as a 3 tuple (u, v, w),
  * where u and v are the vetices connected by
  * the edge, and w is the weight of the edge
@@ -24,12 +29,14 @@ struct edge {
   int w;
 };
 
-/*
+/**
  * The union find data structure
  */
 struct ufds {
-  int rank[NUM_VERTICES], parent[NUM_VERTICES], size[NUM_VERTICES];
-  int num_sets;
+  int rank[NUM_VERTICES];   /* Upper bounds of the height of trees in the union find */
+  int parent[NUM_VERTICES]; /* The representative item of any vertex */
+  int size[NUM_VERTICES];   /* The size of the set a vertex belongs to */
+  int num_sets;             /* The number of sets in the union find */
 };
 
 /** Find the representative item of a vertex
@@ -78,10 +85,13 @@ void union_set(int i, int j, struct ufds *uf) {
   }
 }
 
-/*
+/**
  * The problem specifies an adjacency matrix, which can be used with Prim's
  * algorithm, but this implementation uses kruskal's, so we convert the input
  * into an edge list represented by an array of edges
+ * @param str a pointer to the adjacency list input stored in a char array
+ * @param elist a pointer to array of edges where the converted edgelist will be stored
+ * @param total_weight a pointer to int where the total weight of the network is stored
  */
 void generate_edge_list(char *str, struct edge *elist, int *total_weight) {
   char *tmp;
@@ -103,19 +113,23 @@ void generate_edge_list(char *str, struct edge *elist, int *total_weight) {
         entry->u = i;
         entry->v = j;
         entry->w = n;
+        // Keep track of total weight now to avoid eading the entire network again
         *total_weight += n;
       }
     }
   }
 }
 
-/* Compare two edges by their weight */
+/* Compare two edges by their weight 
+ * @param a pointer to first edge
+ * @param b pointer to second edge
+ * @returns the difference in weight of the edges
+ */
 int my_comp(const void *a, const void *b) {
   return ((struct edge *)a)->w - ((struct edge *)b)->w;
 }
 
 /** An implementation of Kruskal's algorithm
- * (https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
  * @param E the number of edges
  * @param elist the edge list
  * @param uf pointer to union find for keeping track of trees
@@ -137,6 +151,8 @@ int kruskals(int E, struct edge *elist, struct ufds *uf) {
   return cost;
 }
 
+/** @} */
+
 /*
  * We parse input and generate an edge list
  * we then pass that edge list into kruskals to
@@ -145,7 +161,9 @@ int kruskals(int E, struct edge *elist, struct ufds *uf) {
  * get the savings and the solution to the problem.
  */
 
-/** Main function */
+/** Main function 
+ * @return 0
+ */
 int main(int argc, char **argv) {
   char input[MAX_LINE_LEN * NUM_LINES] = {0};
   FILE *fp;
