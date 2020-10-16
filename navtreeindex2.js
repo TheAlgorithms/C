@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"d8/d7a/structtnode.html#a44127c1d017332403d91a96a1633a76a":[13,0,36,3],
+"d8/d7a/structtnode.html#ad302cb43ee1cab8a29581e8aaf76bbd4":[13,0,36,0],
 "d8/d7a/structtnode.html#ae1f202bf98d22f8316eeb71b68a59951":[13,0,36,1],
 "d8/d7a/structtnode.html#af7ce6341b8536c58a5a9ebdb4862a32a":[13,0,36,2],
 "d8/d7c/dict_8h_source.html":[14,0,2,2,0],
@@ -189,8 +191,8 @@ var NAVTREEINDEX2 =
 "dd/d53/int__to__string_8c.html#aa8dca7b867074164d5f45b0f3851269d":[14,0,1,2,2],
 "dd/d53/int__to__string_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[14,0,1,2,1],
 "dd/d7a/group__matrix.html":[12,0,6],
-"dd/d7a/group__matrix.html#ga9f844010cb96591fa94c9d533a500ab7":[14,0,4,0,3],
 "dd/d7a/group__matrix.html#ga9f844010cb96591fa94c9d533a500ab7":[12,0,6,1],
+"dd/d7a/group__matrix.html#ga9f844010cb96591fa94c9d533a500ab7":[14,0,4,0,3],
 "dd/d8b/problem__22_2sol1_8c.html":[14,0,10,11,0],
 "dd/d8b/problem__22_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[14,0,10,11,0,3],
 "dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63":[14,0,10,11,0,4],
@@ -219,6 +221,9 @@ var NAVTREEINDEX2 =
 "dd/df0/problem__19_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[14,0,10,7,0,2],
 "dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e":[14,0,10,7,0,1],
 "dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75":[14,0,10,7,0,0],
+"de/d0c/insertion__sort__recursive_8c.html":[14,0,12,4],
+"de/d0c/insertion__sort__recursive_8c.html#aa8dca7b867074164d5f45b0f3851269d":[14,0,12,4,2],
+"de/d0c/insertion__sort__recursive_8c.html#ac0f2228420376f4db7e1274f2b41667c":[14,0,12,4,0],
 "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html":[5],
 "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html#autotoc_md34":[0],
 "de/d58/structquaternion__.html":[12,0,7,0],
@@ -240,14 +245,9 @@ var NAVTREEINDEX2 =
 "de/d7b/group__vec__3d.html#ga4fd194972bea4884e0b33cf4a166d14e":[14,0,4,2,3],
 "de/d7b/group__vec__3d.html#ga5082b0720c2cc51ae84bf19bd76dc849":[12,0,5,3],
 "de/d7b/group__vec__3d.html#ga5082b0720c2cc51ae84bf19bd76dc849":[14,0,4,2,1],
-"de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de":[12,0,5,7],
 "de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de":[14,0,4,2,7],
+"de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de":[12,0,5,7],
 "de/d7b/group__vec__3d.html#ga97da356cb7d5da73a0ac9bad09a435cc":[12,0,5,9],
 "de/d7b/group__vec__3d.html#ga97da356cb7d5da73a0ac9bad09a435cc":[14,0,4,2,9],
-"de/d7b/group__vec__3d.html#gaa6b5ac18429ffb0131dc8593d31c25a4":[14,0,4,2,6],
-"de/d7b/group__vec__3d.html#gaa6b5ac18429ffb0131dc8593d31c25a4":[12,0,5,6],
-"de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5":[14,0,4,2,8],
-"de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5":[12,0,5,8],
-"de/d7b/group__vec__3d.html#gaf9ee870d4922e488bdd3e7262485c270":[12,0,5,1],
-"de/d7b/group__vec__3d.html#gaf9ee870d4922e488bdd3e7262485c270":[14,0,4,0,5]
+"de/d7b/group__vec__3d.html#gaa6b5ac18429ffb0131dc8593d31c25a4":[12,0,5,6]
 };

@@ -113,6 +113,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2fb01e00dedb437a42010f6309e7eba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4c/group__sorting.html#ga2fb01e00dedb437a42010f6309e7eba8">bead_sort</a> (int *a, size_t len)</td></tr>
 <tr class="memdesc:ga2fb01e00dedb437a42010f6309e7eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is where the sorting of the array takes place.  <a href="../../d5/d4c/group__sorting.html#ga2fb01e00dedb437a42010f6309e7eba8">More...</a><br /></td></tr>
 <tr class="separator:ga2fb01e00dedb437a42010f6309e7eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98666b73777e308fb06a3c489ce25359"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359">RecursionInsertionSort</a> (int *arr, int size)</td></tr>
+<tr class="memdesc:ga98666b73777e308fb06a3c489ce25359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insertion sort algorithm implements using Recursion.  <a href="../../d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359">More...</a><br /></td></tr>
+<tr class="separator:ga98666b73777e308fb06a3c489ce25359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4b9708d87be7a409eff20e5e7e8b43c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a> (int *a, int *b)</td></tr>
 <tr class="memdesc:ga4b9708d87be7a409eff20e5e7e8b43c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two integer variables.  <a href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">More...</a><br /></td></tr>
 <tr class="separator:ga4b9708d87be7a409eff20e5e7e8b43c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,6 +415,62 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ga98666b73777e308fb06a3c489ce25359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98666b73777e308fb06a3c489ce25359">&#9670;&nbsp;</a></span>RecursionInsertionSort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RecursionInsertionSort </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insertion sort algorithm implements using Recursion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>array to be sorted </td></tr>
+    <tr><td class="paramname">size</td><td>size of array </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(size &lt;= 0)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// marking recursive call to reach starting element</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359">RecursionInsertionSort</a>(arr,size-1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> key = arr[size-1];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> j = size-2;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// swapping logic for insertion sort</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span>(j &gt;= 0 &amp;&amp; arr[j] &gt; key)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        arr[j+1] = arr[j];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        j--;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    arr[j+1] = key;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ga5bc16eaf3ffe6a6ab66780dd445904c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5bc16eaf3ffe6a6ab66780dd445904c0">&#9670;&nbsp;</a></span>shell_sort()</h2>
 
@@ -522,6 +581,7 @@ Optimized algorithm - takes half the time as other </p><dl class="params"><dt>Pa
 <div class="ttc" id="agroup__sorting_html_ga4b9708d87be7a409eff20e5e7e8b43c8"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a></div><div class="ttdeci">void swap(int *a, int *b)</div><div class="ttdoc">Swap two integer variables.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:17</div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
 <div class="ttc" id="agroup__sorting_html_ga8dc3ec66cb3350313fdb34bfd1674729"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a></div><div class="ttdeci">void merge(int *a, int l, int r, int n)</div><div class="ttdoc">Perform merge of segments.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:33</div></div>
+<div class="ttc" id="agroup__sorting_html_ga98666b73777e308fb06a3c489ce25359"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359">RecursionInsertionSort</a></div><div class="ttdeci">void RecursionInsertionSort(int *arr, int size)</div><div class="ttdoc">Insertion sort algorithm implements using Recursion.</div><div class="ttdef"><b>Definition:</b> insertion_sort_recursive.c:20</div></div>
 <div class="ttc" id="agroup__kohonen__2d_html_gaffe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdoc">shorthand for maximum value</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:39</div></div>
 <div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:82</div></div>
 <div class="ttc" id="agroup__sorting_html_ga4fdb8af29a07ac8f496e49a11bf9f1bd"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd">BEAD</a></div><div class="ttdeci">#define BEAD(i, j)</div><div class="ttdoc">Create easy access of elements from a 2D matrix stored in memory as a 1D array.</div><div class="ttdef"><b>Definition:</b> bead_sort.c:16</div></div>
