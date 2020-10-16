@@ -366,6 +366,7 @@
   * [Gnome Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/gnome_sort.c)
   * [Heap Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/heap_sort.c)
   * [Insertion Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/insertion_sort.c)
+  * [Insertion Sort Recursive](https://github.com/TheAlgorithms/C/blob/master/sorting/insertion_sort_recursive.c)
   * [Merge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort.c)
   * [Merge Sort Nr](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort_nr.c)
   * [Multikey Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quick_sort.c)
