@@ -12,6 +12,9 @@
  * for value, printing the list, and an example of how the
  * list works were coded.
  *
+ * See the algorithm explanation:
+ * [Doubly linked lists](https://en.wikipedia.org/wiki/Doubly_linked_list)
+ *
  * @author  [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
  */
 #include <stdio.h>
