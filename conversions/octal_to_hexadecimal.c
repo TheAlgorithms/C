@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // Converts octal number to decimal number
 long octalToDecimal(long octalValue){
