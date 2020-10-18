@@ -25,8 +25,8 @@
  */
 typedef struct list
 {
-    double value;                ///< value saved on each node
-    struct list *next, *prev;  ///< directing to other nodes or NULL
+    double value;               ///< value saved on each node
+    struct list *next, *prev;   ///< directing to other nodes or NULL
 } List;
 
 /**
@@ -41,7 +41,7 @@ List *create(double value);
  * @param   list    a doubly linked List
  * @param   value   a value to be inserted into the list
  * @param   pos     a position into the list for value insertion
- * @returns  list   the input list with a node more or the same list
+ * @returns list    the input list with a node more or the same list
  */
 List *insert(List *list, double value, int pos);
 
@@ -87,6 +87,11 @@ int main()
     return 0;
 }
 
+/**
+ * @brief   Create list function, a new list containing one node will be created
+ * @param   value       a value to be saved into the first list node
+ * @returns new_list    the list created
+ */
 List *create(double value)
 {
     List *new_list = (List *)malloc(sizeof(List));
@@ -96,6 +101,13 @@ List *create(double value)
     return new_list;
 }
 
+/**
+ * @brief   Insertion by position into the list function
+ * @param   list    a doubly linked List
+ * @param   value   a value to be inserted into the list
+ * @param   pos     a position into the list for value insertion
+ * @returns list    the input list with a node more or the same list
+ */
 List *insert(List *list, double value, int pos)
 {
     // list NULL case
@@ -161,6 +173,12 @@ List *insert(List *list, double value, int pos)
     }
 }
 
+/**
+ * @brief   Deletion by position into the list function
+ * @param   list    a doubly linked List
+ * @param   pos     a position into the list for value Deletion
+ * @returns list    the input list with deleted values or the same list
+ */
 List *delete(List *list, int pos)
 {
     // list NULL case
@@ -217,6 +235,13 @@ List *delete(List *list, int pos)
     }
 }
 
+/**
+ * @brief   Search value into the list function
+ * @param   list    a doubly linked list
+ * @param   value   a value to be looked for into the list
+ * @returns `1`     if the looked up value exists
+ * @returns `0`     if the looked up value doesn't exist
+ */
 int search(List *list, double value)
 {
     if (list == NULL)
@@ -226,6 +251,11 @@ int search(List *list, double value)
     search(list->next, value);
 }
 
+/**
+ * @brief   Print list function
+ * @param   list    a doubly linked List
+ * @returns void
+ */
 void print(List *list)
 {
     if (list != NULL)
@@ -235,6 +265,10 @@ void print(List *list)
     }
 }
 
+/**
+ * @brief   Example function
+ * @returns void
+ */
 void example()
 {
     List *my_list = NULL;
