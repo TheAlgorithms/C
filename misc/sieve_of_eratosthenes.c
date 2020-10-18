@@ -54,11 +54,11 @@ static void test()
     }
 
     /* Example Non-prime numbers */
-    int NonPrimers[] = {4, 6, 8, 9, 10, 12, 16, 51};
-    for (size_t i = 0, size = sizeof(NonPrimers) / sizeof(NonPrimers[0]);
+    int nonPrimers[] = {4, 6, 8, 9, 10, 12, 16, 51};
+    for (size_t i = 0, size = sizeof(nonPrimers) / sizeof(nonPrimers[0]);
          i < size; ++i)
     {
-        assert(!primep[NonPrimers[i]]);
+        assert(!primep[nonPrimers[i]]);
     }
 }
 
