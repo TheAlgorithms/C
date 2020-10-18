@@ -5,11 +5,11 @@
  * return a string hexadecimal value after conversion
  * @author [Rachit Bhalla](https://github.com/rachitbhalla)
  */
-#include <assert.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <assert.h> // for assert
+#include <math.h> // for pow function
+#include <stdio.h> // for scanf and printf functions
+#include <stdlib.h> // for malloc and free functions
+#include <string.h> // for strcmp function
 
 /**
  * @brief Convert octal number to decimal number
@@ -57,16 +57,16 @@ static void test() {
  */
 int main()
 {
-    //execute the tests
+    // execute the tests
     test();
 
     int octalValue;
     printf("Enter an octal number: ");
     scanf("%d", &octalValue);
 
-    //Calling the function octalToHexadecimal
+    // Calling the function octalToHexadecimal
     char *hexadecimalValue = octalToHexadecimal(octalValue);
-    printf("\nEquivalent hexadecimal number is: %s", hexadecimalValue);
+    printf("Equivalent hexadecimal number is: %s", hexadecimalValue);
     free(hexadecimalValue);
     return 0;
 }
