@@ -1,8 +1,18 @@
 /**
  * @file    doubly_linked_list.c
  * @brief   Doubly linked list, simple code.
- * @author  [Gabriel Mota Bromonschenkel
- * Lima](https://github.com/GabrielMotaBLima)
+ * @details
+ * A doubly linked list is a data structure with a sequence
+ * of components called nodes. Within that nodes there are
+ * three elements: a value recorded, a pointer to the next
+ * node, and a pointer to the previous node.
+ *
+ * In this implementation, the functions of creating the list,
+ * inserting by position, deleting by position, searching 
+ * for value, printing the list, and an example of how the
+ * list works were coded.
+ *
+ * @author  [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -43,7 +53,7 @@ List *insert(List *list, type value, int pos);
  * @param   pos     a position into the list for value Deletion
  * @returns list    the input list with deleted values or the same list
  */
-List *delete (List *list, int pos);
+List *delete(List *list, int pos);
 
 /**
  * @brief   Search value into the list function
@@ -153,7 +163,7 @@ List *insert(List *list, type value, int pos)
     }
 }
 
-List *delete (List *list, int pos)
+List *delete(List *list, int pos)
 {
     // list NULL case
     if (list == NULL)
