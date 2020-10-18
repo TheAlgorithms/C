@@ -13,8 +13,8 @@
 
 #include <assert.h> /// for 'assert' in 'test' function
 #include <stdbool.h> /// for 'bool' type in 'sieve' and 'test' function
-#include <stdlib.h> /// for 'memset' in 'sieve' function
-#include <string.h> /// for 'calloc' in 'sieve' function
+#include <stdlib.h> /// for 'calloc' in 'sieve' function
+#include <string.h> /// for 'memset' in 'sieve' function
 
 /**
  * Return all primes between 2 and the given number
