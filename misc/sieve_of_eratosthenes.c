@@ -38,10 +38,10 @@ bool* sieve(int N)
 }
 
 /**
- * Test function
+ * @brief Test function
  * @return void
  */
-void test()
+static void test()
 {
     /* all the prime numbers less than 100 */
     int primers[] = {2,  3,  5,  7,  11, 13, 17, 19, 23, 29, 31, 37, 41,
@@ -63,8 +63,8 @@ void test()
 }
 
 /**
- * Driver Code
- * @return None
+ * @brief Driver Code
+ * @return 0 on exit
  */
 int main()
 {
