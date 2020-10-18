@@ -14,7 +14,7 @@
 /**
  * @brief Convert octal number to decimal number
  * @param octalValue is the octal number that needs to be converted
- * @returns A decimal number after conversion
+ * @returns a decimal number after conversion
  */
 long octalToDecimal(long octalValue){
     long decimalValue = 0;
@@ -31,7 +31,7 @@ long octalToDecimal(long octalValue){
 /**
  * @brief Convert octal number to hexadecimal number
  * @param octalValue is the octal number that needs to be converted
- * @returns A hexadecimal value as a string after conversion
+ * @returns a hexadecimal value as a string after conversion
  */
 char *octalToHexadecimal(long octalValue){
     char *hexadecimalValue = malloc(256 * sizeof(char));
