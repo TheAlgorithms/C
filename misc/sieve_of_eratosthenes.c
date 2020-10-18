@@ -1,6 +1,7 @@
 /**
  * @file
- * @brief Get list of prime numbers using Sieve of Eratosthenes
+ * @brief Get list of prime numbers using [Sieve of
+ * Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
  * @details
  * Sieve of Eratosthenes is an algorithm that finds all the primes
  * between 2 and N.
