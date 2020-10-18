@@ -1,5 +1,5 @@
 /**
- * @file    doubly_linked_list.c
+ * @file
  * @brief   Doubly linked list, simple code.
  * @details
  * A doubly linked list is a data structure with a sequence
@@ -18,16 +18,11 @@
 #include <stdlib.h>
 
 /**
- * @brief Standard type variable for list inner values
- */
-typedef double type;
-
-/**
  * @brief Doubly linked list struct
  */
 typedef struct list
 {
-    type value;                ///< value saved on each node
+    double value;                ///< value saved on each node
     struct list *next, *prev;  ///< directing to other nodes or NULL
 } List;
 
@@ -36,7 +31,7 @@ typedef struct list
  * @param   value       a value to be saved into the first list node
  * @returns new_list    the list created
  */
-List *create(type value);
+List *create(double value);
 
 /**
  * @brief   Insertion by position into the list function
@@ -45,7 +40,7 @@ List *create(type value);
  * @param   pos     a position into the list for value insertion
  * @returns  list   the input list with a node more or the same list
  */
-List *insert(List *list, type value, int pos);
+List *insert(List *list, double value, int pos);
 
 /**
  * @brief   Deletion by position into the list function
@@ -62,7 +57,7 @@ List *delete(List *list, int pos);
  * @returns `1`     if the looked up value exists
  * @returns `0`     if the looked up value doesn't exist
  */
-int search(List *list, type value);
+int search(List *list, double value);
 
 /**
  * @brief   Print list function
@@ -89,7 +84,7 @@ int main()
     return 0;
 }
 
-List *create(type value)
+List *create(double value)
 {
     List *new_list = (List *)malloc(sizeof(List));
     new_list->value = value;
@@ -98,7 +93,7 @@ List *create(type value)
     return new_list;
 }
 
-List *insert(List *list, type value, int pos)
+List *insert(List *list, double value, int pos)
 {
     // list NULL case
     if (list == NULL)
@@ -219,7 +214,7 @@ List *delete(List *list, int pos)
     }
 }
 
-int search(List *list, type value)
+int search(List *list, double value)
 {
     if (list == NULL)
         return 0;
@@ -240,7 +235,7 @@ void print(List *list)
 void example()
 {
     List *my_list = NULL;
-    type node_value = 0;
+    double node_value = 0;
     int searching;
 
     my_list = create(node_value);
