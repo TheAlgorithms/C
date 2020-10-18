@@ -20,6 +20,7 @@
   * [Int To String](https://github.com/TheAlgorithms/C/blob/master/conversions/int_to_string.c)
   * [Octal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_binary.c)
   * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
+  * [Octal To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_hexadecimal.c)
   * [To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/to_decimal.c)
 
 ## Data Structures
