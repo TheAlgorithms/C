@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Convert hexadecimal number to octal number
+ * @brief Convert hexadecimal number to octal number (with decimal intermediary)
  * @details
  * The input is valid from 0 to 0xFFFF_FFFF_FFFF_FFFF.
  *
@@ -9,27 +9,31 @@
  *
  * When there is an invalid character in input string, this program stops
  * parsing and converts the string until that character.
+ *
+ * @see hexadecimal_to_octal.c
  */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 /**
  * Convert a hexadecimal number to octal number.
  * @param hex Hexadecimal number to convert.
  * @returns A pointer to the converted octal string.
  */
-char *hex_to_oct(const char *hex)
+const char *hex_to_oct(const char *hex)
 {
 #define MAX_OCT_STR_LEN 23 /* 17_7777_7777_7777_7777_7777 */
-    char *octal = (char *)malloc(sizeof(char) * MAX_OCT_STR_LEN);
+    static char octal[MAX_OCT_STR_LEN];
+    memset(octal, '\0', MAX_OCT_STR_LEN); // Initialize as NULL string
+
     unsigned long long decimal = 0;
     int i = 0;
     int len;
 
     if (hex == NULL)
     {
-        octal[0] = '\0';
+        // Return an empty string
         return octal;
     }
 
@@ -106,11 +110,10 @@ int main()
     printf("Enter any hexadecimal number: ");
     fgets(hex, MAX_HEX_STR_LEN, stdin);
 
-    char *octal = hex_to_oct(hex);
+    const char *octal = hex_to_oct(hex);
 
     printf("Hexadecimal number = %s\n", hex);
     printf("Octal number = %s\n", octal);
 
-    free(octal);
     return 0;
 }
