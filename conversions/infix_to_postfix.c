@@ -129,7 +129,7 @@ void convert(char infix[], char postfix[])
     s.tos = -1;      // initalize the tos
 
     int i, j = 0, pr;
-    char ch;
+    char ch, temp;
 
     for (i = 0; infix[i] != '\0'; i++)
     {
@@ -142,20 +142,40 @@ void convert(char infix[], char postfix[])
         }
         else
         {
-            while (isEmpty(s) == 0)  // check if stack is empty
+            if (ch == '(')
             {
-                pr = prcnd(ch, s.arr[s.tos]);  // check operator precedence
-
-                if (pr == 1)
-                {
-                    break;  // if ch has a greater precedence than s.arr[s.tos]
-                }
-
-                postfix[j] = pop(&s);
-                j++;
+                push(&s, ch);
             }
+            else
+            {
+                if (ch == ')')
+                {
+                    while ((temp = pop(&s)) != '(')
+                    {
+                        postfix[j] = temp;
+                        j++;
+                    }
+                }
+                else
+                {
+                    while (isEmpty(s) == 0)  // check if stack is empty
+                    {
+                        pr = prcnd(ch,
+                                   s.arr[s.tos]);  // check operator precedence
 
-            push(&s, ch);  // push ch to stack
+                        if (pr == 1)
+                        {
+                            break;  // if ch has a greater precedence than
+                                    // s.arr[s.top]
+                        }
+
+                        postfix[j] = pop(&s);
+                        j++;
+                    }
+
+                    push(&s, ch);  // push ch to stack
+                }
+            }
         }
     }
 
