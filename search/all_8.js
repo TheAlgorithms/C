@@ -17,5 +17,6 @@ var searchData=
   ['getmax_125',['getMax',['../da/d02/binary__search__tree_8c.html#ad297e528a7bb8604ca93af149d609150',1,'binary_search_tree.c']]],
   ['graph_126',['Graph',['../d4/dd4/struct_graph.html',1,'']]],
   ['graphrep_127',['GraphRep',['../d2/d6a/struct_graph_rep.html',1,'']]],
-  ['group_128',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]]
+  ['group_128',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]],
+  ['guidelines_20for_20reviewers_20and_20maintainers_129',['Guidelines for reviewers and maintainers',['../dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html',1,'']]]
 ];

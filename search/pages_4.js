@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['list_20of_20all_20files_746',['List of all files',['../d5/d88/md__d_i_r_e_c_t_o_r_y.html',1,'']]],
-  ['leetcode_747',['LeetCode',['../df/d58/md_leetcode__r_e_a_d_m_e.html',1,'']]]
+  ['hash_20algorithms_747',['Hash algorithms',['../d4/dcb/md_hash__r_e_a_d_m_e.html',1,'']]]
 ];
