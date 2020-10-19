@@ -129,7 +129,7 @@ int my_comp(const void *a, const void *b) {
   return ((struct edge *)a)->w - ((struct edge *)b)->w;
 }
 
-/** An implementation of Kruskal's algorithm
+/** An implementation of [Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
  * @param E the number of edges
  * @param elist the edge list
  * @param uf pointer to union find for keeping track of trees
