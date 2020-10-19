@@ -32,7 +32,7 @@
     * [Binary Search Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/binary_search_tree.c)
     * [Create Node](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/recursive_traversals.c)
-    * [Redblacktree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/redblacktree.c)
+    * [Red Black Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/red_black_tree.c)
     * [Segment Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/segment_tree.c)
     * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
   * Dictionary
