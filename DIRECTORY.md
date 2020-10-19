@@ -28,7 +28,7 @@
     * [Carray](https://github.com/TheAlgorithms/C/blob/master/data_structures/array/carray.h)
     * [Carray Tests](https://github.com/TheAlgorithms/C/blob/master/data_structures/array/carray_tests.c)
   * Binary Trees
-    * [AVL Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/avl_tree.c)
+    * [Avl Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/avl_tree.c)
     * [Binary Search Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/binary_search_tree.c)
     * [Create Node](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/recursive_traversals.c)
