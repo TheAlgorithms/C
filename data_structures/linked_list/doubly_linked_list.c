@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief   Doubly linked list, simple code.
+ * @brief Implementation of [Doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list)
  * @details
  * A doubly linked list is a data structure with a sequence
  * of components called nodes. Within that nodes there are
