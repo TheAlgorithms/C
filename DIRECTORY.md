@@ -70,7 +70,7 @@
     * [Min Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/min_heap.c)
   * Linked List
     * [Ascending Priority Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/ascending_priority_queue.c)
-    * [Circularlinkedlist](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/CircularLinkedList.C)
+    * [Circular Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/circular_linked_list.c)
     * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
     * [Middle Element In List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
     * [Queue Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/queue_linked_list.c)
