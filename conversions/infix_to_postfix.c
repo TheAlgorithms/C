@@ -3,6 +3,7 @@
  * @brief Infix to Postfix Expression Conversion
  * @details Convert Infixed expressions to Postfix expression.
  * @author [Harsh Karande](https://github.com/harshcut)
+ * @see [notes](https://condor.depaul.edu/ichu/csc415/notes/notes9/Infix.htm)
  */
 
 // include header files
