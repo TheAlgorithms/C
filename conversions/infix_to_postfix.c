@@ -7,7 +7,7 @@
  */
 
 // include header files
-#include <stdio.h>
+#include <stdio.h>  /// for printf() and scanf()
 
 // globally declared structure
 struct Stack
