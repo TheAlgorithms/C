@@ -1,4 +1,5 @@
 /**
+ * @file
  * @brief Octal to hexadecimal conversion by scanning user input
  * @details
  * The octalToHexadecimal function take the octal number as long
@@ -30,6 +31,7 @@ long octalToDecimal(long octalValue){
 
 /**
  * @brief Convert octal number to hexadecimal number
+ * dynamically allocated memory needs to be freed by the calling the function free
  * @param octalValue is the octal number that needs to be converted
  * @returns a hexadecimal value as a string after conversion
  */
@@ -60,13 +62,18 @@ int main()
     // execute the tests
     test();
 
+    // get the value of octal number as input
     int octalValue;
     printf("Enter an octal number: ");
     scanf("%d", &octalValue);
 
-    // Calling the function octalToHexadecimal
+    // call the function octalToHexadecimal and print the hexadecimal value
     char *hexadecimalValue = octalToHexadecimal(octalValue);
     printf("Equivalent hexadecimal number is: %s", hexadecimalValue);
+
+    // free the memory allocated dynamically in function octalToHexadecimal
     free(hexadecimalValue);
+
+    // return 0 and exit
     return 0;
 }
