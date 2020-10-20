@@ -28,11 +28,11 @@
     * [Carray](https://github.com/TheAlgorithms/C/blob/master/data_structures/array/carray.h)
     * [Carray Tests](https://github.com/TheAlgorithms/C/blob/master/data_structures/array/carray_tests.c)
   * Binary Trees
-    * [Avl](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/avl.c)
+    * [Avl Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/avl_tree.c)
     * [Binary Search Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/binary_search_tree.c)
     * [Create Node](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/create_node.c)
     * [Recursive Traversals](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/recursive_traversals.c)
-    * [Redblacktree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/redblacktree.c)
+    * [Red Black Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/red_black_tree.c)
     * [Segment Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/segment_tree.c)
     * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
   * Dictionary
@@ -69,7 +69,7 @@
     * [Max Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/max_heap.c)
     * [Min Heap](https://github.com/TheAlgorithms/C/blob/master/data_structures/heap/min_heap.c)
   * Linked List
-    * [Ascendingpriorityqueue](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/ascendingpriorityqueue.c)
+    * [Ascending Priority Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/ascending_priority_queue.c)
     * [Circular Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/circular_linked_list.c)
     * [Doubly Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/doubly_linked_list.c)
     * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
