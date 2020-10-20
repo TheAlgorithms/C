@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['w_368',['w',['../de/d58/structquaternion__.html#a835e2ba72517fbb29d0d4e3cb4c2914f',1,'quaternion_']]],
-  ['weights_369',['weights',['../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657',1,'adaline']]],
-  ['word_5fcount_5fword_370',['word_count_word',['../df/ddb/structword__count__word.html',1,'']]]
+  ['w_373',['w',['../de/d58/structquaternion__.html#a835e2ba72517fbb29d0d4e3cb4c2914f',1,'quaternion_']]],
+  ['weights_374',['weights',['../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657',1,'adaline']]],
+  ['word_5fcount_5fword_375',['word_count_word',['../df/ddb/structword__count__word.html',1,'']]]
 ];

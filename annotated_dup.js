@@ -20,6 +20,7 @@ var annotated_dup =
     [ "hash_set_t", "d0/df1/structhash__set__t.html", "d0/df1/structhash__set__t" ],
     [ "kohonen_array_3d", "d8/db8/structkohonen__array__3d.html", "d8/db8/structkohonen__array__3d" ],
     [ "L", "df/db3/struct_l.html", "df/db3/struct_l" ],
+    [ "list", "d8/d10/structlist.html", "d8/d10/structlist" ],
     [ "mat_3x3_", "d9/d8b/structmat__3x3__.html", "d9/d8b/structmat__3x3__" ],
     [ "max_heap", "d0/d8a/structmax__heap.html", "d0/d8a/structmax__heap" ],
     [ "min_heap", "de/dce/structmin__heap.html", "de/dce/structmin__heap" ],
