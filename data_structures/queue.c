@@ -8,7 +8,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 // DATA STRUCTURES
-struct node
+/**
+ * Defining the structure of the node which contains 'data' (type : integer), two pointers 'next' and 'pre' (type : struct node).
+ */
+struct node                                          
 {
     int data;
     struct node *next;
@@ -52,14 +55,14 @@ void enque(int x)
 {
     if (head == NULL)
     {
-        head = (struct node *)malloc(1 * sizeof(struct node));
+        head = (struct node *)malloc(sizeof(struct node));
         head->data = x;
         head->pre = NULL;
         tail = head;
     }
     else
     {
-        tmp = (struct node *)malloc(1 * sizeof(struct node));
+        tmp = (struct node *)malloc(sizeof(struct node));
         tmp->data = x;
         tmp->next = tail;
         tail = tmp;

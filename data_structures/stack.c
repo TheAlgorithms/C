@@ -13,6 +13,9 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 // DATA STRUCTURES
+/**
+ * creating a stucture with 'data'(type:int), two pointers 'next','pre' (type: struct node) .
+ */
 struct node
 {
     int data;
