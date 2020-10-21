@@ -66,6 +66,11 @@ var NAVTREEINDEX0 =
 "d0/dcb/poly__add_8c.html#ab138609c765e2fd8b89e9c107cd40d57":[15,0,8,6,8],
 "d0/dcb/poly__add_8c.html#ab215107dbb50c7efa811a687ce9b95af":[15,0,8,6,6],
 "d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d":[15,0,8,6,2],
+"d0/dd9/hexadecimal__to__octal2_8c.html":[15,0,1,2],
+"d0/dd9/hexadecimal__to__octal2_8c.html#a4d7524efe6e2917b3674445b7269906b":[15,0,1,2,2],
+"d0/dd9/hexadecimal__to__octal2_8c.html#ab64e6838b9026996a18766d334beea20":[15,0,1,2,0],
+"d0/dd9/hexadecimal__to__octal2_8c.html#ad47196c6a06f99a1437e9569bae13c5f":[15,0,1,2,1],
+"d0/dd9/hexadecimal__to__octal2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,1,2,3],
 "d0/df1/structhash__set__t.html":[14,0,17],
 "d0/df1/structhash__set__t.html#a1b52c6b78642e398f574c2ec9ed22e8a":[14,0,17,1],
 "d0/df1/structhash__set__t.html#a5fd11ba3c74b2cc7fd161696fb951b82":[14,0,17,2],
@@ -207,8 +212,8 @@ var NAVTREEINDEX0 =
 "d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212":[15,0,9,6,3],
 "d4/d68/qr__decompose_8h_source.html":[15,0,9,6],
 "d4/d69/group__dual__quats.html":[13,0,8],
-"d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f":[15,0,4,0,1],
 "d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f":[13,0,8,1],
+"d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f":[15,0,4,0,1],
 "d4/d7b/problem__6_2sol_8c.html":[15,0,10,19,0],
 "d4/d7b/problem__6_2sol_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[15,0,10,19,0,0],
 "d4/d83/problem__401_2sol1_8c.html":[15,0,10,17,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX0 =
 "d4/dcc/strong__number_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,8,8,1],
 "d4/dd4/struct_graph.html":[14,0,15],
 "d4/dd4/struct_graph.html#a10ff9c6c323cf435f18e424dbb62235e":[14,0,15,3],
-"d4/dd4/struct_graph.html#a14b3734eb135c40cf4401f22bda5bb76":[14,0,15,2],
-"d4/dd4/struct_graph.html#a268ba18d421817ad8713c2e92f19d82a":[14,0,15,5],
-"d4/dd4/struct_graph.html#a2b722f7cfa7a21e4cb5fae488b3d4dcc":[14,0,15,7],
-"d4/dd4/struct_graph.html#a3535be2ce0d62152e54395951330da81":[14,0,15,4],
-"d4/dd4/struct_graph.html#a3ce250f958f7e96ffd9eb06780c21fbe":[14,0,15,1],
-"d4/dd4/struct_graph.html#a6afcd41564ea00294a4c089414979ca1":[14,0,15,8]
+"d4/dd4/struct_graph.html#a14b3734eb135c40cf4401f22bda5bb76":[14,0,15,2]
 };

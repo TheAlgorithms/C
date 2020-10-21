@@ -9,5 +9,7 @@ var searchData=
   ['hash_5fxor8_2ec_139',['hash_xor8.c',['../d0/d57/hash__xor8_8c.html',1,'']]],
   ['heading_140',['heading',['../d2/de8/structeuler__.html#a899572e1b6a43387128de3a402a0a5f8',1,'euler_']]],
   ['height_141',['height',['../da/d02/binary__search__tree_8c.html#ae4a66d8b0c2b0d626aea45977e358c83',1,'binary_search_tree.c']]],
-  ['hash_20algorithms_142',['Hash algorithms',['../d4/dcb/md_hash__r_e_a_d_m_e.html',1,'']]]
+  ['hex_5fto_5foct_142',['hex_to_oct',['../d0/dd9/hexadecimal__to__octal2_8c.html#a4d7524efe6e2917b3674445b7269906b',1,'hexadecimal_to_octal2.c']]],
+  ['hexadecimal_5fto_5foctal2_2ec_143',['hexadecimal_to_octal2.c',['../d0/dd9/hexadecimal__to__octal2_8c.html',1,'']]],
+  ['hash_20algorithms_144',['Hash algorithms',['../d4/dcb/md_hash__r_e_a_d_m_e.html',1,'']]]
 ];
