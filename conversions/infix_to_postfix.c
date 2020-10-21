@@ -1,6 +1,8 @@
 /**
  * @file
- * @brief [Infix to Postfix](https://condor.depaul.edu/ichu/csc415/notes/notes9/Infix.htm) Expression Conversion
+ * @brief [Infix to
+ * Postfix](https://condor.depaul.edu/ichu/csc415/notes/notes9/Infix.htm)
+ * Expression Conversion
  * @details Convert Infixed expressions to Postfix expression.
  * @author [Harsh Karande](https://github.com/harshcut)
  */
@@ -8,7 +10,10 @@
 // include header files
 #include <stdio.h>  /// for printf() and scanf()
 
-// globally declared structure
+/**
+ * @brief a globally declared structure with an array and an variable that
+ * points to the topmost index of the array
+ */
 struct Stack
 {
     char arr[10];  ///> static array of integers
