@@ -13,8 +13,8 @@
  * @see hexadecimal_to_octal.c
  */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h>  /// for printf() and fgets()
+#include <string.h> /// for memset()
 
 /**
  * @brief Convert a hexadecimal number to octal number.
