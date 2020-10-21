@@ -17,7 +17,7 @@
 #include <string.h>
 
 /**
- * Convert a hexadecimal number to octal number.
+ * @brief Convert a hexadecimal number to octal number.
  * @param hex Hexadecimal number to convert.
  * @returns A pointer to the converted octal string.
  */
