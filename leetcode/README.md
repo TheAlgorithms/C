@@ -85,6 +85,7 @@ LeetCode
 |905|[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | [C](./src/905.c)|Easy|
 |917|[Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) | [C](./src/917.c)|Easy|
 |938|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/) | [C](./src/938.c)|Easy|
+|961|[N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | [C](./src/961.c)|Easy|
 |965|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/) | [C](./src/965.c)|Easy|
 |977|[Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | [C](./src/977.c)|Easy|
 |1089|[Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/) | [C](./src/1089.c)|Easy|
