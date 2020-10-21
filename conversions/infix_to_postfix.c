@@ -1,9 +1,8 @@
 /**
  * @file
- * @brief Infix to Postfix Expression Conversion
+ * @brief [Infix to Postfix](https://condor.depaul.edu/ichu/csc415/notes/notes9/Infix.htm) Expression Conversion
  * @details Convert Infixed expressions to Postfix expression.
  * @author [Harsh Karande](https://github.com/harshcut)
- * @see [notes](https://condor.depaul.edu/ichu/csc415/notes/notes9/Infix.htm)
  */
 
 // include header files
@@ -12,8 +11,8 @@
 // globally declared structure
 struct Stack
 {
-    char arr[10];  // static array of integers
-    int tos;       // stores index on topmost element in stack
+    char arr[10];  ///> static array of integers
+    int tos;       ///> stores index on topmost element in stack
 };
 
 // function headers
