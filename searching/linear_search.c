@@ -23,10 +23,11 @@ int main()
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);  // accepts the values of array elements until the
                              // loop terminates//
-
+    // Taking input the value to be searched
     printf("Enter the value to be searched:\n");
-    scanf("%d", &v);  // Taking input the value to be searched
-    if (linearsearch(a, n, v))
+    scanf("%d", &v); 
+    int var=linearsearch(a, n, v);
+    if (var==1)
         printf("Value %d is in the array.\n", v);
     else
         printf("Value %d is not in the array.\n", v);
