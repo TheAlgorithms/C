@@ -266,13 +266,13 @@ int main()
         switch (opt)
         {
         case 1:
-            printf("Enter the new node's value:\n");
+            printf("\nEnter the new node's value: ");
             scanf("%d", &data);
             root = insert(root, data);
             break;
 
         case 2:
-            printf("Enter the value to be removed:\n");
+            printf("\nEnter the value to be removed: ");
             if (root != NULL)
             {
                 scanf("%d", &data);
@@ -285,18 +285,19 @@ int main()
             break;
 
         case 3:
-            printf("Enter the searched value:\n");
+            printf("\nEnter the searched value: ");
             scanf("%d", &data);
             find(root, data) ? printf("The value is in the tree.\n")
                              : printf("The value is not in the tree.\n");
             break;
 
         case 4:
-            printf("Current height of the tree is: %d\n", height(root));
+            printf("\nCurrent height of the tree is: %d\n", height(root));
             break;
 
         case 5:
             inOrder(root);
+            printf("\n");
             break;
         }
     }

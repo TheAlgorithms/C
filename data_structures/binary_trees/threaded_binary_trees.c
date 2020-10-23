@@ -259,42 +259,47 @@ int main()
     int choice, n;
     do
     {
-        printf("%s\n", "1. Insert into BT");
+        printf("\n\n%s\n", "1. Insert into BT");
         printf("%s\n", "2. Print BT - inorder");
         printf("%s\n", "3. Print BT - preorder");
-        printf("%s\n", "4. print BT - postorder");
-        printf("%s\n", "5. delete from BT");
-        printf("%s\n", "6. search in BT");
-        printf("%s\n", "Type 0 to exit");
+        printf("%s\n", "4. Print BT - postorder");
+        printf("%s\n", "5. Delete from BT");
+        printf("%s\n", "6. Search in BT");
+        printf("%s\n", "0. Exit");
+        printf("%s", "Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice)
         {
         case 1:
-            printf("%s\n", "Enter a no:");
+            printf("\n%s", "Enter a no: ");
             scanf("%d", &n);
             insert_bt(&root, n);
             break;
         case 2:
+            printf("\n");
             inorder_display(root);
             printf("\n");
             break;
         case 3:
+            printf("\n");
             preorder_display(root);
             printf("\n");
             break;
         case 4:
+            printf("\n");
             postorder_display(root);
             printf("\n");
             break;
         case 5:
-            printf("%s\n", "Enter a no:");
+            printf("\n%s", "Enter a no: ");
             scanf("%d", &n);
             delete_bt(&root, n);
             break;
         case 6:
-            printf("%s\n", "Enter a no:");
+            printf("\n%s", "Enter a no: ");
             scanf("%d", &n);
+            printf("\n");
             search(root, n);
             break;
         }

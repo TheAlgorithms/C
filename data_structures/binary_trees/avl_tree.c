@@ -287,7 +287,7 @@ int main()
 
         printf("\t1: Insert a node into AVL tree\n");
         printf("\t2: Delete a node in AVL tree\n");
-        printf("\t3: Search a node into AVL tree\n");
+        printf("\t3: Search a node in AVL tree\n");
         printf("\t4: printPreOrder (Ro L R) Tree\n");
         printf("\t5: printInOrder (L Ro R) Tree\n");
         printf("\t6: printPostOrder (L R Ro) Tree\n");
