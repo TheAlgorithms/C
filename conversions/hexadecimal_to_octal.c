@@ -127,7 +127,7 @@ int main()
     }
 
     printf("Hexadecimal number = %s\n", hex);
-    printf("Octal number = %lld", octal);
+    printf("Octal number = %lld\n", octal);
 
     return 0;
 }

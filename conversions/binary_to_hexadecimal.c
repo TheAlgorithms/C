@@ -1,5 +1,6 @@
 /*
- * C Program to Convert Binary to Hexadecimal
+ * Modified 23/10/2020, Suraj Patro
+ *
  */
 #include <stdio.h>
 
@@ -7,7 +8,7 @@ int main()
 {
     long int binary, hexa = 0, i = 1, remainder;
 
-    printf("Enter the binary number: ");
+    printf("Enter any binary number: ");
     scanf("%ld", &binary);
     while (binary != 0)
     {
@@ -16,6 +17,6 @@ int main()
         i = i * 2;
         binary = binary / 10;
     }
-    printf("THe Equivalent hexadecimal value: %lX", hexa);
+    printf("Hexadecimal equivalent is: %lX\n", hexa);
     return 0;
 }

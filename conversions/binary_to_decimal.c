@@ -1,5 +1,5 @@
-/**
- * Modified 07/12/2017, Kyler Smith
+/*
+ * Modified 23/10/2020, Suraj Patro
  *
  */
 
@@ -8,7 +8,7 @@
 int main()
 {
     int remainder, number = 0, decimal_number = 0, temp = 1;
-    printf("/n Enter any binary number= ");
+    printf("Enter any binary number: ");
     scanf("%d", &number);
 
     // Iterate over the number until the end.
@@ -20,5 +20,5 @@ int main()
         temp = temp * 2;  // used as power of 2
     }
 
-    printf("%d\n", decimal_number);
+    printf("Decimal equivalent is: %d\n", decimal_number);
 }

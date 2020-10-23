@@ -39,6 +39,7 @@ void decimal2Hexadecimal(long num)
 
     // print the hexadecimal number
 
+    printf("\nThe number in Hexadecimal is: ");
     for (i = j; i >= 0; i--)
     {
         printf("%c", hexadecimalnum[i]);

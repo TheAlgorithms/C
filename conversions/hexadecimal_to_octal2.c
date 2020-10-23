@@ -13,8 +13,8 @@
  * @see hexadecimal_to_octal.c
  */
 
-#include <stdio.h>  /// for printf() and fgets()
-#include <string.h> /// for memset()
+#include <stdio.h>   /// for printf() and fgets()
+#include <string.h>  /// for memset()
 
 /**
  * @brief Convert a hexadecimal number to octal number.
@@ -25,7 +25,7 @@ const char *hex_to_oct(const char *hex)
 {
 #define MAX_OCT_STR_LEN 23 /* 17_7777_7777_7777_7777_7777 */
     static char octal[MAX_OCT_STR_LEN];
-    memset(octal, '\0', MAX_OCT_STR_LEN); // Initialize as NULL string
+    memset(octal, '\0', MAX_OCT_STR_LEN);  // Initialize as NULL string
 
     unsigned long long decimal = 0;
     int i = 0;
@@ -112,8 +112,8 @@ int main()
 
     const char *octal = hex_to_oct(hex);
 
-    printf("Hexadecimal number = %s\n", hex);
-    printf("Octal number = %s\n", octal);
+    printf("Hexadecimal number: %s", hex);
+    printf("Octal number: %s\n", octal);
 
     return 0;
 }

@@ -40,5 +40,5 @@ int main(void)
         decimal += number[j];
     }
 
-    printf("%lu\n", decimal);
+    printf("The equivalent decimal no: %lu\n", decimal);
 }

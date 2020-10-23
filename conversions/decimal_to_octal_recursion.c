@@ -21,9 +21,9 @@ int decimal_to_octal(int decimal)
 int main()
 {
     int octalNumber, decimalNumber;
-    printf("\nEnter your decimal number : ");
+    printf("Enter your decimal number : ");
     scanf("%d", &decimalNumber);
     octalNumber = decimal_to_octal(decimalNumber);
-    printf("\nThe octal of %d is : %d", decimalNumber, octalNumber);
+    printf("The octal of %d is : %d\n", decimalNumber, octalNumber);
     return 0;
 }

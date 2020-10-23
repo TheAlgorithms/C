@@ -1,3 +1,8 @@
+/*
+ * Modified 23/10/2020, Suraj Patro
+ *
+ */
+
 /**
  * \file
  * \brief Recoding the original atoi function in stdlib.h
@@ -30,9 +35,15 @@ int c_atoi(const char *str)
 
     /* store the sign if it is negative sign */
     if (str[i] == '-')
+    {
         sign = -1;
+        i++;
+    }
     else if (str[i] == '+')
+    {
         sign = 1;
+        i++;
+    }
 
     /* converting char by char to a numeric value */
     while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
