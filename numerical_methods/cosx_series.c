@@ -5,25 +5,33 @@ float power(float fx, int fj);
 int main()
 {
     float x, x1, sum = 0.0f;
-    int i, lim, j;
-    printf("\n\t Cos X series: ");
+    int i, lim, j = 0;
+    printf("\n\t Cos X series using Taylor's formula : ");
     printf("\n\t Enter X (deg): ");
     scanf("%f", &x);
-    printf("Enter the limit upto which you want to expand the series: ");
+    printf("\n\t Enter the limit upto which you want to expand the series: ");
     scanf("%d", &lim);
     x1 = x;
     x = x * (3.1415 / 180);
+#conversion of degree to radian
     for (i = 0; i < lim; i++)
     {
         j = 2 * i;
         if (i % 2 == 0)
+#add_for_even_term
         {
             sum = sum + power(x, j) / factorial(j);
         }
         else
+#subtract_for_odd_term
+        {
             sum = sum - power(x, j) / factorial(j);
+        }
     }
-    printf("Cos(%0.1f) = %f", x1, sum);
+
+    printf("\n\t Cos(%0.1f) = %f", x1, sum);
+#display result upto first decimal place
+
     return 0;
 }
 int factorial(int fj)
