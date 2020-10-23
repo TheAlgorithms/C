@@ -82,10 +82,10 @@ void show()
     struct node *p;
 
     if (empty())
-        printf("Queue empty. No data to display \n");
+        printf("Queue empty. No data to display.\n");
     else
     {
-        printf("Queue from front to rear is as shown: \n");
+        printf("Queue from front to rear is as shown:\n");
 
         p = q.front;
         while (p != NULL)
@@ -108,17 +108,17 @@ int main()
 
     do
     {
-        printf("\n\n  Menu: \n");
-        printf("1:Insert \n");
-        printf("2:Remove \n");
-        printf("3:exit \n");
+        printf("\n\n  Menu:\n");
+        printf("1: Insert\n");
+        printf("2: Remove\n");
+        printf("3: Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
 
         switch (ch)
         {
         case 1:
-            printf("Enter element to be inserted: ");
+            printf("\nEnter element to be inserted: ");
             scanf("%d", &x);
             insert(x);
             show();
@@ -126,7 +126,7 @@ int main()
 
         case 2:
             x = removes();
-            printf("Element removed is: %d\n", x);
+            printf("\nElement removed is: %d\n", x);
             show();
             break;
 
