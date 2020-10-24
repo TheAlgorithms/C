@@ -6,9 +6,9 @@
  * implementation in C
  * @details  Tic-Tac-Toe Game,where the user can decide to play with the
  * computer(single player mode) or with other user(double player mode) , the
- * code as an array named 'game_table' which is the table and user needs to enter the
- * position inside the array(from 1-9) where he/she wants to place 'X' or 'O' on the
- * table.
+ * code as an array named 'game_table' which is the table and user needs to
+ * enter the position inside the array(from 1-9) where he/she wants to place 'X'
+ * or 'O' on the table.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,18 +23,19 @@ static void placey(int);  // used in Double Player mode by the 2nd player to
                           // place the position of O
 int checkwin();  // checks everytime when a player or computer places 'X' or 'O'
 
-/** Tic-Tac-Toe table, so basically we are using variable 'game_table' as the table(size:3X3) and
- * updating it regularly
+/** Tic-Tac-Toe table, so basically we are using variable 'game_table' as the
+ * table(size:3X3) and updating it regularly
  */
 static char game_table[9];
 
 /**
  * Main program function.
- * @returns 0 on clean exit. 
+ * @returns 0 on clean exit.
  * @note No checks are included for program execution failures!
  */
 int main()
-{   srand(time(NULL));
+{
+    srand(time(NULL));
     int l = 0;
     do
     {
@@ -45,11 +46,11 @@ int main()
 
         // displaying the main menu
         printf("***************************************\n");
-        printf("*************TIC TAC TOE***************\n");
+        printf("************ TIC TAC TOE **************\n");
         printf("***************************************\n");
-        printf("***********1. YOU vs COMPUTER ***********\n");
-        printf("***********2. YOU vs PLAYER ***********\n");
-        printf("***********3.EXIT *********************\n");
+        printf("********** 1. YOU vs COMPUTER *********\n");
+        printf("********** 2. YOU vs PLAYER ***********\n");
+        printf("********** 3. EXIT ********************\n");
         printf("Enter your choice : ");
         scanf("%d", &n);
 
@@ -84,7 +85,7 @@ void singlemode()
 {
     int m;
     int k = 0;
-    int table_fill_count=0;
+    int table_fill_count = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -105,9 +106,9 @@ void singlemode()
         scanf("%d", &m);
 
         placex(m);
-        if(table_fill_count<4)
+        if (table_fill_count < 4)
         {
-          place();
+            place();
         }
 
         for (int i = 0; i < 3; i++)
@@ -116,7 +117,6 @@ void singlemode()
             {
                 printf("%c ", game_table[k]);
                 k++;
-
             }
 
             printf("\n");
@@ -138,7 +138,7 @@ void singlemode()
             break;
         }
 
-        if (table_fill_count==4)
+        if (table_fill_count == 4)
         {
             printf("\nDRAW ");
             break;
@@ -156,7 +156,7 @@ void doublemode()
     int m;
     int e1;
     int k = 0;
-    int doublemode_table_count=0;
+    int doublemode_table_count = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -176,12 +176,12 @@ void doublemode()
         scanf("%d", &m);
 
         placex(m);
-        if(doublemode_table_count<4)
+        if (doublemode_table_count < 4)
         {
-        printf("PLAYER2 - where would you like to place 'o' : ");
-        scanf("%d", &e1);
+            printf("PLAYER2 - where would you like to place 'o' : ");
+            scanf("%d", &e1);
 
-        placey(e1);
+            placey(e1);
         }
 
         for (int i = 0; i < 3; i++)
@@ -210,7 +210,7 @@ void doublemode()
 
             break;
         }
-        if (doublemode_table_count==4)
+        if (doublemode_table_count == 4)
         {
             printf("\nDRAW ");
             break;
@@ -261,7 +261,6 @@ void placex(int m)
  */
 void place()
 {
-
     int e = rand() % 9;
 
     if (e >= 0 && e <= 8)
@@ -314,11 +313,12 @@ void placey(int e1)
     }
 }
 /**
- * @brief Implementation of win conditon checker for 'X' or 'O' whenever the table is updated
+ * @brief Implementation of win conditon checker for 'X' or 'O' whenever the
+ * table is updated
  *
- * @returns -1: if 'X' won 
+ * @returns -1: if 'X' won
  * @returns -2: if 'O' won
- * @returns 0: if there is no win condition for 'X' or 'O' 
+ * @returns 0: if there is no win condition for 'X' or 'O'
  */
 int checkwin()
 {
