@@ -42,8 +42,8 @@ int count(int *arr, const int size){
   }
   return k;
 }
-/** @} */
-/**
+
+/**@Test function
  * @brief Test implementations
   * @returns void
   */
@@ -59,12 +59,14 @@ static void test()
 
 }
 
-/** Main function
- *  @returns integer 0
+/** @brief Main function
+ *  @param argc commandline argument count (ignored)
+ *  @param argv commandline array of arguments (ignored)
+ *  @returns 0 on exit
  */
 int main(int argc, const char *argv[])
 {
     /* Test function to check sample test cases */
-    test();
+    test();	//execute the test
     return 0;
 }
