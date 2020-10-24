@@ -66,7 +66,6 @@ static void test()
  */
 int main(int argc, const char *argv[])
 {
-    /* Test function to check sample test cases */
     test();	//execute the test
     return 0;
 }
