@@ -43,7 +43,7 @@ int count(int *arr, const int size){
   return k;
 }
 
-/**@Test function
+/**
  * @brief Test implementations
   * @returns void
   */
