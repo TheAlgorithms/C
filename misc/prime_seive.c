@@ -7,7 +7,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-const int MAX_SIZE=1000000;
+constexpr int MAX_SIZE=1000000;
 /**
  * @addtogroup misc
  * @{
