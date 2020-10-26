@@ -63,7 +63,7 @@ void display(Q *p)
         q = q->next;
     }
 }
-int search(Q *p, int item)
+queue* search(Q *p, int item)
 {
     queue *q;
     q = p->front;
@@ -120,7 +120,7 @@ int main()
             scanf("%d", &item);
             if(!isEmpty(&q))
             {
-                int item_loc = search(&q, item);
+                queue item_loc = search(&q, item);
                 printf("%d is located at Address: %u", item, item_loc);
 
             }
