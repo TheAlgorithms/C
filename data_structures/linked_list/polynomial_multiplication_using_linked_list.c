@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+## Creates the node. 
+## The data part contains an integer coefficient and the exp part contains corresponding exponents.
+## Like in x^2. data=1, exp=2.
 struct node
 {
     int data;
@@ -10,6 +14,8 @@ struct node
     struct node * next;
 };
 
+
+## To dynamically allocate memory for a new node in a list
 struct node * new_node()
 {
     struct node* temp= (struct node*)malloc(sizeof(struct node));
@@ -21,6 +27,8 @@ struct node * new_node()
     return temp;
 }
 
+
+## Creates a linked list. Takes argument the first node of the list
 struct node* list(struct node* head)
 {
     int i, n;
@@ -44,12 +52,16 @@ struct node* list(struct node* head)
     return head;
 }
 
+## utility function
 struct node * new_node_3()
 {
     struct node* temp= (struct node*)malloc(sizeof(struct node));
     temp->next=NULL;
     return temp;
 }
+
+## Takes two linked lists having head pointers as head1, head2 as input.
+## Also takes in head3 which is the resultant list that will have the product of two polynomials.
 struct node* multiply(struct node* head1, struct node * head2, struct node* head3)
 {
     struct node* temp, *change2, *change3,*del;
@@ -97,6 +109,8 @@ struct node* multiply(struct node* head1, struct node * head2, struct node* head
     return head3;
 }
 
+
+## Prints the resultant list.
 void print(struct node* head)
 {
     struct node*change=head;
@@ -114,11 +128,12 @@ void print(struct node* head)
         printf("\n");
     }
 }
+
 int main()
 {
     struct node * head1=NULL, *head2=NULL;
-    head1=list(head1);
-    head2=list(head2);
+    head1=list(head1);      /*Creates first list*/
+    head2=list(head2);      /*Creates second list*/
     struct node* head3=NULL;
     head3=multiply(head1, head2, head3);
     print(head3);
