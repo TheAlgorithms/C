@@ -26,6 +26,7 @@ int fibo(int n)
 		}
 		printf("\n"); //next line after every series till n
 	}
+	return -1;
 }
 /**
  * Test function
