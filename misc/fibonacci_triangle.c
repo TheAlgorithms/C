@@ -29,7 +29,7 @@ int fibo(int n)
 	return -1;
 }
 /**
- * Test function
+ * Test implementations
  * @return void
  */
 void test()
