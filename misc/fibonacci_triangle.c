@@ -39,7 +39,7 @@ static void test()
 /**
  * Driver Code
  * @returns 0 on exit
-**/
+ */
 int main()
 {
 	test(); // execute the tests
