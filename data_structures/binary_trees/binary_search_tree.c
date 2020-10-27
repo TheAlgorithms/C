@@ -264,7 +264,7 @@ int leafcount(node *root)
    return 0;  
  }
 
-/** Main funcion */
+/** Main function */
 int main()
 {
     // this reference don't change.
