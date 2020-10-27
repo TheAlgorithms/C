@@ -7,7 +7,7 @@
 #include<assert.h>
 /**
 * funtion to print fibonacci series in traingle format
-**/
+ */
 int fibo(int n)
 
 {
