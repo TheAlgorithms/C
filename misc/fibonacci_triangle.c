@@ -42,6 +42,6 @@ void test()
 **/
 int main()
 {
-	test();
+	test(); // execute the tests
 	return 0;
 }
