@@ -11,11 +11,10 @@
  *
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
-#include <ctype.h>
+#include <stdlib.h> //for malloc and free
+#include <assert.h> //for assert
+#include <string.h> //for strlen 
+#include <ctype.h> //for tolower
 
 /**
  * @brief Check is a string is a palindrome.
@@ -69,6 +68,7 @@ static void test(){
  * @param argc commandline argument count (ignored)
  * @param argv commandline array of arguments (ignored)
  * @returns
+ */
 int main(int argc, char *argv[])
 {
     
