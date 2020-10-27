@@ -32,7 +32,7 @@ int fibo(int n)
  * Test implementations
  * @return void
  */
-void test()
+static void test()
 {
 	assert(fibo(5)); //giving value of n to test
 }
