@@ -22,7 +22,7 @@
  * @brief Check is a string is a palindrome.
  * @param str string to check
  * @returns 0 if is not a palindrome
- * @returns 1 if is a palindrome
+ * @returns 1 if it's a palindrome
  *
  */
 int isPalindrome(char str[])
