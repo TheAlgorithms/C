@@ -30,7 +30,7 @@ int fibo(int n)
 }
 /**
  * Test implementations
- * @return void
+ * @returns void
  */
 static void test()
 {
