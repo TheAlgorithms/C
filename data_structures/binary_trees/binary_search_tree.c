@@ -244,6 +244,25 @@ void inOrder(node *root)
         inOrder(root->right);
     }
 }
+/** Recursive utilitary procedure to find number of leaf nodes of the binary tree
+ * @param root pointer to parent node
+ * @returns 1 if node is a leaf
+ * @returns sum of number of leaves in left and right branches
+ * @returns 0 if tree is empty
+ */
+int leafcount(node *root)
+  {
+    int l,r;
+    if(root!=NULL)
+    {
+     if((root->left==NULL)&&(root->right==NULL))
+       return 1;
+     l=leafcount(root->left);
+     r=leafcount(root->right);
+     return(l+r);
+    }  
+   return 0;  
+ }
 
 /** Main funcion */
 int main()
@@ -259,7 +278,7 @@ int main()
     {
         printf(
             "\n\n[1] Insert Node\n[2] Delete Node\n[3] Find a Node\n[4] Get "
-            "current Height\n[5] Print Tree in Crescent Order\n[0] Quit\n");
+            "current Height\n[5] Print Tree in Crescent Order\n[6] Number of leaf nodes\n[0] Quit\n");
         scanf("%d", &opt);  // reads the choice of the user
 
         // processes the choice
@@ -297,6 +316,9 @@ int main()
 
         case 5:
             inOrder(root);
+            break;
+        case 6:
+            printf("The number of leaf nodes in the tree is: %d\n", leafcount(root));
             break;
         }
     }
