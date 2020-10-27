@@ -11,10 +11,10 @@
  *
  */
 
-#include <stdlib.h> //for malloc and free
-#include <assert.h> //for assert
-#include <string.h> //for strlen 
-#include <ctype.h> //for tolower
+#include <stdlib.h> ///for malloc and free
+#include <assert.h> ///for assert
+#include <string.h> ///for strlen 
+#include <ctype.h> ///for tolower
 
 /**
  * @brief Check is a string is a palindrome.
