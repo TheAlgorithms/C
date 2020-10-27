@@ -8,7 +8,6 @@
  * This program will be able to check phrases, with words 
  * separated by spaces, but can't deal with special characters.
  * @author [Maria Eduarda Kawakami](https://github.com/madukm)
- * @date 27 October, 2020
  *
  */
 
