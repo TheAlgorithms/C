@@ -1,12 +1,13 @@
 /**
  * @file fibonacci_triangle.c
  * @brief using fibonacci series we can print triangle of numbers
- **/
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
 /**
-* funtion to print fibonacci series in traingle format
+ * @param [in] n index of Fibonacci number to get
+ * funtion to print fibonacci series in traingle format
  */
 int fibo(int n)
 
