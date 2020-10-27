@@ -260,6 +260,7 @@
   * [Sudoku Solver](https://github.com/TheAlgorithms/C/blob/master/misc/sudoku_solver.c)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/tower_of_hanoi.c)
   * [Union Find](https://github.com/TheAlgorithms/C/blob/master/misc/union_find.c)
+  * [Word Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/word_palindrome.c)
 
 ## Numerical Methods
   * [Durand Kerner Roots](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/durand_kerner_roots.c)
