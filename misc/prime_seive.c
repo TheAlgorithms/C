@@ -2,12 +2,12 @@
  * @file
  * @brief [Prime Seive](https://leetcode.com/problems/count-primes/)
  * algorithm implementation.
- * @author[Divyansh Kushwaha](https://www.github.com/webdesignbydivyansh)
+ * @author[Divyansh Kushwaha](https://github.com/webdesignbydivyansh)
  */
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-constexpr int MAX_SIZE=1000000;
+
 /**
  * @addtogroup misc
  * @{
@@ -18,12 +18,12 @@ constexpr int MAX_SIZE=1000000;
  */
 void prime(int *p)
 {
-	for(long long int i=3;i<=MAX_SIZE;i+=2)
+	for(long long int i=3;i<=1000000;i+=2)
 	p[i]=1;
-	for(long long int i=3;i<=MAX_SIZE;i+=2)
+	for(long long int i=3;i<=1000000;i+=2)
 	{
 		if(p[i]==1)
-		for(long long int j=i*i;j<=MAX_SIZE;j+=i)
+		for(long long int j=i*i;j<=1000000;j+=i)
 		p[j]=0;
 	}
 	p[2]=1;
@@ -52,7 +52,7 @@ static void test()
     // Test Case 1
     const int size = 10; /* array size */
     printf("Test Case 1...");
-    int arr[MAX_SIZE];   /* array to store prime numbers */
+    int arr[1000000];   /* array to store prime numbers */
     prime(arr);
     assert(count(arr,size)==4);
     printf("Passed\n");
