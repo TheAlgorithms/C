@@ -21,7 +21,7 @@
 /**
  * @brief Check is a string is a palindrome.
  * @param str string to check
- * @returns 0 if is not a palindrome
+ * @returns 0 if it's not a palindrome
  * @returns 1 if it's a palindrome
  *
  */
