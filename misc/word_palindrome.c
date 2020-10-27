@@ -58,7 +58,7 @@ int isPalindrome(char str[])
  * @brief Test function
  * @returns void
  */
-void test(){
+static void test(){
 	assert(isPalindrome("arara"));
 	assert(isPalindrome("madam"));
 	assert(isPalindrome("Able was I ere I saw Elba"));
