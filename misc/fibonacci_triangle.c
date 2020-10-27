@@ -38,7 +38,7 @@ static void test()
 }
 /**
  * Driver Code
- * @return None
+ * @returns 0 on exit
 **/
 int main()
 {
