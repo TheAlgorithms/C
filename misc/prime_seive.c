@@ -52,7 +52,9 @@ static void test()
     // Test Case 1
     const int size = 10; /* array size */
     printf("Test Case 1...");
-    int arr[size]={0};   /* array to store prime numbers */
+    int arr[size];   /* array to store prime numbers */
+    for(int i=0;i<=size;i++)
+    arr[i]=0;
     prime(arr,size);
     assert(count(arr,size)==4);
     printf("Passed\n");
