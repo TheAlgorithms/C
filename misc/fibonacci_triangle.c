@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #include<assert.h>
 /**
+ * @brief Function to print Fibonacci series in triangle format
  * @param [in] n index of Fibonacci number to get
  */
 int fibo(int n)
