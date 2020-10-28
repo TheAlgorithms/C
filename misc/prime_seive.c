@@ -16,14 +16,14 @@
  * Prime Sieve works in O(nlogn) time
  * @param p array to be updated
  */
-void prime(int *p)
+void prime(int *p, const int size)
 {
-	for(long long int i=3;i<=1000000;i+=2)
+	for(long long int i=3;i<=size;i+=2)
 	p[i]=1;
-	for(long long int i=3;i<=1000000;i+=2)
+	for(long long int i=3;i<=size;i+=2)
 	{
 		if(p[i]==1)
-		for(long long int j=i*i;j<=1000000;j+=i)
+		for(long long int j=i*i;j<=size;j+=i)
 		p[j]=0;
 	}
 	p[2]=1;
@@ -52,8 +52,8 @@ static void test()
     // Test Case 1
     const int size = 10; /* array size */
     printf("Test Case 1...");
-    int arr[1000000];   /* array to store prime numbers */
-    prime(arr);
+    int arr[size]={0};   /* array to store prime numbers */
+    prime(arr,size);
     assert(count(arr,size)==4);
     printf("Passed\n");
 
