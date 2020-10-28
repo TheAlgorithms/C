@@ -38,7 +38,7 @@ static void test()
 	assert(fibo(5)); //giving value of n to test
 }
 /**
- * Driver Code
+ * @brief Driver Code
  * @returns 0 on exit
  */
 int main()
