@@ -7,7 +7,6 @@
 #include<assert.h>
 /**
  * @param [in] n index of Fibonacci number to get
- * funtion to print fibonacci series in traingle format
  */
 int fibo(int n)
 
