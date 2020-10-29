@@ -8,7 +8,7 @@
 int main()
 {
     int remainder, number = 0, decimal_number = 0, temp = 1;
-    printf("/n Enter any binary number= ");
+    printf("\n Enter any binary number= ");
     scanf("%d", &number);
 
     // Iterate over the number until the end.
