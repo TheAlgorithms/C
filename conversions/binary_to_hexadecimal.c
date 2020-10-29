@@ -16,6 +16,6 @@ int main()
         i = i * 2;
         binary = binary / 10;
     }
-    printf("THe Equivalent hexadecimal value: %lX", hexa);
+    printf("The equivalent hexadecimal value: %lX", hexa);
     return 0;
 }
