@@ -4,17 +4,19 @@
  * algorithm implementation.
  * @author[Divyansh Kushwaha](https://github.com/webdesignbydivyansh)
  */
-#include <assert.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <assert.h>	/// for assert
+#include <stdio.h>	/// for standard input output
+#include <stdlib.h>	/// for general purpose standard library
 
 /**
  * @addtogroup misc
  * @{
  */
 /**
- * Prime Sieve works in O(nlogn) time
+ * @brief Prime Sieve works in O(nlogn) time
  * @param p array to be updated
+ * @param size denotes the number upto which prime numbers are to be found
+ * @returns null
  */
 void prime(int *p, const int size)
 {
@@ -30,7 +32,7 @@ void prime(int *p, const int size)
 	p[0]=p[1]=0;    
 }
 /**
- * Count func counts the number of 
+ * @brief Count func counts the number of 
  * prime numbers.
  */
 int count(int *arr, const int size){
@@ -58,7 +60,6 @@ static void test()
     prime(arr,size);
     assert(count(arr,size)==4);
     printf("Passed\n");
-
 }
 
 /** @brief Main function
@@ -68,6 +69,6 @@ static void test()
  */
 int main(int argc, const char *argv[])
 {
-    test();	//execute the test
+    test();	// execute the tests
     return 0;
 }
