@@ -7,7 +7,10 @@ file( GLOB_RECURSE APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
     string( REPLACE ".c" "" testname ${testsourcefile} )
-    string( REPLACE "src/" "leetcode_" testname ${testname} )
+    string( REPLACE "/" "_" testname ${testname} )
+    string( REPLACE "\\" "_" testname ${testname} )
+    string( REPLACE " " "_" testname ${testname} )
+    string( PREPEND testname "leetcode_")
     add_executable( ${testname} ${testsourcefile} )
     
     if(OpenMP_C_FOUND)
