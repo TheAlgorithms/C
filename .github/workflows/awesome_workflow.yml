@@ -122,7 +122,7 @@ jobs:
 
             subprocess.run(["clang-tidy-10", "-p=build", "--fix", *cpp_files, "--"],
                 check=True, text=True, stderr=subprocess.STDOUT)
-            
+
             subprocess.run(["clang-format-10", "-i", *cpp_files],
                 check=True, text=True, stderr=subprocess.STDOUT)
 
@@ -136,7 +136,7 @@ jobs:
             print(f"{len(space_files)} files contain space or dash characters:")
             print("\n".join(space_files) + "\n")
 
-          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1 and "project_euler" not in file and "data_structure" not in file]
+          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1 and "project_euler" not in file  and "leetcode" not in file and "data_structure" not in file]
           if nodir_files:
             print(f"{len(nodir_files)} files are not in one and only one directory:")
             print("\n".join(nodir_files) + "\n")
