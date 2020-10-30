@@ -18,16 +18,16 @@ int main()
     int j;
     int i = 0;
 
-    printf("\t\tConverter decimal --> binary\n\n");
+    printf("\t\tConverter Decimal --> Binary\n\n");
 
     // reads a decimal number from the user.
-    printf("\nenter a positive integer number: ");
+    printf("\nEnter a positive integer number: ");
     scanf("%d", &inputNumber);
 
     // make sure the input number is a positive integer.
     if (inputNumber < 0)
     {
-        printf("only positive integers >= 0\n");
+        printf("Only positive integers >= 0\n");
         return 1;
     }
 
@@ -44,7 +44,7 @@ int main()
         i++;
     }
 
-    printf("\n the number in binary is: ");
+    printf("\nThe number in binary is: ");
 
     // iterates backwards over all bits
     for (j = i - 1; j >= 0; j--)
@@ -57,6 +57,6 @@ int main()
     {
         printf("0");
     }
-
+    printf("\n");
     return 0;
 }
