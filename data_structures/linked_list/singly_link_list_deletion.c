@@ -4,6 +4,7 @@
   when passed with a key of the node.
 */
 #include <stdio.h>
+#include <stdlib.h>
 struct node
 {
     int info;
@@ -22,7 +23,7 @@ void insert()  // function to insert at first location
 {
     struct node *p;
     p = createnode();
-    printf("\nenter the number to insert");
+    printf("\nEnter the number to insert: ");
     scanf("%d", &p->info);
     p->link = NULL;
     if (start == NULL)
@@ -41,7 +42,7 @@ void deletion()  // function to delete from first position
     struct node *t;
     if (start == NULL)
     {
-        printf("\nlist is empty");
+        printf("\nList is empty.\n");
     }
     else
     {
@@ -57,16 +58,18 @@ void viewlist()  // function to display values
     struct node *p;
     if (start == NULL)
     {
-        printf("\nlist is empty");
+        printf("\nList is empty.\n");
     }
     else
     {
         p = start;
+        printf("\n");
         while (p != NULL)
         {
             printf("%d ", p->info);
             p = p->link;
         }
+        printf("\n");
     }
 }
 //////////////////////////////////////////////////////////////////////
@@ -76,10 +79,10 @@ int main()
     int n;
     while (1)
     {
-        printf("\n1.add value at first location");
-        printf("\n2.delete value from first location");
-        printf("\n3.view value");
-        printf("\nenter your choice");
+        printf("\n1. Add value at first location");
+        printf("\n2. Delete value from first location");
+        printf("\n3. View value");
+        printf("\nEnter your choice: ");
         scanf("%d", &n);
         switch (n)
         {
@@ -93,7 +96,7 @@ int main()
             viewlist();
             break;
         default:
-            printf("\ninvalid choice");
+            printf("\ninvalid choice.\n");
         }
     }
     return (0);
