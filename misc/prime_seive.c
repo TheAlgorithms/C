@@ -7,7 +7,7 @@
 #include <assert.h>	/// for assert
 #include <stdio.h>	/// for standard input output
 #include <stdlib.h>	/// for general purpose standard library
-
+const unsigned long long MAX_SIZE = 1000000;  /// variable upto which prime numbers are to be found out
 /**
  * @addtogroup misc
  * @{
@@ -19,13 +19,14 @@
  */
 void prime(int *p)
 {
-	for(long long int i=3;i<=1000000;i+=2)
-	p[i]=1;
-	for(long long int i=3;i<=1000000;i+=2)
+	for(long long int i=3;i<=MAX_SIZE;i+=2) { p[i]=1; }
+	for(long long int i=3;i<=MAX_SIZE;i+=2)
 	{
-		if(p[i]==1)
-		for(long long int j=i*i;j<=1000000;j+=i)
-		p[j]=0;
+		if(p[i]==1) {
+		    for(long long int j=i*i;j<=MAX_SIZE;j+=i) {
+			p[j]=0;
+		    }
+		}
 	}
 	p[2]=1;
 	p[0]=p[1]=0;    
