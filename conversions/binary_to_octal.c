@@ -1,3 +1,8 @@
+/*
+ * Modified 23/10/2020, Suraj Patro
+ *
+ */
+
 // Binary number to octal number conversion
 #include <stdio.h>
 
@@ -20,7 +25,7 @@ int main(void)
 {
     int binary_num, d = 0, base = 1, remainder, td, res = 0, ord = 1;
 
-    printf("Enter the binary no: ");
+    printf("Enter any binary number: ");
     scanf("%d", &binary_num);
 
     while (binary_num > 0)
@@ -49,6 +54,6 @@ int main(void)
         ord *= 10;
     }
 
-    printf("\nOctal equivalent is: %d", res);
+    printf("Octal equivalent is: %d\n", res);
     return 0;
 }
