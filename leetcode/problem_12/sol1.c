@@ -1,3 +1,21 @@
+/**
+ * \file
+ * \brief [3. Integer to roman](https://leetcode.com/problems/integer-to-roman/)
+ * solution
+ * \details Given an integer, convert it to a roman numeral.
+ */
+
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * @brief Get the Roman numeral for units place
+ *
+ * @param c character digit to convert
+ * @return null terminated string
+ */
 char *getOne(char c)
 {
     switch (c)
@@ -37,6 +55,12 @@ char *getOne(char c)
     }
 }
 
+/**
+ * @brief Get the Roman numeral for tens place
+ *
+ * @param c character digit to convert
+ * @return null terminated string
+ */
 char *getTen(char c)
 {
     switch (c)
@@ -76,6 +100,12 @@ char *getTen(char c)
     }
 }
 
+/**
+ * @brief Get the Roman numeral for hundreds place
+ *
+ * @param c character digit to convert
+ * @return null terminated string
+ */
 char *getHundred(char c)
 {
     switch (c)
@@ -115,6 +145,12 @@ char *getHundred(char c)
     }
 }
 
+/**
+ * @brief Get the Roman numeral for thousandths place
+ *
+ * @param c character digit to convert
+ * @return null terminated string
+ */
 char *getThousand(char c)
 {
     switch (c)
@@ -129,44 +165,45 @@ char *getThousand(char c)
         return "M";
 
     default:
-        return NULL;
+        return "";
     }
 }
 
-char *intToRoman(int num)
+/**
+ * @brief Convert Roman numeral for units place
+ *
+ * @param num number to convert
+ * @return null terminated string
+ */
+const char *intToRoman(int num)
 {
-    int length;
     char number[5];
-    char *s = malloc(16 * sizeof(char));
+    static char s[16];
 
-    sprintf(number, "%i", num);
+    sprintf(number, "%04i", num);
 
-    length = strlen(number);
+    sprintf(s, "%s%s%s%s", getThousand(number[0]), getHundred(number[1]),
+            getTen(number[2]), getOne(number[3]));
 
-    switch (length)
-    {
-    case 4:
-        sprintf(s, "%s%s%s%s", getThousand(number[0]), getHundred(number[1]),
-                getTen(number[2]), getOne(number[3]));
-        break;
-
-    case 3:
-        sprintf(s, "%s%s%s", getHundred(number[0]), getTen(number[1]),
-                getOne(number[2]));
-
-        break;
-
-    case 2:
-        sprintf(s, "%s%s", getTen(number[0]), getOne(number[1]));
-
-        break;
-
-    case 1:
-        s = getOne(number[0]);
-        break;
-
-    default:
-        break;
-    }
     return s;
+}
+
+/**
+ * @brief Main function
+ * @return 0
+ */
+int main()
+{
+    assert(strcmp(intToRoman(3), "III") == 0);
+    printf("Test 1 passed\n");
+    assert(strcmp(intToRoman(4), "IV") == 0);
+    printf("Test 2 passed\n");
+    assert(strcmp(intToRoman(9), "IX") == 0);
+    printf("Test 3 passed\n");
+    assert(strcmp(intToRoman(58), "LVIII") == 0);
+    printf("Test 4 passed\n");
+    assert(strcmp(intToRoman(1994), "MCMXCIV") == 0);
+    printf("Test 5 passed\n");
+
+    return 0;
 }
