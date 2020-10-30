@@ -29,7 +29,7 @@ void decimal2Octal(long decimalnum)
         quotient = quotient / 8;
     }
 
+    printf("The octal equivalent is: ");
     for (j = i - 1; j > 0; j--) printf("%d", octalNumber[j]);
-
     printf("\n");
 }
