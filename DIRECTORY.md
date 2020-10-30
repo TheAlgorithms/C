@@ -135,92 +135,177 @@
   * [Hash Xor8](https://github.com/TheAlgorithms/C/blob/master/hash/hash_xor8.c)
 
 ## Leetcode
-  * Src
-    * [1](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1.c)
-    * [101](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/101.c)
-    * [104](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/104.c)
-    * [108](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/108.c)
-    * [1089](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1089.c)
-    * [109](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/109.c)
-    * [11](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/11.c)
-    * [110](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/110.c)
-    * [112](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/112.c)
-    * [1184](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1184.c)
-    * [1189](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1189.c)
-    * [12](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/12.c)
-    * [1207](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/1207.c)
-    * [121](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/121.c)
-    * [125](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/125.c)
-    * [13](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/13.c)
-    * [136](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/136.c)
-    * [141](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/141.c)
-    * [142](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/142.c)
-    * [153](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/153.c)
-    * [160](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/160.c)
-    * [169](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/169.c)
-    * [173](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/173.c)
-    * [189](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/189.c)
-    * [190](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/190.c)
-    * [191](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/191.c)
-    * [2](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/2.c)
-    * [20](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/20.c)
-    * [201](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/201.c)
-    * [203](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/203.c)
-    * [206](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/206.c)
-    * [21](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/21.c)
-    * [215](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/215.c)
-    * [217](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/217.c)
-    * [226](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/226.c)
-    * [231](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/231.c)
-    * [234](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/234.c)
-    * [24](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/24.c)
-    * [242](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/242.c)
-    * [26](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/26.c)
-    * [268](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/268.c)
-    * [27](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/27.c)
-    * [278](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/278.c)
-    * [28](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/28.c)
-    * [283](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/283.c)
-    * [287](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/287.c)
-    * [29](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/29.c)
-    * [3](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/3.c)
-    * [344](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/344.c)
-    * [35](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/35.c)
-    * [367](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/367.c)
-    * [38](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/38.c)
-    * [387](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/387.c)
-    * [389](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/389.c)
-    * [4](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/4.c)
-    * [404](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/404.c)
-    * [442](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/442.c)
-    * [461](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/461.c)
-    * [476](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/476.c)
-    * [509](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/509.c)
-    * [520](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/520.c)
-    * [53](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/53.c)
-    * [561](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/561.c)
-    * [617](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/617.c)
-    * [647](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/647.c)
-    * [66](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/66.c)
-    * [674](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/674.c)
-    * [7](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/7.c)
-    * [700](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/700.c)
-    * [701](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/701.c)
-    * [704](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/704.c)
-    * [709](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/709.c)
-    * [771](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/771.c)
-    * [8](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/8.c)
-    * [82](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/82.c)
-    * [83](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/83.c)
-    * [852](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/852.c)
-    * [876](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/876.c)
-    * [9](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/9.c)
-    * [905](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/905.c)
-    * [917](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/917.c)
-    * [938](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/938.c)
-    * [94](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/94.c)
-    * [965](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/965.c)
-    * [977](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/977.c)
+  * Problem 1
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_1/sol1.c)
+  * Problem 101
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_101/sol1.c)
+  * Problem 104
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_104/sol1.c)
+  * Problem 108
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_108/sol1.c)
+  * Problem 1089
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_1089/sol1.c)
+  * Problem 109
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_109/sol1.c)
+  * Problem 11
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_11/sol1.c)
+  * Problem 110
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_110/sol1.c)
+  * Problem 112
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_112/sol1.c)
+  * Problem 1184
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_1184/sol1.c)
+  * Problem 1189
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_1189/sol1.c)
+  * Problem 12
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_12/sol1.c)
+  * Problem 1207
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_1207/sol1.c)
+  * Problem 121
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_121/sol1.c)
+  * Problem 125
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_125/sol1.c)
+  * Problem 13
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_13/sol1.c)
+  * Problem 136
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_136/sol1.c)
+  * Problem 141
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_141/sol1.c)
+  * Problem 142
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_142/sol1.c)
+  * Problem 153
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_153/sol1.c)
+  * Problem 160
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_160/sol1.c)
+  * Problem 169
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_169/sol1.c)
+  * Problem 173
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_173/sol1.c)
+  * Problem 189
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_189/sol1.c)
+  * Problem 190
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_190/sol1.c)
+  * Problem 191
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_191/sol1.c)
+  * Problem 2
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_2/sol1.c)
+  * Problem 20
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_20/sol1.c)
+  * Problem 201
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_201/sol1.c)
+  * Problem 203
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_203/sol1.c)
+  * Problem 206
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_206/sol1.c)
+  * Problem 21
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_21/sol1.c)
+  * Problem 215
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_215/sol1.c)
+  * Problem 217
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_217/sol1.c)
+  * Problem 226
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_226/sol1.c)
+  * Problem 231
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_231/sol1.c)
+  * Problem 234
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_234/sol1.c)
+  * Problem 24
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_24/sol1.c)
+  * Problem 242
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_242/sol1.c)
+  * Problem 26
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_26/sol1.c)
+  * Problem 268
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_268/sol1.c)
+  * Problem 27
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_27/sol1.c)
+  * Problem 278
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_278/sol1.c)
+  * Problem 28
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_28/sol1.c)
+  * Problem 283
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_283/sol1.c)
+  * Problem 287
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_287/sol1.c)
+  * Problem 29
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_29/sol1.c)
+  * Problem 3
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_3/sol1.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_3/sol2.c)
+  * Problem 344
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_344/sol1.c)
+  * Problem 35
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_35/sol1.c)
+  * Problem 367
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_367/sol1.c)
+  * Problem 38
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_38/sol1.c)
+  * Problem 387
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_387/sol1.c)
+  * Problem 389
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_389/sol1.c)
+  * Problem 4
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_4/sol1.c)
+  * Problem 404
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_404/sol1.c)
+  * Problem 442
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_442/sol1.c)
+  * Problem 461
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_461/sol1.c)
+  * Problem 476
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_476/sol1.c)
+  * Problem 509
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_509/sol1.c)
+  * Problem 520
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_520/sol1.c)
+  * Problem 53
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_53/sol1.c)
+  * Problem 561
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_561/sol1.c)
+  * Problem 617
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_617/sol1.c)
+  * Problem 647
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_647/sol1.c)
+  * Problem 66
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_66/sol1.c)
+  * Problem 674
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_674/sol1.c)
+  * Problem 7
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_7/sol1.c)
+  * Problem 700
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_700/sol1.c)
+  * Problem 701
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_701/sol1.c)
+  * Problem 704
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_704/sol1.c)
+  * Problem 709
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_709/sol1.c)
+  * Problem 771
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_771/sol1.c)
+  * Problem 8
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_8/sol1.c)
+  * Problem 82
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_82/sol1.c)
+  * Problem 83
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_83/sol1.c)
+  * Problem 852
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_852/sol1.c)
+  * Problem 876
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_876/sol1.c)
+  * Problem 9
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_9/sol1.c)
+  * Problem 905
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_905/sol1.c)
+  * Problem 917
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_917/sol1.c)
+  * Problem 938
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_938/sol1.c)
+  * Problem 94
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_94/sol1.c)
+  * Problem 965
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_965/sol1.c)
+  * Problem 977
+    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_977/sol1.c)
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C/blob/master/machine_learning/adaline_learning.c)
