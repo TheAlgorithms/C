@@ -1,11 +1,11 @@
 /*
- * CArray.c
+ * carray.c
  *
  * Author: Leonardo Vencovsky
  * Created on 19/03/2018
  *
- * Modified by: Leonardo Vencovsky
- * Last modified: 19/03/2018
+ * Modified by: Suraj Patro
+ * Last modified: 23/10/2020
  *
  * Array Implementations in C
  *
@@ -26,7 +26,8 @@ Return Codes
 
 */
 
-#include "CArray.h"
+#include "carray.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
