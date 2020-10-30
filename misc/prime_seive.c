@@ -2,7 +2,7 @@
  * @file
  * @brief [Prime Seive](https://leetcode.com/problems/count-primes/)
  * algorithm implementation.
- * @author[Divyansh Kushwaha](https://github.com/webdesignbydivyansh)
+ * @author [Divyansh Kushwaha](https://github.com/webdesignbydivyansh)
  */
 #include <assert.h>	/// for assert
 #include <stdio.h>	/// for standard input output
@@ -15,7 +15,7 @@
 /**
  * @brief Prime Sieve works in O(nlogn) time
  * @param p array to be updated
- * @returns null
+ * @returns void
  */
 void prime(int *p)
 {
@@ -46,8 +46,8 @@ int count(int *arr, const int size){
 
 /**
  * @brief Test implementations
-  * @returns void
-  */
+ * @returns void
+ */
 static void test()
 {
     // Test Case 1
@@ -59,10 +59,11 @@ static void test()
     printf("Passed\n");
 }
 
-/** @brief Main function
- *  @param argc commandline argument count (ignored)
- *  @param argv commandline array of arguments (ignored)
- *  @returns 0 on exit
+/** 
+ * @brief Main function
+ * @param argc commandline argument count (ignored)
+ * @param argv commandline array of arguments (ignored)
+ * @returns 0 on exit
  */
 int main(int argc, const char *argv[])
 {
