@@ -747,15 +747,15 @@ int main()
     Node *root = NULL;
     int scanValue, choice = 1;
     printf(
-        "1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - Quit\n\nPlease "
-        "Enter the Choice - ");
+        "1: Input\n2: Delete\n3: Inorder Traversel\n0: Quit\nPlease "
+        "Enter the Choice: ");
     scanf("%d", &choice);
     while (choice)
     {
         switch (choice)
         {
         case 1:
-            printf("\n\nPlease Enter A Value to insert - ");
+            printf("\nPlease Enter A Value to insert: ");
             scanf("%d", &scanValue);
             if (root == NULL)
             {
@@ -766,16 +766,16 @@ int main()
             {
                 insertNode(scanValue, &root);
             }
-            printf("\nSuccessfully Inserted %d in the tree\n\n", scanValue);
+            printf("Successfully Inserted %d in the tree\n\n", scanValue);
             break;
         case 2:
-            printf("\n\nPlease Enter A Value to Delete - ");
+            printf("\nPlease Enter A Value to Delete: ");
             scanf("%d", &scanValue);
             deleteNode(scanValue, &root);
             printf("\nSuccessfully Inserted %d in the tree\n\n", scanValue);
             break;
         case 3:
-            printf("\nInorder Traversel - ");
+            printf("\nInorder Traversel: ");
             printInorder(root);
             printf("\n\n");
             // checkBlack(root,0);
@@ -784,14 +784,12 @@ int main()
         default:
             if (root != NULL)
             {
-                printf("Root - %d\n", root->val);
+                printf("Root: %d\n\n", root->val);
             }
         }
         printf(
-            "1 - Input\n2 - Delete\n3 - Inorder Traversel\n0 - "
-            "Quit\n\nPlease Enter the Choice - ");
+            "\n1: Input\n2: Delete\n3: Inorder Traversel\n0: "
+            "Quit\nPlease Enter the Choice: ");
         scanf("%d", &choice);
     }
 }
-
-// 32 12 50 53 1 2 3 4 5 6 7 8 9
