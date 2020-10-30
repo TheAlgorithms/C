@@ -2,15 +2,15 @@
  * @file fibonacci_triangle.c
  * @brief using fibonacci series we can print triangle of numbers
  */
-#include<stdio.h>
-#include<stdlib.h>
-#include<assert.h>
+#include<stdio.h> /// for standard Input Output 
+#include<stdlib.h> /// for standard library functions
+#include<assert.h> /// for assert functions
+#include<stdbool.h> /// for boolean functions
 /**
  * @brief Function to print Fibonacci series in triangle format
  * @param [in] n index of Fibonacci number to get
  */
-int fibo(int n)
-
+bool fibo(int n)
 {
 	int i,j,a,b,c;
 	for(i=1;i<=n;i++)
