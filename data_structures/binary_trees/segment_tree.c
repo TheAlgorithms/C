@@ -6,8 +6,7 @@
  * which allow range based queries in a given array in logN time.
  * Segment tree with point updates allow update of single element in the array
  * in logN time.
- * [Learn more about segment trees
- * here](https://codeforces.com/blog/entry/18051)
+ * [Learn more about segment trees here](https://codeforces.com/blog/entry/18051)
  * @author [Lakhan Nad](https://github.com/Lakhan-Nad)
  */
 
