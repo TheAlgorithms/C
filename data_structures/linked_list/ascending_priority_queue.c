@@ -76,7 +76,7 @@ int removes()
 
     if (empty())
     {
-        printf("\nQueue Underflow. Unable to remove.");
+        printf("\nQueue Underflow. Unable to remove.\n");
         exit(1);
     }
 
@@ -121,10 +121,10 @@ void show()
     struct node *p;
 
     if (empty())
-        printf("Queue empty. No data to display \n");
+        printf("Queue empty. No data to display.\n");
     else
     {
-        printf("Queue from front to rear is as shown: \n");
+        printf("Queue from front to rear is as shown:-\n");
 
         p = front;
         while (p != NULL)
@@ -147,17 +147,17 @@ int main()
 
     do
     {
-        printf("\n\n  Menu: \n");
-        printf("1:Insert \n");
-        printf("2:Remove \n");
-        printf("3:exit \n");
+        printf("\n\n Menu: \n");
+        printf("1: Insert \n");
+        printf("2: Remove \n");
+        printf("3: Exit \n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
 
         switch (ch)
         {
         case 1:
-            printf("Enter element to be inserted: ");
+            printf("\nEnter element to be inserted: ");
             scanf("%d", &x);
             insert(x);
             show();
@@ -165,7 +165,7 @@ int main()
 
         case 2:
             x = removes();
-            printf("Element removed is: %d\n", x);
+            printf("\nElement removed is: %d\n", x);
             show();
             break;
 
@@ -178,106 +178,3 @@ int main()
 
     return 0;
 }
-
-/* Output of the Program*/
-
-/*
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 1
-Enter element to be inserted: 12
-Queue from front to rear is as shown:
-12
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 1
-Enter element to be inserted: 1
-Queue from front to rear is as shown:
-12 1
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 1
-Enter element to be inserted: 14
-Queue from front to rear is as shown:
-12 1 14
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 1
-Enter element to be inserted: 3
-Queue from front to rear is as shown:
-12 1 14 3
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 1
-Enter element to be inserted: 5
-Queue from front to rear is as shown:
-12 1 14 3 5
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 2
-Element removed is: 1
-Queue from front to rear is as shown:
-12 14 3 5
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 2
-Element removed is: 3
-Queue from front to rear is as shown:
-12 14 5
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 2
-Element removed is: 5
-Queue from front to rear is as shown:
-12 14
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 2
-Element removed is: 12
-Queue from front to rear is as shown:
-14
-
-
-  Menu:
-1:Insert
-2:Remove
-3:exit
-Enter your choice: 2
-Element removed is: 14
-Queue empty. No data to display
-
-*/
