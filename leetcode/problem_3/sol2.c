@@ -2,7 +2,7 @@
  * \file
  * \brief [3. Longest
  * substring](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
- *  brute force solution
+ * brute force solution
  * \details Given a string `s`, find the length of the longest substring without
  * repeating characters.
  */
