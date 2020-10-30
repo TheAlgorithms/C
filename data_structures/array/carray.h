@@ -1,11 +1,11 @@
 /*
- * CArray.h
+ * carray.h
  *
  * Author: Leonardo Vencovsky
  * Created on 18/03/2018
  *
- * Modified by: Leonardo Vencovsky
- * Last modified: 19/03/2018
+ * Modified by: Suraj Patro
+ * Last modified: 23/10/2020
  *
  * Header for Array in C
  *
