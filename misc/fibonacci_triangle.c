@@ -1,6 +1,8 @@
 /**
  * @file fibonacci_triangle.c
  * @brief using fibonacci series we can print triangle of numbers
+ *
+ * @author [Sumeet Shinde](https://github.com/sumeet-shinde)
  */
 #include<stdio.h> /// for standard Input Output 
 #include<stdlib.h> /// for standard library functions
