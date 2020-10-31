@@ -199,6 +199,7 @@
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_206/sol1.c)
   * Problem 21
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_21/sol1.c)
+    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_21/sol2.c)
   * Problem 215
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/leetcode/problem_215/sol1.c)
   * Problem 217
