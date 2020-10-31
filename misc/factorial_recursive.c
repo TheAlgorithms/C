@@ -1,5 +1,5 @@
 /**
- * @file factorial_recursive.c
+ * @file
  * @brief factorial with recursive function call
  * @details
  * This version of the factorial computation function obtains the result by
