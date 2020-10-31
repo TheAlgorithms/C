@@ -32,7 +32,7 @@ long long factorial_recursive(int val)
 }
 
 /**
- * @brief Test function
+ * @brief Test implementations
  * @returns void
  */
 static void test()
