@@ -2,7 +2,7 @@
  * \file
  * \brief [21. Merge Two Sorted
  * Lists](https://leetcode.com/problems/merge-two-sorted-lists/) solution
- * (Iterative method)
+ * (Recursive method)
  * \details Merge two sorted linked lists and return it as a
  * new sorted list. The new list should be made by splicing together the nodes
  * of the first two lists.
@@ -23,7 +23,7 @@ struct ListNode
 };
 
 /**
- * @brief Iterative implementation.
+ * @brief Resursive implementation.
  *
  * @param l1 pointer to the root of first list
  * @param l2 pointer to the root of second list
@@ -31,51 +31,20 @@ struct ListNode
  */
 struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2)
 {
-    struct ListNode *list = NULL;
-    struct ListNode *tmp = NULL;
-
     if (!l1)
         return l2;
     if (!l2)
         return l1;
-
-    if (l1 && l2)
+    if (l1->val < l2->val)
     {
-        if (l1->val < l2->val)
-        {
-            list = tmp = l1;
-            l1 = l1->next;
-        }
-        else
-        {
-            list = tmp = l2;
-            l2 = l2->next;
-        }
-
-        while (l1 && l2)
-        {
-            if (l1->val < l2->val)
-            {
-                tmp->next = l1;
-                l1 = l1->next;
-            }
-            else
-            {
-                tmp->next = l2;
-                l2 = l2->next;
-            }
-            tmp = tmp->next;
-        }
-
-        if (l1)
-            tmp->next = l1;
-        if (l2)
-            tmp->next = l2;
-
-        return list;
+        l1->next = mergeTwoLists(l1->next, l2);
+        return l1;
     }
-
-    return NULL;
+    else
+    {
+        l2->next = mergeTwoLists(l1, l2->next);
+        return l2;
+    }
 }
 
 /**
@@ -90,7 +59,7 @@ void free_list(struct ListNode *node)
 
     free(node);
     node = NULL;
-}
+};
 
 /**
  * @brief Generate a node list from an array of digits
