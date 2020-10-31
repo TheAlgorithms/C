@@ -4,12 +4,14 @@
  * @details
  * This version of the factorial computation function obtains the result by
  * recursively calling the function
+ * [definition](https://en.wikipedia.org/wiki/Factorial#Definition)
+ * [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
  * @author [Nicola Masarone](https://github.com/nicola-masarone)
  *
  */
 
-#include <assert.h>
-#include <stdio.h>
+#include <assert.h>  /// allows the use of the assert() macro for a diagnostic test of the function
+#include <stdio.h>  /// allows the use of standard input output functions such as scanf() and printf()
 
 /**
  * Function documentation
