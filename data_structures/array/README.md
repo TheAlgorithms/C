@@ -17,6 +17,6 @@ typedef struct CArray {
 
 ## Files
 
-* carray.c - Array Implementations
-* carray.h - Import for Usage
-* carrayTests.c - Usage Examples and tests
+* `carray.c` - Array Implementations
+* `carray.h` - Import for Usage
+* `carray_tests.c` - Usage Examples and tests
