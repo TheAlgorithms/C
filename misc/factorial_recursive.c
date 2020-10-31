@@ -56,8 +56,8 @@ int main()
     test();  // execute the tests
 
     // code here
-    int N;
-    long long result;
+    int N = 0;
+    long long result = 0;
     printf(
         "Enter the value (between 0 and 20) to calculate the factorial of and "
         "press enter: ");
