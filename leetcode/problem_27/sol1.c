@@ -1,10 +1,9 @@
 /**
  * \file
- * \brief [3. Longest
- * substring](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
- * brute force solution
- * \details Given a string `s`, find the length of the longest substring without
- * repeating characters.
+ * \brief [27. Remove
+ * element](https://leetcode.com/problems/remove-element/) solution
+ * \details Given an array nums and a value val, remove all instances of that
+ * value in-place and return the new length.
  */
 
 #include <assert.h>
