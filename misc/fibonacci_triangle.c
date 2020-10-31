@@ -14,7 +14,7 @@
  */
 bool fibo(int n)
 {
-	int i,j,a,b,c;
+	int i = 0, j = 0, a = 0, b = 0, c = 0;
 	for(i=1;i<=n;i++)
 	{
 		a=0; //initialize first number
