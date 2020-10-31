@@ -4,8 +4,8 @@
  * Author: Leonardo Vencovsky
  * Created on 18/03/2018
  *
- * Modified by: Suraj Patro
- * Last modified: 23/10/2020
+ * Modified by: Leonardo Vencovsky
+ * Last modified: 18/03/2018
  *
  * Header for Array in C
  *
