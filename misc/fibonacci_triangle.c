@@ -1,5 +1,5 @@
 /**
- * @file fibonacci_triangle.c
+ * @file
  * @brief using fibonacci series we can print triangle of numbers
  *
  * @author [Sumeet Shinde](https://github.com/sumeet-shinde)
