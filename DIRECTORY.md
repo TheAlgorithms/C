@@ -237,6 +237,7 @@
   * [Demonetization](https://github.com/TheAlgorithms/C/blob/master/misc/demonetization.c)
   * [Factorial](https://github.com/TheAlgorithms/C/blob/master/misc/factorial.c)
   * [Factorial Large Number](https://github.com/TheAlgorithms/C/blob/master/misc/factorial_large_number.c)
+  * [Factorial Recursive](https://github.com/TheAlgorithms/C/blob/master/misc/factorial_recursive.c)
   * [Factorial Trailing Zeroes](https://github.com/TheAlgorithms/C/blob/master/misc/factorial_trailing_zeroes.c)
   * [Fibonacci](https://github.com/TheAlgorithms/C/blob/master/misc/fibonacci.c)
   * [Fibonacci Dp](https://github.com/TheAlgorithms/C/blob/master/misc/fibonacci_dp.c)
