@@ -7,6 +7,7 @@
 #include <assert.h>	/// for assert
 #include <stdio.h>	/// for standard input output
 #include <stdlib.h>	/// for general purpose standard library
+
 const unsigned long long MAX_SIZE = 1000000;  /// variable upto which prime numbers are to be found out
 /**
  * @addtogroup misc
