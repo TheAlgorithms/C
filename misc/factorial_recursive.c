@@ -46,7 +46,6 @@ static void test()
            1);  // this ensures that the algorithm works as expected
     assert(factorial_recursive(0) ==
            1);  // this ensures that the algorithm works as expected
-    // can have multiple checks
 }
 
 /**
