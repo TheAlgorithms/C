@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief [Factorial](https://en.wikipedia.org/wiki/Factorial) with recursive function call
- * [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
+ * [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
  * @details
  * This version of the factorial computation function obtains the result by
  * recursively calling the function
