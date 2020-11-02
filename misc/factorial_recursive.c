@@ -1,6 +1,8 @@
 /**
  * @file
  * @brief factorial with recursive function call
+ * [definition](https://en.wikipedia.org/wiki/Factorial#Definition)
+ * [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
  * @details
  * This version of the factorial computation function obtains the result by
  * recursively calling the function
@@ -15,6 +17,10 @@
 
 /**
  * Function documentation
+ * This function calculates the factorial of a number: n! = n*(n-1)*...*1 
+ * From its definition we can calculate the factorial as: n! = n*(n-1)! 
+ * that is, with recursive call of the function applied to the argument decreased by 1. 
+ * The recursion must stop when it reaches 0! which by definition is equal to 1.
  * @param val input value to calculate the factorial of
  * @returns factorial of the input value
  */
