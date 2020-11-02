@@ -6,8 +6,6 @@
  * @details
  * This version of the factorial computation function obtains the result by
  * recursively calling the function
- * [definition](https://en.wikipedia.org/wiki/Factorial#Definition)
- * [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
  * @author [Nicola Masarone](https://github.com/nicola-masarone)
  *
  */
