@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief factorial with recursive function call
+ * @brief [Factorial](https://en.wikipedia.org/wiki/Factorial) with recursive function call
  * [definition](https://en.wikipedia.org/wiki/Factorial#Definition)
  * [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
  * @details
