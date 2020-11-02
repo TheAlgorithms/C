@@ -35,6 +35,9 @@ void prime(int *p)
 /**
  * @brief Count func counts the number of 
  * prime numbers.
+ * @param arr contains the prime numbers
+ * @param size denotes upto which prime numbers are to be found out
+ * @returns count of prime numbers
  */
 int count(int *arr, const int size){
   int k=0;
