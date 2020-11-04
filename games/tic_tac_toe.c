@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
+#include <ctype.h>
 // Functions Declarations
 static void singlemode();
 static void doublemode();
@@ -30,6 +30,12 @@ int checkwin();  // checks everytime when a player or computer places 'X' or 'O'
 static char game_table[9];
 
 /**
+ * stored_pos array will store posistion of that were already allocated by the user
+ * calloc(9,sizeof(int)) means an array of 9 elements.
+ */
+int *stored_pos = NULL;
+
+/**
  * Main program function.
  * @returns 0 on clean exit. 
  * @note No checks are included for program execution failures!
@@ -37,6 +43,7 @@ static char game_table[9];
 int main()
 {   srand(time(NULL));
     int l = 0;
+	stored_pos = (int*)calloc(9,sizeof(int));
     do
     {
         int n = 0;
@@ -65,6 +72,7 @@ int main()
             break;
         default:
             printf("THANK YOU and EXIT!");
+			free(stored_pos); // freeing the memory
         }
 
         printf("Next game ? : ");
@@ -222,29 +230,31 @@ void doublemode()
 /**
  * @brief Helper function of place_x,place_y function
  *
- * @param m location to place 'X'
+ * @param None
  *
  * @returns n1
  */
-int check_placex(int m){
+int check_placex(){
 	char input[50];
 	int n1;
 	while (1){
 		fgets(input,49,stdin);
 		if ( strlen(input) > 2 || strlen(input)  == 0){
-			fprintf(stderr,"G Invalid move, Enter number 1 - 9: ");
+			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
 			continue;
 		}
 		if(sscanf(input,"%d",&n1) != 1){
 			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
 			continue;
 		} 
-		if (n1 == m){
+		if ((stored_pos[n1-1] == 1) || (n1== 0)){
 			fprintf(stderr,"Already allocated, Enter number: ");
+			continue;
 		}
 		return n1;
-	}	
-}
+	}
+}	
+
 
 
 
@@ -264,16 +274,18 @@ void placex(int m)
         if (game_table[m - 1] != 'x' && game_table[m - 1] != 'o')
         {
             game_table[m - 1] = 'x';
+			// allocating the value in the stored_pos
+			stored_pos[m-1] = 1;
         }
         else
         {
-			int n = check_placex(m);
+			int n = check_placex();
 			placex(n);
         }
     }
     else
     {
-		int n = check_placex(0);
+		int n = check_placex();
 		placex(n);
     }
 }
@@ -293,6 +305,7 @@ void place()
         {
             game_table[e] = 'o';
             printf("\n Computer placed at %d position\n", e + 1);
+			stored_pos[e] = 1;
         }
         else
         {
@@ -315,16 +328,17 @@ void placey(int e1)
         if (game_table[e1 - 1] != 'x' && game_table[e1 - 1] != 'o')
         {
             game_table[e1 - 1] = 'o';
+			stored_pos[e1-1] = 1;
         }
         else
         {
-			int n = check_placex(e1);
+			int n = check_placex();
 			placex(n);
         }
     }
     else
     {
-		int n = check_placex(0);
+		int n = check_placex();
 		placex(n);
     }
 }
