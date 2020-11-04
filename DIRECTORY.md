@@ -47,9 +47,9 @@
   * Graphs
     * [Bellman Ford](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/bellman_ford.c)
     * [Bfs](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/bfs.c)
-    * [Bfsqueue](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/bfsqueue.c)
+    * [Bfs Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/bfs_queue.c)
     * [Dfs](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/dfs.c)
-    * [Dfsrecursive](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/dfsrecursive.c)
+    * [Dfs Recursive](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/dfs_recursive.c)
     * [Dijkstra](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/dijkstra.c)
     * [Euler](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/euler.c)
     * [Floyd Warshall](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/floyd_warshall.c)
@@ -60,8 +60,8 @@
     * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/queue.c)
     * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/queue.h)
     * [Strongly Connected Components](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/strongly_connected_components.c)
-    * [Topologicalsort](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/topologicalsort.c)
-    * [Transitiveclosure](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/transitiveclosure.c)
+    * [Topological Sort](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/topological_sort.c)
+    * [Transitive Closure](https://github.com/TheAlgorithms/C/blob/master/data_structures/graphs/transitive_closure.c)
   * Hash Set
     * [Hash Set](https://github.com/TheAlgorithms/C/blob/master/data_structures/hash_set/hash_set.c)
     * [Hash Set](https://github.com/TheAlgorithms/C/blob/master/data_structures/hash_set/hash_set.h)
