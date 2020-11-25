@@ -33,7 +33,7 @@ static char game_table[9];
  * stored_pos array will store posistion of that were already allocated by the user
  * calloc(9,sizeof(int)) means an array of 9 elements.
  */
-int *stored_pos = NULL;
+static unsigned char *stored_pos = NULL;
 
 /**
  * Main program function.
@@ -43,7 +43,7 @@ int *stored_pos = NULL;
 int main()
 {   srand(time(NULL));
     int l = 0;
-	stored_pos = (int*)calloc(9,sizeof(int));
+	stored_pos = (char*)calloc(9,sizeof(int));
     do
     {
         int n = 0;
