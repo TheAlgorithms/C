@@ -6,7 +6,7 @@
 
 int main()
 {
-    int i, arraySort[MAX] = {0}, isSort = FALSE, changePlace;
+    int i, arraySort[MAX] = {0}, FLAG = TRUE, changePlace;
 
     /* For example
     Insertion random values in array to test
@@ -19,9 +19,9 @@ int main()
 
     /* Algorithm of bubble methods */
 
-    while (isSort)
+    while (FLAG)
     {
-        isSort = FALSE;
+        FLAG = FALSE;
 
         for (i = 0; i < MAX - 1; i++)
         {
@@ -30,7 +30,7 @@ int main()
                 changePlace = arraySort[i];
                 arraySort[i] = arraySort[i + 1];
                 arraySort[i + 1] = changePlace;
-                isSort = TRUE;
+                FLAG = TRUE;
             }
         }
     }
