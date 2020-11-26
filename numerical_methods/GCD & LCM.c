@@ -2,6 +2,7 @@
 //function for find GCD
 int gcd(int a,int b){
 	int t,r;
+	//swaping of a & b if a<b 
 	if(a<b){
 		t=a;
 		a=b;
@@ -18,6 +19,7 @@ int gcd(int a,int b){
 //function for find LCM
 int lcm(int c,int d){
 	int s,R,e,f;
+	//swaping of c & d if c<d
 	if(c<d){
 		s=c;
 		c=d;
