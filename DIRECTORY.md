@@ -254,6 +254,7 @@
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
+  * [Prime Seive](https://github.com/TheAlgorithms/C/blob/master/misc/prime_seive.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/quartile.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/master/misc/rselect.c)
   * [Strong Number](https://github.com/TheAlgorithms/C/blob/master/misc/strong_number.c)
