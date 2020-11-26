@@ -43,7 +43,7 @@ static unsigned char *stored_pos = NULL;
 int main()
 {   srand(time(NULL));
     int l = 0;
-	stored_pos = (char*)calloc(9,sizeof(int));
+	stored_pos = (unsigned char*)calloc(9,sizeof(unsigned char));
     do
     {
         int n = 0;
