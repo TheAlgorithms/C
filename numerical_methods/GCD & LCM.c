@@ -1,5 +1,5 @@
 #include<stdio.h>
-//function for finding GCD
+//function for finding GCD(Greatest Common Divisor)
 int gcd(int i,int j){
 	int t,r;
 	//swaping i & j if i<j
@@ -17,7 +17,7 @@ int gcd(int i,int j){
 	}
 	return i; //here i is last reminder so it is GCD
 }
-//function to finding LCM
+//function for finding LCM(Least Common Multiple)
 int lcm(int i,int j){
 	int t,r,e,f;
 	// Swaping i & j if i<j
