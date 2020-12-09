@@ -20,4 +20,5 @@ int main()
 	
 	
 	printf("%lld",factorial);
+	return 0;
 }
