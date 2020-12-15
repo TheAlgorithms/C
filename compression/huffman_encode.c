@@ -221,7 +221,7 @@ void printresult() {
  */
 void inorder(node* root) {
     if (root->left == NULL && root->right == NULL) {
-        char* encodednumber = malloc(sizeof(char) * top + 1);
+        char* encodednumber = (char*)malloc(sizeof(char) * top + 1);
 
         int i = 0;
         for (i; i <= top; i++) {
