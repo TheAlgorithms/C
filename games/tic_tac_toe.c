@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include <ctype.h>
+
 // Functions Declarations
 static void singlemode();
 static void doublemode();
