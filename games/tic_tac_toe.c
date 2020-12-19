@@ -220,13 +220,6 @@ void doublemode()
     }
 }
 
-/**
- * @brief Helper function of place_x,place_y function
- *
- * @param None
- *
- * @returns n1
- */
 int check_placex(){
 	char input[50];
 	int n1;
