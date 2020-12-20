@@ -254,7 +254,7 @@ int check_placex(){
  */
 void placex(int m)
 {
-    int n1;
+    int n1 = 0;
     if (m >= 1 && m <= 9)
     {
         if (game_table[m - 1] != 'x' && game_table[m - 1] != 'o')
@@ -305,7 +305,7 @@ void place()
  */
 void placey(int e1)
 {
-    int n1;
+    int n1 = 0;
     if (e1 >= 1 && e1 <= 9)
     {
         if (game_table[e1 - 1] != 'x' && game_table[e1 - 1] != 'o')
