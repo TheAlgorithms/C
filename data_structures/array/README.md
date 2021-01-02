@@ -2,7 +2,7 @@
 
 Simple array of integers. With I/O functions, Sort Functions and Search Functions.
 
-#Sort Function
+## Sort Function
 
 The Sort function sorts the elements in the range in a particular order. The different types of sorting methods are Bubble Sort, Selection Sort, Merge Sort and Quick Sort. Bubble Sort repeatedly sorts the adjacent elements if they are in wrong order.
 
