@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
  /** node for make huffman tree */
 typedef struct _node {
@@ -186,14 +187,14 @@ int sizeofresults[126];
 
 // simple stack for contain encoded number that made while travel the tree.
 int stack[100];
-int top = -1;
+int top_of_stack = -1;
 void push(int n) {
-    top++;
-    stack[top] = n;
+    top_of_stack++;
+    stack[top_of_stack] = n;
 }
 int pop() {
-    int result = stack[top];
-    top--;
+    int result = stack[top_of_stack];
+    top_of_stack--;
     return result;
 }
 
@@ -221,13 +222,13 @@ void printresult() {
  */
 void inorder(node* root) {
     if (root->left == NULL && root->right == NULL) {
-        char* encodednumber = (char*)malloc(sizeof(char) * top + 1);
+        char* encodednumber = (char*)malloc(sizeof(char) * top_of_stack + 1);
 
         int i = 0;
-        for (i; i <= top; i++) {
+        for (i; i <= top_of_stack; i++) {
             encodednumber[i] = (char)stack[i];
         }
-        sizeofresults[root->character] = top;
+        sizeofresults[root->character] = top_of_stack;
         results[root->character] = encodednumber;
 
         return;
@@ -249,7 +250,9 @@ int main() {
     char tempstr[100];
 
     printf("type in words to encode :\n");
-    gets(tempstr);
+    //gets(tempstr);
+    fgets(tempstr, sizeof(tempstr), stdin);
+    tempstr[strlen(tempstr) - 1] = '\0';
 
     // init list
     nodelist list;
