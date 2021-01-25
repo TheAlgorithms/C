@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "CArray.h"
+#include "carray.h"
 
 int CArrayTests()
 {
