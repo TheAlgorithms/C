@@ -48,6 +48,7 @@ endif()
 
 ## Add subdirectories containing CMakeLists.txt 
 # to configure and compile files in the respective folders
+add_subdirectory(developer_tools)
 add_subdirectory(hash)
 add_subdirectory(misc)
 add_subdirectory(games)
