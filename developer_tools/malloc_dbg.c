@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "mallocDbg.h"
+#include "malloc_dbg.h"
 
  /* We must undef these macros in order to use the real malloc / calloc and free functions */
 #undef malloc
