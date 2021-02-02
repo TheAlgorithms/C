@@ -11,11 +11,11 @@
  */
 #include <stdio.h>
 
-/* Function validaEntradaLinhaColuna
+/**
+ * Function validaEntradaLinhaColuna
  * @param linha matrix row
  * @param coluna matrix column
  * @returns validates row and column entry of the board
- *
  */
 int validaEntradaLinhaColuna(int linha, char coluna)
 {
@@ -34,7 +34,6 @@ int validaEntradaLinhaColuna(int linha, char coluna)
  * @param linha matrix row
  * @param coluna matrix column
  * @returns checks if the position is valid
- *
  */
 int validaPosicao(int mat[10][10], int barco, int linha, int coluna,
                   char orientacao)
@@ -94,7 +93,6 @@ int validaPosicao(int mat[10][10], int barco, int linha, int coluna,
  * @param linha matrix row
  * @param coluna matrix column
  * @returns checks if the position is valid for shooting
- *
  */
 
 int podeAtirar(int mat[10][10], int linha, int coluna)
@@ -116,7 +114,6 @@ int podeAtirar(int mat[10][10], int linha, int coluna)
  * @param mat board
  * @param barco boat
  * @returns(void) position the boat on the board
- *
  */
 void posicionaBarco(int mat[10][10], int barco)
 {
@@ -249,7 +246,6 @@ void posicionaBarco(int mat[10][10], int barco)
  * Functions imprimeMensagem and imprimeMensagemPontos
  * @param msg return msg with board
  * @returns prints visual matrix
- *
  */
 void imprimeMensagem(char msg[1000])
 {
@@ -273,7 +269,6 @@ void imprimeMensagemPontos(int pts1, int pts2)
  * @param celula return of the logical matrix
  * @param etapa game step
  * @returns prints visual matrix
- *
  */
 char imprimeCelula(int celula, int etapa)
 {
@@ -316,7 +311,6 @@ char imprimeCelula(int celula, int etapa)
  * @param mat board
  * @param etapa game step
  * @returns show board
- *
  */
 void imprimeTabuleiro(int mat[10][10], int etapa)
 {
@@ -360,7 +354,6 @@ void imprimeTabuleiro(int mat[10][10], int etapa)
  * @param linha matrix row
  * @param coluna matrix column
  * @returns shoot function
- *
  */
 void atirar(int mat[10][10], int linha, int coluna)
 {
@@ -382,7 +375,6 @@ void atirar(int mat[10][10], int linha, int coluna)
  * @param linha matrix row
  * @param coluna matrix column
  * @returns calculate score
- *
  */
 
 int calculaPontuacao(int mat[10][10], int linha, int coluna)
@@ -467,7 +459,6 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
         if (mat[linha][coluna - 1] == 30)
             e = 1;
 
-        // meio V
         if (b == 1 && c == 1)
         {
             if (mat[linha + 1][coluna] == 30 && mat[linha - 1][coluna] == 30)
@@ -480,7 +471,7 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
             else
                 return 0;
         }
-        // meio H
+
         else if (d == 1 && e == 1)
         {
             if (mat[linha][coluna + 1] == 30 && mat[linha][coluna - 1] == 30)
@@ -493,7 +484,7 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
             else
                 return 0;
         }
-        // direita H
+
         else if (d == 1)
         {
             if (mat[linha][coluna + 1] == 30 && mat[linha][coluna + 2] == 30)
@@ -506,7 +497,7 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
             else
                 return 0;
         }
-        // esquerda H
+
         else if (e == 1)
         {
             if (mat[linha][coluna - 1] == 30 && mat[linha][coluna - 2] == 30)
@@ -519,7 +510,7 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
             else
                 return 0;
         }
-        // cima V
+
         else if (c == 1)
         {
             if (mat[linha - 1][coluna] == 30 && mat[linha - 2][coluna] == 30)
@@ -532,7 +523,7 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
             else
                 return 0;
         }
-        // baixo V
+
         else if (b == 1)
         {
             if (mat[linha + 1][coluna] == 30 && mat[linha + 2][coluna] == 30)
@@ -554,13 +545,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
  * @param barco number that represents the boat
  * @param nm which message to print
  * @returns shows boat positioning messages
- *
  */
 void printaPosicionamento(int jogador, int barco, int nm)
 {
     if (jogador == 1)
     {
-        // jogador 1 barco 1
         char msg1[60] = "Jogador 1 - Posicione o barco de tamanho 1 (1/6)";
         char msg2[60] = "Jogador 1 - Posicione o barco de tamanho 1 (2/6)";
         char msg3[60] = "Jogador 1 - Posicione o barco de tamanho 1 (3/6)";
@@ -568,13 +557,11 @@ void printaPosicionamento(int jogador, int barco, int nm)
         char msg5[60] = "Jogador 1 - Posicione o barco de tamanho 1 (5/6)";
         char msg6[60] = "Jogador 1 - Posicione o barco de tamanho 1 (6/6)";
 
-        // jogador 1 barco 2
         char msg7[60] = "Jogador 1 - Posicione o barco de tamanho 2 (1/4)";
         char msg8[60] = "Jogador 1 - Posicione o barco de tamanho 2 (2/4)";
         char msg9[60] = "Jogador 1 - Posicione o barco de tamanho 2 (3/4)";
         char msg10[60] = "Jogador 1 - Posicione o barco de tamanho 2 (4/4)";
 
-        // jogador 1 barco 3
         char msg11[60] = "Jogador 1 - Posicione o barco de tamanho 3 (1/2)";
         char msg12[60] = "Jogador 1 - Posicione o barco de tamanho 3 (2/2)";
 
@@ -615,7 +602,6 @@ void printaPosicionamento(int jogador, int barco, int nm)
 
     if (jogador == 2)
     {
-        // jogador 2 barco 1
         char msg1[60] = "Jogador 2 - Posicione o barco de tamanho 1 (1/6)";
         char msg2[60] = "Jogador 2 - Posicione o barco de tamanho 1 (2/6)";
         char msg3[60] = "Jogador 2 - Posicione o barco de tamanho 1 (3/6)";
@@ -623,13 +609,11 @@ void printaPosicionamento(int jogador, int barco, int nm)
         char msg5[60] = "Jogador 2 - Posicione o barco de tamanho 1 (5/6)";
         char msg6[60] = "Jogador 2 - Posicione o barco de tamanho 1 (6/6)";
 
-        // jogador 2 barco 2
         char msg7[60] = "Jogador 2 - Posicione o barco de tamanho 2 (1/4)";
         char msg8[60] = "Jogador 2 - Posicione o barco de tamanho 2 (2/4)";
         char msg9[60] = "Jogador 2 - Posicione o barco de tamanho 2 (3/4)";
         char msg10[60] = "Jogador 2 - Posicione o barco de tamanho 2 (4/4)";
 
-        // jogador 2 barco 3
         char msg11[60] = "Jogador 2 - Posicione o barco de tamanho 3 (1/2)";
         char msg12[60] = "Jogador 2 - Posicione o barco de tamanho 3 (2/2)";
 
@@ -680,7 +664,6 @@ int main()
     int pts1 = 0, pts2 = 0, a1 = 0, a2 = 0;
     int linha, col = 0, lin = 0;
     char coluna;
-    // filling logical board
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -689,7 +672,6 @@ int main()
             jogador2[i][j] = 0;
         }
     }
-    // positioning of boats on the board
     for (int i = 1; i <= 2; i++)
     {
         for (int j = 1; j <= 6; j++)
@@ -738,7 +720,6 @@ int main()
             }
         }
     }
-    // match ! where the game has a maximum of 40 moves.
     while (jogadas <= 40)
     {
         if (jogadas % 2 != 0)
@@ -794,7 +775,6 @@ int main()
 
         jogadas++;
     }
-    // end game
     imprimeMensagem("FIM DE JOGO");
     imprimeMensagemPontos(pts1, pts2);
 
