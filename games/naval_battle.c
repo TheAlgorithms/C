@@ -277,32 +277,32 @@ char imprimeCelula(int celula, int etapa)
         if (celula == 0)
             return '.';
 
-        if (celula == -1)
+        else if (celula == -1)
             return '*';
 
-        if (celula == 1)
+        else if (celula == 1)
             return '1';
 
-        if (celula == 2)
+        else if (celula == 2)
             return '2';
 
-        if (celula == 3)
+        else
             return '3';
     }
 
-    if (etapa == 1)
+    else
     {
         if (celula == 0 || celula == -1 || celula == 1 || celula == 2 ||
             celula == 3)
             return '.';
 
-        if (celula == -2)
+        else if (celula == -2)
             return 'x';
 
-        if (celula == 10 || celula == 20 || celula == 30)
+        else if (celula == 10 || celula == 20 || celula == 30)
             return 'N';
 
-        if (celula == 50)
+        else
             return 'A';
     }
 }
