@@ -4,10 +4,10 @@
  * @author tinouduart33
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include "malloc_dbg.h"
+#include <stdlib.h> /// For the malloc, calloc and free functions.
+#include <stdio.h> /// For IO operations (printf).
+#include <string.h> /// For the memcmp function.
+#include "malloc_dbg.h" /// Header file which contains the prototypes of malloc_dbg, calloc_dbg and fre_dbg.
 
  /* We must undef these macros in order to use the real malloc / calloc and free functions */
 #undef malloc
