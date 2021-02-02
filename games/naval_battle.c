@@ -682,7 +682,7 @@ int main()
                 imprimeTabuleiro(jogador1, 0);
                 posicionaBarco(jogador1, 1);
             }
-            if (i == 2)
+            else if (i == 2)
             {
                 printaPosicionamento(i, 1, j);
                 imprimeTabuleiro(jogador2, 0);
@@ -697,7 +697,7 @@ int main()
                 imprimeTabuleiro(jogador1, 0);
                 posicionaBarco(jogador1, 2);
             }
-            if (i == 2)
+            else if (i == 2)
             {
                 printaPosicionamento(i, 2, j);
                 imprimeTabuleiro(jogador2, 0);
@@ -712,7 +712,7 @@ int main()
                 imprimeTabuleiro(jogador1, 0);
                 posicionaBarco(jogador1, 3);
             }
-            if (i == 2)
+            else if (i == 2)
             {
                 printaPosicionamento(i, 3, j);
                 imprimeTabuleiro(jogador2, 0);
@@ -748,7 +748,7 @@ int main()
                 imprimeMensagem("JOGADOR 1 DERRUBOU UM NAVIO!");
             }
         }
-        if (jogadas % 2 == 0)
+        else
         {
             imprimeMensagemPontos(pts1, pts2);
             imprimeMensagem("VEZ DO JOGADOR 2");
