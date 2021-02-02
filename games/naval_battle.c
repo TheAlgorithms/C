@@ -247,7 +247,7 @@ void posicionaBarco(int mat[10][10], int barco)
  * @param msg return msg with board
  * @returns prints visual matrix
  */
-void imprimeMensagem(char msg[1000])
+void imprimeMensagem(char *msg)
 {
     printf("************************\n");
     printf("*\n");
@@ -580,7 +580,7 @@ void printaPosicionamento(int jogador, int barco, int nm)
             if (nm == 6)
                 imprimeMensagem(msg6);
         }
-        if (barco == 2)
+        else if (barco == 2)
         {
             if (nm == 1)
                 imprimeMensagem(msg7);
@@ -591,7 +591,7 @@ void printaPosicionamento(int jogador, int barco, int nm)
             if (nm == 4)
                 imprimeMensagem(msg10);
         }
-        if (barco == 3)
+        else if (barco == 3)
         {
             if (nm == 1)
                 imprimeMensagem(msg11);
