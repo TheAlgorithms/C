@@ -18,6 +18,10 @@ foreach( testsourcefile ${APP_SOURCES} )
 
     add_executable( ${testname} ${testsourcefile} )
 
+    if ("${testname}" STREQUAL "test_malloc_dbg")
+        target_link_libraries(${testname} malloc_dbg)
+    endif()
+
     if(OpenMP_C_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_C)
     endif()
@@ -25,7 +29,7 @@ foreach( testsourcefile ${APP_SOURCES} )
     if(MATH_LIBRARY)
         target_link_libraries(${testname} ${MATH_LIBRARY})
     endif()
-    target_link_libraries(${testname} malloc_dbg) # Link the malloc_dbg library
+    #    target_link_libraries(${testname} malloc_dbg) # Link the malloc_dbg library
     install(TARGETS ${testname} DESTINATION "bin/developer_tools")
 
 endforeach( testsourcefile ${APP_SOURCES} )
