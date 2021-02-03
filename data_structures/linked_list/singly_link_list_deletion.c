@@ -4,6 +4,7 @@
   when passed with a key of the node.
 */
 #include <stdio.h>
+#include <stdlib.h>
 struct node
 {
     int info;
