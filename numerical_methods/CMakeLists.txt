@@ -9,6 +9,7 @@ file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
 set (NEED_COMPLEX 
     "newton_raphson_root.c" 
     "durand_kerner_roots.c"
+    "square_root.c"
 )
 
 foreach( testsourcefile ${APP_SOURCES} )
