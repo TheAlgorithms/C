@@ -15,7 +15,7 @@ double f_sqrt(double n)
     double r, aux;
     r = n / 2;
     int c = 1;
-    double precision = precision; // Use this variable to determine the decimal precision of the result.
+    double precision = 0.00001; // Use this variable to determine the decimal precision of the result.
     while (c == 1)
     {
         aux = r;
