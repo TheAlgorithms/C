@@ -122,7 +122,7 @@ jobs:
 
             subprocess.run(["clang-tidy-10", "-p=build", "--fix", *cpp_files, "--"],
                 check=True, text=True, stderr=subprocess.STDOUT)
-            
+
             subprocess.run(["clang-format-10", "-i", *cpp_files],
                 check=True, text=True, stderr=subprocess.STDOUT)
 
@@ -155,7 +155,7 @@ jobs:
     needs: [MainSequence]
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest]
     steps:
       - uses: actions/checkout@master
         with:
