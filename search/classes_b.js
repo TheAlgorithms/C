@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['node_410',['Node',['../db/d8b/struct_node.html',1,'Node'],['../d5/da1/structnode.html',1,'node']]]
+  ['node_416',['node',['../d5/da1/structnode.html',1,'']]],
+  ['node_417',['Node',['../db/d8b/struct_node.html',1,'']]]
 ];
