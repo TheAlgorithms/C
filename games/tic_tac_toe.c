@@ -13,10 +13,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 // Functions Declarations
 static void singlemode();
 static void doublemode();
+static int TakeInput();   // used to take input from player and handle exceptions accordingly
 static void placex(int);  // used for placing position of X by the 1st player
 static void place();      // used by the computer to place O
 static void placey(int);  // used in Double Player mode by the 2nd player to
@@ -38,7 +40,7 @@ int main()
     int l = 0;
     do
     {
-        int n = 0;
+        char n = '0';
 
         // filling the table with multiple asterisks
         for (int i = 0; i < 9; i++) game_table[i] = '*';
@@ -51,19 +53,19 @@ int main()
         printf("***********2. YOU vs PLAYER ***********\n");
         printf("***********3.EXIT *********************\n");
         printf("Enter your choice : ");
-        scanf("%d", &n);
+        scanf(" %c", &n);
 
         switch (n)  // switch case to select between single player mode or
                     // double player mode
         {
-        case 1:
+        case '1':
             singlemode();
             break;
-        case 2:
+        case '2':
             doublemode();
             break;
         default:
-            printf("THANK YOU and EXIT!");
+            printf("THANK YOU and EXIT!\n");
         }
 
         printf("Next game ? : ");
@@ -80,6 +82,27 @@ int main()
  *
  * @returns None
  */
+int TakeInput(){
+    
+    // Input player's choice of placing 'x' or 'o' in variable x 
+    char x[100];
+    fgets(x, 100, stdin);
+
+    // to check the length of input!
+    int i;
+    for (i = 0; x[i] != '\0'; i++);   
+
+    // if length of input=1 (i.e i=2) and input value is a digit then its a valid input.
+    if(i==2 && x[0]-'0'>=1 && x[0]-'0'<=9  ){   
+        int m=x[0]-'0';
+        return m;
+    }
+    else{
+        printf("(Enter a valid number between [1 - 9]) ");
+        return TakeInput();
+    }
+}
+
 void singlemode()
 {
     int m;
@@ -101,8 +124,8 @@ void singlemode()
     {
         k = 0;
 
-        printf("Where would you like to place 'x' ");
-        scanf("%d", &m);
+        printf("Where would you like to place 'x': ");
+        m=TakeInput();
 
         placex(m);
         if(table_fill_count<4)
@@ -173,13 +196,13 @@ void doublemode()
         k = 0;
 
         printf("PLAYER1 - where would you like to place 'x' : ");
-        scanf("%d", &m);
+        m=TakeInput();
 
         placex(m);
         if(doublemode_table_count<4)
         {
         printf("PLAYER2 - where would you like to place 'o' : ");
-        scanf("%d", &e1);
+        e1=TakeInput();
 
         placey(e1);
         }
@@ -239,7 +262,7 @@ void placex(int m)
             printf("Invalid move\n");
 
             printf("Enter new position : ");
-            scanf("%d", &n1);
+            n1=TakeInput();
 
             placex(n1);
         }
@@ -249,7 +272,7 @@ void placex(int m)
         printf("Invalid move \n");
 
         printf("Enter new position : ");
-        scanf("%d", &n1);
+        n1=TakeInput();
 
         placex(n1);
     }
@@ -269,7 +292,7 @@ void place()
         if (game_table[e] != 'x' && game_table[e] != 'o')
         {
             game_table[e] = 'o';
-            printf("\n Computer placed at %d position\n", e + 1);
+            printf("\nComputer placed at %d position\n", e + 1);
         }
         else
         {
@@ -298,7 +321,7 @@ void placey(int e1)
             printf("Invalid move \n");
 
             printf("Enter new position : ");
-            scanf("%d", &n1);
+            n1=TakeInput();
 
             placey(n1);
         }
@@ -308,7 +331,7 @@ void placey(int e1)
         printf("Invalid move \n");
 
         printf("Enter new position : ");
-        scanf("%d", &n1);
+        n1=TakeInput();
 
         placey(n1);
     }
