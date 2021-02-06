@@ -29,7 +29,6 @@ int checkwin();  // checks everytime when a player or computer places 'X' or 'O'
  */
 static char game_table[9];
 
-
 /**
  * Main program function.
  * @returns 0 on clean exit. 
