@@ -13,7 +13,7 @@ var searchData=
   ['is_5fprime_573',['is_prime',['../d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f',1,'sol1.c']]],
   ['is_5fsum_5fof_5fabundant_574',['is_sum_of_abundant',['../d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478',1,'is_sum_of_abundant(unsigned long N):&#160;sol1.c'],['../d4/dbd/problem__23_2sol2_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478',1,'is_sum_of_abundant(unsigned long N):&#160;sol2.c']]],
   ['ispalindrome_575',['isPalindrome',['../df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba',1,'palindrome.c']]],
-  ['isprime_576',['isPrime',['../da/d93/prime_8c.html#a6384596f117decd77da25af95ab1704f',1,'prime.c']]],
-  ['isprime_577',['isprime',['../d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305',1,'sol1.c']]],
+  ['isprime_576',['isprime',['../d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305',1,'sol1.c']]],
+  ['isprime_577',['isPrime',['../da/d93/prime_8c.html#a6384596f117decd77da25af95ab1704f',1,'prime.c']]],
   ['isstrong_578',['isStrong',['../d4/dcc/strong__number_8c.html#a03654cadb0cfe1195810dbe5da0265b5',1,'strong_number.c']]]
 ];
