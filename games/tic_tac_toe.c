@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 // Functions Declarations
 static void singlemode();
@@ -34,7 +35,8 @@ static char game_table[9];
  * @note No checks are included for program execution failures!
  */
 int main()
-{   srand(time(NULL));
+{   
+    srand( (unsigned int)time(NULL));
     int l = 0;
     do
     {
@@ -218,6 +220,31 @@ void doublemode()
     }
 }
 
+int check_placex(){
+	char input[50];
+	int n1;
+	while (1){
+		fgets(input,49,stdin);
+		if ( strlen(input) > 2 || strlen(input)  == 0){
+			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
+			continue;
+		}
+		if(sscanf(input,"%d",&n1) != 1){
+			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
+			continue;
+		} 
+		if ((game_table[n1-1] == 'x') || (game_table[n1-1]) == 'o' || (n1== 0)){
+			fprintf(stderr,"Already allocated, Enter number: ");
+			continue;
+		}
+		return n1;
+	}
+}	
+
+
+
+
+
 /**
  * @brief Update table by placing an `X`
  *
@@ -227,7 +254,7 @@ void doublemode()
  */
 void placex(int m)
 {
-    int n1;
+    int n1 = 0;
     if (m >= 1 && m <= 9)
     {
         if (game_table[m - 1] != 'x' && game_table[m - 1] != 'o')
@@ -236,22 +263,14 @@ void placex(int m)
         }
         else
         {
-            printf("Invalid move\n");
-
-            printf("Enter new position : ");
-            scanf("%d", &n1);
-
-            placex(n1);
+			int n = check_placex();
+			placex(n);
         }
     }
     else
     {
-        printf("Invalid move \n");
-
-        printf("Enter new position : ");
-        scanf("%d", &n1);
-
-        placex(n1);
+		int n = check_placex();
+		placex(n);
     }
 }
 /**
@@ -286,7 +305,7 @@ void place()
  */
 void placey(int e1)
 {
-    int n1;
+    int n1 = 0;
     if (e1 >= 1 && e1 <= 9)
     {
         if (game_table[e1 - 1] != 'x' && game_table[e1 - 1] != 'o')
@@ -295,22 +314,14 @@ void placey(int e1)
         }
         else
         {
-            printf("Invalid move \n");
-
-            printf("Enter new position : ");
-            scanf("%d", &n1);
-
-            placey(n1);
+			int n = check_placex();
+			placex(n);
         }
     }
     else
     {
-        printf("Invalid move \n");
-
-        printf("Enter new position : ");
-        scanf("%d", &n1);
-
-        placey(n1);
+		int n = check_placex();
+		placex(n);
     }
 }
 /**
