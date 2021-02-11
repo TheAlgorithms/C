@@ -36,6 +36,11 @@ var NAVTREEINDEX0 =
 "d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5":[15,0,10,1,0,2],
 "d0/d7f/so1_8c.html":[15,0,10,8,0],
 "d0/d7f/so1_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,10,8,0,0],
+"d0/d8a/octal__to__hexadecimal_8c.html":[15,0,1,4],
+"d0/d8a/octal__to__hexadecimal_8c.html#a042035b4ba7b92974f0edf6eb1b0cbe1":[15,0,1,4,2],
+"d0/d8a/octal__to__hexadecimal_8c.html#a86a4edb605c2a03d9175c59de679347d":[15,0,1,4,1],
+"d0/d8a/octal__to__hexadecimal_8c.html#aa8dca7b867074164d5f45b0f3851269d":[15,0,1,4,3],
+"d0/d8a/octal__to__hexadecimal_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,1,4,0],
 "d0/d8a/structmax__heap.html":[14,0,22],
 "d0/d8a/structmax__heap.html#a1b632c34e7304f9e0720834200696340":[14,0,22,1],
 "d0/d8a/structmax__heap.html#a917b63797e1857ce994dd5e6cfcebf1e":[14,0,22,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX0 =
 "d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4":[15,0,9,5,3],
 "d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09":[15,0,9,5,0],
 "d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55":[15,0,9,5,4],
-"d4/dbd/problem__23_2sol2_8c.html":[15,0,10,12,1],
-"d4/dbd/problem__23_2sol2_8c.html#a1aca7f530f82b27100262adba9e7556b":[15,0,10,12,1,1],
-"d4/dbd/problem__23_2sol2_8c.html#a34f4ad85151e3a43368ae67f42347f56":[15,0,10,12,1,2],
-"d4/dbd/problem__23_2sol2_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478":[15,0,10,12,1,3],
-"d4/dbd/problem__23_2sol2_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,10,12,1,4],
-"d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf":[15,0,10,12,1,0]
+"d4/dbd/problem__23_2sol2_8c.html":[15,0,10,12,1]
 };
