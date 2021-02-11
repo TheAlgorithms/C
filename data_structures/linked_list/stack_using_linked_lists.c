@@ -16,8 +16,8 @@ int main()
     printf("\t****stack using linked list****\n");
     while (x != 4)
     {
-        printf("enter your choice");
-        printf("\n1.push\n2.pop\n3.display\n4.exit\n");
+        printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
+        printf("Enter your choice: ");
         scanf("%d", &x);
         switch (x)
         {
@@ -41,14 +41,14 @@ void push(struct node *p)
     int item;
     struct node *temp;
     temp = (struct node *)malloc(sizeof(struct node));
-    printf("enter element to be inserted\n");
+    printf("\nEnter element to be inserted: ");
     scanf("%d", &item);
     temp->info = item;
 
     temp->link = top;
     top = temp;
 
-    printf("inserted succesfully\n");
+    printf("Inserted succesfully.\n");
 }
 void pop(struct node *p)
 {
@@ -56,27 +56,27 @@ void pop(struct node *p)
     struct node *temp;
 
     if (top == NULL)
-        printf("stack is empty\n");
+        printf("\nStack is empty.\n");
     else
     {
         item = top->info;
         temp = top;
         top = top->link;
         free(temp);
-        printf("Element popped is%d\n", item);
+        printf("\nElement popped is %d.\n", item);
     }
 }
 
 void display(struct node *p)
 {
     if (top == NULL)
-        printf("stack is empty\n");
+        printf("\nStack is empty.\n");
     else
     {
-        printf("Elements in the stack are\n");
+        printf("\nElements in the stack are:\n");
         while (p != NULL)
         {
-            printf("%d\n", p->info);
+            printf("\t%d\n", p->info);
             p = p->link;
         }
         // printf("%d\n",p->info);
