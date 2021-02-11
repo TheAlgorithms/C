@@ -18,6 +18,7 @@
   * [Decimal To Octal Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_octal_recursion.c)
   * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
   * [Hexadecimal To Octal2](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal2.c)
+  * [Infix To Postfix](https://github.com/TheAlgorithms/C/blob/master/conversions/infix_to_postfix.c)
   * [Int To String](https://github.com/TheAlgorithms/C/blob/master/conversions/int_to_string.c)
   * [Octal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_binary.c)
   * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
