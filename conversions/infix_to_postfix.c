@@ -25,7 +25,7 @@ void push(struct Stack *p, char ch);  // pust element in stack
 char pop(struct Stack *p);            // pop topmost element from the stack
 int isOprnd(char ch);                 // check if element is operand or not
 int isEmpty(struct Stack s);          // check if stack is empty
-int prcnd(char op1, char op2);        // check operator precedence
+int getPrecedence (char op1, char op2);        // check operator precedence
 void convert(char infix[],
              char postfix[]);  // convert infix to postfix expression
 
@@ -164,7 +164,7 @@ void convert(char infix[], char postfix[])
                 {
                     while (isEmpty(s) == 0)  // check if stack is empty
                     {
-                        pr = prcnd(ch,
+                        pr = getPrecedence (ch,
                                    s.arr[s.tos]);  // check operator precedence
 
                         if (pr == 1)
@@ -193,12 +193,12 @@ void convert(char infix[], char postfix[])
 }
 
 /**
- * @brief prcnd function
+ * @brief getPrecedence function returns the precedence after comparing two operators passed as parameter.
  * @param op1 : first operator
  * @param op2 : second operator
  * @returns 1 or 0 on exit
  */
-int prcnd(char op1, char op2)
+int getPrecedence (char op1, char op2)
 {
     if (op2 == '$')
     {
