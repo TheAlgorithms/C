@@ -22,11 +22,12 @@ var searchData=
   ['complex_5fstr_58',['complex_str',['../da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7',1,'durand_kerner_roots.c']]],
   ['contribution_20guidelines_59',['CONTRIBUTION GUIDELINES',['../d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
   ['contributor_20covenant_20code_20of_20conduct_60',['Contributor Covenant Code of Conduct',['../d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html',1,'']]],
-  ['count_61',['count',['../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b',1,'cluster::count()'],['../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a',1,'count(int *arr, const int size):&#160;prime_seive.c']]],
-  ['count_5fdivisors_62',['count_divisors',['../d7/d1f/problem__12_2sol1_8c.html#aa6ce6271f6156e219f9b290717f5a222',1,'sol1.c']]],
-  ['crc32_63',['crc32',['../d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567',1,'hash_crc32.c']]],
-  ['create_64',['create',['../dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f',1,'doubly_linked_list.c']]],
-  ['create_5fmatrix_65',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
-  ['create_5fnode_66',['create_node',['../df/d3c/threaded__binary__trees_8c.html#ab21d1d36d95001defbca2f6abd4d410c',1,'threaded_binary_trees.c']]],
-  ['create_5fpolynomial_67',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]]
+  ['convert_61',['convert',['../db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1',1,'infix_to_postfix.c']]],
+  ['count_62',['count',['../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b',1,'cluster::count()'],['../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a',1,'count(int *arr, const int size):&#160;prime_seive.c']]],
+  ['count_5fdivisors_63',['count_divisors',['../d7/d1f/problem__12_2sol1_8c.html#aa6ce6271f6156e219f9b290717f5a222',1,'sol1.c']]],
+  ['crc32_64',['crc32',['../d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567',1,'hash_crc32.c']]],
+  ['create_65',['create',['../dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f',1,'doubly_linked_list.c']]],
+  ['create_5fmatrix_66',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
+  ['create_5fnode_67',['create_node',['../df/d3c/threaded__binary__trees_8c.html#ab21d1d36d95001defbca2f6abd4d410c',1,'threaded_binary_trees.c']]],
+  ['create_5fpolynomial_68',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]]
 ];
