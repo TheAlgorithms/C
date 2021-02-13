@@ -78,14 +78,16 @@ int main()
 }
 
 /**
- * @brief Implementation of game vs computer
+ * @brief Implementation of taking input from player
  *
- * @returns None
+ * @returns 'x': if player's input- 'x' is a valid input( i.e 1<=x<=9) 
+ * @returns '(Enter a valid number between [1 - 9]) ': if invalid input 
  */
-int TakeInput(){
-    
+int TakeInput()
+{
     // Input player's choice of placing 'x' or 'o' in variable x 
-    char x[100];
+    char x[100];  
+    memset(x, 100, '\0');
     fgets(x, 100, stdin);
 
     // to check the length of input!
@@ -93,16 +95,23 @@ int TakeInput(){
     for (i = 0; x[i] != '\0'; i++);   
 
     // if length of input=1 (i.e i=2) and input value is a digit then its a valid input.
-    if(i==2 && x[0]-'0'>=1 && x[0]-'0'<=9  ){   
+    if(i==2 && x[0]-'0'>=1 && x[0]-'0'<=9  )
+    {   
         int m=x[0]-'0';
         return m;
     }
-    else{
+    else
+    {
         printf("(Enter a valid number between [1 - 9]) ");
         return TakeInput();
     }
 }
 
+/**
+ * @brief Implementation of game vs computer
+ *
+ * @returns None
+ */
 void singlemode()
 {
     int m;
