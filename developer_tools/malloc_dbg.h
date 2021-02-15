@@ -6,7 +6,7 @@
  * malloc_dbg and calloc_dbg allocates memory using the "real" malloc and calloc and store
  * the pointer returned (with additional informations) in a linked list.
  * Thanks to this linked list, it is possible to check memory leaks.
- * @author tinouduart33
+ * @author tinouduart33(https://github.com/tinouduart33)
  * @see malloc_dbg.c
  */
 

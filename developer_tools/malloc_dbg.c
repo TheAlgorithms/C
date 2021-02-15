@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations.
- * @author tinouduart33
+ * @author tinouduart33(https://github.com/tinouduart33)
  */
 
 #include <stdlib.h> /// For the malloc, calloc and free functions.
@@ -116,17 +116,17 @@ void* malloc_dbg(size_t bytes, int line, const char* filename, const char* funct
 	if (!ptrToReturn)
 		return NULL;
 
-	/* We must check atexitCalled value to know if we already called the function */
+	// We must check atexitCalled value to know if we already called the function
 	if (!atexitCalled)
 	{
-		atexit(printLeaks); /* Used to call printLeaks when the program exit */
+		atexit(printLeaks); // Used to call printLeaks when the program exit
 		atexitCalled = 1;
 	}
 
 	pos = inList(filename, line);
 	if (pos == -1)
 	{
-		/* Add a new element in the mem_info list */
+		// Add a new element in the mem_info list
 		memoryInformation = addMemInfo(memoryInformation, ptrToReturn, bytes, line, filename, functionName);
 		if (!memoryInformation)
 		{
@@ -153,14 +153,14 @@ void* calloc_dbg(size_t elementCount, size_t elementSize, int line, const char* 
 	if (!ptrToReturn)
 		return NULL;
 
-	/* We must check atexitCalled value to know if we already called the function */
+	// We must check atexitCalled value to know if we already called the function
 	if (!atexitCalled)
 	{
-		atexit(printLeaks); /* Used to call printLeaks when the program exit */
+		atexit(printLeaks); // Used to call printLeaks when the program exit
 		atexitCalled = 1;
 	}
 
-	/* Add a new element in the mem_info list */
+	// Add a new element in the mem_info list
 	memoryInformation = addMemInfo(memoryInformation, ptrToReturn, elementCount * elementSize, line, filename, functionName);
 	if (!memoryInformation)
 	{
@@ -184,7 +184,7 @@ void free_dbg(void* ptrToFree)
 	mem_info* toFree = NULL;
 	mem_info* previous = NULL;
 
-	/* Check if the head contains the pointer to free */
+	// Check if the head contains the pointer to free
 	if (tmp->ptr == ptrToFree)
 	{
 		toFree = tmp;
@@ -196,10 +196,10 @@ void free_dbg(void* ptrToFree)
 		return;
 	}
 
-	/* We can loop through the list without any problems, the head is not the pointer */
+	// We can loop through the list without any problems, the head is not the pointer
 	while (tmp)
 	{
-		if (tmp->ptr == ptrToFree) /* If we found the pointer that must be freed */
+		if (tmp->ptr == ptrToFree) // If we found the pointer that must be freed
 		{
 			toFree = tmp;
 			tmp = tmp->next;
