@@ -1,5 +1,5 @@
 /**
- * @file naval_battle.c
+ * @file
  * @author [Carlos Rafael](https://github.com/CarlosZoft)
  * @author [Herick Lima](https://github.com/hericklima22)
  * @brief [naval_battle](https://en.wikipedia.org/wiki/Battleship_(game))
@@ -12,14 +12,15 @@
 #include <stdio.h>
 
 /**
- * Function validaEntradaLinhaColuna
- * @param linha matrix row
- * @param coluna matrix column
- * @returns validates row and column entry of the board
+ * Function validEntryLineColumn
+ * Responsible for validating entries, for positioning boats
+ * @param line -> matrix row
+ * @param column -> matrix column
+ * @returns -> validates row and column entry of the board
  */
-int validaEntradaLinhaColuna(int linha, char coluna)
+int validEntryLineColumn(int line, char column)
 {
-    if ((linha >= 1 && linha <= 10) && (coluna >= 65 && coluna <= 74))
+    if ((line >= 1 && line <= 10) && (column >= 65 && column <= 74))
     {
         return 1;
     }
@@ -28,57 +29,58 @@ int validaEntradaLinhaColuna(int linha, char coluna)
         return 0;
 }
 /**
- * Function validaPosicao
- * @param mat board
- * @param barco boat
- * @param linha matrix row
- * @param coluna matrix column
- * @returns checks if the position is valid
+ * Function validatePosition
+ * Responsible for checking if the position can receive the boat.
+ * @param -> mat board
+ * @param -> boat boat
+ * @param -> line matrix row
+ * @param -> column matrix column
+ * @returns -> checks if the position is valid
  */
-int validaPosicao(int mat[10][10], int barco, int linha, int coluna,
-                  char orientacao)
+int validatePosition(int mat[10][10], int boat, int line, int column,
+                     char guide)
 {
     int cont = 0;
     int i, j;
 
-    if (barco < 1 || barco > 3)
+    if (boat < 1 || boat > 3)
         return 0;
-    if (orientacao != 'H' && orientacao != 'V')
+    if (guide != 'H' && guide != 'V')
         return 0;
-    if ((linha < 0 || linha > 9) || (coluna < 0 || coluna > 9))
+    if ((line < 0 || line > 9) || (column < 0 || column > 9))
         return 0;
 
-    if (orientacao == 'H')
+    if (guide == 'H')
     {
-        if ((10 - coluna) < barco)
+        if ((10 - column) < boat)
             return 0;
 
         else
         {
-            for (j = coluna; j < (coluna + barco); j++)
+            for (j = column; j < (column + boat); j++)
             {
-                if (mat[linha][j] == 0)
+                if (mat[line][j] == 0)
                     cont++;
             }
         }
     }
 
-    if (orientacao == 'V')
+    if (guide == 'V')
     {
-        if ((10 - linha) < barco)
+        if ((10 - line) < boat)
             return 0;
 
         else
         {
-            for (i = linha; i < (linha + barco); i++)
+            for (i = line; i < (line + boat); i++)
             {
-                if (mat[i][coluna] == 0)
+                if (mat[i][column] == 0)
                     cont++;
             }
         }
     }
 
-    if (cont == barco)
+    if (cont == boat)
     {
         return 1;
     }
@@ -88,18 +90,19 @@ int validaPosicao(int mat[10][10], int barco, int linha, int coluna,
     }
 }
 /**
- * Function podeAtirar
- * @param mat board
- * @param linha matrix row
- * @param coluna matrix column
- * @returns checks if the position is valid for shooting
+ * Function canShoot
+ * Responsible to verify that it is a valid position to shoot
+ * @param mat -> board
+ * @param line -> matrix row
+ * @param column -> matrix column
+ * @returns -> checks if the position is valid for shooting
  */
 
-int podeAtirar(int mat[10][10], int linha, int coluna)
+int canShoot(int mat[10][10], int line, int column)
 {
-    if (mat[linha][coluna] == -2 || mat[linha][coluna] == 10 ||
-        mat[linha][coluna] == 20 || mat[linha][coluna] == 30 ||
-        mat[linha][coluna] == 50)
+    if (mat[line][column] == -2 || mat[line][column] == 10 ||
+        mat[line][column] == 20 || mat[line][column] == 30 ||
+        mat[line][column] == 50)
     {
         return 0;
     }
@@ -110,79 +113,80 @@ int podeAtirar(int mat[10][10], int linha, int coluna)
     }
 }
 /**
- * Function posicionaBarco
- * @param mat board
- * @param barco boat
- * @returns(void) position the boat on the board
+ * Function positionBoat
+ * Responsible for placing the boats on the board, according to the size.
+ * @param mat -> board
+ * @param boat -> boat
+ * @returns(void) -> position the boat on the board
  */
-void posicionaBarco(int mat[10][10], int barco)
+void positionBoat(int mat[10][10], int boat)
 {
-    int linha, j, i;
-    char coluna, orientacao;
+    int line, j, i;
+    char column, guide;
 
-    if (barco == 1)
+    if (boat == 1)
     {
-        scanf("%d %c", &linha, &coluna);
+        scanf("%d %c", &line, &column);
 
-        while (validaEntradaLinhaColuna(linha, coluna) != 1 ||
-               validaPosicao(mat, barco, (linha - 1), (coluna - 65), 'H') != 1)
+        while (validEntryLineColumn(line, column) != 1 ||
+               validatePosition(mat, boat, (line - 1), (column - 65), 'H') != 1)
         {
-            printf("Posicao indisponivel!\n");
-            scanf("%d %c", &linha, &coluna);
+            printf("Position unavailable!\n");
+            scanf("%d %c", &line, &column);
         }
     }
 
     else
     {
-        scanf("%d %c %c", &linha, &coluna, &orientacao);
+        scanf("%d %c %c", &line, &column, &guide);
 
-        while (validaEntradaLinhaColuna(linha, coluna) == 0 ||
-               validaPosicao(mat, barco, (linha - 1), (coluna - 65),
-                             orientacao) == 0)
+        while (validEntryLineColumn(line, column) == 0 ||
+               validatePosition(mat, boat, (line - 1), (column - 65), guide) ==
+                   0)
         {
-            printf("Posicao indisponivel!\n");
-            scanf("%d %c %c", &linha, &coluna, &orientacao);
+            printf("Position unavailable!\n");
+            scanf("%d %c %c", &line, &column, &guide);
         }
     }
 
-    coluna -= 65;
-    linha -= 1;
+    column -= 65;
+    line -= 1;
 
-    if (barco == 1)
+    if (boat == 1)
     {
-        for (j = coluna; j < (coluna + barco); j++)
+        for (j = column; j < (column + boat); j++)
         {
-            mat[linha][j] = barco;
+            mat[line][j] = boat;
         }
 
-        for (int a = linha - 1; a < (linha + barco + 1); a++)
+        for (int a = line - 1; a < (line + boat + 1); a++)
         {
-            for (int b = coluna - 1; b < (coluna + barco + 1); b++)
+            for (int b = column - 1; b < (column + boat + 1); b++)
             {
                 if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                 {
-                    if (mat[a][b] != barco)
+                    if (mat[a][b] != boat)
                         mat[a][b] = -1;
                 }
             }
         }
     }
 
-    if (orientacao == 'H')
+    if (guide == 'H')
     {
-        for (j = coluna; j < (coluna + barco); j++)
+        for (j = column; j < (column + boat); j++)
         {
-            mat[linha][j] = barco;
+            mat[line][j] = boat;
         }
-        if (barco == 3)
+        if (boat == 3)
         {
-            for (int a = linha - 1; a < (linha + barco - 1); a++)
+            for (int a = line - 1; a < (line + boat - 1); a++)
             {
-                for (int b = coluna - 1; b < (coluna + barco + 1); b++)
+                for (int b = column - 1; b < (column + boat + 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
-                        if (mat[a][b] != barco)
+                        if (mat[a][b] != boat)
                             mat[a][b] = -1;
                     }
                 }
@@ -191,13 +195,13 @@ void posicionaBarco(int mat[10][10], int barco)
 
         else
         {
-            for (int a = linha - 1; a < (linha + barco); a++)
+            for (int a = line - 1; a < (line + boat); a++)
             {
-                for (int b = coluna - 1; b < (coluna + barco + 1); b++)
+                for (int b = column - 1; b < (column + boat + 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
-                        if (mat[a][b] != barco)
+                        if (mat[a][b] != boat)
                             mat[a][b] = -1;
                     }
                 }
@@ -205,21 +209,21 @@ void posicionaBarco(int mat[10][10], int barco)
         }
     }
 
-    if (orientacao == 'V')
+    if (guide == 'V')
     {
-        for (j = linha; j < (linha + barco); j++)
+        for (j = line; j < (line + boat); j++)
         {
-            mat[j][coluna] = barco;
+            mat[j][column] = boat;
         }
-        if (barco == 3)
+        if (boat == 3)
         {
-            for (int a = linha - 1; a < (linha + barco + 1); a++)
+            for (int a = line - 1; a < (line + boat + 1); a++)
             {
-                for (int b = coluna - 1; b < (coluna + barco - 1); b++)
+                for (int b = column - 1; b < (column + boat - 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
-                        if (mat[a][b] != barco)
+                        if (mat[a][b] != boat)
                             mat[a][b] = -1;
                     }
                 }
@@ -228,13 +232,13 @@ void posicionaBarco(int mat[10][10], int barco)
 
         else
         {
-            for (int a = linha - 1; a < (linha + barco + 1); a++)
+            for (int a = line - 1; a < (line + boat + 1); a++)
             {
-                for (int b = coluna - 1; b < (coluna + barco); b++)
+                for (int b = column - 1; b < (column + boat); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
-                        if (mat[a][b] != barco)
+                        if (mat[a][b] != boat)
                             mat[a][b] = -1;
                     }
                 }
@@ -243,11 +247,12 @@ void posicionaBarco(int mat[10][10], int barco)
     }
 }
 /**
- * Functions imprimeMensagem and imprimeMensagemPontos
- * @param msg return msg with board
+ * Functions printMessage and printMessageScore
+ * Responsible for printing the score messages
+ * @param msg -> return msg with board
  * @returns prints visual matrix
  */
-void imprimeMensagem(char *msg)
+void printMessage(char *msg)
 {
     printf("************************\n");
     printf("*\n");
@@ -255,35 +260,36 @@ void imprimeMensagem(char *msg)
     printf("*\n");
     printf("************************\n");
 }
-void imprimeMensagemPontos(int pts1, int pts2)
+void printMessageScore(int pts1, int pts2)
 {
     printf("************************\n");
     printf("*\n");
-    printf("* PONTUACAO DO JOGADOR 1: %02d\n", pts1);
-    printf("* PONTUACAO DO JOGADOR 2: %02d\n", pts2);
+    printf("* Player'S SCORE 1: %02d\n", pts1);
+    printf("* Player'S SCORE 2: %02d\n", pts2);
     printf("*\n");
     printf("************************\n");
 }
 /**
- * Function imprimeCelula
- * @param celula return of the logical matrix
- * @param etapa game step
- * @returns prints visual matrix
+ * Function printTable
+ * Responsible for printing the board
+ * @param logic -> return of the logical matrix
+ * @param stage -> game step
+ * @returns -> prints visual matrix
  */
-char imprimeCelula(int celula, int etapa)
+char printTable(int logic, int stage)
 {
-    if (etapa == 0)
+    if (stage == 0)
     {
-        if (celula == 0)
+        if (logic == 0)
             return '.';
 
-        else if (celula == -1)
+        else if (logic == -1)
             return '*';
 
-        else if (celula == 1)
+        else if (logic == 1)
             return '1';
 
-        else if (celula == 2)
+        else if (logic == 2)
             return '2';
 
         else
@@ -292,14 +298,13 @@ char imprimeCelula(int celula, int etapa)
 
     else
     {
-        if (celula == 0 || celula == -1 || celula == 1 || celula == 2 ||
-            celula == 3)
+        if (logic == 0 || logic == -1 || logic == 1 || logic == 2 || logic == 3)
             return '.';
 
-        else if (celula == -2)
+        else if (logic == -2)
             return 'x';
 
-        else if (celula == 10 || celula == 20 || celula == 30)
+        else if (logic == 10 || logic == 20 || logic == 30)
             return 'N';
 
         else
@@ -307,14 +312,15 @@ char imprimeCelula(int celula, int etapa)
     }
 }
 /**
- * Function imprimeTabuleiro
- * @param mat board
- * @param etapa game step
- * @returns show board
+ * Function printsTray
+ * Responsible for printing the visual board for the user
+ * @param mat -> Matrix
+ * @param stage ->  game step
+ * @returns ->  show board
  */
-void imprimeTabuleiro(int mat[10][10], int etapa)
+void printsTray(int mat[10][10], int stage)
 {
-    int celula;
+    int logic;
     char imp;
 
     printf("     ");
@@ -336,8 +342,8 @@ void imprimeTabuleiro(int mat[10][10], int etapa)
         {
             if ((i > 0 && i < 11) && (j > 0 && j < 11))
             {
-                celula = mat[i - 1][j - 1];
-                imp = imprimeCelula(celula, etapa);
+                logic = mat[i - 1][j - 1];
+                imp = printTable(logic, stage);
                 printf("%c", imp);
             }
             else
@@ -349,62 +355,64 @@ void imprimeTabuleiro(int mat[10][10], int etapa)
     }
 }
 /**
- * Function atirar
- * @param mat board
- * @param linha matrix row
- * @param coluna matrix column
- * @returns shoot function
+ * Function shoot
+ * Responsible for saying if he hit a boat
+ * @param mat -> board
+ * @param line -> matrix row
+ * @param column -> matrix column
+ * @returns -> shoot function
  */
-void atirar(int mat[10][10], int linha, int coluna)
+void shoot(int mat[10][10], int line, int column)
 {
-    if (mat[linha][coluna] == 0 || mat[linha][coluna] == -1)
-        mat[linha][coluna] = -2;
+    if (mat[line][column] == 0 || mat[line][column] == -1)
+        mat[line][column] = -2;
 
-    if (mat[linha][coluna] == 1)
-        mat[linha][coluna] = 10;
+    if (mat[line][column] == 1)
+        mat[line][column] = 10;
 
-    if (mat[linha][coluna] == 2)
-        mat[linha][coluna] = 20;
+    if (mat[line][column] == 2)
+        mat[line][column] = 20;
 
-    if (mat[linha][coluna] == 3)
-        mat[linha][coluna] = 30;
+    if (mat[line][column] == 3)
+        mat[line][column] = 30;
 }
 /**
- * Function calculaPontuacao
- * @param mat board
- * @param linha matrix row
- * @param coluna matrix column
- * @returns calculate score
+ * Function calculateScore
+ * Responsible for calculating the score obtained during the game
+ * @param mat -> board
+ * @param line -> matrix row
+ * @param column -> matrix column
+ * @returns -> calculate score
  */
 
-int calculaPontuacao(int mat[10][10], int linha, int coluna)
+int calculateScore(int mat[10][10], int line, int column)
 {
     int i, j, cont = 1;
     int c = 0, b = 0, e = 0, d = 0;
 
-    if (mat[linha][coluna] == 10)
+    if (mat[line][column] == 10)
     {
-        mat[linha][coluna] = 50;
+        mat[line][column] = 50;
         return 2;
     }
 
-    else if (mat[linha][coluna] == 20)
+    else if (mat[line][column] == 20)
     {
-        if (mat[linha + 1][coluna] == 20)
+        if (mat[line + 1][column] == 20)
             b = 1;
-        if (mat[linha - 1][coluna] == 20)
+        if (mat[line - 1][column] == 20)
             c = 1;
-        if (mat[linha][coluna + 1] == 20)
+        if (mat[line][column + 1] == 20)
             d = 1;
-        if (mat[linha][coluna - 1] == 20)
+        if (mat[line][column - 1] == 20)
             e = 1;
 
         if (b == 1)
         {
-            if (mat[linha + 1][coluna] == 20)
+            if (mat[line + 1][column] == 20)
             {
-                mat[linha][coluna] = 50;
-                mat[linha + 1][coluna] = 50;
+                mat[line][column] = 50;
+                mat[line + 1][column] = 50;
                 return 4;
             }
             else
@@ -413,10 +421,10 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         if (c == 1)
         {
-            if (mat[linha - 1][coluna] == 20)
+            if (mat[line - 1][column] == 20)
             {
-                mat[linha][coluna] = 50;
-                mat[linha - 1][coluna] = 50;
+                mat[line][column] = 50;
+                mat[line - 1][column] = 50;
                 return 4;
             }
             else
@@ -425,10 +433,10 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         if (d == 1)
         {
-            if (mat[linha][coluna + 1] == 20)
+            if (mat[line][column + 1] == 20)
             {
-                mat[linha][coluna] = 50;
-                mat[linha][coluna + 1] = 50;
+                mat[line][column] = 50;
+                mat[line][column + 1] = 50;
                 return 4;
             }
             else
@@ -437,10 +445,10 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         if (e == 1)
         {
-            if (mat[linha][coluna - 1] == 20)
+            if (mat[line][column - 1] == 20)
             {
-                mat[linha][coluna] = 50;
-                mat[linha][coluna - 1] = 50;
+                mat[line][column] = 50;
+                mat[line][column - 1] = 50;
                 return 4;
             }
             else
@@ -448,24 +456,24 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
         }
     }
 
-    else if (mat[linha][coluna] == 30)
+    else if (mat[line][column] == 30)
     {
-        if (mat[linha + 1][coluna] == 30)
+        if (mat[line + 1][column] == 30)
             b = 1;
-        if (mat[linha - 1][coluna] == 30)
+        if (mat[line - 1][column] == 30)
             c = 1;
-        if (mat[linha][coluna + 1] == 30)
+        if (mat[line][column + 1] == 30)
             d = 1;
-        if (mat[linha][coluna - 1] == 30)
+        if (mat[line][column - 1] == 30)
             e = 1;
 
         if (b == 1 && c == 1)
         {
-            if (mat[linha + 1][coluna] == 30 && mat[linha - 1][coluna] == 30)
+            if (mat[line + 1][column] == 30 && mat[line - 1][column] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha + 1][coluna] = 50;
-                mat[linha - 1][coluna] = 50;
+                mat[line][column] = 50;
+                mat[line + 1][column] = 50;
+                mat[line - 1][column] = 50;
                 return 7;
             }
             else
@@ -474,11 +482,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         else if (d == 1 && e == 1)
         {
-            if (mat[linha][coluna + 1] == 30 && mat[linha][coluna - 1] == 30)
+            if (mat[line][column + 1] == 30 && mat[line][column - 1] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha][coluna - 1] = 50;
-                mat[linha][coluna + 1] = 50;
+                mat[line][column] = 50;
+                mat[line][column - 1] = 50;
+                mat[line][column + 1] = 50;
                 return 7;
             }
             else
@@ -487,11 +495,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         else if (d == 1)
         {
-            if (mat[linha][coluna + 1] == 30 && mat[linha][coluna + 2] == 30)
+            if (mat[line][column + 1] == 30 && mat[line][column + 2] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha][coluna + 1] = 50;
-                mat[linha][coluna + 2] = 50;
+                mat[line][column] = 50;
+                mat[line][column + 1] = 50;
+                mat[line][column + 2] = 50;
                 return 7;
             }
             else
@@ -500,11 +508,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         else if (e == 1)
         {
-            if (mat[linha][coluna - 1] == 30 && mat[linha][coluna - 2] == 30)
+            if (mat[line][column - 1] == 30 && mat[line][column - 2] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha][coluna - 1] = 50;
-                mat[linha][coluna - 2] = 50;
+                mat[line][column] = 50;
+                mat[line][column - 1] = 50;
+                mat[line][column - 2] = 50;
                 return 7;
             }
             else
@@ -513,11 +521,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         else if (c == 1)
         {
-            if (mat[linha - 1][coluna] == 30 && mat[linha - 2][coluna] == 30)
+            if (mat[line - 1][column] == 30 && mat[line - 2][column] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha - 1][coluna] = 50;
-                mat[linha - 2][coluna] = 50;
+                mat[line][column] = 50;
+                mat[line - 1][column] = 50;
+                mat[line - 2][column] = 50;
                 return 7;
             }
             else
@@ -526,11 +534,11 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
 
         else if (b == 1)
         {
-            if (mat[linha + 1][coluna] == 30 && mat[linha + 2][coluna] == 30)
+            if (mat[line + 1][column] == 30 && mat[line + 2][column] == 30)
             {
-                mat[linha][coluna] = 50;
-                mat[linha + 1][coluna] = 50;
-                mat[linha + 2][coluna] = 50;
+                mat[line][column] = 50;
+                mat[line + 1][column] = 50;
+                mat[line + 2][column] = 50;
                 return 7;
             }
             else
@@ -540,115 +548,117 @@ int calculaPontuacao(int mat[10][10], int linha, int coluna)
     return 0;
 }
 /**
- * Function printaPosicionamento
- * @param jogador number representing the player
- * @param barco number that represents the boat
+ * Function printPositioning
+ * Responsible for printing messages for positioning boats on the board; of
+ * player 1 and 2
+ * @param Player number representing the Player
+ * @param boat number that represents the boat
  * @param nm which message to print
  * @returns shows boat positioning messages
  */
-void printaPosicionamento(int jogador, int barco, int nm)
+void printPositioning(int Player, int boat, int nm)
 {
-    if (jogador == 1)
+    if (Player == 1)
     {
-        char msg1[60] = "Jogador 1 - Posicione o barco de tamanho 1 (1/6)";
-        char msg2[60] = "Jogador 1 - Posicione o barco de tamanho 1 (2/6)";
-        char msg3[60] = "Jogador 1 - Posicione o barco de tamanho 1 (3/6)";
-        char msg4[60] = "Jogador 1 - Posicione o barco de tamanho 1 (4/6)";
-        char msg5[60] = "Jogador 1 - Posicione o barco de tamanho 1 (5/6)";
-        char msg6[60] = "Jogador 1 - Posicione o barco de tamanho 1 (6/6)";
+        char msg1[60] = "Player 1 - Position the size boat 1 (1/6)";
+        char msg2[60] = "Player 1 - Position the size boat 1 (2/6)";
+        char msg3[60] = "Player 1 - Position the size boat 1 (3/6)";
+        char msg4[60] = "Player 1 - Position the size boat 1 (4/6)";
+        char msg5[60] = "Player 1 - Position the size boat 1 (5/6)";
+        char msg6[60] = "Player 1 - Position the size boat 1 (6/6)";
 
-        char msg7[60] = "Jogador 1 - Posicione o barco de tamanho 2 (1/4)";
-        char msg8[60] = "Jogador 1 - Posicione o barco de tamanho 2 (2/4)";
-        char msg9[60] = "Jogador 1 - Posicione o barco de tamanho 2 (3/4)";
-        char msg10[60] = "Jogador 1 - Posicione o barco de tamanho 2 (4/4)";
+        char msg7[60] = "Player 1 - Position the size boat 2 (1/4)";
+        char msg8[60] = "Player 1 - Position the size boat 2 (2/4)";
+        char msg9[60] = "Player 1 - Position the size boat 2 (3/4)";
+        char msg10[60] = "Player 1 - Position the size boat 2 (4/4)";
 
-        char msg11[60] = "Jogador 1 - Posicione o barco de tamanho 3 (1/2)";
-        char msg12[60] = "Jogador 1 - Posicione o barco de tamanho 3 (2/2)";
+        char msg11[60] = "Player 1 - Position the size boat 3 (1/2)";
+        char msg12[60] = "Player 1 - Position the size boat 3 (2/2)";
 
-        if (barco == 1)
+        if (boat == 1)
         {
             if (nm == 1)
-                imprimeMensagem(msg1);
+                printMessage(msg1);
             if (nm == 2)
-                imprimeMensagem(msg2);
+                printMessage(msg2);
             if (nm == 3)
-                imprimeMensagem(msg3);
+                printMessage(msg3);
             if (nm == 4)
-                imprimeMensagem(msg4);
+                printMessage(msg4);
             if (nm == 5)
-                imprimeMensagem(msg5);
+                printMessage(msg5);
             if (nm == 6)
-                imprimeMensagem(msg6);
+                printMessage(msg6);
         }
-        else if (barco == 2)
+        else if (boat == 2)
         {
             if (nm == 1)
-                imprimeMensagem(msg7);
+                printMessage(msg7);
             if (nm == 2)
-                imprimeMensagem(msg8);
+                printMessage(msg8);
             if (nm == 3)
-                imprimeMensagem(msg9);
+                printMessage(msg9);
             if (nm == 4)
-                imprimeMensagem(msg10);
+                printMessage(msg10);
         }
-        else if (barco == 3)
+        else if (boat == 3)
         {
             if (nm == 1)
-                imprimeMensagem(msg11);
+                printMessage(msg11);
             if (nm == 2)
-                imprimeMensagem(msg12);
+                printMessage(msg12);
         }
     }
 
-    if (jogador == 2)
+    if (Player == 2)
     {
-        char msg1[60] = "Jogador 2 - Posicione o barco de tamanho 1 (1/6)";
-        char msg2[60] = "Jogador 2 - Posicione o barco de tamanho 1 (2/6)";
-        char msg3[60] = "Jogador 2 - Posicione o barco de tamanho 1 (3/6)";
-        char msg4[60] = "Jogador 2 - Posicione o barco de tamanho 1 (4/6)";
-        char msg5[60] = "Jogador 2 - Posicione o barco de tamanho 1 (5/6)";
-        char msg6[60] = "Jogador 2 - Posicione o barco de tamanho 1 (6/6)";
+        char msg1[60] = "Player 2 - Position the size boat 1 (1/6)";
+        char msg2[60] = "Player 2 - Position the size boat 1 (2/6)";
+        char msg3[60] = "Player 2 - Position the size boat 1 (3/6)";
+        char msg4[60] = "Player 2 - Position the size boat 1 (4/6)";
+        char msg5[60] = "Player 2 - Position the size boat 1 (5/6)";
+        char msg6[60] = "Player 2 - Position the size boat 1 (6/6)";
 
-        char msg7[60] = "Jogador 2 - Posicione o barco de tamanho 2 (1/4)";
-        char msg8[60] = "Jogador 2 - Posicione o barco de tamanho 2 (2/4)";
-        char msg9[60] = "Jogador 2 - Posicione o barco de tamanho 2 (3/4)";
-        char msg10[60] = "Jogador 2 - Posicione o barco de tamanho 2 (4/4)";
+        char msg7[60] = "Player 2 - Position the size boat 2 (1/4)";
+        char msg8[60] = "Player 2 - Position the size boat 2 (2/4)";
+        char msg9[60] = "Player 2 - Position the size boat 2 (3/4)";
+        char msg10[60] = "Player 2 - Position the size boat 2 (4/4)";
 
-        char msg11[60] = "Jogador 2 - Posicione o barco de tamanho 3 (1/2)";
-        char msg12[60] = "Jogador 2 - Posicione o barco de tamanho 3 (2/2)";
+        char msg11[60] = "Player 2 - Position the size boat 3 (1/2)";
+        char msg12[60] = "Player 2 - Position the size boat 3 (2/2)";
 
-        if (barco == 1)
+        if (boat == 1)
         {
             if (nm == 1)
-                imprimeMensagem(msg1);
+                printMessage(msg1);
             if (nm == 2)
-                imprimeMensagem(msg2);
+                printMessage(msg2);
             if (nm == 3)
-                imprimeMensagem(msg3);
+                printMessage(msg3);
             if (nm == 4)
-                imprimeMensagem(msg4);
+                printMessage(msg4);
             if (nm == 5)
-                imprimeMensagem(msg5);
+                printMessage(msg5);
             if (nm == 6)
-                imprimeMensagem(msg6);
+                printMessage(msg6);
         }
-        if (barco == 2)
+        if (boat == 2)
         {
             if (nm == 1)
-                imprimeMensagem(msg7);
+                printMessage(msg7);
             if (nm == 2)
-                imprimeMensagem(msg8);
+                printMessage(msg8);
             if (nm == 3)
-                imprimeMensagem(msg9);
+                printMessage(msg9);
             if (nm == 4)
-                imprimeMensagem(msg10);
+                printMessage(msg10);
         }
-        if (barco == 3)
+        if (boat == 3)
         {
             if (nm == 1)
-                imprimeMensagem(msg11);
+                printMessage(msg11);
             if (nm == 2)
-                imprimeMensagem(msg12);
+                printMessage(msg12);
         }
     }
 }
@@ -658,125 +668,135 @@ void printaPosicionamento(int jogador, int barco, int nm)
  */
 int main()
 {
-    int jogador1[10][10];
-    int jogador2[10][10];
-    int jogadas = 1;
+    int Player1[10][10];
+    int Player2[10][10];
+    int plays = 1;
     int pts1 = 0, pts2 = 0, a1 = 0, a2 = 0;
-    int linha, col = 0, lin = 0;
-    char coluna;
+    int line, col = 0, lin = 0;
+    char column;
+
+    // filling matrix with 0
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
-            jogador1[i][j] = 0;
-            jogador2[i][j] = 0;
+            Player1[i][j] = 0;
+            Player2[i][j] = 0;
         }
     }
+
+    // positioning boats
     for (int i = 1; i <= 2; i++)
     {
         for (int j = 1; j <= 6; j++)
         {
             if (i == 1)
             {
-                printaPosicionamento(i, 1, j);
-                imprimeTabuleiro(jogador1, 0);
-                posicionaBarco(jogador1, 1);
+                printPositioning(i, 1, j);
+                printsTray(Player1, 0);
+                positionBoat(Player1, 1);
             }
             else if (i == 2)
             {
-                printaPosicionamento(i, 1, j);
-                imprimeTabuleiro(jogador2, 0);
-                posicionaBarco(jogador2, 1);
+                printPositioning(i, 1, j);
+                printsTray(Player2, 0);
+                positionBoat(Player2, 1);
             }
         }
         for (int j = 1; j <= 4; j++)
         {
             if (i == 1)
             {
-                printaPosicionamento(i, 2, j);
-                imprimeTabuleiro(jogador1, 0);
-                posicionaBarco(jogador1, 2);
+                printPositioning(i, 2, j);
+                printsTray(Player1, 0);
+                positionBoat(Player1, 2);
             }
             else if (i == 2)
             {
-                printaPosicionamento(i, 2, j);
-                imprimeTabuleiro(jogador2, 0);
-                posicionaBarco(jogador2, 2);
+                printPositioning(i, 2, j);
+                printsTray(Player2, 0);
+                positionBoat(Player2, 2);
             }
         }
         for (int j = 1; j <= 2; j++)
         {
             if (i == 1)
             {
-                printaPosicionamento(i, 3, j);
-                imprimeTabuleiro(jogador1, 0);
-                posicionaBarco(jogador1, 3);
+                printPositioning(i, 3, j);
+                printsTray(Player1, 0);
+                positionBoat(Player1, 3);
             }
             else if (i == 2)
             {
-                printaPosicionamento(i, 3, j);
-                imprimeTabuleiro(jogador2, 0);
-                posicionaBarco(jogador2, 3);
+                printPositioning(i, 3, j);
+                printsTray(Player2, 0);
+                positionBoat(Player2, 3);
             }
         }
     }
-    while (jogadas <= 40)
-    {
-        if (jogadas % 2 != 0)
-        {
-            imprimeMensagemPontos(pts1, pts2);
-            imprimeMensagem("VEZ DO JOGADOR 1");
-            imprimeTabuleiro(jogador2, 1);
-            scanf("%d %c", &linha, &coluna);
 
-            while (validaEntradaLinhaColuna(linha, coluna) != 1 ||
-                   podeAtirar(jogador2, linha - 1, coluna - 65) != 1)
+    // starting the game
+    while (plays <= 40)
+    {
+        if (plays % 2 != 0)
+        {
+            printMessageScore(pts1, pts2);
+            printMessage("Player's turn 1");
+            printsTray(Player2, 1);
+            scanf("%d %c", &line, &column);
+
+            while (validEntryLineColumn(line, column) != 1 ||
+                   canShoot(Player2, line - 1, column - 65) != 1)
             {
-                linha = 0;
-                coluna = 'a';
-                printf("Posicao indisponivel!\n");
-                scanf("%d %c", &linha, &coluna);
+                line = 0;
+                column = 'a';
+                printf("Position unavailable!\n");
+                scanf("%d %c", &line, &column);
             }
-            lin = linha - 1;
-            col = coluna - 65;
-            atirar(jogador2, lin, col);
+            lin = line - 1;
+            col = column - 65;
+            shoot(Player2, lin, col);
             a1 = pts1;
-            pts1 += calculaPontuacao(jogador2, lin, col);
+            pts1 += calculateScore(Player2, lin, col);
 
             if (a1 != pts1)
             {
-                imprimeMensagem("JOGADOR 1 DERRUBOU UM NAVIO!");
+                printMessage("Player 1 DROPPED A BOAT!");
             }
         }
         else
         {
-            imprimeMensagemPontos(pts1, pts2);
-            imprimeMensagem("VEZ DO JOGADOR 2");
-            imprimeTabuleiro(jogador1, 1);
-            scanf("%d %c", &linha, &coluna);
+            printMessageScore(pts1, pts2);
+            printMessage("Player's turn 1");
+            printsTray(Player1, 1);
+            scanf("%d %c", &line, &column);
 
-            while (validaEntradaLinhaColuna(linha, coluna) != 1 ||
-                   podeAtirar(jogador1, linha - 1, coluna - 65) != 1)
+            while (validEntryLineColumn(line, column) != 1 ||
+                   canShoot(Player1, line - 1, column - 65) != 1)
             {
-                printf("Posicao indisponivel!\n");
-                scanf("%d %c", &linha, &coluna);
+                printf("Position unavailable!\n");
+                scanf("%d %c", &line, &column);
             }
-            lin = linha - 1;
-            col = coluna - 65;
-            atirar(jogador1, lin, col);
+            lin = line - 1;
+            col = column - 65;
+            shoot(Player1, lin, col);
             a2 = pts2;
-            pts2 += calculaPontuacao(jogador1, lin, col);
+            pts2 += calculateScore(Player1, lin, col);
 
             if (a2 != pts2)
             {
-                imprimeMensagem("JOGADOR 2 DERRUBOU UM NAVIO!");
+                printMessage("Player 2 DROPPED A BOAT!");
             }
         }
 
-        jogadas++;
+        plays++;
     }
-    imprimeMensagem("FIM DE JOGO");
-    imprimeMensagemPontos(pts1, pts2);
+    /**
+     * the one with the most points wins, or the one who knocks down all boats
+     * first.
+     */
+    printMessage("END GAME\n");
+    printMessageScore(pts1, pts2);
 
     return 0;
 }
