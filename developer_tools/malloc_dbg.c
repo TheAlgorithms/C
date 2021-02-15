@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations.
- * @author tinouduart33(https://github.com/tinouduart33)
+ * @author [tinouduart33](https://github.com/tinouduart33)
  */
 
 #include <stdlib.h> /// For the malloc, calloc and free functions.
