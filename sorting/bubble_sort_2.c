@@ -6,7 +6,7 @@
 
 int main()
 {
-    int i, arraySort[MAX] = {0}, isSort = FALSE, changePlace;
+    int i, array_sort[MAX] = {0}, is_sorted = FALSE, change_place;
 
     /* For example
     Insertion random values in array to test
@@ -14,23 +14,23 @@ int main()
 
     for (i = 0; i < MAX; i++)
     {
-        arraySort[i] = rand() % 101;
+        array_sort[i] = rand() % 101;
     }
 
     /* Algorithm of bubble methods */
 
-    while (isSort)
+    while (is_sorted)
     {
-        isSort = FALSE;
+        is_sorted = FALSE;
 
         for (i = 0; i < MAX - 1; i++)
         {
-            if (arraySort[i] > arraySort[i + 1])
+            if (array_sort[i] > array_sort[i + 1])
             {
-                changePlace = arraySort[i];
-                arraySort[i] = arraySort[i + 1];
-                arraySort[i + 1] = changePlace;
-                isSort = TRUE;
+                change_place = array_sort[i];
+                array_sort[i] = array_sort[i + 1];
+                array_sort[i + 1] = change_place;
+                is_sorted = TRUE;
             }
         }
     }
@@ -39,7 +39,7 @@ int main()
 
     for (i = 0; i < MAX; i++)
     {
-        printf("%d\n", arraySort[i]);
+        printf("%d\n", array_sort[i]);
     }
 
     return EXIT_SUCCESS;
