@@ -178,12 +178,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>new_list the list created </dd></dl>
 <div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../d8/d10/structlist.html">List</a> *new_list = (<a class="code" href="../../d8/d10/structlist.html">List</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d10/structlist.html">List</a>));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../d8/d10/structlist.html">List</a> *new_list = (<a class="code" href="../../d8/d10/structlist.html">List</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d10/structlist.html">List</a>));</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    new_list-&gt;<a class="code" href="../../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41">value</a> = value;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    new_list-&gt;next = NULL;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    new_list-&gt;<a class="code" href="../../d8/d10/structlist.html#a2054c799f7580787a500df82d14ace25">prev</a> = NULL;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> new_list;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructlist_html"><div class="ttname"><a href="../../d8/d10/structlist.html">list</a></div><div class="ttdoc">Doubly linked list struct.</div><div class="ttdef"><b>Definition:</b> doubly_linked_list.c:24</div></div>
 <div class="ttc" id="astructlist_html_a2054c799f7580787a500df82d14ace25"><div class="ttname"><a href="../../d8/d10/structlist.html#a2054c799f7580787a500df82d14ace25">list::prev</a></div><div class="ttdeci">struct list * prev</div><div class="ttdoc">directing to other nodes or NULL</div><div class="ttdef"><b>Definition:</b> doubly_linked_list.c:26</div></div>
 <div class="ttc" id="astructlist_html_a5363bdc0495ab9ef0ed587c99b9a2b41"><div class="ttname"><a href="../../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41">list::value</a></div><div class="ttdeci">double value</div><div class="ttdoc">value saved on each node</div><div class="ttdef"><b>Definition:</b> doubly_linked_list.c:25</div></div>
@@ -418,7 +419,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                cpy = cpy-&gt;next;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="../../d8/d10/structlist.html">List</a> *new_node = (<a class="code" href="../../d8/d10/structlist.html">List</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d10/structlist.html">List</a>));</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="../../d8/d10/structlist.html">List</a> *new_node = (<a class="code" href="../../d8/d10/structlist.html">List</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d10/structlist.html">List</a>));</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            new_node-&gt;<a class="code" href="../../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41">value</a> = value;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// position into list with no poiting for NULL</span></div>

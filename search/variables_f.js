@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tos_742',['tos',['../dd/d10/struct_stack.html#ac2dbef151bc913684a90b06836725ef9',1,'Stack']]]
+  ['start_783',['start',['../d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03',1,'_cantor_set']]]
 ];

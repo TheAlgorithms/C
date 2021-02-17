@@ -260,7 +260,7 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 <div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> size = rand() % 500; <span class="comment">/* random array size */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> *arr = (<span class="keywordtype">int</span> *)calloc(size, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> *arr = (<span class="keywordtype">int</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(size, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">/* generate size random numbers from -50 to 49 */</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++)</div>
@@ -272,8 +272,10 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        assert(arr[i] &lt;= arr[i + 1]);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    free(arr);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(arr);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 <div class="ttc" id="aselection__sort_8c_html_aeafe7419cfceaeccaf49f22842d9a617"><div class="ttname"><a href="../../df/d83/selection__sort_8c.html#aeafe7419cfceaeccaf49f22842d9a617">selectionSort</a></div><div class="ttdeci">void selectionSort(int *arr, int size)</div><div class="ttdoc">Selection sort algorithm implements.</div><div class="ttdef"><b>Definition:</b> selection_sort.c:28</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

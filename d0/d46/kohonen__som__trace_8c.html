@@ -248,18 +248,18 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">int</span> num_out = 50;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// 2D space, hence size = number of rows * 2</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// number of clusters nodes * 2</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)  <span class="comment">// loop till max(N, num_out)</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)  <span class="comment">// only add new arrays if i &lt; N</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -279,9 +279,9 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            free(X[i]);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X[i]);</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            free(W[i]);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(W[i]);</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
 <div class="ttc" id="agroup__kohonen__1d_html_ga7b84b14e60f47812b581d1f93057c85a"><div class="ttname"><a href="../../d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a">save_nd_data</a></div><div class="ttdeci">int save_nd_data(const char *fname, double **X, int num_points, int num_features)</div><div class="ttdoc">Save a given n-dimensional data martix to file.</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:70</div></div>
@@ -289,6 +289,8 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="ttc" id="agroup__kohonen__1d_html_gaf5ce14f026d6d231bef29161bac2b485"><div class="ttname"><a href="../../d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485">_random</a></div><div class="ttdeci">double _random(double a, double b)</div><div class="ttdoc">Helper function to generate a random number in a given interval.</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:54</div></div>
 <div class="ttc" id="agroup__kohonen__1d_html_gaffe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdoc">shorthand for maximum value</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:32</div></div>
 <div class="ttc" id="akohonen__som__trace_8c_html_a107f00650b8041f77767927073ddddb8"><div class="ttname"><a href="../../d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8">test_circle</a></div><div class="ttdeci">void test_circle(double *const *data, int N)</div><div class="ttdoc">Creates a random set of points distributed near the circumference of a circle and trains an SOM that ...</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:223</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -329,15 +331,15 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">int</span> j, N = 500;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">int</span> features = 2;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">int</span> num_out = 20;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    {</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)  <span class="comment">// only add new arrays if i &lt; N</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
@@ -358,12 +360,12 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    {</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            free(X[i]);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X[i]);</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            free(W[i]);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(W[i]);</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    free(X);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    free(W);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(W);</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
 <div class="ttc" id="akohonen__som__trace_8c_html_aa2246f940155472084ee461f3685d614"><div class="ttname"><a href="../../d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614">test_lamniscate</a></div><div class="ttdeci">void test_lamniscate(double *const *data, int N)</div><div class="ttdoc">Creates a random set of points distributed near the locus of the Lamniscate of Gerono.</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:319</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -406,15 +408,15 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordtype">int</span> j, N = 200;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordtype">int</span> features = 3;</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">int</span> num_out = 20;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">double</span> **W = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    {</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)  <span class="comment">// only add new arrays if i &lt; N</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            X[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)  <span class="comment">// only add new arrays if i &lt; num_out</span></div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        {</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)malloc(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            W[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(features * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="preprocessor">#pragma omp for</span></div>
@@ -435,12 +437,12 @@ output" style="pointer-events: none;" class="inline"/> </p>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d0/dcb/group__kohonen__1d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>(num_out, N); i++)</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    {</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="keywordflow">if</span> (i &lt; N)</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            free(X[i]);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X[i]);</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordflow">if</span> (i &lt; num_out)</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            free(W[i]);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(W[i]);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    }</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    free(X);</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    free(W);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(W);</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;}</div>
 <div class="ttc" id="akohonen__som__trace_8c_html_a41ae16442e3e5b891a58d2e5932a2cd0"><div class="ttname"><a href="../../d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0">test_3d_classes</a></div><div class="ttdeci">void test_3d_classes(double *const *data, int N)</div><div class="ttdoc">Creates a random set of points distributed in four clusters in 3D space with centroids at the points.</div><div class="ttdef"><b>Definition:</b> kohonen_som_trace.c:410</div></div>
 </div><!-- fragment --><div class="dynheader">

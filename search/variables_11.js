@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['w_744',['w',['../de/d58/structquaternion__.html#a835e2ba72517fbb29d0d4e3cb4c2914f',1,'quaternion_']]],
-  ['weights_745',['weights',['../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657',1,'adaline']]]
+  ['value_785',['value',['../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41',1,'list::value()'],['../dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008',1,'_big_int::value()']]]
 ];

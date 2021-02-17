@@ -173,9 +173,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (head-&gt;next)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a>(head-&gt;next);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    free(head);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(head);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="ttc" id="acantor__set_8c_html_a85df3c64a683100ac6246e1e034df43d"><div class="ttname"><a href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a></div><div class="ttdeci">void free_memory(CantorSet *head)</div><div class="ttdoc">Clear memory allocated by propagate function.</div><div class="ttdef"><b>Definition:</b> cantor_set.c:72</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -249,7 +250,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> *temp = head;  <span class="comment">// local pointer to track propagation</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// create new node for the new set</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> *<a class="code" href="../../da/d02/binary__search__tree_8c.html#ac73c73be92dbbeeaad942c0103b9540d">newNode</a> = (<a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> *<a class="code" href="../../da/d02/binary__search__tree_8c.html#ac73c73be92dbbeeaad942c0103b9540d">newNode</a> = (<a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a>));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// get 1/3rd of interval</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> diff = (((temp-&gt;end) - (temp-&gt;start)) / 3);</div>
@@ -270,6 +271,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="ttc" id="abinary__search__tree_8c_html_ac73c73be92dbbeeaad942c0103b9540d"><div class="ttname"><a href="../../da/d02/binary__search__tree_8c.html#ac73c73be92dbbeeaad942c0103b9540d">newNode</a></div><div class="ttdeci">node * newNode(int data)</div><div class="ttdoc">The node constructor, which receives the key value input and returns a node pointer.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:28</div></div>
 <div class="ttc" id="acantor__set_8c_html_a1f156d2b53b80305bd2fa3ff5fdf3c97"><div class="ttname"><a href="../../dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97">propagate</a></div><div class="ttdeci">void propagate(CantorSet *head)</div><div class="ttdoc">Iterative constructor of all sets in the current level.</div><div class="ttdef"><b>Definition:</b> cantor_set.c:23</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

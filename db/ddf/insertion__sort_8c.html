@@ -205,7 +205,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, co
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 <div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> size = rand() % 500; <span class="comment">/* random array size */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> *arr = (<span class="keywordtype">int</span> *)calloc(size, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> *arr = (<span class="keywordtype">int</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(size, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* generate size random numbers from -50 to 49 */</span>  </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++)</div>
@@ -217,9 +217,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, co
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        assert(arr[i] &lt;= arr[i + 1]);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    free(arr);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(arr);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="ttc" id="ainsertion__sort_8c_html_a0d6c227641a5e0dae580b3a18df241fb"><div class="ttname"><a href="../../db/ddf/insertion__sort_8c.html#a0d6c227641a5e0dae580b3a18df241fb">insertionSort</a></div><div class="ttdeci">void insertionSort(int *arr, int size)</div><div class="ttdoc">Insertion sort algorithm implements.</div><div class="ttdef"><b>Definition:</b> insertion_sort.c:16</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

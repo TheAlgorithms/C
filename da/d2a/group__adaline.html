@@ -466,8 +466,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (ada == NULL)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    free(ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(ada-&gt;<a class="code" href="../../d2/daa/structadaline.html#a32e58c03fd9258709eae6138ad0ec657">weights</a>);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -518,7 +519,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/daa/structadaline.html">adaline</a> ada;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ada.<a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a> = <a class="code" href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">eta</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ada.num_weights = <a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ada.weights = (<span class="keywordtype">double</span> *)malloc(<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ada.weights = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<a class="code" href="../../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1">num_weights</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (!ada.weights)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        perror(<span class="stringliteral">&quot;Unable to allocate error for weights!&quot;</span>);</div>
@@ -531,6 +532,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> ada;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructadaline_html"><div class="ttname"><a href="../../d2/daa/structadaline.html">adaline</a></div><div class="ttdoc">structure to hold adaline model parameters</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:44</div></div>
 </div><!-- fragment -->
 </div>

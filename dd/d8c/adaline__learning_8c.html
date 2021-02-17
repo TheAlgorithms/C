@@ -207,7 +207,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                   {4, 1},  {6, -5},   {-7, -3}, {-8, 5},</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                   {-9, 2}, {-10, -15}};</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> Y[10] = {1,  -1, 1, -1, -1,</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                       -1, 1,  1, 1,  -1};  <span class="comment">// corresponding y-values</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++)</div>
@@ -235,7 +235,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// for (int i = 0; i &lt; N; i++)</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">//     free(X[i]);</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    free(X);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="../../da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
 <div class="ttc" id="agroup__adaline_html_ga251695a79baa885cafdcf6d8ed4ac120"><div class="ttname"><a href="../../da/d2a/group__adaline.html#ga251695a79baa885cafdcf6d8ed4ac120">adaline_get_weights_str</a></div><div class="ttdeci">char * adaline_get_weights_str(const struct adaline *ada)</div><div class="ttdoc">Operator to print the weights of the model.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:112</div></div>
@@ -243,6 +243,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="ttc" id="agroup__adaline_html_gaa52120912e32d2893fe1c6d78da5befd"><div class="ttname"><a href="../../da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd">adaline_fit</a></div><div class="ttdeci">void adaline_fit(struct adaline *ada, double **X, const int *y, const int N)</div><div class="ttdoc">Update the weights of the model using supervised learning for an array of vectors.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:184</div></div>
 <div class="ttc" id="agroup__adaline_html_gac70b578aee679005fd336073969c3d94"><div class="ttname"><a href="../../da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94">adaline_predict</a></div><div class="ttdeci">int adaline_predict(struct adaline *ada, const double *x, double *out)</div><div class="ttdoc">predict the output of the model for given set of features</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:136</div></div>
 <div class="ttc" id="agroup__adaline_html_gacd88962c5f6341e43cbc69b4a7d3485b"><div class="ttname"><a href="../../da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b">new_adaline</a></div><div class="ttdeci">struct adaline new_adaline(const int num_features, const double eta)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:59</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="astructadaline_html"><div class="ttname"><a href="../../d2/daa/structadaline.html">adaline</a></div><div class="ttdoc">structure to hold adaline model parameters</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:44</div></div>
 <div class="ttc" id="astructadaline_html_a85dbd7cce6195d11ebb388220b96bde2"><div class="ttname"><a href="../../d2/daa/structadaline.html#a85dbd7cce6195d11ebb388220b96bde2">adaline::eta</a></div><div class="ttdeci">double eta</div><div class="ttdoc">learning rate of the algorithm</div><div class="ttdef"><b>Definition:</b> adaline_learning.c:45</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -282,9 +284,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> N = 50;  <span class="comment">// number of sample points</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(2 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) X[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(2 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
@@ -322,9 +324,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) free(X[i]);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    free(X);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    free(Y);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X[i]);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(Y);</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="../../da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
@@ -366,9 +368,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> N = 50;  <span class="comment">// number of sample points</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)malloc(N * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) X[i] = (<span class="keywordtype">double</span> *)malloc(6 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">double</span> **X = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">int</span> *Y = (<span class="keywordtype">int</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(N * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));  <span class="comment">// corresponding y-values</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) X[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(6 * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="comment">// generate sample points in the interval</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">// [-range2/100 , (range2-1)/100]</span></div>
@@ -415,9 +417,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        printf(<span class="stringliteral">&quot; ...passed\n&quot;</span>);</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) free(X[i]);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    free(X);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    free(Y);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X[i]);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(X);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(Y);</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="../../da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665">delete_adaline</a>(&amp;ada);</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">

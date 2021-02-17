@@ -219,7 +219,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// termination condition</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> ((root-&gt;left == NULL) &amp;&amp; (root-&gt;right == NULL))</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {  <span class="comment">// Case 1: the root has no leaves, remove the node</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            free(root);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(root);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (root-&gt;left == NULL)</div>
@@ -228,14 +228,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">// the old root</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <a class="code" href="../../d5/da1/structnode.html">node</a> *tmp = root;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            root = root-&gt;right;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            free(tmp);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(tmp);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">return</span> root;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (root-&gt;right == NULL)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="../../d5/da1/structnode.html">node</a> *tmp = root;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            root = root-&gt;left;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            free(tmp);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(tmp);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">return</span> root;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">else</span></div>
@@ -254,6 +254,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> root;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 <div class="ttc" id="abinary__search__tree_8c_html_ad297e528a7bb8604ca93af149d609150"><div class="ttname"><a href="../../da/d02/binary__search__tree_8c.html#ad297e528a7bb8604ca93af149d609150">getMax</a></div><div class="ttdeci">node * getMax(node *root)</div><div class="ttdoc">Utilitary procedure to find the greatest key in the left subtree.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:72</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="../../d5/da1/structnode.html">node</a></div><div class="ttdoc">Node, the basic data structure in the tree.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:15</div></div>
 <div class="ttc" id="astructnode_html_a2d890bb9f6af0ffd73fe79b21124c2a2"><div class="ttname"><a href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">node::data</a></div><div class="ttdeci">int data</div><div class="ttdoc">data of the node</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:18</div></div>
@@ -553,7 +554,7 @@ Here is the call graph for this function:</div>
 <dl class="section note"><dt>Note</dt><dd>the node must be deleted before program terminates to avoid memory leaks </dd></dl>
 <div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// creates a slug</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *tmp = (<a class="code" href="../../d5/da1/structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/da1/structnode.html">node</a>));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *tmp = (<a class="code" href="../../d5/da1/structnode.html">node</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/da1/structnode.html">node</a>));</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// initializes the slug</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    tmp-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a> = <a class="code" href="../../df/dea/structdata.html">data</a>;</div>
@@ -562,6 +563,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructnode_html_a51e160f22dc6064bac4a4f9f1d931c2c"><div class="ttname"><a href="../../d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c">node::right</a></div><div class="ttdeci">struct node * right</div><div class="ttdoc">right child</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:17</div></div>
 <div class="ttc" id="astructnode_html_af7109e6ffd82cbbb705e486fd0ce92f0"><div class="ttname"><a href="../../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0">node::left</a></div><div class="ttdeci">struct node * left</div><div class="ttdoc">left child</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:16</div></div>
 </div><!-- fragment -->
@@ -601,7 +603,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <a class="code" href="../../da/d02/binary__search__tree_8c.html#a01151353aa2d9688934ed39208133241">purge</a>(root-&gt;right);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        free(root);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(root);</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        root = NULL;  <span class="comment">// reset pointer</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>

@@ -398,9 +398,9 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;{</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">int</span> R = num_out &gt;&gt; 2, iter = 0;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">double</span> **D = (<span class="keywordtype">double</span> **)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">double</span> **D = (<span class="keywordtype">double</span> **)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span> *));</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++)</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        D[i] = (<span class="keywordtype">double</span> *)malloc(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        D[i] = (<span class="keywordtype">double</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(num_out * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">double</span> dmin = 1.f;  <span class="comment">// average minimum distance of all samples</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
@@ -427,10 +427,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++) free(D[i]);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    free(D);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_out; i++) <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(D[i]);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(D);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
 <div class="ttc" id="agroup__kohonen__2d_html_ga83abb572c60d202e100595a989dfe123"><div class="ttname"><a href="../../d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123">kohonen_update_weights</a></div><div class="ttdeci">double kohonen_update_weights(const double *X, struct kohonen_array_3d *W, double **D, int num_out, int num_features, double alpha, int R)</div><div class="ttdoc">Update weights of the SOM using Kohonen algorithm.</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:234</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

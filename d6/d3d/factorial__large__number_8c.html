@@ -230,9 +230,10 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    free(num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    free(num);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(num);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -255,12 +256,13 @@ Here is the call graph for this function:</div>
 <p>create a new large number </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to a large number </dd></dl>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a> *new_num = (<a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a>));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a> *new_num = (<a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d3/d5a/struct__large__num.html">large_num</a>));</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    new_num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0">num_digits</a> = 1;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    new_num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a> = (<span class="keywordtype">char</span> *)malloc(1 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    new_num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a> = (<span class="keywordtype">char</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(1 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    new_num-&gt;<a class="code" href="../../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9">digits</a>[0] = 1;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> new_num;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astruct__large__num_html"><div class="ttname"><a href="../../d3/d5a/struct__large__num.html">_large_num</a></div><div class="ttdoc">dynamically large number</div><div class="ttdef"><b>Definition:</b> factorial_large_number.c:15</div></div>
 </div><!-- fragment -->
 </div>

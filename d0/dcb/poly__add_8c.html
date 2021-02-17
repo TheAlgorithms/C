@@ -197,7 +197,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// Initiating first term</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (temp1 == NULL)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        temp2 = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)malloc(</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        temp2 = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> = <a class="code" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> = <a class="code" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Creating the rest of the nodes</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)malloc(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        temp2 = temp2-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;       <span class="comment">// Increasing the pointer temp2</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> = <a class="code" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
@@ -217,6 +217,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        temp2-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = NULL;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructterm_html"><div class="ttname"><a href="../../df/d86/structterm.html">term</a></div><div class="ttdoc">identifier for single-variable polynomial coefficients as a linked list</div><div class="ttdef"><b>Definition:</b> poly_add.c:20</div></div>
 <div class="ttc" id="astructterm_html_a057f161d279d856d11786aa96fc87f74"><div class="ttname"><a href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">term::pow</a></div><div class="ttdeci">int pow</div><div class="ttdoc">power of the polynomial term</div><div class="ttdef"><b>Definition:</b> poly_add.c:22</div></div>
 <div class="ttc" id="astructterm_html_a5a730814391f70179da78c657e6e6f7b"><div class="ttname"><a href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">term::coef</a></div><div class="ttdeci">int coef</div><div class="ttdoc">coefficient value</div><div class="ttdef"><b>Definition:</b> poly_add.c:21</div></div>
@@ -295,11 +296,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">while</span> (!poly-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            free(poly-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>);  <span class="comment">// Deletes next term</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(poly-&gt;<a class="code" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>);  <span class="comment">// Deletes next term</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        free(poly);  <span class="comment">// delete the current term</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(poly);  <span class="comment">// delete the current term</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -384,7 +386,7 @@ Here is the call graph for this function:</div>
 </dl>
 <div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// Creating a temporary linked list to store the resultant polynomial</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *temp = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *temp = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    temp-&gt;next = NULL;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    *pol =</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        temp;  <span class="comment">//*pol always points to the 1st node of the resultant polynomial</span></div>
@@ -429,7 +431,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (poly1 &amp;&amp; poly2)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            temp-&gt;next = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)malloc(</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            temp-&gt;next = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            temp = temp-&gt;next;         <span class="comment">// Increase the pointer temp</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            temp-&gt;next = NULL;</div>
@@ -441,7 +443,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">while</span> (poly1 || poly2)</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        temp-&gt;next = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)malloc(</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        temp-&gt;next = (<span class="keyword">struct </span><a class="code" href="../../df/d86/structterm.html">term</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        temp = temp-&gt;next;         <span class="comment">// Increasing the pointer</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        temp-&gt;next = NULL;</div>

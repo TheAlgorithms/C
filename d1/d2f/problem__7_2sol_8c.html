@@ -143,7 +143,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">size_t</span> n = 1000000;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> target = 10001;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sieve = (<span class="keywordtype">char</span> *)calloc(n, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sieve = (<span class="keywordtype">char</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(n, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (i = 2; i &lt; n; i++)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (!sieve[i])</div>
@@ -161,10 +161,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    free(sieve);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(sieve);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="agroup__misc_html_ga6f8e8c9d25b5891d57e588d80d75028a"><div class="ttname"><a href="../../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a">count</a></div><div class="ttdeci">int count(int *arr, const int size)</div><div class="ttdoc">Count func counts the number of prime numbers.</div><div class="ttdef"><b>Definition:</b> prime_seive.c:42</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

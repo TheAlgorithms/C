@@ -3,6 +3,7 @@ var files_dup =
     [ "client_server", "dir_d20ad0b8de644c123692ba5582cc7a7b.html", "dir_d20ad0b8de644c123692ba5582cc7a7b" ],
     [ "conversions", "dir_9babc524d57e25f3d9f4179cabc3599e.html", "dir_9babc524d57e25f3d9f4179cabc3599e" ],
     [ "data_structures", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc.html", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc" ],
+    [ "developer_tools", "dir_abf1a26ece768c4076e73592705ae077.html", "dir_abf1a26ece768c4076e73592705ae077" ],
     [ "exercism", "dir_48bf5503321d91c557399989fed5dabd.html", "dir_48bf5503321d91c557399989fed5dabd" ],
     [ "geometry", "dir_e3380d2178455503f266746fb14246a5.html", "dir_e3380d2178455503f266746fb14246a5" ],
     [ "graphics", "dir_e79632891301b850df87e9c0030293fa.html", "dir_e79632891301b850df87e9c0030293fa" ],

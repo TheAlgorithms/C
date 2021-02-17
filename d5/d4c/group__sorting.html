@@ -177,7 +177,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (a[i] &gt; <a class="code" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> = a[i];</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    beads = calloc(1, <a class="code" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> * len);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    beads = <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(1, <a class="code" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> * len);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* mark the beads */</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; len; i++)</div>
@@ -201,10 +201,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            ;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        a[i] = j;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    free(beads);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(beads);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="agroup__kohonen__2d_html_gaffe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdoc">shorthand for maximum value</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:39</div></div>
 <div class="ttc" id="agroup__sorting_html_ga4fdb8af29a07ac8f496e49a11bf9f1bd"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4fdb8af29a07ac8f496e49a11bf9f1bd">BEAD</a></div><div class="ttdeci">#define BEAD(i, j)</div><div class="ttdoc">Create easy access of elements from a 2D matrix stored in memory as a 1D array.</div><div class="ttdef"><b>Definition:</b> bead_sort.c:16</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,7 +304,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> *b = (<span class="keywordtype">int</span> *)malloc(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* dynamic memory must be freed */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> *b = (<span class="keywordtype">int</span> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* dynamic memory must be freed */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> c = l;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> p1, p2;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    p1 = l;</div>
@@ -340,8 +342,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (c = l; c &lt; r - l + 1; c++) a[c] = b[c];</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    free(b);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(b);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 </div><!-- fragment -->
 </div>
 </div>

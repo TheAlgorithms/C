@@ -185,11 +185,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <p>creates a new node param[in] data value to be inserted </p>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the new node </dd></dl>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *ptr = (<a class="code" href="../../d5/da1/structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/da1/structnode.html">node</a>));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d5/da1/structnode.html">node</a> *ptr = (<a class="code" href="../../d5/da1/structnode.html">node</a> *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/da1/structnode.html">node</a>));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ptr-&gt;rlink = ptr-&gt;llink = NULL;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ptr-&gt;<a class="code" href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">data</a> = <a class="code" href="../../df/dea/structdata.html">data</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> ptr;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="../../df/dea/structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> prime_factoriziation.c:25</div></div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="../../d5/da1/structnode.html">node</a></div><div class="ttdoc">Node, the basic data structure in the tree.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:15</div></div>
 <div class="ttc" id="astructnode_html_a2d890bb9f6af0ffd73fe79b21124c2a2"><div class="ttname"><a href="../../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2">node::data</a></div><div class="ttdeci">int data</div><div class="ttdoc">data of the node</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:18</div></div>
@@ -286,21 +287,22 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (temp == *root)</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            free(*root);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(*root);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            *root = replacement;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prev-&gt;llink == temp)</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            free(prev-&gt;llink);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(prev-&gt;llink);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            prev-&gt;llink = replacement;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prev-&gt;rlink == temp)</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            free(prev-&gt;rlink);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(prev-&gt;rlink);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            prev-&gt;rlink = replacement;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>

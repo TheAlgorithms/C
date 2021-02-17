@@ -321,7 +321,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    uint64_t sum = 0, <a class="code" href="../../df/db3/struct_l.html">L</a>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    int64_t i;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    uint64_t *D = (uint64_t *)malloc(<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a7a9a231e30b47bc0345749c8bd1e5077">MAX_LENGTH</a> * <span class="keyword">sizeof</span>(uint64_t));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    uint64_t *D = (uint64_t *)<a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a7a9a231e30b47bc0345749c8bd1e5077">MAX_LENGTH</a> * <span class="keyword">sizeof</span>(uint64_t));</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="../../df/db3/struct_l.html">L</a> = <a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215">get_divisors</a>(N, D);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (i = 1; i &lt; <a class="code" href="../../df/db3/struct_l.html">L</a>; i++)</div>
@@ -330,9 +330,11 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        sum += DD;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    free(D);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(D);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> sum % <a class="code" href="../../d4/d83/problem__401_2sol1_8c.html#ade1bdf2529e3c58f53bfb4d844f3a9d3">MOD_LIMIT</a>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_a7380e14d595d560007b02ce516b6b215"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215">get_divisors</a></div><div class="ttdeci">uint64_t get_divisors(uint64_t N, uint64_t *D)</div><div class="ttdoc">Get all integer divisors of a number.</div><div class="ttdef"><b>Definition:</b> sol1.c:47</div></div>
 <div class="ttc" id="aproblem__401_2sol1_8c_html_ade1bdf2529e3c58f53bfb4d844f3a9d3"><div class="ttname"><a href="../../d4/d83/problem__401_2sol1_8c.html#ade1bdf2529e3c58f53bfb4d844f3a9d3">MOD_LIMIT</a></div><div class="ttdeci">#define MOD_LIMIT</div><div class="ttdoc">modulo limit</div><div class="ttdef"><b>Definition:</b> sol1.c:17</div></div>
 </div><!-- fragment --><div class="dynheader">

@@ -335,9 +335,10 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    free(tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd">root</a>);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    free(tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a">identity</a>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd">root</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a">identity</a>);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="astructsegment__tree_html_a5373ee53a5ac1cd7a9dcb89a4c23a04a"><div class="ttname"><a href="../../dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a">segment_tree::identity</a></div><div class="ttdeci">void * identity</div><div class="ttdoc">identity element for combine function</div><div class="ttdef"><b>Definition:</b> segment_tree.c:41</div></div>
 </div><!-- fragment -->
 </div>
@@ -399,12 +400,12 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to sgement tree build </dd></dl>
 <div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="../../dd/d06/structsegment__tree.html">segment_tree</a> *tree = malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d06/structsegment__tree.html">segment_tree</a>));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="../../dd/d06/structsegment__tree.html">segment_tree</a> *tree = <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d06/structsegment__tree.html">segment_tree</a>));</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa9dc376b5b219c4cec6546483527b853">elem_size</a> = elem_size;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a5ad61abcbd2c25a4a71416281dba8f1e">length</a> = len;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a973ab017a97678fdc6774543585897df">combine</a> = <a class="code" href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">func</a>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd">root</a> = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * elem_size * (2 * len - 1));</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a">identity</a> = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * elem_size);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd">root</a> = <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * elem_size * (2 * len - 1));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a">identity</a> = <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * elem_size);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">char</span> *ptr = (<span class="keywordtype">char</span> *)tree-&gt;<a class="code" href="../../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd">root</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    memset(ptr, 0, (len - 1) * elem_size);  <span class="comment">// Initializing memory</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    ptr = ptr + (len - 1) * elem_size;</div>
@@ -413,6 +414,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> tree;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="ttc" id="aclient_8c_html_ac17020a38607ab29ce18939d5194a32a"><div class="ttname"><a href="../../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a">func</a></div><div class="ttdeci">void func(int sockfd)</div><div class="ttdoc">Continuous loop to send and receive over the socket.</div><div class="ttdef"><b>Definition:</b> client.c:37</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructsegment__tree_html"><div class="ttname"><a href="../../dd/d06/structsegment__tree.html">segment_tree</a></div><div class="ttdoc">This structures holds all the data that is required by a segment tree.</div><div class="ttdef"><b>Definition:</b> segment_tree.c:39</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

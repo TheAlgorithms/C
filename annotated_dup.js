@@ -23,6 +23,7 @@ var annotated_dup =
     [ "list", "d8/d10/structlist.html", "d8/d10/structlist" ],
     [ "mat_3x3_", "d9/d8b/structmat__3x3__.html", "d9/d8b/structmat__3x3__" ],
     [ "max_heap", "d0/d8a/structmax__heap.html", "d0/d8a/structmax__heap" ],
+    [ "MEMORY_INFORMATION", "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html", "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n" ],
     [ "min_heap", "de/dce/structmin__heap.html", "de/dce/structmin__heap" ],
     [ "node", "d5/da1/structnode.html", "d5/da1/structnode" ],
     [ "Node", "db/d8b/struct_node.html", "db/d8b/struct_node" ],

@@ -162,11 +162,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    printf(<span class="stringliteral">&quot;Equivalent hexadecimal number is: %s&quot;</span>, hexadecimalValue);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// free the memory allocated dynamically in function octalToHexadecimal</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    free(hexadecimalValue);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(hexadecimalValue);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// return 0 and exit</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="aoctal__to__hexadecimal_8c_html_a042035b4ba7b92974f0edf6eb1b0cbe1"><div class="ttname"><a href="../../d0/d8a/octal__to__hexadecimal_8c.html#a042035b4ba7b92974f0edf6eb1b0cbe1">octalToHexadecimal</a></div><div class="ttdeci">char * octalToHexadecimal(long octalValue)</div><div class="ttdoc">Convert octal number to hexadecimal number dynamically allocated memory needs to be freed by the call...</div><div class="ttdef"><b>Definition:</b> octal_to_hexadecimal.c:38</div></div>
 <div class="ttc" id="aoctal__to__hexadecimal_8c_html_aa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../d0/d8a/octal__to__hexadecimal_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Test function.</div><div class="ttdef"><b>Definition:</b> octal_to_hexadecimal.c:48</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -241,10 +242,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a hexadecimal value as a string after conversion </dd></dl>
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                         {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">char</span> *hexadecimalValue = malloc(256 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">char</span> *hexadecimalValue = <a class="code" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(256 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    sprintf(hexadecimalValue, <span class="stringliteral">&quot;%lX&quot;</span>, <a class="code" href="../../d0/d8a/octal__to__hexadecimal_8c.html#a86a4edb605c2a03d9175c59de679347d">octalToDecimal</a>(octalValue));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> hexadecimalValue;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="aoctal__to__hexadecimal_8c_html_a86a4edb605c2a03d9175c59de679347d"><div class="ttname"><a href="../../d0/d8a/octal__to__hexadecimal_8c.html#a86a4edb605c2a03d9175c59de679347d">octalToDecimal</a></div><div class="ttdeci">long octalToDecimal(long octalValue)</div><div class="ttdoc">Convert octal number to decimal number.</div><div class="ttdef"><b>Definition:</b> octal_to_hexadecimal.c:20</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
