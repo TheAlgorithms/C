@@ -15,6 +15,8 @@
 
 /**
  * @brief Main function
+ * @param argc number of arguments (not used)
+ * @param argv list of arguments (not used)
  * @returns 0 on exit
  */
 int main(int argc, char* argv[])
