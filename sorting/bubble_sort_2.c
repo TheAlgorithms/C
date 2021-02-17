@@ -4,6 +4,40 @@
 
 #include <stdbool.h>
 
+/**
+ * Bubble sort implementation
+ * @param array_sort the array to be sorted
+ */
+void bubblesort(int* array_sort)
+{
+	bool is_sorted = false;
+
+    /* keep iterating over entire array
+     * and swaping elements out of order
+     * until it is sorted */
+    while (!is_sorted)
+    {
+		is_sorted = true;
+
+        /* iterate over all elements */
+        for (int i = 0; i < MAX - 1; i++)
+        {
+            /* check if adjacent elements are out of order */
+            if (array_sort[i] > array_sort[i + 1])
+            {
+                /* swap elements */
+                int change_place = array_sort[i];
+                array_sort[i] = array_sort[i + 1];
+                array_sort[i + 1] = change_place;
+                /* elements out of order were found
+                 * so we reset the flag to keep ordering
+                 * until no swap operations are executed */
+                is_sorted = false;
+            }
+        }
+    }
+}
+
 int main()
 {
     int i, array_sort[MAX] = {0}, is_sorted = false, change_place;
