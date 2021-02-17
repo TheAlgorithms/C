@@ -9,7 +9,7 @@
 #include <string.h> /// For the memcmp function.
 #include "malloc_dbg.h" /// Header file which contains the prototypes of malloc_dbg, calloc_dbg and fre_dbg.
 
- /* We must undef these macros in order to use the real malloc / calloc and free functions */
+/* We must undef these macros in order to use the real malloc / calloc and free functions */
 #undef malloc
 #undef calloc
 #undef free
