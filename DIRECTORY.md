@@ -98,6 +98,11 @@
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/master/data_structures/trie/trie.c)
 
+## Developer Tools
+  * [Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/malloc_dbg.c)
+  * [Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/malloc_dbg.h)
+  * [Test Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/test_malloc_dbg.c)
+
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/master/exercism/acronym/acronym.c)
