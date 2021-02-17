@@ -3,6 +3,7 @@
 #define MAX 20
 
 #include <stdbool.h>
+#include <assert.h>
 
 /**
  * Bubble sort implementation
@@ -35,6 +36,31 @@ void bubblesort(int* array_sort)
                 is_sorted = false;
             }
         }
+    }
+}
+
+/**
+ * @brief Test function
+ * @returns void
+ */
+static void test() {
+    /* simple int array for testing */
+	int array_sort[MAX] = {0};
+
+    /* populate our test array with 
+     * random integer numbers */
+    for (int i = 0; i < MAX; i++)
+    {
+        array_sort[i] = rand() % 101;
+    }
+
+    /* sort array */
+    bubblesort(array_sort);
+
+    /* check if array ir correctly ordered */	
+    for (int i = 0; i < MAX - 1; i++)
+    {
+        assert(array_sort[i] <= array_sort[i+1]);
     }
 }
 
