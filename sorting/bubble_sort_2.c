@@ -1,9 +1,18 @@
+/**
+ * @file
+ * @brief implementation of [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) algorithm
+ * @details
+ * worst-case: O(n^2)
+ * best-case: O(n)
+ * average-complexity: O(n^2)
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 20
-
-#include <stdbool.h>
 #include <assert.h>
+#include <stdbool.h>
+
+#define MAX 20
 
 /**
  * Bubble sort implementation
