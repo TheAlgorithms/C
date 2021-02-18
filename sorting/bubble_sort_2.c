@@ -84,5 +84,5 @@ static void test() {
 int main()
 {
     test();  // run self-test implementations
-    return EXIT_SUCCESS;
+    return 0;
 }
