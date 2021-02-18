@@ -5,6 +5,9 @@
  * worst-case: O(n^2)
  * best-case: O(n)
  * average-complexity: O(n^2)
+
+ * @author Unknown author
+ * @author [Gabriel Fioravante](https://github.com/northernSage)
  */
 
 #include <stdio.h>
@@ -15,10 +18,11 @@
 #define MAX 20
 
 /**
- * Bubble sort implementation
+ * @brief Bubble sort implementation
  * @param array_sort the array to be sorted
+ * @returns void
  */
-void bubblesort(int* array_sort)
+void bubble_sort(int* array_sort)
 {
 	bool is_sorted = false;
 
@@ -49,7 +53,7 @@ void bubblesort(int* array_sort)
 }
 
 /**
- * @brief Test function
+ * @brief Test implementations
  * @returns void
  */
 static void test() {
@@ -64,7 +68,7 @@ static void test() {
     }
 
     /* sort array */
-    bubblesort(array_sort);
+    bubble_sort(array_sort);
 
     /* check if array ir correctly ordered */	
     for (int i = 0; i < MAX - 1; i++)
@@ -79,6 +83,6 @@ static void test() {
  */
 int main()
 {
-	test(); // call test routine
+    test();  // run self-test implementations
     return EXIT_SUCCESS;
 }
