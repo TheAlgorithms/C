@@ -10,9 +10,9 @@
  * @author [Gabriel Fioravante](https://github.com/northernSage)
  */
 
-#include <stdlib.h>   // for rand() calls
-#include <assert.h>   // for testing assert(<expr>)
-#include <stdbool.h>  // for boolean values: true, false  
+#include <stdlib.h>   /// for rand() calls
+#include <assert.h>   /// for assert(<expr>)
+#include <stdbool.h>  /// for boolean values: true, false  
 
 #define MAX 20
 
