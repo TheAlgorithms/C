@@ -26,7 +26,9 @@ int validEntryLineColumn(int line, char column)
     }
 
     else
+    {
         return 0;
+    }
 }
 /**
  * @brief Function validatePosition
@@ -44,23 +46,34 @@ int validatePosition(int mat[10][10], int boat, int line, int column,
     int i, j;
 
     if (boat < 1 || boat > 3)
+    {
         return 0;
+    }
+
     if (guide != 'H' && guide != 'V')
+    {
         return 0;
+    }
+
     if ((line < 0 || line > 9) || (column < 0 || column > 9))
+    {
         return 0;
+    }
 
     if (guide == 'H')
     {
         if ((10 - column) < boat)
+        {
             return 0;
-
+        }
         else
         {
             for (j = column; j < (column + boat); j++)
             {
                 if (mat[line][j] == 0)
+                {
                     cont++;
+                }
             }
         }
     }
@@ -68,14 +81,18 @@ int validatePosition(int mat[10][10], int boat, int line, int column,
     if (guide == 'V')
     {
         if ((10 - line) < boat)
+        {
             return 0;
+        }
 
         else
         {
             for (i = line; i < (line + boat); i++)
             {
                 if (mat[i][column] == 0)
+                {
                     cont++;
+                }
             }
         }
     }
@@ -201,7 +218,9 @@ void positionBoat(int mat[10][10], int boat)
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
                         if (mat[a][b] != boat)
+                        {
                             mat[a][b] = -1;
+                        }
                     }
                 }
             }
@@ -223,7 +242,9 @@ void positionBoat(int mat[10][10], int boat)
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
                         if (mat[a][b] != boat)
+                        {
                             mat[a][b] = -1;
+                        }
                     }
                 }
             }
@@ -238,7 +259,9 @@ void positionBoat(int mat[10][10], int boat)
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
                         if (mat[a][b] != boat)
+                        {
                             mat[a][b] = -1;
+                        }
                     }
                 }
             }
@@ -248,7 +271,7 @@ void positionBoat(int mat[10][10], int boat)
 /**
  * @brief Function printMessage
  * Responsible for printing the auxiliary message
- * @param msg prints msg with board
+ * @param msg msg with board
  */
 void printMessage(char *msg)
 {
@@ -285,34 +308,52 @@ char printTable(int logic, int stage)
     if (stage == 0)
     {
         if (logic == 0)
+        {
             return '.';
+        }
 
         else if (logic == -1)
+        {
             return '*';
+        }
 
         else if (logic == 1)
+        {
             return '1';
+        }
 
         else if (logic == 2)
+        {
             return '2';
+        }
 
         else
+        {
             return '3';
+        }
     }
 
     else
     {
         if (logic == 0 || logic == -1 || logic == 1 || logic == 2 || logic == 3)
+        {
             return '.';
+        }
 
         else if (logic == -2)
+        {
             return 'x';
+        }
 
         else if (logic == 10 || logic == 20 || logic == 30)
+        {
             return 'N';
+        }
 
         else
+        {
             return 'A';
+        }
     }
 }
 /**
@@ -331,16 +372,24 @@ void printsTray(int mat[10][10], int stage)
     {
         printf("%c", i);
         if (i < 74)
+        {
             printf(" ");
+        }
     }
     printf("\n");
 
     for (int i = 0; i < 12; i++)
     {
         if (i > 0 && i < 11)
+        {
             printf("%02d ", i);
+        }
+
         else
+        {
             printf("   ");
+        }
+
         for (int j = 0; j < 12; j++)
         {
             if ((i > 0 && i < 11) && (j > 0 && j < 11))
@@ -350,9 +399,14 @@ void printsTray(int mat[10][10], int stage)
                 printf("%c", imp);
             }
             else
+            {
                 printf("#");
+            }
+
             if (j < 11)
+            {
                 printf(" ");
+            }
         }
         printf("\n");
     }
@@ -367,16 +421,24 @@ void printsTray(int mat[10][10], int stage)
 void shoot(int mat[10][10], int line, int column)
 {
     if (mat[line][column] == 0 || mat[line][column] == -1)
+    {
         mat[line][column] = -2;
+    }
 
-    if (mat[line][column] == 1)
+    else if (mat[line][column] == 1)
+    {
         mat[line][column] = 10;
+    }
 
-    if (mat[line][column] == 2)
+    else if (mat[line][column] == 2)
+    {
         mat[line][column] = 20;
+    }
 
-    if (mat[line][column] == 3)
+    else if (mat[line][column] == 3)
+    {
         mat[line][column] = 30;
+    }
 }
 /**
  * @brief Function calculateScore
@@ -401,13 +463,24 @@ int calculateScore(int mat[10][10], int line, int column)
     else if (mat[line][column] == 20)
     {
         if (mat[line + 1][column] == 20)
+        {
             b = 1;
+        }
+
         if (mat[line - 1][column] == 20)
+        {
             c = 1;
+        }
+
         if (mat[line][column + 1] == 20)
+        {
             d = 1;
+        }
+
         if (mat[line][column - 1] == 20)
+        {
             e = 1;
+        }
 
         if (b == 1)
         {
@@ -418,7 +491,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 4;
             }
             else
+            {
                 return 0;
+            }
         }
 
         if (c == 1)
@@ -430,7 +505,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 4;
             }
             else
+            {
                 return 0;
+            }
         }
 
         if (d == 1)
@@ -442,7 +519,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 4;
             }
             else
+            {
                 return 0;
+            }
         }
 
         if (e == 1)
@@ -454,20 +533,32 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 4;
             }
             else
+            {
                 return 0;
+            }
         }
     }
 
     else if (mat[line][column] == 30)
     {
         if (mat[line + 1][column] == 30)
+        {
             b = 1;
+        }
+
         if (mat[line - 1][column] == 30)
+        {
             c = 1;
+        }
         if (mat[line][column + 1] == 30)
+        {
             d = 1;
+        }
+
         if (mat[line][column - 1] == 30)
+        {
             e = 1;
+        }
 
         if (b == 1 && c == 1)
         {
@@ -479,7 +570,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
 
         else if (d == 1 && e == 1)
@@ -492,7 +585,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
 
         else if (d == 1)
@@ -505,7 +600,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
 
         else if (e == 1)
@@ -518,7 +615,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
 
         else if (c == 1)
@@ -531,7 +630,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
 
         else if (b == 1)
@@ -544,7 +645,9 @@ int calculateScore(int mat[10][10], int line, int column)
                 return 7;
             }
             else
+            {
                 return 0;
+            }
         }
     }
     return 0;
@@ -580,26 +683,26 @@ void printPositioning(int Player, int boat, int nm)
         {
             if (nm == 1)
                 printMessage(msg1);
-            if (nm == 2)
+            else if (nm == 2)
                 printMessage(msg2);
-            if (nm == 3)
+            else if (nm == 3)
                 printMessage(msg3);
-            if (nm == 4)
+            else if (nm == 4)
                 printMessage(msg4);
-            if (nm == 5)
+            else if (nm == 5)
                 printMessage(msg5);
-            if (nm == 6)
+            else if (nm == 6)
                 printMessage(msg6);
         }
         else if (boat == 2)
         {
             if (nm == 1)
                 printMessage(msg7);
-            if (nm == 2)
+            else if (nm == 2)
                 printMessage(msg8);
-            if (nm == 3)
+            else if (nm == 3)
                 printMessage(msg9);
-            if (nm == 4)
+            else if (nm == 4)
                 printMessage(msg10);
         }
         else if (boat == 3)
@@ -632,33 +735,33 @@ void printPositioning(int Player, int boat, int nm)
         {
             if (nm == 1)
                 printMessage(msg1);
-            if (nm == 2)
+            else if (nm == 2)
                 printMessage(msg2);
-            if (nm == 3)
+            else if (nm == 3)
                 printMessage(msg3);
-            if (nm == 4)
+            else if (nm == 4)
                 printMessage(msg4);
-            if (nm == 5)
+            else if (nm == 5)
                 printMessage(msg5);
-            if (nm == 6)
+            else if (nm == 6)
                 printMessage(msg6);
         }
-        if (boat == 2)
+        else if (boat == 2)
         {
             if (nm == 1)
                 printMessage(msg7);
-            if (nm == 2)
+            else if (nm == 2)
                 printMessage(msg8);
-            if (nm == 3)
+            else if (nm == 3)
                 printMessage(msg9);
-            if (nm == 4)
+            else if (nm == 4)
                 printMessage(msg10);
         }
-        if (boat == 3)
+        else if (boat == 3)
         {
             if (nm == 1)
                 printMessage(msg11);
-            if (nm == 2)
+            else if (nm == 2)
                 printMessage(msg12);
         }
     }
