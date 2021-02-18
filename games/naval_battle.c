@@ -3,12 +3,16 @@
  * @author [Carlos Rafael](https://github.com/CarlosZoft)
  * @author [Herick Lima](https://github.com/hericklima22)
  * @brief [naval_battle](https://en.wikipedia.org/wiki/Battleship_(game))
- * implementation in C using only the stdio.h library.
+ * implementation in C using only the stdio.h for Standard Input and Output.
  * @details  Naval battle is a game, to be played by two people. It consists of
  * knocking down the enemy ship, through shots , when hit the ship is
  * revealed with the respective number of its size. Example: size 3 = 3 3 3 on
  * the board.
+ * To play - boats over size 1, need direction; V -> vertical and H ->
+ * horizontal. Example Input 1 A H -> line 1, column A, direction H
+ * (Horizontal).
  */
+
 #include <stdio.h>  // for Standard Input Output
 
 /**
