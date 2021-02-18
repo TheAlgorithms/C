@@ -12,11 +12,11 @@
 #include <stdio.h>  // for Standard Input Output
 
 /**
- * Function validEntryLineColumn
+ * @brief Function validEntryLineColumn
  * Responsible for validating entries, for positioning boats
- * @param line -> matrix row
- * @param column -> matrix column
- * @returns -> validates row and column entry of the board
+ * @param line matrix row
+ * @param column matrix column
+ * @returns if the row and column are valid
  */
 int validEntryLineColumn(int line, char column)
 {
@@ -29,13 +29,13 @@ int validEntryLineColumn(int line, char column)
         return 0;
 }
 /**
- * Function validatePosition
+ * @brief Function validatePosition
  * Responsible for checking if the position can receive the boat.
- * @param -> mat board
- * @param -> boat boat
- * @param -> line matrix row
- * @param -> column matrix column
- * @returns -> checks if the position is valid
+ * @param mat board
+ * @param boat boat
+ * @param line matrix row
+ * @param column matrix column
+ * @returns if the position is valid
  */
 int validatePosition(int mat[10][10], int boat, int line, int column,
                      char guide)
@@ -90,12 +90,12 @@ int validatePosition(int mat[10][10], int boat, int line, int column,
     }
 }
 /**
- * Function canShoot
+ * @brief Function canShoot
  * Responsible to verify that it is a valid position to shoot
- * @param mat -> board
- * @param line -> matrix row
- * @param column -> matrix column
- * @returns -> checks if the position is valid for shooting
+ * @param mat board
+ * @param line matrix row
+ * @param column matrix column
+ * @returns if the position is valid for shooting
  */
 
 int canShoot(int mat[10][10], int line, int column)
@@ -113,11 +113,10 @@ int canShoot(int mat[10][10], int line, int column)
     }
 }
 /**
- * Function positionBoat
+ * @brief Function positionBoat
  * Responsible for placing the boats on the board, according to the size.
- * @param mat -> board
- * @param boat -> boat
- * @returns(void) -> position the boat on the board
+ * @param mat board
+ * @param boat boat
  */
 void positionBoat(int mat[10][10], int boat)
 {
@@ -247,10 +246,9 @@ void positionBoat(int mat[10][10], int boat)
     }
 }
 /**
- * Functions printMessage and printMessageScore
- * Responsible for printing the score messages
- * @param msg -> return msg with board
- * @returns prints visual matrix
+ * @brief Function printMessage
+ * Responsible for printing the auxiliary message
+ * @param msg prints msg with board
  */
 void printMessage(char *msg)
 {
@@ -260,6 +258,12 @@ void printMessage(char *msg)
     printf("*\n");
     printf("************************\n");
 }
+/**
+ * @brief Function printMessageScore
+ * Responsible for printing the score messages
+ * @param pts1 player 1 score
+ * @param pts2 player 2 score
+ */
 void printMessageScore(int pts1, int pts2)
 {
     printf("************************\n");
@@ -270,11 +274,11 @@ void printMessageScore(int pts1, int pts2)
     printf("************************\n");
 }
 /**
- * Function printTable
+ * @brief Function printTable
  * Responsible for printing the board
- * @param logic -> return of the logical matrix
- * @param stage -> game step
- * @returns -> prints visual matrix
+ * @param logic return of the logical matrix
+ * @param stage game step
+ * @returns char for visual matrix
  */
 char printTable(int logic, int stage)
 {
@@ -312,11 +316,10 @@ char printTable(int logic, int stage)
     }
 }
 /**
- * Function printsTray
+ * @brief Function printsTray
  * Responsible for printing the visual board for the user
- * @param mat -> Matrix
- * @param stage ->  game step
- * @returns ->  show board
+ * @param mat Matrix
+ * @param stage game step
  */
 void printsTray(int mat[10][10], int stage)
 {
@@ -355,12 +358,11 @@ void printsTray(int mat[10][10], int stage)
     }
 }
 /**
- * Function shoot
+ * @brief Function shoot
  * Responsible for saying if he hit a boat
- * @param mat -> board
- * @param line -> matrix row
- * @param column -> matrix column
- * @returns -> shoot function
+ * @param mat board
+ * @param line matrix row
+ * @param column matrix column
  */
 void shoot(int mat[10][10], int line, int column)
 {
@@ -377,12 +379,12 @@ void shoot(int mat[10][10], int line, int column)
         mat[line][column] = 30;
 }
 /**
- * Function calculateScore
+ * @brief Function calculateScore
  * Responsible for calculating the score obtained during the game
- * @param mat -> board
- * @param line -> matrix row
- * @param column -> matrix column
- * @returns -> calculate score
+ * @param mat board
+ * @param line matrix row
+ * @param column matrix column
+ * @returns resulting score
  */
 
 int calculateScore(int mat[10][10], int line, int column)
@@ -548,13 +550,12 @@ int calculateScore(int mat[10][10], int line, int column)
     return 0;
 }
 /**
- * Function printPositioning
+ * @brief Function printPositioning
  * Responsible for printing messages for positioning boats on the board; of
  * player 1 and 2
  * @param Player number representing the Player
  * @param boat number that represents the boat
  * @param nm which message to print
- * @returns shows boat positioning messages
  */
 void printPositioning(int Player, int boat, int nm)
 {
