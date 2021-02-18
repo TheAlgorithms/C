@@ -33,10 +33,10 @@ uint64_t sdbm(const char* s)
  */
 void test_sdbm()
 {
-    assert(sdbm("Hello World") == 12881824461405877380);
+    assert(sdbm("Hello World") == 12881824461405877380U);
     assert(sdbm("Hello World!") == 7903571203300273309);
-    assert(sdbm("Hello world") == 15154913742888948900);
-    assert(sdbm("Hello world!") == 15254999417003201661);
+    assert(sdbm("Hello world") == 15154913742888948900U);
+    assert(sdbm("Hello world!") == 15254999417003201661U);
     printf("Tests passed\n");
 }
 
