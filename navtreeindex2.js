@@ -1,5 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"d7/d98/spirograph_8c.html#a525335710b53cb064ca56b936120431e":[15,0,6,0,0],
+"d7/d98/spirograph_8c.html#a708a4c1a4d0c4acc4c447310dd4db27f":[15,0,6,0,3],
+"d7/db5/md_exercism__r_e_a_d_m_e.html":[8],
+"d7/db5/md_exercism__r_e_a_d_m_e.html#autotoc_md58":[3],
+"d7/dd3/problem__3_2sol1_8c.html":[15,0,11,15,0],
 "d7/dd3/problem__3_2sol1_8c.html#aa0f4796aa2e89c327f827bd55f5cb305":[15,0,11,15,0,0],
 "d7/dd3/problem__3_2sol1_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,11,15,0,1],
 "d7/dd8/c__atoi__str__to__integer_8c.html":[15,0,1,0],
@@ -182,10 +187,10 @@ var NAVTREEINDEX2 =
 "db/dd5/prime__seive_8c.html":[15,0,9,8],
 "db/dd5/prime__seive_8c.html#ac1215a37edfa07d37edf6ec65f2235c7":[15,0,9,8,4],
 "db/ddb/hello__world_8h_source.html":[15,0,4,1,0],
-"db/ddf/insertion__sort_8c.html":[15,0,13,3],
-"db/ddf/insertion__sort_8c.html#a0d6c227641a5e0dae580b3a18df241fb":[15,0,13,3,0],
-"db/ddf/insertion__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[15,0,13,3,2],
-"db/ddf/insertion__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[15,0,13,3,1],
+"db/ddf/insertion__sort_8c.html":[15,0,13,4],
+"db/ddf/insertion__sort_8c.html#a0d6c227641a5e0dae580b3a18df241fb":[15,0,13,4,0],
+"db/ddf/insertion__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[15,0,13,4,2],
+"db/ddf/insertion__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[15,0,13,4,1],
 "dc/d18/structsudoku.html":[13,4,0],
 "dc/d18/structsudoku.html#a0f01e2782e82306e6fab9a8578006f56":[13,4,0,2],
 "dc/d18/structsudoku.html#a160365012280c3e10f1b31e914e8f129":[13,4,0,1],
@@ -229,8 +234,8 @@ var NAVTREEINDEX2 =
 "dc/d9a/group__quats.html#ga8cc5e5b7a5fa492423ecf034c8bb52bd":[13,0,7,2],
 "dc/d9a/group__quats.html#gaacd70a16b61dd47a19eb5fb729c2669b":[15,0,5,0,4],
 "dc/d9a/group__quats.html#gaacd70a16b61dd47a19eb5fb729c2669b":[13,0,7,3],
-"dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1":[13,0,7,6],
 "dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1":[15,0,5,1,3],
+"dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1":[13,0,7,6],
 "dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html":[12],
 "dc/de3/hash__set_8h_source.html":[15,0,2,5,0],
 "dc/de5/structsubset.html":[14,0,34],
@@ -244,10 +249,5 @@ var NAVTREEINDEX2 =
 "dd/d06/structsegment__tree.html#aa9dc376b5b219c4cec6546483527b853":[14,0,32,1],
 "dd/d08/newton__raphson__root_8c.html":[15,0,10,2],
 "dd/d08/newton__raphson__root_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,10,2,3],
-"dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925":[15,0,10,2,2],
-"dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337":[15,0,10,2,1],
-"dd/d08/newton__raphson__root_8c.html#af270a96662132d0385cb6b4637c5a689":[15,0,10,2,0],
-"dd/d10/struct_stack.html":[14,0,33],
-"dd/d10/struct_stack.html#a2a9b92a4668113debfb801b39a41fea2":[14,0,33,0],
-"dd/d10/struct_stack.html#a6cd56fb14cbfe1d0e76e3b1a1bbbde28":[14,0,33,1]
+"dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925":[15,0,10,2,2]
 };
