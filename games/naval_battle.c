@@ -9,7 +9,7 @@
  * revealed with the respective number of its size. Example: size 3 = 3 3 3 on
  * the board.
  */
-#include <stdio.h>
+#include <stdio.h>  // for Standard Input Output
 
 /**
  * Function validEntryLineColumn
