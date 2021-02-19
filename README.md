@@ -8,6 +8,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/TheAlgorithms/C?color=red&style=flat-square)
 [![Doxygen CI](https://github.com/TheAlgorithms/C/workflows/Doxygen%20CI/badge.svg)](https://TheAlgorithms.github.io/C)
 [![Awesome CI](https://github.com/TheAlgorithms/C/workflows/Awesome%20CI%20Workflow/badge.svg)](https://github.com/TheAlgorithms/C/actions?query=workflow%3A%22Awesome+CI+Workflow%22)
+[![Income](https://img.shields.io/liberapay/receives/TheAlgorithms.svg?logo=liberapay)](https://liberapay.com/TheAlgorithms)
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheAlgorithms/donate)
 
 ## Overview
 
