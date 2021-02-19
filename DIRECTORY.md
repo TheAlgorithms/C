@@ -121,6 +121,7 @@
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.h)
 
 ## Games
+  * [Naval Battle](https://github.com/TheAlgorithms/C/blob/master/games/naval_battle.c)
   * [Tic Tac Toe](https://github.com/TheAlgorithms/C/blob/master/games/tic_tac_toe.c)
 
 ## Geometry
