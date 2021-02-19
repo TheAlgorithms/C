@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sorting_20algorithms_842',['Sorting algorithms',['../d5/d4c/group__sorting.html',1,'']]],
-  ['sudoku_20solver_843',['Sudoku solver',['../d5/df4/group__sudoku.html',1,'']]]
+  ['sorting_20algorithms_866',['Sorting algorithms',['../d5/d4c/group__sorting.html',1,'']]],
+  ['sudoku_20solver_867',['Sudoku solver',['../d5/df4/group__sudoku.html',1,'']]]
 ];

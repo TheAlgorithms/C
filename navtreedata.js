@@ -123,8 +123,8 @@ var NAVTREEINDEX =
 "annotated.html",
 "d4/d7b/problem__6_2sol_8c.html",
 "d7/d98/spirograph_8c.html#a525335710b53cb064ca56b936120431e",
-"dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337",
-"globals_u.html"
+"dc/de3/hash__set_8h_source.html",
+"globals_h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
