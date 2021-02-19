@@ -441,7 +441,6 @@ void shoot(int mat[10][10], int line, int column)
 
 int calculateScore(int mat[10][10], int line, int column)
 {
-    int i, j, cont = 1;
     int c = 0, b = 0, e = 0, d = 0;
 
     if (mat[line][column] == 10)
