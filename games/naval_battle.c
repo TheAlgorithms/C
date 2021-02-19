@@ -151,19 +151,19 @@ void positionBoat(int mat[10][10], int boat)
         }
     }
 
-    column -= 65;
+    int aux = column - 'A';
     line -= 1;
 
     if (boat == 1)
     {
-        for (j = column; j < (column + boat); j++)
+        for (j = aux; j < (aux + boat); j++)
         {
             mat[line][j] = boat;
         }
 
         for (int a = line - 1; a < (line + boat + 1); a++)
         {
-            for (int b = column - 1; b < (column + boat + 1); b++)
+            for (int b = aux - 1; b < (aux + boat + 1); b++)
             {
                 if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                 {
@@ -178,7 +178,7 @@ void positionBoat(int mat[10][10], int boat)
 
     if (guide == 'H')
     {
-        for (j = column; j < (column + boat); j++)
+        for (j = aux; j < (aux + boat); j++)
         {
             mat[line][j] = boat;
         }
@@ -186,7 +186,7 @@ void positionBoat(int mat[10][10], int boat)
         {
             for (int a = line - 1; a < (line + boat - 1); a++)
             {
-                for (int b = column - 1; b < (column + boat + 1); b++)
+                for (int b = aux - 1; b < (aux + boat + 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
@@ -203,7 +203,7 @@ void positionBoat(int mat[10][10], int boat)
         {
             for (int a = line - 1; a < (line + boat); a++)
             {
-                for (int b = column - 1; b < (column + boat + 1); b++)
+                for (int b = aux - 1; b < (aux + boat + 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
@@ -221,13 +221,13 @@ void positionBoat(int mat[10][10], int boat)
     {
         for (j = line; j < (line + boat); j++)
         {
-            mat[j][column] = boat;
+            mat[j][aux] = boat;
         }
         if (boat == 3)
         {
             for (int a = line - 1; a < (line + boat + 1); a++)
             {
-                for (int b = column - 1; b < (column + boat - 1); b++)
+                for (int b = aux - 1; b < (aux + boat - 1); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
@@ -244,7 +244,7 @@ void positionBoat(int mat[10][10], int boat)
         {
             for (int a = line - 1; a < (line + boat + 1); a++)
             {
-                for (int b = column - 1; b < (column + boat); b++)
+                for (int b = aux - 1; b < (aux + boat); b++)
                 {
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
