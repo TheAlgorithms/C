@@ -13,7 +13,7 @@
  * (Horizontal).
  */
 
-#include <stdio.h>  // for Standard Input Output
+#include <stdio.h>  /// for Standard Input Output
 
 /**
  * @brief Function validEntryLineColumn
