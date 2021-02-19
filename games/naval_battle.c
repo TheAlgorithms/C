@@ -29,10 +29,7 @@ int validEntryLineColumn(int line, char column)
         return 1;
     }
 
-    else
-    {
-        return 0;
-    }
+    return 0 ;
 }
 /**
  * @brief Function validatePosition
