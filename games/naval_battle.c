@@ -123,7 +123,7 @@ int canShoot(int mat[10][10], int line, int column)
  */
 void positionBoat(int mat[10][10], int boat)
 {
-    int line, j, i;
+    int line, j;
     char column, guide;
 
     if (boat == 1)
