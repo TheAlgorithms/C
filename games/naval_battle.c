@@ -113,10 +113,7 @@ int canShoot(int mat[10][10], int line, int column)
         return 0;
     }
 
-    else
-    {
-        return 1;
-    }
+    return 1;
 }
 /**
  * @brief Function positionBoat
