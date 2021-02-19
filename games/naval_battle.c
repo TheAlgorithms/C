@@ -186,7 +186,9 @@ void positionBoat(int mat[10][10], int boat)
                 if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                 {
                     if (mat[a][b] != boat)
+                    {
                         mat[a][b] = -1;
+                    }
                 }
             }
         }
@@ -207,7 +209,9 @@ void positionBoat(int mat[10][10], int boat)
                     if (a >= 0 && a <= 9 && b >= 0 && b <= 9)
                     {
                         if (mat[a][b] != boat)
+                        {
                             mat[a][b] = -1;
+                        }
                     }
                 }
             }
@@ -686,35 +690,62 @@ void printPositioning(int Player, int boat, int nm)
         if (boat == 1)
         {
             if (nm == 1)
+            {
                 printMessage(msg1);
+            }
             else if (nm == 2)
+            {
                 printMessage(msg2);
+            }
             else if (nm == 3)
+            {
                 printMessage(msg3);
+            }
+
             else if (nm == 4)
+            {
                 printMessage(msg4);
+            }
+
             else if (nm == 5)
+            {
                 printMessage(msg5);
+            }
+
             else if (nm == 6)
+            {
                 printMessage(msg6);
+            }
         }
         else if (boat == 2)
         {
             if (nm == 1)
+            {
                 printMessage(msg7);
+            }
             else if (nm == 2)
+            {
                 printMessage(msg8);
+            }
             else if (nm == 3)
+            {
                 printMessage(msg9);
+            }
             else if (nm == 4)
+            {
                 printMessage(msg10);
+            }
         }
         else if (boat == 3)
         {
             if (nm == 1)
+            {
                 printMessage(msg11);
+            }
             if (nm == 2)
+            {
                 printMessage(msg12);
+            }
         }
     }
 
@@ -738,35 +769,59 @@ void printPositioning(int Player, int boat, int nm)
         if (boat == 1)
         {
             if (nm == 1)
+            {
                 printMessage(msg1);
+            }
             else if (nm == 2)
+            {
                 printMessage(msg2);
+            }
             else if (nm == 3)
+            {
                 printMessage(msg3);
+            }
             else if (nm == 4)
+            {
                 printMessage(msg4);
+            }
             else if (nm == 5)
+            {
                 printMessage(msg5);
+            }
             else if (nm == 6)
+            {
                 printMessage(msg6);
+            }
         }
         else if (boat == 2)
         {
             if (nm == 1)
+            {
                 printMessage(msg7);
+            }
             else if (nm == 2)
+            {
                 printMessage(msg8);
+            }
             else if (nm == 3)
+            {
                 printMessage(msg9);
+            }
             else if (nm == 4)
+            {
                 printMessage(msg10);
+            }
         }
         else if (boat == 3)
         {
             if (nm == 1)
+            {
                 printMessage(msg11);
+            }
             else if (nm == 2)
+            {
                 printMessage(msg12);
+            }
         }
     }
 }
