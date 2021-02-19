@@ -29,7 +29,7 @@ int validEntryLineColumn(int line, char column)
         return 1;
     }
 
-    return 0 ;
+    return 0;
 }
 /**
  * @brief Function validatePosition
@@ -46,17 +46,8 @@ int validatePosition(int mat[10][10], int boat, int line, int column,
     int cont = 0;
     int i, j;
 
-    if (boat < 1 || boat > 3)
-    {
-        return 0;
-    }
-
-    if (guide != 'H' && guide != 'V')
-    {
-        return 0;
-    }
-
-    if ((line < 0 || line > 9) || (column < 0 || column > 9))
+    if (line < 0 || line > 9 || column < 0 || column > 9 ||
+        (guide != 'H' && guide != 'V') || boat < 1 || boat > 3)
     {
         return 0;
     }
@@ -102,10 +93,7 @@ int validatePosition(int mat[10][10], int boat, int line, int column,
     {
         return 1;
     }
-    else
-    {
-        return 0;
-    }
+    return 0;
 }
 /**
  * @brief Function canShoot
