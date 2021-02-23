@@ -18,8 +18,9 @@ int main(int argc, char **argv)
             fprintf(stderr, "Maximum %d!\n", MAX_LEN);
             return 1;
         }
-        a = (int *)malloc(n * sizeof(int));
     }
+    
+    a = (int *)malloc(n * sizeof(int));
 
     printf("Random Numbers Generated are : ");
     for (i = 0; i < n; i++)
