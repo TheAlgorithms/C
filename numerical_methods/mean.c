@@ -18,10 +18,11 @@ int main(int argc, char **argv)
             fprintf(stderr, "Maximum %d!\n", MAX_LEN);
             return 1;
         }
-        a = (int *)malloc(n * sizeof(int));
     }
+    
+    a = (int *)malloc(n * sizeof(int));
 
-    printf("Random Numbers Generated are : ");
+    printf("Random Numbers Generated are: ");
     for (i = 0; i < n; i++)
     {
         a[i] = rand() % 100;
@@ -32,8 +33,8 @@ int main(int argc, char **argv)
     for (i = 0; i < n; i++) sum = sum + a[i];
 
     mean = sum / (float)n;
-    printf("\nMean :");
-    printf("%f", mean);
+    printf("\nMean: ");
+    printf("%f\n", mean);
 
     free(a);
     return 0;
