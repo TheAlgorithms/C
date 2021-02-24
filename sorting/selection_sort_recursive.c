@@ -45,7 +45,7 @@ int findIndex(int *arr, int size)
 }
 
 /**
- * Selection Sort algorithm implemented using recursion
+ * @brief Selection Sort algorithm implemented using recursion
  * @param arr array to be sorted
  * @param size size of array
  */
