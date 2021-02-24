@@ -10,7 +10,7 @@
 #include <time.h>
 
 /**
- * Swapped two numbers using pointer
+ * @brief Swapped two numbers using pointer
  * @param first first pointer of first number
  * @param second second pointer of second number
  */
