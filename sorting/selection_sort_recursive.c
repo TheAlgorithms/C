@@ -26,7 +26,7 @@ void swap(int *first, int *second)
  *  @param arr array to be sorted
  * @param size size of array
 */
-int findIndex(int *arr, int size)
+int findIndex(const int *arr, const int size)
 {
     if (size == 1)
     {
