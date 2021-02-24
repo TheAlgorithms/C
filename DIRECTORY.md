@@ -389,6 +389,7 @@
   * [Radix Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/radix_sort_2.c)
   * [Random Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/random_quick_sort.c)
   * [Selection Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/selection_sort.c)
+  * [Selection Sort Recursive](https://github.com/TheAlgorithms/C/blob/master/sorting/selection_sort_recursive.c)
   * [Shaker Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shaker_sort.c)
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort.c)
   * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort2.c)
