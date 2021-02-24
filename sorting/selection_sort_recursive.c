@@ -12,7 +12,7 @@
 /**
  * @brief Swapped two numbers using pointer
  * @param first pointer of first number
- * @param second second pointer of second number
+ * @param second pointer of second number
  */
 void swap(int *first, int *second)
 {
