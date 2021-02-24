@@ -75,7 +75,7 @@ void selectionSort(int *arr, const int size)
 /**
  * Test function
  */
-void test()
+static void test()
 {
     const int size = 10;
     int *arr = (int *)calloc(size, sizeof(int));
