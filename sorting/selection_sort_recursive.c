@@ -94,7 +94,10 @@ static void test()
     free(arr);
 }
 
-/** Driver Code */
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     /* Intializes random number generator */
