@@ -22,7 +22,7 @@ void swap(int *first, int *second)
 }
 
 /**
- * returned the index having minimum value using recursion
+ * @brief returned the index having minimum value using recursion
  *  @param arr array to be sorted
  * @param size size of array
 */
