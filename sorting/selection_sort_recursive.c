@@ -73,7 +73,8 @@ void selectionSort(int *arr, const int size)
 }
 
 /**
- * Test function
+ * @brief Self-test implementations
+ * @returns void
  */
 static void test()
 {
