@@ -49,7 +49,7 @@ int findIndex(const int *arr, const int size)
  * @param arr array to be sorted
  * @param size size of array
  */
-void selectionSort(int *arr, int size)
+void selectionSort(int *arr, const int size)
 {
     if (size == 1)
     {
