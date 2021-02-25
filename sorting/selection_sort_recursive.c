@@ -8,15 +8,16 @@
 #include<stdio.h>   /// for IO operations
 #include <stdlib.h> /// for dynamic memory allocation
 #include <time.h>   /// for random numbers generation
+#include <inttypes.h> /// for uint8_t
 
 /**
  * @brief Swapped two numbers using pointer
  * @param first pointer of first number
  * @param second pointer of second number
  */
-void swap(int *first, int *second)
+void swap(uint8_t *first, uint8_t *second)
 {
-    int temp = *first;
+    uint8_t temp = *first;
     *first = *second;
     *second = temp;
 }
@@ -27,7 +28,7 @@ void swap(int *first, int *second)
  * @param size size of array
  * @return min_index index of element having minimum value.
 */
-int findIndex(const int *arr, const int size)
+uint8_t findIndex(const uint8_t *arr, const uint8_t size)
 {
     if (size == 1)
     {
@@ -35,7 +36,7 @@ int findIndex(const int *arr, const int size)
     }
 
     // marking recursive call to reach starting element
-    int min_index = findIndex(arr, size - 1);
+    uint8_t min_index = findIndex(arr, size - 1);
 
     if (arr[size - 1] < arr[min_index])
     {
@@ -51,7 +52,7 @@ int findIndex(const int *arr, const int size)
  * @param size size of the array
  * @returns void
  */
-void selectionSort(int *arr, const int size)
+void selectionSort(uint8_t *arr, const uint8_t size)
 {
     if (size == 1)
     {
@@ -59,7 +60,7 @@ void selectionSort(int *arr, const int size)
     }
 
     /* findIndex(arr, size) returned the index having min value*/
-    int min_index = findIndex(arr, size);
+    uint8_t min_index = findIndex(arr, size);
     /* arr[min_index] is the minimum value in the array*/
 
     if (min_index != 0)
@@ -77,16 +78,16 @@ void selectionSort(int *arr, const int size)
  */
 static void test()
 {
-    const int size = 10;
-    int *arr = (int *)calloc(size, sizeof(int));
+    const uint8_t size = 10;
+    uint8_t *arr = (uint8_t *)calloc(size, sizeof(uint8_t));
 
     /* generate size random numbers from 0 to 100 */
-    for (int i = 0; i < size; i++)
+    for (uint8_t i = 0; i < size; i++)
     {
         arr[i] = rand() % 100;
     }
     selectionSort(arr, size);
-    for (int i = 0; i < size - 1; ++i)
+    for (uint8_t i = 0; i < size - 1; ++i)
     {
         assert(arr[i] <= arr[i + 1]);
     }
