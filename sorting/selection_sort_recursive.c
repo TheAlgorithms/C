@@ -29,7 +29,7 @@ void swap(uint8_t *first, uint8_t *second)
  * @param size size of array
  * @return min_index index of element having minimum value.
 */
-uint8_t findIndex(const uint8_t *arr, const uint8_t& size)
+uint8_t findIndex(const uint8_t *arr, const uint8_t size)
 {
     if (size == 1)
     {
