@@ -136,7 +136,7 @@ int top(Heap *heap)
     if (heap->count != 0)
         return *(heap->p);
     else
-        return INT_MIN;
+        return ;
 }
 int empty(Heap *heap)
 {
