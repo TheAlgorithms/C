@@ -5,11 +5,11 @@
  * implementation using recursion.
  */
  
-#include <assert.h> /// for assert
-#include <stdio.h>   /// for IO operations
-#include <stdlib.h> /// for dynamic memory allocation
-#include <time.h>   /// for random numbers generation
-#include <inttypes.h> /// for uint8_t
+#include <assert.h>     /// for assert
+#include <stdio.h>      /// for IO operations
+#include <stdlib.h>     /// for dynamic memory allocation
+#include <time.h>       /// for random numbers generation
+#include <inttypes.h>   /// for uint8_t
 
 /**
  * @brief Swapped two numbers using pointer
