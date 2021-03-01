@@ -18,7 +18,7 @@
  */
 void swap(int8_t *first, int8_t *second)
 {
-    uint8_t temp = *first;
+    int8_t temp = *first;
     *first = *second;
     *second = temp;
 }
