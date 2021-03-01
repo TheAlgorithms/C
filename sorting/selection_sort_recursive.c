@@ -27,7 +27,7 @@ void swap(uint8_t *first, uint8_t *second)
  * @brief Returns the index having minimum value using recursion
  * @param arr array to be sorted
  * @param size size of array
- * @return min_index index of element having minimum value.
+ * @return min_index index of an element having a minimum value
 */
 uint8_t findIndex(const uint8_t *arr, const uint8_t size)
 {
