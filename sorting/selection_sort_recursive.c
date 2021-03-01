@@ -4,19 +4,19 @@
  * @brief [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
  * implementation using recursion.
  */
- 
+
 #include <assert.h>     /// for assert
 #include <stdio.h>      /// for IO operations
 #include <stdlib.h>     /// for dynamic memory allocation
 #include <time.h>       /// for random numbers generation
-#include <inttypes.h>   /// for uint8_t
+#include <inttypes.h>   /// for uint8_t, int8_t
 
 /**
  * @brief Swapped two numbers using pointer
  * @param first pointer of first number
  * @param second pointer of second number
  */
-void swap(uint8_t *first, uint8_t *second)
+void swap(int8_t *first, int8_t *second)
 {
     uint8_t temp = *first;
     *first = *second;
@@ -29,7 +29,7 @@ void swap(uint8_t *first, uint8_t *second)
  * @param size size of array
  * @return min_index index of an element having a minimum value
 */
-uint8_t findIndex(const uint8_t *arr, const uint8_t size)
+uint8_t findIndex(const int8_t *arr, const uint8_t size)
 {
     if (size == 1)
     {
@@ -53,9 +53,9 @@ uint8_t findIndex(const uint8_t *arr, const uint8_t size)
  * @param size size of the array
  * @returns void
  */
-void selectionSort(uint8_t *arr, const uint8_t size)
+void selectionSort(int8_t *arr, const uint8_t size)
 {
-    if (size == 1)
+    if (size <= 1)
     {
         return;
     }
@@ -80,7 +80,7 @@ void selectionSort(uint8_t *arr, const uint8_t size)
 static void test()
 {
     const uint8_t size = 10;
-    uint8_t *arr = (uint8_t *)calloc(size, sizeof(uint8_t));
+    int8_t *arr = (int8_t *)calloc(size, sizeof(int8_t));
 
     /* generate size random numbers from 0 to 100 */
     for (uint8_t i = 0; i < size; i++)
