@@ -17,7 +17,7 @@ void draw(char *world){
     #endif
     for(int y=0; y<MAX_Y; y++){
         for(int x=0; x<MAX_X; x++){
-            printf("%c", (*(world + 20*x + y) == 1) ? '@' : ' ' ); 
+            printf("%c", (*(world + MAX_X*y + x) == 1) ? '@' : ' ' ); 
         }
         printf("\n");
     } 
@@ -35,20 +35,20 @@ char* em(char *world){
             live = 0;
             for(int j=-1; j<2; j++){
                 for(int i=-1; i<2; i++){
-                    if( *(world + MAX_Y*(y+j) +(x+i)) == 1 ) live++;
+                    if( *(world + MAX_X*(y+j) +(x+i)) == 1 ) live++;
                 }
             }
-            if(*(world + 20*y +x) == 1){
+            if(*(world + MAX_X*y +x) == 1){
                 if(live == 3 || live == 4){
-                    *(newWorld + MAX_Y*y +x) = 1;   
+                    *(newWorld + MAX_X*y +x) = 1;   
                 }else{
-                    *(newWorld + MAX_Y*y +x) = 0;
+                    *(newWorld + MAX_X*y +x) = 0;
                 }
             }else{
                 if(live == 3){
-                    *(newWorld + MAX_Y*y +x) = 1;
+                    *(newWorld + MAX_X*y +x) = 1;
                 }else{
-                    *(newWorld + MAX_Y*y +x) = 0;
+                    *(newWorld + MAX_X*y +x) = 0;
                 }
             }
         }
@@ -64,7 +64,7 @@ int main(){
     } 
     for(int y=0; y<MAX_Y; y++){
         for(int x=0; x<MAX_X; x++){
-            *(world + 20*y + x) = ( (rand() <= (RAND_MAX / 10)) ? 1 : 0);
+            *(world + MAX_X*y + x) = ( (rand() <= (RAND_MAX / 10)) ? 1 : 0);
         }
     } 
     
