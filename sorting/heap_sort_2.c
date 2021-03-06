@@ -1,7 +1,7 @@
 /**
  * @file
  * @author [Dhruv Pasricha](https://github.com/DhruvPasricha)
- * @brief [Heap Sort](https://en.wikipedia.org/wiki/Heapsort)
+ * @brief [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) implementation
  */
 
 #include <assert.h>   /// for assert
