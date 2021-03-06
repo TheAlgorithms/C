@@ -8,7 +8,7 @@ Conway's Game of Life
 #define MAX_X 60
 #define MAX_Y 20
 
-void draw(char *world){
+void draw(const char *world){
     #ifdef _WIN32
     system("cls");
     #endif
