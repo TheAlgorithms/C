@@ -130,6 +130,7 @@ int main(){
     */
     while(1){
         draw(world); // Show the creatures of the world
+        free(world); // free old world
         world = em(world); // Calculate the next generation
         _sleep(300); // A short break
     }
