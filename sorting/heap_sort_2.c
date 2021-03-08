@@ -130,7 +130,7 @@ test()
  */
 int main()
 {
-    /* Intializes random number generator */
+    // Intializes random number generator
     srand(time(NULL));
 
     test(); // run self-test implementations
