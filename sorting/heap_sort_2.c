@@ -84,7 +84,7 @@ void heapSort(int8_t *arr, const uint8_t size)
 
     for (uint8_t i = 0; i < size; i++)
     {
-        /*Pushing arr[i] to the heap*/
+        // Pushing `arr[i]` to the heap
 
         /*heapifyUp Adjusts arr[i] to the correct position in the heap*/
         heapifyUp(arr, i);
