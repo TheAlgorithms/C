@@ -92,7 +92,7 @@ void heapSort(int8_t *arr, const uint8_t size)
 
     for (uint8_t i = size - 1; i >= 1; i--)
     {
-        /*Moving current root to the end*/
+        // Moving current root to the end
         swap(&arr[0], &arr[i]);
 
         /*heapifyDown Adjusts new root to the correct position in the heap*/
