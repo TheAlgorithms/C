@@ -8,10 +8,6 @@
  * configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine.
  * @file
  * @author [Ali Naderi](https://github.com/khod-naderi)
-* @brief [game of life game](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
-* implementation in C
-* @details  game of life, zero player
-* It has a general array called world, which is the game world in which cells live
 */
 
 #include <stdio.h>
