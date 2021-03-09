@@ -109,6 +109,9 @@ char* em(char *world){
  */
 int main(){
     char *world = malloc(1200); // create the world
+    /**
+    * The world parameter is a pointer as array 2d and contains the cells of the world
+    */
     srand(time(0)); 
     
     if(world == NULL){ 
@@ -131,7 +134,7 @@ int main(){
     
     
     /**
-    *The beginning of the eternal cycle of life
+    * The beginning of the eternal cycle of life
     */
     while(1){
         draw(world); // Show the creatures of the world
