@@ -8,7 +8,6 @@
  * configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine.
  * @file
 * @author [ali naderi](github.com/khod-naderi)
-* @author [Conway](https://en.wikipedia.org/wiki/John_Horton_Conway)
 * @brief [game of life game](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 * implementation in C
 * @details  game of life, zero player
