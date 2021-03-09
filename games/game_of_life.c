@@ -21,6 +21,8 @@
 
 /**
  * draw program function. (void)
+ * For Show the world
+ * Indicates cells with "@"
  */
 void draw(const char *world){
     #ifdef _WIN32 // for clear screen win/linux
@@ -45,6 +47,8 @@ void draw(const char *world){
 /**
  * em program function.
  * @returns char pointer new generation on clean exit. 
+ * For next world calculations
+ * It builds a new generation according to the previous generation
  */
 char* em(char *world){
     char *newWorld = malloc(1200); // Create a new world to use to avoid interference in today's world
