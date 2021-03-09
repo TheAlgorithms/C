@@ -1,6 +1,6 @@
 /**
 * Conway's Game of Life
-* @file game_of_life.c
+ * @file
 * @author [ali naderi](github.com/khod-naderi)
 * @author [Conway](https://en.wikipedia.org/wiki/John_Horton_Conway)
 * @brief [game of life game](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
