@@ -2,7 +2,20 @@
  * @file
  * @author [Dhruv Pasricha](https://github.com/DhruvPasricha)
  * @brief [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) implementation
+ * @details
+ *  Heap-sort is a comparison-based sorting algorithm.
+ *  Heap-sort can be thought of as an improved selection sort:
+ *  like selection sort, heap sort divides its input into a sorted
+ *  and an unsorted region, and it iteratively shrinks the unsorted
+ *  region by extracting the largest element from it and inserting
+ *  it into the sorted region. Unlike selection sort,
+ *  heap sort does not waste time with a linear-time scan of the
+ *  unsorted region; rather, heap sort maintains the unsorted region
+ *  in a heap data structure to more quickly find the largest element
+ *  in each step.
+ *  Time Complexity : O(Nlog(N))
  */
+
 
 #include <assert.h>   /// for assert
 #include <stdio.h>    /// for IO operations
@@ -24,6 +37,9 @@ void swap(int8_t *first, int8_t *second)
 
 /**
  * @brief heapifyDown Adjusts new root to the correct position in the heap
+ * This heapify procedure can be thought of as building a heap from
+ * the top down by successively shifting downward to establish the
+ * heap property.
  * @param arr array to be sorted
  * @param size size of array
  * @return void
@@ -56,6 +72,9 @@ void heapifyDown(int8_t *arr, const uint8_t size)
 
 /**
  * @brief heapifyUp Adjusts arr[i] to the correct position in the heap
+ * This heapify procedure can be thought of as building a heap from
+ * the bottom up by successively shifting upward to establish the
+ * heap property.
  * @param arr array to be sorted
  * @param i index of the pushed element
  * @return void
