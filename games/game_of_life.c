@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h> // for sleep (usleep)
 
 // define Make fixed values
 #define MAX_X 60 // End point X
@@ -139,7 +140,7 @@ int main(){
     while(1){
         draw(world); // Show the creatures of the world
         world = em(world); // Calculate the next generation
-        _sleep(300); // A short break
+        usleep(300000); // A short break = 0.03 sec
     }
     
     return 0;
