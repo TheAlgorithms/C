@@ -105,8 +105,7 @@ void heapSort(int8_t *arr, const uint8_t size)
  * @brief Self-test implementations
  * @returns void
  */
-static void
-test()
+static void test()
 {
     const uint8_t size = 10;
     int8_t *arr = (int8_t *)calloc(size, sizeof(int8_t));
