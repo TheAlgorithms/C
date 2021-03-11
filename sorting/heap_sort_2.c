@@ -8,7 +8,9 @@
  * like selection sort, heap sort divides its input into a sorted
  * and an unsorted region, and it iteratively shrinks the unsorted
  * region by extracting the largest element from it and inserting
- * it into the sorted region. Unlike selection sort,
+ * it into the sorted region.
+ *
+ * Unlike selection sort,
  * heap sort does not waste time with a linear-time scan of the
  * unsorted region; rather, heap sort maintains the unsorted region
  * in a heap data structure to more quickly find the largest element
