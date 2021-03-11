@@ -18,7 +18,6 @@
  * Time Complexity : O(Nlog(N))
  */
 
-
 #include <assert.h>   /// for assert
 #include <stdio.h>    /// for IO operations
 #include <stdlib.h>   /// for dynamic memory allocation
