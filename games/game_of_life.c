@@ -103,7 +103,6 @@ char* em(char *world){
 }
 
 
-
 /**
  * @brief Main function.
  * @returns 0 on exit
