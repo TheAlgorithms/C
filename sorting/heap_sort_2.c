@@ -46,7 +46,6 @@ void swap(int8_t *first, int8_t *second)
  * @param size size of array
  * @return void
 */
-
 void heapifyDown(int8_t *arr, const uint8_t size)
 {
     uint8_t i = 0;
