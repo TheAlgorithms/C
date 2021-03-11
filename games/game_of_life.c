@@ -10,10 +10,10 @@
  * @author [Ali Naderi](https://github.com/khod-naderi)
 */
 
-#include <stdio.h> // stundard input/output
-#include <stdlib.h> // for genrate random number AND memory management 
-#include <time.h> // get time system for seed random number
-#include <unistd.h> // for sleep func (usleep)
+#include <stdio.h>     /// standard input/output
+#include <stdlib.h>    /// to genrate random number AND memory management 
+#include <time.h>      /// get time system for seed random number
+#include <unistd.h>    /// for sleep func (usleep)
 
 // define Make fixed values
 #define MAX_X 60 // End point X
