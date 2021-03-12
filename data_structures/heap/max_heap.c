@@ -1,5 +1,5 @@
-#include <limits.h>
-#include <stdio.h>
+#include <limits.h> //To define the minimum value for an int
+#include <stdio.h> 
 #include <stdlib.h>
 
 typedef struct max_heap
