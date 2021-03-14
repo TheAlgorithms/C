@@ -1,5 +1,9 @@
-#include <limits.h> //To define the minimum value for an int
-#include <stdio.h> 
+/* 
+ * @limits.h defines sizes of integral types.
+ * Constants with the limits of fundamental integral types are defined using this header.
+*/
+#include <limits.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct max_heap
