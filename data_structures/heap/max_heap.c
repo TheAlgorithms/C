@@ -1,10 +1,6 @@
-/* 
- * @limits.h defines sizes of integral types.
- * Constants with the limits of fundamental integral types are defined using this header.
-*/
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <limits.h>  // to define sizes of integral types
+#include <stdio.h>   // for file related input/output functions
+#include <stdlib.h>  // for memory allocation/freeing functions
 
 typedef struct max_heap
 {
