@@ -1,6 +1,6 @@
-#include <limits.h>  // to define sizes of integral types
-#include <stdio.h>   // for file related input/output functions
-#include <stdlib.h>  // for memory allocation/freeing functions
+#include <limits.h>  /// for INT_MIN
+#include <stdio.h>   /// for IO operations
+#include <stdlib.h>  /// for dynamic memory allocation
 
 typedef struct max_heap
 {
