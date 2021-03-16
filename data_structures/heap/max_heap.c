@@ -1,5 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <limits.h>  /// for INT_MIN
+#include <stdio.h>   /// for IO operations
+#include <stdlib.h>  /// for dynamic memory allocation
 
 typedef struct max_heap
 {
