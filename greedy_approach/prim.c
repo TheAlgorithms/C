@@ -1,21 +1,48 @@
 /**
- * prim.c
- * implementation of prim's algorithm to find the MST of a weighted, connected
- * graph. Author: sl1mb0 [Timothy Maloney] (https://github.com/sl1mb0) Date:
- * 03/18/21 References: page 319 "Introduction to the Design and Analysis of
- * Algorithms" - Anany Levitin
+ * @file
+ * @author [Timothy Maloney] (https://github.com/sl1mb0)
+ * @brief [Prim's algorithm] (https://en.wikipedia.org/wiki/Prim%27s_algorithm)
+ * implementation of prim's algorithm in C to find the MST of a weighted, connected graph.
+ * @details Prim's algorithm uses a greedy approach to generate the MST of a weighted connected graph.
+ * The algorithm begins at an arbitrary vertex v, and selects a next vertex u, 
+ * where v and u are connected by a weighted edge whose weight is the minimum of all edges connected to v. 
+ * @references Page 319 "Introduction to the Design and Analysis of Algorithms" - Anany Levitin
+ * To test - enter following adjacency matrix for a  weighted connected graph:
+ *	  
+ *	  0  1  2  3
+ *        1  0  4  6
+ *        2  4  0  5
+ *        3  6  5  0
+ *
+ * The minimum spanning tree for the above weighted connected graph is given by the following adj matrix:
+ *	   
+ *	  0  1  3  2
+ *	  1  0  0  0
+ *	  3  0  0  0
+ *	  2  0  0  0
+ *
+ * The following link provides a visual representation of graphs that can be used to test / verify the algorithm for adj
+ * matrices of other weighted, connected graphs.
+ * (https://visualgo.net/en/mst)
  */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <assert.h>
 
 #define MAX 20
 #define INF 999
 
-int G[MAX][MAX];
-int MST[MAX][MAX];
-int V;
+int G[MAX][MAX];    // weighted, connected graph G
+int MST[MAX][MAX];  // adj matrix to hold minimum spanning tree of G
+int V;              // number of vertices in V in G
 
+/**
+ * @brief Function minimum
+ * Returns index of minimum element in array composed of edges connected to arbitrary vertex
+ * @param arr graph row
+ * @param N number of elements in arr
+ * @returns index of minimum element in arr
+ */
 int minimum(int arr[], int N)
 {
     int index = 0;
@@ -32,6 +59,11 @@ int minimum(int arr[], int N)
     return index;
 }
 
+/**
+ * @brief Function prim
+ * Used to find MST of user-generated adj matrix G
+ * @returns void
+ */
 void prim()
 {
     int u, v;
@@ -76,6 +108,16 @@ void prim()
     }
 }
 
+/**
+ * @brief Function test
+ * @returns 0 on exit
+ */
+
+
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main(int argc, char const *argv[])
 {
     printf("Enter the number of vertices: ");
