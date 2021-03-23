@@ -1,19 +1,31 @@
+/**
+ * @file: cycle in linked list
+ * @breif: This Algorithm detects loop in a singly linked list
+ *
+ * @descpriton: This Algorithm uses two pointers (fast and slow), fast pointer moves 2 nodes at a time and slow pointer moves 1 node at a time. If at any time fast pointer and slow pointer are pointing at the same node, we can say that loop exists.
+ *
+ * [Ankita Kulkarni](https://github.com/ankitakul)
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
-  
+ 
 // linked list node structure
 struct node {
-  int data;
-  struct node *next;
+  int data; // data assigned to data part on node
+  struct node *next; // pointer of type node, used to point the next node in linked list
 } *head;
  
  
-//function to inserts a node in front of a singly linked list 
+//@insert: function to inserts a node in front of a singly linked list
+//@param num: data that is assigned to the node
+
 void insert(int num) {
-    //Create a new node
+    //create a new node
     struct node* newNode = (struct node*) malloc(sizeof(struct node));
     
-    //assing value(num)
+    //assign value(num)
     newNode->data  = num;
     
     //Next pointer of new node will point to head node of linked list
@@ -25,15 +37,17 @@ void insert(int num) {
     //printf("Inserted Element : %d\n", num);
 }
  
-// funtion to check if loop exist
+//@findloop: function to check if loop exist
+//@param *head :it takes head (pointer to the first node) as parameter
 void findloop(struct node *head) {
 
+    // creating slow and fast pointers.
     struct node *slow, *fast;
     slow = fast = head;
    
     while(slow && fast && fast->next) {
         //Slow pointer will move one node per iteration  
-        //Fast pointer will move two nodes per iteration 
+        //Fast pointer will move two nodes per iteration
         // loop exist if slow and fast pointers are pointing to same node
         slow = slow->next;
         fast  = fast->next->next;
@@ -48,30 +62,28 @@ void findloop(struct node *head) {
     printf("No Loop in Linked List\n");
 }
 
-// fucntion to prints the linked list from head.
-void printLinkedList(struct node *nodePtr) {
-  while (nodePtr != NULL) {
-     printf("%d", nodePtr->data);
-     nodePtr = nodePtr->next;
-     if(nodePtr != NULL)
-         printf("-->");
-  }
-}
-  
+// @main: it creates a singly linked list and calls function to check if loop exists
+// @return 0 on exit
 int main() {
     
-    head=NULL;
+    head=NULL; // head is pointing to NULL
+    
     /* Creating a singly linked List*/
     insert(8);  
-    insert(3); 
-    insert(2); 
+    insert(3);
+    insert(2);
     insert(7);
     insert(9);
      
-    //Create loop in linked list
+    // this Creates a loop in linked list
+    //@test: comment/uncomment the line below to check if loop exist or not
+    
     head->next->next->next->next->next = head->next;
    
- 
+    // check if loop exists
     findloop(head);
     return 0;
     }
+
+
+
