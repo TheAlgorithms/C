@@ -18,10 +18,10 @@
  * 
  * The minimum spanning tree for the above weighted connected graph is given by the following adj matrix:
  *	   
- *	  0  1  3  2
+ *	  0  1  2  3
  *	  1  0  0  0
- *	  3  0  0  0
  *	  2  0  0  0
+ *	  3  0  0  0
  *
  *
  * The following link provides a visual representation of graphs that can be used to test / verify the algorithm for different adj
@@ -29,16 +29,13 @@
  * (https://visualgo.net/en/mst)
  */
 
-#include <stdio.h>
-#include <string.h>
-#include <assert.h>
+#include <stdio.h>   /// for IO operations
+#include <string.h>  /// for string comparison
+#include <assert.h>  /// for assert()
+#include <inttypes.h>  /// for uint16_t
 
 #define MAX 20
 #define INF 999
-
-int G[MAX][MAX];    // weighted, connected graph G
-int MST[MAX][MAX];  // adj matrix to hold minimum spanning tree of G
-int V;              // number of vertices in V in G
 
 /**
  * @brief Function minimum
@@ -47,10 +44,10 @@ int V;              // number of vertices in V in G
  * @param N number of elements in arr
  * @returns index of minimum element in arr
  */
-int minimum(int arr[], int N)
+uint16_t minimum(uint16_t arr[], uint16_t N)
 {
-    int index = 0;
-    int min = INF;
+    uint16_t index = 0;
+    uint16_t min = INF;
 
     for (int i = 0; i < N; i++)
     {
@@ -68,11 +65,11 @@ int minimum(int arr[], int N)
  * Used to find MST of user-generated adj matrix G
  * @returns void
  */
-void prim()
+void prim(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 {
-    int u, v;
-    int E_t[MAX], path[MAX];
-    int V_t[MAX], no_of_edges;
+    uint16_t u, v;
+    uint16_t E_t[MAX], path[MAX];
+    uint16_t V_t[MAX], no_of_edges;
 
     E_t[0] = 0;  // edges for current vertex
     V_t[0] = 1;  // list of visited vertices
@@ -96,8 +93,8 @@ void prim()
         }
 
         v = path[u];
-        MST[u][v] = E_t[u];
         MST[v][u] = E_t[u];
+        MST[u][v] = E_t[u];
         no_of_edges--;
         V_t[u] = 1;
 
@@ -115,13 +112,13 @@ void prim()
 /**
  * @brief Function test
  * uses test matrix and solution of test to verify correctness of prim()
- * @returns 0:success || -1:fail
+ * @returns 0:succfess || -1:fail
  */
-int test()
+void test(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 {
  
-  int test[4][4] = {{0,1,2,3},{1,0,4,6},{2,4,0,5},{3,6,5,0}};
-  int solution[4][4] = {{0,1,3,2},{1,0,0,0},{3,0,0,0},{2,0,0,0}};
+  uint16_t test[4][4] = {{0,1,2,3},{1,0,4,6},{2,4,0,5},{3,6,5,0}};
+  uint16_t solution[4][4] = {{0,1,2,3},{1,0,0,0},{2,0,0,0},{3,0,0,0}};
 
   V = 4;
 
@@ -133,18 +130,16 @@ int test()
     }
   }
 
-  prim();
+  prim(&(*G),&(*MST),V);
 
   for(int i = 0; i < V; ++i)
   {
     for(int j = 0; j < V; ++j)
     {
-      if(MST[i][j] != solution[i][j])
-        return -1;
+      //printf("MST = %d\nsolution = %d\n",MST[i][j],solution[i][j]);
+      assert(MST[i][j] == solution[i][j]);
     }
   }
-  return 0;
-
 }
 
 /**
@@ -152,28 +147,27 @@ int test()
  * gets user input adj. matrix and finds MST of that graph
  * @returns void
  */
-int user_graph()
+void user_graph(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 {
       printf("Enter the number of vertices: ");
-      scanf(" %d", &V);
+      scanf(" %hd", &V);
 
-      if(MAX < V)
-        return -1;
+      assert(V <= MAX);
 
       printf("Enter the adj matrix\n");
-      int i, j;
+      uint16_t i, j;
       for (i = 0; i < V; ++i)
       {
           for (j = 0; j < V; ++j)
           {
               printf("G[%d][%d]: ", i, j);
-              scanf(" %d", &G[i][j]);
+              scanf(" %hd", &G[i][j]);
               if (G[i][j] == 0)
                   G[i][j] = INF;
           }
       }
 
-      prim();
+      prim(&(*G),&(*MST),V);
 
       printf("minimum spanning tree:\n");
       for (i = 0; i < V; ++i)
@@ -184,7 +178,6 @@ int user_graph()
               printf("%d\t", MST[i][j]);
           }
       }
-      return 0;
 }
 
 
@@ -194,13 +187,19 @@ int user_graph()
  */
 int main(int argc, char const *argv[])
 {   
+
+    uint16_t G[MAX][MAX];    // weighted, connected graph G
+    uint16_t MST[MAX][MAX];  // adj matrix to hold minimum spanning tree of G
+    uint16_t V;              // number of vertices in V in G
+
+
     if(argc == 2 && strcmp(argv[1],"-test") == 0)
     {
-      assert(test() == 0);
+      test(&(*G),&(*MST),V);
     }
     else
     {
-      assert(user_graph() == 0);
+      user_graph(&(*G),&(*MST),V);
     }
 
     return 0;
