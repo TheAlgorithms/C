@@ -1,16 +1,15 @@
 /**
  *  \file
- *  \link Algorithm explanation:
- *  https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Exponential%20Search.md
- *  \author [Alessio Farinelli] (https://github.com/faridevnz)
+ *  \@brief [Exponential Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Exponential%20Search.md)
+ *  \author [Alessio Farinelli](https://github.com/faridevnz)
  */
-#include <assert.h>
+#include <assert.h>  /// for assert
 
 #define ELEMENT -10
 
 int binary_search(const int* arr, const int l_index, const int r_index, const int n);
 int exponential_search(const int* arr, const int length, const int n);
-void test(void);
+static void test();
 
 /**
  *  Function: exponential_search
@@ -26,10 +25,10 @@ int exponential_search(const int* arr, const int length, const int n)
 {
     // find the upperbound
     int upper_bound = 1;
-    while ( upper_bound <= length && arr[upper_bound] < n ) upper_bound = upper_bound * 2;
+    while ( upper_bound <= length && arr[upper_bound] < n ) { upper_bound = upper_bound * 2; }
     // calculate the range ( between lower_boud and upper_bound )
     int lower_bound = upper_bound/2;
-    if ( upper_bound > length ) upper_bound = length;
+    if ( upper_bound > length ) { upper_bound = length; }
     // apply the binary search in the range
     return binary_search(arr, lower_bound, upper_bound, n);
 }
@@ -50,29 +49,28 @@ int binary_search(const int* arr, const int l_index, const int r_index, const in
     // calculate the middle index of the array
     int middle_index = l_index + ( r_index - l_index ) / 2;
     // base cases
-    if ( l_index > r_index ) return -1;
-    if ( arr[middle_index] == n ) return middle_index;
+    if ( l_index > r_index ) { return -1; }
+    if ( arr[middle_index] == n ) { return middle_index; }
     // recursion
-    if ( arr[middle_index] > n ) return binary_search(arr, l_index, middle_index-1, n); // left
+    if ( arr[middle_index] > n ) { return binary_search(arr, l_index, middle_index-1, n); } // left
     return binary_search(arr, middle_index+1, r_index, n); // right
 }
 
 /**
- *  Function: main
- *  --------------
+ *  @brief Main function
+ *  @returns 0 on exit
  */
-int main(void) 
+int main() 
 {
-    // perform the tests
-    test();
+    test();  // run self-test implementations
     return 0;
 }
 
 /**
- *  Function: test
- *  --------------
+ *  @brief Self-test implementations
+ *  @returns void
  */
-void test(void)
+static void test()
 {
     // empty array
     int arr_empty[] = {};
