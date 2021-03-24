@@ -22,7 +22,7 @@ void test(void);
  *  \param n:           element to find in the array (arr)
  * 
  *  \returns:           the index of the element (n) in the array (arr)
- *  \returns:           -1 if the n element wasn't found
+ *  \returns:           -1 if the element wasn't found
  */
 int exponential_search(const int* arr, const int length, const int n) 
 {
@@ -37,7 +37,7 @@ int exponential_search(const int* arr, const int length, const int n)
 }
 
 /**
- *  Function: exponential_search
+ *  Function: binary_search
  *  ----------------------------
  *  \param arr:         array where search the element
  *  \param l_index:     start index of the array (arr) to apply the algorithm
