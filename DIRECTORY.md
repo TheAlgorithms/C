@@ -350,6 +350,7 @@
 
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/binary_search.c)
+  * [Exponential Search](https://github.com/TheAlgorithms/C/blob/master/searching/exponential_search.c)
   * [Fibonacci Search](https://github.com/TheAlgorithms/C/blob/master/searching/fibonacci_search.c)
   * [Interpolation Search](https://github.com/TheAlgorithms/C/blob/master/searching/interpolation_search.c)
   * [Jump Search](https://github.com/TheAlgorithms/C/blob/master/searching/jump_search.c)
