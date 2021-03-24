@@ -4,8 +4,6 @@
  *  https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Exponential%20Search.md
  *  \author [Alessio Farinelli] (https://github.com/faridevnz)
  */
-#include <stdio.h>
-#include <stdlib.h>
 #include <assert.h>
 
 #define ELEMENT -10
