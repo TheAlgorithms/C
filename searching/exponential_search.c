@@ -3,17 +3,19 @@
  *  \brief [Exponential Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Exponential%20Search.md)
  *  \author [Alessio Farinelli](https://github.com/faridevnz)
  */
-#include <assert.h>  // for assert
-#include <inttypes.h>  // for int64_t, uint16_t
+#include <assert.h>  /// for assert
+#include <inttypes.h>  /// for int64_t, uint16_t
 
 #define ELEMENT -10
 
-int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t r_index, const int64_t n);
-int64_t exponential_search(const int64_t* arr, const uint16_t length, const int64_t n);
-static void test();
+int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t r_index, const int64_t n); ///< used to perform the binary search over the given array
+int64_t exponential_search(const int64_t* arr, const uint16_t length, const int64_t n); ///< used to perform the exponential search over the given array
+static void test(); ///< used to run the self-test implementations
 
 /**
  *  Function: exponential_search
+ *  \details recursive function that take an array and quickly find the range 
+ *  where to apply the binary search algorithm to find the given element
  *  ----------------------------
  *  \param arr array where search the element
  *  \param length the total length of the given array (arr)
@@ -38,8 +40,7 @@ int64_t exponential_search(const int64_t* arr, const uint16_t length, const int6
 /**
  *  Function: binary_search
  *  \details recursive function that search the given element in
- *  the array using the Binary Search algorithm
- *  [Binary Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Binary%20Search.md)
+ *  the array using the [Binary Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Binary%20Search.md)
  *  ----------------------------
  *  \param arr array where search the element
  *  \param l_index start index of the array (arr) to apply the algorithm
@@ -62,8 +63,8 @@ int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t
 }
 
 /**
- *  @brief Main function
- *  @returns 0 on exit
+ * @brief Main function that run the test
+ * @returns 0 on exit
  */
 int main() 
 {
@@ -72,8 +73,8 @@ int main()
 }
 
 /**
- *  @brief Self-test implementations
- *  @returns void
+ * @brief Self-test implementations
+ * @returns void
  */
 static void test()
 {
