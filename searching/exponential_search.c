@@ -13,16 +13,17 @@ int64_t exponential_search(const int64_t* arr, const uint16_t length, const int6
 static void test(); ///< used to run the self-test implementations
 
 /**
- *  Function: exponential_search
- *  \details recursive function that take an array and quickly find the range 
- *  where to apply the binary search algorithm to find the given element
- *  ----------------------------
- *  \param arr array where search the element
- *  \param length the total length of the given array (arr)
- *  \param n element to find in the array (arr)
+ * Function: exponential_search
+ * \brief algorithm that search the index of the given item
+ * \details recursive function that take an array and quickly find the range 
+ * where to apply the binary search algorithm to find the given element
+ * ----------------------------
+ * \param arr array where search the element
+ * \param length the total length of the given array (arr)
+ * \param n element to find in the array (arr)
  * 
- *  \returns the index of the element (n) in the array (arr)
- *  \returns -1 if the element wasn't found
+ * \returns the index of the element (n) in the array (arr)
+ * \returns -1 if the element wasn't found
  */
 int64_t exponential_search(const int64_t* arr, const uint16_t length, const int64_t n) 
 {
@@ -38,17 +39,18 @@ int64_t exponential_search(const int64_t* arr, const uint16_t length, const int6
 }
 
 /**
- *  Function: binary_search
- *  \details recursive function that search the given element in
- *  the array using the [Binary Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Binary%20Search.md)
- *  ----------------------------
- *  \param arr array where search the element
- *  \param l_index start index of the array (arr) to apply the algorithm
- *  \param r_index end index of the array (arr) to apply the algorithm
- *  \param n element to find in the array (arr)
+ * Function: binary_search
+ * \brief algorithm that search the index of the given item
+ * \details recursive function that search the given element in
+ * the array using the [Binary Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Binary%20Search.md)
+ * ----------------------------
+ * \param arr array where search the element
+ * \param l_index start index of the array (arr) to apply the algorithm
+ * \param r_index end index of the array (arr) to apply the algorithm
+ * \param n element to find in the array (arr)
  *
- *  \returns the index of the element (n) in the array (arr)
- *  \returns -1 if the n element wasn't found
+ * \returns the index of the element (n) in the array (arr)
+ * \returns -1 if the n element wasn't found
  */
 int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t r_index, const int64_t n) 
 {
@@ -63,7 +65,7 @@ int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t
 }
 
 /**
- * @brief Main function that run the test
+ * @brief Main function
  * @returns 0 on exit
  */
 int main() 
