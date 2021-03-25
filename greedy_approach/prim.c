@@ -29,17 +29,17 @@
  * (https://visualgo.net/en/mst)
  */
 
-#include <stdio.h>   /// for IO operations
-#include <string.h>  /// for string comparison
-#include <assert.h>  /// for assert()
-#include <inttypes.h>  /// for uint16_t
+#include <stdio.h>       /// for IO operations
+#include <string.h>     /// for string comparison
+#include <assert.h>    /// for assert()
+#include <inttypes.h> /// for uint16_t
 
 #define MAX 20
 #define INF 999
 
 /**
  * @brief Function minimum
- * Returns index of minimum element in array composed of edges connected to arbitrary vertex
+ * Finds index of minimum element in edge list for an arbitrary vertex
  * @param arr graph row
  * @param N number of elements in arr
  * @returns index of minimum element in arr
