@@ -134,6 +134,7 @@
 
 ## Greedy Approach
   * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
+  * [Prim](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/prim.c)
 
 ## Hash
   * [Hash Adler32](https://github.com/TheAlgorithms/C/blob/master/hash/hash_adler32.c)
