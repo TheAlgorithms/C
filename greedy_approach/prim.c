@@ -2,7 +2,7 @@
  * @file
  * @author [Timothy Maloney] (https://github.com/sl1mb0)
  * @brief [Prim's algorithm] (https://en.wikipedia.org/wiki/Prim%27s_algorithm)
- * implementation of prim's algorithm in C to find the MST of a weighted, connected graph.
+ * in C to find the MST of a weighted, connected graph.
  * @details Prim's algorithm uses a greedy approach to generate the MST of a weighted connected graph.
  * The algorithm begins at an arbitrary vertex v, and selects a next vertex u, 
  * where v and u are connected by a weighted edge whose weight is the minimum of all edges connected to v. 
@@ -49,7 +49,7 @@ uint16_t minimum(uint16_t arr[], uint16_t N)
     uint16_t index = 0;
     uint16_t min = INF;
 
-    for (int i = 0; i < N; i++)
+    for (uint16_t i = 0; i < N; i++)
     {
         if (arr[i] < min)
         {
@@ -74,7 +74,7 @@ void prim(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
     E_t[0] = 0;  // edges for current vertex
     V_t[0] = 1;  // list of visited vertices
 
-    for (int i = 1; i < V; i++)
+    for (uint16_t i = 1; i < V; i++)
     {
         E_t[i] = G[i][0];
         path[i] = 0;
@@ -98,7 +98,7 @@ void prim(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
         no_of_edges--;
         V_t[u] = 1;
 
-        for (int i = 1; i < V; i++)
+        for (uint16_t i = 1; i < V; i++)
         {
             if (V_t[i] == 0 && G[u][i] < E_t[i])
             {
@@ -122,9 +122,9 @@ void test(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 
   V = 4;
 
-  for(int i = 0; i < V; ++i)
+  for(uint16_t i = 0; i < V; ++i)
   {
-    for(int j = 0; j < V; ++j)
+    for(uint16_t j = 0; j < V; ++j)
     {
       G[i][j] = test[i][j];
     }
@@ -132,11 +132,10 @@ void test(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 
   prim(&(*G),&(*MST),V);
 
-  for(int i = 0; i < V; ++i)
+  for(uint16_t i = 0; i < V; ++i)
   {
-    for(int j = 0; j < V; ++j)
+    for(uint16_t j = 0; j < V; ++j)
     {
-      //printf("MST = %d\nsolution = %d\n",MST[i][j],solution[i][j]);
       assert(MST[i][j] == solution[i][j]);
     }
   }
@@ -183,14 +182,16 @@ void user_graph(uint16_t G[][MAX], uint16_t MST[][MAX], uint16_t V)
 
 /**
  * @brief Main function
+ * @param argc commandline argument count (ignored)
+ * @param argv commandline array of arguments (ignored)
  * @returns 0 on exit
  */
 int main(int argc, char const *argv[])
 {   
 
-    uint16_t G[MAX][MAX];    // weighted, connected graph G
-    uint16_t MST[MAX][MAX];  // adj matrix to hold minimum spanning tree of G
-    uint16_t V;              // number of vertices in V in G
+    uint16_t G[MAX][MAX];    ///< weighted, connected graph G
+    uint16_t MST[MAX][MAX];  ///< adj matrix to hold minimum spanning tree of G
+    uint16_t V;              ///< number of vertices in V in G
 
 
     if(argc == 2 && strcmp(argv[1],"-test") == 0)
