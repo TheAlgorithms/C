@@ -8,6 +8,7 @@
  * 	Integers, Doubles, floats, characters and strings
  * The format specifiers and escape sequence is same as for printf
  * User can also specify the width and precision if requires just like in the case of printf
+ * Refer https://www.geeksforgeeks.org/variable-length-argument-c to know about it's basic structure
  * How to use it:
  * 	- First include minprintf.h in your code
  * 	- Then type minprintf(), and pass required parameters to it
@@ -120,7 +121,7 @@ void put_char(char s)
 }
 
 /**
- * @brief Reverses a string using two pointer algorithm
+ * @brief Reverses a string using two pointer algorithm, refer https://www.geeksforgeeks.org/program-reverse-array-using-pointers/?ref=rp for more info about this algorithm
  * @param p pointer to the string which is to be reversed
 */
 void reverse_str(char *p)
