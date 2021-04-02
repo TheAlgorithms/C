@@ -15,17 +15,12 @@
  * @author [Jaskarn Singh](https://github.com/Jaskarn7)
 */
 
-#include <stdlib.h> // For malloc and free functions
-#include <unistd.h> // For write function
-#include <stdarg.h> // For va_start and va_arg functions
+#include <stdlib.h> /// for `malloc` and `free` functions
+#include <unistd.h> /// for `write` function
+#include <stdarg.h> /// for `va_start` and `va_arg` functions
 
-/**
- * INT_MAX_LENGTH is used as standard length of string to store integers
- * PRECISION_FOR_FLOAT is default precision for float or double if not specified
-*/
-#define INT_MAX_LENGTH 10
-#define PRECISION_FOR_FLOAT 8
-
+#define INT_MAX_LENGTH 10       /// used as standard length of string to store integers
+#define PRECISION_FOR_FLOAT 8   /// default precision for float or double if not specified
 
 /**
  * @brief struct used to store character in certain times
