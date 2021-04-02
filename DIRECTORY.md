@@ -101,6 +101,7 @@
 ## Developer Tools
   * [Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/malloc_dbg.c)
   * [Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/malloc_dbg.h)
+  * [Minprintf](https://github.com/TheAlgorithms/C/blob/master/developer_tools/minprintf.h)
   * [Test Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/test_malloc_dbg.c)
 
 ## Exercism
