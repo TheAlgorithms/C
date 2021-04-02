@@ -1,18 +1,17 @@
 /**
  * @file
- * @brief Implementation of a function similar to printf
+ * @brief Implementation of a [function](https://www.geeksforgeeks.org/variable-length-argument-c) similar to `printf`
  * @details
- * printf statement rewritten (as minprinf) in c without using stdio.h library
- * Syntax of minprintf is same as printf
- * Currently minprintf handles:
+ * printf statement rewritten (as min_printf) in c without using stdio.h library
+ * Syntax of min_printf is same as printf
+ * Currently min_printf handles:
  * 	Integers, Doubles, floats, characters and strings
  * The format specifiers and escape sequence is same as for printf
  * User can also specify the width and precision if requires just like in the case of printf
- * Refer https://www.geeksforgeeks.org/variable-length-argument-c to know about it's basic structure
  * How to use it:
- * 	- First include minprintf.h in your code
- * 	- Then type minprintf(), and pass required parameters to it
- * 	- As already specified it is similar to prints so use it in the same way
+ * 	- First include min_printf.h in your code
+ * 	- Then type min_printf(), and pass required parameters to it
+ * 	- As already specified, it's syntax is same as printf 
  * @author [Jaskarn Singh](https://github.com/Jaskarn7)
 */
 
@@ -65,7 +64,7 @@ int is_number(char *c)
 
 /**
  * @brief Returns specific required next character
- * @param p pointer to a format string of `minprintf()`
+ * @param p pointer to a format string of `min_printf()`
  * @param buffer struct for checking if buffr_char character is present or not
  * @return character inside `buffer->buffr_char`, if `buffer->buf_size` is one
  * @return character at which p is pointing, if `buffer->buf_size` is zero
@@ -121,7 +120,7 @@ void put_char(char s)
 }
 
 /**
- * @brief Reverses a string using two pointer algorithm, refer https://www.geeksforgeeks.org/program-reverse-array-using-pointers/?ref=rp for more info about this algorithm
+ * @brief Reverses a string using [two pointer algorithm](https://www.geeksforgeeks.org/program-reverse-array-using-pointers/?ref=rp)
  * @param p pointer to the string which is to be reversed
 */
 void reverse_str(char *p)
@@ -291,11 +290,11 @@ char *get_width_and_precision(char *p, Buffer *buffer, int *width, int *precisio
 }
 
 /**
- * minprintf is the function same as printf
+ * min_printf is the function same as printf
  * @param fmt format of string
  * @param ... arguments passed according to the format
 */
-void minprintf(char *fmt, ...)
+void min_printf(char *fmt, ...)
 {
 	va_list ap; // Points to each unnamed arg in turn
 	char *p, *sval; // p will be used to point to fmt and sval will store string value
