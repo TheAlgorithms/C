@@ -2,15 +2,15 @@
  * @file
  * @brief Implementation of a [function](https://www.geeksforgeeks.org/variable-length-argument-c) similar to `printf`
  * @details
- * printf statement rewritten (as min_printf) in c without using stdio.h library
- * Syntax of min_printf is same as printf
+ * `printf` statement rewritten (as `min_printf`) in C without using the `stdio.h` library 
+ * Syntax of `min_printf` is same as `printf`
  * Currently min_printf handles:
  * 	Integers, Doubles, floats, characters and strings
- * The format specifiers and escape sequence is same as for printf
- * User can also specify the width and precision if requires just like in the case of printf
+ * The format specifiers and escape sequence is the same as for `printf`
+ * User can also specify the width and precision if required, just like in the case of `printf`
  * How to use it:
  * 	- First include min_printf.h in your code
- * 	- Then type min_printf(), and pass required parameters to it
+ * 	- Then type `min_printf()`, and pass required parameters to it
  * 	- As already specified, it's syntax is same as printf 
  * @author [Jaskarn Singh](https://github.com/Jaskarn7)
 */
