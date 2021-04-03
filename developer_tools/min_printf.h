@@ -15,6 +15,9 @@
  * @author [Jaskarn Singh](https://github.com/Jaskarn7)
 */
 
+#ifndef MIN_PRINTF_H
+#define MIN_PRINTF_H
+
 #include <stdlib.h> /// for `malloc` and `free` functions
 #include <unistd.h> /// for `write` function
 #include <stdarg.h> /// for `va_start` and `va_arg` functions
@@ -345,3 +348,5 @@ void min_printf(char *fmt, ...)
 	}
 	va_end(ap);
 }
+
+#endif /* MIN_PRINTF_H */

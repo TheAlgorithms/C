@@ -5,7 +5,6 @@
  * The test will be executed by comparing the result of both `min_printf` and `printf` functions
  * @author [Jaskarn7](https://github.com/Jaskarn7)
  * @see min_printf.h
- * 
 */
 
 #include "min_printf.h" /// for `min_printf` function
@@ -20,26 +19,24 @@
  * After running the program the user will see three pair of lines with each pair followed by an empty line
  * In each pair of lines, the first line will be printed by `min_printf` function and next line by the actual `printf` function
  * In each line user will see number or string covered with two colons, they are used to check from where the printing was started and where it ends
- * @return 0 on exit
+ * @returns 0 on exit
 */
-int main(void)
+int main()
 {
-    /* For testing to print integers */
+    // print strings using `printf` and `min_printf`
     min_printf(":%d: :%1.6d:\n", 12, 56);
     printf(":%d: :%1.6d:\n", 12, 56);
 
     printf("\n"); /// Printing an empty new line
 
-    /*For testing to print floats or doubles */
+    // print floats or doubles using `printf` and `min_printf`
     min_printf(":%f: :%3.6f:\n", 104.5654, 43.766443332);
     printf(":%f: :%3.6f:\n", 104.5654, 43.766443332);
 
     printf("\n");
 
-    /*For testing to print strings */
+    // print integers `printf` and `min_printf`
     min_printf(":%s: :%4.3s:\n", "Hello, World!", "Hello, World!");
     printf(":%s: :%4.3s:\n", "Hello, World!", "Hello, World!");
 
-    printf("\n");
-    return 0;
 }
