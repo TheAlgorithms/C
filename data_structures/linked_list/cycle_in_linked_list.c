@@ -1,26 +1,27 @@
 /**
  * @file
- * @breif This Algorithm detects a loop in a singly linked list 
  * @author [Ankita Kulkarni](https://github.com/ankitakul)
-**/
+ * @brief This Algorithm detects a loop in a singly linked list 
+*/
 
 #include <stdio.h> // For IO operations (printf)
 #include <stdlib.h> // For the malloc operation
  
 /**
-* @brief Linked list node structure
-**/
+* @brief Struct node
+* Linked list node structure
+*/
 struct node {
-  int data; // data assigned to data part on node
-  struct node *next; // pointer of type node, used to point the next node in linked list
+  int data; 
+  struct node *next; 
 } *head;
  
  
 /**
- * Function: insert
- * @brief This function creates a new node and inserts it in front of a singly linked list
- * @param  data that is assigned to the node
-**/
+ * @brief Function insert
+ * This function creates a new node and inserts it in front of a singly linked list
+ * @param num data that is assigned to the node
+*/
 
 void insert(int num) {
     //create a new node
@@ -39,11 +40,11 @@ void insert(int num) {
 }
  
 /**
- * Function: find_loop
- * @brief This function checks if a loop exist in the linked list
- * @param pointer to the first node in linked list
-**/
-void find_loop(struct node *head) {
+ * @brief Function findLoop
+ * This function checks if a loop exists in the linked list
+ * @param head pointer to the first node in linked list
+*/
+void findLoop(struct node *head) {
 
     // creating slow and fast pointers.
     struct node *slow, *fast;
@@ -84,7 +85,7 @@ int main() {
     head->next->next->next->next->next = head->next;
    
     // check if loop exists
-    find_loop(head);
+    findLoop(head);
     return 0;
     }
 
