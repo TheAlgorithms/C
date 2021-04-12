@@ -12,15 +12,16 @@
 * Linked list node structure
 */
 struct node {
-  int data; 
-  struct node *next; 
+  int data; //data assigned to the data part of the node
+  struct node *next; //pointer to next node in linked list
 } *head;
  
  
 /**
- * @brief Function insert
- * This function creates a new node and inserts it in front of a singly linked list
+ * Function insert
+ * @brief This function creates a new node and inserts it in front of a singly linked list
  * @param num data that is assigned to the node
+ * @returns void
 */
 
 void insert(int num) {
@@ -40,9 +41,10 @@ void insert(int num) {
 }
  
 /**
- * @brief Function findLoop
- * This function checks if a loop exists in the linked list
+ * Function findLoop
+ * @brief This function checks if a loop exists in the linked list
  * @param head pointer to the first node in linked list
+ * @returns void
 */
 void findLoop(struct node *head) {
 
@@ -67,7 +69,10 @@ void findLoop(struct node *head) {
     printf("No Loop in Linked List\n");
 }
 
-
+/**
+ * @brief Main function
+ * @returns 0 on exit
+*/
 int main() {
     
     head=NULL; // head is pointing to NULL
