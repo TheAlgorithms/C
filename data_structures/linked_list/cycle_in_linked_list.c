@@ -8,8 +8,7 @@
 #include <stdlib.h> // For the malloc operation
  
 /**
-* @brief Struct node
-* Linked list node structure
+* @brief Linked list node structure
 */
 struct node {
   int data; //data assigned to the data part of the node
