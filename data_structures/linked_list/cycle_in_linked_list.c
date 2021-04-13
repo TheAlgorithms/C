@@ -57,7 +57,7 @@ void findLoop(struct node *head) {
         slow = slow->next;
         fast  = fast->next->next;
         
-        // check for loop
+        // check if the list contains a loop
         if (slow == fast) {
            printf("Linked List contains a loop\n");
            return;
