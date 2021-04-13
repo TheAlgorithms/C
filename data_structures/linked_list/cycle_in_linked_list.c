@@ -86,7 +86,7 @@ int main() {
     
     head->next->next->next->next->next = head->next;
    
-    // check if loop exists
+    // check if a loop exists
     findLoop(head);
     return 0;
     }
