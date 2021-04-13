@@ -76,7 +76,7 @@ int main() {
     
     head=NULL; // head is pointing to NULL
     
-    /* Creating a singly linked List*/
+    // creating a singly linked List
     insert(8);  
     insert(3);
     insert(2);
@@ -92,4 +92,3 @@ int main() {
     findLoop(head);
     return 0;
     }
-
