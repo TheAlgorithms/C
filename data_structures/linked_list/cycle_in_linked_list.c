@@ -23,7 +23,7 @@ struct node {
 */
 
 void insert(int num) {
-    //create a new node
+    // create a new node
     struct node* newNode = (struct node*) malloc(sizeof(struct node));
     
     //assign value(num)
