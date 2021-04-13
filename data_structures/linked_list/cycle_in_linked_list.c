@@ -17,7 +17,7 @@ struct node {
  
  
 /**
- * @brief This function creates a new node and inserts it in front of a singly linked list
+ * @brief Creates a new node and inserts it in front of a singly linked list
  * @param num data that is assigned to the node
  * @returns void
 */
