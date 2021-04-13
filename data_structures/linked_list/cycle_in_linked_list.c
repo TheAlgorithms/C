@@ -29,7 +29,7 @@ void insert(int num) {
     // assign value(num)
     newNode->data  = num;
     
-    //next pointer of new node will point to head node of linked list
+    // next pointer of new node will point to head node of linked list
     newNode->next = head;
     
     //head of the list is the new node
