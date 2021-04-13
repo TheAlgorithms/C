@@ -39,8 +39,7 @@ void insert(int num) {
 }
  
 /**
- * Function findLoop
- * @brief This function checks if a loop exists in the linked list
+ * @brief Checks if a loop exists in the linked list
  * @param head pointer to the first node in linked list
  * @returns void
 */
