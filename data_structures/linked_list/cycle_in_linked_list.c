@@ -4,8 +4,8 @@
  * @brief This Algorithm detects a loop in a singly linked list 
 */
 
-#include <stdio.h> // For IO operations (printf)
-#include <stdlib.h> // For the malloc operation
+#include <stdio.h>  /// for IO operations (`printf`)
+#include <stdlib.h> /// for the `malloc` operation
  
 /**
 * @brief Linked list node structure
