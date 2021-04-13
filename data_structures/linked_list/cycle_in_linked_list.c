@@ -83,7 +83,7 @@ int main() {
     insert(7);
     insert(9);
      
-    // this Creates a loop in linked list
+    // this creates a loop in the linked list
     // @test comment/uncomment the line below to check if a loop exists or not
     
     head->next->next->next->next->next = head->next;
@@ -92,5 +92,4 @@ int main() {
     findLoop(head);
     return 0;
     }
-
 
