@@ -50,8 +50,8 @@ void findLoop(struct node *head) {
     slow = fast = head;
    
     while(slow && fast && fast->next) {
-        //Slow pointer will move one node per iteration  
-        //Fast pointer will move two nodes per iteration
+        // slow pointer will move one node per iteration  
+        // fast pointer will move two nodes per iteration
         // loop exist if slow and fast pointers are pointing to same node
         slow = slow->next;
         fast  = fast->next->next;
