@@ -40,7 +40,7 @@ void insert(int num) {
  
 /**
  * @brief Checks if a loop exists in the linked list
- * @param head pointer to the first node in linked list
+ * @param head pointer to the first node in the linked list
  * @returns void
 */
 void findLoop(struct node *head) {
