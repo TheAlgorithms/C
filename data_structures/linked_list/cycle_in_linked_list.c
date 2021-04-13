@@ -26,7 +26,7 @@ void insert(int num) {
     // create a new node
     struct node* newNode = (struct node*) malloc(sizeof(struct node));
     
-    //assign value(num)
+    // assign value(num)
     newNode->data  = num;
     
     //next pointer of new node will point to head node of linked list
