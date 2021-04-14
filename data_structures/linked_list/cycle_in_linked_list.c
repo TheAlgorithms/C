@@ -89,4 +89,4 @@ int main() {
     // check if a loop exists
     findLoop(head);
     return 0;
-    }
+}
