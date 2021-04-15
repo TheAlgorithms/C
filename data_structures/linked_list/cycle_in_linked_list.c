@@ -35,7 +35,7 @@ void insert(int num) {
     // head of the list is the new node
     head = newNode;
     
-    //printf("Inserted Element : %d\n", num);
+    printf("Inserted Element : %d\n", num);
 }
  
 /**
