@@ -32,7 +32,7 @@ void insert(int num) {
     // next pointer of new node will point to head node of linked list
     newNode->next = head;
     
-    //head of the list is the new node
+    // head of the list is the new node
     head = newNode;
     
     //printf("Inserted Element : %d\n", num);
