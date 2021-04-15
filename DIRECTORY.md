@@ -74,6 +74,7 @@
   * Linked List
     * [Ascending Priority Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/ascending_priority_queue.c)
     * [Circular Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/circular_linked_list.c)
+    * [Cycle In Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/cycle_in_linked_list.c)
     * [Doubly Linked List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/doubly_linked_list.c)
     * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/merge_linked_lists.c)
     * [Middle Element In List](https://github.com/TheAlgorithms/C/blob/master/data_structures/linked_list/middle_element_in_list.c)
