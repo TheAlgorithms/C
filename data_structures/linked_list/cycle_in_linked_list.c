@@ -1,11 +1,13 @@
 /**
  * @file
  * @author [Ankita Kulkarni](https://github.com/ankitakul)
- * @brief This Algorithm detects a loop in a singly linked list 
+ * @brief [Detect cycle in linked list] (https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
+ * This Algorithm detects a loop in a singly linked list 
 */
 
 #include <stdio.h>  /// for IO operations (`printf`)
 #include <stdlib.h> /// for the `malloc` operation
+#include <assert.h> /// for assert
  
 /**
 * @brief Linked list node structure
@@ -41,9 +43,10 @@ void insert(int num) {
 /**
  * @brief Checks if a loop exists in the linked list
  * @param head pointer to the first node in the linked list
- * @returns void
+ * @returns 1 if a loop is detected
+ * @returns 0 if loop not detected
 */
-void findLoop(struct node *head) {
+int findLoop(struct node *head) {
 
     // creating slow and fast pointers.
     struct node *slow, *fast;
@@ -59,11 +62,27 @@ void findLoop(struct node *head) {
         // check if the list contains a loop
         if (slow == fast) {
            printf("Linked List contains a loop\n");
-           return;
+           return 1;
         }
     }
     
     printf("No Loop in Linked List\n");
+    return 0;
+}
+
+/**
+ * @brief Test function 
+ * @param head pointer to the first node in the linked list
+ * @returns void
+*/
+void test() {
+              
+    // this creates a loop in the linked list
+    //head->next->next->next->next->next = head->next;
+
+    // check if a loop exists
+    assert(findLoop(head) ==0);
+    
 }
 
 /**
@@ -81,12 +100,7 @@ int main() {
     insert(7);
     insert(9);
      
-    // this creates a loop in the linked list
-    // @test comment/uncomment the line below to check if a loop exists or not
-    
-    head->next->next->next->next->next = head->next;
-   
-    // check if a loop exists
-    findLoop(head);
+    test(head); //execute the test
+      
     return 0;
 }
