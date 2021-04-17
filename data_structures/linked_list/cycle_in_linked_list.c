@@ -3,6 +3,7 @@
  * @author [Ankita Kulkarni](https://github.com/ankitakul)
  * @brief Detect cycle in a [Linked List](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
  * This Algorithm detects a loop in a singly linked list 
+ * @descpriton This Algorithm uses two pointers (fast and slow), fast pointer moves 2 nodes at a time and the slow pointer moves 1 node at a time. If at any time if the fast pointer and slow pointer are pointing at the same node, we can say that loop exists. If pointers do not meet, then the linked list does not have a loop.
 */
 
 #include <stdio.h>   /// for IO operations (`printf`)
@@ -26,11 +27,11 @@ struct node {
 
 void insert(int num) {
     // create a new node
-    struct node* newNode = (struct node*) malloc(sizeof(struct node));
+    struct node* newNode = (struct node*) malloc(sizeof(struct node)); // an object that stores data and a pointer to next object.
     
     // assign value(num)
     newNode->data  = num;
-    
+    s
     // next pointer of new node will point to head node of linked list
     newNode->next = head;
     
@@ -72,7 +73,6 @@ int findLoop(struct node *head) {
 
 /**
  * @brief Test function 
- * @param head pointer to the first node in the linked list
  * @returns void
 */
 static void test() {
