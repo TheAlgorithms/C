@@ -1,7 +1,7 @@
 /**
  * @file
  * @author [Ankita Kulkarni](https://github.com/ankitakul)
- * @brief [Detect cycle in linked list] (https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
+ * @brief Detect cycle in a [Linked List](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
  * This Algorithm detects a loop in a singly linked list 
 */
 
