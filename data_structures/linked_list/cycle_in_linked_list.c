@@ -31,7 +31,7 @@ void insert(int num) {
     
     // assign value(num)
     newNode->data  = num;
-    s
+    
     // next pointer of new node will point to head node of linked list
     newNode->next = head;
     
