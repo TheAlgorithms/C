@@ -5,9 +5,9 @@
  * This Algorithm detects a loop in a singly linked list 
 */
 
-#include <stdio.h>  /// for IO operations (`printf`)
-#include <stdlib.h> /// for the `malloc` operation
-#include <assert.h> /// for assert
+#include <stdio.h>   /// for IO operations (`printf`)
+#include <stdlib.h>  /// for the `malloc` operation
+#include <assert.h>  /// for assert
  
 /**
 * @brief Linked list node structure
