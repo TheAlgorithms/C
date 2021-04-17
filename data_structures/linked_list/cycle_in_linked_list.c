@@ -100,7 +100,7 @@ int main() {
     insert(7);
     insert(9);
      
-    test(head); //execute the test
+    test(head);  // run self-test implementations
       
     return 0;
 }
