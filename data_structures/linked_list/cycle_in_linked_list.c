@@ -75,7 +75,7 @@ int findLoop(struct node *head) {
  * @param head pointer to the first node in the linked list
  * @returns void
 */
-void test() {
+static void test() {
               
     // this creates a loop in the linked list
     //head->next->next->next->next->next = head->next;
