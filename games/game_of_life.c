@@ -21,10 +21,9 @@
 
 
 /**
- * draw program function. (void)
- * For Show the world
- * Indicates cells with "@"
- * @param world, pointer to world parameter
+ * @brief Function draw (void)
+ * Responsible for showing the world on the console, Hear live cells with @ displayed
+ * @param world, Pointer to the beginning of the world in memory
  */
 void draw(const char *world){
     #ifdef _WIN32 // for clear screen win/linux
@@ -47,11 +46,10 @@ void draw(const char *world){
 
 
 /**
- * em program function.
- * @returns char pointer new generation on clean exit. 
- * For next world calculations
- * It builds a new generation according to the previous generation
- * @param world, pointer to world parameter
+ * @brief Function draw 
+ * @returns Pointer to the beginning of a new world
+ * Responsible in calculating and building new world according to the rules of the game
+ * @param world, Pointer to the beginning of the world in memory
  */
 char* em(char *world){
     char *newWorld = malloc(1200); // Create a new world to use to avoid interference in today's world
@@ -106,8 +104,8 @@ char* em(char *world){
 
 
 /**
- * @brief Main function.
- * @returns 0 on exit
+ * @brief Function main.
+ * @returns 0 on Exit without error
  */
 int main(){
     char *world = malloc(1200); // create the world
