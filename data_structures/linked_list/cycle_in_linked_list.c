@@ -1,7 +1,7 @@
 /**
  * @file
  * @author [Ankita Kulkarni](https://github.com/ankitakul)
- * @brief Detect cycle in a [Linked List](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
+ * @brief Detect a cycle/loop in a [Singly Linked List](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
  * @descpriton This Algorithm uses two pointers (fast and slow), fast pointer moves 2 nodes at a time and the slow pointer moves 1 node at a time. If at any time if the fast pointer and slow pointer are pointing at the same node, we can say that loop exists. If pointers do not meet, then the linked list does not have a loop.
 */
 
