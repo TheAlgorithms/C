@@ -77,7 +77,7 @@ int findLoop(struct node *head) {
 static void test() {
               
     // this creates a loop in the linked list
-    //head->next->next->next->next->next = head->next;
+    // `head->next->next->next->next->next = head->next;`
 
     // check if a loop exists
     assert(findLoop(head) ==0);
