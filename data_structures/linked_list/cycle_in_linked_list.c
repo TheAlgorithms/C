@@ -100,6 +100,5 @@ int main() {
     insert(9);
      
     test(head);  // run self-test implementations
-      
     return 0;
 }
