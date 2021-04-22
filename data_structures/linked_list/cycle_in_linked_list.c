@@ -73,7 +73,7 @@ int findLoop(struct node *head) {
 }
 
 /**
- * @brief Test function 
+ * @brief Self-test implementations
  * @returns void
 */
 static void test() {
