@@ -82,7 +82,7 @@ static void test() {
     // `head->next->next->next->next->next = head->next;`
 
     // check if a loop exists
-    assert(findLoop(head) ==0);
+    assert(findLoop(head) == 0);
     
 }
 
