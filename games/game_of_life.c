@@ -11,7 +11,7 @@
 */
 
 #include <stdio.h>     /// standard input/output
-#include <stdlib.h>    /// to genrate random number AND memory management 
+#include <stdlib.h>    /// to generate random number AND memory management 
 #include <time.h>      /// get time system for seed random number
 #include <unistd.h>    /// for sleep func (usleep)
 
