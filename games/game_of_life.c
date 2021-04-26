@@ -105,7 +105,7 @@ char* em(char *world){
 
 /**
  * @brief Function main.
- * @returns 0 on Exit without error
+ * @returns 0 on exit
  */
 int main(){
     char *world = malloc(1200); // create the world
