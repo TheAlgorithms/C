@@ -104,7 +104,7 @@ char* em(char *world){
 
 
 /**
- * @brief Function main.
+ * @brief Main function
  * @returns 0 on exit
  */
 int main(){
