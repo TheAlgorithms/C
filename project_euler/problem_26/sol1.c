@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
         // printf("1/%-4u\t ", deno);
         unsigned short index = 0, num_digits;
 
-        while (true)
+        while (rem != 0)
         {
             rem = (rem * 10) % deno;
             if (rem == 0)
