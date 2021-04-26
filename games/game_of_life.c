@@ -135,9 +135,9 @@ int main(){
     
     // The beginning of the eternal cycle of life
     while(1){
-        draw(world); // Show the creatures of the world
-        world = em(world); // Calculate the next generation
-        usleep(300000); // A short break = 0.03 sec
+        draw(world);           /// Show the creatures of the world
+        world = em(world);    /// Calculate the next generation
+        usleep(300000);      /// A short break = 0.03 sec
     }
     
     return 0;
