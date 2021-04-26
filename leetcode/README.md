@@ -91,3 +91,4 @@ LeetCode
 |1184|[Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) | [C](./src/1184.c)|Easy|
 |1189|[Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | [C](./src/1189.c)|Easy|
 |1207|[Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) | [C](./src/1207.c)|Easy|
+|1486|[XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | [C](./src/1486.c)|Easy|
