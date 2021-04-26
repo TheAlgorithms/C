@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//function to receive parameters (array, size and value) and start searching linearly.
 int linearsearch(int *arr, int size, int val)
 {
     int i;
@@ -29,7 +30,7 @@ int main()
     if (linearsearch(a, n, v))
         printf("Value %d is in the array.\n", v);
     else
-        printf("Value %d is not in the array.\n", v);
+        printf("Value %d is not in the array.\n", v);  //in case the value doesn't exist in the array
 
     free(a);
     return 0;
