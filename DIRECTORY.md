@@ -292,65 +292,6 @@
   * [Simpsons 1 3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/simpsons_1_3rd_rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/variance.c)
 
-## Project Euler
-  * Problem 1
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_1/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_1/sol2.c)
-    * [Sol3](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_1/sol3.c)
-    * [Sol4](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_1/sol4.c)
-  * Problem 10
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_10/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_10/sol2.c)
-  * Problem 12
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_12/sol1.c)
-  * Problem 13
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_13/sol1.c)
-  * Problem 14
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_14/sol1.c)
-  * Problem 15
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_15/sol1.c)
-  * Problem 16
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_16/sol1.c)
-  * Problem 19
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_19/sol1.c)
-  * Problem 2
-    * [So1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_2/so1.c)
-  * Problem 20
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_20/sol1.c)
-  * Problem 21
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_21/sol1.c)
-  * Problem 22
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_22/sol1.c)
-  * Problem 23
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_23/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_23/sol2.c)
-  * Problem 25
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_25/sol1.c)
-  * Problem 26
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_26/sol1.c)
-  * Problem 3
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_3/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_3/sol2.c)
-  * Problem 4
-    * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_4/sol.c)
-  * Problem 401
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_401/sol1.c)
-  * Problem 5
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol2.c)
-    * [Sol3](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_5/sol3.c)
-  * Problem 6
-    * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_6/sol.c)
-  * Problem 7
-    * [Sol](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_7/sol2.c)
-  * Problem 8
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_8/sol2.c)
-  * Problem 9
-    * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_9/sol1.c)
-    * [Sol2](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_9/sol2.c)
-
 ## Searching
   * [Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/binary_search.c)
   * [Exponential Search](https://github.com/TheAlgorithms/C/blob/master/searching/exponential_search.c)
