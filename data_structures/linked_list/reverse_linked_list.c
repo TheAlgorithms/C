@@ -1,4 +1,5 @@
 // C program to reverse a linked list
+// For Test cases and their outputs see at end of this file
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,7 +30,7 @@ void reverse(struct Node** head_ref)
     *head_ref = prev;
 }
  
-/* Function to push a node */
+/* Function to push a node at the begining of list*/
 void push(struct Node** head_ref, int new_data)
 {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
@@ -66,5 +67,18 @@ int main()
     reverse(&head);
     printf("\nReversed Linked list \n");
     printList(head);
-    getchar();
+    
 }
+
+/* Tests 
+************************************************
+Input-1 : Push (2, 4, 105, 8)
+Linked list : 8 105 4 2 (As we are pushing at front every time)
+Output-1 : 2 4 105 8
+
+*************************************************
+Input-2 : Push(1, 3, 5, 7)
+Linked list : 7 5 3 1 (As we are pushing at front every time)
+Output-2 : 1 3 5 7
+
+**************************************************
