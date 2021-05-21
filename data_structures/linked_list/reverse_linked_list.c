@@ -16,7 +16,7 @@
  * into the list,Reversing the given list, printing the list,
  * and an example showing what input is and how the outcome is!
  *  
- * @author    [Sai Akash Janapati](http://github.com/Sai-Akash2009Janapati)
+ * @author [Sai Akash Janapati](https://github.com/Sai-Akash2009Janapati)
  * 
  * */
 
