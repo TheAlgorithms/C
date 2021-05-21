@@ -104,8 +104,7 @@ void reverse(struct Node** head_ref)
  * @param  head_ref Pointer to the pointer of Head node/initial node
  * @param  new_data The new data that should be pushed to the List
  * @returns         void
- * 
- * */
+ */
 
 void push(struct Node** head_ref, int new_data)
 {
@@ -121,8 +120,7 @@ void push(struct Node** head_ref, int new_data)
  * @brief       Prints the data present in a linked list
  * @param head  Pointer to the initial node/head node of linked list
  * @returns    void
- * 
- * */
+ */
 
 void print_List(struct Node* head)
 {
@@ -138,7 +136,7 @@ void print_List(struct Node* head)
  * @brief   Tests the functionalities implemented in this file
  * @param   void / No parameters
  * @returns void
- * */
+ */
 void test()
 {
     int n;
