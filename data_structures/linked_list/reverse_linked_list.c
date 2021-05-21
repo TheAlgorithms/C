@@ -20,11 +20,13 @@
  * 
  * */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>   // For IO operations
+#include <stdlib.h>  // For standard library functions
  
 /**
- * @brief Struct of Link list node
+ * @brief Struct of Link list node, That stores a variable of int type
+   and a pointer to next node of same type. So that we can access next 
+   node using this pointer
  * */
 struct Node {
     int data;
@@ -35,8 +37,8 @@ struct Node {
  * @brief           Given contents of linked list will be reversed
  * @param  head_ref a pointer to the pointer of head node/initial node
  *                  so that we can change the contents of it
- * @returns         This returns void
- * */
+ * @returns void
+ */
 void reverse(struct Node** head_ref);
 
 /**
@@ -44,30 +46,29 @@ void reverse(struct Node** head_ref);
  * @param  head_ref Pointer to the pointer of Head node/initial node
  * @param  new_data The new data that should be pushed to the List
  * @returns         void
- * 
- * */
+ */
 void push(struct Node** head_ref, int new_data);
 
 /**
  * @brief       Prints the data present in a linked list
  * @param head  Pointer to the initial node/head node of linked list
  * @returns    void
- * 
- * */
+ */
 void print_List(struct Node* head);
 
 /**
- * @brief   Tests the functionalities implemented in this file
- * @param   void / No parameters
+ * @brief   Self-test implementations
  * @returns void
  * */
 void test();
 
-/* Driver code*/
+/**
+* @brief Main function
+* @returns 0 on exit
+*/
 int main()
 {
     test();
-
     return 0;
 }
 
@@ -76,7 +77,7 @@ int main()
  * @brief           Given contents of linked list will be reversed
  * @param  head_ref a pointer to the pointer of head node/initial node
  *                  so that we can change the contents of it
- * @returns         This returns void
+ * @returns void
  * */
 
 void reverse(struct Node** head_ref)
