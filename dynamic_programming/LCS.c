@@ -9,7 +9,7 @@
  * LCS() will find the length of the LCS of the following two strings 'GAC' and 'AGCAT'.
  * LCS function will return the follwing 2D-Matrix
  *
- *		0 0 0 0 0 0
+ *	  0 0 0 0 0 0
  *      0 0 1 1 1 1
  *      0 1 1 1 2 2
  *      0 1 1 2 2 2
