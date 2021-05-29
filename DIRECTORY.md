@@ -105,6 +105,9 @@
   * [Test Malloc Dbg](https://github.com/TheAlgorithms/C/blob/master/developer_tools/test_malloc_dbg.c)
   * [Test Min Printf](https://github.com/TheAlgorithms/C/blob/master/developer_tools/test_min_printf.c)
 
+## Dynamic Programming
+  * [Lcs](https://github.com/TheAlgorithms/C/blob/master/dynamic_programming/lcs.c)
+
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/master/exercism/acronym/acronym.c)
