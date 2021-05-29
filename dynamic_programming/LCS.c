@@ -49,7 +49,7 @@ void print(char *a, int index);
  * @param j length of string 2
  * @param string1 String 1
  * @param string2 String 2
- * @prints one of te Longest Common Subsequence
+ * @prints one of the Longest Common Subsequence
  */
 char* allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2)
 {
