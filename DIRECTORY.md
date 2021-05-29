@@ -106,7 +106,7 @@
   * [Test Min Printf](https://github.com/TheAlgorithms/C/blob/master/developer_tools/test_min_printf.c)
 
 ## Dynamic Programming
-  * [Lcs](https://github.com/TheAlgorithms/C/blob/master/dynamic_programming/lcs.c)
+  * [Longest Common Subsequence](https://github.com/TheAlgorithms/C/blob/master/dynamic_programming/longest_common_subsequence.cpp)
 
 ## Exercism
   * Acronym
