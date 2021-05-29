@@ -30,14 +30,13 @@
 #include<stdlib.h>   ///  for Dynamic memory allocation
 #include<string.h>  ///   for puts(), gets() and strlen()
 
-#define MAX 100      // Declaration of a constant value
+#define MAX 100      // maximum size of string1 and string2
 
-int lengthOfLCS;
 
 // Functions Declaration
 int max(int a, int b);
 int** LCS(char *string1, int m, char *string2, int n);
-char* allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2);
+void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2);
 void print(char *a, int index);
 
 /**
@@ -50,8 +49,9 @@ void print(char *a, int index);
  * @param string1 String 1
  * @param string2 String 2
  * @prints one of the Longest Common Subsequence
+ * @returns void
  */
-char* allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2)
+void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2)
 {
 	// If either i is 0 or j is 0  then there will be no LCS
 	while(i > 0 && j > 0)
@@ -74,8 +74,7 @@ char* allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, c
 			}
 			else if(c[i-1][j] == c[i][j-1])
 			{
-				char *lcs = allPossibleLCS(c, a, index, i, j-1, string1, string2);
-				print(lcs, lengthOfLCS);
+                allPossibleLCS(c, a, index, i, j-1, string1, string2);
 				i--;
 			}
 			else
@@ -84,12 +83,7 @@ char* allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, c
 			}
 		}
 	}
-	return a;
-}
-void print(char *a, int index)
-{
-	// Printing one of the LCS 
-	for(int i=index-1; i>=0; i--)
+    for(int i=index-1; i>=0; i--)
 	{
 		printf("%c", a[i]);
 	}
@@ -101,7 +95,7 @@ void print(char *a, int index)
  * @breif max will find the maximum between 2 values
  * @param a integer a
  * @param b integer b
- * returns maximum value
+ * @returns maximum value
  */
 int max(int a, int b)
 {
@@ -113,12 +107,12 @@ int max(int a, int b)
 }
 
 /**
- * @breif LCS will make 2D-array with optimal solutions of sub-problems
+ * @brief LCS will make 2D-array with optimal solutions of sub-problems
  * @param string1 String 1
  * @param m Length of String 1
  * @param string2 String 2
  * @param n Length of String 2
- * returns 2D-array.
+ * @returns 2D-array
  */
 int** LCS(char *string1,int m, char *string2, int n)
 {
@@ -133,13 +127,13 @@ int** LCS(char *string1,int m, char *string2, int n)
 	}
 	// c[i][j] will have the length of Longest common subsequence when length of string 1 is i and length of string 2 is j
 	
-	// If length of string 2 is 0 then there will be no Longest common subsequence.
+	// If length of string 2 is 0 then there will be no Longest common subsequence
 	for(int i=1; i<=m; i++)
 	{
 		c[i][0] = 0;
 	}
 	
-	// If length of string 1 is 0 then there will be no Longest common subsequence.
+	// If length of string 1 is 0 then there will be no Longest common subsequence
 	for(int j=0; j <=n; j++)
 	{
 		c[0][j] = 0;
@@ -191,22 +185,21 @@ int main()
 	int lenOfStr2 = strlen(string2);
 	
 	int** c = LCS(string1, lenOfStr1, string2, lenOfStr2);   /// To make the 2D-Array
-	lengthOfLCS = c[strlen(string1)][strlen(string2)];   /// Length of LCS
-	printf("Length of LCS is %d...\n\n", lengthOfLCS);
+	int lengthOfLCS = c[strlen(string1)][strlen(string2)];   /// Length of LCS
+	printf("Length of Longest Common Subsequence is %d...\n\n", lengthOfLCS);
 		
-	// Character Array to store Longest common subsequence.
+	// Character Array to store Longest common subsequence
 	char a[lengthOfLCS];
 	int index=0;
 	
-	// If there is no Longest common subsequence.
+	// If there is no Longest common subsequence
 	if (!lengthOfLCS)
 	{
 		printf("There is no Possible LCS...\n\n");
 		return 0;
 	}
-	// If there is a Longest common subsequence then printing them.
+	// If there is a Longest common subsequence then printing them
 	printf("All Possible LCS are : \n\n");
-	char *lcs = allPossibleLCS(c, a, index, lenOfStr1, lenOfStr2, string1, string2);
-	print(lcs, lengthOfLCS);
+	allPossibleLCS(c, a, index, lenOfStr1, lenOfStr2, string1, string2);
 	return 0;
 }
