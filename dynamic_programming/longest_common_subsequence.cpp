@@ -164,6 +164,7 @@ int** LCS(char *string1,int m, char *string2, int n)
  */
 int main()
 {
+	/// string1 and string2 are used to store strings in which we have to find LCS
 	char *string1, *string2;                      ///< 2 strings of max size MAX 
 	string1 = (char *)calloc(MAX, sizeof(char));  ///< memory allocation for string 1
 	string2 = (char *)calloc(MAX, sizeof(char));  ///< memory allocation for string 2
@@ -180,9 +181,9 @@ int main()
 	string2[3] = 'A';
 	string2[4] = 'T';
 	
-	// Lengths of two Strings;
-	int lenOfStr1 = strlen(string1);
-	int lenOfStr2 = strlen(string2);
+	// lengths of two Strings;
+	int lenOfStr1 = strlen(string1);       /// length of string1
+	int lenOfStr2 = strlen(string2);       /// length of string2
 	
 	int** c = LCS(string1, lenOfStr1, string2, lenOfStr2);   /// To make the 2D-Array
 	int lengthOfLCS = c[strlen(string1)][strlen(string2)];   /// Length of LCS
