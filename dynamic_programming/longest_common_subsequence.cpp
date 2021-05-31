@@ -3,11 +3,11 @@
  * @author [Santosh Jonnakuti](https://github.com/Santoshjonnakuti)
  * @brief [Longest Common Subsequence Algorithm](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)
  * implementation in C to find the LCS between 2 strings.
- * @details LCS algorithm uses dynamic approach to find all possible LCS between 2 strings. 
+ * @details LCS algorithm uses dynamic programming approach to find all possible LCS between 2 strings. 
  * Dynamic Programming follow a method so that even sub-problems will also have optimal solution.
  *
  * LCS() will find the length of the LCS of the following two strings 'GAC' and 'AGCAT'.
- * LCS function will return the follwing 2D-Matrix
+ * LCS function will return the following 2D-Matrix
  *
  *	  0 0 0 0 0 0
  *      0 0 1 1 1 1
@@ -92,7 +92,7 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
 }
 
 /**
- * @breif max will find the maximum between 2 values
+ * @brief max will find the maximum between 2 values
  * @param a integer a
  * @param b integer b
  * @returns maximum value
@@ -186,6 +186,12 @@ int main()
 	// lengths of two Strings;
 	int lenOfStr1 = strlen(string1);       /// length of string1
 	int lenOfStr2 = strlen(string2);       /// length of string2
+
+	if(lenOfStr1 == 0 || lenOfStr2 == 0)
+	{
+		printf("There is no Possible Longest Common Subsequence...\n\n");
+		return 0;
+	}
 	
 	int** c = LCS(string1, lenOfStr1, string2, lenOfStr2);   /// To make the 2D-Array
 	int lengthOfLCS = c[strlen(string1)][strlen(string2)];   /// Length of LCS
@@ -204,5 +210,8 @@ int main()
 	// If there is a Longest common subsequence then printing them
 	printf("All Possible LCS are : \n\n");
 	allPossibleLCS(c, a, index, lenOfStr1, lenOfStr2, string1, string2);
+	free(c);
+	free(string1);
+	free(string2);
 	return 0;
 }
