@@ -74,7 +74,7 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
 			}
 			else if(c[i-1][j] == c[i][j-1])
 			{
-                allPossibleLCS(c, a, index, i, j-1, string1, string2);
+                		allPossibleLCS(c, a, index, i, j-1, string1, string2);
 				i--;
 			}
 			else
@@ -99,10 +99,12 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
  */
 int max(int a, int b)
 {
+	// if a is greater than b return a
 	if(a > b)
 	{
 		return a;
 	}
+	// else return b
 	return b;
 }
 
