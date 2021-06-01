@@ -9,7 +9,7 @@
  * LCS() will find the length of the LCS of the following two strings 'GAC' and 'AGCAT'.
  * LCS function will return the following 2D-Matrix
  *
- *	    0 0 0 0 0 0
+ *      0 0 0 0 0 0
  *      0 0 1 1 1 1
  *      0 1 1 1 2 2
  *      0 1 1 2 2 2
@@ -298,5 +298,7 @@ int main(int argc, char const *argv[])
     printf("Enter string2 : ");
     gets(string2);
     findAllLCS(string1, string2);
+	free(string1);
+	free(string2);
     return 0;
 }
