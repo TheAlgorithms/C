@@ -28,14 +28,16 @@
  */
 
 
-#include<stdio.h>      // for I/O operations
-#include<stdlib.h>     // for dynamic memory allocation
-#include<string.h>     // for `puts()`, `gets()`, and `strlen()`
-#include<assert.h>     // for `assert()`
+#include <stdio.h>      /// for I/O operations
+#include <stdlib.h>     /// for dynamic memory allocation
+#include <string.h>     /// for `puts()`, `gets()`, and `strlen()`
+#include <assert.h>     /// for `assert()`
 
 #define MAX 100      // maximum size of string1 and string2
 
-// structure to store all LCS and no of possible LCS
+/**
+ * @brief Structure to store all LCS and no of possible LCS
+ */
 struct array
 {
     char **LCSArray;      // array to store all possible LCS
@@ -248,10 +250,10 @@ void findAllLCS(char *string1, char *string2)
 }
 
 /**
- * @brief test is to test the algorithm
+ * @brief Self-test implementations
  * @returns void
  */
-void test()
+static void test()
 {
     char string1[] = "GAC";
     char string2[] = "AGCAT";
@@ -290,9 +292,8 @@ int main(int argc, char const *argv[])
         test();
         return 0;
     }
-
     // User input case
-	printf("Enter string1 : ");
+    printf("Enter string1 : ");
     gets(string1);
     printf("Enter string2 : ");
     gets(string2);
