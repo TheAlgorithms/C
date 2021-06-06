@@ -40,8 +40,8 @@
  */
 struct array
 {
-    char **LCSArray;      // array to store all possible LCS
-    int length;           // no of possible LCs
+	char **LCSArray;      // array to store all possible LCS
+	int length;           // no of possible LCs
 } variable;
 
 
@@ -50,7 +50,7 @@ int max(int a, int b);
 int** LCS(char *string1, int m, char *string2, int n);
 void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2, int lengthOfLCS);
 void findAllLCS(char *string1, char *string2);
-void test();
+static void test();
 
 /**
  * @brief prints all possible Longest common subsequences between string1 and string2 using recursion
@@ -87,7 +87,7 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
 			}
 			else if(c[i-1][j] == c[i][j-1])
 			{
-                allPossibleLCS(c, a, index, i, j-1, string1, string2, lengthOfLCS);
+				allPossibleLCS(c, a, index, i, j-1, string1, string2, lengthOfLCS);
 				i--;
 			}
 			else
@@ -96,29 +96,29 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
 			}
 		}
 	}
-    // if LCSArray is NULL then allocating a memory to store LCS
-    char **LCSArray = variable.LCSArray;
-    if(LCSArray == NULL)
-    {
-        LCSArray = (char **)calloc(1, sizeof(char *));
-        *(LCSArray + variable.length) = (char *)calloc(lengthOfLCS, sizeof(char));
-        for(int k=lengthOfLCS-1; k >= 0; k--)
-        {
-            LCSArray[variable.length][lengthOfLCS-k-1] = a[k];
-        }
-    }
-    // if not NULL then reallocating to store one more LCS
-    else
-    {
-        LCSArray = (char **)realloc(LCSArray, (variable.length + 2)*sizeof(char *));
-        variable.length += 1;
-        *(LCSArray + variable.length) = (char *)calloc(lengthOfLCS, sizeof(char));
-        for(int k=lengthOfLCS-1; k >= 0; k--)
-        {
-            LCSArray[variable.length][lengthOfLCS-k-1] = a[k];
-        }
-    }
-    variable.LCSArray = LCSArray;
+	// if LCSArray is NULL then allocating a memory to store LCS
+	char **LCSArray = variable.LCSArray;
+	if(LCSArray == NULL)
+	{
+		LCSArray = (char **)calloc(1, sizeof(char *));
+		*(LCSArray + variable.length) = (char *)calloc(lengthOfLCS, sizeof(char));
+		for(int k=lengthOfLCS-1; k >= 0; k--)
+		{
+			LCSArray[variable.length][lengthOfLCS-k-1] = a[k];
+		}
+	}
+	// if not NULL then reallocating to store one more LCS
+	else
+	{
+		LCSArray = (char **)realloc(LCSArray, (variable.length + 2)*sizeof(char *));
+		variable.length += 1;
+		*(LCSArray + variable.length) = (char *)calloc(lengthOfLCS, sizeof(char));
+		for(int k=lengthOfLCS-1; k >= 0; k--)
+		{
+			LCSArray[variable.length][lengthOfLCS-k-1] = a[k];
+		}
+	}
+	variable.LCSArray = LCSArray;
 	return;
 }
 
@@ -203,7 +203,7 @@ void findAllLCS(char *string1, char *string2)
 	int lenOfStr1 = strlen(string1);       /// length of string1
 	int lenOfStr2 = strlen(string2);       /// length of string2
 
-    // if length of any string is 0 then there will be no LCS
+	// if length of any string is 0 then there will be no LCS
 	if(lenOfStr1 == 0 || lenOfStr2 == 0)
 	{
 		printf("There is no Possible Longest Common Subsequence...\n\n");
@@ -224,7 +224,6 @@ void findAllLCS(char *string1, char *string2)
 		return;
 	}
 
-
 	// If there is/are  Longest common subsequence then printing them
 	printf("All Possible LCS are : \n\n");
 
@@ -232,7 +231,7 @@ void findAllLCS(char *string1, char *string2)
 	allPossibleLCS(c, a, index, lenOfStr1, lenOfStr2, string1, string2, lengthOfLCS);
 
 	printf("Printing from the LCSArray\n\n\n");
-    char **LCSArray = variable.LCSArray;
+	char **LCSArray = variable.LCSArray;
 	for(int i=0; i<=variable.length; i++)
 	{
 		for(int j=0; j<lengthOfLCS; j++)
@@ -244,9 +243,9 @@ void findAllLCS(char *string1, char *string2)
 	free(c);
 	free(string1);
 	free(string2);
-    LCSArray = NULL;
-    free(LCSArray);
-    return;
+	LCSArray = NULL;
+	free(LCSArray);
+	return;
 }
 
 /**
@@ -255,23 +254,23 @@ void findAllLCS(char *string1, char *string2)
  */
 static void test()
 {
-    char string1[] = "GAC";
-    char string2[] = "AGCAT";
-    findAllLCS(string1, string2);
-    char **LCSArray = variable.LCSArray;
-    // Solutions of test input
-    char solutions[][2] = {"AC", "GC", "GA", "GA"};
+	char string1[] = "GAC";
+	char string2[] = "AGCAT";
+	findAllLCS(string1, string2);
+	char **LCSArray = variable.LCSArray;
+	// Solutions of test input
+	char solutions[][2] = {"AC", "GC", "GA", "GA"};
 
-    // To assert the solutions
-    for(int i=0; i<=variable.length; i++)
-    {
-        for(int j=0; j < 2; j++)
-        {
-            assert(LCSArray[i][j] == solutions[i][j]);
-        }
+	// To assert the solutions
+	for(int i=0; i<=variable.length; i++)
+	{
+		for(int j=0; j < 2; j++)
+		{
+			assert(LCSArray[i][j] == solutions[i][j]);
+		}
         
-    }
-    return;
+	}
+	return;
 }
 /**
  * @brief Main function
@@ -281,24 +280,24 @@ static void test()
  */
 int main(int argc, char const *argv[])
 {
-    /// string1 and string2 are used to store strings in which we have to find LCS
+	/// string1 and string2 are used to store strings in which we have to find LCS
 	char *string1, *string2;                      ///< 2 strings of max size MAX 
 	string1 = (char *)calloc(MAX, sizeof(char));  ///< memory allocation for string 1
 	string2 = (char *)calloc(MAX, sizeof(char));  ///< memory allocation for string 2
 
-    // To run the test
-    if(argc == 2 && strcmp(argv[1], "-test") == 0)
-    {
-        test();
-        return 0;
-    }
-    // User input case
-    printf("Enter string1 : ");
-    gets(string1);
-    printf("Enter string2 : ");
-    gets(string2);
-    findAllLCS(string1, string2);
+	// To run the test
+	if(argc == 2 && strcmp(argv[1], "-test") == 0)
+	{
+		test();
+		return 0;
+	}
+	// User input case
+	printf("Enter string1 : ");
+	gets(string1);
+	printf("Enter string2 : ");
+	gets(string2);
+	findAllLCS(string1, string2);
 	free(string1);
 	free(string2);
-    return 0;
+	return 0;
 }
