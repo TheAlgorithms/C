@@ -23,8 +23,8 @@
  * GA
  * GA
  * 
- * To test run './longest_common_subsequence -test'
- * So There are 4 Longest common subsequences in 'GAC' and 'AGCAT'
+ * To test, run './longest_common_subsequence -test'
+ * So there are 4 longest common subsequences in `GAC`, and `AGCAT`
  */
 
 
@@ -33,24 +33,16 @@
 #include <string.h>     /// for `puts()`, `gets()`, and `strlen()`
 #include <assert.h>     /// for `assert()`
 
-#define MAX 100      // maximum size of string1 and string2
+#define MAX 100      ///< maximum size of string1 and string2
 
 /**
  * @brief Structure to store all LCS and no of possible LCS
  */
 struct array
 {
-	char **LCSArray;      // array to store all possible LCS
-	int length;           // no of possible LCs
+	char **LCSArray;      ///< array to store all possible LCS
+	int length;           ///< no of possible LCs
 } variable;
-
-
-// Functions Declaration
-int max(int a, int b);
-int** LCS(char *string1, int m, char *string2, int n);
-void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, char *string2, int lengthOfLCS);
-void findAllLCS(char *string1, char *string2);
-static void test();
 
 /**
  * @brief prints all possible Longest common subsequences between string1 and string2 using recursion
@@ -124,8 +116,8 @@ void allPossibleLCS(int **c, char *a, int index, int i, int j, char *string1, ch
 
 /**
  * @brief max will find the maximum between 2 values
- * @param a integer a
- * @param b integer b
+ * @param a length of lcs between string1[m-1] and string2[n] m and n are lengths of strings
+ * @param b length of lcs between string1[m] and string2[n-1] m and n are lengths of strings
  * @returns maximum value
  */
 int max(int a, int b)
@@ -141,9 +133,9 @@ int max(int a, int b)
 
 /**
  * @brief LCS will make 2D-array with optimal solutions of sub-problems
- * @param string1 String 1
+ * @param string1 first string in which we need to find lcs
  * @param m Length of String 1
- * @param string2 String 2
+ * @param string2 second string in which we need to find lcs
  * @param n Length of String 2
  * @returns 2D-array
  */
@@ -193,8 +185,8 @@ int** LCS(char *string1,int m, char *string2, int n)
 
 /**
  * @brief findAllLCS is to print all possible LCS
- * @param string1 string 1
- * @param string2 string 2
+ * @param string1 first string in which we need to find lcs
+ * @param string2 second string in which we need to find lcs
  * @returns void
  */
 void findAllLCS(char *string1, char *string2)
