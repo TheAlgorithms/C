@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <conio.h>
 #include "hash_set.h"
 
 extern hash_set_t *init_hash_set()
