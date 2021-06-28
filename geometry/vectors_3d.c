@@ -191,6 +191,21 @@ mat_3x3 get_cross_matrix(const vec_3d *a)
     return A;
 }
 
+double get_angle(const vec_3d *a, const vec_3d *b)
+{
+    double alpha, cos_alpha;
+    float norm_a = vector_norm(a);
+	float norm_b = vector_norm(b);
+    if (fabsf(norm_a) < EPSILON || fabsf(norm_b) < EPSILON)
+    {  // detect possible division by 0
+        return NAN;
+    }
+
+	cos_alpha = dot_prod(a, b) / (norm_a * norm_b);
+	alpha = acos(cos_alpha); //delivers radian
+    return alpha; // in range from -1 to 1
+}
+
 /** @} */
 
 /**
