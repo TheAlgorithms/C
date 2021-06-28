@@ -191,13 +191,21 @@ mat_3x3 get_cross_matrix(const vec_3d *a)
     return A;
 }
 
+/**
+ * Obtain the angle between two given vectors.
+ * @f[\alpha=acos\left(\frac{\vec{a} \cdot \vec{b}}{\lVert\vec{a}\rVert \cdot \lVert\vec{b}\rVert}\right)@f]
+ * @param[in] a first input vector
+ * @param[in] b second input vector
+ * @returns angle between  @f$\vec{a}@f$ and @f$\vec{b}@f$
+ */
+
 double get_angle(const vec_3d *a, const vec_3d *b)
 {
     double alpha, cos_alpha;
-    float norm_a = vector_norm(a);
-	float norm_b = vector_norm(b);
+    float norm_a = vector_norm(a); //calc norm of vec a
+	float norm_b = vector_norm(b); //calc norm of vec b
     if (fabsf(norm_a) < EPSILON || fabsf(norm_b) < EPSILON)
-    {  // detect possible division by 0
+    {  // detect possible division by 0 - the angle is not defined in this case
         return NAN;
     }
 
