@@ -196,7 +196,7 @@ mat_3x3 get_cross_matrix(const vec_3d *a)
  * @f[\alpha=acos\left(\frac{\vec{a} \cdot \vec{b}}{\lVert\vec{a}\rVert \cdot \lVert\vec{b}\rVert}\right)@f]
  * @param[in] a first input vector
  * @param[in] b second input vector
- * @returns angle between  @f$\vec{a}@f$ and @f$\vec{b}@f$
+ * @returns angle between  @f$\vec{a}@f$ and @f$\vec{b}@f$ in radians
  */
 
 double get_angle(const vec_3d *a, const vec_3d *b)
@@ -246,6 +246,10 @@ static void test()
     assert(fabsf(c.x - (-1.f)) < 0.01);
     assert(fabsf(c.y - (2.f)) < 0.01);
     assert(fabsf(c.z - (-1.f)) < 0.01);
+
+	double alpha = get_angle(&a, &b);
+	//printf("The angle is %f\n", alpha);
+	assert(fabsf(alpha - 0.387597) < 0.01);
 }
 
 /**
