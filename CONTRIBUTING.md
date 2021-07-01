@@ -2,66 +2,57 @@
 
 ## Before contributing
 
-Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) and clearly state your concerns.
+Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask in our [Discord server](https://discord.gg/c7MnfGFGa6), and clearly state your concerns.
 
 ## Contributing
 
-### Maintainer/developer
+### Maintainer/reviewer
 
-If you are a maintainer of this repository, please consider the following:
-
-- It is a protocol to contribute via pull requests.
-  - Reviewers will advise and guide you up to make the code refined and documented.
-- When reviewing pull requests, be sure to:
-  - Be kind.
-  - Be respectful.
-  - Make useful suggestions/comments.
-  - Be sure not to make invalid suggestions/comments.
-  - Guide and advise up the pull request author.
+**Please check the [reviewer code](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/REVIEWER_CODE.md) file for maintainers and reviewers.**
 
 ### Contributor
 
-We are very happy that you consider implementing algorithms and data structures for others! This repository is referred to and used by learners from around the globe. Being one of our contributors, you agree and confirm that:
+Being a contributor at The Algorithms, we request you to follow the points mentioned below:
 
 - You did your own work.
   - No plagiarism allowed.  Any plagiarized work will not be merged.
 - Your work will be distributed under the [GNU General Public License v3.0](https://github.com/TheAlgorithms/C/blob/master/LICENSE) once your pull request has been merged.
-- You submitted work fulfils or mostly fulfils our styles and standards.
+- Please follow the repository guidelines and standards mentioned below.
 
-**New implementation** New implementation are welcome!
+**New implementation** New implementations are welcome!
 
-**Improving comments** and **adding tests** to existing algorithms are much appreciated.
+You can add new algorithms or data structures which are **not present in the repository** or that can **improve** the old implementations (**documentation**, **improving test cases**, removing bugs or in any other resonable sense)
 
-**Issues** Please avoid opening issues asking to be "assigned” to a particular algorithm.  This merely creates unnecessary noise for maintainers.  Instead, please submit your implementation in a pull request and it will be evaluated by project maintainers.
+**Issues** Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request, and it will be evaluated by project maintainers.
 
 ### Making Changes
 
 #### Code
 
 - Please use the directory structure of the repository.
-- File extension for code should be `*.h` `*.c`
-- Organize your code using **`struct`** keywords
+- Make sure the file extensions should be `*.h` `*.c`
+- Organize your code using the **`struct`** keyword
 - If an implementation of the algorithm already exists, please refer to the [file-name section below](#file-name-guidelines).
 - You can suggest reasonable changes to existing algorithms.
 - Strictly use snake_case (underscore_separated) in filenames.
 - If you have added or modified code, please make sure the code compiles before submitting.
-- Our automated testing runs [__CMake__](https://cmake.org/) on all pull requests so please be sure that your code passes before submitting.
-- Please conform to [doxygen](https://www.doxygen.nl/manual/docblocks.html) standard and document the code as much as possible. This not only facilitates the readers but also generates the correct info on website.
-- **Be consistent in use of these guidelines.**
+- Our automated testing runs [__CMake__](https://cmake.org/) on all the pull requests, so please be sure that your code passes before submitting.
+- Please conform to [Doxygen](https://www.doxygen.nl/manual/docblocks.html) standard and document the code as much as possible. This not only facilitates the readers but also generates the correct info on website.
+- **Be consistent in the use of these guidelines.**
 
 #### Documentation
 
-- Make sure you put useful comments in your code.  Do not comment things that are obvious.
+- Make sure you put useful comments in your code. Do not comment on obvious things.
 - Please avoid creating new directories if at all possible. Try to fit your work into the existing directory structure. If you want to create a new directory, then please check if a similar category has been recently suggested or created by other pull requests.
-- If you have modified/added documentation, please ensure that your language is concise and contains no grammar errors.
-- Do not update README.md along with other changes, first create an issue and then link to that issue in your pull request to suggest specific changes required to README.md
-- The repository follows [Doxygen](https://www.doxygen.nl/manual/docblocks.html) standards and auto-generates the [repository website](https://thealgorithms.github.io/C). Please ensure the code is documented in this structure. Sample implementation is given below.
+- If you have modified/added documentation, please ensure that your language is concise and must not contain grammatical errors.
+- Do not update [`README.md`](https://github.com/TheAlgorithms/C/blob/master/README.md) along with other changes. First, create an issue and then link to that issue in your pull request to suggest specific changes required to [`README.md`](https://github.com/TheAlgorithms/C/blob/master/README.md).
+- The repository follows [Doxygen](https://www.doxygen.nl/manual/docblocks.html) standards and auto-generates the [repository website](https://thealgorithms.github.io/C). Please ensure the code is documented in this structure. A sample implementation is given below.
 
 #### Test
 
-- Make sure to add examples and test cases in your main() function.
-- If you find any algorithm or document without tests, please feel free to create a pull request or issue describing suggested changes.
-- Please try to add one or more `test()` functions that will invoke the algorithm implementation on random test data with expected output. Use `assert()` function to confirm that the tests will pass. Requires adding the `assert.h` library.
+- Make sure to add examples and test cases in your `main()` function.
+- If you find an algorithm or document without tests, please feel free to create a pull request or issue describing suggested changes.
+- Please try to add one or more `test()` functions that will invoke the algorithm implementation on random test data with the expected output. Use the `assert()` function to confirm that the tests will pass. Requires including the `assert.h` library.
 
 #### Typical structure of a program
 
@@ -70,15 +61,15 @@ We are very happy that you consider implementing algorithms and data structures 
  * @file
  * @brief Add one line description here
  * @details
- * This is a multi line
+ * This is a multi-line
  * description containing links, references,
- * math equations, etc
+ * math equations, etc.
  * @author [Name](https://github.com/handle)
  * @see related_file.c, another_file.c
  */
 
-#include <assert.h>
-#include
+#include <assert.h>   /// for assert
+#include              /// for `some function here`
 
 /**
  * @brief Struct documentation
@@ -89,7 +80,7 @@ struct struct_name {
 };
 
 /**
- * Function documentation
+ * @brief Function documentation
  * @param param1 one-line info about param1
  * @param param2 one-line info about param2
  * @returns `true` if ...
@@ -105,7 +96,7 @@ bool func(int param1, int param2) {
 }
 
 /**
- * @brief Test function
+ * @brief Self-test implementations
  * @returns void
  */
 static void test() {
@@ -120,7 +111,7 @@ static void test() {
  * @returns 0 on exit
  */
 int main() {
-    test(); // execute the tests
+    test(); // run self-test implementations
     // code here
     return 0;
 }
@@ -128,7 +119,7 @@ int main() {
 
 #### File name guidelines
 
-- Use lowercase words with ``"_"`` as separator
+- Use lowercase words with ``"_"`` as a separator
 - For instance
 
 ```markdown
@@ -137,8 +128,8 @@ my_new_c_struct.c    is correct format
 ```
 
 - It will be used to dynamically create a directory of files and implementation.
-- File name validation will run on docker to ensure the validity.
-- If an implementation of the algorithm already exists and your version is different from that implemented, please use incremental numeric digit as a suffix. For example, if `median_search.c` already exists in the `search` folder and you are contributing a new implementation, the filename should be `median_search2.c` and for a third implementation, `median_search3.c`.
+- File name validation will run on Docker to ensure validity.
+- If an implementation of the algorithm already exists and your version is different from that implemented, please use incremental numeric digit as a suffix. For example: if `median_search.c` already exists in the `search` folder, and you are contributing a new implementation, the filename should be `median_search2.c` and for a third implementation, `median_search3.c`.
 
 #### Directory guidelines
 
@@ -156,7 +147,7 @@ some_new_fancy_category         is correct
 
 #### Commit Guidelines
 
-- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilt across multiple commits.  Try to modify just one or two files in the same directory.  Pull requests that span multiple directories are often rejected.
+- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilt across multiple commits. Try to modify just one or two files in the same directory.  Pull requests that span multiple directories are often rejected.
 
 ```bash
 git add file_xyz.c
@@ -213,14 +204,14 @@ clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
 #### GitHub Actions
 
 - Enable GitHub Actions on your fork of the repository.
-After enabling it will execute `clang-tidy` and `clang-format` after every a push (not a commit).
+After enabling, it will execute `clang-tidy` and `clang-format` after every a push (not a commit).
   - Click on the tab "Actions", then click on the big green button to enable it.
 
 ![GitHub Actions](https://user-images.githubusercontent.com/51391473/94609466-6e925100-0264-11eb-9d6f-3706190eab2b.png)
 
 - The result can create another commit if the actions made any changes on your behalf.
 - Hence, it is better to wait and check the results of GitHub Actions after every push.
-- Run `git pull` in your local clone if these actions made many changes in order to avoid merge conflicts.
+- Run `git pull` in your local clone if these actions made many changes to avoid merge conflicts.
 
 Most importantly,
 
