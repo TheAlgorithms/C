@@ -196,7 +196,7 @@ mat_3x3 get_cross_matrix(const vec_3d *a)
  * @f[\alpha=acos\left(\frac{\vec{a} \cdot \vec{b}}{\lVert\vec{a}\rVert \cdot \lVert\vec{b}\rVert}\right)@f]
  * @param[in] a first input vector
  * @param[in] b second input vector
- * @returns angle between  @f$\vec{a}@f$ and @f$\vec{b}@f$ in radians
+ * @returns angle between @f$\vec{a}@f$ and @f$\vec{b}@f$ in radians
  */
 
 double get_angle(const vec_3d *a, const vec_3d *b)
