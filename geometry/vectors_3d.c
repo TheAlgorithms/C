@@ -210,7 +210,7 @@ double get_angle(const vec_3d *a, const vec_3d *b)
     }
 
     cos_alpha = dot_prod(a, b) / (norm_a * norm_b);
-    alpha = acos(cos_alpha); / /delivers the radian
+    alpha = acos(cos_alpha); //delivers the radian
     return alpha; // in range from -1 to 1
 }
 
