@@ -41,12 +41,10 @@ bool is_binary(intmax_t num)
 		{
 			num /= 10;
 			continue;
-}
+		}
 		else
 			return false;
-		
 	}
-	
 	return true;
 }
 
