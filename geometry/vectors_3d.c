@@ -191,6 +191,29 @@ mat_3x3 get_cross_matrix(const vec_3d *a)
     return A;
 }
 
+/**
+ * Obtain the angle between two given vectors.
+ * @f[\alpha=acos\left(\frac{\vec{a} \cdot \vec{b}}{\lVert\vec{a}\rVert \cdot \lVert\vec{b}\rVert}\right)@f]
+ * @param[in] a first input vector
+ * @param[in] b second input vector
+ * @returns angle between @f$\vec{a}@f$ and @f$\vec{b}@f$ in radians
+ */
+
+double get_angle(const vec_3d *a, const vec_3d *b)
+{
+    double alpha, cos_alpha;
+    float norm_a = vector_norm(a); ///< The norm of vector a
+    float norm_b = vector_norm(b); ///< The norm of vector b
+    if (fabsf(norm_a) < EPSILON || fabsf(norm_b) < EPSILON) /// detect possible division by 0 - the angle is not defined in this case
+    {  
+        return NAN; 
+    }
+
+    cos_alpha = dot_prod(a, b) / (norm_a * norm_b);
+    alpha = acos(cos_alpha); // delivers the radian
+    return alpha; // in range from -1 to 1
+}
+
 /** @} */
 
 /**
@@ -223,6 +246,10 @@ static void test()
     assert(fabsf(c.x - (-1.f)) < 0.01);
     assert(fabsf(c.y - (2.f)) < 0.01);
     assert(fabsf(c.z - (-1.f)) < 0.01);
+
+    double alpha = get_angle(&a, &b);
+    // printf("The angle is %f\n", alpha);
+    assert(fabsf(alpha - 0.387597) < 0.01);
 }
 
 /**
