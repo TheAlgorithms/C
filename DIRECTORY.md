@@ -6,6 +6,9 @@
   * [Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/udp_client.c)
   * [Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/udp_server.c)
 
+## Compression
+  * [Huffman Encode](https://github.com/TheAlgorithms/C/blob/master/compression/huffman_encode.c)
+
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_decimal.c)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
