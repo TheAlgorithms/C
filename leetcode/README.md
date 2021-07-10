@@ -43,6 +43,7 @@ LeetCode
 |142|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | [C](./src/142.c)|Medium|
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C](./src/153.c)|Medium|
 |160|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [C](./src/160.c)|Easy|
+|162| [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| [C](./src/162.c)| Medium|
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [C](./src/169.c)|Easy|
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [C](./src/173.c)|Medium|
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array) | [C](./src/189.c)|Easy|
