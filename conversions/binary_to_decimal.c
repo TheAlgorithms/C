@@ -26,7 +26,7 @@ void test(void);
  * @param void
  * @returns 0 on exit
  */
-int main(void)
+int main()
 {
     test();
     printf("All tests passed.\n");
