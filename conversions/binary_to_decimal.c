@@ -9,33 +9,19 @@
  */
 
 // includes
-#include <assert.h>
-#include <stdbool.h>
-#include <stdint.h> 
-#include <stdio.h>
-#include <stdlib.h>
-
-
-/**
- * @brief main function
- * @param void
- * @returns 0 on exit
- */
-int main()
-{
-    test();  // run self-test implementations
-    printf("All tests passed.\n");
-    return 0;
-}
+#include <assert.h> /// for assert
+#include <stdbool.h> /// for bool
+#include <stdint.h> /// for uintmax_t
+#include <stdio.h> /// for IO operations
 
 /**
  * @brief is_binary checks whether num is a binary one
  * @param num to be checked if it has binary representation
  * @return boolean true if num is binary false if not
  */
-bool is_binary(intmax_t num)
+bool is_binary(uintmax_t num)
 {
-    int remainder = 0;
+    unsigned remainder = 0;
 
     while (num > 0) {
         remainder = num % 10;
@@ -49,11 +35,11 @@ bool is_binary(intmax_t num)
 }
 
 /**
- * @brief num_len finds length of an intmax_t num
+ * @brief num_len finds length of an uintmax_t num
  * @param num whose length to be computed
  * @return i int length of num
  */
-int num_len(intmax_t num)
+int num_len(uintmax_t num)
 {
     int i;
     for (i = 0; num > 0; i++) {
@@ -67,13 +53,13 @@ int num_len(intmax_t num)
  * @param number binary to be converted
  * @return decimal_number decimal representation of binary number
  */
-intmax_t binary_decimal(intmax_t number)
+uintmax_t binary_decimal(uintmax_t number)
 {
-	intmax_t remainder, decimal_number = 0, temp = 1;
+	unsigned remainder;
+	uintmax_t decimal_number = 0, temp = 1;
 
-    int length = num_len(INTMAX_MAX) - 1;
+    int length = num_len(UINTMAX_MAX) - 1;
     
-    assert(number>=0);
     assert(num_len(number) <= length);
     assert(is_binary(number));
 
@@ -101,3 +87,17 @@ static void test()
 	assert(binary_decimal(10000000000)==1024);
 	assert(binary_decimal(1001110100000100)==40196);
 }
+
+/**
+ * @brief main function
+ * @param void
+ * @returns 0 on exit
+ */
+int main()
+{
+    test();  // run self-test implementations
+    printf("All tests passed.\n");
+    return 0;
+}
+
+
