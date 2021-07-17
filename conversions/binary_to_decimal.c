@@ -2,7 +2,7 @@
  * @file
  * @brief Converts a binary number to a decimal one.
  * @details
- * A binary number is input , it is check to be binary
+ * A binary number is an input, it is checked to be binary
  * then number is converted to a decimal number.
  * Some tests are added too.
  * Modified 07/12/2017
