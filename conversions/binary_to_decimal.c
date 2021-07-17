@@ -98,7 +98,7 @@ intmax_t binary_decimal(intmax_t number)
  * @param void
  * @return void
  */
-void test(void)
+static void test()
 {
 	assert(binary_decimal(0)==0);
 	assert(binary_decimal(1)==1);
