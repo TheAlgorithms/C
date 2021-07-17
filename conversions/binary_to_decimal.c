@@ -1,5 +1,5 @@
 /** 
- * @file binary_to_decimal.c
+ * @file
  * @brief Converts a binary number to a decimal one.
  * @details
  * A binary number is input , it is check to be binary
@@ -110,4 +110,3 @@ void test(void)
 	assert(binary_decimal(10000000000)==1024);
 	assert(binary_decimal(1001110100000100)==40196);
 }
-
