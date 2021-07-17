@@ -38,6 +38,7 @@
     * [Red Black Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/red_black_tree.c)
     * [Segment Tree](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/segment_tree.c)
     * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/threaded_binary_trees.c)
+    * [Words Alphabetical](https://github.com/TheAlgorithms/C/blob/master/data_structures/binary_trees/words_alphabetical.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.c)
     * [Dict](https://github.com/TheAlgorithms/C/blob/master/data_structures/dictionary/dict.h)
