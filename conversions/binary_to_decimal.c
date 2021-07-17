@@ -15,11 +15,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// function prototypes
-bool is_binary(intmax_t num);
-int num_len(intmax_t num);
-intmax_t binary_decimal(intmax_t num);
-void test(void);
 
 /**
  * @brief main function
