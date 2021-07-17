@@ -94,9 +94,8 @@ intmax_t binary_decimal(intmax_t number)
 }
 
 /**
- * @brief some tests using assert
- * @param void
- * @return void
+ * @brief Self-test implementations
+ * @returns void
  */
 static void test()
 {
