@@ -10,7 +10,7 @@
 #include <string.h>
 
 /**
- * Structure defining a node in the binary tree
+ * @brief structure defining a node in the binary tree
  */
 struct Node
 {
@@ -29,6 +29,10 @@ void closeFile(FILE *file);
 void freeTreeMemory(struct Node *node);
 void endProgramAbruptly(char *errorMessage);
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     struct Node *root = NULL;
@@ -175,7 +179,8 @@ char *getPointerToWord(char *word)
 }
 
 /**
- * Reserves memory capable of storing a node and returns the address
+ * @brief Reserves memory capable of storing a node and returns the address
+ * @returns NULL
  */
 struct Node *allocateMemoryForNode()
 {
@@ -188,8 +193,9 @@ struct Node *allocateMemoryForNode()
 }
 
 /**
- * Closes a file when the read or write process is done
+ * @brief closes a file when the read or write process is done
  * @param file pointer to file to be closed
+ * @returns void
  */
 void closeFile(FILE *file)
 {
@@ -199,8 +205,9 @@ void closeFile(FILE *file)
 }
 
 /**
- * Freeing memory when program is terminating
- * @param node pointer to node to free
+ * @brief freeing memory when the program is terminating
+ * @param node pointer to the node to free
+ * @returns void
  */
 void freeTreeMemory(struct Node *node)
 {
@@ -216,8 +223,9 @@ void freeTreeMemory(struct Node *node)
 }
 
 /**
- * Ending the program due to an error
- * @param errorMessage This is the error message to be printed
+ * @brief ending the program due to an error
+ * @param errorMessage the error message to be printed
+ * @returns void
  */
 void endProgramAbruptly(char *errorMessage)
 {
