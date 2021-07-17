@@ -28,7 +28,7 @@ void test(void);
  */
 int main()
 {
-    test();
+    test();  // run self-test implementations
     printf("All tests passed.\n");
     return 0;
 }
