@@ -37,7 +37,7 @@ bool is_binary(uintmax_t num)
 /**
  * @brief num_len finds length of an uintmax_t num
  * @param num whose length to be computed
- * @return i int length of num
+ * @return the length of the number
  */
 int num_len(uintmax_t num)
 {
@@ -99,5 +99,4 @@ int main()
     printf("All tests passed.\n");
     return 0;
 }
-
 
