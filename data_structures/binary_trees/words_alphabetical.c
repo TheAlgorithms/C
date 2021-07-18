@@ -3,11 +3,11 @@
  * @brief Printing the words contained in a file "file.txt" in alphabetical
  * order and also their frequencies in to another file "wordcount.txt"
  */
-#include <ctype.h>    /// for type checks
-#include <stdbool.h>  /// for boolean data type
-#include <stdio.h>    /// for IO operations
-#include <stdlib.h>   /// for memory allocation
-#include <string.h>   /// for string operations
+#include <ctype.h>    ///< for type checks
+#include <stdbool.h>  ///< for boolean data type
+#include <stdio.h>    ///< for IO operations
+#include <stdlib.h>   ///< for memory allocation
+#include <string.h>   ///< for string operations
 
 /**
  * @brief structure defining a node in the binary tree
@@ -20,14 +20,14 @@ struct Node
     struct Node *right;      ///< pointer to the right child node
 };
 
-struct Node *readWordsInFileToTree(FILE *file, struct Node *root);
-struct Node *addWordToTree(char *word, struct Node *currentNode);
-void writeContentOfTreeToFile(struct Node *node, FILE *file);
-char *getPointerToWord(char *word);
-struct Node *allocateMemoryForNode();
-void closeFile(FILE *file);
-void freeTreeMemory(struct Node *node);
-void endProgramAbruptly(char *errorMessage);
+struct Node *readWordsInFileToTree(FILE *file, struct Node *root); ///< Reads words from file to tree and returns pointer to root node
+struct Node *addWordToTree(char *word, struct Node *currentNode);  ///< Adds word (node) to the correct position in tree and returns pointer to root node
+void writeContentOfTreeToFile(struct Node *node, FILE *file);      ///< Writes contents of tree to another file alphabetically
+char *getPointerToWord(char *word);                                ///< Stores a word in memory and returns pointer to word 
+struct Node *allocateMemoryForNode();                              ///< Reserves memory for new node and returns pointer to node
+void closeFile(FILE *file);                                        ///< Closes file after read or write
+void freeTreeMemory(struct Node *node);                            ///< Frees memory when program is terminating
+void endProgramAbruptly(char *errorMessage);                       ///< Ends program due to an error
 
 /**
  * @brief Main function
@@ -56,41 +56,42 @@ int main()
 }
 
 /**
- * @brief Read words from file to binary tree
+ * @brief Reads words from file to tree
  * @param file file to be read from
  * @param root root node of tree
- * @return struct Node *
+ * @returns a pointer to the root node
  */
 struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
 {
-    char *inputString =
-        (char *)malloc(46 * sizeof(char));  /// pointer to input string
     // longest english word = 45 chars
     // +1 for '\0' = 46 chars
-    char inputChar;                /// temp storage of characters
-    bool isPrevCharAlpha = false;  /// bool to mark the end of a word
-    int pos = 0;  /// position in inputString to place the inputChar
+    char *inputString =
+        (char *)malloc(46 * sizeof(char));  ///< pointer to input string
+    
+    char inputChar;                ///< temp storage of characters
+    bool isPrevCharAlpha = false;  ///< bool to mark the end of a word
+    int pos = 0;                   ///< position in inputString to place the inputChar
+    
     while ((inputChar = fgetc(file)) != EOF)
     {
         if (pos > 0)
             isPrevCharAlpha = isalpha(inputString[pos - 1]);
 
-        // check if character is letter
+        // checks if character is letter
         if (isalpha(inputChar))
         {
             inputString[pos++] = tolower(inputChar);
             continue;
         }
 
-        // check if char is ' or - and if it is preceded by a letter
-        // eg yours-not, persons' (valid)
+        // checks if character is ' or - and if it is preceded by a letter eg yours-not, persons' (valid)
         if ((inputChar == '\'' || inputChar == '-') && isPrevCharAlpha)
         {
             inputString[pos++] = inputChar;
             continue;
         }
 
-        // making sure that there is something valid in inputString
+        // makes sure that there is something valid in inputString
         if (pos == 0)
             continue;
 
@@ -102,8 +103,8 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
         isPrevCharAlpha = false;
         root = addWordToTree(inputString, root);
     }
-    // this is to catch the case for the EOF
-    // being immediately after the last letter or '
+
+    // this is to catch the case for the EOF being immediately after the last letter or '
     if (pos > 0)
     {
         if (!isPrevCharAlpha && inputString[pos - 1] != '\'')
@@ -117,10 +118,10 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
 }
 
 /**
- * @brief Adding words in to the correct position in the tree
+ * @brief Adds word (node) to the correct position in tree
  * @param word word to be inserted in to the tree
  * @param currentNode node which is being compared
- * @return struct Node *
+ * @returns a pointer to the root node 
  */
 struct Node *addWordToTree(char *word, struct Node *currentNode)
 {
@@ -133,87 +134,80 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
         currentNode->right = NULL;
         return currentNode;
     }
-    int compared = strcmp(word, currentNode->word);  /// holds compare state
+    int compared = strcmp(word, currentNode->word);  ///< holds compare state
 
     if (compared > 0)
         currentNode->right = addWordToTree(word, currentNode->right);
     else if (compared < 0)
         currentNode->left = addWordToTree(word, currentNode->left);
-    else
-    {
-        currentNode->frequency++;
-    }
+    else currentNode->frequency++;
+
     return currentNode;
 }
 
 /**
- * @brief Writes contents of the tree to another file alphabetically
- * @param node pointer of current node
+ * @brief Writes contents of tree to another file alphabetically
+ * @param node pointer to current node
  * @param file pointer to file
  * @returns void
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
-    static int i = 1;  /// for line numbering in write file
+    static int i = 1;  ///< for line numbering in write file
     if (node != NULL)
     {
         writeContentOfTreeToFile(node->left, file);
-        fprintf(file, "%-5d \t %-9u \t %s \n", i++, node->frequency,
-                node->word);
+        fprintf(file, "%-5d \t %-9u \t %s \n", i++, node->frequency, node->word);
         writeContentOfTreeToFile(node->right, file);
     }
 }
 
 /**
- * @brief Stores a word and returns address to memory
+ * @brief Stores word in memory
  * @param word word to be stored in memory
- * @return char *
+ * @returns a pointer to the newly allocated word
  */
 char *getPointerToWord(char *word)
 {
-    char *string = (char *)malloc((strlen(word) + 1) *
-                                  sizeof(char));  /// pointer to string
+    char *string = (char *)malloc((strlen(word) + 1) * sizeof(char));  ///< pointer to string
     // + 1 is for the '\0' character
     if (string != NULL)
     {
         strcpy(string, word);
         return string;
     }
-    endProgramAbruptly(
-        "\n A problem occurred while reserving memory for word \n");
+    endProgramAbruptly("\n A problem occurred while reserving memory for word \n");
     return NULL;
 }
 
 /**
- * @brief Reserves memory capable of storing a node and returns the address
- * @returns struct Node *
+ * @brief Reserves memory for new node
+ * @returns a pointer to the newly allocated node
  */
 struct Node *allocateMemoryForNode()
 {
-    struct Node *node =
-        (struct Node *)malloc(sizeof(struct Node));  /// pointer to node
+    struct Node *node = (struct Node *)malloc(sizeof(struct Node));  ///< pointer to node
     if (node != NULL)
         return node;
-    endProgramAbruptly(
-        "\n A problem occured while reserving memory for structure \n");
+    endProgramAbruptly("\n A problem occured while reserving memory for structure \n");
     return NULL;
 }
 
 /**
- * @brief closes a file when the read or write process is done
+ * @brief Closes file after read or write
  * @param file pointer to file to be closed
  * @returns void
  */
 void closeFile(FILE *file)
 {
-    int closed = fclose(file);  /// holds closed state of the file
+    int closed = fclose(file);  ///< holds closed state of the file
     if (closed != 0)
         endProgramAbruptly(" \n A Problem Occurred while closing a file \n");
 }
 
 /**
- * @brief freeing memory when the program is terminating
- * @param node pointer to the node to free
+ * @brief Frees memory when program is terminating
+ * @param node pointer to current node
  * @returns void
  */
 void freeTreeMemory(struct Node *node)
@@ -222,15 +216,13 @@ void freeTreeMemory(struct Node *node)
     {
         freeTreeMemory(node->left);
         freeTreeMemory(node->right);
-        // freeing node->word because memory was allocated using malloc
-        free(node->word);
-        // freeing node because memory was allocated using malloc
-        free(node);
+        free(node->word);           ///< freeing node->word because memory was allocated using malloc
+        free(node);                 ///< freeing node because memory was allocated using malloc
     }
 }
 
 /**
- * @brief ending the program due to an error
+ * @brief Ends program due to an error
  * @param errorMessage the error message to be printed
  * @returns void
  */
