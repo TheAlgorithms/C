@@ -14,10 +14,10 @@
  */
 struct Node
 {
-    char *word;              /// the word (value) of the node
-    unsigned int frequency;  /// number of occurences of the word
-    struct Node *left;       /// pointer to the left child node
-    struct Node *right;      /// pointer to the right child node
+    char *word;              ///< the word (value) of the node
+    unsigned int frequency;  ///< number of occurences of the word
+    struct Node *left;       ///< pointer to the left child node
+    struct Node *right;      ///< pointer to the right child node
 };
 
 struct Node *readWordsInFileToTree(FILE *file, struct Node *root);
@@ -150,7 +150,7 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
  * @brief Writes contents of the tree to another file alphabetically
  * @param node pointer of current node
  * @param file pointer to file
- * @return void
+ * @returns void
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
