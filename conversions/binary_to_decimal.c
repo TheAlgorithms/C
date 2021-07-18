@@ -5,7 +5,7 @@
  * A binary number is an input, it is checked to be binary
  * then, the number is converted to a decimal number.
  * @author Kyler Smith
- * @author [lazy-dude] (https://github.com/lazy-dude)
+ * @author [lazy-dude](https://github.com/lazy-dude)
  */
 
 // includes
@@ -99,4 +99,3 @@ int main()
     printf("All tests passed.\n");
     return 0;
 }
-
