@@ -38,13 +38,13 @@ bool is_binary(uintmax_t num)
  * @param num whose length to be computed
  * @return the length of the number
  */
-int num_len(uintmax_t num)
+uint16_t num_len(uintmax_t num)
 {
-    int i = 0;
-    for (i = 0; num > 0; i++) {
+    uint16_t len = 0;
+    for (len = 0; num > 0; len++) {
         num /= 10;
     }
-    return i;
+    return len;
 }
 
 /**
@@ -54,10 +54,11 @@ int num_len(uintmax_t num)
  */
 uintmax_t binary_decimal(uintmax_t number)
 {
-	unsigned remainder;
-	uintmax_t decimal_number = 0, temp = 1;
+	uint8_t remainder;
+	uintmax_t decimal_number = 0;
+	uint32_t temp = 1;
 
-    int length = num_len(UINTMAX_MAX) - 1;
+    uint16_t length = num_len(UINTMAX_MAX) - 1;
     
     assert(num_len(number) <= length);
     assert(is_binary(number));
