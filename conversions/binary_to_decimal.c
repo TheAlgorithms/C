@@ -40,7 +40,7 @@ bool is_binary(uintmax_t num)
  */
 int num_len(uintmax_t num)
 {
-    int i;
+    int i = 0;
     for (i = 0; num > 0; i++) {
         num /= 10;
     }
