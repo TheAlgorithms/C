@@ -8,8 +8,7 @@
  * @author [lazy-dude](https://github.com/lazy-dude)
  */
 
-// includes
-#include <assert.h> /// for assert
+#include <assert.h>   /// for assert
 #include <stdbool.h> /// for bool
 #include <stdint.h> /// for uintmax_t
 #include <stdio.h> /// for IO operations
