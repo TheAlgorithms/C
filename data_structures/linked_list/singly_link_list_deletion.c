@@ -24,13 +24,6 @@ void insert()  // function to insert at first location
     p = createnode();
     printf("\nenter the number to insert");
     scanf("%d", &p->info);
-    p->link = NULL;
-    if (start == NULL)
-    {
-        start = p;
-    }
-    else
-    {
         p->link = start;
         start = p;
     }
@@ -38,7 +31,7 @@ void insert()  // function to insert at first location
 ///////////////////////////////////////////////////////////
 void deletion()  // function to delete from first position
 {
-    struct node *t;
+    
     if (start == NULL)
     {
         printf("\nlist is empty");
