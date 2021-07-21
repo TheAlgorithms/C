@@ -4,7 +4,7 @@
  * @details
  * A binary number is an input, it is checked to be binary
  * then, the number is converted to a decimal number.
- * @author Kyler Smith
+ * @author [Kyler Smith](https://github.com/KylerSmith)
  * @author [lazy-dude](https://github.com/lazy-dude)
  */
 
