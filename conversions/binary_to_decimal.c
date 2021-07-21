@@ -87,6 +87,8 @@ static void test()
 	assert(binary_decimal(11111111)==255);
 	assert(binary_decimal(10000000000)==1024);
 	assert(binary_decimal(1001110100000100)==40196);
+
+        printf("All tests have passed!\n");
 }
 
 /**
