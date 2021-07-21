@@ -16,7 +16,8 @@
 /**
  * @brief checks whether the number is binary
  * @param num to be checked if it has binary representation
- * @return boolean true if num is binary false if not
+ * @returns true if the number IS binary
+ * @returns false if the number is NOT binary
  */
 bool is_binary(uintmax_t num)
 {
