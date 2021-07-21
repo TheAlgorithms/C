@@ -8,10 +8,10 @@
  * @author [lazy-dude](https://github.com/lazy-dude)
  */
 
-#include <assert.h>   /// for assert
-#include <stdbool.h> /// for bool
-#include <stdint.h> /// for uintmax_t
-#include <stdio.h> /// for IO operations
+#include <assert.h>     /// for assert
+#include <stdbool.h>   /// for bool
+#include <stdint.h>   /// for uintmax_t
+#include <stdio.h>   /// for IO operations
 
 /**
  * @brief is_binary checks whether num is a binary one
