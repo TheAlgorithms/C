@@ -35,7 +35,7 @@ bool is_binary(uintmax_t num)
 }
 
 /**
- * @brief num_len finds length of an uintmax_t num
+ * @brief finds the length of an `uintmax_t` number
  * @param num whose length to be computed
  * @return the length of the number
  */
