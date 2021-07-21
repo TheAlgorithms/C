@@ -14,7 +14,7 @@
 #include <stdio.h>   /// for IO operations
 
 /**
- * @brief is_binary checks whether num is a binary one
+ * @brief checks whether the number is binary
  * @param num to be checked if it has binary representation
  * @return boolean true if num is binary false if not
  */
