@@ -97,6 +97,5 @@ static void test()
 int main()
 {
     test();  // run self-test implementations
-    printf("All tests passed.\n");
     return 0;
 }
