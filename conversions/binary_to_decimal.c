@@ -49,7 +49,7 @@ uint16_t num_len(uintmax_t num)
 }
 
 /**
- * @brief binary_decimal function does the actual job of conversion
+ * @brief The `binary_decimal` function does the actual job of conversion
  * @param number binary to be converted
  * @return decimal_number decimal representation of binary number
  */
