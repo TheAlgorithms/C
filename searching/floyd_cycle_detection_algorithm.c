@@ -1,5 +1,5 @@
 /**
- * @file floyd_cycle_detection_algorithm.c
+ * @file
  * @brief Implementation of [Floyd's Cycle
  * Detection](https://en.wikipedia.org/wiki/Cycle_detection) algorithm
  * @details
