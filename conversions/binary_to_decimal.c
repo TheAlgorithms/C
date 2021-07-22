@@ -4,6 +4,7 @@
  * @details
  * A binary number is an input, it is checked to be binary
  * then, the number is converted to a decimal number.
+ * [Binary to decimal](https://byjus.com/binary-to-decimal-formula/)
  * @author [Kyler Smith](https://github.com/KylerSmith)
  * @author [lazy-dude](https://github.com/lazy-dude)
  */
@@ -59,20 +60,20 @@ uintmax_t binary_decimal(uintmax_t number)
 	uintmax_t decimal_number = 0;
 	uint32_t temp = 1;
 
-    uint16_t length = num_len(UINTMAX_MAX) - 1;
+	uint16_t length = num_len(UINTMAX_MAX) - 1;
     
-    assert(num_len(number) <= length);
-    assert(is_binary(number));
+	assert(num_len(number) <= length);
+	assert(is_binary(number));
 
-    // Iterate over the number until the end.
-    while (number > 0) {
-        remainder = number % 10;
-        number = number / 10;
-        decimal_number += remainder * temp;
-        temp = temp * 2; // used as power of 2
-    }
+	// Iterate over the number until the end.
+	while (number > 0) {
+		remainder = number % 10;
+		number = number / 10;
+		decimal_number += remainder * temp;
+		temp = temp * 2; // used as power of 2
+	}
 
-    return decimal_number;
+	return decimal_number;
 }
 
 /**
