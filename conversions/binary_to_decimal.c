@@ -37,7 +37,7 @@ bool is_binary(uintmax_t num)
 /**
  * @brief finds the length of an `uintmax_t` number
  * @param num whose length to be computed
- * @return the length of the number
+ * @returns the length of the number
  */
 uint16_t num_len(uintmax_t num)
 {
@@ -51,7 +51,7 @@ uint16_t num_len(uintmax_t num)
 /**
  * @brief The `binary_decimal` function does the actual job of conversion
  * @param the number binary to be converted
- * @return decimal_number decimal representation of a binary number
+ * @returns decimal_number decimal representation of a binary number
  */
 uintmax_t binary_decimal(uintmax_t number)
 {
