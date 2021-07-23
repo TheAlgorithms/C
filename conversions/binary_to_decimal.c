@@ -4,7 +4,6 @@
  * @details
  * A binary number is an input, it is checked to be binary
  * then, the number is converted to a decimal number.
- * [Binary to decimal](https://byjus.com/binary-to-decimal-formula/)
  * @author [Kyler Smith](https://github.com/KylerSmith)
  * @author [lazy-dude](https://github.com/lazy-dude)
  */
