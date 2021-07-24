@@ -10,9 +10,9 @@
  * original array, otherwise, it returns -1.
  * @author [Swastika Gupta](https://github.com/Swastyy)
  */
-#include <assert.h>
-#include <math.h>
-#include <stdio.h>
+#include <assert.h>   /// for assert
+#include <inttypes.h> /// for uint32_t
+#include <stdio.h>    /// for IO operations
 
 /**
  * @brief The main function implements the search algorithm
@@ -21,14 +21,14 @@
  * @param n size of array
  * @returns the duplicate number
  */
-int duplicateNumber(const int *in_arr, size_t n)
+uint32_t duplicateNumber(const uint32_t *in_arr, size_t n)
 {
     if (n == 0 || n == 1) {  // to find duplicate in an array its size should be atleast 2
         return -1;
     }
-    int tortoise = in_arr[0];  // variable tortoise is used for the longer
+    uint32_t tortoise = in_arr[0];  // variable tortoise is used for the longer
                                     // jumps in the array
-    int hare = in_arr[0];  // variable hare is used for shorter jumps in the array
+    uint32_t hare = in_arr[0];  // variable hare is used for shorter jumps in the array
     do {
         tortoise = in_arr[tortoise];
         hare = in_arr[in_arr[hare]];
@@ -47,11 +47,11 @@ int duplicateNumber(const int *in_arr, size_t n)
  */
 static void test()
 {
-    int arr[] = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
+    uint32_t arr[] = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
     size_t n = sizeof(arr) / sizeof(int);
 
     printf("Test 1.... ");
-    int index = duplicateNumber(arr, n);
+    uint32_t index = duplicateNumber(arr, n);
     assert(index == 1);
     printf("passed\n");
 }
