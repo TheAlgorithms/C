@@ -42,8 +42,8 @@ int duplicateNumber(const int *in_arr, size_t n)
 }
 
 /**
- * @brief Test implementation of the function
- *
+ * @brief Self-test implementations
+ * @returns void
  */
 void test()
 {
