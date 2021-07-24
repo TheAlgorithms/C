@@ -45,7 +45,7 @@ int duplicateNumber(const int *in_arr, size_t n)
  * @brief Self-test implementations
  * @returns void
  */
-void test()
+static void test()
 {
     int arr[] = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
     size_t n = sizeof(arr) / sizeof(int);
