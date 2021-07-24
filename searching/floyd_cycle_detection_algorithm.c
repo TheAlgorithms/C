@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 /**
- * @brief The main function implements search algorithm
+ * @brief The main function implements the search algorithm
  * @tparam T type of array
  * @param in_arr the input array
  * @param n size of array
