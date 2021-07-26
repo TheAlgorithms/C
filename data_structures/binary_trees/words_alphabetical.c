@@ -6,11 +6,11 @@
  * More details about this
  * [algorithm](http://www.dailyfreecode.com/Code/word-list-reads-text-file-makes-2050.aspx)
  */
-#include <ctype.h>    ///< for type checks
-#include <stdbool.h>  ///< for boolean data type
-#include <stdio.h>    ///< for IO operations
-#include <stdlib.h>   ///< for memory allocation
-#include <string.h>   ///< for string operations
+#include <ctype.h>    /// for type checks
+#include <stdbool.h>  /// for boolean data type
+#include <stdio.h>    /// for IO operations
+#include <stdlib.h>   /// for memory allocation
+#include <string.h>   /// for string operations
 
 /**
  * @brief structure defining a node in the binary tree
