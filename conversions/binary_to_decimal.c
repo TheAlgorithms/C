@@ -2,7 +2,7 @@
  * @file
  * @brief Converts a [binary to a decimal](https://byjus.com/binary-to-decimal-formula/) number.
  * @details
- * A binary number is an input, it is checked to be binary
+ * A binary number is an input that is checked to be binary
  * then, the number is converted to a decimal number.
  * @author [Kyler Smith](https://github.com/KylerSmith)
  * @author [lazy-dude](https://github.com/lazy-dude)
