@@ -3,7 +3,7 @@
  * @brief Printing the [words contained in a file](http://www.dailyfreecode.com/Code/word-list-reads-text-file-makes-2050.aspx) named `file.txt` in alphabetical
  * order and also their frequencies in to another file "wordcount.txt"
  * @details
- * Given a file (file.txt) containing words (like a publication or a novel),
+ * Given a file (`file.txt`) containing words (like a publication or a novel),
  * where words are separated by a space, newline, hyphen or underscore.
  * This program prints (writes or outputs) to another file (wordcount.txt),
  * the individual words contained in 'file.txt' with their frequencies (number of occurences)
