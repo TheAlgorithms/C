@@ -4,7 +4,7 @@
  * order and also their frequencies in to another file "wordcount.txt"
  * @details
  * Given a file (`file.txt`) containing words (like a publication or a novel),
- * where words are separated by a space, newline, hyphen or underscore.
+ * where words are separated by a space, newline, hyphen, or underscore.
  * This program prints (writes or outputs) to another file (`wordcount.txt`),
  * the individual words contained in 'file.txt' with their frequencies (number of occurences)
  * each on a newline and in alphabetical order.
