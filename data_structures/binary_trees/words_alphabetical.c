@@ -39,7 +39,7 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
 
     char inputChar;                ///< temp storage of characters
     bool isPrevCharAlpha = false;  ///< bool to mark the end of a word
-    uint64_t pos = 0;  ///< position in inputString to place the inputChar
+    uint8_t pos = 0;  ///< position in inputString to place the inputChar
 
     while ((inputChar = fgetc(file)) != EOF)
     {
