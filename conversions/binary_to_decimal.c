@@ -25,6 +25,7 @@ bool is_binary(uintmax_t num)
 
     while (num > 0) {
         remainder = num % 10;
+        // make sure each digit is 0 or 1
         if (remainder == 0 || remainder == 1) {
             num /= 10;
             continue;
