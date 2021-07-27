@@ -3,9 +3,15 @@
  * @brief Printing the [words contained in a file](http://www.dailyfreecode.com/Code/word-list-reads-text-file-makes-2050.aspx) named `file.txt` in alphabetical
  * order and also their frequencies in to another file "wordcount.txt"
  * @details
- * More details about this
- * [algorithm](http://www.dailyfreecode.com/Code/word-list-reads-text-file-makes-2050.aspx)
+ * Given a file (file.txt) containing words (like a publication or a novel),
+ * where words are separated by a space, newline, hyphen or underscore.
+ * This program prints (writes or outputs) to another file (wordcount.txt),
+ * the individual words contained in 'file.txt' with their frequencies (number of occurences)
+ * each on a newline and in alphabetical order.
+ * This program uses the binary tree data structure to accomplish this task.
+ * @author [Randy Kwalar](https://github.com/RandyKdev)
  */
+
 #include <ctype.h>    /// for type checks
 #include <stdbool.h>  /// for boolean data type
 #include <stdio.h>    /// for IO operations
