@@ -19,7 +19,7 @@
  * @brief The main function implements the search algorithm
  * @tparam T type of array
  * @param in_arr the input array
- * @param n size of array
+ * @param n size of the array
  * @returns the duplicate number
  */
 uint32_t duplicateNumber(const uint32_t *in_arr, size_t n)
