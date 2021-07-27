@@ -11,6 +11,7 @@
 #include <stdio.h>    /// for IO operations
 #include <stdlib.h>   /// for memory allocation
 #include <string.h>   /// for string operations
+#include <inttypes.h> /// for specific integer types
 
 /**
  * @brief structure defining a node in the binary tree
@@ -18,7 +19,7 @@
 struct Node
 {
     char *word;              ///< the word (value) of the node
-    unsigned int frequency;  ///< number of occurences of the word
+    uint64_t frequency;      ///< number of occurences of the word
     struct Node *left;       ///< pointer to the left child node
     struct Node *right;      ///< pointer to the right child node
 };
@@ -38,7 +39,7 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
 
     char inputChar;                ///< temp storage of characters
     bool isPrevCharAlpha = false;  ///< bool to mark the end of a word
-    int pos = 0;  ///< position in inputString to place the inputChar
+    uint64_t pos = 0;  ///< position in inputString to place the inputChar
 
     while ((inputChar = fgetc(file)) != EOF)
     {
