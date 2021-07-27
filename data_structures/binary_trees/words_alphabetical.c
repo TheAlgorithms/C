@@ -23,51 +23,6 @@ struct Node
     struct Node *right;      ///< pointer to the right child node
 };
 
-struct Node *readWordsInFileToTree(
-    FILE *file, struct Node *root);  ///< Reads words from file to tree and
-                                     ///< returns pointer to root node
-struct Node *addWordToTree(
-    char *word,
-    struct Node *currentNode);  ///< Adds word (node) to the correct position in
-                                ///< tree and returns pointer to root node
-void writeContentOfTreeToFile(
-    struct Node *node,
-    FILE *file);  ///< Writes contents of tree to another file alphabetically
-char *getPointerToWord(
-    char *word);  ///< Stores a word in memory and returns pointer to word
-struct Node *allocateMemoryForNode();  ///< Reserves memory for new node and
-                                       ///< returns pointer to node
-void closeFile(FILE *file);            ///< Closes file after read or write
-void freeTreeMemory(
-    struct Node *node);  ///< Frees memory when program is terminating
-void endProgramAbruptly(char *errorMessage);  ///< Ends program due to an error
-
-/**
- * @brief Main function
- * @returns 0 on exit
- */
-int main()
-{
-    struct Node *root = NULL;  ///< pointer to root node
-    FILE *file = NULL;         ///< pointer to file
-
-    file = fopen("file.txt", "r");
-    if (file == NULL)
-        endProgramAbruptly("file: 'file.txt' not found");
-
-    root = readWordsInFileToTree(file, root);
-    closeFile(file);
-
-    file = fopen("wordcount.txt", "a");
-    fprintf(file, "%-5s \t %9s \t %s \n", "S/N", "FREQUENCY", "WORD");
-    writeContentOfTreeToFile(root, file);
-    closeFile(file);
-
-    freeTreeMemory(root);
-
-    return 0;
-}
-
 /**
  * @brief Reads words from file to tree
  * @param file file to be read from
@@ -252,4 +207,30 @@ void endProgramAbruptly(char *errorMessage)
 {
     fprintf(stderr, "%s\n", errorMessage);
     exit(EXIT_FAILURE);
+}
+
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
+int main()
+{
+    struct Node *root = NULL;  ///< pointer to root node
+    FILE *file = NULL;         ///< pointer to file
+
+    file = fopen("file.txt", "r");
+    if (file == NULL)
+        endProgramAbruptly("file: 'file.txt' not found");
+
+    root = readWordsInFileToTree(file, root);
+    closeFile(file);
+
+    file = fopen("wordcount.txt", "a");
+    fprintf(file, "%-5s \t %9s \t %s \n", "S/N", "FREQUENCY", "WORD");
+    writeContentOfTreeToFile(root, file);
+    closeFile(file);
+
+    freeTreeMemory(root);
+
+    return 0;
 }
