@@ -105,7 +105,7 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
         currentNode->right = NULL;
         return currentNode;
     }
-    int compared = strcmp(word, currentNode->word);  ///< holds compare state
+    int64_t compared = strcmp(word, currentNode->word);  ///< holds compare state
 
     if (compared > 0)
         currentNode->right = addWordToTree(word, currentNode->right);
@@ -125,11 +125,11 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
-    static int i = 1;  ///< for line numbering in write file
+    static uint64_t i = 1;  ///< for line numbering in write file
     if (node != NULL)
     {
         writeContentOfTreeToFile(node->left, file);
-        fprintf(file, "%-5d \t %-9u \t %s \n", i++, node->frequency,
+        fprintf(file, "%-5u \t %-9u \t %s \n", i++, node->frequency,
                 node->word);
         writeContentOfTreeToFile(node->right, file);
     }
@@ -177,8 +177,7 @@ struct Node *allocateMemoryForNode()
  */
 void closeFile(FILE *file)
 {
-    int closed = fclose(file);  ///< holds closed state of the file
-    if (closed != 0)
+    if (fclose(file))
         endProgramAbruptly(" \n A Problem Occurred while closing a file \n");
 }
 
