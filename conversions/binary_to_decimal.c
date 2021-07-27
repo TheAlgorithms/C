@@ -1,6 +1,6 @@
 /** 
  * @file
- * @brief Converts a [binary to a decimal](https://byjus.com/binary-to-decimal-formula/) number.
+ * @brief Converts a [binary number to a decimal](https://byjus.com/binary-to-decimal-formula/) number.
  * @details
  * A binary number is an input that is checked to be binary
  * then, the number is converted to a decimal number.
