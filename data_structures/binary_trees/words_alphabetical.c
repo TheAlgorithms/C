@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Printing the words contained in a file "file.txt" in alphabetical
+ * @brief Printing the [words contained in a file](http://www.dailyfreecode.com/Code/word-list-reads-text-file-makes-2050.aspx) named `file.txt` in alphabetical
  * order and also their frequencies in to another file "wordcount.txt"
  * @details
  * More details about this
