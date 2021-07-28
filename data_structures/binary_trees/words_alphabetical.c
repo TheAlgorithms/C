@@ -77,7 +77,7 @@ char *getPointerToWord(char *word)
         return string;
     }
     endProgramAbruptly(
-        "\n A problem occurred while reserving memory for word \n");
+        "\n A problem occurred while reserving memory for the word\n");
     return NULL;
 }
 
