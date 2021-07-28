@@ -275,7 +275,7 @@ static void test()
     int16_t inputChar;  // holds the current character in `wordcount.txt`
     uint64_t i = 0;         // holds the current index in `correctString`
 
-    // Checks if the content in 'wordcount.txt' is as expected (thesame as in
+    // Checks if the content in `wordcount.txt` is as expected (the same as in
     // correctString)
     while ((inputChar = fgetc(file)) != EOF)
         assert(inputChar == correctString[i++]);
