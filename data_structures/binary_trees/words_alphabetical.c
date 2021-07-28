@@ -273,7 +273,7 @@ static void test()
         "9     	 1         	 to \n";
 
     int16_t inputChar;  // holds the current character in `wordcount.txt`
-    uint64_t i;         // holds the current index in correctString
+    uint64_t i = 0;         // holds the current index in `correctString`
 
     // Checks if the content in 'wordcount.txt' is as expected (thesame as in
     // correctString)
