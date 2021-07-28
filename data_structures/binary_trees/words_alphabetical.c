@@ -280,8 +280,8 @@ static void test()
     while ((inputChar = fgetc(file)) != EOF)
         assert(inputChar == correctString[i++]);
 
-    closeFile(file);          // closes 'wordcount.txt'
-    remove("wordcount.txt");  // deletes 'wordcount.txt'
+    closeFile(file);          // closes `wordcount.txt`
+    remove("wordcount.txt");  // deletes `wordcount.txt`
 
     freeTreeMemory(root);  // frees memory taken up by tree
 }
