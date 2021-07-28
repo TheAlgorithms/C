@@ -55,9 +55,9 @@ void freeTreeMemory(struct Node *node)
     {
         freeTreeMemory(node->left);
         freeTreeMemory(node->right);
-        free(node->word);  ///< freeing node->word because memory was allocated
-                           ///< using malloc
-        free(node);  ///< freeing node because memory was allocated using malloc
+        free(node->word);  // freeing node->word because memory was allocated
+                           // using malloc
+        free(node);  // freeing node because memory was allocated using malloc
     }
 }
 
@@ -68,8 +68,8 @@ void freeTreeMemory(struct Node *node)
  */
 char *getPointerToWord(char *word)
 {
-    char *string = (char *)malloc((strlen(word) + 1) *
-                                  sizeof(char));  ///< pointer to string
+    char *string =
+        (char *)malloc((strlen(word) + 1) * sizeof(char));  // pointer to string
     // + 1 is for the '\0' character
     if (string != NULL)
     {
@@ -99,9 +99,11 @@ void closeFile(FILE *file)
 struct Node *allocateMemoryForNode()
 {
     struct Node *node =
-        (struct Node *)malloc(sizeof(struct Node));  ///< pointer to node
+        (struct Node *)malloc(sizeof(struct Node));  // pointer to node
     if (node != NULL)
+    {
         return node;
+    }
     endProgramAbruptly(
         "\nA problem occurred while reserving memory for the structure\n");
     return NULL;
@@ -115,13 +117,18 @@ struct Node *allocateMemoryForNode()
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
-    static uint64_t i = 1;  // for line numbering in write file
-    if (node != NULL)       // checks if 
+    static uint64_t i = 1;  // for word numbering in write file
+    if (node != NULL)       // checks if node is valid
     {
-        writeContentOfTreeToFile(node->left, file);
+        writeContentOfTreeToFile(
+            node->left,
+            file);  // calls `writeContentOfTreeToFile` for left sub tree
         fprintf(file, "%-5lu \t %-9lu \t %s \n", i++, node->frequency,
-                node->word);
-        writeContentOfTreeToFile(node->right, file);
+                node->word);  // prints the word number, word frequency and word
+                              // in tabular format to the file
+        writeContentOfTreeToFile(
+            node->right,
+            file);  // calls `writeContentOfTreeToFile` for right sub tree
     }
 }
 
@@ -133,26 +140,31 @@ void writeContentOfTreeToFile(struct Node *node, FILE *file)
  */
 struct Node *addWordToTree(char *word, struct Node *currentNode)
 {
-    if (currentNode == NULL)
+    if (currentNode == NULL)  // checks if `currentNode` is `NULL`
     {
-        struct Node *currentNode = allocateMemoryForNode();
-        currentNode->word = getPointerToWord(word);
-        currentNode->frequency = 1;
-        currentNode->left = NULL;
-        currentNode->right = NULL;
-        return currentNode;
+        struct Node *currentNode =
+            allocateMemoryForNode();  // allocates memory for new node
+        currentNode->word = getPointerToWord(word);  // stores `word` in memory
+        currentNode->frequency = 1;  // initializes the word frequency to 1
+        currentNode->left = NULL;    // sets left node to `NULL`
+        currentNode->right = NULL;   // sets right node to `NULL`
+        return currentNode;          // returns pointer to newly created node
     }
-    int64_t compared =
-        strcmp(word, currentNode->word);  ///< holds compare state
+
+    int64_t compared = strcmp(word, currentNode->word);  // holds compare state
 
     if (compared > 0)
-        currentNode->right = addWordToTree(word, currentNode->right);
+        currentNode->right = addWordToTree(word,
+            currentNode->right);  // adds `word` to right sub tree if `word` is
+                                  // alphabetically greater than `currentNode->word`
     else if (compared < 0)
-        currentNode->left = addWordToTree(word, currentNode->left);
+        currentNode->left = addWordToTree(word,
+            currentNode->left);  // adds `word` to left sub tree if `word` is
+                                 // alphabetically less than `currentNode->word`
     else
-        currentNode->frequency++;
+        currentNode->frequency++; // increments `currentNode` frequency if `word` is the same as `currentNode->word`
 
-    return currentNode;
+    return currentNode; // returns pointer to current node
 }
 
 /**
@@ -166,11 +178,11 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
     // longest english word = 45 chars
     // +1 for '\0' = 46 chars
     char *inputString =
-        (char *)malloc(46 * sizeof(char));  ///< pointer to input string
+        (char *)malloc(46 * sizeof(char));  // pointer to input string
 
-    char inputChar;                ///< temp storage of characters
-    bool isPrevCharAlpha = false;  ///< bool to mark the end of a word
-    uint8_t pos = 0;  ///< position in inputString to place the inputChar
+    char inputChar;                // temp storage of characters
+    bool isPrevCharAlpha = false;  // bool to mark the end of a word
+    uint8_t pos = 0;  // position in inputString to place the inputChar
 
     while ((inputChar = fgetc(file)) != EOF)
     {
@@ -273,7 +285,7 @@ static void test()
         "9     	 1         	 to \n";
 
     int16_t inputChar;  // holds the current character in `wordcount.txt`
-    uint64_t i = 0;         // holds the current index in `correctString`
+    uint64_t i = 0;     // holds the current index in `correctString`
 
     // Checks if the content in `wordcount.txt` is as expected (the same as in
     // `correctString`)
