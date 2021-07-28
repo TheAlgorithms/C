@@ -51,7 +51,7 @@ static void test()
     uint32_t arr[] = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610}; // input array
     size_t n = sizeof(arr) / sizeof(int);
 
-    printf("Test 1.... ");
+    printf("1st test... ");
     uint32_t index = duplicateNumber(arr, n); // calling the duplicateNumber function to check which number occurs twice in the array
     assert(index == 1); // the number which occurs twice is 1 or not
     printf("passed\n");
