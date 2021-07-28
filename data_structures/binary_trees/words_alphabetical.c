@@ -100,8 +100,9 @@ struct Node *allocateMemoryForNode()
 {
     struct Node *node =
         (struct Node *)malloc(sizeof(struct Node));  ///< pointer to node
-    if (node != NULL)
+    if (node != NULL) {
         return node;
+    }
     endProgramAbruptly(
         "\nA problem occurred while reserving memory for the structure\n");
     return NULL;
