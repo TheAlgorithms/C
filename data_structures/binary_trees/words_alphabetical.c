@@ -103,7 +103,7 @@ struct Node *allocateMemoryForNode()
     if (node != NULL)
         return node;
     endProgramAbruptly(
-        "\n A problem occured while reserving memory for structure \n");
+        "\nA problem occurred while reserving memory for the structure\n");
     return NULL;
 }
 
