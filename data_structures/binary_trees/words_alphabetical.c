@@ -255,7 +255,7 @@ static void test()
 
     file = fopen("wordcount.txt", "a");  // creates write file
     fprintf(file, "%-5s \t %9s \t %s \n", "S/N", "FREQUENCY",
-            "WORD");  // prints the heading to 'wordcount.txt'
+            "WORD");  // prints the heading to `wordcount.txt`
     writeContentOfTreeToFile(
         root, file);  // writes content of tree to file (`wordcount.txt`)
 
