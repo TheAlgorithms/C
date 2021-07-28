@@ -14,7 +14,7 @@
  * @author [Randy Kwalar](https://github.com/RandyKdev)
  */
 
-#include <assert.h>    /// for self tests
+#include <assert.h>    /// for assert
 #include <ctype.h>     /// for type checks
 #include <inttypes.h>  /// for specific integer types
 #include <stdbool.h>   /// for boolean data type
