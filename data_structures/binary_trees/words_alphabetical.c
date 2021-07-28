@@ -16,7 +16,7 @@
 
 #include <assert.h>    /// for assert
 #include <ctype.h>     /// for type checks
-#include <inttypes.h>  /// for specific integer types
+#include <inttypes.h>  /// for uint64_t based types, int64_t based types
 #include <stdbool.h>   /// for boolean data type
 #include <stdio.h>     /// for IO operations
 #include <stdlib.h>    /// for memory allocation
