@@ -77,7 +77,7 @@ char *getPointerToWord(char *word)
         return string;
     }
     endProgramAbruptly(
-        "\n A problem occurred while reserving memory for the word\n");
+        "\nA problem occurred while reserving memory for the word\n");
     return NULL;
 }
 
@@ -89,7 +89,7 @@ char *getPointerToWord(char *word)
 void closeFile(FILE *file)
 {
     if (fclose(file))
-        endProgramAbruptly(" \n A Problem Occurred while closing a file \n");
+        endProgramAbruptly("\nA Problem Occurred while closing a file\n");
 }
 
 /**
@@ -115,8 +115,8 @@ struct Node *allocateMemoryForNode()
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
-    static uint64_t i = 1;  ///< for line numbering in write file
-    if (node != NULL)
+    static uint64_t i = 1;  // for line numbering in write file
+    if (node != NULL)       // checks if 
     {
         writeContentOfTreeToFile(node->left, file);
         fprintf(file, "%-5lu \t %-9lu \t %s \n", i++, node->frequency,
@@ -225,8 +225,8 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
  */
 static void test()
 {
-    struct Node *root = NULL;  ///< pointer to root node
-    FILE *file = NULL;         ///< pointer to file
+    struct Node *root = NULL;  // pointer to root node
+    FILE *file = NULL;         // pointer to file
 
     file = fopen("file.txt", "w");  // creates test file in write mode
 
@@ -276,7 +276,7 @@ static void test()
     uint64_t i = 0;         // holds the current index in `correctString`
 
     // Checks if the content in `wordcount.txt` is as expected (the same as in
-    // correctString)
+    // `correctString`)
     while ((inputChar = fgetc(file)) != EOF)
         assert(inputChar == correctString[i++]);
 
