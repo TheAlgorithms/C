@@ -88,8 +88,9 @@ char *getPointerToWord(char *word)
  */
 void closeFile(FILE *file)
 {
-    if (fclose(file))
+    if (fclose(file)) {
         endProgramAbruptly("\nA Problem Occurred while closing a file\n");
+     }
 }
 
 /**
