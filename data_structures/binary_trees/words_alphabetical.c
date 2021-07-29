@@ -118,7 +118,7 @@ struct Node *allocateMemoryForNode()
  */
 void writeContentOfTreeToFile(struct Node *node, FILE *file)
 {
-    static uint64_t i = 1;  // for word numbering in write file
+    static uint64_t i = 1;  ///< for word numbering in the write file
     if (node != NULL)       // checks if node is valid
     {
         writeContentOfTreeToFile(
