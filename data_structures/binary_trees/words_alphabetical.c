@@ -300,7 +300,7 @@ static void test()
     closeFile(file);          // closes `wordcount.txt`
     remove("wordcount.txt");  // deletes `wordcount.txt`
 
-    freeTreeMemory(root);  // frees memory taken up by tree
+    freeTreeMemory(root);  // frees memory taken up by the tree
 }
 
 /**
