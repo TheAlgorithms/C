@@ -182,7 +182,7 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
     // longest english word = 45 chars
     // +1 for '\0' = 46 chars
     char *inputString =
-        (char *)malloc(46 * sizeof(char));  // pointer to input string
+        (char *)malloc(46 * sizeof(char));  ///< pointer to the input string
 
     char inputChar;                ///< temp storage of characters
     bool isPrevCharAlpha = false;  ///< bool to mark the end of a word
