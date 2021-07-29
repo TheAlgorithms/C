@@ -64,7 +64,8 @@ void freeTreeMemory(struct Node *node)
 /**
  * @brief Stores word in memory
  * @param word word to be stored in memory
- * @returns a pointer to the newly allocated word
+ * @returns a pointer to the newly allocated word if the word is stored successfully
+ * @returns `NULL` if the word is not stored
  */
 char *getPointerToWord(char *word)
 {
@@ -95,7 +96,8 @@ void closeFile(FILE *file)
 
 /**
  * @brief Reserves memory for new node
- * @returns a pointer to the newly allocated node
+ * @returns a pointer to the newly allocated node if memory is successfully reserved
+ * @returns `NULL` if memory is not reserved
  */
 struct Node *allocateMemoryForNode()
 {
