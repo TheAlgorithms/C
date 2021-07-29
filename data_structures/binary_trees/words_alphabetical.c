@@ -64,8 +64,8 @@ void freeTreeMemory(struct Node *node)
 /**
  * @brief Stores word in memory
  * @param word word to be stored in memory
- * @returns a pointer to the newly allocated word if the word is stored successfully
- * @returns `NULL` if the word is not stored
+ * @returns a pointer to the newly allocated word if the word IS stored successfully
+ * @returns `NULL` if the word is NOT stored
  */
 char *getPointerToWord(char *word)
 {
@@ -277,7 +277,7 @@ static void test()
     writeContentOfTreeToFile(
         root, file);  // writes content of tree to file (`wordcount.txt`)
 
-    // Here is how the output to 'wordcount.txt' should look like
+    // Here is how the output to `wordcount.txt` should look like
     char *correctString =
         "S/N   	 FREQUENCY 	 WORD \n"
         "1     	 2         	 a \n"
