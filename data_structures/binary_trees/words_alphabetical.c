@@ -69,7 +69,7 @@ void freeTreeMemory(struct Node *node)
 char *getPointerToWord(char *word)
 {
     char *string =
-        (char *)malloc((strlen(word) + 1) * sizeof(char));  // pointer to string
+        (char *)malloc((strlen(word) + 1) * sizeof(char));  ///< pointer to string
     // + 1 is for the '\0' character
     if (string != NULL)
     {
