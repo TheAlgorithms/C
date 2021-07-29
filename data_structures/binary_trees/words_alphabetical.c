@@ -96,8 +96,8 @@ void closeFile(FILE *file)
 
 /**
  * @brief Reserves memory for new node
- * @returns a pointer to the newly allocated node if memory is successfully reserved
- * @returns `NULL` if memory is not reserved
+ * @returns a pointer to the newly allocated node if memory IS successfully reserved
+ * @returns `NULL` if memory is NOT reserved
  */
 struct Node *allocateMemoryForNode()
 {
