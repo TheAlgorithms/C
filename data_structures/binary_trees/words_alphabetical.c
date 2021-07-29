@@ -152,7 +152,7 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
         return currentNode;          // returns pointer to newly created node
     }
 
-    int64_t compared = strcmp(word, currentNode->word);  // holds compare state
+    int64_t compared = strcmp(word, currentNode->word);  ///< holds compare state
 
     if (compared > 0) {
         currentNode->right = addWordToTree(word,
