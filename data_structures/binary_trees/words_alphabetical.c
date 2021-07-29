@@ -100,7 +100,7 @@ void closeFile(FILE *file)
 struct Node *allocateMemoryForNode()
 {
     struct Node *node =
-        (struct Node *)malloc(sizeof(struct Node));  // pointer to node
+        (struct Node *)malloc(sizeof(struct Node));  ///< pointer to the node
     if (node != NULL)
     {
         return node;
