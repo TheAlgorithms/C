@@ -293,8 +293,9 @@ static void test()
 
     // Checks if the content in `wordcount.txt` is as expected (the same as in
     // `correctString`)
-    while ((inputChar = fgetc(file)) != EOF)
+    while ((inputChar = fgetc(file)) != EOF) {
         assert(inputChar == correctString[i++]);
+    }
 
     closeFile(file);          // closes `wordcount.txt`
     remove("wordcount.txt");  // deletes `wordcount.txt`
