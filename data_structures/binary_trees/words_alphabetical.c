@@ -241,8 +241,8 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
  */
 static void test()
 {
-    struct Node *root = NULL;  // pointer to root node
-    FILE *file = NULL;         // pointer to file
+    struct Node *root = NULL;  ///< pointer to root node
+    FILE *file = NULL;         ///< pointer to file
 
     file = fopen("file.txt", "w");  // creates test file in write mode
 
