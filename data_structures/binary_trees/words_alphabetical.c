@@ -82,8 +82,8 @@ char *getPointerToWord(char *word)
 }
 
 /**
- * @brief Closes file after read or write
- * @param file pointer to file to be closed
+ * @brief Closes the file after reading or writing
+ * @param file pointer to the file to be closed
  * @returns void
  */
 void closeFile(FILE *file)
@@ -241,8 +241,8 @@ struct Node *readWordsInFileToTree(FILE *file, struct Node *root)
  */
 static void test()
 {
-    struct Node *root = NULL;  ///< pointer to root node
-    FILE *file = NULL;         ///< pointer to file
+    struct Node *root = NULL;  ///< pointer to the root node
+    FILE *file = NULL;         ///< pointer to the file
 
     file = fopen("file.txt", "w");  // creates test file in write mode
 
