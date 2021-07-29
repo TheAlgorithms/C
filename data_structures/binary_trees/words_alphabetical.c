@@ -153,16 +153,19 @@ struct Node *addWordToTree(char *word, struct Node *currentNode)
 
     int64_t compared = strcmp(word, currentNode->word);  // holds compare state
 
-    if (compared > 0)
+    if (compared > 0) {
         currentNode->right = addWordToTree(word,
             currentNode->right);  // adds `word` to right sub tree if `word` is
                                   // alphabetically greater than `currentNode->word`
-    else if (compared < 0)
+    }
+    else if (compared < 0) {
         currentNode->left = addWordToTree(word,
             currentNode->left);  // adds `word` to left sub tree if `word` is
                                  // alphabetically less than `currentNode->word`
-    else
+    }
+    else {
         currentNode->frequency++; // increments `currentNode` frequency if `word` is the same as `currentNode->word`
+    }
 
     return currentNode; // returns pointer to current node
 }
