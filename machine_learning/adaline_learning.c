@@ -240,20 +240,20 @@ void test1(double eta)
     }
 
     printf("------- Test 1 -------\n");
-    printf("Model before fit: %s", adaline_get_weights_str(&ada));
+    printf("Model before fit: %s\n", adaline_get_weights_str(&ada));
 
     adaline_fit(&ada, X, Y, N);
     printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
 
     double test_x[] = {5, -3};
     int pred = adaline_predict(&ada, test_x, NULL);
-    printf("Predict for x=(5,-3): % d", pred);
+    printf("Predict for x=(5,-3): % d\n", pred);
     assert(pred == -1);
     printf(" ...passed\n");
 
     double test_x2[] = {5, 8};
     pred = adaline_predict(&ada, test_x2, NULL);
-    printf("Predict for x=(5, 8): % d", pred);
+    printf("Predict for x=(5, 8): % d\n", pred);
     assert(pred == 1);
     printf(" ...passed\n");
 
@@ -294,7 +294,7 @@ void test2(double eta)
     }
 
     printf("------- Test 2 -------\n");
-    printf("Model before fit: %s", adaline_get_weights_str(&ada));
+    printf("Model before fit: %s\n", adaline_get_weights_str(&ada));
 
     adaline_fit(&ada, X, Y, N);
     printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
@@ -309,7 +309,7 @@ void test2(double eta)
         test_x[0] = x0;
         test_x[1] = x1;
         int pred = adaline_predict(&ada, test_x, NULL);
-        printf("Predict for x=(% 3.2f,% 3.2f): % d", x0, x1, pred);
+        printf("Predict for x=(% 3.2f,% 3.2f): % d\n", x0, x1, pred);
 
         int expected_val = (x0 + 3. * x1) > -1 ? 1 : -1;
         assert(pred == expected_val);
@@ -362,7 +362,7 @@ void test3(double eta)
     }
 
     printf("------- Test 3 -------\n");
-    printf("Model before fit: %s", adaline_get_weights_str(&ada));
+    printf("Model before fit: %s\n", adaline_get_weights_str(&ada));
 
     adaline_fit(&ada, X, Y, N);
     printf("Model after fit: %s\n", adaline_get_weights_str(&ada));
@@ -381,7 +381,7 @@ void test3(double eta)
         test_x[4] = x1 * x1;
         test_x[5] = x2 * x2;
         int pred = adaline_predict(&ada, test_x, NULL);
-        printf("Predict for x=(% 3.2f,% 3.2f): % d", x0, x1, pred);
+        printf("Predict for x=(% 3.2f,% 3.2f): % d\n", x0, x1, pred);
 
         int expected_val = (x0 * x0 + x1 * x1 + x2 * x2) <= 1 ? 1 : -1;
         assert(pred == expected_val);
