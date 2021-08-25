@@ -21,11 +21,32 @@
  */
 int main(int argc, char* argv[])
 {
-	int* iptr = malloc(10 * sizeof(int));
-	char* cptr = calloc(256, sizeof(char));
+    // TEST 1
+    int* iptr = malloc(10 * sizeof(int));
+    char* cptr = calloc(256, sizeof(char));
 
-	free(iptr);
-	// free(cptr);
+    free(iptr);
+    // free(cptr);
 
+    // TEST 2
+    // Initialize an array then free it.
+    int* test_list[5] = {NULL};
+
+    for (unsigned i = 0; i < 5; i++)
+    {
+        test_list[i] = malloc(sizeof(int));
+    }
+
+    for (unsigned i = 0; i < 2; i++)
+    {
+        free(test_list[i]);
+    }
+
+    /*
+     * Expected output on exit: 
+     * == == == == == == == == == == == == == == == == == ==
+     * SUMMARY : 
+     * 268 bytes lost in 4 blocks
+    */
 	return 0;
 }

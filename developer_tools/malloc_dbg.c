@@ -70,54 +70,6 @@ mem_info* addMemInfo(mem_info* memoryInfo, void* ptrToReturn, size_t bytes, int 
 }
 
 /**
- * @brief inList function is used to know if an element is already in the memoryInfo list.
- * @details This function is used to know if an allocation in a specific file at a specific line already exists in the list.
- * @param filename File in which malloc or calloc has been called
- * @param line Line number in the file in which malloc or calloc has been called
- * @returns Position of the element in the list if the element is found, -1 otherwise.
- */
-int inList(const char* filename, int line)
-{
-	mem_info* tmp = memoryInformation;
-	int counter = 0;
-	int len = strlen(filename);
-
-	while (tmp)
-	{
-		if (len == strlen(tmp->fileName))
-		{
-			if (!memcmp(filename, tmp->fileName, len) && tmp->line == line)
-			{
-				return counter;
-			}
-		}
-		tmp = tmp->next;
-		counter++;
-	}
-	return -1;
-}
-
-/**
- * @brief editInfo function is used to edit an element in the memoryInfo list.
- * @details This function is used to edit the number of bytes allocated at a specific line.
- * @param elemPos Position of an element in the doubly linked list memoryInfo
- * @param bytes Size of the allocation in bytes
- * @returns Nothing.
- */
-void editInfo(int elemPos, size_t bytes)
-{
-	int counter = 0;
-	mem_info* tmp = memoryInformation;
-
-	while (counter != elemPos)
-	{
-		tmp = tmp->next;
-		counter++;
-	}
-	tmp->bytes += bytes;
-}
-
-/**
  * @brief malloc_dbg function is a wrapper around the malloc function.
  * @details This function calls malloc and allocates the number of bytes passed in the parameters.
  * If the allocation succeeds then it add the pointer returned by malloc in the mem_info list.
@@ -142,21 +94,14 @@ void* malloc_dbg(size_t bytes, int line, const char* filename, const char* funct
 		atexitCalled = 1;
 	}
 
-	pos = inList(filename, line);
-	if (pos == -1)
+	// Add a new element in the mem_info list
+	memoryInformation = addMemInfo(memoryInformation, ptrToReturn, bytes, line, filename, functionName);
+	if (!memoryInformation)
 	{
-		// Add a new element in the mem_info list
-		memoryInformation = addMemInfo(memoryInformation, ptrToReturn, bytes, line, filename, functionName);
-		if (!memoryInformation)
-		{
-			free(ptrToReturn);
-			return NULL;
-		}
+		free(ptrToReturn);
+		return NULL;
 	}
-	else
-	{
-		editInfo(pos, bytes);
-	}
+
 	return ptrToReturn;
 }
 
