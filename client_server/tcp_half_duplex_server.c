@@ -6,13 +6,13 @@
  * @see tcp_half_duplex_server.c
  *
  * @details
- * The algorithm is based on the simple TCP client and server model. However
- * Instead of the server only sending and the client only receiving data,
+ * The algorithm is based on the simple TCP client and server model. However,
+ * instead of the server only sending and the client only receiving data,
  * The server and client can both send data but only one at a time. This is
- * implemented by using a particular ordering of the send() and recv()
- * functions. When one of the client or server is sending the other can only
- * receive and vice-versa. In this way the Half Duplex Form of communication can
- * be represented using the TCP server client model & socket programming
+ * implemented by using a particular ordering of the `send()` and `recv()`
+ * functions. When one of the clients or servers is sending, the other can only
+ * receive and vice-versa. In this way, the Half Duplex Form of communication can
+ * be represented using the TCP server-client model & socket programming
  */
 
 // Imports
