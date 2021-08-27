@@ -4,7 +4,4 @@
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
-    "files.associations": {
-        "string.h": "c"
-    },
 }
