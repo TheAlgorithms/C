@@ -6,6 +6,7 @@
  * @link
  * http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm
  *
+ * @details
  * The algorithm is based on the simple TCP client and server model. However
  * Instead of the server only sending and the client only receiving data,
  * The server and client can both send data but only one at a time. This is
