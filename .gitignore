@@ -1,5 +1,5 @@
 *.swp
 *.exe
 *.out
-.vscode/
+#.vscode/
 build/
