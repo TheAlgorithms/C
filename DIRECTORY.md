@@ -3,6 +3,8 @@
 ## Client Server
   * [Client](https://github.com/TheAlgorithms/C/blob/master/client_server/client.c)
   * [Server](https://github.com/TheAlgorithms/C/blob/master/client_server/server.c)
+  * [Tcp Half Duplex Client](https://github.com/TheAlgorithms/C/blob/master/client_server/tcp_half_duplex_client.c)
+  * [Tcp Half Duplex Server](https://github.com/TheAlgorithms/C/blob/master/client_server/tcp_half_duplex_server.c)
   * [Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/udp_client.c)
   * [Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/udp_server.c)
 
