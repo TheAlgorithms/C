@@ -1,7 +1,7 @@
 /**
  * @file
  * @author [NVombat](https://github.com/NVombat)
- * @brief Client side implementation of TCP Half Duplex Communication
+ * @brief Client-side implementation of [TCP Half Duplex Communication](http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm)
  * @see tcp_half_duplex_client.c
  * @link
  * http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm
