@@ -4,6 +4,7 @@
  * @brief Client-side implementation of [TCP Half Duplex Communication](http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm)
  * @see tcp_half_duplex_client.c
  *
+ * @details
  * The algorithm is based on the simple TCP client and server model. However
  * Instead of the server only sending and the client only receiving data,
  * The server and client can both send data but only one at a time. This is
