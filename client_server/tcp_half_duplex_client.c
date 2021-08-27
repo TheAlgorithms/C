@@ -10,7 +10,7 @@
  * Instead of the server only sending and the client only receiving data,
  * The server and client can both send data but only one at a time. This is
  * implemented by using a particular ordering of the send() and recv()
- * functions. When one of the client Or server is sending the other can only
+ * functions. When one of the client or server is sending the other can only
  * receive and vice-versa. In this way the Half Duplex Form of communication can
  * be represented using the TCP server client model & socket programming
  */
@@ -23,7 +23,7 @@
 #include <string.h>  // Various functions for manipulating arrays of characters
 #include <sys/socket.h>  // Contains macro definitions related to the creation of sockets
 #include <sys/types.h>  // Contains definitions to allow for the porting of BSD programs
-#include <unistd.h>  //Defines miscellaneous symbolic constants and types, and declares miscellaneous functions
+#include <unistd.h>  // Defines miscellaneous symbolic constants and types, and declares miscellaneous functions
 
 #define PORT 8100  // Define port over which communication will take place
 
