@@ -38,7 +38,10 @@ void error()
     exit(EXIT_FAILURE);
 }
 
-/* MAIN DRIVER CODE */
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     /* Variable Declarations */
