@@ -45,7 +45,7 @@ void error()
  */
 int main()
 {
-    /* Variable Declarations */
+    /** Variable Declarations */
     int sockfd;  // Socket descriptors - Like file handles but for sockets
     struct sockaddr_in
         server_addr;  // Basic structures for all syscalls and functions that
@@ -55,45 +55,45 @@ int main()
         clientResponse[10000];  // Character arrays to read and store string
                                 // data for communication
 
-    /*
-    The TCP socket is created using the socket function.
-
-    AF_INET (Family) - it is an address family that is used to designate the
-    type of addresses that your socket can communicate with
-
-    SOCK_STREAM (Type) - Indicates TCP Connection - A stream socket provides for
-    the bidirectional, reliable, sequenced, and unduplicated flow of data
-    without record boundaries. Aside from the bidirectionality of data flow, a
-    pair of connected stream sockets provides an interface nearly identical to
-    pipes.
-
-    0 (Protocol) - Specifies a particular protocol to be used with the socket.
-    Specifying a protocol of 0 causes socket() to use an unspecified default
-    protocol appropriate for the requested socket type.
-    */
+    /**
+     * The TCP socket is created using the socket function.
+     *
+     * AF_INET (Family) - it is an address family that is used to designate the
+     * type of addresses that your socket can communicate with
+     *
+     * SOCK_STREAM (Type) - Indicates TCP Connection - A stream socket provides
+     * for the bidirectional, reliable, sequenced, and unduplicated flow of data
+     * without record boundaries. Aside from the bidirectionality of data flow,
+     * a pair of connected stream sockets provides an interface nearly identical
+     * to pipes.
+     *
+     * 0 (Protocol) - Specifies a particular protocol to be used with the
+     * socket. Specifying a protocol of 0 causes socket() to use an unspecified
+     * default protocol appropriate for the requested socket type.
+     */
     if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
         error();
 
-    /*
-    Server Address Information
-
-    The bzero() function erases the data in the n bytes of the memory
-    starting at the location pointed to, by writing zeros (bytes
-    containing '\0') to that area.
-
-    We bind the server_addr to the internet address and port number thus giving
-    our socket an identity with an address and port where it can listen for
-    connections
-
-    htons - The htons() function translates a short integer from host byte order
-    to network byte order
-
-    htonl - The htonl() function translates a long integer from host byte order
-    to network byte orde
-
-    These functions are necessary so that the binding of address and port takes
-    place with data in the correct format
-    */
+    /**
+     * Server Address Information
+     *
+     * The bzero() function erases the data in the n bytes of the memory
+     * starting at the location pointed to, by writing zeros (bytes
+     * containing '\0') to that area.
+     *
+     * We bind the server_addr to the internet address and port number thus
+     * giving our socket an identity with an address and port where it can
+     * listen for connections
+     *
+     * htons - The htons() function translates a short integer from host byte
+     * order to network byte order
+     *
+     * htonl - The htonl() function translates a long integer from host byte
+     * order to network byte order
+     *
+     * These functions are necessary so that the binding of address and port
+     * takes place with data in the correct format
+     */
     bzero(&server_addr, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
@@ -101,32 +101,33 @@ int main()
 
     printf("Client is running...\n");
 
-    /*
-    Connects the client to the server address using the socket descriptor
-    This enables the two to communicate and exchange data
-    */
+    /**
+     * Connects the client to the server address using the socket descriptor
+     * This enables the two to communicate and exchange data
+     */
     connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
 
     printf("Client is connected...\n");
 
-    /*
-    Communication between client and server
-
-    The bzero() function erases the data in the n bytes of the memory
-    starting at the location pointed to, by writing zeros (bytes
-    containing '\0') to that area. The variables are emptied and then
-    ready for use
-
-    First the CLIENT receives the servers message and displays it (recv())
-
-    The CLIENT is then prompted to type in a message and send it to the server.
-    (send())
-
-    The server and client can communicate till one of them exits the connection
-
-    Since the exchange of information between the server and client take place
-    one at a time this represents HALF DUPLEX COMMUNICATION
-    */
+    /**
+     * Communication between client and server
+     *
+     * The bzero() function erases the data in the n bytes of the memory
+     * starting at the location pointed to, by writing zeros (bytes
+     * containing '\0') to that area. The variables are emptied and then
+     * ready for use
+     *
+     * First the CLIENT receives the servers message and displays it (recv())
+     *
+     * The CLIENT is then prompted to type in a message and send it to the
+     * server. (send())
+     *
+     * The server and client can communicate till one of them exits the
+     * connection
+     *
+     * Since the exchange of information between the server and client take
+     * place one at a time this represents HALF DUPLEX COMMUNICATION
+     */
     while (1)
     {
         bzero(&serverResponse, sizeof(serverResponse));
