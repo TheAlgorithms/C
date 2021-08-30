@@ -27,11 +27,12 @@
 
 #define PORT 8100  /// Define port over which communication will take place
 
-/*
-Function is used to print an error message to stderr.
-It prints str and an implementation-defined error
-message corresponding to the global variable errno.
-*/
+/**
+ * @brief Utility function used to print an error message to `stderr`.
+ * It prints `str` and an implementation-defined error
+ * message corresponding to the global variable `errno`.
+ * @returns void
+ */
 void error()
 {
     perror("Socket Creation Failed");
