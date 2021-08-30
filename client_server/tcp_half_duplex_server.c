@@ -15,7 +15,6 @@
  * can be represented using the TCP server-client model & socket programming
  */
 
-// Imports
 #include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
 #include <netinet/in.h>  /// For in_addr and sockaddr_in structures
 #include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
