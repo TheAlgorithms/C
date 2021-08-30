@@ -3,7 +3,7 @@
  * @author [NVombat](https://github.com/NVombat)
  * @brief Client-side implementation of [TCP Half Duplex
  * Communication](http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm)
- * @see tcp_half_duplex_client.c
+ * @see tcp_half_duplex_server.c
  *
  * @details
  * The algorithm is based on the simple TCP client and server model. However,
