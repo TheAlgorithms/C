@@ -45,14 +45,14 @@ void error()
 int main()
 {
     /** Variable Declarations */
-    int sockfd;  // Socket descriptors - Like file handles but for sockets
+    int sockfd;  ///< socket descriptors - Like file handles but for sockets
     struct sockaddr_in
-        server_addr;  // Basic structures for all syscalls and functions that
-                      // deal with internet addresses. Structures for handling
-                      // internet addresses
+        server_addr;  ///< basic structures for all syscalls and functions that
+                      /// deal with internet addresses. Structures for handling
+                      /// internet addresses
     char serverResponse[10000],
-        clientResponse[10000];  // Character arrays to read and store string
-                                // data for communication
+        clientResponse[10000];  ///< Character arrays to read and store string
+                                ///< data for communication
 
     /**
      * The TCP socket is created using the socket function.
