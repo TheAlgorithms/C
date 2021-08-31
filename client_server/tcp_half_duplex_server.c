@@ -45,7 +45,8 @@ void error()
 int main()
 {
     /** Variable Declarations */
-    int sockfd, conn;  ///< socket descriptors - Like file handles but for sockets
+    int sockfd,
+        conn;  ///< socket descriptors - Like file handles but for sockets
     char server_msg[10000],
         client_msg[10000];  ///< character arrays to read and store string data
                             /// for communication
@@ -71,8 +72,8 @@ int main()
      * default protocol appropriate for the requested socket type
      */
     if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
-        error();  // Error if the socket descriptor has a value lower than 0 -
-                  // socket wasnt created
+        error();  ///< Error if the socket descriptor has a value lower than 0 -
+                  /// socket wasnt created
 
     /**
      * Server Address Information
@@ -95,8 +96,8 @@ int main()
      * takes place with data in the correct format
      */
     bzero(&server_addr, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;    // Domain/Family to be used
-    server_addr.sin_port = htons(PORT);  // Port to be used
+    server_addr.sin_family = AF_INET;    /// Domain/Family to be used
+    server_addr.sin_port = htons(PORT);  /// Port to be used
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     printf("Server is running...\n");
@@ -106,7 +107,7 @@ int main()
      * to listen for connections and communicate with other clients
      */
     if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0)
-        error();  // If binding is unsuccessful
+        error();  /// If binding is unsuccessful
 
     /**
      * This is to listen for clients or connections made to the server
@@ -154,17 +155,17 @@ int main()
         bzero(&server_msg, sizeof(server_msg));
         bzero(&client_msg, sizeof(client_msg));
 
-        // Send message
+        /// Send message
         printf("\nEnter message here: ");
         fgets(server_msg, 10000, stdin);
         send(conn, server_msg, strlen(server_msg) + 1, 0);
 
-        // Receive Message
+        /// Receive Message
         recv(conn, client_msg, sizeof(client_msg), 0);
         printf("\nClient Message: %s\n", client_msg);
     }
 
-    // Close socket
+    /// Close socket
     close(sockfd);
     printf("Server is offline...\n");
     return 0;

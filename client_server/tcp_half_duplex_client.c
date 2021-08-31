@@ -52,7 +52,7 @@ int main()
                       /// internet addresses
     char serverResponse[10000],
         clientResponse[10000];  ///< Character arrays to read and store string
-                                ///< data for communication
+                                /// data for communication
 
     /**
      * The TCP socket is created using the socket function.
@@ -132,17 +132,17 @@ int main()
         bzero(&serverResponse, sizeof(serverResponse));
         bzero(&clientResponse, sizeof(clientResponse));
 
-        // Receive Message
+        /// Receive Message
         recv(sockfd, serverResponse, sizeof(serverResponse), 0);
         printf("\nServer message: %s \n", serverResponse);
 
-        // Send Message
+        /// Send Message
         printf("\nEnter message here: ");
         fgets(clientResponse, 10000, stdin);
         send(sockfd, clientResponse, strlen(clientResponse) + 1, 0);
     }
 
-    // Close Socket
+    /// Close Socket
     close(sockfd);
     printf("Client is offline...\n");
     return 0;
