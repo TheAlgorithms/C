@@ -17,6 +17,7 @@
 
 #include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
 #include <netinet/in.h>  /// For in_addr and sockaddr_in structures
+#include <stdint.h>      /// For specific bit size values of variables
 #include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
 #include <stdlib.h>  /// Variable types, several macros, and various functions for performing general functions
 #include <string.h>  /// Various functions for manipulating arrays of characters
@@ -45,7 +46,8 @@ void error()
 int main()
 {
     /** Variable Declarations */
-    int sockfd;  ///< socket descriptors - Like file handles but for sockets
+    uint32_t
+        sockfd;  ///< socket descriptors - Like file handles but for sockets
     struct sockaddr_in
         server_addr;  ///< basic structures for all syscalls and functions that
                       /// deal with internet addresses. Structures for handling
@@ -70,7 +72,8 @@ int main()
      * socket. Specifying a protocol of 0 causes socket() to use an unspecified
      * default protocol appropriate for the requested socket type.
      */
-    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    {
         error();
     }
 

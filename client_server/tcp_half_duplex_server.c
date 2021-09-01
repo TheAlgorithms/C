@@ -17,6 +17,7 @@
 
 #include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
 #include <netinet/in.h>  /// For in_addr and sockaddr_in structures
+#include <stdint.h>      /// For specific bit size values of variables
 #include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
 #include <stdlib.h>  /// Variable types, several macros, and various functions for performing general functions
 #include <string.h>  /// Various functions for manipulating arrays of characters
@@ -45,7 +46,7 @@ void error()
 int main()
 {
     /** Variable Declarations */
-    int sockfd,
+    uint32_t sockfd,
         conn;  ///< socket descriptors - Like file handles but for sockets
     char server_msg[10000],
         client_msg[10000];  ///< character arrays to read and store string data
@@ -71,7 +72,8 @@ int main()
      * socket. Specifying a protocol of 0 causes socket() to use an unspecified
      * default protocol appropriate for the requested socket type
      */
-    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    {
         error();  ///< Error if the socket descriptor has a value lower than 0 -
                   /// socket wasnt created
     }
@@ -107,7 +109,8 @@ int main()
      * This binds the socket descriptor to the server thus enabling the server
      * to listen for connections and communicate with other clients
      */
-    if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0)
+    {
         error();  /// If binding is unsuccessful
     }
 
