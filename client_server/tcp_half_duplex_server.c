@@ -107,8 +107,9 @@ int main()
      * This binds the socket descriptor to the server thus enabling the server
      * to listen for connections and communicate with other clients
      */
-    if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0)
+    if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         error();  /// If binding is unsuccessful
+    }
 
     /**
      * This is to listen for clients or connections made to the server
