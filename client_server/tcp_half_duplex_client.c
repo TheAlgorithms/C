@@ -70,8 +70,9 @@ int main()
      * socket. Specifying a protocol of 0 causes socket() to use an unspecified
      * default protocol appropriate for the requested socket type.
      */
-    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         error();
+    }
 
     /**
      * Server Address Information
