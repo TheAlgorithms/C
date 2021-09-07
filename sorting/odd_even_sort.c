@@ -56,7 +56,7 @@ void oddEvenSort(int *arr, int size)
         }
 
         //Odd phase
-        for(i = 1; i <= size - 1; i += 2)
+        for(i = 1; i <= size - 2; i += 2)
         {
             if(arr[i] > arr[i + 1])
             {
