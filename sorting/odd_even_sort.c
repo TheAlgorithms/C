@@ -13,7 +13,6 @@
 #include <assert.h>     /// for assert
 #include <stdbool.h>    /// for boolean
 #include <stdio.h>      /// for IO operations
-#include <inttypes.h>   /// for uint32_t
 #include <stdlib.h>     /// for dynammic memory allocation
 #include <time.h>       /// for random number generation
 
@@ -21,11 +20,12 @@
  * @brief Swap numbers by reference(using pointers)
  * @param first pointer to first number
  * @param second pointer to second number
+ * @returns void
  */
 
-void swap(uint32_t *first, uint32_t *second)
+void swap(int *first, int *second)
 {
-    uint32_t temp = *first;
+    int temp = *first;
     *first = *second;
     *second = temp;
 }
@@ -34,16 +34,16 @@ void swap(uint32_t *first, uint32_t *second)
  * @brief oddEvenSort sorts the array using the algorithm described above.
  * @param arr array to be sorted
  * @param size size of array
- * @return void
+ * @returns void
  */
 
-void oddEvenSort(uint32_t *arr, uint32_t size)
+void oddEvenSort(int *arr, int size)
 {
     bool isSorted = false;
     while(!isSorted)
     {
         isSorted = true;
-        uint32_t i;
+        int i;
 
         //Even phase
         for(i = 0; i <= size - 2; i += 2)
@@ -69,27 +69,27 @@ void oddEvenSort(uint32_t *arr, uint32_t size)
 
 /**
  * @brief Self-test implementations
- * @return void
+ * @returns void
  */
 void test()
 {
-    const int size = 10;
-    int *arr = (int *)calloc(size, sizeof(int));
+    int arr1[] = {-9, 2, 3, 1};
+    int arr1Soln[] = {-9, 1, 2, 3};
+    int arr2[] = {9, 7, 5, 3, 8, 2, 1, 4, 0, 6};
+    int arr2Soln[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    /* generates size random numbers from -100 to 100 */
-    for(int i = 0; i < size; i++)
+    oddEvenSort(arr1, 4);
+    oddEvenSort(arr2, 10);
+
+     for (int i = 0; i < 4; i++)
+     {
+         assert(arr1[i] == arr1Soln[i]);    
+     }
+
+    for (int i = 0; i < 10; i++)
     {
-        arr[i] = (rand() % 200) - 100;
+        assert(arr2[i] == arr2Soln[i]);    
     }
-
-    oddEvenSort(arr, size);
-
-    for (int i = 0; i < size; i++)
-    {
-        assert(arr[i] <= arr[i++]);    
-    }
-    
-    free(arr);
 }
 
 /**
@@ -99,9 +99,6 @@ void test()
 
 int main(void)
 {
-    //Initialises random number generator
-    srand(time(NULL));
-
     test();
     return 0;
 }
