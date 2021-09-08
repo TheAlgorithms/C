@@ -23,7 +23,6 @@
  * @param second pointer to second number
  * @returns void
  */
-
 void swap(int32_t *first, int32_t *second)
 {
     int32_t temp = *first;
