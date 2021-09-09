@@ -49,7 +49,6 @@ void swap(int32_t *first, int32_t *second)
  * @param size size of array
  * @returns void
  */
-
 void oddEvenSort(int *arr, int size)
 {
     bool isSorted = false;
