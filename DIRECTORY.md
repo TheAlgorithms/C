@@ -390,6 +390,7 @@
   * [Merge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort.c)
   * [Merge Sort Nr](https://github.com/TheAlgorithms/C/blob/master/sorting/merge_sort_nr.c)
   * [Multikey Quick Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/multikey_quick_sort.c)
+  * [Odd Even Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/odd_even_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/pancake_sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/partition_sort.c)
   * [Pigeonhole Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/pigeonhole_sort.c)
