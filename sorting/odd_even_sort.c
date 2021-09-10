@@ -46,7 +46,7 @@ void swap(int32_t *first, int32_t *second)
  * parameters. After the swap is completed, "isSorted" is set to "false".
  * The while loop will keep running till the array is propertly sorted.
  * @param arr array to be sorted
- * @param size size of array
+ * @param size the size of the array
  * @returns void
  */
 void oddEvenSort(int *arr, int size)
