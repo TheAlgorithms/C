@@ -81,7 +81,7 @@ void oddEvenSort(int *arr, int size)
 
 /**
  * @brief Self-test implementations
- * @details Two test(unsorted) arrays were created and their corresponding solution(sorted) arrays were also created.
+ * @details Two tests (unsorted) arrays were created and their corresponding solution(sorted) arrays were also created.
  * The test arrays and their respective sizes are then passed in to the oddEvenSort function.
  * To test if the algorithm works, a for loop is assigned to loop through the both arrays(test and solution) and check if the array elements 
  * of the test array correspond to the elements of the solution array.
