@@ -106,6 +106,7 @@ static void test()
     {
         assert(arr2[i] == arr2Soln[i]);    
     }
+    printf("All tests have passed!\n");
 }
 
 /**
