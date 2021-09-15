@@ -180,7 +180,7 @@ int main()
         {
             bzero(&sendbuff, sizeof(sendbuff));
             printf("\nType message here: ");
-            fgets(sendbuff, 10000, stdin);
+            fgets(sendbuff, 1024, stdin);
             send(conn, sendbuff, strlen(sendbuff) + 1, 0);
             printf("\nMessage Sent!\n");
             sleep(5);
