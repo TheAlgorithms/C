@@ -17,16 +17,16 @@
  * can be represented using the TCP server-client model & socket programming
  */
 
-#include <arpa/inet.h>  /// For the type in_addr_t and in_port_t
-#include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
-#include <netinet/in.h>  /// For in_addr and sockaddr_in structures
-#include <stdint.h>      /// For specific bit size values of variables
-#include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
-#include <stdlib.h>  /// Variable types, several macros, and various functions for performing general functions
-#include <string.h>  /// Various functions for manipulating arrays of characters
-#include <sys/socket.h>  /// For macro definitions related to the creation of sockets
-#include <sys/types.h>  /// For definitions to allow for the porting of BSD programs
-#include <unistd.h>  /// For miscellaneous symbolic constants and types, and miscellaneous functions
+#include <arpa/inet.h>             /// For the type in_addr_t and in_port_t
+#include <netdb.h>                /// For structures returned by the network database library - formatted internet addresses and port numbers
+#include <netinet/in.h>          /// For in_addr and sockaddr_in structures
+#include <stdint.h>             /// For specific bit size values of variables
+#include <stdio.h>             /// Variable types, several macros, and various functions for performing input and output
+#include <stdlib.h>           /// Variable types, several macros, and various functions for performing general functions
+#include <string.h>          /// Various functions for manipulating arrays of characters
+#include <sys/socket.h>     /// For macro definitions related to the creation of sockets
+#include <sys/types.h>     /// For definitions to allow for the porting of BSD programs
+#include <unistd.h>       /// For miscellaneous symbolic constants and types, and miscellaneous functions
 
 #define PORT 10000  /// Define port over which communication will take place
 
