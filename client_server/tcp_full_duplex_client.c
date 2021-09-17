@@ -28,7 +28,6 @@
 #include <sys/types.h>     /// For definitions to allow for the porting of BSD programs
 #include <unistd.h>       /// For miscellaneous symbolic constants and types, and miscellaneous functions
 
-
 #define PORT 10000  /// Define port over which communication will take place
 
 /**
