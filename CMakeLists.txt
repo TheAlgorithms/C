@@ -18,7 +18,7 @@ endif(MSVC)
 # addresses a bug when linking on OSX
 find_library(MATH_LIBRARY m)
 
-# Optional flag - can be set by user 
+# Optional flag - can be set by user
 # Default "ON"
 option(USE_OPENMP "flag to use OpenMP for multithreading" ON)
 if(USE_OPENMP)
@@ -46,12 +46,13 @@ if (NOT HAS_INTTYPES_H)
     message(FATAL_ERROR "Missing required header: 'inttypes.h'")
 endif()
 
-## Add subdirectories containing CMakeLists.txt 
+## Add subdirectories containing CMakeLists.txt
 # to configure and compile files in the respective folders
 add_subdirectory(developer_tools)
 add_subdirectory(hash)
 add_subdirectory(misc)
 add_subdirectory(games)
+add_subdirectory(audio)
 add_subdirectory(sorting)
 add_subdirectory(geometry)
 add_subdirectory(graphics)
