@@ -1,5 +1,8 @@
 # List of all files
 
+## Audio
+  * [Alaw](https://github.com/TheAlgorithms/C/blob/master/audio/alaw.c)
+
 ## Client Server
   * [Client](https://github.com/TheAlgorithms/C/blob/master/client_server/client.c)
   * [Server](https://github.com/TheAlgorithms/C/blob/master/client_server/server.c)
