@@ -2,7 +2,8 @@
  * @file
  * @author [sunzhenliang](https://github.com/HiSunzhenliang)
  * @brief A-law algorithm for encoding and decoding (16bit pcm <=> a-law).
- * @see audio/alaw.c
+ * This is the implementation of [G.711](https://en.wikipedia.org/wiki/G.711)
+ * in C.
  **/
 
 /**
@@ -17,110 +18,163 @@
  * s01abcdxxxxxx     | s110abcd        | s01abcd100000
  * s1abcdxxxxxxx     | s111abcd        | s1abcd1000000
  *
- * https://en.wikipedia.org/wiki/G.711
- *
  * Compressed code: (s | eee | abcd)
  **/
-#include <stdio.h>
-#include <stdlib.h>
-
-#define MAX 32635 /* short int max */
+#include <inttypes.h>  /// for appropriate size int types
+#include <stdio.h>     /// for IO operations
 
 /**
  * @brief 16bit pcm to 8bit alaw
- * @param out 8bit alaw
- * @param int 16bit pcm
+ * @param out unsigned 8bit alaw array
+ * @param in  signed 16bit pcm array
  * @param len length of pcm array
  * @returns void
  */
-void encode(unsigned char *out, short *in, size_t len)
+void encode(uint8_t *out, int16_t *in, size_t len)
 {
-    unsigned char alaw;
-    short pcm;
-    int sign;
-    int abcd;
-    int eee;
-    int mask;
+    uint8_t alaw;
+    int16_t pcm;
+    int32_t sign;
+    int32_t abcd;
+    int32_t eee;
+    int32_t mask;
     for (size_t i = 0; i < len; i++)
     {
         pcm = *in++;
+        /* 0-7 kinds of quantization level from the table above */
         eee = 7;
-        mask = 0x4000;
+        mask = 0x4000; /* 0x4000: '0b0100 0000 0000 0000' */
 
+        /* Get sign bit */
         sign = (pcm & 0x8000) >> 8;
-        pcm = sign ? -pcm : pcm;
-        pcm = pcm > MAX ? MAX : pcm;
+
+        /* Turn negative pcm to positive */
+        /* The absolute value of a negative number may be larger than the size
+         * of the corresponding positive number, so here needs `-pcm -1` after
+         * taking the opposite number. */
+        pcm = sign ? (-pcm - 1) : pcm;
+
+        /* Get eee and abcd bit */
+        /* Use mask to locate the first `1` bit and quantization level at the
+         * same time */
         while ((pcm & mask) == 0 && eee > 0)
         {
             eee--;
             mask >>= 1;
         }
+
+        /* The location of abcd bits is related with quantization level. Check
+         * the table above to determine how many bits to `>>` to get abcd */
         abcd = (pcm >> (eee ? (eee + 3) : 4)) & 0x0f;
+
+        /* Put the quantization level number at right bit location to get eee
+         * bits */
         eee <<= 4;
 
+        /* Splice results */
         alaw = (sign | eee | abcd);
+
+        /* The standard specifies that all resulting even bits (LSB
+         * is even) are inverted before the octet is transmitted. This is to
+         * provide plenty of 0/1 transitions to facilitate the clock recovery
+         * process in the PCM receivers. Thus, a silent A-law encoded PCM
+         * channel has the 8 bit samples coded 0xD5 instead of 0x80 in the
+         * octets. (Reference from wiki above) */
         *out++ = alaw ^ 0xD5;
     }
 }
 
 /**
- * @brief  8bit alaw to 16bit pcm
- * @param out 16bit pcm
- * @param int 8bit alaw
+ * @brief 8bit alaw to 16bit pcm
+ * @param out signed 16bit pcm array
+ * @param in  unsigned 8bit alaw array
  * @param len length of alaw array
  * @returns void
  */
-void decode(short *out, unsigned char *in, size_t len)
+void decode(int16_t *out, uint8_t *in, size_t len)
 {
-    unsigned char alaw;
-    int pcm;
-    int sign;
-    int eee;
+    uint8_t alaw;
+    int32_t pcm;
+    int32_t sign;
+    int32_t eee;
     for (size_t i = 0; i < len; i++)
     {
         alaw = *in++;
+
+        /* Re-toggle toggled bits */
         alaw ^= 0xD5;
+
+        /* Get sign bit */
         sign = alaw & 0x80;
+
+        /* Get eee bits */
         eee = (alaw & 0x70) >> 4;
-        pcm = alaw & 0x0f;
-        pcm <<= 4;
-        pcm += 0x8;
+
+        /* Get abcd bits and add 1/2 quantization step */
+        pcm = (alaw & 0x0f) << 4 | 8;
+
+        /* If quantization level > 0, there need `1` bit before abcd bits */
         pcm += eee ? 0x100 : 0x0;
+
+        /* Left shift according quantization level */
         pcm <<= eee > 1 ? (eee - 1) : 0;
 
+        /* Use the right sign */
         *out++ = sign ? -pcm : pcm;
     }
 }
 
-#define LEN 4
+/* length of test inputs */
+#define LEN ((size_t)8)
+
+/**
+ * @brief Main function
+ * @param argc commandline argument count (ignored)
+ * @param argv commandline array of arguments (ignored)
+ * @returns 0 on exit
+ */
 int main(int argc, char *argv[])
 {
-    short pcm[LEN] = {1000, 1234, 3200, -1314};
-    unsigned char coded[LEN];
-    short decoded[LEN];
+    /* input pcm for test */
+    int16_t pcm[LEN] = {1000, -1000, 1234, 3200, -1314, 0, 32767, -32768};
 
+    /* output alaw encoded by encode() */
+    uint8_t coded[LEN];
+
+    /* output pcm decoded by decode() from coded[LEN] */
+    int16_t decoded[LEN];
+
+    /* print test pcm inputs */
     printf("inputs: ");
-    for (int i = 0; i < LEN; i++)
+    for (size_t i = 0; i < LEN; i++)
     {
         printf("%d ", pcm[i]);
     }
     printf("\n");
 
+    /* print encoded alaw */
     printf("encode: ");
     encode(coded, pcm, LEN);
-    for (int i = 0; i < LEN; i++)
+    for (size_t i = 0; i < LEN; i++)
     {
         printf("%u ", coded[i]);
     }
     printf("\n");
 
+    /* print decoded pcm */
     printf("decode: ");
     decode(decoded, coded, LEN);
-    for (int i = 0; i < LEN; i++)
+    for (size_t i = 0; i < LEN; i++)
     {
         printf("%d ", decoded[i]);
     }
     printf("\n");
+
+    /* It can be seen that the encoded alaw is smaller than the input PCM, so
+     * the purpose of compression is achieved. And the decoded PCM is almost the
+     * same as the original input PCM, which verifies the correctness of the
+     * decoding. The reason why it is not exactly the same is that there is
+     * precision loss during encode / decode.  */
 
     return 0;
 }
