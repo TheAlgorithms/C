@@ -20,8 +20,21 @@
  *
  * Compressed code: (s | eee | abcd)
  **/
+#include <assert.h>    /// for assert
 #include <inttypes.h>  /// for appropriate size int types
 #include <stdio.h>     /// for IO operations
+
+/* length of test inputs */
+#define LEN ((size_t)8)
+
+/* input pcm for test */
+int16_t pcm[LEN] = {1000, -1000, 1234, 3200, -1314, 0, 32767, -32768};
+
+/* result coded alaw for test */
+uint8_t r_coded[LEN] = {250, 122, 230, 156, 97, 213, 170, 42};
+
+/* result decoded for test */
+int16_t r_decoded[LEN] = {1008, -1008, 1248, 3264, -1312, 8, 32256, -32256};
 
 /**
  * @brief 16bit pcm to 8bit alaw
@@ -124,8 +137,34 @@ void decode(int16_t *out, uint8_t *in, size_t len)
     }
 }
 
-/* length of test inputs */
-#define LEN ((size_t)8)
+/**
+ * @brief Self-test implementations
+ * @param pcm signed 16bit pcm array
+ * @param coded unsigned 8bit alaw array
+ * @param decoded signed 16bit pcm array
+ * @param len length of test array
+ * @returns void
+ */
+static void test(int16_t *pcm, uint8_t *coded, int16_t *decoded, size_t len)
+{
+    /* run encode */
+    encode(coded, pcm, len);
+
+    /* check encode result */
+    for (size_t i = 0; i < len; i++)
+    {
+        assert(coded[i] == r_coded[i]);
+    }
+
+    /* run decode */
+    decode(decoded, coded, len);
+
+    /* check decode result */
+    for (size_t i = 0; i < len; i++)
+    {
+        assert(decoded[i] == r_decoded[i]);
+    }
+}
 
 /**
  * @brief Main function
@@ -135,14 +174,14 @@ void decode(int16_t *out, uint8_t *in, size_t len)
  */
 int main(int argc, char *argv[])
 {
-    /* input pcm for test */
-    int16_t pcm[LEN] = {1000, -1000, 1234, 3200, -1314, 0, 32767, -32768};
-
     /* output alaw encoded by encode() */
     uint8_t coded[LEN];
 
     /* output pcm decoded by decode() from coded[LEN] */
     int16_t decoded[LEN];
+
+    /* run self-test implementations */
+    test(pcm, coded, decoded, LEN);
 
     /* print test pcm inputs */
     printf("inputs: ");
@@ -154,7 +193,6 @@ int main(int argc, char *argv[])
 
     /* print encoded alaw */
     printf("encode: ");
-    encode(coded, pcm, LEN);
     for (size_t i = 0; i < LEN; i++)
     {
         printf("%u ", coded[i]);
@@ -163,7 +201,6 @@ int main(int argc, char *argv[])
 
     /* print decoded pcm */
     printf("decode: ");
-    decode(decoded, coded, LEN);
     for (size_t i = 0; i < LEN; i++)
     {
         printf("%d ", decoded[i]);
