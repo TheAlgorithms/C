@@ -2,7 +2,6 @@
  * @file
  * @author [sunzhenliang](https://github.com/HiSunzhenliang)
  * @brief A-law algorithm for encoding and decoding (16bit pcm <=> a-law).
- * This is the implementation of [G.711](https://en.wikipedia.org/wiki/G.711) in C
  * This is the implementation of [G.711](https://en.wikipedia.org/wiki/G.711)
  * in C.
  **/
