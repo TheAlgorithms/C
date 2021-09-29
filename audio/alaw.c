@@ -45,12 +45,12 @@ int16_t r_decoded[LEN] = {1008, -1008, 1248, 3264, -1312, 8, 32256, -32256};
  */
 void encode(uint8_t *out, int16_t *in, size_t len)
 {
-    uint8_t alaw;
-    int16_t pcm;
-    int32_t sign;
-    int32_t abcd;
-    int32_t eee;
-    int32_t mask;
+    uint8_t alaw = 0;
+    int16_t pcm = 0;
+    int32_t sign = 0;
+    int32_t abcd = 0;
+    int32_t eee = 0;
+    int32_t mask = 0;
     for (size_t i = 0; i < len; i++)
     {
         pcm = *in++;
@@ -106,10 +106,10 @@ void encode(uint8_t *out, int16_t *in, size_t len)
  */
 void decode(int16_t *out, uint8_t *in, size_t len)
 {
-    uint8_t alaw;
-    int32_t pcm;
-    int32_t sign;
-    int32_t eee;
+    uint8_t alaw = 0;
+    int32_t pcm = 0;
+    int32_t sign = 0;
+    int32_t eee = 0;
     for (size_t i = 0; i < len; i++)
     {
         alaw = *in++;
