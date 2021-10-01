@@ -1,0 +1,5 @@
+An algorithm that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems. 
+The most popular examples include the following:-
+    1. Dijkstra's Algorithm
+    2. Prim's Algorithm
+    3. Kruskal's Algorithm, etc
