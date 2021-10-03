@@ -180,8 +180,7 @@ int main(int argc, char *argv[])
     /* output pcm decoded by decode() from coded[LEN] */
     int16_t decoded[LEN];
 
-    /* run self-test implementations */
-    test(pcm, coded, decoded, LEN);
+    test(pcm, coded, decoded, LEN);  // run self-test implementations
 
     /* print test pcm inputs */
     printf("inputs: ");
