@@ -1,7 +1,7 @@
 /**
- * 	@file
- * 	@author [jucollet972](https://github.com/jucollet972)
- *	@brief decimal_to_anybase is a tiny C program wich convert positive decimal integer to any positive base with base's alphabet given in input (recursive way)
+ *  @file
+ *  @author [jucollet972](https://github.com/jucollet972)
+ * @brief decimal_to_anybase is a tiny C program wich convert positive decimal integer to any positive base with the base's alphabet given in input (recursive way)
  **/
 
 #include <stdio.h>   ///for scanf
