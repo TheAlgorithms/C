@@ -4,9 +4,9 @@
  * @brief decimal_to_anybase is a tiny C program wich convert positive decimal integer to any positive base with the base's alphabet given in input (recursive way)
  **/
 
-#include <stdio.h>   ///for scanf
-#include <unistd.h>  ///for write
-#include <string.h>  ///for strchr and strlen
+#include <stdio.h>   /// for IO operations
+#include <unistd.h>  /// for write
+#include <string.h>  /// for strchr and strlen
 
 /**
  * @brief Checking for duplicates in alphabet
