@@ -10,10 +10,10 @@
  * @see infix_to_postfix.c
  */
  
-#include<stdio.h>	// for printf() and scanf()
-#include<string.h>	// for strlen()
-#include<ctype.h>	// for isalnum()
-#include<process.h>	// for exit()
+#include<stdio.h>	/// for IO operations
+#include<string.h>	/// for strlen()
+#include<ctype.h>	/// for isalnum()
+#include<process.h>	/// for exit()
 
 /**
  * @brief array implementation of stack using structure
