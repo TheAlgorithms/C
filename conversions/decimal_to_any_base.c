@@ -31,7 +31,7 @@ int 	isbad_alphabet(char alphabet[85])
  * @param alphabet inputed by user used for base convertion
  * @param base calculated from alphabet
  * @return void
- **/
+ */
 void	display_convertion(unsigned long long nb, char alphabet[86], unsigned short base)
 {
 	/* Recursive convertion */
