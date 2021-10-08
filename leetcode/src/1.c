@@ -1,3 +1,7 @@
+/**
+ * @file
+ * @brief Program to return indices of the two numbers such that they add up to target.
+ */
 int *twoSum(int *nums, int nums_size, int target, int *return_size)
 {
     int i, j;
