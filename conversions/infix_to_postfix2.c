@@ -19,10 +19,10 @@
  * @brief array implementation of stack using structure
  */
 struct Stack {
-	char stack[10];	//< array stack
-	int top;		//< stores index of top element
+	char stack[10];		///< array stack
+	int top;			///< stores index of top element
 };
-struct Stack st;	// global declaration of stack st
+struct Stack st;		///< global declaration of stack st
 
 /**
  * @brief Function to push '(' and operators from infix expression
@@ -30,8 +30,7 @@ struct Stack st;	// global declaration of stack st
  * @returns void
  */
 void push(char opd) {
-	if(st.top == 9)		// overflow condition
-	{
+	if(st.top == 9)	{		// overflow condition
 		printf("Stack overflow...");
 		exit(0);
 	}
@@ -44,9 +43,8 @@ void push(char opd) {
  * @returns popped character
  */
 char pop() {
-	char item;
-	if(st.top == -1)	// underflow condition
-	{
+	char item;				///< to store popped value to be returned
+	if(st.top == -1) {		// underflow condition
 		printf("Stack underflow...");
 		exit(0);
 	}
@@ -61,8 +59,9 @@ char pop() {
  * @returns `false` if stack is not empty
  */
 int isEmpty() {
-	if(st.top == -1)
+	if(st.top == -1) {
 		return 1;
+	}
 	return 0;
 }
 
@@ -82,12 +81,15 @@ char Top() {
  * @returns -1 otherwise
  */
 int priority(char opd) {
-	if(opd == '+' || opd == '-')
+	if(opd == '+' || opd == '-') {
 		return 0;
-	else if(opd == '/' || opd == '*' || opd == '%')
+	}
+	else if(opd == '/' || opd == '*' || opd == '%') {
 		return 1;
-	else
+	}
+	else {
 		return -1;
+	}
 }
 
 /**
@@ -95,46 +97,42 @@ int priority(char opd) {
  * @returns 0 on exit
  */
 int main() {
-	st.top = -1;				// represents empty stack
-	char inf[25], post[25];
+	st.top = -1;						// represents empty stack
+	char inf[25];						///< to store the input infix expression
+	char post[25];						///< to store the postfix expression
 	printf("Enter Infix: ");
-	scanf("%s", inf);			// input infix expression
-	int i, j=0;
-	for(i=0; i < strlen(inf); i++)
-	{
-		if(isalnum(inf[i]))		// if scanned element is an alphabet or number
-		{
-			post[j] = inf[i];	// append in postfix expression
+	scanf("%s", inf);					// input infix expression
+	int i;								///< loop iterator
+	int j=0;							///< keeps track of end of postfix string
+	for(i=0; i < strlen(inf); i++) {
+		if(isalnum(inf[i]))	{			// if scanned element is an alphabet or number
+			post[j] = inf[i];			// append in postfix expression
 			j++;
 		}
-		else if(inf[i] == '(')	// if scanned element is opening parentheses
-			push(inf[i]);		// push on stack.
-		else if(inf[i] == ')')	// if scanned element is closing parentheses,
-		{
-			while(Top() != '(')	// pop elements from stack and append in postfix expression
-			{					// until opening parentheses becomes top
-				post[j] = pop();
+		else if(inf[i] == '(') {		// if scanned element is opening parentheses
+			push(inf[i]);				// push on stack.
+		}
+		else if(inf[i] == ')') {		// if scanned element is closing parentheses,
+			while(Top() != '(') {		// pop elements from stack and append in postfix expression
+				post[j] = pop();		// until opening parentheses becomes top.
 				j++;
 			}
-			pop();				// pop opening parentheses
+			pop();						// pop opening parentheses
 		}
-		else					// if scanned element is an operator
-		{
-			while( (!isEmpty()) && (priority(inf[i]) <= priority(Top())) )	// pop and append until stack becomes
-			{																// empty or priority of top operator
-				post[j] = pop();											// becomes smaller than scanned operator
-				j++;														// '(' has priority -1
-			}
-			push(inf[i]);		// push the scanned operator
+		else {							// if scanned element is an operator
+			while( (!isEmpty()) && (priority(inf[i]) <= priority(Top())) ) {	// pop and append until stack becomes
+				post[j] = pop();												// empty or priority of top operator
+				j++;															// becomes smaller than scanned operator
+			}																	// '(' has priority -1
+			push(inf[i]);				// push the scanned operator
 		}
 	}
-	while(!isEmpty())			// pop and append residual operators from stack
-	{
+	while(!isEmpty()) {					// pop and append residual operators from stack
 		post[j] = pop();
 		j++;
 	}
-	post[j] = '\0';
-	printf("Postfix: %s", post);	// print postfix expression
+	post[j] = '\0';						// end postfix string with null character
+	printf("Postfix: %s", post);		// print postfix expression
 	return 0;
 }
 
