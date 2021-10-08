@@ -2,7 +2,7 @@
  * @file
  * @brief [Problem 11](https://projecteuler.net/problem=11) solution
  * @author [Vipul Cariappa](https://github.com/vipul-cariappa)
- *
+ * @details
  * Code to find the greatest product of four adjacent numbers in the same
  * direction (up, down, left, right, or diagonally) in the given grid
  */
