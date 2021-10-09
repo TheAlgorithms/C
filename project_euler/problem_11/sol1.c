@@ -7,7 +7,7 @@
  * direction (up, down, left, right, or diagonally) in the given grid
  */
 
-#include <stdio.h>  // for IO operations
+#include <stdio.h>  /// for IO operations
 
 #define ARRAY_SIZE 20              // size of gird
 typedef unsigned long long large;  // To hold product of numbers
