@@ -25,3 +25,4 @@ void enque(int x);
 int deque();
 int peek();
 int size();
+int isEmpty();
