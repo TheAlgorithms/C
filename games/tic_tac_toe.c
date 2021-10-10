@@ -6,14 +6,14 @@
  * implementation in C
  * @details  Tic-Tac-Toe Game,where the user can decide to play with the
  * computer(single player mode) or with other user(double player mode) , the
- * code as an array named 'game_table' which is the table and user needs to enter the
- * position inside the array(from 1-9) where he/she wants to place 'X' or 'O' on the
- * table.
+ * code as an array named 'game_table' which is the table and user needs to
+ * enter the position inside the array(from 1-9) where he/she wants to place 'X'
+ * or 'O' on the table.
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
+#include <time.h>
 
 // Functions Declarations
 static void singlemode();
@@ -24,19 +24,19 @@ static void placey(int);  // used in Double Player mode by the 2nd player to
                           // place the position of O
 int checkwin();  // checks everytime when a player or computer places 'X' or 'O'
 
-/** Tic-Tac-Toe table, so basically we are using variable 'game_table' as the table(size:3X3) and
- * updating it regularly
+/** Tic-Tac-Toe table, so basically we are using variable 'game_table' as the
+ * table(size:3X3) and updating it regularly
  */
 static char game_table[9];
 
 /**
  * Main program function.
- * @returns 0 on clean exit. 
+ * @returns 0 on clean exit.
  * @note No checks are included for program execution failures!
  */
 int main()
-{   
-    srand( (unsigned int)time(NULL));
+{
+    srand((unsigned int)time(NULL));
     int l = 0;
     do
     {
@@ -86,7 +86,7 @@ void singlemode()
 {
     int m;
     int k = 0;
-    int table_fill_count=0;
+    int table_fill_count = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -107,9 +107,9 @@ void singlemode()
         scanf("%d", &m);
 
         placex(m);
-        if(table_fill_count<4)
+        if (table_fill_count < 4)
         {
-          place();
+            place();
         }
 
         for (int i = 0; i < 3; i++)
@@ -118,7 +118,6 @@ void singlemode()
             {
                 printf("%c ", game_table[k]);
                 k++;
-
             }
 
             printf("\n");
@@ -140,7 +139,7 @@ void singlemode()
             break;
         }
 
-        if (table_fill_count==4)
+        if (table_fill_count == 4)
         {
             printf("\nDRAW ");
             break;
@@ -158,7 +157,7 @@ void doublemode()
     int m;
     int e1;
     int k = 0;
-    int doublemode_table_count=0;
+    int doublemode_table_count = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -178,12 +177,12 @@ void doublemode()
         scanf("%d", &m);
 
         placex(m);
-        if(doublemode_table_count<4)
+        if (doublemode_table_count < 4)
         {
-        printf("PLAYER2 - where would you like to place 'o' : ");
-        scanf("%d", &e1);
+            printf("PLAYER2 - where would you like to place 'o' : ");
+            scanf("%d", &e1);
 
-        placey(e1);
+            placey(e1);
         }
 
         for (int i = 0; i < 3; i++)
@@ -212,7 +211,7 @@ void doublemode()
 
             break;
         }
-        if (doublemode_table_count==4)
+        if (doublemode_table_count == 4)
         {
             printf("\nDRAW ");
             break;
@@ -220,30 +219,32 @@ void doublemode()
     }
 }
 
-int check_placex(){
-	char input[50];
-	int n1;
-	while (1){
-		fgets(input,49,stdin);
-		if ( strlen(input) > 2 || strlen(input)  == 0){
-			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
-			continue;
-		}
-		if(sscanf(input,"%d",&n1) != 1){
-			fprintf(stderr,"Invalid move, Enter number 1 - 9: ");
-			continue;
-		} 
-		if ((game_table[n1-1] == 'x') || (game_table[n1-1]) == 'o' || (n1== 0)){
-			fprintf(stderr,"Already allocated, Enter number: ");
-			continue;
-		}
-		return n1;
-	}
-}	
-
-
-
-
+int check_placex()
+{
+    char input[50];
+    int n1;
+    while (1)
+    {
+        fgets(input, 49, stdin);
+        if (strlen(input) > 2 || strlen(input) == 0)
+        {
+            fprintf(stderr, "Invalid move, Enter number 1 - 9: ");
+            continue;
+        }
+        if (sscanf(input, "%d", &n1) != 1)
+        {
+            fprintf(stderr, "Invalid move, Enter number 1 - 9: ");
+            continue;
+        }
+        if ((game_table[n1 - 1] == 'x') || (game_table[n1 - 1]) == 'o' ||
+            (n1 == 0))
+        {
+            fprintf(stderr, "Already allocated, Enter number: ");
+            continue;
+        }
+        return n1;
+    }
+}
 
 /**
  * @brief Update table by placing an `X`
@@ -263,14 +264,14 @@ void placex(int m)
         }
         else
         {
-			int n = check_placex();
-			placex(n);
+            int n = check_placex();
+            placex(n);
         }
     }
     else
     {
-		int n = check_placex();
-		placex(n);
+        int n = check_placex();
+        placex(n);
     }
 }
 /**
@@ -280,7 +281,6 @@ void placex(int m)
  */
 void place()
 {
-
     int e = rand() % 9;
 
     if (e >= 0 && e <= 8)
@@ -314,136 +314,164 @@ void placey(int e1)
         }
         else
         {
-			int n = check_placex();
-			placex(n);
+            int n = check_placex();
+            placex(n);
         }
     }
     else
     {
-		int n = check_placex();
-		placex(n);
+        int n = check_placex();
+        placex(n);
     }
 }
 /**
- * @brief Implementation of win conditon checker for 'X' or 'O' whenever the table is updated
+ * @brief Implementation of win conditon checker for 'X' or 'O' whenever the
+ * table is updated
  *
- * @returns -1: if 'X' won 
+ * @returns -1: if 'X' won
  * @returns -2: if 'O' won
- * @returns 0: if there is no win condition for 'X' or 'O' 
+ * @returns 0: if there is no win condition for 'X' or 'O'
  */
+#define TEST_RETURN_WINNER(result_holder, function) \
+    result_holder = function();                     \
+    if (result_holder != 0)                         \
+    {                                               \
+        return result_holder;                       \
+    }
+
 int checkwin()
 {
-    if (game_table[0] == game_table[1] && game_table[1] == game_table[2])
+    int check_rows();
+    int check_columns();
+    int check_diagonals();
+
+    int winner;
+    TEST_RETURN_WINNER(winner, check_rows);
+    TEST_RETURN_WINNER(winner, check_columns);
+    return check_diagonals();
+}
+
+int check_rows()
+{
+    for (size_t i = 0; i < 3; i++)
     {
-        if (game_table[0] == 'x' && game_table[1] == 'x' &&
-            game_table[2] == 'x')
+        int count_x = 0;
+        int count_o = 0;
+        for (size_t j = 0; j < 3; j++)
+        {
+            /* [(i * 3) + (j)] == [i][j] */
+            if (game_table[(i * 3) + (j)] == 'x')
+            {
+                ++count_x;
+            }
+            else if (game_table[(i * 3) + (j)] == 'o')
+            {
+                ++count_o;
+            }
+        }
+        if (count_x == 3)
         {
             return -1;
         }
-
-        if (game_table[0] == 'o' && game_table[1] == 'o' &&
-            game_table[2] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[0] == game_table[4] && game_table[4] == game_table[8])
-    {
-        if (game_table[0] == 'x' && game_table[4] == 'x' &&
-            game_table[8] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[0] == 'o' && game_table[4] == 'o' &&
-            game_table[8] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[0] == game_table[3] && game_table[3] == game_table[6])
-    {
-        if (game_table[0] == 'x' && game_table[3] == 'x' &&
-            game_table[6] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[0] == 'o' && game_table[3] == 'o' &&
-            game_table[6] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[3] == game_table[4] && game_table[4] == game_table[5])
-    {
-        if (game_table[3] == 'x' && game_table[4] == 'x' &&
-            game_table[5] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[3] == 'o' && game_table[4] == 'o' &&
-            game_table[5] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[6] == game_table[7] && game_table[7] == game_table[8])
-    {
-        if (game_table[6] == 'x' && game_table[7] == 'x' &&
-            game_table[8] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[6] == 'o' && game_table[7] == 'o' &&
-            game_table[8] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[1] == game_table[4] && game_table[4] == game_table[7])
-    {
-        if (game_table[1] == 'x' && game_table[4] == 'x' &&
-            game_table[7] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[1] == 'o' && game_table[4] == 'o' &&
-            game_table[7] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[2] == game_table[5] && game_table[5] == game_table[8])
-    {
-        if (game_table[2] == 'x' && game_table[5] == 'x' &&
-            game_table[8] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[2] == 'o' && game_table[5] == 'o' &&
-            game_table[8] == 'o')
-        {
-            return -2;
-        }
-    }
-    else if (game_table[2] == game_table[4] && game_table[4] == game_table[6])
-    {
-        if (game_table[2] == 'x' && game_table[4] == 'x' &&
-            game_table[6] == 'x')
-        {
-            return -1;
-        }
-
-        if (game_table[2] == 'o' && game_table[4] == 'o' &&
-            game_table[6] == 'o')
+        if (count_o == 3)
         {
             return -2;
         }
     }
     return 0;
 }
+
+int check_columns()
+{
+    for (size_t i = 0; i < 3; i++)
+    {
+        int count_x = 0;
+        int count_o = 0;
+        for (size_t j = 0; j < 3; j++)
+        {
+            /* [(j * 3) + (i)] == [j][i] */
+            if (game_table[(j * 3) + (i)] == 'x')
+            {
+                ++count_x;
+            }
+            else if (game_table[(j * 3) + (i)] == 'o')
+            {
+                ++count_o;
+            }
+        }
+        if (count_x == 3)
+        {
+            return -1;
+        }
+        if (count_o == 3)
+        {
+            return -2;
+        }
+    }
+    return 0;
+}
+
+int check_diagonals()
+{
+    int check_right_diagonal();
+    int check_left_diagonal();
+
+    int winner;
+    TEST_RETURN_WINNER(winner, check_right_diagonal);
+    return check_left_diagonal();
+}
+
+int check_right_diagonal()
+{
+    int count_x = 0;
+    int count_o = 0;
+    for (size_t i = 0; i < 3; i++)
+    {
+        /* [(i * 3) + (i)] == [i][i] */
+        if (game_table[(i * 3) + (i)] == 'x')
+        {
+            ++count_x;
+        }
+        else if (game_table[(i * 3) + (i)] == 'o')
+        {
+            ++count_o;
+        }
+    }
+    if (count_x == 3)
+    {
+        return -1;
+    }
+    if (count_o == 3)
+    {
+        return -2;
+    }
+    return 0;
+}
+
+int check_left_diagonal()
+{
+    int count_x = 0;
+    int count_o = 0;
+    for (size_t i = 0; i < 3; i++)
+    {
+        /* [(i * 3) + (3 - 1 - i)] == [i][3 - i - 1] */
+        if (game_table[(i * 3) + (3 - 1 - i)] == 'x')
+        {
+            ++count_x;
+        }
+        else if (game_table[(i * 3) + (3 - 1 - i)] == 'o')
+        {
+            ++count_o;
+        }
+    }
+    if (count_x == 3)
+    {
+        return -1;
+    }
+    if (count_o == 3)
+    {
+        return -2;
+    }
+    return 0;
+}
+#undef TEST_RETURN_WINNER
