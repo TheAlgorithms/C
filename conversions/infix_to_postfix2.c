@@ -13,7 +13,7 @@
 #include<stdio.h>	/// for IO operations
 #include<string.h>	/// for strlen()
 #include<ctype.h>	/// for isalnum()
-#include<process.h>	/// for exit()
+#include<stdlib.h>	/// for exit()
 
 /**
  * @brief array implementation of stack using structure
