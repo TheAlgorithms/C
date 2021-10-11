@@ -50,7 +50,8 @@ void display_convertion(uint64_t nb, char alphabet[86], unsigned short base)
 
 /**
  * @brief Main function
- * @return 0 on exit or 1 on error
+ * @returns 0 on exit 
+ * @returns 1 on error
  */
 int main()
 {
