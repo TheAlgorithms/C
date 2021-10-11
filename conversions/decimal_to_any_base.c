@@ -7,18 +7,19 @@
 
 #include <stdio.h>   /// for IO operations
 #include <string.h>  /// for strchr and strlen
-#include <stdint.h> /// for CPU arch's optimized int types
+#include <stdint.h>  /// for CPU arch's optimized int types
+#include <stdbool.h> /// for boolean types
 
 /**
  * @brief Checking if alphabet is valid
  * @details lenght and duplicates tests on alphabet
  * @param base alphabet inputed by user
- * @return int as success or not
+ * @return int64_t as success or not
  */
-int isbad_alphabet(char alphabet[85])
+bool isbad_alphabet(char alphabet[85])
 {
 	/* Browse the alphabet */
-	unsigned int len = strlen(alphabet);
+	uint64_t len = strlen(alphabet);
 	
 	/* Checking th lenght */	
 	if (len < 2)
@@ -27,9 +28,9 @@ int isbad_alphabet(char alphabet[85])
 	{
 		/* Searching for duplicates */ 
 		if (strchr(alphabet + i + 1, alphabet[i]))
-			return (1);
+			return (true);
 	}
-	return (0);
+	return (false);
 }
 
 /**
@@ -71,7 +72,9 @@ int main()
 		return (1);
 	}
 	/* Convertion */
-	display_convertion(nb, alphabet, strlen(alphabet));
+	uint64_t 		base = strlen(alphabet);
+	printf("%lu converted into base %lu is equal to: ", nb, base);
+	display_convertion(nb, alphabet, base);
 	printf("\n");
 	return (0);
 }
