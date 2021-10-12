@@ -1,25 +1,19 @@
 //Rotation of array that rotates arr[] of size n by d elements
 #include<iostream>
-using namespace std;
 int rotate(int arr[],int d,int n);
 int main()
 {
   int n,d;
-  cin>>n;
+  std::cin >> n;
   int arr[n];
   int i;
-
 	for(i=0;i<n;i++)
-		cin>>arr[i];
-
-	cin>>d;
+		std::cin>>arr[i];
+	std::cin >> d;
 	rotate(arr,d,n);
-
-	cout<<"\nAfter Rotation : \n";
-
+	std::cout << "\nAfter Rotation : \n";
 	for(i=0;i<n;i++)
-		cout<<arr[i]<<" ";
-
+		std::cout << arr[i] << " ";
   return 0;
 }
 
@@ -46,5 +40,4 @@ int rotate(int arr[],int d,int n)
 		arr[i]=temp[j];
 		j++;
 	}
-
 }
