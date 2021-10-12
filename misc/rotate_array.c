@@ -1,5 +1,5 @@
 //Rotation of array that rotates arr[] of size n by d elements
-#include<iostream>
+#include <stdio.h> 
 int rotate(int arr[],int d,int n);
 int main()
 {
