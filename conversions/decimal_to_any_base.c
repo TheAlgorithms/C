@@ -19,12 +19,12 @@
  */
 bool isbad_alphabet(const char* alphabet)
 {
-	/* Browse the alphabet */
 	uint64_t len = strlen(alphabet);
 	
 	/* Checking th lenght */	
 	if (len < 2)
 		return true;
+	/* Browse the alphabet */
 	for (int i = 0; i < len ; i++)
 	{
 		/* Searching for duplicates */ 
