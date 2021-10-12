@@ -44,7 +44,7 @@ uint64_t converted_len(uint64_t nb, short base)
 {
 	/* Counting the number of characters translated to the base*/
 	if (nb > base - 1)
-		return (converted_len(nb/base, base)+1);
+		return (converted_len(nb/base, base) + 1);
 	return (1);
 }
 
@@ -75,7 +75,7 @@ char* decimal_to_anybase(uint64_t nb, const char* alphabet)
 {
 	char* converted;
 
-	/* Verify that every characters of alphabet is unique*/
+	/* Verify that alphabet is valid */
 	if (isbad_alphabet(alphabet))
 		return NULL;
 	/* Convertion */
