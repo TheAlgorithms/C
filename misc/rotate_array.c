@@ -4,16 +4,16 @@ int rotate(int arr[],int d,int n);
 int main()
 {
   int n,d;
-  std::cin >> n;
+  scanf("%d", &n);
   int arr[n];
   int i;
 	for(i=0;i<n;i++)
-		std::cin>>arr[i];
-	std::cin >> d;
+		scanf("%d", &arr[i]);
+	scanf("%d", &d);
 	rotate(arr,d,n);
-	std::cout << "\nAfter Rotation : \n";
+	printf("\nAfter Rotation : \n");
 	for(i=0;i<n;i++)
-		std::cout << arr[i] << " ";
+		printf("%d ", arr[i]);
   return 0;
 }
 
