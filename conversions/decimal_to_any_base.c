@@ -1,36 +1,51 @@
 /**
  * @file
  * @author [jucollet972](https://github.com/jucollet972)
- * @brief [Decimal to any-base](http://codeofthedamned.com/index.php/number-base-conversion) is a tiny C program wich convert positive decimal
- * integer to any positive base with the base's alphabet given in input (recursive way)
+ * @brief [Decimal to any-base](http://codeofthedamned.com/index.php/number-base-conversion) is a C function wich convert positive decimal
+ * integer to any positive ascii base with the base's alphabet given in input and return it in a dynamically allocated string(recursive way)
  */
 
 #include <stdio.h>   /// for IO operations
 #include <string.h>  /// for strchr and strlen
 #include <stdint.h>  /// for CPU arch's optimized int types
 #include <stdbool.h> /// for boolean types
+#include <assert.h>  /// for assert
+#include <stdlib.h>  /// for malloc and free
 
 /**
  * @brief Checking if alphabet is valid
- * @details lenght and duplicates tests on alphabet
  * @param base alphabet inputed by user
  * @return int64_t as success or not
  */
-bool isbad_alphabet(char alphabet[85])
+bool isbad_alphabet(const char* alphabet)
 {
 	/* Browse the alphabet */
 	uint64_t len = strlen(alphabet);
 	
 	/* Checking th lenght */	
 	if (len < 2)
-		return (1);
+		return true;
 	for (int i = 0; i < len ; i++)
 	{
 		/* Searching for duplicates */ 
 		if (strchr(alphabet + i + 1, alphabet[i]))
-			return (true);
+			return true;
 	}
-	return (false);
+	return false;
+}
+
+/**
+ * @brief Calculate the final length of the converted number
+ * @param nb to convert
+ * @param base calculated from alphabet
+ * @return Converted nb string length 
+ */
+uint64_t converted_len(uint64_t nb, short base)
+{
+	/* Counting the number of characters translated to the base*/
+	if (nb > base - 1)
+		return (converted_len(nb/base, base)+1);
+	return (1);
 }
 
 /**
@@ -38,43 +53,106 @@ bool isbad_alphabet(char alphabet[85])
  * @param nb to convert
  * @param alphabet inputed by user used for base convertion
  * @param base calculated from alphabet
+ * @param converted string filled with the convertion's result
  * @return void
  */
-void display_convertion(uint64_t nb, char alphabet[86], unsigned short base)
+void convertion(uint64_t nb, const char* alphabet, short base, char* converted)
 {
 	/* Recursive convertion */
+	*(converted) = *(alphabet + nb%base);
 	if (nb > base - 1)
-		display_convertion(nb/base, alphabet, base);
-	/* Displaying converted number in order */
-	printf("%c", alphabet[nb%base]);
+		convertion(nb/base, alphabet, base, --converted);
+}
+
+/**
+ * @brief decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any ascii positive base
+ * @param nb to convert
+ * @param base's alphabet
+ * @returns nb converted on success
+ * @returns NULL on error
+ */
+char* decimal_to_anybase(uint64_t nb, const char* alphabet)
+{
+	char* converted;
+
+	/* Verify that every characters of alphabet is unique*/
+	if (isbad_alphabet(alphabet))
+		return NULL;
+	/* Convertion */
+	uint64_t base = strlen(alphabet);
+	uint64_t final_len = converted_len(nb, base);
+	converted = malloc(sizeof(char) * (final_len + 1));
+	converted[final_len] = 0;
+	convertion(nb, alphabet, base, converted + final_len - 1);
+	return converted;
+}
+
+
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
+{
+	char* ret = NULL;
+	char* reference = NULL;
+
+	/* min dec*/
+	reference = "0";
+	ret = decimal_to_anybase(0, "0123456789");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+	
+	/* max dec*/
+	reference = "18446744073709551615";
+	ret = decimal_to_anybase(18446744073709551615, "0123456789");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+	
+	/* negative dec*/
+	reference = "18446744073709551615";
+	ret = decimal_to_anybase(-1, "0123456789");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+
+	/* bin */
+	reference = "101010";
+	ret = decimal_to_anybase(42, "01");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+	
+	/* octal */
+	reference = "52";
+	ret = decimal_to_anybase(42, "01234567");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+	
+	/* hexa */
+	reference = "2A";
+	ret = decimal_to_anybase(42, "0123456789ABCDEF");
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+		assert(ret[i] == reference[i]);
+	if (ret != NULL)
+		free(ret);
+	printf("[+] Tests passed !\n");
 }
 
 /**
  * @brief Main function
  * @returns 0 on exit 
- * @returns 1 on error
  */
 int main()
 {
-	uint64_t		nb = 0;
-	char			alphabet[86] = {0};
-
-	/* Decimal number input */
-	printf("Enter the positive number to convert (-1 < number < 18446744073709551615): "); 
-	scanf("%lu", &nb);
-	/* Base alphabet input */
-	printf("Enter the base alphabet (1 < alphabet length < 85): ");
-	scanf("%85s", alphabet);  
-	/* Verify that every characters of alphabet is unique */
-	if (isbad_alphabet(alphabet))
-	{
-		printf("The base alphabet is not valid, Every character should be unique and the length of the alphabet should be greater than 2 and lower than 86 !\n");
-		return (1);
-	}
-	/* Convertion */
-	uint64_t 		base = strlen(alphabet);
-	printf("%lu converted into base %lu is equal to: ", nb, base);
-	display_convertion(nb, alphabet, base);
-	printf("\n");
-	return (0);
+	test();
+	return 0;
 }
