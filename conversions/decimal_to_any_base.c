@@ -45,7 +45,7 @@ uint64_t converted_len(uint64_t nb, short base)
 	/* Counting the number of characters translated to the base*/
 	if (nb > base - 1)
 		return (converted_len(nb/base, base) + 1);
-	return (1);
+	return 1;
 }
 
 /**
@@ -153,6 +153,6 @@ static void test()
  */
 int main()
 {
-	test();
+	test(); // run self-test implementations
 	return 0;
 }
