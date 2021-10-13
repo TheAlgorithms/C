@@ -1,5 +1,5 @@
 /**
- * @factorial.c
+ * @file
  * @brief simple factorial
  * @implements factorial function
  * @author [William Henrique](https://github.com/Willh-AM)
