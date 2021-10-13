@@ -10,7 +10,7 @@
  */
  
 #include <stdio.h>	/// for IO operations
-#include <string.h>	/// for strlen(), strcmpi()
+#include <string.h>	/// for strlen(), strcmp()
 #include <ctype.h>	/// for isalnum()
 #include <stdlib.h>	/// for exit()
 #include <stdint.h>	/// for uint16_t, int16_t
@@ -142,7 +142,7 @@ static void test() {
 	   input- "(A/(B-C)*D+E)"
 	   expected output- "ABC-/D*E+"
 	 */
-	assert(strcmpi(convert("(A/(B-C)*D+E)"), "ABC-/D*E+") == 0); 			// this ensures that the algorithm works as expected
+	assert(strcmp(convert("(A/(B-C)*D+E)"), "ABC-/D*E+") == 0); 			// this ensures that the algorithm works as expected
 }
 
 /**
