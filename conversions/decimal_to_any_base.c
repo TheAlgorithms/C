@@ -17,16 +17,15 @@
  * @param base alphabet inputed by user
  * @return int64_t as success or not
  */
-bool isbad_alphabet(const char* alphabet)
-{
+bool isbad_alphabet(const char* alphabet) {
 	uint64_t len = strlen(alphabet);
 	
 	/* Checking th lenght */	
-	if (len < 2)
+	if (len < 2) {
 		return true;
+	}
 	/* Browse the alphabet */
-	for (int i = 0; i < len ; i++)
-	{
+	for (int i = 0; i < len ; i++) {
 		/* Searching for duplicates */ 
 		if (strchr(alphabet + i + 1, alphabet[i]))
 			return true;
@@ -40,11 +39,11 @@ bool isbad_alphabet(const char* alphabet)
  * @param base calculated from alphabet
  * @return Converted nb string length 
  */
-uint64_t converted_len(uint64_t nb, short base)
-{
+uint64_t converted_len(uint64_t nb, short base) {
 	/* Counting the number of characters translated to the base*/
-	if (nb > base - 1)
+	if (nb > base - 1) {
 		return (converted_len(nb/base, base) + 1);
+	}
 	return 1;
 }
 
@@ -56,12 +55,12 @@ uint64_t converted_len(uint64_t nb, short base)
  * @param converted string filled with the convertion's result
  * @return void
  */
-void convertion(uint64_t nb, const char* alphabet, short base, char* converted)
-{
+void convertion(uint64_t nb, const char* alphabet, short base, char* converted) {
 	/* Recursive convertion */
 	*(converted) = *(alphabet + nb%base);
-	if (nb > base - 1)
+	if (nb > base - 1) {
 		convertion(nb/base, alphabet, base, --converted);
+	}
 }
 
 /**
@@ -71,13 +70,13 @@ void convertion(uint64_t nb, const char* alphabet, short base, char* converted)
  * @returns nb converted on success
  * @returns NULL on error
  */
-char* decimal_to_anybase(uint64_t nb, const char* alphabet)
-{
+char* decimal_to_anybase(uint64_t nb, const char* alphabet) {
 	char* converted;
 
 	/* Verify that alphabet is valid */
-	if (isbad_alphabet(alphabet))
+	if (isbad_alphabet(alphabet)) {
 		return NULL;
+	}
 	/* Convertion */
 	uint64_t base = strlen(alphabet);
 	uint64_t final_len = converted_len(nb, base);
@@ -100,50 +99,62 @@ static void test()
 	/* min dec*/
 	reference = "0";
 	ret = decimal_to_anybase(0, "0123456789");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 	
 	/* max dec*/
 	reference = "18446744073709551615";
 	ret = decimal_to_anybase(18446744073709551615, "0123456789");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 	
 	/* negative dec*/
 	reference = "18446744073709551615";
 	ret = decimal_to_anybase(-1, "0123456789");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 
 	/* bin */
 	reference = "101010";
 	ret = decimal_to_anybase(42, "01");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 	
 	/* octal */
 	reference = "52";
 	ret = decimal_to_anybase(42, "01234567");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 	
 	/* hexa */
 	reference = "2A";
 	ret = decimal_to_anybase(42, "0123456789ABCDEF");
-	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++)
+	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
-	if (ret != NULL)
+	}
+	if (ret != NULL) {
 		free(ret);
+	}
 	printf("[+] Tests passed !\n");
 }
 
