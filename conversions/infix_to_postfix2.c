@@ -152,6 +152,10 @@ static void test() {
 int main() {
 	st.top = -1;						// initialize
 	test();								// run self-test implementations
+	char inf[25];						///< to store input infix expression
+	printf("Enter infix: ");
+	scanf("%s", inf);
+	printf("Postfix: %s", convert(inf));
 	return 0;
 }
 
