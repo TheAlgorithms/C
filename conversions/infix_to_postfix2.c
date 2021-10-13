@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief infix to postfix converter
- * Wikipedia- [Shunting-yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+ * Reference- [infix to postfix converter](https://www.includehelp.com/c/infix-to-postfix-conversion-using-stack-with-c-program.aspx)
  * @details
  * The input infix expression is of type string upto 24 characters.
  * Supported operations- '+', '-', '/', '*', '%'
@@ -21,7 +21,7 @@
  */
 struct Stack {
 	char stack[10];		///< array stack
-	int top;			///< stores index of top element
+	int top;		///< stores index of top element
 };
 struct Stack st;		///< global declaration of stack st
 
@@ -33,7 +33,7 @@ struct Stack st;		///< global declaration of stack st
 void push(char opd) {
 	if(st.top == 9)	{		// overflow condition
 		printf("Stack overflow...");
-		exit(0);
+		exit(1);
 	}
 	st.top++;
 	st.stack[st.top] = opd;
@@ -47,7 +47,7 @@ char pop() {
 	char item;				///< to store popped value to be returned
 	if(st.top == -1) {		// underflow condition
 		printf("Stack underflow...");
-		exit(0);
+		exit(1);
 	}
 	item = st.stack[st.top];
 	st.top--;
@@ -56,8 +56,8 @@ char pop() {
 
 /**
  * @brief Function to check whether stack is empty or not
- * @returns `true` if stack is empty
- * @returns `false` if stack is not empty
+ * @returns 1 if stack is empty
+ * @returns 0 if stack is not empty
  */
 uint16_t isEmpty() {
 	if(st.top == -1) {
@@ -150,12 +150,11 @@ static void test() {
  * @returns 0 on exit
  */
 int main() {
-	st.top = -1;						// initialize
-	test();								// run self-test implementations
+	st.top = -1;			/// initialize
+	test();				/// run self-test implementations
 	char inf[25];						///< to store input infix expression
 	printf("Enter infix: ");
 	scanf("%s", inf);
 	printf("Postfix: %s", convert(inf));
 	return 0;
 }
-
