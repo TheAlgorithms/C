@@ -1,19 +1,20 @@
 /**
  * @file
  * @brief infix to postfix converter
+ * Wikipedia- [Shunting-yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
  * @details
  * The input infix expression is of type string upto 24 characters.
- * 
  * Supported operations- '+', '-', '/', '*', '%'
- *
  * @author [Kumar Yash](https://github.com/kumaryash18)
  * @see infix_to_postfix.c
  */
  
-#include<stdio.h>	/// for IO operations
-#include<string.h>	/// for strlen()
-#include<ctype.h>	/// for isalnum()
-#include<stdlib.h>	/// for exit()
+#include <stdio.h>	/// for IO operations
+#include <string.h>	/// for strlen(), strcmpi()
+#include <ctype.h>	/// for isalnum()
+#include <stdlib.h>	/// for exit()
+#include <stdint.h>	/// for uint16_t, int16_t
+#include <assert.h>	/// for assert
 
 /**
  * @brief array implementation of stack using structure
@@ -25,8 +26,8 @@ struct Stack {
 struct Stack st;		///< global declaration of stack st
 
 /**
- * @brief Function to push '(' and operators from infix expression
- * @param opd- character to be pushed in stack
+ * @brief Function to push on stack
+ * @param opd character to be pushed in stack
  * @returns void
  */
 void push(char opd) {
@@ -39,7 +40,7 @@ void push(char opd) {
 }
 
 /**
- * @brief Function to pop operators and '('
+ * @brief Function to pop from stack
  * @returns popped character
  */
 char pop() {
@@ -58,7 +59,7 @@ char pop() {
  * @returns `true` if stack is empty
  * @returns `false` if stack is not empty
  */
-int isEmpty() {
+uint16_t isEmpty() {
 	if(st.top == -1) {
 		return 1;
 	}
@@ -75,16 +76,16 @@ char Top() {
 
 /**
  * @brief Function to check priority of operators
- * @param opd- operator whose priority is to be checked
+ * @param opr operator whose priority is to be checked
  * @returns 0 if operator is '+' or '-'
  * @returns 1 if operator is '/' or '*' or '%'
  * @returns -1 otherwise
  */
-int priority(char opd) {
-	if(opd == '+' || opd == '-') {
+int16_t priority(char opr) {
+	if(opr == '+' || opr == '-') {
 		return 0;
 	}
-	else if(opd == '/' || opd == '*' || opd == '%') {
+	else if(opr == '/' || opr == '*' || opr == '%') {
 		return 1;
 	}
 	else {
@@ -93,18 +94,15 @@ int priority(char opd) {
 }
 
 /**
- * @brief Main function
- * @returns 0 on exit
+ * @brief Function to convert infix to postfix expression
+ * @param inf the input infix expression
+ * @returns output postfix expression
  */
-int main() {
-	st.top = -1;						// represents empty stack
-	char inf[25];						///< to store the input infix expression
-	char post[25];						///< to store the postfix expression
-	printf("Enter Infix: ");
-	scanf("%s", inf);					// input infix expression
+char *convert(char inf[]) {
+	static char post[25];				///< to store the postfix expression
 	int i;								///< loop iterator
-	int j=0;							///< keeps track of end of postfix string
-	for(i=0; i < strlen(inf); i++) {
+	int j = 0;							///< keeps track of end of postfix string
+	for(i = 0; i < strlen(inf); i++) {
 		if(isalnum(inf[i]))	{			// if scanned element is an alphabet or number
 			post[j] = inf[i];			// append in postfix expression
 			j++;
@@ -132,7 +130,28 @@ int main() {
 		j++;
 	}
 	post[j] = '\0';						// end postfix string with null character
-	printf("Postfix: %s", post);		// print postfix expression
+	return post;
+}
+
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test() {
+    /* check sample test case
+	   input- "(A/(B-C)*D+E)"
+	   expected output- "ABC-/D*E+"
+	 */
+	assert(strcmpi(convert("(A/(B-C)*D+E)"), "ABC-/D*E+") == 0); 			// this ensures that the algorithm works as expected
+}
+
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
+int main() {
+	st.top = -1;						// initialize
+	test();								// run self-test implementations
 	return 0;
 }
 
