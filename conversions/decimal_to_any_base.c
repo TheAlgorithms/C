@@ -155,7 +155,7 @@ static void test()
 	if (ret != NULL) {
 		free(ret);
 	}
-	printf("[+] Tests passed !\n");
+	printf("[+] All tests have successfully passed!\n");
 }
 
 /**
