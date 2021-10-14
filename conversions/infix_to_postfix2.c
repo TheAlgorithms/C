@@ -1,7 +1,6 @@
 /**
  * @file
- * @brief infix to postfix converter
- * Reference- [infix to postfix converter](https://www.includehelp.com/c/infix-to-postfix-conversion-using-stack-with-c-program.aspx)
+ * @brief [Infix to Postfix converter](https://www.includehelp.com/c/infix-to-postfix-conversion-using-stack-with-c-program.aspx) implementation
  * @details
  * The input infix expression is of type string upto 24 characters.
  * Supported operations- '+', '-', '/', '*', '%'
@@ -21,13 +20,13 @@
  */
 struct Stack {
 	char stack[10];		///< array stack
-	int top;		///< stores index of top element
+	int top;		///< stores index of the top element
 };
 struct Stack st;		///< global declaration of stack st
 
 /**
- * @brief Function to push on stack
- * @param opd character to be pushed in stack
+ * @brief Function to push on the stack
+ * @param opd character to be pushed in the stack
  * @returns void
  */
 void push(char opd) {
@@ -40,11 +39,11 @@ void push(char opd) {
 }
 
 /**
- * @brief Function to pop from stack
+ * @brief Function to pop from the stack
  * @returns popped character
  */
 char pop() {
-	char item;				///< to store popped value to be returned
+	char item;				///< to store the popped value to be returned
 	if(st.top == -1) {		// underflow condition
 		printf("Stack underflow...");
 		exit(1);
@@ -55,9 +54,9 @@ char pop() {
 }
 
 /**
- * @brief Function to check whether stack is empty or not
- * @returns 1 if stack is empty
- * @returns 0 if stack is not empty
+ * @brief Function to check whether the stack is empty or not
+ * @returns 1 if the stack IS empty
+ * @returns 0 if the stack is NOT empty
  */
 uint16_t isEmpty() {
 	if(st.top == -1) {
@@ -67,7 +66,7 @@ uint16_t isEmpty() {
 }
 
 /**
- * @brief Function to get top of stack
+ * @brief Function to get top of the stack
  * @returns top of stack
  */
 char Top() {
@@ -94,7 +93,7 @@ int16_t priority(char opr) {
 }
 
 /**
- * @brief Function to convert infix to postfix expression
+ * @brief Function to convert infix expression to postfix expression
  * @param inf the input infix expression
  * @returns output postfix expression
  */
@@ -152,7 +151,7 @@ static void test() {
 int main() {
 	st.top = -1;			/// initialize
 	test();				/// run self-test implementations
-	char inf[25];						///< to store input infix expression
+	char inf[25];			///< to store input infix expression
 	printf("Enter infix: ");
 	scanf("%s", inf);
 	printf("Postfix: %s", convert(inf));
