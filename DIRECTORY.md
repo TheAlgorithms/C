@@ -373,6 +373,7 @@
     * [Boyer Moore Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/boyer_moore_search.c)
     * [Naive Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/naive_search.c)
     * [Rabin Karp Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/rabin_karp_search.c)
+  * [Sentinel Linear Search](https://github.com/TheAlgorithms/C/blob/master/searching/sentinel_linear_search.c)
   * [Ternary Search](https://github.com/TheAlgorithms/C/blob/master/searching/ternary_search.c)
 
 ## Sorting
