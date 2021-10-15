@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target
+ * @brief Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  * @param [in,out] nums array of integers to be searched.
  * @param [in] nums_size nums array size.
  * @param [in] target target num.
@@ -21,4 +21,3 @@ int *twoSum(int *nums, int nums_size, int target, int *return_size) {
     *return_size = 2;
     return ret;
 }
-
