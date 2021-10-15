@@ -12,7 +12,7 @@
  */
 
 #include <stdio.h>   /// for IO operations
-#include <assert.h> /// for assert
+#include <assert.h>  /// for assert
 
 /**
  * @brief Utility function to search for an element in the array and return the index of the element
