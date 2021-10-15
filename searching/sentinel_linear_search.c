@@ -16,6 +16,18 @@
 
 /**
  * @brief Utility function to search for an element in the array and return the index of the element
+ * @details 
+ * The so-called "sentinel" is to use a special value as the boundary key of the array. 
+ * One less judgment statement can be used. 
+ * The purpose is to avoid checking whether the entire array is searched at each step in the search 
+ * process, so as to improve the efficiency of the program.
+ * We can use the last value of the array as the "sentinel", the data storage index i 
+ * starts from 0 and ends at len-1, then the position where the index of arr is n-1 indicates 
+ * that there is no data temporarily, which is the "sentinel" key.
+ * If the last element of the array is equal to the key, directly return the index of the last element. 
+ * Before setting the last element of the array as the key, we hand over the last element of the array to temp for temporary storage. 
+ * Then go to the array to find the key. If the key is found, stop the search, and then compare the found element index with len-1. 
+ * If it is equal, it means it was not found. If it is not equal, it is found.
  * @param arr this is an array containing elements
  * @param len this is the number of elements in the array
  * @param key the value we want to search
