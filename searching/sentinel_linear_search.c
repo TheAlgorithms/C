@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief [Linear search](https://en.wikipedia.org/wiki/Linear_search#With_a_sentinel) implementation
+ * @brief [Linear Search with Sentinel](https://en.wikipedia.org/wiki/Linear_search#With_a_sentinel) algorithm implementation
  * @details
  * This algorithm saves the last element of the array, 
  * then replaces it with the value to be found and sets it as the sentinel. 
@@ -11,11 +11,11 @@
  * Time Complexity: O(N)
  */
 
-#include<stdio.h> // for IO operations
-#include<assert.h> // for assert
+#include <stdio.h>   /// for IO operations
+#include <assert.h> /// for assert
 
 /**
- * search for an element in the array and return the index of the element.
+ * @brief Utility function to search for an element in the array and return the index of the element
  * @param arr this is an array containing elements
  * @param len this is the number of elements in the array
  * @param key the value we want to search
@@ -46,7 +46,6 @@ int sentinel_linear_search( int arr[], int len, int key ){
  * @brief Self-test implementations
  * @returns void
  */
- 
 static void test(){
 	int n,i;
 	n = 5;
@@ -65,6 +64,6 @@ static void test(){
  * @returns 0 on exit
  */
 int main(){
-	test(); // run self-test implementations
+	test();  // run self-test implementations
 	return 0;
 }
