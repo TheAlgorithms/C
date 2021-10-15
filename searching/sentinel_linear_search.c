@@ -41,11 +41,9 @@ int sentinel_linear_search( int arr[], int len, int key ){
 	int temp = arr[len-1]; 
 	arr[len-1] = key;
 	
-	int i;
-	for(i=0;arr[len-1]!=arr[i];i++){
-		if(i==len-1){
-			break;
-		}
+	int i = 0;
+	while (arr[len-1] != arr[i]) {
+		i++;
 	}
 	
 	arr[len-1] = temp;
