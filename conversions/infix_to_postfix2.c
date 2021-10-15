@@ -141,7 +141,12 @@ static void test() {
 	   input- "(A/(B-C)*D+E)"
 	   expected output- "ABC-/D*E+"
 	 */
-	assert(strcmp(convert("(A/(B-C)*D+E)"), "ABC-/D*E+") == 0); 			// this ensures that the algorithm works as expected
+	assert(strcmp(convert("(A/(B-C)*D+E)"), "ABC-/D*E+") == 0); 			/// this ensures that the algorithm works as expected
+	/* input- "7-(2*3+5)*(8-4/2)"
+	   expected output- "723*5+842/-*-"
+	 */
+	assert(strcmp(convert("7-(2*3+5)*(8-4/2)"), "723*5+842/-*-") == 0); 			/// this ensures that the algorithm works as expected
+	printf("All tests have successfully passed!\n");
 }
 
 /**
