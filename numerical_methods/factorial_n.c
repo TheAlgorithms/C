@@ -29,7 +29,7 @@ unsigned long factorial(unsigned long n)
  * @brief Self-test implementations
  * @returns void
  */
-void test() 
+static void test() 
 {
     /* Testing function output*/
     assert(factorial(0) == 1);
