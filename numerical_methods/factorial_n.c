@@ -5,7 +5,8 @@
  * @author [William Henrique](https://github.com/Willh-AM)
  */
 
-#include <assert.h> /// for assert
+#include <stdio.h>      /// for IO operations
+#include <assert.h>    /// for assert
 
 /** 
  * @brief Factorial of a number
