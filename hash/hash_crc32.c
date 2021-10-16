@@ -45,10 +45,6 @@ void test_crc32()
     assert(crc32("Hello World!") == 472456355);
     assert(crc32("Hello world") == 2346098258);
     assert(crc32("Hello world!") == 461707669);
-    // printf("%" PRIu32 "\n", crc32("Hello World"));
-    // printf("%" PRIu32 "\n", crc32("Hello World!"));
-    // printf("%" PRIu32 "\n", crc32("Hello world"));
-    // printf("%" PRIX32 "\n", crc32("Hello world!"));
     printf("Tests passed\n");
 }
 
