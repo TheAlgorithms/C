@@ -5,7 +5,8 @@
  * @author [William Henrique](https://github.com/Willh-AM)
  */
 
-#include <assert.h> /// for assert
+#include <stdio.h>      /// for IO operations
+#include <assert.h>    /// for assert
 
 /** 
  * @brief Factorial of a number
@@ -29,7 +30,7 @@ unsigned long factorial(unsigned long n)
  * @brief Self-test implementations
  * @returns void
  */
-void test() 
+static void test() 
 {
     /* Testing function output*/
     assert(factorial(0) == 1);
@@ -43,7 +44,6 @@ void test()
  */
 int main() 
 {
-    test();
-
+    test();  // run self-test implementations
     return 0;
 }
