@@ -48,6 +48,6 @@ int main()
     // Example
     printf("Usage example\n");
     mat_3x3 A = {1, 3, 3, 4, 5, 1, 0, 3, 4};
-    printf("detA = %f\n", get_mat_abs(&A));
+    printf("detA = %lf\n", get_mat_det(&A));
     return 0;
 }
