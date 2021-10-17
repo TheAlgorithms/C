@@ -5,6 +5,7 @@
  * This algorithm traverse through the array
  * Check if the current element is equal to the searched element
  * If found it returns the index of the found location
+ * @Co-Author [Shashi Raj](https://github.com/shashirajraja)
  * Time Complexity: O(N)
  */
 
