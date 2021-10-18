@@ -34,6 +34,7 @@
 #include <stdio.h>  /// for IO operations
 #include <stdlib.h> /// for dynamic memory allocation
 #include <string.h> /// for string manipulation
+#include<assert.h>  /// for Self-testing the implementations
 
 #define HEAD(list) (list->head)
 #define OFFSETOF(structure, field) (long)&((structure*)0)->field
@@ -164,7 +165,7 @@ void print(person* per){
     printf("Height: %i\n", per->height);
     printf("Age: %i\n", per->age);
     printf("Weight: %i\n", per->weight);
-	printf("------------\n");
+    printf("------------\n");
 }
 
 /**
@@ -186,46 +187,12 @@ person* allocate(){
  * @returns void
  */
 static void test(gldll* list){
-    if(HEAD(list) == NULL){
-        return;
-    }
-	char passed[10] = "[PASSED]:\0";
-	char failed[10] = "[FAILED]:\0";
-	char expected[9] = "EXPECTED\0";
-	char returned[9] = "RETURNED\0";
-    person* per = (person*)((char*)HEAD(list) - list->offset);
-    if(strcmp(per->name, "rohit") == 0){
-        printf("%s: %s -> %s, %s -> %s\n", passed, expected, "rohit",
-        returned, per->name);
-    }
-    else{
-        printf("%s: %s -> %s, %s -> %s\n", failed, expected, "rohit",
-        returned, per->name);
-    }
-    if(per->age == 23){
-        printf("%s: %s -> %i, %s -> %i\n", passed, expected, 23,
-        returned, per->age);
-    }
-    else{
-        printf("%s: %s -> %i, %s -> %i\n", failed, expected, 23,
-        returned, per->age);
-    }
-    if(per->height == 174){
-        printf("%s: %s -> %i, %s -> %i\n", passed, expected, 174,
-        returned, per->height);
-    }
-    else{
-        printf("%s: %s -> %i, %s -> %i\n", failed, expected, 174,
-        returned, per->height);
-    }
-    if(per->weight == 67){
-        printf("%s: %s -> %i, %s -> %i\n", passed, expected, 67,
-        returned, per->weight);
-    }
-    else{
-        printf("%s: %s -> %i, %s -> %i\n", failed, expected, 67,
-        returned, per->weight);
-    }
+    if(list == NULL){ return; }
+    person* per = (person*)((char*)(HEAD(list)) - list->offset);
+    assert(strcmp(per->name, "rohit") == 0);
+    assert(per->age == 23);
+    assert(per->height == 174);
+    assert(per->weight == 67);
 }
 
 /**
