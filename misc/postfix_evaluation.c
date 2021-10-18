@@ -18,7 +18,7 @@
  * @brief array implementation of stack using structure
  */
 struct Stack {
-	int stack[10];		///< array stack
+	int stack[20];		///< array stack
 	int top;		///< stores index of the top element
 };
 struct Stack st;		///< global declaration of stack st
@@ -29,7 +29,7 @@ struct Stack st;		///< global declaration of stack st
  * @returns void
  */
 void push(int8_t opd) {
-	if(st.top == 9)	{		// overflow condition
+	if(st.top == 19)	{		// overflow condition
 		printf("Stack overflow...");
 		exit(1);
 	}
