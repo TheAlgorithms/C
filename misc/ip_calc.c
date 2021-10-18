@@ -4,6 +4,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)  \
@@ -15,18 +16,6 @@
   (byte & 0x04 ? '1' : '0'), \
   (byte & 0x02 ? '1' : '0'), \
   (byte & 0x01 ? '1' : '0') 
-
-int own_pow(int a, int b) {
-
-    int tmp = a;
-
-    for (int i = 0; i < b-1; i++) {
-        tmp = tmp * a;
-    }
-
-    return tmp;
-
-}
 
 void print_ip_address_info(const unsigned char ip_arr[], const int mask)
 {
@@ -126,7 +115,7 @@ void print_ip_address_info(const unsigned char ip_arr[], const int mask)
     
     printf("Number of possible addresses: ");
 
-    int possible_addresses = own_pow(2, 32-mask) - 2;
+    int possible_addresses = (int)pow(2, 32-mask) - 2;
     printf("2 ^ %d - 2 = %d", 32 - mask, possible_addresses);
 
     printf("\n");
