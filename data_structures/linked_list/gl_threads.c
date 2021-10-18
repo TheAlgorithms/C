@@ -31,7 +31,7 @@
  * @author [Ashborn-SM](https://github.com/Ashborn-SM)
  */
 
-#include <stdio.h> /// for IO operations
+#include <stdio.h>  /// for IO operations
 #include <stdlib.h> /// for dynamic memory allocation
 #include <string.h> /// for string manipulation
 
@@ -181,7 +181,7 @@ person* allocate(){
 }
 
 /**
- * @brief self-test the implementation 
+ * @brief Self-test implementations
  * @param list linked-list
  * @returns void
  */
@@ -294,7 +294,7 @@ int main(){
 
     glthread_popfront(list);
 
-    test(list); // run self-test implementation
+    test(list);  // run self-test implementations
 
     destructor(&list);
     return 0;
