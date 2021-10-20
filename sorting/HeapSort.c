@@ -1,62 +1,73 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void heapify(int *unsorted, int index, int heap_size);
-void heap_sort(int *unsorted, int n);
+struct MaxHeap{
+	int size;
+	int *array;
+};
 
-int main() {
-	int n = 0;
-	int i = 0;
-	char oper;
-
-	int* unsorted;
-	printf("Enter the size of the array you want\n");
-	scanf("%d", &n);
-	unsorted = (int*)malloc(sizeof(int) * n);
-	while (getchar() != '\n');
-	printf("Enter numbers separated by a comma:\n");
-	while (i != n) {
-		scanf("%d,", (unsorted + i));
-		i++;
-	}
-	heap_sort(unsorted, n);
-
-	printf("[");
-	printf("%d", *(unsorted));
-	for (int i = 1; i < n; i++) {
-		printf(", %d", *(unsorted + i));
-	}
-	printf("]");
+void swap(int *a, int *b){
+	int t = *a;
+	*a = *b;
+	*b = t;
 }
 
-void heapify(int *unsorted, int index, int heap_size) {
-	int temp;
-	int largest = index;
-	int left_index = 2 * index;
-	int right_index = 2 * index + 1;
-	if (left_index < heap_size && *(unsorted + left_index) > *(unsorted + largest)) {
-		largest = left_index;
-	}
-	if (right_index < heap_size && *(unsorted + right_index) > *(unsorted + largest)) {
-		largest = right_index;
-	}
+void maxHeapify(struct MaxHeap *maxHeap, int idx){
+	int largest = idx;
+	int left = (idx << 1) + 1;
+	int right = (idx + 1) << 1;
 
-	if (largest != index) {
-		temp = *(unsorted + largest);
-		*(unsorted + largest) = *(unsorted + index);
-		*(unsorted + index) = temp;
-		heapify(unsorted, largest, heap_size);
+	if (left < maxHeap->size &&
+		maxHeap->array[left] > maxHeap->array[largest])
+		largest = left;
+
+	if (right < maxHeap->size &&
+		maxHeap->array[right] > maxHeap->array[largest])
+		largest = right;
+
+	if (largest != idx){
+		swap(&maxHeap->array[largest], &maxHeap->array[idx]);
+		maxHeapify(maxHeap, largest);
 	}
 }
 
-void heap_sort(int *unsorted, int n) {
-	int temp;
-	for (int i = n / 2 - 1; i > -1; i--) {
-		heapify(unsorted, i, n);
+
+struct MaxHeap *createAndBuildHeap(int *array, int size){
+	int i;
+	struct MaxHeap *maxHeap =
+		(struct MaxHeap *)malloc(sizeof(struct MaxHeap));
+	maxHeap->size = size;	
+	maxHeap->array = array; 
+
+	for (i = (maxHeap->size - 2) / 2; i >= 0; --i)
+		maxHeapify(maxHeap, i);
+	return maxHeap;
+}
+
+void heapSort(int *array, int size){
+	struct MaxHeap *maxHeap = createAndBuildHeap(array, size);
+
+	
+	while (maxHeap->size > 1){
+		swap(&maxHeap->array[0], &maxHeap->array[maxHeap->size - 1]);
+		--maxHeap->size; 
+		maxHeapify(maxHeap, 0);
 	}
-	for (int i = n - 1; i > 0; i--) {
-		temp = *(unsorted);
-		*(unsorted) = *(unsorted + i);
-		*(unsorted + i) = temp;
-		heapify(unsorted, 0, i);
-	}
+}
+
+void printArray(int *arr, int size){
+	int i;
+	for (i = 0; i < size; ++i)
+		printf("%d ", arr[i]);
+}
+
+int main(){
+	int arr[] = {12, 11, 13, 5, 6, 7};
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+	heapSort(arr, size);
+
+	printf("\nSorted array is \n");
+	printArray(arr, size);
+	return 0;
 }
