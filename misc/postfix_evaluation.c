@@ -18,7 +18,7 @@
  * @brief array implementation of stack using structure
  */
 struct Stack {
-	int stack[20];		///< array stack
+	int8_t stack[20];		///< array stack
 	int top;		///< stores index of the top element
 };
 struct Stack st;		///< global declaration of stack st
