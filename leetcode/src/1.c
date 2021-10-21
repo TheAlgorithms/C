@@ -13,7 +13,7 @@
 int* ending(int* a, int* b, int* returnSize);
 
 /**
- * @brief Given an array of integers nums and an integer target,
+ * @brief Given an array of integers and an integer target,
  * find the two numbers such that they add up to a given target.
  * @param nums the array of integer to be processed.
  * @param numsSize the size of array on input.
@@ -37,7 +37,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
  * @brief Prepare the output at the end of the execution. Just to keep tidy the
  * main function.
  * @param a an index of the solution.
- * @param a the other index of the solution.
+ * @param b the other index of the solution.
  * @param returnSize a pointer to the size of the output array (always 2 on
  * success).
  * @returns an array of the indices of the two numbers such that they add up to
