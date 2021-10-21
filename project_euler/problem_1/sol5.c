@@ -21,7 +21,7 @@ int sum_multiples(int a, long limit);
 int sum_of_ap(int a, int n, int d);
 
 /**
- * CLI driver of program
+ * @brief CLI driver of program
  * @param -h Get help message
  * @param limit Named arg to set limit
  */
@@ -38,6 +38,10 @@ int main(int argc, char *argv[])
                 fprintf(stderr, usage_msg, argv[0]);
                 exit(EXIT_FAILURE);
         }
+    }
+    if (optind >= argc) {
+        fprintf(stderr, "Expected argument '%s'\n", "limit");
+        exit(EXIT_FAILURE);
     }
 
     long limit = atol(argv[optind]);
@@ -57,7 +61,7 @@ int solution(long limit)
 }
 
 /**
- * Compute multiples of `a` upto `limit`
+ * @brief Compute multiples of `a` upto `limit`
  * @param a number
  * @param limit ceiling upto which to calculate
  * @return Sum of multiples of `a` till `limit`
@@ -69,8 +73,8 @@ int sum_multiples(int a, long limit)
 }
 
 /**
- * Sum of n terms of Arithmetic progression (A.P)
- * @description Formula: S = n / 2 (2a + (n-1)d)
+ * @brief Implement formula for sum of n terms of Arithmetic progression (A.P)
+ * @details Formula: S = n / 2 (2a + (n-1)d)
  * @param a First term
  * @param n Number of terms
  * @param d Interval between terms
