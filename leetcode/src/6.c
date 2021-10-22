@@ -1,5 +1,5 @@
 /**
- * @file 6.c
+ * @file
  * @brief ZigZag Conversion leetcode problem solution.
  * @details
  * A decent solution to the ZigZag conversion problem.
@@ -12,9 +12,9 @@
  * @see https://leetcode.com/problems/zigzag-conversion/
  */
 
-#include <assert.h>
-#include <stdlib.h>
-#include <string.h>
+#include <assert.h>  /// for assert
+#include <stdint.h>  /// for unsigned int with fixed size
+#include <stdio.h>   /// for IO operations
 
 /**
  * @brief Convert a string to the it's zigzag equivalent on a given number of
@@ -23,9 +23,9 @@
  * @param numRows the desired number of rows.
  * @returns the converted new (malloced) string.
  */
-char* convert(char* in, int numRows)
+char* convert(char* in, uint16_t numRows)
 {
-    int len = strlen(in);
+    uint16_t len = strlen(in);
 
     if (len < numRows)
     {
@@ -39,11 +39,11 @@ char* convert(char* in, int numRows)
         return out;
     }
 
-    int max = numRows - 1;
-    int rr = 2 * max;
-    int i = 0;
-    int o = 0;
-    int delta = 0;
+    uint16_t max = numRows - 1;
+    uint16_t rr = 2 * max;
+    uint16_t i = 0;
+    uint16_t o = 0;
+    uint16_t delta = 0;
 
     // first row
     while (i < len)
@@ -53,7 +53,7 @@ char* convert(char* in, int numRows)
     }
 
     // middle rows
-    for (int l = 1; l < max; l++)
+    for (uint16_t l = 1; l < max; l++)
     {
         i = l;
         delta = 2 * l;
@@ -80,7 +80,7 @@ char* convert(char* in, int numRows)
  * @brief Self-test implementations
  * @returns void
  */
-void testZigZag(char* s, int numRows, char* expected)
+static void testZigZag(char* s, int numRows, char* expected)
 {
     char* ret = convert(s, numRows);
     int len = strlen(s);
@@ -90,7 +90,7 @@ void testZigZag(char* s, int numRows, char* expected)
     free(ret);
 }
 
-void test(void)
+static void test(void)
 {
     char* s01 = "PAYPALISHIRING";
 
