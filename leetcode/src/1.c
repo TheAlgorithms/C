@@ -1,5 +1,5 @@
 /**
- * @file 1.c
+ * @file
  * @brief TwoSum leetcode problem solution.
  * @details
  * This is a recursive solution for the leetcode problem of TwoSum.
@@ -7,8 +7,9 @@
  * @see https://leetcode.com/problems/two-sum/
  */
 
-#include <assert.h>
-#include <stdlib.h>
+#include <assert.h>  /// for assert
+#include <stdint.h>  /// for unsigned int with fixed size
+#include <stdlib.h>  /// for everithing else
 
 int* ending(int* a, int* b, int* returnSize);
 
@@ -56,7 +57,7 @@ int* ending(int* a, int* b, int* returnSize)
  * @brief Self-test implementations
  * @returns void
  */
-void testTwoSum(int* nums, int numsSize, int target)
+static void testTwoSum(int* nums, int numsSize, int target)
 {
     int retSize = 0;
     int* ret = twoSum(nums, numsSize, target, &retSize);
@@ -67,7 +68,7 @@ void testTwoSum(int* nums, int numsSize, int target)
     assert(!target);
 }
 
-void test(void)
+static void test(void)
 {
     int nums[4] = {2, 7, 11, 15};
     testTwoSum(nums, 4, 9);
