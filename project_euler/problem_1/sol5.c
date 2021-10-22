@@ -8,13 +8,11 @@
  *
  * This solution is based on the pattern that the successive numbers in the
  * series follow: 0+3,+2,+1,+3,+1,+2,+3.
- *
- * <unistd.h> and <getopt.h> are imported for CLI arg parsing.
  */
-#include <getopt.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <getopt.h>  /// For CLI arg parsing (getopt, optind)
+#include <unistd.h>  /// For miscellaneous symbolic constants, types and functions
+#include <stdio.h>   /// For I/O operations (printf, fprintf, EXIT_... macros)
+#include <stdlib.h>  /// For type casting (atol)
 
 int solution(long limit);
 int sum_multiples(int a, long limit);
