@@ -1,5 +1,5 @@
 /**
- * @file 6.c
+ * @file
  * @brief ZigZag Conversion leetcode problem solution.
  * @details
  * A decent solution to the ZigZag conversion problem.
