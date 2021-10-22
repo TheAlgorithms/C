@@ -28,7 +28,9 @@ char* convert(char* in, int numRows)
     int len = strlen(in);
 
     if (len < numRows)
+    {
         numRows = len;
+    }
     char* out = calloc(len + 1, sizeof(char));
 
     if (numRows < 2)
