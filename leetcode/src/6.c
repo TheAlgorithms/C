@@ -90,7 +90,11 @@ void testZigZag(char* s, int numRows, char* expected)
     free(ret);
 }
 
-void test(void)
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
 {
     char* s01 = "PAYPALISHIRING";
 
