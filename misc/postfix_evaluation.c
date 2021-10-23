@@ -126,7 +126,7 @@ int main() {
 	test();				/// run self-test implementations
 	char post[50];			///< to store input postfix expression
 	printf("Enter postfix: ");
-	gets(post);
+	scanf("%[^\n]%*c", post);
 	printf("Evaluated answer: %d", evaluate(post));
 	return 0;
 }
