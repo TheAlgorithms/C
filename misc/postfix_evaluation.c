@@ -2,7 +2,7 @@
  * @file
  * @brief [Postfix evaluation algorithm](https://www.includehelp.com/c/evaluation-of-postfix-expressions-using-stack-with-c-program.aspx) implementation
  * @details
- * The input postfix expression is of type string upto 24 characters (single digit numbers only).
+ * The input postfix expression is of type string upto 49 characters (including space delimiters).
  * Supported operations- '+', '-', '/', '*', '%'
  * @author [Kumar Yash](https://github.com/kumaryash18)
  */
@@ -61,10 +61,19 @@ int8_t evaluate(char post[]) {
 	int8_t it1;
 	int8_t it2;
 	int8_t temp;
+	int8_t number;
     int i;
     for(i = 0; i < strlen(post); i++) {
-		if(isdigit(post[i])) {
-			push(post[i]-'0');
+		if(post[i] == ' ') {
+			continue;			// ignore delimiter
+		}
+		else if(isdigit(post[i])) {
+			number = 0;
+			do {
+				number = number * 10 + (post[i]-'0');
+				i++;
+			} while(i < strlen(post) && isdigit(post[i]));
+			push(number);
 		}
 		else {
 			it2 = pop();
@@ -95,14 +104,16 @@ int8_t evaluate(char post[]) {
  */
 static void test() {
     /* check sample test case
-	   input: "4572+-*"
-	   expected output: -16
+	   input: "2 10 + 9 6 - /"
+	   expected output: 4
 	 */
-	assert(evaluate("4572+-*") == -16); 			/// this ensures that the algorithm works as expected
-	/* input: "42+351-*+"
+	char temp1[50] = "2 10 + 9 6 - /";
+	assert(evaluate(temp1) == 4); 			/// this ensures that the algorithm works as expected
+	/* input: "4 2 + 3 5 1 - * +"
 	   expected output: 18
 	 */
-	assert(evaluate("42+351-*+") == 18); 			/// this ensures that the algorithm works as expected
+	char temp2[50] = "4 2 + 3 5 1 - * +";
+	assert(evaluate(temp2) == 18); 			/// this ensures that the algorithm works as expected
 	printf("All tests have successfully passed!\n");
 }
 
@@ -113,9 +124,9 @@ static void test() {
 int main() {
 	st.top = -1;			/// initialize
 	test();				/// run self-test implementations
-	char post[25];			///< to store input postfix expression
+	char post[50];			///< to store input postfix expression
 	printf("Enter postfix: ");
-	scanf("%s", post);
+	gets(post);
 	printf("Evaluated answer: %d", evaluate(post));
 	return 0;
 }
