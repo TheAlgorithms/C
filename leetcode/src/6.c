@@ -15,6 +15,8 @@
 #include <assert.h>  /// for assert
 #include <stdint.h>  /// for unsigned int with fixed size
 #include <stdio.h>   /// for IO operations
+#include <stdlib.h>  /// for malloc
+#include <string.h>  /// for string tools
 
 /**
  * @brief Convert a string to the it's zigzag equivalent on a given number of
