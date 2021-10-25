@@ -124,9 +124,5 @@ static void test() {
 int main() {
 	st.top = -1;			/// initialize
 	test();				/// run self-test implementations
-	char post[50];			/// to store input postfix expression
-	printf("Enter postfix: ");
-	scanf("%[^\n]%*c", post);
-	printf("Evaluated answer: %d", evaluate(post));
 	return 0;
 }
