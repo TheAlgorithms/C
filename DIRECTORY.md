@@ -275,6 +275,7 @@
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
+  * [Postfix Evaluation](https://github.com/TheAlgorithms/C/blob/master/misc/postfix_evaluation.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
   * [Prime Seive](https://github.com/TheAlgorithms/C/blob/master/misc/prime_seive.c)
