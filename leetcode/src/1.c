@@ -70,7 +70,7 @@ static void testTwoSum(int* nums, int numsSize, int target)
 
 static void test(void)
 {
-    int nums[4] = {2, 7, 11, 15};
+    int nums[4] = {2, 7, 15, 11};
     testTwoSum(nums, 4, 9);
 
     int nums1[4] = {2, -7, 11, 15};
