@@ -5,7 +5,7 @@ var adaline__learning_8c =
     [ "adaline_activation", "da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa", null ],
     [ "adaline_fit", "da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd", null ],
     [ "adaline_fit_sample", "da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166", null ],
-    [ "adaline_get_weights_str", "da/d2a/group__adaline.html#ga251695a79baa885cafdcf6d8ed4ac120", null ],
+    [ "adaline_get_weights_str", "da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036", null ],
     [ "adaline_predict", "da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94", null ],
     [ "delete_adaline", "da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665", null ],
     [ "main", "dd/d8c/adaline__learning_8c.html#a3c04138a5bfe5d72780bb7e82a18e627", null ],

@@ -1,6 +1,6 @@
 <map id="developer_tools/test_malloc_dbg.c" name="developer_tools/test_malloc_dbg.c">
-<area shape="rect" id="node1" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="53,5,192,47"/>
+<area shape="rect" id="node1" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="52,5,193,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,67,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="91,95,155,121"/>
-<area shape="rect" id="node4" href="$d2/ddd/malloc__dbg_8h.html" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="179,95,277,121"/>
+<area shape="rect" id="node4" href="$d2/ddd/malloc__dbg_8h.html" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="179,95,280,121"/>
 </map>

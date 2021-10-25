@@ -1,0 +1,7 @@
+<map id="test" name="test">
+<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,104,49,131"/>
+<area shape="rect" id="node2" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="97,104,241,131"/>
+<area shape="rect" id="node3" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="293,29,398,56"/>
+<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="303,104,387,131"/>
+<area shape="rect" id="node5" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="289,155,401,181"/>
+</map>

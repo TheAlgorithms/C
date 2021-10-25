@@ -1,14 +1,14 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title="Main function." alt="" coords="5,208,56,235"/>
-<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#ab6e31f8df36de67ff967859069ccfc56" title="Function calculateScore Responsible for calculating the score obtained during the game." alt="" coords="117,5,225,32"/>
-<area shape="rect" id="node3" href="$db/de2/naval__battle_8c.html#a59224afd73372b4f52415203e315f6e1" title="Function canShoot Responsible to verify that it is a valid position to shoot." alt="" coords="133,56,210,83"/>
-<area shape="rect" id="node4" href="$db/de2/naval__battle_8c.html#a3f7d3dc5931fba6164e73057859094d9" title="Function positionBoat Responsible for placing the boats on the board, according to the size." alt="" coords="124,107,219,133"/>
-<area shape="rect" id="node6" href="$db/de2/naval__battle_8c.html#a7c5042bd35c4186b06ae28f06635b40e" title="for Standard Input Output" alt="" coords="287,157,436,184"/>
-<area shape="rect" id="node7" href="$db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef" title="Function printMessage Responsible for printing the auxiliary message." alt="" coords="311,259,411,285"/>
-<area shape="rect" id="node8" href="$db/de2/naval__battle_8c.html#a2d65de2c86c7015d7ca400dfca0f25dc" title="Function printMessageScore Responsible for printing the score messages." alt="" coords="104,259,239,285"/>
-<area shape="rect" id="node9" href="$db/de2/naval__battle_8c.html#a5c84d83e31ca6a320b6ea8081402686a" title="Function printPositioning Responsible for printing messages for positioning boats on the board; of pl..." alt="" coords="116,309,227,336"/>
-<area shape="rect" id="node10" href="$db/de2/naval__battle_8c.html#ad527fa96e729742a231c4535e112526a" title="Function printsTray Responsible for printing the visual board for the user." alt="" coords="131,360,211,387"/>
-<area shape="rect" id="node12" href="$db/de2/naval__battle_8c.html#a23e98ed36ca08c1b4bb86c86f48f6e70" title="Function shoot Responsible for saying if he hit a boat." alt="" coords="144,411,199,437"/>
-<area shape="rect" id="node5" href="$db/de2/naval__battle_8c.html#a4a5686c91f144d07eff1c6576303962d" title="Function validatePosition Responsible for checking if the position can receive the boat." alt="" coords="304,107,419,133"/>
-<area shape="rect" id="node11" href="$db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543" title="Function printTable Responsible for printing the board." alt="" coords="322,360,401,387"/>
+<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#ab6e31f8df36de67ff967859069ccfc56" title="Function calculateScore Responsible for calculating the score obtained during the game." alt="" coords="118,5,227,32"/>
+<area shape="rect" id="node3" href="$db/de2/naval__battle_8c.html#a59224afd73372b4f52415203e315f6e1" title="Function canShoot Responsible to verify that it is a valid position to shoot." alt="" coords="133,56,212,83"/>
+<area shape="rect" id="node4" href="$db/de2/naval__battle_8c.html#a3f7d3dc5931fba6164e73057859094d9" title="Function positionBoat Responsible for placing the boats on the board, according to the size." alt="" coords="125,107,221,133"/>
+<area shape="rect" id="node6" href="$db/de2/naval__battle_8c.html#a7c5042bd35c4186b06ae28f06635b40e" title="for Standard Input Output" alt="" coords="289,157,441,184"/>
+<area shape="rect" id="node7" href="$db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef" title="Function printMessage Responsible for printing the auxiliary message." alt="" coords="314,259,417,285"/>
+<area shape="rect" id="node8" href="$db/de2/naval__battle_8c.html#a2d65de2c86c7015d7ca400dfca0f25dc" title="Function printMessageScore Responsible for printing the score messages." alt="" coords="104,259,241,285"/>
+<area shape="rect" id="node9" href="$db/de2/naval__battle_8c.html#a5c84d83e31ca6a320b6ea8081402686a" title="Function printPositioning Responsible for printing messages for positioning boats on the board; of pl..." alt="" coords="116,309,229,336"/>
+<area shape="rect" id="node10" href="$db/de2/naval__battle_8c.html#ad527fa96e729742a231c4535e112526a" title="Function printsTray Responsible for printing the visual board for the user." alt="" coords="132,360,213,387"/>
+<area shape="rect" id="node12" href="$db/de2/naval__battle_8c.html#a23e98ed36ca08c1b4bb86c86f48f6e70" title="Function shoot Responsible for saying if he hit a boat." alt="" coords="145,411,200,437"/>
+<area shape="rect" id="node5" href="$db/de2/naval__battle_8c.html#a4a5686c91f144d07eff1c6576303962d" title="Function validatePosition Responsible for checking if the position can receive the boat." alt="" coords="307,107,423,133"/>
+<area shape="rect" id="node11" href="$db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543" title="Function printTable Responsible for printing the board." alt="" coords="325,360,405,387"/>
 </map>

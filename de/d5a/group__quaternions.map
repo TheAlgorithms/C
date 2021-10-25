@@ -1,7 +1,7 @@
 <map id="Library for 3D Vectors &amp; Quaternions" name="Library for 3D Vectors &amp; Quaternions">
-<area shape="rect" id="node1" href="$dc/d9a/group__quats.html" title=" " alt="" coords="204,5,375,31"/>
-<area shape="rect" id="node2" href="$dd/d7a/group__matrix.html" title=" " alt="" coords="228,55,351,80"/>
-<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html" title=" " alt="" coords="217,104,362,129"/>
-<area shape="rect" id="node4" href="$d4/d69/group__dual__quats.html" title=" " alt="" coords="221,154,358,194"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,73,156,113"/>
+<area shape="rect" id="node1" href="$d4/d69/group__dual__quats.html" title=" " alt="" coords="221,5,361,45"/>
+<area shape="rect" id="node2" href="$dd/d7a/group__matrix.html" title=" " alt="" coords="229,70,353,95"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,88,156,128"/>
+<area shape="rect" id="node4" href="$dc/d9a/group__quats.html" title=" " alt="" coords="204,119,379,145"/>
+<area shape="rect" id="node5" href="$de/d7b/group__vec__3d.html" title=" " alt="" coords="218,169,365,194"/>
 </map>

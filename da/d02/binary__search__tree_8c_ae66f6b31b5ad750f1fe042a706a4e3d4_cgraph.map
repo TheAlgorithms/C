@@ -1,0 +1,9 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main funcion." alt="" coords="5,179,56,205"/>
+<area shape="rect" id="node2" href="$da/d02/binary__search__tree_8c.html#adff4c6248834a9944a1fb03a20230c9c" title="Search procedure, which looks for the input key in the tree and returns 1 if it&#39;s present or 0 if it&#39;..." alt="" coords="115,29,159,56"/>
+<area shape="rect" id="node3" href="$da/d02/binary__search__tree_8c.html#ae4a66d8b0c2b0d626aea45977e358c83" title="Utilitary procedure to measure the height of the binary tree." alt="" coords="108,104,167,131"/>
+<area shape="rect" id="node4" href="$da/d02/binary__search__tree_8c.html#a0f18adaaca5ecc410cfa16dd2a3684dc" title="Traversal procedure to list the current keys in the tree in order of value (from the left to the righ..." alt="" coords="104,179,171,205"/>
+<area shape="rect" id="node5" href="$da/d02/binary__search__tree_8c.html#a031cc98830742bca57c0da81a0fb779f" title="Insertion procedure, which inserts the input key in a new node in the tree." alt="" coords="110,253,165,280"/>
+<area shape="rect" id="node7" href="$da/d02/binary__search__tree_8c.html#a01151353aa2d9688934ed39208133241" title="Utilitary procedure to free all nodes in a tree." alt="" coords="109,328,165,355"/>
+<area shape="rect" id="node6" href="$da/d02/binary__search__tree_8c.html#adf2169c1008551b20c4a59fcf0c9ab3b" title="The node constructor, which receives the key value input and returns a node pointer." alt="" coords="219,253,297,280"/>
+</map>

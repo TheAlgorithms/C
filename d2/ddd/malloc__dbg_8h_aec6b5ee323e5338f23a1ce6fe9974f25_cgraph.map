@@ -1,5 +1,0 @@
-<map id="calloc_dbg" name="calloc_dbg">
-<area shape="rect" id="node1" title="calloc_dbg function is a wrapper around the calloc function." alt="" coords="5,31,89,57"/>
-<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html#afae235c0e32e4c8b7d67117da5f78946" title="addMemInfo function add a memory allocation in the memoryInfo list." alt="" coords="137,5,232,32"/>
-<area shape="rect" id="node3" href="$db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797" title="printLeaks function is used to print all the memory leaks." alt="" coords="143,56,226,83"/>
-</map>

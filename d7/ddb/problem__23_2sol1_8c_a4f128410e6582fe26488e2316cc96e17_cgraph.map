@@ -1,0 +1,4 @@
+<map id="is_abundant" name="is_abundant">
+<area shape="rect" id="node1" title="Is the given number an abundant number (1) or not (0)" alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="148,5,289,32"/>
+</map>

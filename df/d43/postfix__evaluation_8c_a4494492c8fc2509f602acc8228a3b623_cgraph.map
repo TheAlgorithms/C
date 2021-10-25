@@ -1,0 +1,5 @@
+<map id="evaluate" name="evaluate">
+<area shape="rect" id="node1" title="Function to evaluate postfix expression." alt="" coords="5,31,77,57"/>
+<area shape="rect" id="node2" href="$df/d43/postfix__evaluation_8c.html#a8546e4b3f61be1f09ce47f428116ad7d" title="Function to pop from the stack." alt="" coords="129,5,173,32"/>
+<area shape="rect" id="node3" href="$df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef" title="Function to push on the stack." alt="" coords="125,56,176,83"/>
+</map>

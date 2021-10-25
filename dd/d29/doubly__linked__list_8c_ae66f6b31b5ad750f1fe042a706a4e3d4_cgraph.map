@@ -1,8 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#afa2b50f4716fc3b42221a72e676e1422" title="Example function." alt="" coords="104,56,175,83"/>
-<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f" title="Create list function, a new list containing one node will be created." alt="" coords="332,5,391,32"/>
-<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#a04ac29c396dc8335a5827927183c9918" title="Insertion by position into the list function." alt="" coords="226,31,281,57"/>
-<area shape="rect" id="node5" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="230,81,277,108"/>
-<area shape="rect" id="node6" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="223,132,284,159"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,68,56,95"/>
+<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#afa2b50f4716fc3b42221a72e676e1422" title="Example function." alt="" coords="104,68,176,95"/>
+<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f" title="Create list function, a new list containing one node will be created." alt="" coords="335,5,393,32"/>
+<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#a04ac29c396dc8335a5827927183c9918" title="Insertion by position into the list function." alt="" coords="228,31,283,57"/>
+<area shape="rect" id="node5" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="231,105,279,132"/>
+<area shape="rect" id="node6" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="224,180,287,207"/>
 </map>

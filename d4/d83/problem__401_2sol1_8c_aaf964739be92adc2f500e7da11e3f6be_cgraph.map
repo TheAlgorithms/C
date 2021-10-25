@@ -1,0 +1,6 @@
+<map id="sigma" name="sigma">
+<area shape="rect" id="node1" title="sum of squares of factors of numbers from 1 thru N" alt="" coords="5,5,63,32"/>
+<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788" title="compute sum of squares of all integer factors of a number" alt="" coords="111,5,176,32"/>
+<area shape="rect" id="node3" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="224,5,317,32"/>
+<area shape="rect" id="node4" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="365,5,415,32"/>
+</map>

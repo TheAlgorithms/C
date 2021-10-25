@@ -1,5 +1,5 @@
 <map id="positionBoat" name="positionBoat">
-<area shape="rect" id="node1" title="Function positionBoat Responsible for placing the boats on the board, according to the size." alt="" coords="5,31,100,57"/>
-<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a4a5686c91f144d07eff1c6576303962d" title="Function validatePosition Responsible for checking if the position can receive the boat." alt="" coords="165,5,280,32"/>
-<area shape="rect" id="node3" href="$db/de2/naval__battle_8c.html#a7c5042bd35c4186b06ae28f06635b40e" title="for Standard Input Output" alt="" coords="148,56,297,83"/>
+<area shape="rect" id="node1" title="Function positionBoat Responsible for placing the boats on the board, according to the size." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a4a5686c91f144d07eff1c6576303962d" title="Function validatePosition Responsible for checking if the position can receive the boat." alt="" coords="167,5,283,32"/>
+<area shape="rect" id="node3" href="$db/de2/naval__battle_8c.html#a7c5042bd35c4186b06ae28f06635b40e" title="for Standard Input Output" alt="" coords="149,56,301,83"/>
 </map>

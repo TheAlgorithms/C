@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node2" href="$d3/d47/modified__binary__search_8c.html#a7df9a198e30cded6229d79bef7591f8f" title="Function to perform binary search on the mid values of row to get the desired pair of rows where the ..." alt="" coords="104,5,256,32"/>
+<area shape="rect" id="node3" href="$d3/d47/modified__binary__search_8c.html#a0cfaa56aacf960e4628a0fb27add8890" title="This function does Binary search for x in i&#45;th row from j_low to j_high." alt="" coords="304,5,404,32"/>
+</map>

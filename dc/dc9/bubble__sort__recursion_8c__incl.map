@@ -1,8 +1,8 @@
 <map id="sorting/bubble_sort_recursion.c" name="sorting/bubble_sort_recursion.c">
-<area shape="rect" id="node1" title="Bubble sort algorithm implementation using recursion." alt="" coords="162,5,294,47"/>
+<area shape="rect" id="node1" title="Bubble sort algorithm implementation using recursion." alt="" coords="163,5,299,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,75,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,95,173,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="197,95,259,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="283,95,347,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="371,95,429,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,95,175,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="200,95,261,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="285,95,349,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="373,95,432,121"/>
 </map>

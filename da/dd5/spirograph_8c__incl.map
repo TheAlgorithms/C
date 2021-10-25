@@ -1,8 +1,8 @@
 <map id="graphics/spirograph.c" name="graphics/spirograph.c">
-<area shape="rect" id="node1" title="Implementation of Spirograph" alt="" coords="149,5,295,32"/>
+<area shape="rect" id="node1" title="Implementation of Spirograph" alt="" coords="149,5,298,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,68,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="93,80,167,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="191,80,253,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="277,80,341,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="365,80,423,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="92,80,168,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="193,80,254,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="278,80,342,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="366,80,425,107"/>
 </map>

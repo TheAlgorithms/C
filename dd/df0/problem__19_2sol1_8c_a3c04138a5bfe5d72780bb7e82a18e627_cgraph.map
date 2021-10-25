@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75" title="Function to get the number of days in a month." alt="" coords="104,5,224,32"/>
+<area shape="rect" id="node3" href="$dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e" title="Check if input year is a leap year." alt="" coords="115,56,213,83"/>
+</map>

@@ -1,8 +1,8 @@
 <map id="convert" name="convert">
 <area shape="rect" id="node1" title="convert function" alt="" coords="5,107,71,133"/>
-<area shape="rect" id="node2" href="$db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787" title="getPrecedence function returns the precedence after comparing two operators passed as parameter." alt="" coords="119,5,228,32"/>
-<area shape="rect" id="node3" href="$db/d0c/infix__to__postfix_8c.html#afa8471c76bc57b12ad21de22beb39021" title="isEmpty function" alt="" coords="138,56,209,83"/>
-<area shape="rect" id="node4" href="$db/d0c/infix__to__postfix_8c.html#afd8245c04b202240390de23170f72d6b" title="isOprnd function" alt="" coords="140,107,207,133"/>
-<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#a940cdcd27c40699eebb4ef113b2d9451" title="pop function" alt="" coords="152,157,195,184"/>
-<area shape="rect" id="node6" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="148,208,199,235"/>
+<area shape="rect" id="node2" href="$db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787" title="getPrecedence function returns the precedence after comparing two operators passed as parameter." alt="" coords="119,5,231,32"/>
+<area shape="rect" id="node3" href="$db/d0c/infix__to__postfix_8c.html#afa8471c76bc57b12ad21de22beb39021" title="isEmpty function" alt="" coords="140,56,209,83"/>
+<area shape="rect" id="node4" href="$db/d0c/infix__to__postfix_8c.html#afd8245c04b202240390de23170f72d6b" title="isOprnd function" alt="" coords="140,107,209,133"/>
+<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#a940cdcd27c40699eebb4ef113b2d9451" title="pop function" alt="" coords="153,157,197,184"/>
+<area shape="rect" id="node6" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="149,208,200,235"/>
 </map>

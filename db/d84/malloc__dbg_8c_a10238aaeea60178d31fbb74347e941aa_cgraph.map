@@ -1,7 +1,0 @@
-<map id="malloc_dbg" name="malloc_dbg">
-<area shape="rect" id="node1" title="malloc_dbg function is a wrapper around the malloc function." alt="" coords="5,81,93,108"/>
-<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html#afae235c0e32e4c8b7d67117da5f78946" title="addMemInfo function add a memory allocation in the memoryInfo list." alt="" coords="141,5,236,32"/>
-<area shape="rect" id="node3" href="$db/d84/malloc__dbg_8c.html#a8ac3a93239838ac88c18df64c58b9275" title="editInfo function is used to edit an element in the memoryInfo list." alt="" coords="156,56,221,83"/>
-<area shape="rect" id="node4" href="$db/d84/malloc__dbg_8c.html#acd08c54b257fb81e57f16c94690072f2" title="inList function is used to know if an element is already in the memoryInfo list." alt="" coords="162,107,215,133"/>
-<area shape="rect" id="node5" href="$db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797" title="printLeaks function is used to print all the memory leaks." alt="" coords="147,157,230,184"/>
-</map>

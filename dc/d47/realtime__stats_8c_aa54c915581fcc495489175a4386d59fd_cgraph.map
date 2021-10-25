@@ -1,5 +1,5 @@
 <map id="test_function" name="test_function">
 <area shape="rect" id="node1" title="Test the algorithm implementation." alt="" coords="5,31,103,57"/>
-<area shape="rect" id="node2" href="$dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628" title="continuous mean and variance computance using first value as an approximation for the mean." alt="" coords="151,5,269,32"/>
-<area shape="rect" id="node3" href="$dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96" title="continuous mean and variance computance using Welford&#39;s algorithm (very accurate)" alt="" coords="151,56,269,83"/>
+<area shape="rect" id="node2" href="$dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628" title="continuous mean and variance computance using first value as an approximation for the mean." alt="" coords="151,5,271,32"/>
+<area shape="rect" id="node3" href="$dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96" title="continuous mean and variance computance using Welford&#39;s algorithm (very accurate)" alt="" coords="151,56,271,83"/>
 </map>

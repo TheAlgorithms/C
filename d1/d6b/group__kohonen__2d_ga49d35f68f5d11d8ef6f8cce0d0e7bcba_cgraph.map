@@ -1,4 +1,4 @@
 <map id="save_u_matrix" name="save_u_matrix">
-<area shape="rect" id="node1" title="Create the distance matrix or U&#45;matrix from the trained weights and save to disk." alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node2" href="$d1/d6b/group__kohonen__2d.html#ga8df35f04c1762a01dcf108fa13b897d6" title="Function that returns the pointer to (x, y, z) ^th location in the linear 3D array given by:" alt="" coords="160,5,284,32"/>
+<area shape="rect" id="node1" title="Create the distance matrix or U&#45;matrix from the trained weights and save to disk." alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node2" href="$d1/d6b/group__kohonen__2d.html#gac78022076d889bf2ebfb2c41d4527ceb" title="Function that returns the pointer to (x, y, z) ^th location in the linear 3D array given by:" alt="" coords="163,5,292,32"/>
 </map>

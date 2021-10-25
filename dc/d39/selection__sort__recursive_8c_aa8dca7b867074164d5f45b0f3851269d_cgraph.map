@@ -1,6 +1,6 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,31,49,57"/>
-<area shape="rect" id="node2" href="$dc/d39/selection__sort__recursive_8c.html#a3f04d850b94a34dcaaed0e7bc7475241" title="Selection Sort algorithm implemented using recursion." alt="" coords="97,31,196,57"/>
-<area shape="rect" id="node3" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="244,5,319,32"/>
-<area shape="rect" id="node4" href="$dc/d39/selection__sort__recursive_8c.html#aaf68497ab808b560dbf109da6435905a" title="for assert" alt="" coords="255,56,308,83"/>
+<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,55,49,81"/>
+<area shape="rect" id="node2" href="$dc/d39/selection__sort__recursive_8c.html#a3f04d850b94a34dcaaed0e7bc7475241" title="Selection Sort algorithm implemented using recursion." alt="" coords="97,55,196,81"/>
+<area shape="rect" id="node3" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="244,29,320,56"/>
+<area shape="rect" id="node4" href="$dc/d39/selection__sort__recursive_8c.html#aaf68497ab808b560dbf109da6435905a" title="for assert" alt="" coords="255,80,309,107"/>
 </map>

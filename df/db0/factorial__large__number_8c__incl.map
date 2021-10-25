@@ -1,5 +1,5 @@
 <map id="misc/factorial_large_number.c" name="misc/factorial_large_number.c">
-<area shape="rect" id="node1" title="Compute factorial of arbitrarily large numbers by storing individual digits in a byte." alt="" coords="55,5,190,47"/>
+<area shape="rect" id="node1" title="Compute factorial of arbitrarily large numbers by storing individual digits in a byte." alt="" coords="54,5,191,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,67,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="91,95,155,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="179,95,237,121"/>

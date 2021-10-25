@@ -1,4 +1,0 @@
-<map id="insert" name="insert">
-<area shape="rect" id="node1" title="Insertion procedure, which inserts the input key in a new node in the tree." alt="" coords="5,5,60,32"/>
-<area shape="rect" id="node2" href="$da/d02/binary__search__tree_8c.html#ac73c73be92dbbeeaad942c0103b9540d" title="The node constructor, which receives the key value input and returns a node pointer." alt="" coords="108,5,185,32"/>
-</map>

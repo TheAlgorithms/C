@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="main function" alt="" coords="5,168,56,195"/>
+<area shape="rect" id="node2" href="$df/d3c/threaded__binary__trees_8c.html#a284d683f74b6c884e79ba00d3d1c3317" title="deletion of a node from the tree if the node isn&#39;t present in the tree, it takes no action." alt="" coords="129,5,206,32"/>
+<area shape="rect" id="node3" href="$df/d3c/threaded__binary__trees_8c.html#a4c1e06b5f0876ec9c1bd6817f3b7eda7" title="performs inorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="111,80,223,107"/>
+<area shape="rect" id="node4" href="$df/d3c/threaded__binary__trees_8c.html#a823432888332fc9f0aa6072cff28c3bb" title="inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tr..." alt="" coords="131,131,204,157"/>
+<area shape="rect" id="node6" href="$df/d3c/threaded__binary__trees_8c.html#a5a82ae0ee13788be51ca4ba6cddb0719" title="performs postorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="104,205,231,232"/>
+<area shape="rect" id="node7" href="$df/d3c/threaded__binary__trees_8c.html#a8169ba0dfd5b8183672e444d1434bf9c" title="performs preorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="107,280,228,307"/>
+<area shape="rect" id="node8" href="$df/d3c/threaded__binary__trees_8c.html#a306d567466f22e1e927aaed97d8bb58c" title="searches for the element" alt="" coords="136,331,199,357"/>
+<area shape="rect" id="node5" href="$df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d" title="creates a new node param[in] data value to be inserted" alt="" coords="279,131,375,157"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="main function" alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="375,5,485,32"/>
+<area shape="rect" id="node3" href="$d6/d3d/factorial__large__number_8c.html#ad398ddbd594ca69a5e6dfc894925341e" title="multiply large number with another integer and store the result in the same large number" alt="" coords="120,31,187,57"/>
+<area shape="rect" id="node5" href="$d6/d3d/factorial__large__number_8c.html#ace5f6aa21955d4e4bdc89228c2f91234" title="create a new large number" alt="" coords="104,81,203,108"/>
+<area shape="rect" id="node4" href="$d6/d3d/factorial__large__number_8c.html#af2869d36c22a2b8f93d3166a84e124b3" title="add a digit to the large number" alt="" coords="251,31,327,57"/>
+</map>

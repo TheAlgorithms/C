@@ -1,5 +1,5 @@
 <map id="Graph" name="Graph">
-<area shape="rect" id="node1" title=" " alt="" coords="81,200,138,227"/>
-<area shape="rect" id="node2" href="$d5/da1/structnode.html" title="Node, the basic data structure in the tree." alt="" coords="5,51,56,77"/>
-<area shape="rect" id="node3" href="$d5/db4/struct_edge.html" title=" " alt="" coords="162,51,214,77"/>
+<area shape="rect" id="node1" title=" " alt="" coords="36,200,95,227"/>
+<area shape="rect" id="node2" href="$d5/db4/struct_edge.html" title=" " alt="" coords="5,51,59,77"/>
+<area shape="rect" id="node3" href="$d5/da1/structnode.html" title="Node, the basic data structure in the tree." alt="" coords="83,51,135,77"/>
 </map>

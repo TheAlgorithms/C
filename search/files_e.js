@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['palindrome_2ec_527',['palindrome.c',['../df/d16/palindrome_8c.html',1,'']]],
-  ['poly_5fadd_2ec_528',['poly_add.c',['../d0/dcb/poly__add_8c.html',1,'']]],
-  ['prime_2ec_529',['prime.c',['../da/d93/prime_8c.html',1,'']]],
-  ['prime_5fseive_2ec_530',['prime_seive.c',['../db/dd5/prime__seive_8c.html',1,'']]]
+  ['octal_5fto_5fhexadecimal_2ec_0',['octal_to_hexadecimal.c',['../d0/d8a/octal__to__hexadecimal_8c.html',1,'']]],
+  ['odd_5feven_5fsort_2ec_1',['odd_even_sort.c',['../d1/d94/odd__even__sort_8c.html',1,'']]],
+  ['ode_5fforward_5feuler_2ec_2',['ode_forward_euler.c',['../d4/d07/ode__forward__euler_8c.html',1,'']]],
+  ['ode_5fmidpoint_5feuler_2ec_3',['ode_midpoint_euler.c',['../d1/dc2/ode__midpoint__euler_8c.html',1,'']]],
+  ['ode_5fsemi_5fimplicit_5feuler_2ec_4',['ode_semi_implicit_euler.c',['../d4/d99/ode__semi__implicit__euler_8c.html',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="get_width_and_precision" name="get_width_and_precision">
+<area shape="rect" id="node1" title="Takes width and precision specified from the format of the string." alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="223,5,307,32"/>
+<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="226,56,303,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="sum_of_primes" name="sum_of_primes">
+<area shape="rect" id="node1" title="Computes sum of prime numbers less than N." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node2" href="$d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f" title="Function to check if a number is prime." alt="" coords="167,5,239,32"/>
+</map>

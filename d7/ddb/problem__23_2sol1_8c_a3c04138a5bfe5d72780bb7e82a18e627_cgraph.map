@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478" title="check if a given number can be represented as a sum of two abundant numbers." alt="" coords="104,31,249,57"/>
+<area shape="rect" id="node3" href="$d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" title="Find the next abundant number after N and not including N." alt="" coords="297,5,433,32"/>
+<area shape="rect" id="node4" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="481,31,576,57"/>
+<area shape="rect" id="node5" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="624,31,765,57"/>
+</map>

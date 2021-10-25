@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#gad451622bbdca271edfa8e0d98ca422f2" title="Test function for crc32." alt="" coords="104,5,188,32"/>
+<area shape="rect" id="node3" href="$d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567" title="32&#45;bit CRC algorithm implementation" alt="" coords="236,5,291,32"/>
+</map>

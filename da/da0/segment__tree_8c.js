@@ -7,7 +7,7 @@ var segment__tree_8c =
     [ "minimum", "da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb", null ],
     [ "segment_tree_build", "da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75", null ],
     [ "segment_tree_dispose", "da/da0/segment__tree_8c.html#af20a9f373083d3f701e1cd92560cef01", null ],
-    [ "segment_tree_init", "da/da0/segment__tree_8c.html#acecc34fd89923ab41dcee3a779622816", null ],
+    [ "segment_tree_init", "da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde", null ],
     [ "segment_tree_print_int", "da/da0/segment__tree_8c.html#a776abfa81cde9016a2885dca7cfc05ab", null ],
     [ "segment_tree_query", "da/da0/segment__tree_8c.html#af61bd96660cb53f49f28d60a5f1d0c91", null ],
     [ "segment_tree_update", "da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c", null ],

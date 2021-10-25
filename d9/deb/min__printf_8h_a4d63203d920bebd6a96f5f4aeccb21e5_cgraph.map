@@ -1,0 +1,8 @@
+<map id="print_double_value" name="print_double_value">
+<area shape="rect" id="node1" title="The algorithm here is also the same as the print_int_value function." alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#aefb40d94d5d9fa2a28bc64755dde096f" title="Calculates the number of digits in a number." alt="" coords="188,5,339,32"/>
+<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#a8421f89b76edcf21292c5100bfca586b" title=" " alt="" coords="212,56,315,83"/>
+<area shape="rect" id="node4" href="$d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824" title=" " alt="" coords="209,157,318,184"/>
+<area shape="rect" id="node5" href="$d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b" title="Prints one character on screen." alt="" coords="395,107,468,133"/>
+<area shape="rect" id="node6" href="$d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e" title="Reverses a string using two pointer algorithm" alt="" coords="387,157,476,184"/>
+</map>

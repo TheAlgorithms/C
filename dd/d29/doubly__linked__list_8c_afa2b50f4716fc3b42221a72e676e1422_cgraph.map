@@ -1,7 +1,7 @@
 <map id="example" name="example">
-<area shape="rect" id="node1" title="Example function." alt="" coords="5,56,76,83"/>
-<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f" title="Create list function, a new list containing one node will be created." alt="" coords="233,5,292,32"/>
-<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a04ac29c396dc8335a5827927183c9918" title="Insertion by position into the list function." alt="" coords="127,31,182,57"/>
-<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="131,81,178,108"/>
-<area shape="rect" id="node5" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="124,132,185,159"/>
+<area shape="rect" id="node1" title="Example function." alt="" coords="5,68,77,95"/>
+<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f" title="Create list function, a new list containing one node will be created." alt="" coords="236,5,295,32"/>
+<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a04ac29c396dc8335a5827927183c9918" title="Insertion by position into the list function." alt="" coords="129,31,184,57"/>
+<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="133,105,181,132"/>
+<area shape="rect" id="node5" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="125,180,188,207"/>
 </map>

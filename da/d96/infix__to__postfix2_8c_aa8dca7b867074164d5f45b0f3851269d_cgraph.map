@@ -1,0 +1,9 @@
+<map id="test" name="test">
+<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,107,49,133"/>
+<area shape="rect" id="node2" href="$da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b" title="Function to convert infix expression to postfix expression." alt="" coords="97,107,163,133"/>
+<area shape="rect" id="node3" href="$da/d96/infix__to__postfix2_8c.html#a653c98c68c558505b75b04c44b7c838e" title="Function to check whether the stack is empty or not." alt="" coords="211,5,280,32"/>
+<area shape="rect" id="node4" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." alt="" coords="223,56,267,83"/>
+<area shape="rect" id="node5" href="$da/d96/infix__to__postfix2_8c.html#a02d1bf0ff997efc46ba6fd0ec7952952" title="Function to check priority of operators." alt="" coords="214,107,277,133"/>
+<area shape="rect" id="node6" href="$da/d96/infix__to__postfix2_8c.html#a90e051f23f741be4f8ca86c270d66489" title="Function to push on the stack." alt="" coords="220,157,271,184"/>
+<area shape="rect" id="node7" href="$da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf" title="Function to get top of the stack." alt="" coords="223,208,267,235"/>
+</map>

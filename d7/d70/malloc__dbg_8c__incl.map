@@ -1,7 +1,7 @@
 <map id="developer_tools/malloc_dbg.c" name="developer_tools/malloc_dbg.c">
-<area shape="rect" id="node1" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="91,5,245,47"/>
+<area shape="rect" id="node1" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="89,5,247,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="93,95,155,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="179,95,245,121"/>
-<area shape="rect" id="node5" href="$d2/ddd/malloc__dbg_8h.html" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="269,95,368,121"/>
+<area shape="rect" id="node5" href="$d2/ddd/malloc__dbg_8h.html" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="269,95,371,121"/>
 </map>

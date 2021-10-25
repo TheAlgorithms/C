@@ -1,7 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$d5/db8/vectors__3d_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Testing function." alt="" coords="104,31,148,57"/>
-<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="339,5,411,32"/>
-<area shape="rect" id="node4" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="196,31,291,57"/>
-<area shape="rect" id="node5" href="$de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5" title="Compute the vector product of two 3d vectors." alt="" coords="198,81,289,108"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,58,56,85"/>
+<area shape="rect" id="node2" href="$d5/db8/vectors__3d_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Testing function." alt="" coords="104,58,148,85"/>
+<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="480,33,555,60"/>
+<area shape="rect" id="node4" href="$de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8" title="Obtain the angle between two given vectors." alt="" coords="202,33,282,60"/>
+<area shape="rect" id="node5" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="336,84,432,110"/>
+<area shape="rect" id="node6" href="$de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5" title="Compute the vector product of two 3d vectors." alt="" coords="196,134,288,161"/>
 </map>

@@ -1,6 +1,5 @@
 var problem__401_2sol1_8c =
 [
-    [ "__STDC_FORMAT_MACROS", "d4/d83/problem__401_2sol1_8c.html#aacbb9e1f38be71e22df1584a37c56693", null ],
     [ "MAX_LENGTH", "d4/d83/problem__401_2sol1_8c.html#a7a9a231e30b47bc0345749c8bd1e5077", null ],
     [ "MOD_LIMIT", "d4/d83/problem__401_2sol1_8c.html#ade1bdf2529e3c58f53bfb4d844f3a9d3", null ],
     [ "get_divisors", "d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215", null ],

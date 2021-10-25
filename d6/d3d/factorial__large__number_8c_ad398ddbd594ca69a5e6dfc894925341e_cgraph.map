@@ -1,0 +1,5 @@
+<map id="multiply" name="multiply">
+<area shape="rect" id="node1" title="multiply large number with another integer and store the result in the same large number" alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$d6/d3d/factorial__large__number_8c.html#af2869d36c22a2b8f93d3166a84e124b3" title="add a digit to the large number" alt="" coords="120,5,196,32"/>
+<area shape="rect" id="node3" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="244,5,355,32"/>
+</map>

@@ -10,7 +10,7 @@ var group__kohonen__2d =
     [ "min", "d1/d6b/group__kohonen__2d.html#gac6afabdc09a49a433ee19d8a9486056d", null ],
     [ "_random", "d1/d6b/group__kohonen__2d.html#gaf5ce14f026d6d231bef29161bac2b485", null ],
     [ "get_min_2d", "d1/d6b/group__kohonen__2d.html#gadc22d512c00a9f5799ee067f4fb90b4b", null ],
-    [ "kohonen_data_3d", "d1/d6b/group__kohonen__2d.html#ga8df35f04c1762a01dcf108fa13b897d6", null ],
+    [ "kohonen_data_3d", "d1/d6b/group__kohonen__2d.html#gac78022076d889bf2ebfb2c41d4527ceb", null ],
     [ "kohonen_som", "d1/d6b/group__kohonen__2d.html#gacb42eda8af6ebd6a141a34ab00a0b710", null ],
     [ "kohonen_update_weights", "d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123", null ],
     [ "save_2d_data", "d1/d6b/group__kohonen__2d.html#ga6824dc6d973eb3339af7aef5fea78b0c", null ],

@@ -1,0 +1,7 @@
+<map id="readWordsInFileToTree" name="readWordsInFileToTree">
+<area shape="rect" id="node1" title="Reads words from file to tree." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node2" href="$d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9" title="Adds word (node) to the correct position in tree." alt="" coords="213,31,331,57"/>
+<area shape="rect" id="node3" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="379,5,547,32"/>
+<area shape="rect" id="node5" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="399,56,527,83"/>
+<area shape="rect" id="node4" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="595,31,739,57"/>
+</map>

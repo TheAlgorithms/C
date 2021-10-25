@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,43,56,69"/>
+<area shape="rect" id="node2" href="$db/d80/problem__20_2sol1_8c.html#a0dd8af03e6cc8187e996db564ff90960" title="Function that allocates memory to add another digit at the MSB." alt="" coords="119,5,195,32"/>
+<area shape="rect" id="node3" href="$db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1" title="Function to remove digits preceeding the current digit." alt="" coords="104,80,209,107"/>
+</map>

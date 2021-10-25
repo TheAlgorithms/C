@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628" title="continuous mean and variance computance using first value as an approximation for the mean." alt="" coords="249,5,369,32"/>
+<area shape="rect" id="node3" href="$dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96" title="continuous mean and variance computance using Welford&#39;s algorithm (very accurate)" alt="" coords="249,68,369,95"/>
+<area shape="rect" id="node4" href="$dc/d47/realtime__stats_8c.html#aa54c915581fcc495489175a4386d59fd" title="Test the algorithm implementation." alt="" coords="104,31,201,57"/>
+</map>

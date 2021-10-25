@@ -1,7 +1,7 @@
 <map id="Machine learning algorithms" name="Machine learning algorithms">
-<area shape="rect" id="node1" href="$da/d2a/group__adaline.html" title=" " alt="" coords="239,5,410,31"/>
-<area shape="rect" id="node2" href="$d8/d71/group__k__means.html" title=" " alt="" coords="256,55,393,95"/>
-<area shape="rect" id="node3" href="$d1/d6b/group__kohonen__2d.html" title=" " alt="" coords="245,119,405,159"/>
-<area shape="rect" id="node4" href="$d0/dcb/group__kohonen__1d.html" title=" " alt="" coords="237,183,412,223"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,95,189,120"/>
+<area shape="rect" id="node1" href="$da/d2a/group__adaline.html" title=" " alt="" coords="244,5,420,31"/>
+<area shape="rect" id="node2" href="$d8/d71/group__k__means.html" title=" " alt="" coords="263,55,401,95"/>
+<area shape="rect" id="node3" href="$d0/dcb/group__kohonen__1d.html" title=" " alt="" coords="243,119,421,159"/>
+<area shape="rect" id="node4" href="$d1/d6b/group__kohonen__2d.html" title=" " alt="" coords="250,183,414,223"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,95,195,120"/>
 </map>

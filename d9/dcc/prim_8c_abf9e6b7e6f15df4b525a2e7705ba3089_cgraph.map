@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,55,56,81"/>
+<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#aff3f4c22009b2aa4e385a76a8a1cdc1c" title="Self&#45;test implementations." alt="" coords="127,29,171,56"/>
+<area shape="rect" id="node5" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="104,80,193,107"/>
+<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="241,29,289,56"/>
+<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="337,29,413,56"/>
+</map>

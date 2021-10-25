@@ -1,10 +1,10 @@
 <map id="test1" name="test1">
 <area shape="rect" id="node1" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="5,107,56,133"/>
-<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="116,5,197,32"/>
-<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="468,56,577,83"/>
-<area shape="rect" id="node6" href="$da/d2a/group__adaline.html#ga251695a79baa885cafdcf6d8ed4ac120" title="Operator to print the weights of the model." alt="" coords="257,56,420,83"/>
-<area shape="rect" id="node7" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="104,157,209,184"/>
-<area shape="rect" id="node8" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="109,208,204,235"/>
-<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="273,5,404,32"/>
-<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="625,56,752,83"/>
+<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="117,5,200,32"/>
+<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="475,56,587,83"/>
+<area shape="rect" id="node6" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="261,56,427,83"/>
+<area shape="rect" id="node7" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="104,157,213,184"/>
+<area shape="rect" id="node8" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="110,208,207,235"/>
+<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="277,5,411,32"/>
+<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="635,56,764,83"/>
 </map>

@@ -1,4 +1,0 @@
-<map id="delete" name="delete">
-<area shape="rect" id="node1" title="Deletion procedure, which searches for the input key in the tree and removes it if present." alt="" coords="5,5,63,32"/>
-<area shape="rect" id="node2" href="$da/d02/binary__search__tree_8c.html#ad297e528a7bb8604ca93af149d609150" title="Utilitary procedure to find the greatest key in the left subtree." alt="" coords="111,5,176,32"/>
-</map>

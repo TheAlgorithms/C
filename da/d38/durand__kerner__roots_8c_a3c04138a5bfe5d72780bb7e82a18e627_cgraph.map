@@ -1,6 +1,6 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node2" href="$da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52" title="check for termination condition" alt="" coords="104,5,232,32"/>
-<area shape="rect" id="node3" href="$da/d38/durand__kerner__roots_8c.html#afa5b04ce11475d67049cba8273741fb7" title="create a textual form of complex number" alt="" coords="121,56,215,83"/>
-<area shape="rect" id="node4" href="$da/d38/durand__kerner__roots_8c.html#a321f9781a9744ccdaf0aba89f35ec29c" title="Evaluate the value of a polynomial with given coefficients." alt="" coords="119,107,217,133"/>
+<area shape="rect" id="node2" href="$da/d38/durand__kerner__roots_8c.html#a26d5695ebed0818a3e7cf4b10aacab52" title="check for termination condition" alt="" coords="104,5,235,32"/>
+<area shape="rect" id="node3" href="$da/d38/durand__kerner__roots_8c.html#a46197e91f478e99a2229562aaaac311e" title="create a textual form of complex number" alt="" coords="123,56,216,83"/>
+<area shape="rect" id="node4" href="$da/d38/durand__kerner__roots_8c.html#a321f9781a9744ccdaf0aba89f35ec29c" title="Evaluate the value of a polynomial with given coefficients." alt="" coords="119,107,219,133"/>
 </map>

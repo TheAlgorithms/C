@@ -1,0 +1,5 @@
+<map id="get_angle" name="get_angle">
+<area shape="rect" id="node1" title="Obtain the angle between two given vectors." alt="" coords="5,5,85,32"/>
+<area shape="rect" id="node2" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="277,5,352,32"/>
+<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="133,31,229,57"/>
+</map>

@@ -1,6 +1,6 @@
 <map id="kohonen_som" name="kohonen_som">
-<area shape="rect" id="node1" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="5,31,108,57"/>
-<area shape="rect" id="node2" href="$d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="156,31,325,57"/>
-<area shape="rect" id="node3" href="$d1/d6b/group__kohonen__2d.html#gadc22d512c00a9f5799ee067f4fb90b4b" title="Get minimum value and index of the value in a matrix." alt="" coords="391,5,480,32"/>
-<area shape="rect" id="node4" href="$d1/d6b/group__kohonen__2d.html#ga8df35f04c1762a01dcf108fa13b897d6" title="Function that returns the pointer to (x, y, z) ^th location in the linear 3D array given by:" alt="" coords="373,56,497,83"/>
+<area shape="rect" id="node1" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="5,31,111,57"/>
+<area shape="rect" id="node2" href="$d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="159,31,332,57"/>
+<area shape="rect" id="node3" href="$d1/d6b/group__kohonen__2d.html#gadc22d512c00a9f5799ee067f4fb90b4b" title="Get minimum value and index of the value in a matrix." alt="" coords="399,5,491,32"/>
+<area shape="rect" id="node4" href="$d1/d6b/group__kohonen__2d.html#gac78022076d889bf2ebfb2c41d4527ceb" title="Function that returns the pointer to (x, y, z) ^th location in the linear 3D array given by:" alt="" coords="380,56,509,83"/>
 </map>

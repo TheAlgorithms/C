@@ -1,5 +1,5 @@
 <map id="unit_vec" name="unit_vec">
-<area shape="rect" id="node1" title="Obtain unit vector in the same direction as given vector." alt="" coords="5,5,76,32"/>
-<area shape="rect" id="node2" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="124,5,219,32"/>
-<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="267,5,339,32"/>
+<area shape="rect" id="node1" title="Obtain unit vector in the same direction as given vector." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node2" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="125,5,221,32"/>
+<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="269,5,344,32"/>
 </map>

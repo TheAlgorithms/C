@@ -1,9 +1,9 @@
 <map id="numerical_methods/qr_eigen_values.c" name="numerical_methods/qr_eigen_values.c">
-<area shape="rect" id="node1" title="Compute real eigen values and eigen vectors of a symmetric matrix using QR decomposition method." alt="" coords="182,5,333,47"/>
+<area shape="rect" id="node1" title="Compute real eigen values and eigen vectors of a symmetric matrix using QR decomposition method." alt="" coords="183,5,337,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,75,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="101,169,163,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="193,169,255,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="309,169,373,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="395,95,453,121"/>
-<area shape="rect" id="node7" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." alt="" coords="150,95,269,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="103,169,166,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="196,169,257,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="312,169,376,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="397,95,456,121"/>
+<area shape="rect" id="node7" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." alt="" coords="150,95,271,121"/>
 </map>

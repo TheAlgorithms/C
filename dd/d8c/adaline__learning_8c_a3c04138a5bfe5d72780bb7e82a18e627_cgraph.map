@@ -1,0 +1,13 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,108,56,135"/>
+<area shape="rect" id="node2" href="$dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="104,108,155,135"/>
+<area shape="rect" id="node10" href="$dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="104,57,155,84"/>
+<area shape="rect" id="node11" href="$dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1" title="test function to predict points in a 3D coordinate system lying within the sphere of radius 1 and cen..." alt="" coords="104,184,155,211"/>
+<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="216,209,299,236"/>
+<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="573,83,685,109"/>
+<area shape="rect" id="node7" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="360,159,525,185"/>
+<area shape="rect" id="node8" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="203,108,312,135"/>
+<area shape="rect" id="node9" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="209,57,306,84"/>
+<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="376,209,509,236"/>
+<area shape="rect" id="node6" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="733,83,863,109"/>
+</map>

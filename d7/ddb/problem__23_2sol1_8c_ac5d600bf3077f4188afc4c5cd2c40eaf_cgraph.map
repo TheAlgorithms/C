@@ -1,0 +1,5 @@
+<map id="get_next_abundant" name="get_next_abundant">
+<area shape="rect" id="node1" title="Find the next abundant number after N and not including N." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="189,5,284,32"/>
+<area shape="rect" id="node3" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="332,5,473,32"/>
+</map>

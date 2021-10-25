@@ -1,4 +1,4 @@
 <map id="printsTray" name="printsTray">
-<area shape="rect" id="node1" title="Function printsTray Responsible for printing the visual board for the user." alt="" coords="5,5,85,32"/>
-<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543" title="Function printTable Responsible for printing the board." alt="" coords="133,5,212,32"/>
+<area shape="rect" id="node1" title="Function printsTray Responsible for printing the visual board for the user." alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543" title="Function printTable Responsible for printing the board." alt="" coords="135,5,215,32"/>
 </map>

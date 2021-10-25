@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main Function." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$d1/dc2/ode__midpoint__euler_8c.html#a8caee977b26888d34040b122e0e28e3a" title="Exact solution of the problem." alt="" coords="105,5,212,32"/>
+<area shape="rect" id="node3" href="$d1/dc2/ode__midpoint__euler_8c.html#a148003d8b261d040c1c41e73b40af1dd" title="Compute approximation using the midpoint&#45;Euler method in the given limits." alt="" coords="104,56,213,83"/>
+<area shape="rect" id="node4" href="$d1/dc2/ode__midpoint__euler_8c.html#affe6cc2ab040b94a29e6c41782f72d51" title="Compute next step approximation using the midpoint&#45;Euler method." alt="" coords="261,56,404,83"/>
+<area shape="rect" id="node5" href="$d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first&#45;order differential equations." alt="" coords="452,56,523,83"/>
+</map>

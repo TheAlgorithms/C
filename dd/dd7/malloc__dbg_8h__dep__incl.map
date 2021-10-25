@@ -1,5 +1,5 @@
 <map id="developer_tools/malloc_dbg.h" name="developer_tools/malloc_dbg.h">
-<area shape="rect" id="node1" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="91,5,245,47"/>
-<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="5,95,160,136"/>
-<area shape="rect" id="node3" href="$dd/d11/test__malloc__dbg_8c.html" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="184,95,323,136"/>
+<area shape="rect" id="node1" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="92,5,251,47"/>
+<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="5,95,164,136"/>
+<area shape="rect" id="node3" href="$dd/d11/test__malloc__dbg_8c.html" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="189,95,330,136"/>
 </map>

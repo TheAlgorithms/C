@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node2" href="$d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5" title="Computes sum of prime numbers less than N." alt="" coords="104,5,217,32"/>
+<area shape="rect" id="node3" href="$d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f" title="Function to check if a number is prime." alt="" coords="265,5,337,32"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="client_server/tcp_full_duplex_client.c" name="client_server/tcp_full_duplex_client.c">
+<area shape="rect" id="node1" title="Client&#45;side implementation of TCP Full Duplex Communication" alt="" coords="408,5,552,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,91,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="115,95,181,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="206,95,293,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="317,95,382,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="407,95,468,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="492,95,556,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="581,95,646,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="671,95,767,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="791,95,881,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="905,95,975,121"/>
+</map>

@@ -1,11 +1,11 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title="Main Function." alt="" coords="5,132,56,159"/>
 <area shape="rect" id="node2" href="$da/da0/segment__tree_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test RMQ Testing Segment tree using Range Minimum Queries." alt="" coords="104,132,148,159"/>
-<area shape="rect" id="node3" href="$da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb" title="Utility for test A function compare for minimum between two integers This function is used as combine..." alt="" coords="235,5,310,32"/>
-<area shape="rect" id="node4" href="$da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75" title="Builds a Segment tree It is assumed that leaves of tree already contains data." alt="" coords="205,56,340,83"/>
-<area shape="rect" id="node5" href="$da/da0/segment__tree_8c.html#af20a9f373083d3f701e1cd92560cef01" title="Dispose Segment Tree Frees all heap memory accquired by segment tree." alt="" coords="196,107,349,133"/>
-<area shape="rect" id="node6" href="$da/da0/segment__tree_8c.html#acecc34fd89923ab41dcee3a779622816" title="Initializes Segment Tree Accquires memory for segment tree and fill the leaves of segment tree with d..." alt="" coords="210,157,335,184"/>
-<area shape="rect" id="node8" href="$da/da0/segment__tree_8c.html#af61bd96660cb53f49f28d60a5f1d0c91" title="Query the segment tree This function helps in range query of segment tree This function assumes that ..." alt="" coords="203,208,343,235"/>
-<area shape="rect" id="node9" href="$da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c" title="For point updates This function updates the element at given index and also updates segment tree acco..." alt="" coords="199,259,346,285"/>
-<area shape="rect" id="node7" href="$dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a" title="Continuous loop to send and receive over the socket." alt="" coords="397,157,444,184"/>
+<area shape="rect" id="node3" href="$da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb" title="Utility for test A function compare for minimum between two integers This function is used as combine..." alt="" coords="237,5,313,32"/>
+<area shape="rect" id="node4" href="$da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75" title="Builds a Segment tree It is assumed that leaves of tree already contains data." alt="" coords="205,56,344,83"/>
+<area shape="rect" id="node5" href="$da/da0/segment__tree_8c.html#af20a9f373083d3f701e1cd92560cef01" title="Dispose Segment Tree Frees all heap memory accquired by segment tree." alt="" coords="196,107,353,133"/>
+<area shape="rect" id="node6" href="$da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde" title="Initializes Segment Tree Accquires memory for segment tree and fill the leaves of segment tree with d..." alt="" coords="211,157,339,184"/>
+<area shape="rect" id="node8" href="$da/da0/segment__tree_8c.html#af61bd96660cb53f49f28d60a5f1d0c91" title="Query the segment tree This function helps in range query of segment tree This function assumes that ..." alt="" coords="203,208,347,235"/>
+<area shape="rect" id="node9" href="$da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c" title="For point updates This function updates the element at given index and also updates segment tree acco..." alt="" coords="199,259,351,285"/>
+<area shape="rect" id="node7" href="$dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a" title="Continuous loop to send and receive over the socket." alt="" coords="401,157,448,184"/>
 </map>

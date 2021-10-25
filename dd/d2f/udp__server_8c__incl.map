@@ -1,12 +1,12 @@
 <map id="client_server/udp_server.c" name="client_server/udp_server.c">
-<area shape="rect" id="node1" title="Server side implementation of UDP client&#45;server model." alt="" coords="393,5,567,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,80,178,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="202,80,289,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="313,80,410,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="435,80,525,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="550,80,618,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="643,80,704,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="728,80,792,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="817,80,882,107"/>
+<area shape="rect" id="node1" title="Server side implementation of UDP client&#45;server model." alt="" coords="394,5,571,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="115,80,181,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="206,80,293,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="317,80,413,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="438,80,527,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="552,80,621,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="645,80,707,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="731,80,795,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="819,80,885,107"/>
 </map>

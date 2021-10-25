@@ -1,4 +1,4 @@
 <map id="add_digit" name="add_digit">
-<area shape="rect" id="node1" title="add a digit to the large number" alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node2" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="128,5,235,32"/>
+<area shape="rect" id="node1" title="add a digit to the large number" alt="" coords="5,5,81,32"/>
+<area shape="rect" id="node2" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="129,5,240,32"/>
 </map>

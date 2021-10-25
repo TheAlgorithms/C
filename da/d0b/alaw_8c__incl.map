@@ -1,0 +1,6 @@
+<map id="audio/alaw.c" name="audio/alaw.c">
+<area shape="rect" id="node1" title="A&#45;law algorithm for encoding and decoding (16bit pcm &lt;=&gt; a&#45;law). This is the implementation of G...." alt="" coords="91,5,187,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,80,178,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,80,264,107"/>
+</map>

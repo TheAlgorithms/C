@@ -1,0 +1,4 @@
+<map id="test" name="test">
+<area shape="rect" id="node1" title="Test function to save resulting points to a CSV file." alt="" coords="5,5,49,32"/>
+<area shape="rect" id="node2" href="$d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3" title="Generate spirograph curve into arrays x and y such that the i^th point in 2D is represented by (x[i],..." alt="" coords="97,5,183,32"/>
+</map>

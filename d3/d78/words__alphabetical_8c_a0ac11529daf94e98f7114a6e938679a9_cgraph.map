@@ -1,0 +1,6 @@
+<map id="addWordToTree" name="addWordToTree">
+<area shape="rect" id="node1" title="Adds word (node) to the correct position in tree." alt="" coords="5,31,123,57"/>
+<area shape="rect" id="node2" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="171,5,339,32"/>
+<area shape="rect" id="node4" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="191,56,319,83"/>
+<area shape="rect" id="node3" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="387,31,531,57"/>
+</map>

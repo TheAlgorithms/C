@@ -1,0 +1,12 @@
+<map id="client_server/tcp_half_duplex_server.c" name="client_server/tcp_half_duplex_server.c">
+<area shape="rect" id="node1" title="Server&#45;side implementation of TCP Half Duplex Communication" alt="" coords="341,5,489,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,72,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,95,183,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="207,95,273,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="297,95,359,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="383,95,447,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="471,95,537,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="561,95,657,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="682,95,771,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="796,95,865,121"/>
+</map>

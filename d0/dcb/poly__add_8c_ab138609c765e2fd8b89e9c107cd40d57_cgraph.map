@@ -1,7 +1,7 @@
 <map id="test3" name="test3">
 <area shape="rect" id="node1" title="Test function 3." alt="" coords="5,81,56,108"/>
-<area shape="rect" id="node2" href="$d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d" title="The function will create a polynomial." alt="" coords="107,5,233,32"/>
-<area shape="rect" id="node3" href="$d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d" title="The function will display the polynomial." alt="" coords="104,56,236,83"/>
-<area shape="rect" id="node4" href="$d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895" title="Frees memory space." alt="" coords="133,107,207,133"/>
-<area shape="rect" id="node5" href="$d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af" title="The function will add 2 polynomials." alt="" coords="133,157,207,184"/>
+<area shape="rect" id="node2" href="$d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d" title="The function will create a polynomial." alt="" coords="106,5,237,32"/>
+<area shape="rect" id="node3" href="$d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d" title="The function will display the polynomial." alt="" coords="104,56,239,83"/>
+<area shape="rect" id="node4" href="$d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895" title="Frees memory space." alt="" coords="133,107,210,133"/>
+<area shape="rect" id="node5" href="$d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af" title="The function will add 2 polynomials." alt="" coords="133,157,209,184"/>
 </map>
