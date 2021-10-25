@@ -140,7 +140,6 @@ jobs:
           if nodir_files:
             print(f"{len(nodir_files)} files are not in one and only one directory:")
             print("\n".join(nodir_files) + "\n")
-            
           bad_files = len(upper_files + space_files + nodir_files)
           if bad_files:
             sys.exit(bad_files)
