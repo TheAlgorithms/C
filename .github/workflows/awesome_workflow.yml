@@ -136,13 +136,12 @@ jobs:
             print(f"{len(space_files)} files contain space or dash characters:")
             print("\n".join(space_files) + "\n")
 
-          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1 and "project_euler" not in file and "data_structure" not in file]
-          nodir_file_bad_files = len(nodir_files) - 1
-          if nodir_file_bad_files:            
+          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1 and "project_euler" not in file  and "leetcode" not in file and "data_structure" not in file]
+          if nodir_files:
             print(f"{len(nodir_files)} files are not in one and only one directory:")
             print("\n".join(nodir_files) + "\n")
-            
-          bad_files = nodir_file_bad_files + len(upper_files + space_files)
+
+          bad_files = len(upper_files + space_files + nodir_files)
           if bad_files:
             sys.exit(bad_files)
 
