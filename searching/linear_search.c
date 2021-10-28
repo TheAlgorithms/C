@@ -9,8 +9,8 @@
  * Time Complexity: O(N)
  */
 
-#include <assert.h>  // for assertions
-#include <stdio.h>   // for IO operations
+#include <assert.h>  /// for assert
+#include <stdio.h>   /// for IO operations
 #include <stdlib.h>
 
 /**
