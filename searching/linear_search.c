@@ -12,6 +12,7 @@
 
 #include <assert.h>  /// for assert
 #include <stdio.h>   /// for IO operations
+#include <stdint.h>  /// for fixed width integer types
 
 /**
  * @brief Function For linear search of the element
@@ -22,11 +23,11 @@
  * @param arr the array containing all the items
  * @param size the size of the array
  * @param val the item to be searched
- * @return -1 if found else the location of the item
+ * @return -1 if not found else the location of the item
  */
-int linearsearch(int *arr, int size, int val)
+uint64_t linearsearch(uint64_t *arr, int64_t size, uint64_t val)
 {
-    int i;
+    int64_t i;
     for (i = 0; i < size; i++)
     {
         if (arr[i] == val)
@@ -42,7 +43,7 @@ int linearsearch(int *arr, int size, int val)
  */
 static void test() {
 	
-	int arr[] = {10,12,52,34,19,36,27,81,9,2,6,5,2,6,21,55};
+	uint64_t arr[] = {10,12,52,34,19,36,27,81,9,2,6,5,2,6,21,55};
 	
 	assert(linearsearch(arr, 16, 52) == 3);
 	assert(linearsearch(arr, 16, 10) == 1);
