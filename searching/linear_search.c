@@ -40,7 +40,7 @@ int linearsearch(int *arr, int size, int val)
  * @brief Self-test implementations
  * @returns void
  */
-void test() {
+static void test() {
 	
 	int arr[] = {10,12,52,34,19,36,27,81,9,2,6,5,2,6,21,55};
 	
