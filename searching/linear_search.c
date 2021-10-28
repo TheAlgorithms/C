@@ -6,6 +6,8 @@
  * Check if the current element is equal to the searched element
  * If found it returns the index of the found location
  * Time Complexity: O(N)
+ * @author [Shashi Raj](https://github.com/shashirajraja)
+ * @author [Gabriel Alves](https://github.com/sp0oks)
  */
 
 #include <assert.h>  /// for assert
