@@ -11,7 +11,6 @@
 
 #include <assert.h>  /// for assert
 #include <stdio.h>   /// for IO operations
-#include <stdlib.h>
 
 /**
  * @brief Function For linear search of the element
