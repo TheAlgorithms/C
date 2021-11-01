@@ -1,62 +1,79 @@
-/*
-Binary Insertion sort is a variant of Insertion sorting in which proper location to insert the selected element is found using the binary search.
-*/
+/* Sorting of array list using binary insertion sort
+ * Using binary search to find the proper location for
+ * inserting the selected item at each iteration. */
+#include <stdio.h>
+#include <stdlib.h>
 
-#include<stdio.h>
-
-int binarySearch(int a[], int item, int low, int high)
+/*Displays the array, passed to this method*/
+void display(int *arr, int n)
 {
-    if (high <= low)
-        return (item > a[low])?  (low + 1): low;
- 
-    int mid = (low + high)/2;
- 
-    if(item == a[mid])
-        return mid+1;
- 
-    if(item > a[mid])
-        return binarySearch(a, item, mid+1, high);
-    return binarySearch(a, item, low, mid-1);
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 }
- 
-// Function to sort an array a[] of size 'n'
-void insertionSort(int a[], int n)
+
+int binarySearch(int *arr, int key, int low, int high)
 {
-    int i, loc, j, k, selected;
- 
-    for (i = 1; i < n; ++i)
+    if (low >= high)
+        return (key > arr[low]) ? (low + 1) : low;
+    int mid = low + (high - 1) / 2;
+    if (arr[mid] == key)
+        return mid + 1;
+    else if (arr[mid] > key)
+        return binarySearch(arr, key, low, mid - 1);
+    else
+        return binarySearch(arr, key, mid + 1, high);
+}
+/*This is where the sorting of the array takes place
+ arr[] --- Array to be sorted
+ size --- Array Size
+ */
+void insertionSort(int *arr, int size)
+{
+    int i, j, key, index;
+    for (i = 0; i < size; i++)
     {
         j = i - 1;
-        selected = a[i];
- 
-        // find location where selected sould be inseretd
-        loc = binarySearch(a, selected, 0, j);
- 
-        // Move all elements after location to create space
-        while (j >= loc)
+        key = arr[i];
+        /* Use binrary search to find exact key's index */
+        index = binarySearch(arr, key, 0, j);
+        /* Move all elements greater than key from [index...j]
+         * to one position */
+        while (j >= index)
         {
-            a[j+1] = a[j];
-            j--;
+            arr[j + 1] = arr[j];
+            j = j - 1;
         }
-        a[j+1] = selected;
+        /* Insert key value in right place */
+        arr[j + 1] = key;
     }
 }
- 
-int main()
+
+int main(int argc, const char *argv[])
 {
     int n;
-    scanf("%d",&n) ;
-    int a[n],i;
-    for(i = 0; i<n; i++)
-    {
-	scanf("%d",&a[i]);
-    }
- 
-    insertionSort(a, n);
- 
-    printf("Sorted array: \n");
+    printf("Enter size of array:\n");
+    scanf("%d", &n);  // E.g. 8
+
+    printf("Enter the elements of the array\n");
+    int i;
+    int *arr = (int *)malloc(n * sizeof(int));
     for (i = 0; i < n; i++)
-        printf("%d ",a[i]);
- 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Original array: ");
+    display(arr, n);
+
+    insertionSort(arr, n);
+
+    printf("Sorted array: ");
+    display(arr, n);
+
+    free(arr);
     return 0;
 }

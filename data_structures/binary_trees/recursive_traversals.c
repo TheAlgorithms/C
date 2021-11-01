@@ -7,7 +7,7 @@
 
 void inOrderTraversal(struct node *node)
 {
-    if(node == NULL) //if tree is empty
+    if (node == NULL)  // if tree is empty
         return;
 
     inOrderTraversal(node->leftNode);
@@ -17,7 +17,7 @@ void inOrderTraversal(struct node *node)
 
 void preOrderTraversal(struct node *node)
 {
-    if(node == NULL) //if tree is empty
+    if (node == NULL)  // if tree is empty
         return;
 
     printf("\t%d\t", node->data);
@@ -27,12 +27,12 @@ void preOrderTraversal(struct node *node)
 
 void postOrderTraversal(struct node *node)
 {
-    if(node == NULL) //if tree is empty
+    if (node == NULL)  // if tree is empty
         return;
 
     postOrderTraversal(node->leftNode);
     postOrderTraversal(node->rightNode);
-    printf("\t%d\t",node->data);
+    printf("\t%d\t", node->data);
 }
 
 int main(void)
@@ -41,5 +41,5 @@ int main(void)
        function with a pointer to the root node.
     */
 
-	return 0;
+    return 0;
 }

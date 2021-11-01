@@ -1,0 +1,6 @@
+---
+Checks:          '-*,google-*,clang-diagnostic-*,clang-analyzer-*,-clang-analyzer-security.insecureAPI.*,openmp-*,performance-*,portability-*,modernize-*'
+WarningsAsErrors: '*,-clang-diagnostic-implicitly-unsigned-literal,-google-readability-*,-google-explicit-constructor,-modernize-*,modernize-avoid-c-arrays,-google-explicit-constructor,-performance-move-const-arg,-performance-noexcept-move-constructor,'
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+FormatStyle:     '{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 80, AccessModifierOffset: -4 }'
