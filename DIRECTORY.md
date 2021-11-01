@@ -371,6 +371,7 @@
   * [Floyd Cycle Detection Algorithm](https://github.com/TheAlgorithms/C/blob/master/searching/floyd_cycle_detection_algorithm.c)
   * [Interpolation Search](https://github.com/TheAlgorithms/C/blob/master/searching/interpolation_search.c)
   * [Jump Search](https://github.com/TheAlgorithms/C/blob/master/searching/jump_search.c)
+  * [Knuth Moris Pratt](https://github.com/TheAlgorithms/C/blob/master/searching/knuth_moris_pratt.c)
   * [Linear Search](https://github.com/TheAlgorithms/C/blob/master/searching/linear_search.c)
   * [Modified Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/modified_binary_search.c)
   * [Other Binary Search](https://github.com/TheAlgorithms/C/blob/master/searching/other_binary_search.c)
