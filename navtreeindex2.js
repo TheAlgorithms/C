@@ -1,5 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"d9/dcc/prim_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089":[15,0,9,0,1],
+"d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768":[15,0,9,0,5],
+"d9/dcc/prim_8c.html#aff3f4c22009b2aa4e385a76a8a1cdc1c":[15,0,9,0,4],
+"d9/dd7/struct__cantor__set.html":[14,0,1],
+"d9/dd7/struct__cantor__set.html#a2f7f9f19125725d3e5673fdb4ac8cfb1":[14,0,1,1],
 "d9/dd7/struct__cantor__set.html#abd2176c3cc3a1d85d15bbeaace35fa03":[14,0,1,2],
 "d9/dd7/struct__cantor__set.html#acfc25ab716a3c79be8a5a4cab94e8def":[14,0,1,0],
 "d9/deb/min__printf_8h.html":[15,0,4,2],
@@ -174,8 +179,8 @@ var NAVTREEINDEX2 =
 "dc/d63/problem__8_2sol1_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,14,21,0,1],
 "dc/d63/problem__8_2sol1_8c.html#a9ffc8845f17b01a353767a40a3adf7bd":[15,0,14,21,0,0],
 "dc/d64/md__coding_guidelines.html":[2],
-"dc/d64/md__coding_guidelines.html#autotoc_md11":[2,1],
-"dc/d64/md__coding_guidelines.html#autotoc_md9":[2,0],
+"dc/d64/md__coding_guidelines.html#autotoc_md14":[2,0],
+"dc/d64/md__coding_guidelines.html#autotoc_md16":[2,1],
 "dc/d77/struct__big__int.html":[14,0,0],
 "dc/d77/struct__big__int.html#a187538b984c86d7cfdb13e297e7f3564":[14,0,0,0],
 "dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008":[14,0,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX2 =
 "dd/d93/client_8c.html":[15,0,1,0],
 "dd/d93/client_8c.html#a1e43924adac4ae865aa0acf79710261c":[15,0,1,0,2],
 "dd/d93/client_8c.html#a392fb874e547e582e9c66a08a1f23326":[15,0,1,0,0],
-"dd/d93/client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2":[15,0,1,0,1],
-"dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a":[15,0,1,0,3],
-"dd/d93/client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,1,0,4],
-"dd/d95/word__count_8h_source.html":[15,0,5,4,0],
-"dd/da2/structbuffer.html":[14,0,6],
-"dd/de4/bubble__sort_8c.html":[15,0,16,1]
+"dd/d93/client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2":[15,0,1,0,1]
 };
