@@ -2,6 +2,7 @@
  * @file
  * @brief Algorithm to Search an Element from the array
  * @details
+ * [Liear Search](https://en.wikipedia.org/wiki/Linear_search)
  * This algorithm traverse through the array
  * Check if the current element is equal to the searched element
  * If found it returns the index of the found location
