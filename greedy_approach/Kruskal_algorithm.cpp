@@ -19,8 +19,8 @@ struct Graph {
 struct Graph* createGraph(int V, int E)
 {
 	struct Graph* graph = (struct Graph*)(malloc(sizeof(struct Graph)));
-	graph->V = V;
-	graph->E = E;
+	graph->V = V; //denotes the verices
+	graph->E = E; //denotes the edges
 
 	graph->edge = (struct Edge*)malloc(sizeof( struct Edge)*E);
 
@@ -34,6 +34,7 @@ struct subset {
 };
 
 // A utility function to find set of an element 
+//uses rank 
 int find(struct subset subsets[], int i)
 {
 
@@ -125,27 +126,27 @@ int main(){
 	int E = 5; // Number of edges in graph
 	struct Graph* graph = createGraph(V, E);
 
-	
+	//add 0-1
 	graph->edge[0].src = 0;
 	graph->edge[0].dest = 1;
 	graph->edge[0].weight = 10;
 
-	
+	//add 1-2
 	graph->edge[1].src = 0;
 	graph->edge[1].dest = 2;
 	graph->edge[1].weight = 6;
 
-	
+	//add 2-3
 	graph->edge[2].src = 0;
 	graph->edge[2].dest = 3;
 	graph->edge[2].weight = 5;
 
-	
+	//add 3-4
 	graph->edge[3].src = 1;
 	graph->edge[3].dest = 3;
 	graph->edge[3].weight = 15;
 
-	
+	//add 4-5
 	graph->edge[4].src = 2;
 	graph->edge[4].dest = 3;
 	graph->edge[4].weight = 4;
