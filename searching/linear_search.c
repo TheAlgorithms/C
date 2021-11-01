@@ -53,7 +53,7 @@ static void test() {
 	assert(linearsearch(arr, 16, 36) == 6);
 	assert(linearsearch(arr, 16, 91) == -1);
     
-	printf("All test cases passed successfully");
+	printf("All test cases have successfully passed!\n");
 }
 
 /**
