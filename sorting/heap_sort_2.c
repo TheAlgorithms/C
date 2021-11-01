@@ -18,11 +18,11 @@
  * Time Complexity : O(Nlog(N))
  */
 
-#include <assert.h>   /// for assert
-#include <stdio.h>    /// for IO operations
-#include <stdlib.h>   /// for dynamic memory allocation
-#include <time.h>     /// for random numbers generation
-#include <inttypes.h> /// for uint8_t, int8_t
+#include <assert.h>    /// for assert
+#include <inttypes.h>  /// for uint8_t, int8_t
+#include <stdio.h>     /// for IO operations
+#include <stdlib.h>    /// for dynamic memory allocation
+#include <time.h>      /// for random numbers generation
 
 /**
  * @brief Swapped two numbers using pointer
@@ -44,7 +44,7 @@ void swap(int8_t *first, int8_t *second)
  * @param arr array to be sorted
  * @param size size of array
  * @return void
-*/
+ */
 void heapifyDown(int8_t *arr, const uint8_t size)
 {
     uint8_t i = 0;
@@ -78,13 +78,13 @@ void heapifyDown(int8_t *arr, const uint8_t size)
  * @param arr array to be sorted
  * @param i index of the pushed element
  * @return void
-*/
+ */
 void heapifyUp(int8_t *arr, uint8_t i)
 {
-    while (i > 0 && arr[i / 2] < arr[i])
+    while (i > 0 && arr[(i - 1) / 2] < arr[i])
     {
-        swap(&arr[i / 2], &arr[i]);
-        i /= 2;
+        swap(&arr[(i - 1) / 2], &arr[i]);
+        i = (i - 1) / 2;
     }
 }
 
@@ -116,7 +116,6 @@ void heapSort(int8_t *arr, const uint8_t size)
 
         // `heapifyDown` adjusts new root to the correct position in the heap
         heapifyDown(arr, i);
-
     }
 }
 
@@ -151,6 +150,6 @@ int main()
     // Intializes random number generator
     srand(time(NULL));
 
-    test(); // run self-test implementations
+    test();  // run self-test implementations
     return 0;
 }
