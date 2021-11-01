@@ -1,6 +1,6 @@
 // C program for Kruskal's algorithm to find Minimum
 // Spanning Tree of a given connected, undirected and
-// weighted graph
+// weighted graph.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +11,7 @@ struct Edge {
 };
 
 // a structure to represent a connected, undirected
-// and weighted graph
+// and weighted graph.
 struct Graph {
 	// V-> Number of vertices, E-> Number of edges
 	int V, E;
