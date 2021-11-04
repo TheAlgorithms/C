@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief ZigZag Conversion leetcode problem solution.
+ * @brief Implementation of the [ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) Leetcode problem
  * @details
  * A decent solution to the ZigZag conversion problem.
  * Take advantage of the fact that the maximum gap between the chars is 2 times
