@@ -9,7 +9,6 @@
  * the row. The gaps between successives chars on the same row is the complement
  * of the first gap to the maximum gap.
  * @author [straight_into_the_wall](https://github.com/straight-into-the-wall)
- * @see https://leetcode.com/problems/zigzag-conversion/
  */
 
 #include <assert.h>  /// for assert
