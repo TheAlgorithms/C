@@ -11,7 +11,9 @@ github:
 
 vscode:
   extensions:
-    - ms-vscode.cpptools
+  # - ms-vscode.cpptools
     - twxs.cmake
     - ms-vscode.cmake-tools
     - mhutchie.git-graph
+    - notskm.clang-tidy
+    - mitaki28.vscode-clang
