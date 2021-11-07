@@ -96,6 +96,7 @@
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
   * Queue
     * [Include](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/include.h)
+    * [Priority Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/priority_queue.c)
     * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
   * Stack
