@@ -36,21 +36,17 @@ struct pq q;			///< global declaration of queue q
  * @param item value to be enqued
  * @returns void
  */
-void enque(si item)
-{
-	if(q.rear == size-1)
-	{
+void enque(si item) {
+	if(q.rear == size-1) {
 		printf("queue overflow...");
 		exit(0);
 	}
 	
-	if(q.rear == -1)
-	{
+	if(q.rear == -1) {
 		q.front=0; q.rear=0;
 		q.queue[q.rear] = item;
 	}
-	else
-	{
+	else {
 		int i;
 		for(i = q.rear; i >= 0 && (q.queue[i].priority > item.priority); i--)
 			q.queue[i+1] = q.queue[i];
@@ -62,23 +58,19 @@ void enque(si item)
  * @brief funtion to deque
  * @returns dequed value
  */
-si deque()
-{
+si deque() {
 	si item;
-	if(q.front == -1)
-	{
+	if(q.front == -1) {
 		printf("queue underflow...");
 		exit(0);
 	}
 	
 	item = q.queue[q.front];
-	if(q.front == q.rear)
-	{
+	if(q.front == q.rear) {
 		q.front = -1;
 		q.rear = -1;
 	}
-	else
-	{
+	else {
 		int i;
 		for(i = q.front+1; i <= q.rear; i++)
 			q.queue[i-1] = q.queue[i];
