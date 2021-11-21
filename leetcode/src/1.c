@@ -1,55 +1,18 @@
-/**
- * @file
- * @brief TwoSum leetcode problem solution.
- * @details
- * This is a recursive solution for the leetcode problem of TwoSum.
- * @author [straight_into_the_wall](https://github.com/straight-into-the-wall)
- * @see https://leetcode.com/problems/two-sum/
- */
-
-#include <assert.h>  /// for assert
-#include <stdint.h>  /// for unsigned int with fixed size
-#include <stdlib.h>  /// for everithing else
-
-int* ending(int* a, int* b, int* returnSize);
-
-/**
- * @brief Given an array of integers and an integer target,
- * find the two numbers such that they add up to a given target.
- * @param nums the array of integer to be processed.
- * @param numsSize the size of array on input.
- * @param target the integer to be matched.
- * @param returnSize a pointer to the size of the output array.
- * @returns an array of the indices of the two numbers such that they add up to
- * target.
- */
-int* twoSum(int* nums, int numsSize, int target, int* returnSize)
+int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 {
-    int needle = target - nums[--numsSize];
-
-    for (int i = numsSize - 1; i >= 0; i--)
-        if (needle == nums[i])
-            return ending(&i, &numsSize, returnSize);
-
-    return twoSum(nums, numsSize, target, returnSize);
-}
-
-/**
- * @brief Prepare the output at the end of the execution. Just to keep tidy the
- * main function.
- * @param a an index of the solution.
- * @param b the other index of the solution.
- * @param returnSize a pointer to the size of the output array (always 2 on
- * success).
- * @returns an array of the indices of the two numbers such that they add up to
- * target.
- */
-int* ending(int* a, int* b, int* returnSize)
-{
+    int i, j;
+    int *ret = calloc(2, sizeof(int));
+    for (i = 0; i < numsSize; i++)
+    {
+        int key = target - nums[i];
+        for (j = i + 1; j < numsSize; j++)
+            if (nums[j] == key)
+            {
+                ret[0] = i;
+                ret[1] = j;
+            }
+    }
     *returnSize = 2;
-    int* ret = calloc(*returnSize, sizeof(int));
-    ret[0] = *a;
-    ret[1] = *b;
     return ret;
 }
 
