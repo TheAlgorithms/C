@@ -1,3 +1,28 @@
+/**
+ * @file
+ * @brief Implementation of the [Two
+ * sums](https://leetcode.com/problems/two-sum/) Leetcode problem
+ * @details
+ * A decent solution to the Two sum problem.
+ * @author [straight_into_the_wall](https://github.com/straight-into-the-wall)
+ */
+
+#include <assert.h>  /// for assert
+#include <stdint.h>  /// for unsigned int with fixed size
+#include <stdio.h>   /// for IO operations
+#include <stdlib.h>  /// for malloc
+#include <string.h>  /// for string tools
+
+/**
+ * @brief Given an array of integers nums and an integer target, return indices
+ * of the two numbers such that they add up to target.
+ *
+ * @param nums the array of integer in input.
+ * @param numsize the size of the array.
+ * @param target the integer target.
+ * @param returnsize the size of the returned array.
+ * @returns the converted new (malloced) string.
+ */
 int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 {
     int i, j;
@@ -20,10 +45,10 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
  * @brief Two sum self-test implementation
  * @returns void
  */
-static void testTwoSum(int* nums, int numsSize, int target)
+static void testTwoSum(int *nums, int numsSize, int target)
 {
     int retSize = 0;
-    int* ret = twoSum(nums, numsSize, target, &retSize);
+    int *ret = twoSum(nums, numsSize, target, &retSize);
 
     for (int i = 0; i < retSize; i++) target -= nums[ret[i]];
 
@@ -132,4 +157,10 @@ static void test(void)
         1245359,  2840097,  6948011};
 
     testTwoSum(nums7, 492, 7828670);
+}
+
+int main(void)
+{
+    test();
+    return 0;
 }
