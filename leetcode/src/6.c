@@ -137,3 +137,9 @@ static void test()
 
     testZigZag(s04, 472, r04);
 }
+
+int main(void)
+{
+    test();
+    return 0;
+}
