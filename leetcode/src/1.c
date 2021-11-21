@@ -31,6 +31,10 @@ static void testTwoSum(int* nums, int numsSize, int target)
     assert(!target);
 }
 
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
 static void test(void)
 {
     int nums[4] = {2, 7, 15, 11};
