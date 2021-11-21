@@ -1,6 +1,8 @@
 /**
  * @file
- * @brief Implementation of the [ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) Leetcode problem
+ * @brief Implementation of the [ZigZag
+ * Conversion](https://leetcode.com/problems/zigzag-conversion/) Leetcode
+ * problem
  * @details
  * A decent solution to the ZigZag conversion problem.
  * Take advantage of the fact that the maximum gap between the chars is 2 times
@@ -138,8 +140,12 @@ static void test()
     testZigZag(s04, 472, r04);
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main(void)
 {
-    test();
+    test();  // run self-test implementations
     return 0;
 }
