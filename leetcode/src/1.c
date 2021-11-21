@@ -159,8 +159,12 @@ static void test(void)
     testTwoSum(nums7, 492, 7828670);
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main(void)
 {
-    test();
+    test();  // run self-test implementations
     return 0;
 }
