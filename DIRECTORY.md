@@ -94,7 +94,9 @@
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.h)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
-  * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue.c)
+  * Queue
+    * [Include](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/include.h)
+    * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
   * Stack
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/main.c)
@@ -220,6 +222,7 @@
     * [520](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/53.c)
     * [561](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/561.c)
+    * [6](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/6.c)
     * [617](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/617.c)
     * [647](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/647.c)
     * [66](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/66.c)
