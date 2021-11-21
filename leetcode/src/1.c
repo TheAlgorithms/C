@@ -17,7 +17,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 }
 
 /**
- * @brief Self-test implementations
+ * @brief Two sum self-test implementation
  * @returns void
  */
 static void testTwoSum(int* nums, int numsSize, int target)
