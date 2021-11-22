@@ -157,6 +157,7 @@ static void test(void)
         1245359,  2840097,  6948011};
 
     testTwoSum(nums7, 492, 7828670);
+    printf("All tests have successfully passed!");
 }
 
 /**
