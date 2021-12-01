@@ -4,8 +4,8 @@
  * @author [Krishna Vedala](https://github.com/kvedala)
  * @brief [Tic-Tac-Toe game](https://en.wikipedia.org/wiki/Tic-tac-toe)
  * implementation in C
- * @details  Tic-Tac-Toe Game,where the user can decide to play with the
- * computer(single player mode) or with other user(double player mode) , the
+ * @details  Tic-Tac-Toe Game, where the user can decide to play with the
+ * computer(single player mode) or with other user(double player mode), the
  * code as an array named 'game_table' which is the table and user needs to enter the
  * position inside the array(from 1-9) where he/she wants to place 'X' or 'O' on the
  * table.
