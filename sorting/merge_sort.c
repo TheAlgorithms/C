@@ -3,8 +3,10 @@
  * @brief Implementation of [merge
  * sort](https://en.wikipedia.org/wiki/Merge_sort) algorithm
  */
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * @addtogroup sorting Sorting algorithms
@@ -97,24 +99,36 @@ void merge_sort(int *a, int n, int l, int r)
 }
 /** @} */
 
-/** Main function */
-int main(void)
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
 {
-    int *a, n, i;
-    scanf("%d", &n);
-    a = (int *)malloc(n * sizeof(int));
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+    const int n = 10;
+    int *a = (int *)calloc(n, sizeof(int));
 
+    /* generate size random numbers from 0 to 100 */
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = rand() % 100;
+    }
     merge_sort(a, n, 0, n - 1);
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; ++i)
     {
-        printf(" %d", a[i]);
+        assert(a[i] <= a[i + 1]);
     }
-
     free(a);
+}
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
+int main(int argc, const char *argv[])
+{
+    /* Intializes random number generator */
+    srand(time(NULL));
+    test();
     return 0;
 }
