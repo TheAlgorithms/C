@@ -68,7 +68,7 @@ void merge(int *a, int l, int r, int n)
         }
     }
 
-    for (c = l; c < r - l + 1; c++) a[c] = b[c];
+    for (c = l; c < r + 1; c++) a[c] = b[c];
 
     free(b);
 }
