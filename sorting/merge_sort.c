@@ -119,6 +119,7 @@ static void test()
         assert(a[i] <= a[i + 1]);
     }
     free(a);
+    printf("All tests have successfully passed!\n");
 }
 
 /**
