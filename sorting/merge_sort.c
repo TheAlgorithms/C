@@ -127,8 +127,7 @@ static void test()
  */
 int main(int argc, const char *argv[])
 {
-    /* Intializes random number generator */
-    srand(time(NULL));
-    test();  // run self-test implementations
+    srand(time(NULL));    // intialize random number generator
+    test();               // run self-test implementations
     return 0;
 }
