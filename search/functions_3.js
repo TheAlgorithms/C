@@ -12,7 +12,7 @@ var searchData=
   ['collatz_9',['collatz',['../d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80',1,'sol1.c']]],
   ['compare_10',['compare',['../d1/df9/problem__26_2sol1_8c.html#ac70138609ef6aa6fabca57aca8681e83',1,'sol1.c']]],
   ['complex_5fstr_11',['complex_str',['../da/d38/durand__kerner__roots_8c.html#a46197e91f478e99a2229562aaaac311e',1,'durand_kerner_roots.c']]],
-  ['convert_12',['convert',['../db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1',1,'convert(char infix[], char postfix[]):&#160;infix_to_postfix.c'],['../da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b',1,'convert(char inf[]):&#160;infix_to_postfix2.c']]],
+  ['convert_12',['convert',['../db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1',1,'convert(char infix[], char postfix[]):&#160;infix_to_postfix.c'],['../da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b',1,'convert(char inf[]):&#160;infix_to_postfix2.c'],['../d0/df3/6_8c.html#afdf3bfe2dc8aadac13c7e6d051d3bd5d',1,'convert(char *in, uint16_t numRows):&#160;6.c']]],
   ['converted_5flen_13',['converted_len',['../d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711',1,'decimal_to_any_base.c']]],
   ['convertion_14',['convertion',['../d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d',1,'decimal_to_any_base.c']]],
   ['count_15',['count',['../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a',1,'prime_seive.c']]],

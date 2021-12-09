@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['readwordsinfiletotree_0',['readWordsInFileToTree',['../d3/d78/words__alphabetical_8c.html#a151b2c78ae821d0495faf936a1c2530f',1,'words_alphabetical.c']]],
-  ['real_1',['real',['../d7/dfd/structdual__quat__.html#ad663036ace6a586f90a2f89386f7731a',1,'dual_quat_']]],
-  ['realtime_5fstats_2ec_2',['realtime_stats.c',['../dc/d47/realtime__stats_8c.html',1,'']]],
-  ['recursioninsertionsort_3',['RecursionInsertionSort',['../d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359',1,'insertion_sort_recursive.c']]],
-  ['remove_5fdigits_4',['remove_digits',['../db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1',1,'sol1.c']]],
-  ['reverse_5fstr_5',['reverse_str',['../d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e',1,'min_printf.h']]],
-  ['right_6',['right',['../d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c',1,'node::right()'],['../db/d8b/struct_node.html#af99e7102380da88d7c079fa264230cf4',1,'Node::right()']]],
-  ['rlink_7',['rlink',['../db/d8b/struct_node.html#a0ed3c7305b43527f0f237bbfd438b8f7',1,'Node']]],
-  ['roll_8',['roll',['../d2/de8/structeuler__.html#a3f1b77e489be443a8d84a84082b8092e',1,'euler_']]],
-  ['root_9',['root',['../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd',1,'segment_tree']]],
-  ['row1_10',['row1',['../d9/d8b/structmat__3x3__.html#ac74f33a2e1ad1f6db74d94807cf1f64e',1,'mat_3x3_']]],
-  ['row2_11',['row2',['../d9/d8b/structmat__3x3__.html#a8d7ae8fbcc408e3c30e9d64bbd28feaf',1,'mat_3x3_']]],
-  ['row3_12',['row3',['../d9/d8b/structmat__3x3__.html#a490bb6be52ea95b333b55b236af41563',1,'mat_3x3_']]]
+  ['q0_0',['q0',['../de/d58/structquaternion__.html#a37819eb7d76c65c37a9c2a63f01f65b2',1,'quaternion_']]],
+  ['qr_5fdecompose_1',['qr_decompose',['../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56',1,'qr_decompose.h']]],
+  ['qr_5fdecompose_2eh_2',['qr_decompose.h',['../d4/d68/qr__decompose_8h.html',1,'']]],
+  ['qr_5fdecomposition_2ec_3',['qr_decomposition.c',['../d5/d23/qr__decomposition_8c.html',1,'']]],
+  ['qr_5feigen_5fvalues_2ec_4',['qr_eigen_values.c',['../d7/d50/qr__eigen__values_8c.html',1,'']]],
+  ['quat_5ffrom_5feuler_5',['quat_from_euler',['../dc/d9a/group__quats.html#ga4779f448daaf806ce5e750c13b3e0965',1,'quaternions.c']]],
+  ['quaternion_6',['quaternion',['../dc/d9a/group__quats.html#gaacd70a16b61dd47a19eb5fb729c2669b',1,'geometry_datatypes.h']]],
+  ['quaternion_5f_7',['quaternion_',['../de/d58/structquaternion__.html',1,'']]],
+  ['quaternion_5fmultiply_8',['quaternion_multiply',['../dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1',1,'quaternions.c']]],
+  ['quaternions_2ec_9',['quaternions.c',['../df/d98/quaternions_8c.html',1,'']]],
+  ['queue_10',['queue',['../d2/d36/structqueue.html',1,'']]],
+  ['queuerep_11',['QueueRep',['../d0/d10/struct_queue_rep.html',1,'']]]
 ];
