@@ -93,5 +93,6 @@ int main()
     printf("Sorted array: ");
     display(arr, n);  // Sorted array : 3 4 7 8 8 9 10 11
     getchar();
+    free(arr);
     return 0;
 }
