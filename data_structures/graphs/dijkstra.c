@@ -32,7 +32,8 @@ void addEdge(struct Graph *G, int src, int dst, int weight)
 // Utility function to find minimum distance vertex in mdist
 int minDistance(int mdist[], int vset[], int V)
 {
-    int minVal = INT_MAX, minInd;
+    int minVal = INT_MAX;
+    static int minInd = -1; //remembers the previous value if not modified in the loop
     for (int i = 0; i < V; i++)
         if (vset[i] == 0 && mdist[i] < minVal)
         {
