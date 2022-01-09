@@ -1,23 +1,21 @@
 /**
  * @file
  * @author [NVombat](https://github.com/NVombat)
- * @brief Server-side implementation of [TCP Full Duplex
- * Communication](http://www.tcpipguide.com/free/t_SimplexFullDuplexandHalfDuplexOperation.htm)
- * @see tcp_full_duplex_server.c
+ * @brief Server-side implementation of [Remote Command
+ * Execution Using
+ * UDP](https://www.imperva.com/learn/ddos/udp-user-datagram-protocol/)
+ * @see remote_command_exec_udp_server.c
  *
  * @details
- * The algorithm is based on the simple TCP client and server model. However,
- * instead of the server only sending and the client only receiving data,
- * The server and client can both send and receive data simultaneously. This is
- * implemented by using the `fork` function call so that in the server the child
- * process can recieve data and  parent process can send data, and in the client
- * the child process can send data and the parent process can receive data. It
- * runs an infinite loop and can send and receive messages indefinitely until
- * the user exits the loop. In this way, the Full Duplex Form of communication
- * can be represented using the TCP server-client model & socket programming
+ * The algorithm is based on the simple UDP client and server model. It
+ * runs an infinite loop which takes user input and sends it to the server
+ * for execution. The server receives the commands and executes them
+ * until the user exits the loop. In this way, Remote Command Execution
+ * using UDP is shown using the server-client model & socket programming
  */
 
 #include <arpa/inet.h>  /// For the type in_addr_t and in_port_t
+#include <errno.h>      /// To indicate what went wrong if an error occurs
 #include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
 #include <netinet/in.h>  /// For in_addr and sockaddr_in structures
 #include <stdint.h>      /// For specific bit size values of variables
@@ -49,38 +47,39 @@ void error()
 int main()
 {
     /** Variable Declarations */
-    uint32_t sockfd,
-        conn;  ///< socket descriptors - Like file handles but for sockets
-    char recvbuff[1024],
-        sendbuff[1024];  ///< character arrays to read and store string data
-                         /// for communication
+    uint32_t
+        sockfd;  ///< socket descriptors - Like file handles but for sockets
+    char recv_msg[1024],
+        success_message[] =
+            "Command Executed Successfully!\n";  ///< character arrays to read
+                                                 /// and store string data
+                                                 /// for communication & Success
+                                                 /// message
 
     struct sockaddr_in server_addr,
         client_addr;  ///< basic structures for all syscalls and functions that
                       /// deal with internet addresses. Structures for handling
                       /// internet addresses
-    socklen_t ClientLen;  /// size of address
+    socklen_t clientLength = sizeof(client_addr);  /// size of address
 
     /**
-     * The TCP socket is created using the socket function
+     * The UDP socket is created using the socket function.
      *
      * AF_INET (Family) - it is an address family that is used to designate the
      * type of addresses that your socket can communicate with
      *
-     * SOCK_STREAM (Type) - Indicates TCP Connection - A stream socket provides
-     * for the bidirectional, reliable, sequenced, and unduplicated flow of data
-     * without record boundaries. Aside from the bidirectionality of data flow,
-     * a pair of connected stream sockets provides an interface nearly identical
-     * to pipes
+     * SOCK_DGRAM (Type) - Indicates UDP Connection - UDP does not require the
+     * source and destination to establish a three-way handshake before
+     * transmission takes place. Additionally, there is no need for an
+     * end-to-end connection
      *
      * 0 (Protocol) - Specifies a particular protocol to be used with the
      * socket. Specifying a protocol of 0 causes socket() to use an unspecified
-     * default protocol appropriate for the requested socket type
+     * default protocol appropriate for the requested socket type.
      */
-    if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
     {
-        error();  ///< Error if the socket descriptor has a value lower than 0 -
-                  /// socket wasnt created
+        error();
     }
 
     /**
@@ -88,7 +87,7 @@ int main()
      *
      * The bzero() function erases the data in the n bytes of the memory
      * starting at the location pointed to, by writing zeros (bytes
-     * containing '\0') to that area
+     * containing '\0') to that area.
      *
      * We bind the server_addr to the internet address and port number thus
      * giving our socket an identity with an address and port where it can
@@ -108,8 +107,6 @@ int main()
     server_addr.sin_port = htons(PORT);
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    printf("Server is running...\n");
-
     /**
      * This binds the socket descriptor to the server thus enabling the server
      * to listen for connections and communicate with other clients
@@ -118,25 +115,8 @@ int main()
     {
         error();  /// If binding is unsuccessful
     }
-    /**
-     * This is to listen for clients or connections made to the server
-     *
-     * The limit is currently at 5 but can be increased to listen for
-     * more connections
-     *
-     * It listens to connections through the socket descriptor
-     */
-    listen(sockfd, 5);
 
-    printf("Server is listening...\n");
-
-    /**
-     * When a connection is found, a socket is created and connection is
-     * accepted and established through the socket descriptor
-     */
-    conn = accept(sockfd, (struct sockaddr *)NULL, NULL);
-
-    printf("Server is connected...\n");
+    printf("Server is Connected Successfully...\n");
 
     /**
      * Communication between client and server
@@ -146,46 +126,28 @@ int main()
      * containing '\0') to that area. The variables are emptied and then
      * ready for use
      *
-     * The fork function call is used to create a child and parent process
-     * which run and execute code simultaneously
+     * The server receives data from the client which is a command. It then
+     * executes the command.
      *
-     * The child process is used to receive data and after doing so
-     * sleeps for 5 seconds to wait for the parent to send data
-     *
-     * The parent process is used to send data and after doing so
-     * sleeps for 5 seconds to wait for the child to receive data
+     * The client then receives a response from the server when the
+     * command has been executed
      *
      * The server and client can communicate indefinitely till one of them
      * exits the connection
      *
-     * Since the exchange of information between the server and client takes
-     * place simultaneously this represents FULL DUPLEX COMMUNICATION
+     * The client sends the server a command which it executes thus showing
+     * remote command execution using UDP
      */
-    pid_t pid;
-    pid = fork();
-    if (pid == 0)  /// Value of 0 is for child process
+    while (1)
     {
-        while (1)
-        {
-            bzero(&recvbuff, sizeof(recvbuff));
-            recv(conn, recvbuff, sizeof(recvbuff), 0);
-            printf("\nCLIENT : %s\n", recvbuff);
-            sleep(5);
-            // break;
-        }
-    }
-    else  /// Parent process
-    {
-        while (1)
-        {
-            bzero(&sendbuff, sizeof(sendbuff));
-            printf("\nType message here: ");
-            fgets(sendbuff, 1024, stdin);
-            send(conn, sendbuff, strlen(sendbuff) + 1, 0);
-            printf("\nMessage Sent!\n");
-            sleep(5);
-            // break;
-        }
+        bzero(recv_msg, sizeof(recv_msg));
+        recvfrom(sockfd, recv_msg, sizeof(recv_msg), 0,
+                 (struct sockaddr *)&client_addr, &clientLength);
+        printf("Command Output: \n");
+        system(recv_msg);
+        printf("Command Executed\n");
+        sendto(sockfd, success_message, sizeof(success_message), 0,
+               (struct sockaddr *)&client_addr, clientLength);
     }
 
     /// Close socket
