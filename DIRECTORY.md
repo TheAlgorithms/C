@@ -5,6 +5,8 @@
 
 ## Client Server
   * [Client](https://github.com/TheAlgorithms/C/blob/master/client_server/client.c)
+  * [Remote Command Exec Udp Client](https://github.com/TheAlgorithms/C/blob/master/client_server/remote_command_exec_udp_client.c)
+  * [Remote Command Exec Udp Server](https://github.com/TheAlgorithms/C/blob/master/client_server/remote_command_exec_udp_server.c)
   * [Server](https://github.com/TheAlgorithms/C/blob/master/client_server/server.c)
   * [Tcp Full Duplex Client](https://github.com/TheAlgorithms/C/blob/master/client_server/tcp_full_duplex_client.c)
   * [Tcp Full Duplex Server](https://github.com/TheAlgorithms/C/blob/master/client_server/tcp_full_duplex_server.c)
