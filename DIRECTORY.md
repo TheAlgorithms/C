@@ -1,5 +1,8 @@
 # List of all files
 
+## Audio
+  * [Alaw](https://github.com/TheAlgorithms/C/blob/master/audio/alaw.c)
+
 ## Client Server
   * [Client](https://github.com/TheAlgorithms/C/blob/master/client_server/client.c)
   * [Server](https://github.com/TheAlgorithms/C/blob/master/client_server/server.c)
@@ -15,6 +18,7 @@
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
   * [Binary To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_octal.c)
   * [C Atoi Str To Integer](https://github.com/TheAlgorithms/C/blob/master/conversions/c_atoi_str_to_integer.c)
+  * [Decimal To Any Base](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_any_base.c)
   * [Decimal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary.c)
   * [Decimal To Binary Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary_recursion.c)
   * [Decimal To Hexa](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_hexa.c)
@@ -23,6 +27,7 @@
   * [Hexadecimal To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal.c)
   * [Hexadecimal To Octal2](https://github.com/TheAlgorithms/C/blob/master/conversions/hexadecimal_to_octal2.c)
   * [Infix To Postfix](https://github.com/TheAlgorithms/C/blob/master/conversions/infix_to_postfix.c)
+  * [Infix To Postfix2](https://github.com/TheAlgorithms/C/blob/master/conversions/infix_to_postfix2.c)
   * [Int To String](https://github.com/TheAlgorithms/C/blob/master/conversions/int_to_string.c)
   * [Octal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_binary.c)
   * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/master/conversions/octal_to_decimal.c)
@@ -89,7 +94,9 @@
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.c)
     * [List](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/list.h)
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/list/main.c)
-  * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue.c)
+  * Queue
+    * [Include](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/include.h)
+    * [Queue](https://github.com/TheAlgorithms/C/blob/master/data_structures/queue/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack.c)
   * Stack
     * [Main](https://github.com/TheAlgorithms/C/blob/master/data_structures/stack/main.c)
@@ -215,6 +222,7 @@
     * [520](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/53.c)
     * [561](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/561.c)
+    * [6](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/6.c)
     * [617](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/617.c)
     * [647](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/647.c)
     * [66](https://github.com/TheAlgorithms/C/blob/master/leetcode/src/66.c)
@@ -268,6 +276,7 @@
   * [Palindrome](https://github.com/TheAlgorithms/C/blob/master/misc/palindrome.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/master/misc/pid.c)
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/master/misc/poly_add.c)
+  * [Postfix Evaluation](https://github.com/TheAlgorithms/C/blob/master/misc/postfix_evaluation.c)
   * [Prime](https://github.com/TheAlgorithms/C/blob/master/misc/prime.c)
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/master/misc/prime_factoriziation.c)
   * [Prime Seive](https://github.com/TheAlgorithms/C/blob/master/misc/prime_seive.c)
@@ -370,6 +379,7 @@
     * [Boyer Moore Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/boyer_moore_search.c)
     * [Naive Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/naive_search.c)
     * [Rabin Karp Search](https://github.com/TheAlgorithms/C/blob/master/searching/pattern_search/rabin_karp_search.c)
+  * [Sentinel Linear Search](https://github.com/TheAlgorithms/C/blob/master/searching/sentinel_linear_search.c)
   * [Ternary Search](https://github.com/TheAlgorithms/C/blob/master/searching/ternary_search.c)
 
 ## Sorting
