@@ -4,7 +4,7 @@
  * @brief Client-side implementation of [Remote Command
  * Execution Using
  * UDP](https://www.imperva.com/learn/ddos/udp-user-datagram-protocol/)
- * @see remote_command_exec_udp_client.c
+ * @see remote_command_exec_udp_server.c
  *
  * @details
  * The algorithm is based on the simple UDP client and server model. It
