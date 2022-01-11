@@ -119,7 +119,7 @@ Include dependency graph for tcp_full_duplex_server.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d6b/tcp__full__duplex__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>&#160;&#160;&#160;10000</td></tr>
-<tr class="memdesc:a614217d263be1fb1a5f76e2ff7be19a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the type in_addr_t and in_port_t.  <a href="../../d1/d6b/tcp__full__duplex__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">More...</a><br /></td></tr>
+<tr class="memdesc:a614217d263be1fb1a5f76e2ff7be19a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the type in_addr_t and in_port_t For structures returned by the network database library - formatted internet addresses and port numbers For in_addr and sockaddr_in structures.  <a href="../../d1/d6b/tcp__full__duplex__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">More...</a><br /></td></tr>
 <tr class="separator:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -149,8 +149,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For the type in_addr_t and in_port_t. </p>
-<p >For structures returned by the network database library - formatted internet addresses and port numbers For in_addr and sockaddr_in structures For specific bit size values of variables Variable types, several macros, and various functions for performing input and output Variable types, several macros, and various functions for performing general functions Various functions for manipulating arrays of characters For macro definitions related to the creation of sockets For definitions to allow for the porting of BSD programs For miscellaneous symbolic constants and types, and miscellaneous functions </p>
+<p>For the type in_addr_t and in_port_t For structures returned by the network database library - formatted internet addresses and port numbers For in_addr and sockaddr_in structures. </p>
+<p >For specific bit size values of variables Variable types, several macros, and various functions for performing input and output Variable types, several macros, and various functions for performing general functions Various functions for manipulating arrays of characters For macro definitions related to the creation of sockets For definitions to allow for the porting of BSD programs For miscellaneous symbolic constants and types, and miscellaneous functions </p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@ Functions</h2></td></tr>
 <p >Variable Declarations</p>
 <p >&lt; socket descriptors - Like file handles but for sockets</p>
 <p >&lt; character arrays to read and store string data for communication</p>
-<p >&lt; asic structures for all syscalls and functions that deal with internet addresses. Structures for handling internet addresses</p>
+<p >&lt; basic structures for all syscalls and functions that deal with internet addresses. Structures for handling internet addresses</p>
 <p >size of address</p>
 <p >The TCP socket is created using the socket function</p>
 <p >AF_INET (Family) - it is an address family that is used to designate the type of addresses that your socket can communicate with</p>
@@ -238,7 +238,7 @@ Functions</h2></td></tr>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">                         /// for communication</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"></span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">struct </span>sockaddr_in server_addr,</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        client_addr;  <span class="comment">///&lt; asic structures for all syscalls and functions that</span><span class="comment"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        client_addr;  <span class="comment">///&lt; basic structures for all syscalls and functions that</span><span class="comment"></span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">                      /// deal with internet addresses. Structures for handling</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">                      /// internet addresses</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span>    socklen_t ClientLen;  <span class="comment">/// size of address</span></div>
@@ -376,7 +376,7 @@ Functions</h2></td></tr>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
 <div class="ttc" id="astructpid_html"><div class="ttname"><a href="../../d0/d43/structpid.html">pid</a></div><div class="ttdoc">PID Controller.</div><div class="ttdef"><b>Definition:</b> pid.c:31</div></div>
-<div class="ttc" id="atcp__full__duplex__server_8c_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="../../d1/d6b/tcp__full__duplex__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdoc">For the type in_addr_t and in_port_t.</div><div class="ttdef"><b>Definition:</b> tcp_full_duplex_server.c:31</div></div>
+<div class="ttc" id="atcp__full__duplex__server_8c_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="../../d1/d6b/tcp__full__duplex__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdoc">For the type in_addr_t and in_port_t For structures returned by the network database library - format...</div><div class="ttdef"><b>Definition:</b> tcp_full_duplex_server.c:31</div></div>
 <div class="ttc" id="atcp__full__duplex__server_8c_html_a7e15c8e2885871839fc2b820dfbdb4ce"><div class="ttname"><a href="../../d1/d6b/tcp__full__duplex__server_8c.html#a7e15c8e2885871839fc2b820dfbdb4ce">error</a></div><div class="ttdeci">void error()</div><div class="ttdoc">Utility function used to print an error message to stderr.</div><div class="ttdef"><b>Definition:</b> tcp_full_duplex_server.c:39</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
