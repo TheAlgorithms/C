@@ -5,8 +5,8 @@ int lengthOfLongestSubstring(char *str)
     if (!n)
         return 0;
 
-    int L_len = 1;  // lenght of longest substring
-    int C_len = 1;  // lenght of current substring
+    int L_len = 1;  // length of longest substring
+    int C_len = 1;  // length of current substring
 
     int P_ind, i;      //  P_ind for previous index
     int visited[256];  //  visited will keep track of visiting char for the last
