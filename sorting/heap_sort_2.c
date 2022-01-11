@@ -81,10 +81,10 @@ void heapifyDown(int8_t *arr, const uint8_t size)
 */
 void heapifyUp(int8_t *arr, uint8_t i)
 {
-    while (i > 0 && arr[i / 2] < arr[i])
+    while (i > 0 && arr[(i - 1) / 2] < arr[i])
     {
-        swap(&arr[i / 2], &arr[i]);
-        i /= 2;
+        swap(&arr[(i - 1) / 2], &arr[i]);
+        i = (i - 1) / 2;
     }
 }
 
