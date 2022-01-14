@@ -100,6 +100,8 @@ int updateValueCArray(CArray *array, int position, int value)
     {
         if (array->array[position] != 0)
         {
+            array->array[position] = value;
+            return SUCCESS;
         }
 
         else
