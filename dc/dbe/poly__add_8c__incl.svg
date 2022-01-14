@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Implementation of Addition of two polynomials">
+<g id="a_node1"><a xlink:title="Implementation of [Addition of two polynomials] (https://en.wikipedia.org/wiki/Polynomial#Addition)">
 <polygon fill="#bfbfbf" stroke="black" points="11,-56.5 11,-75.5 99,-75.5 99,-56.5 11,-56.5"/>
 <text text-anchor="middle" x="55" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">misc/poly_add.c</text>
 </a>
