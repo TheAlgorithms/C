@@ -12,7 +12,7 @@
  * for value, reversing the list, printing the list, and an example of how the
  * list and its functions work were coded.
  *
- * @author  [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
+ * @author [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
  * @author [Yannick Brenning](https://github.com/ybrenning)
  */
 #include <stdio.h>
