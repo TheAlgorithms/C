@@ -9,10 +9,11 @@
  *
  * In this implementation, the functions of creating the list,
  * inserting by position, deleting by position, searching 
- * for value, printing the list, and an example of how the
- * list works were coded.
+ * for value, reversing the list, printing the list, and an example of how the
+ * list and its functions work were coded.
  *
  * @author  [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
+ * @author [Yannick Brenning](https://github.com/ybrenning)
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,6 +59,13 @@ List *delete(List *list, int pos);
  * @returns `0`     if the looked up value doesn't exist
  */
 int search(List *list, double value);
+
+/**
+ * @brief Reverse a given list
+ * @param list pointer to head of list to be reversed
+ * @return reversed list
+ */
+List *reverse(List **list);
 
 /**
  * @brief   Print list function
@@ -149,7 +157,7 @@ List *insert(List *list, double value, int pos)
             List *new_node = (List *)malloc(sizeof(List));
             new_node->value = value;
 
-            // position into list with no poiting for NULL
+            // position into list with no positioning for NULL
             if (flag == pos)
             {
                 cpy->prev->next = new_node;
@@ -216,7 +224,7 @@ List *delete(List *list, int pos)
 
             if (flag == pos)
             {
-                // position into list with no poiting for NULL
+                // position into list with no positioning for NULL
                 if (cpy->next != NULL)
                 {
                     cpy->prev->next = cpy->next;
@@ -246,6 +254,35 @@ int search(List *list, double value)
     if (list->value == value)
         return 1;
     search(list->next, value);
+}
+
+/**
+ * @brief Reverse a given list
+ * @param list pointer to head of list to be reversed
+ * @return reversed list
+ */
+List *reverse(List **list) {
+    // Case 1: linked list is empty or only has one node
+    if (*list == NULL || (*list)->next == NULL)
+        return *list;
+
+    // Case 2: linked list is reverseable
+    List *current = *list, *temp;
+    while (current != NULL) {
+        // Use a temp pointer to swap next and prev pointers
+        temp = current->prev;
+        current->prev = current->next;
+        current->next = temp;
+
+        // Continue traversal (keep in mind `prev` is now
+        // pointing to what used to be the `next` node in the list )
+        current = current->prev;
+    }
+
+    // Last step: set new head node to old tail node
+    *list = temp->prev;
+
+    return *list;
 }
 
 /**
@@ -279,6 +316,12 @@ void example()
     my_list = insert(my_list, 20, 3);
 
     print(my_list);
+    printf("\n");
+
+    reverse(&my_list);
+    print(my_list);
+    printf("\n");
+
     searching = search(my_list, 20);
     printf("\n%d\n", searching);
 
