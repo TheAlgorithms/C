@@ -263,8 +263,9 @@ int search(List *list, double value)
  */
 List *reverse(List **list) {
     // Case 1: linked list is empty or only has one node
-    if (*list == NULL || (*list)->next == NULL)
+    if (*list == NULL || (*list)->next == NULL) {
         return *list;
+    }
 
     // Case 2: linked list is reverseable
     List *current = *list, *temp;
