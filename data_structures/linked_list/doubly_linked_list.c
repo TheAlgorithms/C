@@ -14,6 +14,11 @@
  *
  * @author  [Gabriel Mota Bromonschenkel Lima](https://github.com/GabrielMotaBLima)
  */
+
+/**added by rgarrettrun
+@author  [Joshua Garrett](https://github.com/rgarrettrun)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -58,6 +63,14 @@ List *delete(List *list, int pos);
  * @returns `0`     if the looked up value doesn't exist
  */
 int search(List *list, double value);
+
+/**added by rgarrettrun*/
+/**
+ * @brief Reverse function
+ * @param list pointer to head of list to be reversed
+ * @return reversed list
+ */
+List +reverse(List **list);
 
 /**
  * @brief   Print list function
@@ -248,6 +261,28 @@ int search(List *list, double value)
     search(list->next, value);
 }
 
+/**added by rgarrettrun*/
+/**
+ * @brief Reverse function
+ * @param list pointer to head of list to be reversed
+ * @return reversed list
+ */
+List +reverse(List **list)
+{
+if (*list == NULL || (*list)->next == NULL)
+return *list;
+List *current = *list, *temp;
+while (current != NULL)
+{
+temp = current->prev;
+current->prev = current->next;
+current->next = temp;
+current = current->prev;
+}
+*list = temp->prev;
+return *list;
+}
+
 /**
  * @brief   Print list function
  * @param   list    a doubly linked List
@@ -279,6 +314,13 @@ void example()
     my_list = insert(my_list, 20, 3);
 
     print(my_list);
+
+    /**added by rgarrettrun*/
+    printf("\n");
+    reverse(&my_list);
+    print(my_list);
+    printf("\n");
+
     searching = search(my_list, 20);
     printf("\n%d\n", searching);
 
