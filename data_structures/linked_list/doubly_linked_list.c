@@ -259,6 +259,10 @@ void example() {
     printf("\n%d\n", searching);
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
     example();
     return 0;
