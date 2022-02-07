@@ -39,4 +39,4 @@ int isEmpty();
 */
 void *top();
 
-#endif
+#endif //__STACK__
