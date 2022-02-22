@@ -32,7 +32,7 @@ void dnfSort(int8_t *arr, int size)
             break;
         case 2:
             temp = arr[mid];
-            arr[mid++] = arr[high];
+            arr[mid] = arr[high];
             arr[high--] = temp;
             break;
         default:
@@ -57,45 +57,65 @@ void printArray(int8_t *arr, int size)
 }
 
 /**
- * @brief Input an array of {0, 1, 2} and use the
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
+{
+    int size = 6;
+    int8_t *arr1 = (int8_t *)malloc(sizeof(int8_t) * size);
+    arr1[0] = 1, arr1[1] = 1, arr1[2] = 1, arr1[3] = 2, arr1[4] = 1,
+    arr1[5] = 0;
+    printf("Original: \n");
+    printArray(arr1, size);
+    dnfSort(arr1, size);
+    printf("Sorted: \n");
+    printArray(arr1, size);
+    free(arr1);
+
+    size = 1;
+    int8_t *arr2 = (int8_t *)malloc(sizeof(int8_t) * size);
+    arr2[0] = 2;
+    printf("Original: \n");
+    printArray(arr2, size);
+    dnfSort(arr2, size);
+    printf("Sorted: \n");
+    printArray(arr2, size);
+    free(arr2);
+}
+
+/**
+ * @brief Main Functiuon that reads an array of {0, 1, 2} and use the
  * Dutch National Flag 3-Way sort algorithm to sort
  *
  * @return int 0 if successful 1 if input is not in {0, 1, 2}
  */
 int main(void)
 {
-    int n = 3;
-    int8_t *arr1 = (int8_t *)malloc(sizeof(int8_t) * n);
-    arr1[0] = 2, arr1[1] = 1, arr1[2] = 0;
-    printf("Original: \n");
-    printArray(arr1, n);
-    dnfSort(arr1, n);
-    printf("Sorted: \n");
-    printArray(arr1, n);
-    free(arr1);
-
-    n = 0;
-    printf("Enter size of array:\n");
-    scanf("%d", &n);  // E.g. 8
+    test();
+    int size = 0;
+    printf("Enter size of the array:\n");
+    scanf("%d", &size);  // E.g. 8
 
     printf("Enter the elements in {0, 1, 2} of the array\n");
     int i;
-    int8_t *arr2 = (int8_t *)malloc(sizeof(int8_t) * n);
-    for (i = 0; i < n; i++)
+    int8_t *arr = (int8_t *)malloc(sizeof(int8_t) * size);
+    for (i = 0; i < size; i++)
     {
-        scanf("%" SCNi8, &arr2[i]);
-        if (arr2[i] > 2 || arr2[i] < 0)
+        scanf("%" SCNi8, &arr[i]);
+        if (arr[i] > 2 || arr[i] < 0)
         {
             printf("Elements need to be in {0, 1, 2}");
+            free(arr);
             return 1;
         }
     }
     printf("Original: \n");
-    printArray(arr2, n);
-    dnfSort(arr2, n);
+    printArray(arr, size);
+    dnfSort(arr, size);
     printf("Sorted: \n");
-    printArray(arr2, n);
+    printArray(arr, size);
 
-    free(arr2);
+    free(arr);
     return 0;
 }
