@@ -113,54 +113,49 @@ List *insert(List *list, double value, int pos) {
  * @returns list the updated list
  */
 List *delete(List *list, int pos) {
-    if (list == NULL) {
+    // Non-existing position
+    if (list == NULL || pos <= 0) {
         return list;
     }
 
-    // position existing case
-    if (pos > 0) {
-        List *cpy = list, *tmp = cpy;
-        int flag = 1, index = 1, size = 0;
+    List *head = list;
+    List *temp = head;
+    // first position case
+    if (pos == 1) {
+        head = head->next;
+        head->prev = NULL;
+        free(temp);
 
-        while (tmp != NULL) {
-            size++;
-            tmp = tmp->next;
-        }
-
-        // first position case
-        if (pos == 1) {
-            if (size == 1) {
-                return NULL;
-            }
-
-            cpy = cpy->next;
-            cpy->prev = NULL;
-
-            return cpy;
-        }
-
-        // position existing in list range case
-        if (size + 2 > pos) {
-            while (cpy->next != NULL && index < pos) {
-                flag++;
-                index++;
-                cpy = cpy->next;
-            }
-
-            if (flag == pos) {
-                if (cpy->next != NULL) {
-                    // position into list with no positioning for NULL
-                    cpy->prev->next = cpy->next;
-                    cpy->next->prev = cpy->prev;
-                } else {
-                    // last position case
-                    cpy->prev->next = NULL;
-                }
-            }
-        }
-
-        return list;
+        return head;
     }
+
+    // Get to node before position which we want to delete
+    for (int i = 1; i < pos - 1; i++) {
+        // Check if index is out of bounds
+        if (temp->next == NULL) {
+            return NULL;
+        }
+
+        temp = temp->next;
+    }
+
+    if (temp->next == NULL) {
+        return NULL;
+    }
+
+    List *new_next = temp->next->next;
+    if (new_next == NULL) {
+        // Deleting the final node
+        free(temp->next);
+        temp->next = NULL;
+    } else {
+        // Link nodes before and after node to be deleted
+        new_next->prev = temp;
+        free(temp->next);
+        temp->next = new_next;
+    }
+
+    return head;
 }
 
 /**
@@ -247,16 +242,18 @@ void example() {
     printf("\n");
 
     searching = search(my_list, 20);
-    printf("\n%d\n", searching);
+    printf("%d\n", searching);
 
     my_list = delete (my_list, 1);
-    my_list = delete (my_list, 1);
-    my_list = delete (my_list, 1);
-    my_list = delete (my_list, 1);
-
     print(my_list);
+    printf("\n");
+
+    my_list = delete(my_list, 2);
+    print(my_list);
+    printf("\n");
+
     searching = search(my_list, 20);
-    printf("\n%d\n", searching);
+    printf("%d\n", searching);
 }
 
 int main() {
