@@ -248,7 +248,7 @@ void example() {
     print(my_list);
     printf("\n");
 
-    my_list = delete(my_list, 2);
+    my_list = delete_list(my_list, 2);
     print(my_list);
     printf("\n");
 
