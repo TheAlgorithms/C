@@ -244,7 +244,7 @@ void example() {
     searching = search(my_list, 20);
     printf("%d\n", searching);
 
-    my_list = delete (my_list, 1);
+    my_list = delete_list(my_list, 1);
     print(my_list);
     printf("\n");
 
