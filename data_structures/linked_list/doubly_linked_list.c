@@ -112,7 +112,7 @@ List *insert(List *list, double value, int pos) {
  * @param pos position of node to be deleted
  * @returns list the updated list
  */
-List *delete(List *list, int pos) {
+List *delete_list(List *list, int pos) {
     // Non-existing position
     if (list == NULL || pos <= 0) {
         return list;
