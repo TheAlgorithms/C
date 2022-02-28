@@ -8,6 +8,7 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 /**
  * @brief Dutch National Flag 3-Way inplace sort algorithm
@@ -71,6 +72,12 @@ static void test()
     dnfSort(arr1, size);
     printf("Sorted: \n");
     printArray(arr1, size);
+    
+    int8_t compare1[] = {0, 1, 1, 1, 1, 2};
+    for (int c = 0; c < size; c++)
+    {
+        assert(arr1[c] == compare1[c]);
+    }
     free(arr1);
 
     size = 1;
@@ -81,6 +88,12 @@ static void test()
     dnfSort(arr2, size);
     printf("Sorted: \n");
     printArray(arr2, size);
+    
+    int8_t compare2[] = {2};
+    for (int c = 0; c < size; c++)
+    {
+        assert(arr2[c] == compare2[c]);
+    }
     free(arr2);
 }
 
