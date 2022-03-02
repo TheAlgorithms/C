@@ -3,12 +3,12 @@
  * @brief Program to perform [dutch national
  * flag](https://en.wikipedia.org/wiki/Dutch_national_flag_problem) of a target
  * value in a given {0, 1, 2} containing array.
- * @authors [Bijan Riesenberg](https://github.com/Data-Hero) Iterative
+ * @author [Bijan Riesenberg](https://github.com/Data-Hero) Iterative
  */
-#include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+#include <inttypes.h>   /// for the 8 bit sized int8_t type
+#include <stdio.h>      /// for IO operations
+#include <stdlib.h>     /// for memory allocation
+#include <assert.h>     /// for assert
 
 /**
  * @brief Dutch National Flag 3-Way inplace sort algorithm
