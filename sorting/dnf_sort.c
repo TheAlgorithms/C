@@ -67,12 +67,7 @@ static void test()
     int8_t *arr1 = (int8_t *)malloc(sizeof(int8_t) * size);
     arr1[0] = 1, arr1[1] = 1, arr1[2] = 1, arr1[3] = 2, arr1[4] = 1,
     arr1[5] = 0;
-    printf("Original: \n");
-    printArray(arr1, size);
     dnfSort(arr1, size);
-    printf("Sorted: \n");
-    printArray(arr1, size);
-    
     int8_t compare1[] = {0, 1, 1, 1, 1, 2};
     for (int c = 0; c < size; c++)
     {
@@ -83,12 +78,7 @@ static void test()
     size = 1;
     int8_t *arr2 = (int8_t *)malloc(sizeof(int8_t) * size);
     arr2[0] = 2;
-    printf("Original: \n");
-    printArray(arr2, size);
     dnfSort(arr2, size);
-    printf("Sorted: \n");
-    printArray(arr2, size);
-    
     int8_t compare2[] = {2};
     for (int c = 0; c < size; c++)
     {
