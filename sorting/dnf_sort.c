@@ -100,7 +100,7 @@ static void test()
  */
 int main(void)
 {
-    test();
+    test();  // run self-test implementations
     int size = 0;
     printf("Enter size of the array:\n");
     scanf("%d", &size);  // E.g. 8
