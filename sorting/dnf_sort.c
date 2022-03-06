@@ -3,12 +3,17 @@
  * @brief Program to perform [dutch national
  * flag](https://en.wikipedia.org/wiki/Dutch_national_flag_problem) of a target
  * value in a given {0, 1, 2} containing array.
+ * @details The dutch national flag problem is a computer science programming
+ * problem proposed by Edsger Dijkstra.
+ * Given a length n array of thee values, say red(0), white(1) and blue(2), the
+ * task is to order them by group. This is achieved by moving three pointers and
+ * swapping values depending on the value of the middle pointer.
  * @authors [Bijan Riesenberg](https://github.com/Data-Hero) Iterative
  */
+#include <assert.h>
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 /**
  * @brief Dutch National Flag 3-Way inplace sort algorithm
