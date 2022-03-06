@@ -8,17 +8,18 @@
  * Given a length n array of thee values, say red(0), white(1) and blue(2), the
  * task is to order them by group. This is achieved by moving three pointers and
  * swapping values depending on the value of the middle pointer.
- * @authors [Bijan Riesenberg](https://github.com/Data-Hero) Iterative
+ * @author [Bijan Riesenberg](https://github.com/Data-Hero) Iterative
  */
-#include <assert.h>
-#include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <assert.h>    /// for assert
+#include <inttypes.h>  /// for the 8 bit sized int8_t type
+#include <stdio.h>     /// for IO operations
+#include <stdlib.h>    /// for memory allocation
 
 /**
  * @brief Dutch National Flag 3-Way inplace sort algorithm
  * @param arr array containting elements from {0, 1, 2} to be sorted
  * @param size size of the array
+ * @returns void
  */
 void dnfSort(int8_t *arr, int size)
 {
@@ -49,9 +50,9 @@ void dnfSort(int8_t *arr, int size)
 
 /**
  * @brief Print an array containing int8_t elements
- *
  * @param arr array containting elements from {0, 1, 2} (int8_t) to be printed
  * @param size size of the array
+ * @returns void
  */
 void printArray(int8_t *arr, int size)
 {
@@ -95,8 +96,7 @@ static void test()
 /**
  * @brief Main Functiuon that reads an array of {0, 1, 2} and use the
  * Dutch National Flag 3-Way sort algorithm to sort
- *
- * @return int 0 if successful 1 if input is not in {0, 1, 2}
+ * @returns int 0 if successful 1 if input is not in {0, 1, 2}
  */
 int main(void)
 {
