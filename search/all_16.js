@@ -33,5 +33,5 @@ var searchData=
   ['top_30',['top',['../dd/d10/struct_stack.html#ad62fb36816185f3eef3a6f735a61f54a',1,'Stack']]],
   ['top_31',['Top',['../da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf',1,'infix_to_postfix2.c']]],
   ['tos_32',['tos',['../dd/d10/struct_stack.html#ac2dbef151bc913684a90b06836725ef9',1,'Stack']]],
-  ['trienode_33',['TrieNode',['../da/d9b/struct_trie_node.html',1,'']]]
+  ['trie_33',['trie',['../d4/dd9/structtrie.html',1,'']]]
 ];

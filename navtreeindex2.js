@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d9/dc9/hash__crc32_8c.html":[15,0,10,1],
 "d9/dc9/hash__crc32_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,10,1,1],
 "d9/dcc/prim_8c.html":[15,0,9,0],
 "d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853":[15,0,9,0,3],
@@ -89,7 +90,6 @@ var NAVTREEINDEX2 =
 "da/d96/infix__to__postfix2_8c.html#aa8dca7b867074164d5f45b0f3851269d":[15,0,2,5,7],
 "da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b":[15,0,2,5,1],
 "da/d96/infix__to__postfix2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,2,5,3],
-"da/d9b/struct_trie_node.html":[14,0,40],
 "da/da0/segment__tree_8c.html":[15,0,3,1,1],
 "da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c":[15,0,3,1,1,10],
 "da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde":[15,0,3,1,1,7],

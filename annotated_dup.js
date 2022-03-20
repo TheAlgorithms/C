@@ -40,7 +40,7 @@ var annotated_dup =
     [ "T", "d5/d7e/struct_t.html", null ],
     [ "term", "df/d86/structterm.html", "df/d86/structterm" ],
     [ "tnode", "d8/d7a/structtnode.html", null ],
-    [ "TrieNode", "da/d9b/struct_trie_node.html", null ],
+    [ "trie", "d4/dd9/structtrie.html", null ],
     [ "vec_3d_", "d5/db4/structvec__3d__.html", "d5/db4/structvec__3d__" ],
     [ "word_count_word", "df/ddb/structword__count__word.html", null ]
 ];
