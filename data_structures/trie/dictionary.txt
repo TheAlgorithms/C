@@ -11398,7 +11398,6 @@ ancylostome
 ancylostomiasis
 ancyroid
 and
-and/or
 anda
 andabata
 andabatarian
@@ -23796,8 +23795,6 @@ azymous
 b
 bhoy
 bs
-b/l
-b/s
 ba
 baa
 baaed
@@ -41542,10 +41539,6 @@ byzants
 bz
 c
 cs
-c/d
-c/f
-c/m
-c/o
 ca
 ca
 cacanny
@@ -126581,7 +126574,6 @@ hailweed
 haily
 haimsucken
 hain
-hain"t
 haint
 hainberry
 hainch
@@ -128730,7 +128722,6 @@ hdlc
 hdqrs
 hdwe
 he
-he"ll
 hed
 hell
 hes
@@ -139010,7 +139001,6 @@ ill
 im
 is
 ive
-i/c
 ia
 iago
 iamatology
@@ -145956,7 +145946,6 @@ inpours
 inpush
 input
 inputs
-input/output
 inputfile
 inputs
 inputted
@@ -151770,7 +151759,6 @@ isuretine
 isuroid
 isz
 it
-it"ll
 itd
 itll
 its
@@ -155260,7 +155248,6 @@ kb
 kbar
 kbps
 kc
-kc/s
 kcal
 kea
 keach
@@ -156978,7 +156965,6 @@ klva
 klystron
 klystrons
 km
-km/sec
 kmel
 kmet
 kmole
@@ -158105,7 +158091,6 @@ lenvoy
 loeil
 ls
 ltre
-l/w
 la
 laager
 laagered
@@ -164745,8 +164730,6 @@ ller
 lloyds
 llyn
 lm
-lm/ft
-lm/m
 ln
 lndg
 lnr
@@ -167403,7 +167386,6 @@ lyttas
 lyxose
 m
 ms
-m/s
 ma
 maam
 maad
@@ -185958,8 +185940,6 @@ n
 ngana
 nimporte
 ns
-n/a
-n/f
 na
 naa
 naam
@@ -198979,8 +198959,6 @@ oclock
 oer
 oertop
 os
-o/c
-o/s
 oad
 oadal
 oaf
@@ -345815,8 +345793,6 @@ vyingly
 vyrnwy
 w
 ws
-w/
-w/o
 wa
 wa
 waac
