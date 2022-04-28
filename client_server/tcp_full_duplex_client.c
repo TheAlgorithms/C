@@ -10,7 +10,7 @@
  * instead of the server only sending and the client only receiving data,
  * The server and client can both send and receive data simultaneously. This is
  * implemented by using the `fork` function call so that in the server the child
- * process can recieve data and  parent process can send data, and in the client
+ * process can receive data and  parent process can send data, and in the client
  * the child process can send data and the parent process can receive data. It
  * runs an infinite loop and can send and receive messages indefinitely until
  * the user exits the loop. In this way, the Full Duplex Form of communication

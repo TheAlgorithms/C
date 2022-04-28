@@ -159,7 +159,7 @@ void print_int_value(int n, int width, int precision)
 
 	while (n > 0) {
 		*s++ = n % 10 + '0'; // Converts last digit of number to character and store it in p
-		++size; // Increment size variable as one more digit is occured
+		++size; // Increment size variable as one more digit is occurred
 		n /= 10; // Removes the last digit from the number n as we have successfully stored it in p
 	}
 	*s = '\0';

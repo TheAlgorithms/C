@@ -48,7 +48,7 @@ void push(struct node *p)
     temp->link = top;
     top = temp;
 
-    printf("Inserted succesfully.\n");
+    printf("Inserted successfully.\n");
 }
 void pop(struct node *p)
 {

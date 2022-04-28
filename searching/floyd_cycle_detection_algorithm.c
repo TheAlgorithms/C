@@ -24,7 +24,7 @@
  */
 uint32_t duplicateNumber(const uint32_t *in_arr, size_t n)
 {
-    if (n <= 1) {  // to find duplicate in an array its size should be atleast 2
+    if (n <= 1) {  // to find duplicate in an array its size should be at least 2
         return -1;
     }
     uint32_t tortoise = in_arr[0];  ///< variable tortoise is used for the longer
