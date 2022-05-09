@@ -76,7 +76,7 @@ int main()
     join(union_set, 0, 5);
     if (find(union_set, 0) == find(union_set, 3))
     {
-        printf("0 and 3 are groupped together\n");
+        printf("0 and 8 are groupped together\n");
     }
     printf("The array is now: ");
     for (int i = 0; i < 10; i++)
