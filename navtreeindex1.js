@@ -1,8 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d4/d99/ode__semi__implicit__euler_8c.html":[15,0,14,5],
-"d4/d99/ode__semi__implicit__euler_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,14,5,2],
-"d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb":[15,0,14,5,5],
 "d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a":[15,0,14,5,1],
 "d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4":[15,0,14,5,3],
 "d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09":[15,0,14,5,0],
@@ -21,8 +18,7 @@ var NAVTREEINDEX1 =
 "d4/dcc/strong__number_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,13,10,1],
 "d4/dd4/struct_graph.html":[14,0,16],
 "d4/dd9/structtrie.html":[14,0,40],
-"d4/de3/hash__djb2_8c.html":[15,0,10,2],
-"d4/de3/hash__djb2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,10,2,1],
+"d4/de3/hash__djb2_8c.html":[13,1,2],
 "d4/dea/problem__14_2sol1_8c.html":[15,0,15,4,0],
 "d4/dea/problem__14_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,15,4,0,1],
 "d4/dea/problem__14_2sol1_8c.html#a81c1df5c17cb16bcc16e346fcff6fa80":[15,0,15,4,0,0],
@@ -154,8 +150,7 @@ var NAVTREEINDEX1 =
 "d6/ded/shell__sort2_8c.html":[15,0,17,11],
 "d6/ded/shell__sort2_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,17,11,0],
 "d6/df3/graph_8h_source.html":[15,0,3,4,0],
-"d7/d0c/hash__sdbm_8c.html":[15,0,10,3],
-"d7/d0c/hash__sdbm_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,10,3,0],
+"d7/d0c/hash__sdbm_8c.html":[13,1,3],
 "d7/d1f/problem__12_2sol1_8c.html":[15,0,15,2,0],
 "d7/d1f/problem__12_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,15,2,0,1],
 "d7/d1f/problem__12_2sol1_8c.html#aa6ce6271f6156e219f9b290717f5a222":[15,0,15,2,0,0],
@@ -249,5 +244,10 @@ var NAVTREEINDEX1 =
 "d9/d8b/structmat__3x3__.html#a8d7ae8fbcc408e3c30e9d64bbd28feaf":[13,0,1,0,1],
 "d9/d8b/structmat__3x3__.html#ac74f33a2e1ad1f6db74d94807cf1f64e":[13,0,1,0,0],
 "d9/da7/problem__10_2sol2_8c.html":[15,0,15,1,1],
-"d9/da7/problem__10_2sol2_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,15,1,1,0]
+"d9/da7/problem__10_2sol2_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,15,1,1,0],
+"d9/dc9/hash__crc32_8c.html":[13,1,1],
+"d9/dcc/prim_8c.html":[15,0,9,0],
+"d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853":[15,0,9,0,3],
+"d9/dcc/prim_8c.html#a392fb874e547e582e9c66a08a1f23326":[15,0,9,0,0],
+"d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc":[15,0,9,0,2]
 };

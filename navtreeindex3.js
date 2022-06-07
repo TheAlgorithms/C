@@ -1,11 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63":[15,0,15,11,0,4],
-"dd/d8b/problem__22_2sol1_8c.html#a6cb9b08aacb61416795ee78bfceacd38":[15,0,15,11,0,1],
-"dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d":[15,0,15,11,0,2],
-"dd/d8b/problem__22_2sol1_8c.html#afd709f201d7643c3909621f620ea648a":[15,0,15,11,0,0],
-"dd/d8c/adaline__learning_8c.html":[15,0,12,0],
-"dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6":[15,0,12,0,11],
 "dd/d8c/adaline__learning_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,12,0,8],
 "dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1":[15,0,12,0,12],
 "dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9":[15,0,12,0,10],
