@@ -149,7 +149,8 @@
   * [Spirograph](https://github.com/TheAlgorithms/C/blob/master/graphics/spirograph.c)
 
 ## Greedy Approach
-  * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
+  * [Dijkstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/dijkstra.c)
+  * [Fractional Knapsack](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/fractional_knapsack.c)
   * [Prim](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/prim.c)
 
 ## Hash
