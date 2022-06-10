@@ -3,7 +3,7 @@
  * @author [Rajdeep Ghosh](https://github.com/sl1mb0)
  * @brief [Knapsack problem](https://en.wikipedia.org/wiki/Knapsack_problem)
  * implementation in C to find the Greedy solution to the Fractional Knapsack problem.
- * @details Fractional Knapsack is a problem in which the goal is to maximize the profit by filling a knapsack with items, which can be fully or fractionally taken.
+ * @details Fractional Knapsack is a problem in which the goal is to maximize the profit by filling a knapsack with items, which can be fully or fractionally(partially) taken.
  *
 */
 
