@@ -137,6 +137,7 @@
     * [Word Count](https://github.com/TheAlgorithms/C/blob/master/exercism/word_count/word_count.h)
 
 ## Games
+  * [Game Of Life](https://github.com/TheAlgorithms/C/blob/master/games/game_of_life.c)
   * [Naval Battle](https://github.com/TheAlgorithms/C/blob/master/games/naval_battle.c)
   * [Tic Tac Toe](https://github.com/TheAlgorithms/C/blob/master/games/tic_tac_toe.c)
 
@@ -149,7 +150,7 @@
   * [Spirograph](https://github.com/TheAlgorithms/C/blob/master/graphics/spirograph.c)
 
 ## Greedy Approach
-  * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
+  * [Dijkstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/dijkstra.c)
   * [Prim](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/prim.c)
 
 ## Hash
