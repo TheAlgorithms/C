@@ -7,15 +7,29 @@
  * It is a zero-player game, meaning that its evolution is determined by
  * its initial state, requiring no further input. One interacts with the Game of
  * Life by creating an initial configuration and observing how it evolves.
+ * You can just run game - it will random generate init state, or write
+ * your init state to file as a matrix of 0s and 1s of size 48x48. Lines can be
+ * not completed as well as matrix. For example:
+ * 00100
+ * 01
+ * 1
+ * is a valid init state file. All 0s and not defined cells will be dead
+ * at the start.
+ * That version is using cycle grid - if cell "go" outside of grid to the right
+ * - it will appear to the left side. Same for vertical direction.
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
+#include <stdio.h>   ///< for Standart Input Output
+#include <stdlib.h>  ///< for random generation and exit function
+#include <time.h>    ///< for get random generation seed as time(NULL)+clock()
+
+/**
+ * Choose correct header for "sleep" function depending on platform
+ */
 #ifdef _WIN32
 #include <windows.h>
 #else
-#include <poll.h>
+#include <poll.h>  ///< we will use poll, cause usleep/etc is not always available
 #endif
 
 // Functions Declarations
@@ -40,7 +54,7 @@ static const char aliveChar = '1';
 /**
  * Current state of grid to draw
  */
-static char grid[MAX_ROWS][MAX_COLS];
+static char currGrid[MAX_ROWS][MAX_COLS];
 /**
  * Previous state of grid
  */
@@ -49,6 +63,7 @@ static char prevGrid[MAX_ROWS][MAX_COLS];
 int main(int argc, char **argv)
 {
     initGrid();
+    // Check for valid number of args
     if (argc > 2)
     {
         fprintf(stderr, "Too many args\n");
@@ -66,17 +81,27 @@ int main(int argc, char **argv)
     return 0;
 }
 
+/**
+ * @brief Initializes all cells as dead
+ *
+ * @returns None
+ */
 void initGrid(void)
 {
     for (int i = 0; i < MAX_ROWS; i++)
     {
         for (int j = 0; j < MAX_COLS; j++)
         {
-            grid[i][j] = deadChar;
+            currGrid[i][j] = deadChar;
         }
     }
 }
 
+/**
+ * @brief Turns some cells to alive by random
+ *
+ * @returns None
+ */
 void randomGrid(void)
 {
     srand(time(NULL) + clock());
@@ -86,14 +111,20 @@ void randomGrid(void)
         {
             if (rand() % 5 == 1)
             {
-                grid[i][j] = aliveChar;
+                currGrid[i][j] = aliveChar;
             }
         }
     }
 }
 
 /**
- * @brief
+ * @brief Reads init state for Game Of Life from file with name fileName. Skips
+ * all characters, besides of '\n', '0', '1'
+ * @details if some line contains more, than 48 valid chars - it treated, as
+ * more than one grid row writed in one line
+ *
+ * @param fileName name of input file
+ * @returns None
  */
 void readInitFromFile(char *fileName)
 {
@@ -110,8 +141,8 @@ void readInitFromFile(char *fileName)
     {
         if (currentCol >= MAX_COLS)
         {
-            currentCol = 0;
             currentRow++;
+            currentCol = 0;
         }
         if (currentRow >= MAX_ROWS)
         {
@@ -120,7 +151,7 @@ void readInitFromFile(char *fileName)
 
         if (c == aliveChar || c == deadChar)
         {
-            grid[currentRow][currentCol] = c;
+            currGrid[currentRow][currentCol] = c;
             currentCol++;
         }
         else if (c == '\n')
@@ -131,17 +162,30 @@ void readInitFromFile(char *fileName)
     }
 }
 
+/**
+ * @brief Copes current grid to prevGrid
+ * for purpose of further calculations
+ *
+ * @return None
+ */
 void copyGridToPrev(void)
 {
     for (int i = 0; i < MAX_ROWS; i++)
     {
         for (int j = 0; j < MAX_COLS; j++)
         {
-            prevGrid[i][j] = grid[i][j];
+            prevGrid[i][j] = currGrid[i][j];
         }
     }
 }
 
+/**
+ * @brief Calculates valid "on grid" position from given index,
+ * that may be bigger then size of grid, or negative
+ *
+ * @param i index of row
+ * @return valid row position in grid
+ */
 int calcRowIndex(int i)
 {
     if (i < 0)
@@ -154,6 +198,13 @@ int calcRowIndex(int i)
     }
 }
 
+/**
+ * @brief Calculates valid "on grid" position from given index,
+ * that may be bigger then size of grid, or negative
+ *
+ * @param i index of col
+ * @return valid col position in grid
+ */
 int calcColIndex(int i)
 {
     if (i < 0)
@@ -166,6 +217,14 @@ int calcColIndex(int i)
     }
 }
 
+/**
+ * @brief Calculates amount of alive neighbors
+ * of cell in 8 directions by given x,y coordinates
+ *
+ * @param x column position
+ * @param y row position
+ * @return amount of alive neighbors
+ */
 int countNeighbors(int x, int y)
 {
     int aliveNeighbors = 0;
@@ -187,8 +246,16 @@ int countNeighbors(int x, int y)
     return aliveNeighbors;
 }
 
+/**
+ * @brief Copes current state to prev state (prevGrid) and
+ * calculates next state out of prev state and writes it
+ * into currGrid
+ *
+ * @returns None
+ */
 void updateGrid(void)
 {
+    // Save current state as prev
     copyGridToPrev();
     for (int i = 0; i < MAX_ROWS; i++)
     {
@@ -199,23 +266,30 @@ void updateGrid(void)
             case 2:
                 if (prevGrid[i][j] == aliveChar)
                 {
-                    grid[i][j] = aliveChar;
+                    currGrid[i][j] = aliveChar;
                 }
                 break;
             case 3:
-                grid[i][j] = aliveChar;
+                currGrid[i][j] = aliveChar;
                 break;
             default:
-                grid[i][j] = deadChar;
+                currGrid[i][j] = deadChar;
                 break;
             }
         }
     }
 }
 
+/**
+ * @brief Outputs current state of grid
+ *
+ * @returns None
+ */
 void showGrid(void)
 {
+    // Escape-code for clean entire screen
     fputs("\033[2J", stdout);
+    // Escape-code for setting cursor to "home" position
     fputs("\033[H", stdout);
     putchar('\n');
     fputs("    ", stdout);
@@ -224,42 +298,55 @@ void showGrid(void)
         putchar('*');
     }
     putchar('\n');
+
     for (int i = 0; i < MAX_ROWS; i++)
     {
         fputs("    * ", stdout);
         for (int j = 0; j < MAX_COLS; j++)
         {
-            if (grid[i][j] == aliveChar)
+            if (currGrid[i][j] == aliveChar)
             {
+                // Set output color to bright green
                 fputs("\033[38;5;46m", stdout);
             }
             else
             {
+                // Set output color to dark red
                 fputs("\033[38;5;52m", stdout);
             }
             putchar('O');
             putchar(' ');
         }
+        // Reset colors
         fputs("\033[0m", stdout);
         putchar('*');
         putchar('\n');
     }
+
     fputs("    ", stdout);
     for (int i = 0; i < MAX_COLS * 2 + 3; i++)
     {
         putchar('*');
     }
+
     fflush(stdout);
 }
 
+/**
+ * @brief Endless game loop
+ * @details 1. Output current state. 2.Calculate next state. 3. Wait for 400ms.
+ * Go to 1
+ * @returns None
+ */
 void runGame(void)
 {
     while (1)
     {
         showGrid();
         updateGrid();
+// Choose correct "sleep function". Sleep for 400 ms
 #ifdef _WIN32
-        Sleep(500);
+        Sleep(400);
 #else
         poll(NULL, 0, 400);
 #endif
