@@ -45,8 +45,11 @@ static void showGrid(void);
 static void runGame(void);
 
 // Size of game grid
-#define MAX_ROWS 48
-#define MAX_COLS 48
+enum
+{
+    MAX_ROWS = 48,
+    MAX_COLS = 48
+};
 // Chars, that represents alive and dead cells
 static const char deadChar = '0';
 static const char aliveChar = '1';
