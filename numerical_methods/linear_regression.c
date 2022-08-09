@@ -14,6 +14,8 @@ int main()
     scanf("%d", &n);
     printf("Enter data:\n");
     printf("============\n");
+    
+    //saving user input into the array
     for (i = 1; i <= n; i++)
     {
         printf("\n(Point %d)\n",i);
@@ -32,12 +34,12 @@ int main()
         sumXY = sumXY + x[i] * y[i];
     }
 
-    /* Calculating a and b */
+    /* Calculating m and c */
     m = (n * sumXY - sumX * sumY) / (n * sumPowX - pow(sumX,2));
     c = (sumY - m * sumX) / n;
 
 
-    /* Displaying value of a and b */
+    /* Displaying value of m and c */
     printf("Values are: a=%0.2f and b = %0.2f", c, m);
     if (c < 0)
     {
