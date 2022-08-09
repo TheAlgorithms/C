@@ -3,7 +3,15 @@
 
 int main(void)
 {
-   double Adjacent=2, Opposite=3, Hypotenuse=4;
+   double Adjacent, Opposite, Hypotenuse;
+   
+   //Input Adjacent
+   printf("Input Adjacent: ");
+   scanf("%lf", &Adjacent);
+   printf("Input Opposite: ");
+   scanf("%lf", &Opposite);
+   printf("Input Hypotenuse: ");
+   scanf("%lf", &Hypotenuse);
    
    //Hypotenuse
    double Hypo = (pow(Adjacent,2)) + (pow(Opposite,2));
