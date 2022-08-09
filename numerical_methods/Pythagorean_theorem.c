@@ -42,7 +42,7 @@ do{
       Opp();
       break;
    }
-   }while(ch > 0 && ch < 3);
+   }while(ch > 0 && ch < 4);
    
    return 0;
 }
