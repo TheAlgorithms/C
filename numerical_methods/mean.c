@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 {
     int *a, n = 10, i, j, temp, sum = 0;
     float mean;
-
+  //de
     if (argc == 2)
     {
         n = atoi(argv[1]);
