@@ -24,7 +24,26 @@ jobs:
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+ 
 
-    - run: npm install
-    - run: npm run build --if-present
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      # Execute tests defined by the CMake configuration.  
+      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+      run: ctest -C ${{env.BUILD_TYPE}}
+      
+    - name: configure
+      run: cmake -G Ninja -B ./build -S .
+    - name: build
+      run: cmake --build build -t doc
+      
+   # - name: Docker Build and Push C
+   # - uses: mr-smithers-excellent/docker-build-push@v5
+   #   with:
+   #     image: docker-hub-repo/image-name
+   #     registry: docker.io
+   #     username: ${{ secrets.DOCKER_USERNAME }}
+   #     password: ${{ secrets.DOCKER_PASSWORD }}
+   
+   
       
