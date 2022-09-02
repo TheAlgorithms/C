@@ -149,7 +149,7 @@
   * [Spirograph](https://github.com/TheAlgorithms/C/blob/master/graphics/spirograph.c)
 
 ## Greedy Approach
-  * [Djikstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/djikstra.c)
+  * [Dijkstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/dijkstra.c)
   * [Prim](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/prim.c)
 
 ## Hash
@@ -418,3 +418,5 @@
   * [Shell Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort.c)
   * [Shell Sort2](https://github.com/TheAlgorithms/C/blob/master/sorting/shell_sort2.c)
   * [Stooge Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/stooge_sort.c)
+
+## [Tic Tac Toe Game](https://github.com/TheAlgorithms/C/blob/master//tic_tac_toe_game.c)
