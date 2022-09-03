@@ -20,18 +20,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    #- name: Configure CMake
+    - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-    # run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
-    - name: Install requirements
-      run: |
-          brew install graphviz ninja doxygen
-    - name: configure
-      run: cmake -G Ninja -B ./build -S .
-    - name: build
-      run: cmake --build build -t doc
+    #- name: Install requirements
+    #  run: |
+    #      brew install graphviz ninja doxygen
+    #- name: configure
+    #  run: cmake -G Ninja -B ./build -S .
+    #- name: build
+    #  run: cmake --build build -t doc
 
     - name: Test
       working-directory: ${{github.workspace}}/build
