@@ -1,0 +1,26 @@
+name: 'build-test'
+
+env:
+  BUILD_TYPE: Release
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 1 * * SUN'
+  workflow_dispatch:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Setup cmake
+      uses: jwlawson/actions-setup-cmake@v1.12
+      with:
+        cmake-version: '3.16.x'
+        
+    - name: Use cmake
+      run: cmake --version
