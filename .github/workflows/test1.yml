@@ -1,0 +1,51 @@
+name: testing
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install requirements
+      run: |
+          brew install graphviz ninja doxygen
+    - name: configure
+      run: cmake -G Ninja -B ./build -S .
+    - name: build
+      run: cmake --build build -t doc
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      # Execute tests defined by the CMake configuration.  
+      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+      run: ctest -C ${{env.BUILD_TYPE}}
+      
+    - uses: actions/checkout@v2
+      name: Check out code
+      
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker Image
+      with:
+        image: hyiik09/assignment
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+      
+
+      
+   # - name: Docker Build and Push C
+   # - uses: mr-smithers-excellent/docker-build-push@v5
+   #   with:
+   #     image: docker-hub-repo/image-name
+   #     registry: docker.io
+   #     username: ${{ secrets.DOCKER_USERNAME }}
+   #     password: ${{ secrets.DOCKER_PASSWORD }}
+   
+   
+      
