@@ -24,7 +24,7 @@ jobs:
           echo "tag=$(grep ARG Dockerfile | sed 's/ARG v=//' | cut -d '.' -f -2)" >> ${GITHUB_ENV}  
       
     - name: build
-      run: docker build -t crs4/cmake:${{ env.full_tag }} -t crs4/cmake:${{ env.tag }} .
+      run: docker build -t hyiik09/assignment:${{ env.full_tag }} -t hyiik09/assignment:${{ env.tag }} .
 
     - name: Test
       working-directory: ${{github.workspace}}/build
@@ -47,7 +47,7 @@ jobs:
     - name: push
       run: |
           for t in ${{env.full_tag}} ${{env.tag}}; do
-            docker push crs4/cmake:${t}
+            docker push hyiik09/assignment:${t}
           done
 
       
