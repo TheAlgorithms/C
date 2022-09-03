@@ -24,14 +24,3 @@ jobs:
         
     - name: Use cmake
       run: cmake --version
-      
-    - uses: actions/checkout@v2
-      name: Check out code
-      
-    - uses: mr-smithers-excellent/docker-build-push@v5
-      name: Build & push Docker image
-      with:
-        image: hyiik09/assignment3
-        registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
