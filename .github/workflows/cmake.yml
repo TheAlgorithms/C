@@ -22,8 +22,6 @@ jobs:
           brew install graphviz ninja doxygen
     - name: configure
       run: cmake -G Ninja -B ./build -S .
-    - name: build
-      run: cmake --build build -t doc
 
     - name: Test
       working-directory: ${{github.workspace}}/build
@@ -43,12 +41,19 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
       
+
+        
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
       with:
         image: hyiik09/assignment
         registry: docker.io
-      
+        
+    - name: Script
+      run: |
+        docker build -t app .
+        docker tag app hyiik09/assignment
+        docker push hyiik09/assignment
 
       
    # - name: Docker Build and Push C
