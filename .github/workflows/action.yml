@@ -5,9 +5,9 @@ env:
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
   schedule:
     - cron: '0 1 * * SUN'
   workflow_dispatch:
@@ -15,10 +15,8 @@ on:
 jobs:
   example:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v2
-      name: Check out code
-      
     - name: Setup cmake
       uses: jwlawson/actions-setup-cmake@v1.12
       with:
@@ -26,6 +24,9 @@ jobs:
         
     - name: Use cmake
       run: cmake --version
+      
+    - uses: actions/checkout@v2
+      name: Check out code
       
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
