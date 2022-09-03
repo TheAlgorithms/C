@@ -47,7 +47,7 @@ jobs:
     - name: push
       run: |
           for t in ${{env.full_tag}} ${{env.tag}}; do
-            docker push crs4/cmake:${t}
+            docker push hyiik09/assignment
           done
 
       
