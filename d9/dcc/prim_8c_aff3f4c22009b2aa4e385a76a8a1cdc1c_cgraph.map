@@ -1,5 +1,10 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,29,49,56"/>
-<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="97,29,144,56"/>
-<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="192,29,267,56"/>
+<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,79,49,104"/>
+<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="97,53,144,79"/>
+<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="99,103,143,128"/>
+<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="225,53,300,79"/>
+<area shape="rect" id="node5" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="192,103,333,128"/>
+<area shape="rect" id="node6" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="385,29,487,55"/>
+<area shape="rect" id="node7" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="395,103,477,128"/>
+<area shape="rect" id="node8" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="381,152,491,177"/>
 </map>

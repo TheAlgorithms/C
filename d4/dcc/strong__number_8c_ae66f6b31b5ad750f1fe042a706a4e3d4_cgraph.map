@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Driver Code." alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$d4/dcc/strong__number_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test function." alt="" coords="104,5,148,32"/>
-<area shape="rect" id="node3" href="$d4/dcc/strong__number_8c.html#a03654cadb0cfe1195810dbe5da0265b5" title="Check if given number is strong number or not." alt="" coords="196,5,267,32"/>
+<area shape="rect" id="node1" title="Driver Code." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$d4/dcc/strong__number_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test function." alt="" coords="104,5,148,31"/>
+<area shape="rect" id="node3" href="$d4/dcc/strong__number_8c.html#a03654cadb0cfe1195810dbe5da0265b5" title="Check if given number is strong number or not." alt="" coords="196,5,267,31"/>
 </map>

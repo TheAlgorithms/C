@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c" title="Compute Least Common Multiple (LCM) of two numbers." alt="" coords="104,5,147,32"/>
-<area shape="rect" id="node3" href="$d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d" title="Compute Greatest Common Divisor (GCD) of two numbers using Euclids algorithm." alt="" coords="195,5,237,32"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c" title="Compute Least Common Multiple (LCM) of two numbers." alt="" coords="104,5,147,31"/>
+<area shape="rect" id="node3" href="$d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d" title="Compute Greatest Common Divisor (GCD) of two numbers using Euclids algorithm." alt="" coords="195,5,237,31"/>
 </map>

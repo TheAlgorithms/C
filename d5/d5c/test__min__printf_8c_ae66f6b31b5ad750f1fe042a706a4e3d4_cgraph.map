@@ -1,11 +1,15 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="for min_printf function for printf function" alt="" coords="5,81,56,108"/>
-<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#a33e08c05f8c656a0fee465c2e8d2ecf9" title="min_printf is the function same as printf" alt="" coords="104,81,183,108"/>
-<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#a409d428c337bf5476567a228274f49f1" title="Returns specific required next character." alt="" coords="283,5,344,32"/>
-<area shape="rect" id="node4" href="$d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03" title="Takes width and precision specified from the format of the string." alt="" coords="231,56,396,83"/>
-<area shape="rect" id="node7" href="$d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824" title=" " alt="" coords="260,157,367,184"/>
-<area shape="rect" id="node8" href="$d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b" title="Prints one character on screen." alt="" coords="451,107,523,133"/>
-<area shape="rect" id="node5" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="446,5,529,32"/>
-<area shape="rect" id="node6" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="450,56,525,83"/>
-<area shape="rect" id="node9" href="$d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e" title="Reverses a string using two pointer algorithm" alt="" coords="444,157,531,184"/>
+<area shape="rect" id="node1" title="for min_printf function for printf function" alt="" coords="5,131,56,156"/>
+<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#a33e08c05f8c656a0fee465c2e8d2ecf9" title="min_printf is the function same as printf" alt="" coords="104,131,183,156"/>
+<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#a409d428c337bf5476567a228274f49f1" title="Returns specific required next character." alt="" coords="283,5,344,31"/>
+<area shape="rect" id="node4" href="$d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03" title="Takes width and precision specified from the format of the string." alt="" coords="231,55,396,80"/>
+<area shape="rect" id="node7" href="$d9/deb/min__printf_8h.html#a4d63203d920bebd6a96f5f4aeccb21e5" title="The algorithm here is also the same as the print_int_value function." alt="" coords="248,156,379,181"/>
+<area shape="rect" id="node10" href="$d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824" title=" " alt="" coords="464,104,571,129"/>
+<area shape="rect" id="node11" href="$d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b" title="Prints one character on screen." alt="" coords="646,279,718,304"/>
+<area shape="rect" id="node13" href="$d9/deb/min__printf_8h.html#af569209570eca8bc6770fb7d9dc873e6" title=" " alt="" coords="270,355,357,380"/>
+<area shape="rect" id="node5" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="476,5,559,31"/>
+<area shape="rect" id="node6" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="480,55,555,80"/>
+<area shape="rect" id="node8" href="$d9/deb/min__printf_8h.html#aefb40d94d5d9fa2a28bc64755dde096f" title="Calculates the number of digits in a number." alt="" coords="444,203,591,228"/>
+<area shape="rect" id="node9" href="$d9/deb/min__printf_8h.html#a8421f89b76edcf21292c5100bfca586b" title=" " alt="" coords="467,153,567,179"/>
+<area shape="rect" id="node12" href="$d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e" title="Reverses a string using two pointer algorithm" alt="" coords="639,104,725,129"/>
 </map>

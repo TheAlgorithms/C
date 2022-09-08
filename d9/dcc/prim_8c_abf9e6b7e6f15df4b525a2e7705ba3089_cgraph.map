@@ -1,7 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,55,56,81"/>
-<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#aff3f4c22009b2aa4e385a76a8a1cdc1c" title="Self&#45;test implementations." alt="" coords="125,29,169,56"/>
-<area shape="rect" id="node5" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="104,80,191,107"/>
-<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="239,29,285,56"/>
-<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="333,29,408,56"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,141,56,167"/>
+<area shape="rect" id="node2" href="$d1/dba/decimal__to__any__base_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="125,109,169,135"/>
+<area shape="rect" id="node7" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="104,165,191,191"/>
+<area shape="rect" id="node3" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="239,107,380,132"/>
+<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="431,29,534,55"/>
+<area shape="rect" id="node5" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="441,103,524,128"/>
+<area shape="rect" id="node6" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="428,152,537,177"/>
+<area shape="rect" id="node8" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="286,177,333,203"/>
+<area shape="rect" id="node9" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="445,201,520,227"/>
 </map>

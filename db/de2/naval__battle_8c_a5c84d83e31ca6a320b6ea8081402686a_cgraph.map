@@ -1,4 +1,4 @@
 <map id="printPositioning" name="printPositioning">
-<area shape="rect" id="node1" title="Function printPositioning Responsible for printing messages for positioning boats on the board; of pl..." alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef" title="Function printMessage Responsible for printing the auxiliary message." alt="" coords="164,5,264,32"/>
+<area shape="rect" id="node1" title="Function printPositioning Responsible for printing messages for positioning boats on the board; of pl..." alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node2" href="$db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef" title="Function printMessage Responsible for printing the auxiliary message." alt="" coords="164,5,264,31"/>
 </map>

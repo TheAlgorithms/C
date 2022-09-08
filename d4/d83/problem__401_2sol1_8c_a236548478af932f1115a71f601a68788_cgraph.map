@@ -1,5 +1,5 @@
 <map id="sigma2" name="sigma2">
-<area shape="rect" id="node1" title="compute sum of squares of all integer factors of a number" alt="" coords="5,5,69,32"/>
-<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="117,5,209,32"/>
-<area shape="rect" id="node3" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="257,5,307,32"/>
+<area shape="rect" id="node1" title="compute sum of squares of all integer factors of a number" alt="" coords="5,5,69,31"/>
+<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="117,5,209,31"/>
+<area shape="rect" id="node3" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="257,5,307,31"/>
 </map>

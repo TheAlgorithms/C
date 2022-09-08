@@ -1,8 +1,8 @@
 <map id="data_structures/binary_trees/segment_tree.c" name="data_structures/binary_trees/segment_tree.c">
-<area shape="rect" id="node1" title="segment trees with only point updates" alt="" coords="157,5,309,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,75,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,95,178,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="203,95,264,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="288,95,352,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="377,95,442,121"/>
+<area shape="rect" id="node1" title="segment trees with only point updates" alt="" coords="157,5,309,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,75,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,93,178,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,93,264,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="288,93,352,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="377,93,442,119"/>
 </map>

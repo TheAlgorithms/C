@@ -1,5 +1,5 @@
 <map id="adaline_fit_sample" name="adaline_fit_sample">
-<area shape="rect" id="node1" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="5,5,136,32"/>
-<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="184,5,293,32"/>
-<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="341,5,468,32"/>
+<area shape="rect" id="node1" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="5,5,136,31"/>
+<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="184,5,293,31"/>
+<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="341,5,468,31"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="conversions/octal_to_hexadecimal.c" name="conversions/octal_to_hexadecimal.c">
-<area shape="rect" id="node1" title="Octal to hexadecimal conversion by scanning user input." alt="" coords="146,5,289,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,75,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,95,162,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,95,248,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="272,95,336,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="361,95,426,121"/>
+<area shape="rect" id="node1" title="Octal to hexadecimal conversion by scanning user input." alt="" coords="146,5,289,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,75,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,93,162,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="187,93,248,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="272,93,336,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="361,93,426,119"/>
 </map>

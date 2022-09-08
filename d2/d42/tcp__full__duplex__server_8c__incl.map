@@ -1,13 +1,13 @@
 <map id="client_server/tcp_full_duplex_server.c" name="client_server/tcp_full_duplex_server.c">
-<area shape="rect" id="node1" title="Server&#45;side implementation of TCP Full Duplex Communication" alt="" coords="405,5,547,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,88,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,95,178,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="202,95,289,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="313,95,378,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="403,95,464,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="488,95,552,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="577,95,642,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="666,95,763,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="788,95,879,121"/>
-<area shape="rect" id="node11" title=" " alt="" coords="903,95,971,121"/>
+<area shape="rect" id="node1" title="Server&#45;side implementation of TCP Full Duplex Communication" alt="" coords="405,5,547,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,88,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,93,178,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="202,93,289,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="313,93,378,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="403,93,464,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="488,93,552,119"/>
+<area shape="rect" id="node8" title=" " alt="" coords="577,93,642,119"/>
+<area shape="rect" id="node9" title=" " alt="" coords="666,93,763,119"/>
+<area shape="rect" id="node10" title=" " alt="" coords="788,93,879,119"/>
+<area shape="rect" id="node11" title=" " alt="" coords="903,93,971,119"/>
 </map>

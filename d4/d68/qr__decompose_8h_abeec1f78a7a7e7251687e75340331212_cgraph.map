@@ -1,4 +1,4 @@
 <map id="vector_mag" name="vector_mag">
-<area shape="rect" id="node1" title="Compute magnitude of vector." alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node2" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="144,5,227,32"/>
+<area shape="rect" id="node1" title="Compute magnitude of vector." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="node2" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="144,5,227,31"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="misc/sudoku_solver.c" name="misc/sudoku_solver.c">
-<area shape="rect" id="node1" title="Sudoku Solver using recursive implementation of brute&#45;force algorithm." alt="" coords="253,5,401,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,75,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,80,178,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="202,80,265,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="289,80,364,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="388,80,449,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="473,80,537,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="562,80,627,107"/>
+<area shape="rect" id="node1" title="Sudoku Solver using recursive implementation of brute&#45;force algorithm." alt="" coords="253,5,401,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,75,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,79,178,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="202,79,265,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="289,79,364,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="388,79,449,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="473,79,537,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="562,79,627,104"/>
 </map>

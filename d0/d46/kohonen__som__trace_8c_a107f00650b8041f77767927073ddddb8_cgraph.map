@@ -1,4 +1,4 @@
 <map id="test_circle" name="test_circle">
-<area shape="rect" id="node1" title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ..." alt="" coords="5,5,88,32"/>
-<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="136,5,208,32"/>
+<area shape="rect" id="node1" title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ..." alt="" coords="5,5,88,31"/>
+<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="136,5,208,31"/>
 </map>

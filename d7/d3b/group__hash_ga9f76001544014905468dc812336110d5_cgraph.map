@@ -1,4 +1,4 @@
 <map id="test_djb2" name="test_djb2">
-<area shape="rect" id="node1" title="Test function for djb2." alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b" title="DJB2 algorithm implementation." alt="" coords="128,5,175,32"/>
+<area shape="rect" id="node1" title="Test function for djb2." alt="" coords="5,5,80,31"/>
+<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b" title="DJB2 algorithm implementation." alt="" coords="128,5,175,31"/>
 </map>

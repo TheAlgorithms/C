@@ -1,8 +1,8 @@
 <map id="solve" name="solve">
-<area shape="rect" id="node1" title="Function to solve a partially filled sudoku matrix." alt="" coords="5,31,59,57"/>
-<area shape="rect" id="node2" href="$d5/df4/group__sudoku.html#ga62e94fc39f116e2c81daed8f5437431b" title="Find and get the location for next empty cell." alt="" coords="107,5,237,32"/>
-<area shape="rect" id="node3" href="$d5/df4/group__sudoku.html#ga3a0ec150ac9d0cb6b28279d36d95d72f" title="Check if element v is valid to place at (x,y) location." alt="" coords="151,56,193,83"/>
-<area shape="rect" id="node4" href="$d5/df4/group__sudoku.html#ga1cd43df3f4187845ce186042fe53e6f1" title="Check if a 3x3 box is valid." alt="" coords="285,5,348,32"/>
-<area shape="rect" id="node5" href="$d5/df4/group__sudoku.html#ga6503128d4f5ce0a0826f72f73f9e0b2a" title="Check if y^th column is valid." alt="" coords="287,56,346,83"/>
-<area shape="rect" id="node6" href="$d5/df4/group__sudoku.html#ga85d25d3b40017436f264a103685e4c55" title="Check if x^th row is valid." alt="" coords="285,107,348,133"/>
+<area shape="rect" id="node1" title="Function to solve a partially filled sudoku matrix." alt="" coords="5,31,59,56"/>
+<area shape="rect" id="node2" href="$d5/df4/group__sudoku.html#ga62e94fc39f116e2c81daed8f5437431b" title="Find and get the location for next empty cell." alt="" coords="107,5,237,31"/>
+<area shape="rect" id="node3" href="$d5/df4/group__sudoku.html#ga3a0ec150ac9d0cb6b28279d36d95d72f" title="Check if element v is valid to place at (x,y) location." alt="" coords="151,55,193,80"/>
+<area shape="rect" id="node4" href="$d5/df4/group__sudoku.html#ga1cd43df3f4187845ce186042fe53e6f1" title="Check if a 3x3 box is valid." alt="" coords="285,5,348,31"/>
+<area shape="rect" id="node5" href="$d5/df4/group__sudoku.html#ga6503128d4f5ce0a0826f72f73f9e0b2a" title="Check if y^th column is valid." alt="" coords="287,55,346,80"/>
+<area shape="rect" id="node6" href="$d5/df4/group__sudoku.html#ga85d25d3b40017436f264a103685e4c55" title="Check if x^th row is valid." alt="" coords="285,104,348,129"/>
 </map>

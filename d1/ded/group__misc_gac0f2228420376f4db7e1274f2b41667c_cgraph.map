@@ -1,6 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d" title="Test implementations." alt="" coords="104,31,148,57"/>
-<area shape="rect" id="node3" href="$d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a" title="Count func counts the number of prime numbers." alt="" coords="196,5,251,32"/>
-<area shape="rect" id="node4" href="$d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54" title="Prime Sieve works in O(nlogn) time." alt="" coords="196,56,251,83"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d" title="Test implementations." alt="" coords="104,5,148,31"/>
+<area shape="rect" id="node3" href="$d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54" title="Prime Sieve works in O(nlogn) time." alt="" coords="196,5,251,31"/>
 </map>

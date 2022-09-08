@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$d2/d6d/bubble__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test implementations." alt="" coords="104,5,148,32"/>
-<area shape="rect" id="node3" href="$d2/d6d/bubble__sort__2_8c.html#a7406723363363b34f29d18f5a80f1281" title="Bubble sort implementation." alt="" coords="196,5,285,32"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$d2/d6d/bubble__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test implementations." alt="" coords="104,5,148,31"/>
+<area shape="rect" id="node3" href="$d2/d6d/bubble__sort__2_8c.html#a7406723363363b34f29d18f5a80f1281" title="Bubble sort implementation." alt="" coords="196,5,285,31"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="test3" name="test3">
-<area shape="rect" id="node1" title="Test that creates a random set of points distributed in six clusters in 3D space." alt="" coords="5,81,56,108"/>
-<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="343,107,415,133"/>
-<area shape="rect" id="node3" href="$d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="104,5,247,32"/>
-<area shape="rect" id="node6" href="$d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" title="Save a given n&#45;dimensional data martix to file." alt="" coords="124,107,227,133"/>
-<area shape="rect" id="node7" href="$d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="117,157,234,184"/>
-<area shape="rect" id="node4" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="295,5,464,32"/>
-<area shape="rect" id="node5" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="512,5,657,32"/>
+<area shape="rect" id="node1" title="Test that creates a random set of points distributed in six clusters in 3D space." alt="" coords="5,81,56,107"/>
+<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="343,105,415,131"/>
+<area shape="rect" id="node3" href="$d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="104,5,247,31"/>
+<area shape="rect" id="node6" href="$d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" title="Save a given n&#45;dimensional data martix to file." alt="" coords="124,107,227,132"/>
+<area shape="rect" id="node7" href="$d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="117,156,234,181"/>
+<area shape="rect" id="node4" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="295,5,464,31"/>
+<area shape="rect" id="node5" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="512,5,657,31"/>
 </map>

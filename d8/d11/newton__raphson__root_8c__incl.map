@@ -1,9 +1,9 @@
 <map id="numerical_methods/newton_raphson_root.c" name="numerical_methods/newton_raphson_root.c">
-<area shape="rect" id="node1" title="Find approximate solution for &#160;using Newton&#45;Raphson interpolation algorithm." alt="" coords="184,5,365,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,88,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="112,95,176,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="201,95,263,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="288,95,349,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="373,95,437,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="461,95,520,121"/>
+<area shape="rect" id="node1" title="Find approximate solution for &#160;using Newton&#45;Raphson interpolation algorithm." alt="" coords="184,5,365,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,88,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="112,93,176,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="201,93,263,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="288,93,349,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="373,93,437,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="461,93,520,119"/>
 </map>

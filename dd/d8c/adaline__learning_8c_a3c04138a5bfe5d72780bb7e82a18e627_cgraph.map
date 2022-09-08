@@ -1,13 +1,19 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,108,56,134"/>
-<area shape="rect" id="node2" href="$dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="104,108,155,134"/>
-<area shape="rect" id="node10" href="$dd/d8c/adaline__learning_8c.html#a05cc9a0acb524fde727a4d7b4a747ee6" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="104,57,155,84"/>
-<area shape="rect" id="node11" href="$dd/d8c/adaline__learning_8c.html#a3f37b9f073f7e57fd0b39d70718af1b1" title="test function to predict points in a 3D coordinate system lying within the sphere of radius 1 and cen..." alt="" coords="104,184,155,210"/>
-<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="215,209,296,236"/>
-<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="567,82,676,109"/>
-<area shape="rect" id="node7" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="356,158,519,185"/>
-<area shape="rect" id="node8" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="203,108,308,134"/>
-<area shape="rect" id="node9" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="208,57,303,84"/>
-<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="372,209,503,236"/>
-<area shape="rect" id="node6" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="724,82,851,109"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,260,56,285"/>
+<area shape="rect" id="node2" href="$d2/df6/kohonen__som__topology_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" title="Test that creates a random set of points distributed in four clusters in 2D space and trains an SOM t..." alt="" coords="104,260,155,285"/>
+<area shape="rect" id="node11" href="$d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0" title=" " alt="" coords="104,437,155,463"/>
+<area shape="rect" id="node16" href="$d2/df6/kohonen__som__topology_8c.html#a6d0455dd5c30adda100e95f0423c786e" title="Test that creates a random set of points distributed in eight clusters in 3D space and trains an SOM ..." alt="" coords="104,136,155,161"/>
+<area shape="rect" id="node3" href="$d1/d6b/group__kohonen__2d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="423,223,495,248"/>
+<area shape="rect" id="node4" href="$d1/d6b/group__kohonen__2d.html#gac78022076d889bf2ebfb2c41d4527ceb" title="Function that returns the pointer to (x, y, z) ^th location in the linear 3D array given by:" alt="" coords="592,211,716,236"/>
+<area shape="rect" id="node5" href="$d1/d6b/group__kohonen__2d.html#gacb42eda8af6ebd6a141a34ab00a0b710" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="213,336,316,361"/>
+<area shape="rect" id="node8" href="$d1/d6b/group__kohonen__2d.html#ga6824dc6d973eb3339af7aef5fea78b0c" title="Save a given n&#45;dimensional data martix to file." alt="" coords="213,185,316,211"/>
+<area shape="rect" id="node9" href="$d1/d6b/group__kohonen__2d.html#ga49d35f68f5d11d8ef6f8cce0d0e7bcba" title="Create the distance matrix or U&#45;matrix from the trained weights and save to disk." alt="" coords="211,136,318,161"/>
+<area shape="rect" id="node10" href="$d2/df6/kohonen__som__topology_8c.html#adb5ded007be1fd666fab9affe6764018" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="206,235,323,260"/>
+<area shape="rect" id="node6" href="$d1/d6b/group__kohonen__2d.html#ga83abb572c60d202e100595a989dfe123" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="375,311,544,336"/>
+<area shape="rect" id="node7" href="$d1/d6b/group__kohonen__2d.html#gadc22d512c00a9f5799ee067f4fb90b4b" title="Get minimum value and index of the value in a matrix." alt="" coords="609,311,699,336"/>
+<area shape="rect" id="node12" href="$d8/d71/group__k__means.html#gaf6259432561e794dea0e060f482d15e2" title=" " alt="" coords="231,487,299,512"/>
+<area shape="rect" id="node15" href="$d6/d76/k__means__clustering_8c.html#a5b4ba704e02672e59cfa35f82e3db28a" title=" " alt="" coords="227,437,302,463"/>
+<area shape="rect" id="node13" href="$d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7" title=" " alt="" coords="398,511,521,536"/>
+<area shape="rect" id="node14" href="$d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9" title=" " alt="" coords="403,461,516,487"/>
+<area shape="rect" id="node17" href="$d2/df6/kohonen__som__topology_8c.html#a5bb02a8322d717ead1b11182c5f02a3a" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="203,35,327,60"/>
 </map>

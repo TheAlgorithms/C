@@ -1,5 +1,3 @@
 <map id="merge_sort" name="merge_sort">
-<area shape="rect" id="node1" title="Merge sort algorithm implementation." alt="" coords="5,31,92,57"/>
-<area shape="rect" id="node2" href="$d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729" title="Perform merge of segments." alt="" coords="140,5,199,32"/>
-<area shape="rect" id="node3" href="$d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8" title="Swap two integer variables." alt="" coords="143,56,196,83"/>
+<area shape="rect" id="node1" title="Merge sort algorithm implementation." alt="" coords="5,29,92,55"/>
 </map>

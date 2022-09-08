@@ -1,7 +1,7 @@
 <map id="misc/prime.c" name="misc/prime.c">
-<area shape="rect" id="node1" title="Program to identify if a number is prime number or not." alt="" coords="129,5,226,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,75,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,80,162,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,80,261,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="285,80,347,107"/>
+<area shape="rect" id="node1" title="Program to identify if a number is prime number or not." alt="" coords="129,5,226,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,75,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,79,162,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="187,79,261,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="285,79,347,104"/>
 </map>

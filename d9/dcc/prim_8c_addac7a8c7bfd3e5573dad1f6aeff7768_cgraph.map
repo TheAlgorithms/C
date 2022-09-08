@@ -1,0 +1,5 @@
+<map id="user_graph" name="user_graph">
+<area shape="rect" id="node1" title="Function user_graph(); gets user input adj." alt="" coords="5,5,92,31"/>
+<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="140,5,187,31"/>
+<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="235,5,309,31"/>
+</map>

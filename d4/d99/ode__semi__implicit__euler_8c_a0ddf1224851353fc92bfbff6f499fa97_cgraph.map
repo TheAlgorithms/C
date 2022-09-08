@@ -1,7 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function." alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a" title="Exact solution of the problem." alt="" coords="117,5,224,32"/>
-<area shape="rect" id="node3" href="$d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55" title="Compute approximation using the semi&#45;implicit&#45;Euler method in the given limits." alt="" coords="104,56,237,83"/>
-<area shape="rect" id="node4" href="$d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb" title="Compute next step approximation using the semi&#45;implicit&#45;Euler method." alt="" coords="285,56,451,83"/>
-<area shape="rect" id="node5" href="$d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first&#45;order differential equations." alt="" coords="499,56,567,83"/>
+<area shape="rect" id="node1" title="Main Function." alt="" coords="5,31,56,56"/>
+<area shape="rect" id="node2" href="$d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a" title="Exact solution of the problem." alt="" coords="117,5,224,31"/>
+<area shape="rect" id="node3" href="$d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55" title="Compute approximation using the semi&#45;implicit&#45;Euler method in the given limits." alt="" coords="104,55,237,80"/>
+<area shape="rect" id="node4" href="$d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb" title="Compute next step approximation using the semi&#45;implicit&#45;Euler method." alt="" coords="285,55,451,80"/>
+<area shape="rect" id="node5" href="$d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first&#45;order differential equations." alt="" coords="499,55,567,80"/>
 </map>
