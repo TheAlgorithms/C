@@ -18,7 +18,10 @@ double fib(int n) {
            (1 / sqrt(5) * pow(((1 - sqrt(5)) / 2), n + 1));
 }
 
-/* print first 10 elements of fibonacci sequence for testing */
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
 static void test () {
     for(int i = 0; i <= 10; i++){
         printf("%d. fibonacci sequence is: %.0f\n", i, fib(i));
