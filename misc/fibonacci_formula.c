@@ -28,7 +28,10 @@ static void test () {
     }
 }
 
-// driver code
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
     test();
     return 0;
