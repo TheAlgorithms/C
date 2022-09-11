@@ -1,11 +1,10 @@
-    /**
-     * @file
-     * @brief [finding Fibonacci number of any number n using binet's closed form formula](https://en.wikipedia.org/wiki/Fibonacci_number#Binet's_formula)
-     * @details
-     * compute \f$f_{nth}\f$ Fibonacci number using the binet's formula:
-     * Fn = 1√5 * (1+√5 / 2)^n+1 − 1√5 * (1−√5 / 2)^n+1
-     * @author [GrandSir](https://github.com/GrandSir/)
-    */
+/**
+ * @file
+ * @brief [finding Fibonacci number of any number n using binet's closed form formula](https://en.wikipedia.org/wiki/Fibonacci_number#Binet's_formula)
+ * compute \f$f_{nth}\f$ Fibonacci number using the binet's formula:
+ * Fn = 1√5 * (1+√5 / 2)^n+1 − 1√5 * (1−√5 / 2)^n+1
+ * @author [GrandSir](https://github.com/GrandSir/)
+ */
 
     #include <math.h> /// for pow and sqrt
     #include <stdio.h> /// for printf
