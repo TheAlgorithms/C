@@ -41,6 +41,8 @@ static void test () {
     assert(fib(8) == 34);
     assert(fib(9) == 55);
     assert(fib(10) == 89);
+    
+    printf("All tests have successfully passed!\n");
 }
 
 /**
