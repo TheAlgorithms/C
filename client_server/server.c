@@ -61,9 +61,6 @@ void func(int sockfd)
         n = 0;
         // copy server message in the buffer
         while ((buff[n++] = getchar()) != '\n')
-        {
-            ;
-        }
 
         // and send that buffer to client
         write(sockfd, buff, sizeof(buff));
