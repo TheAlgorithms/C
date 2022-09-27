@@ -9,7 +9,7 @@
  * where words are separated by a space, newline, or underscore.
  * This program prints (writes or outputs) to another file (`wordcount.txt`),
  * the individual words contained in 'file.txt' with their frequencies (number
- * of occurences) each on a newline and in alphabetical order. This program uses
+ * of occurrences) each on a newline and in alphabetical order. This program uses
  * the binary tree data structure to accomplish this task.
  * @author [Randy Kwalar](https://github.com/RandyKdev)
  */
@@ -28,7 +28,7 @@
 struct Node
 {
     char *word;          ///< the word (value) of the node
-    uint64_t frequency;  ///< number of occurences of the word
+    uint64_t frequency;  ///< number of occurrences of the word
     struct Node *left;   ///< pointer to the left child node
     struct Node *right;  ///< pointer to the right child node
 };

@@ -70,7 +70,7 @@ int word_count(const char *input_text, word_count_word_t *words)
 
     words->count = 0;
 
-    /* make sure none error is occured */
+    /* make sure none error is occurred */
     if (loop)
     {
         /* collects the last word up to the \0-character. and counts it.*/

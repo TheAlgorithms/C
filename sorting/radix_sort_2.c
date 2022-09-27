@@ -22,7 +22,7 @@ void countSort(int *arr, int n, int place)
     int i, freq[range] = {0};
     int *output = (int *)malloc(n * sizeof(int));
 
-    // Store count of occurences in freq[]
+    // Store count of occurrences in freq[]
     for (i = 0; i < n; i++) freq[(arr[i] / place) % range]++;
 
     // Change freq[i] so that it contains the actual position of the digit in
