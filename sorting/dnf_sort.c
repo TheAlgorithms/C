@@ -113,7 +113,7 @@ int main(void)
         scanf("%" SCNi8, &arr[i]);
         if (arr[i] > 2 || arr[i] < 0)
         {
-            printf("Elements need to be in {0, 1, 2}");
+            printf("Elements need to be in {0, 1, 2}\n");
             free(arr);
             return 1;
         }
