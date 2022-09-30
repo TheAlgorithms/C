@@ -129,8 +129,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a",
-"d9/dcc/prim_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089",
-"dd/d8c/adaline__learning_8c.html#a3c04138a5bfe5d72780bb7e82a18e627"
+"d9/dcc/prim_8c.html",
+"dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fib_0',['fib',['../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3',1,'fibonacci_fast.c']]],
+  ['fib_0',['fib',['../d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3',1,'fib(unsigned long n, unsigned long *C, unsigned long *D):&#160;fibonacci_fast.c'],['../d8/d75/fibonacci__formula_8c.html#a4d369ae048e0ccc7f515a243533cd946',1,'fib(unsigned int n):&#160;fibonacci_formula.c']]],
   ['find_1',['find',['../da/d02/binary__search__tree_8c.html#adff4c6248834a9944a1fb03a20230c9c',1,'find(node *root, int data):&#160;binary_search_tree.c'],['../df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86',1,'find(int *p, int x):&#160;union_find.c']]],
   ['findindex_2',['findIndex',['../dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534',1,'selection_sort_recursive.c']]],
   ['forward_5feuler_3',['forward_euler',['../d4/d07/ode__forward__euler_8c.html#aaf88ad8f9f7c39fc38f3f03d6fea9df9',1,'ode_forward_euler.c']]],
