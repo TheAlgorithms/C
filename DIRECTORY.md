@@ -309,6 +309,9 @@
   * [Simpsons 1 3Rd Rule](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/simpsons_1_3rd_rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/variance.c)
 
+## Process Scheduling Algorithms
+  * [Non Preemptive Priority Scheduling](https://github.com/TheAlgorithms/C/blob/master/process_scheduling_algorithms/non_preemptive_priority_scheduling.c)
+
 ## Project Euler
   * Problem 1
     * [Sol1](https://github.com/TheAlgorithms/C/blob/master/project_euler/problem_1/sol1.c)
