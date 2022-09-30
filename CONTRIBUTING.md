@@ -2,7 +2,7 @@
 
 ## Before contributing
 
-Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask in our [Discord server](https://discord.gg/c7MnfGFGa6), and clearly state your concerns.
+Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask on our [Discord server](https://discord.gg/c7MnfGFGa6), and clearly state your concerns.
 
 ## Contributing
 
@@ -15,13 +15,13 @@ Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitt
 Being a contributor at The Algorithms, we request you to follow the points mentioned below:
 
 - You did your own work.
-  - No plagiarism allowed.  Any plagiarized work will not be merged.
+  - No plagiarism is allowed. Any plagiarized work will not be merged.
 - Your work will be distributed under the [GNU General Public License v3.0](https://github.com/TheAlgorithms/C/blob/master/LICENSE) once your pull request has been merged.
 - Please follow the repository guidelines and standards mentioned below.
 
 **New implementation** New implementations are welcome!
 
-You can add new algorithms or data structures which are **not present in the repository** or that can **improve** the old implementations (**documentation**, **improving test cases**, removing bugs or in any other resonable sense)
+You can add new algorithms or data structures that are **not present in the repository** or that can **improve** the old implementations (**documentation**, **improving test cases**, removing bugs, or in any other reasonable sense)
 
 **Issues** Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request, and it will be evaluated by project maintainers.
 
@@ -36,8 +36,8 @@ You can add new algorithms or data structures which are **not present in the rep
 - You can suggest reasonable changes to existing algorithms.
 - Strictly use snake_case (underscore_separated) in filenames.
 - If you have added or modified code, please make sure the code compiles before submitting.
-- Our automated testing runs [__CMake__](https://cmake.org/) on all the pull requests, so please be sure that your code passes before submitting.
-- Please conform to [Doxygen](https://www.doxygen.nl/manual/docblocks.html) standard and document the code as much as possible. This not only facilitates the readers but also generates the correct info on website.
+- Our automated testing runs [**CMake**](https://cmake.org/) on all the pull requests, so please be sure that your code passes before submitting.
+- Please conform to [Doxygen](https://www.doxygen.nl/manual/docblocks.html) standards and document the code as much as possible. This not only facilitates the readers but also generates the correct info on the website.
 - **Be consistent in the use of these guidelines.**
 
 #### Documentation
@@ -59,7 +59,8 @@ You can add new algorithms or data structures which are **not present in the rep
 ```c
 /**
  * @file
- * @brief Add one line description here
+ * @brief Add one line description here. Should contain a Wikipedia
+ * link or another source explaining the algorithm/implementation.
  * @details
  * This is a multi-line
  * description containing links, references,
@@ -129,7 +130,7 @@ my_new_c_struct.c    is correct format
 
 - It will be used to dynamically create a directory of files and implementation.
 - File name validation will run on Docker to ensure validity.
-- If an implementation of the algorithm already exists and your version is different from that implemented, please use incremental numeric digit as a suffix. For example: if `median_search.c` already exists in the `search` folder, and you are contributing a new implementation, the filename should be `median_search2.c` and for a third implementation, `median_search3.c`.
+- If an implementation of the algorithm already exists and your version is different from that implemented, please use an incremental numeric digit as a suffix. For example: if `median_search.c` already exists in the `search` folder, and you are contributing a new implementation, the filename should be `median_search2.c`. For a third implementation, `median_search3.c`, and so on.
 
 #### Directory guidelines
 
@@ -161,6 +162,7 @@ fix: xyz algorithm bug
 feat: add xyx algorithm, struct xyz
 test: add test for xyz algorithm
 docs: add comments and explanation to xyz algorithm
+chore: update Gitpod badge
 ```
 
 Common prefixes:
@@ -169,6 +171,7 @@ Common prefixes:
 - feat: A new feature
 - docs: Documentation changes
 - test: Correct existing tests or add new ones
+- chore: Miscellaneous changes that do not match any of the above.
 
 ### Pull Requests
 
@@ -184,7 +187,7 @@ cmake -B build -S .
 
 #### Static Code Analyzer
 
-We use [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) as a static code analyzer with a configuration in [.clang-tidy](.clang-tidy).
+We use [`clang-tidy`](https://clang.llvm.org/extra/clang-tidy/) as a static code analyzer with a configuration in [`.clang-tidy`](.clang-tidy).
 
 ```bash
 clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
@@ -192,7 +195,7 @@ clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
 
 #### Code Formatter
 
-[__clang-format__](https://clang.llvm.org/docs/ClangFormat.html) is used for code forrmating.
+[**`clang-format`**](https://clang.llvm.org/docs/ClangFormat.html) is used for code formatting.
 
 - Installation (only needs to be installed once.)
   - Mac (using home-brew): `brew install clang-format`
@@ -204,7 +207,7 @@ clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
 #### GitHub Actions
 
 - Enable GitHub Actions on your fork of the repository.
-After enabling, it will execute `clang-tidy` and `clang-format` after every a push (not a commit).
+After enabling, it will execute `clang-tidy` and `clang-format` after every push (not a commit).
   - Click on the tab "Actions", then click on the big green button to enable it.
 
 ![GitHub Actions](https://user-images.githubusercontent.com/51391473/94609466-6e925100-0264-11eb-9d6f-3706190eab2b.png)
