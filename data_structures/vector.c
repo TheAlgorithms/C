@@ -1,5 +1,5 @@
 /**
- * @file vector.c
+ * @file
  * @brief This is a vector implemenation in C. A vector is an expandable array.
  * @details This vector implementation in C comes with some wrapper functions that lets the user work with data without having to worrying about memory.
  */
