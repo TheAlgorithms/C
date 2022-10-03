@@ -13,10 +13,10 @@
  * 
  */
 
-#include <stdio.h> //For printf
-#include <string.h> //For string functions like strlen
-#include <stdlib.h> //For malloc/free
-#include <assert.h> //For assert
+#include <stdio.h> //for printf
+#include <string.h> //for string functions
+#include <stdlib.h> //for malloc/free
+#include <assert.h> //for assert
 
 /**
  * @brief Encodes a null-terminated string using run-length encoding
