@@ -1,5 +1,5 @@
 /**
- * @file run_length_encoding.c
+ * @file
  * @author [serturx](https://github.com/serturx/)
  * @brief Encode a null terminated string using [Run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
  */
@@ -55,7 +55,11 @@ char* run_length_encode(char* str) {
     return compacted_string;
 }
 
-void test() {
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test() {
     char* test;
     test = run_length_encode("aaaaaaabbbaaccccdefaadr");
     assert(!strcmp(test, "7a3b2a4c1d1e1f2a1d1r"));
@@ -68,8 +72,12 @@ void test() {
     free(test);
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
-    test();
-    printf("Tests passed.");
+    test();  // run self-test implementations
+    printf("All tests have passed!\n");
     return 0;
 }
