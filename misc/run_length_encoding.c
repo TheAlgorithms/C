@@ -1,13 +1,22 @@
 /**
- * @file run_length_encoding.c
+ * @file
  * @author [serturx](https://github.com/serturx/)
  * @brief Encode a null terminated string using [Run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
+ * @section Description
+ * Run-length encoding is a lossless compression algorithm.
+ * It works by counting the consecutive occurences symbols
+ * and encodes that series of consecutive symbols into the
+ * counted symbol and a number denoting the number of
+ * consecutive occorences.
+ * 
+ * For example the string "AAAABBCCD" gets encoded into "4A2B2C1D"
+ * 
  */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
+#include <stdio.h> //For printf
+#include <string.h> //For string functions like strlen
+#include <stdlib.h> //For malloc/free
+#include <assert.h> //For assert
 
 /**
  * @brief Encodes a null-terminated string using run-length encoding
