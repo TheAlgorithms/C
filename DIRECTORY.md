@@ -285,6 +285,7 @@
   * [Prime Seive](https://github.com/TheAlgorithms/C/blob/master/misc/prime_seive.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/master/misc/quartile.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/master/misc/rselect.c)
+  * [Run Length Encoding](https://github.com/TheAlgorithms/C/blob/master/misc/run_length_encoding.c)
   * [Strong Number](https://github.com/TheAlgorithms/C/blob/master/misc/strong_number.c)
   * [Sudoku Solver](https://github.com/TheAlgorithms/C/blob/master/misc/sudoku_solver.c)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/master/misc/tower_of_hanoi.c)
