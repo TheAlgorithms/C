@@ -4,5 +4,4 @@
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
-    "C_Cpp.errorSquiggles": "Disabled",
 }
