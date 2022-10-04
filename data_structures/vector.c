@@ -4,14 +4,14 @@
  * @details This vector implementation in C comes with some wrapper functions that lets the user work with data without having to worrying about memory.
  */
 
-#include <stdio.h>     /** for printf() */
-#include <stdlib.h>    /** for malloc() and free() */
+#include <stdio.h>     /// for IO operations
+#include <stdlib.h>    /// for malloc() and free()
 
 /** This is the struct that defines the vector. */
 typedef struct {
-    int len;           /** contains the lenght of the vector. */
-    int current;       /** holds the current item. */
-    int* contents;     /** the internal array itself. */
+    int len;           ///< contains the length of the vector
+    int current;       ///< holds the current item
+    int* contents;     ///< the internal array itself
 } Vector;
 
 /**
@@ -130,6 +130,10 @@ void print(Vector* vec) {
     printf("]\n");
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
     Vector vec;
     init(&vec, 10);
