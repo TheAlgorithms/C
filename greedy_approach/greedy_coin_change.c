@@ -142,7 +142,7 @@ void test() {
     free(result_4->result);
     free(result_4);
 
-    printf("All tests have passed!");
+    printf("All tests have passed!\n");
 }
 
 int main() {
