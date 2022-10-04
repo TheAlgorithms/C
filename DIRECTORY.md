@@ -296,6 +296,7 @@
   * [Gauss Seidel Method](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/gauss_seidel_method.c)
   * [Lagrange Theorem](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/lagrange_theorem.c)
   * [Lu Decompose](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/lu_decompose.c)
+  * [Matrix Transpose](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/matrix_transpose.c)
   * [Mean](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/mean.c)
   * [Median](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/median.c)
   * [Newton Raphson Root](https://github.com/TheAlgorithms/C/blob/master/numerical_methods/newton_raphson_root.c)
