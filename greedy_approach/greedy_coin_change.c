@@ -57,9 +57,9 @@ bool is_set(int *array, size_t size) {
  * @param amount Amount to compute the coin change for
  * @param coin_set An array consisting of distinct integer values denoting
  * a set of coins to compute the amount with
- * @return coin_change* A pointer to acoin_change struct consisting of
+ * @return coin_change* A pointer to a coin_change struct consisting of
  * the results length and an array of integers making
- * up the given amount in coin change or null if not
+ * up the given amount in coin change or NULL if not
  * possible (with greedy approach)
  */
 coin_change *compute_coins(int amount, int coin_set[], size_t coin_set_length) {
@@ -77,12 +77,17 @@ coin_change *compute_coins(int amount, int coin_set[], size_t coin_set_length) {
 
     while(amount > 0) {
         coin_fit = false;
+
         for (int i = 0; i < coin_set_length; ++i) {
             int current_coin = coin_set[i];
+
             if(current_coin <= amount) {
+
                 if(current_size >= size_used) {
                     current_size += 10;
+
                     if(!(coins = realloc(coins, current_size))) {
+
                         free(coins);
                         exit(1);
                     }
@@ -118,8 +123,6 @@ void test() {
     coin_change* result_1 = compute_coins(34, test_set_1, 6);
     assert(result_1->result_length == 4);
     assert(!memcmp(expected_result_1, result_1->result, sizeof(int) * 4));
-    free(result_1->result);
-    free(result_1);
 
     int test_set_2[] = {2, 4, 6};
     coin_change *result_2 = compute_coins(23, test_set_2, 3);
@@ -130,15 +133,19 @@ void test() {
     coin_change *result_3 = compute_coins(10, test_set_3, 3);
     assert(result_3->result_length == 3);
     assert(!memcmp(expected_result_3, result_3->result, sizeof(int) * 3));
-    free(result_3->result);
-    free(result_3);
+    
 
     int test_set_4[] = {200, 100, 150, 1, 50};
     int expected_result_4[] = {100, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                               1,   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+                               1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     coin_change *result_4 = compute_coins(130, test_set_4, 5);
     assert(result_4->result_length == 31);
     assert(!memcmp(expected_result_4, result_4->result, sizeof(int) * 31));
+
+    free(result_1->result);
+    free(result_1);
+    free(result_3->result);
+    free(result_3);
     free(result_4->result);
     free(result_4);
 
