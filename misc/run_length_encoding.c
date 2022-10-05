@@ -2,7 +2,7 @@
  * @file
  * @author [serturx](https://github.com/serturx/)
  * @brief Encode a null terminated string using [Run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
- * @section Description
+ * @details
  * Run-length encoding is a lossless compression algorithm.
  * It works by counting the consecutive occurences symbols
  * and encodes that series of consecutive symbols into the
@@ -13,8 +13,8 @@
  * 
  */
 
-#include <stdio.h> /// for printf
-#include <string.h> ///for string functions
+#include <stdio.h>  /// for IO operations
+#include <string.h> /// for string functions
 #include <stdlib.h> /// for malloc/free
 #include <assert.h> /// for assert
 
