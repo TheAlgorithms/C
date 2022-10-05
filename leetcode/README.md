@@ -37,6 +37,7 @@ LeetCode
 |109|[Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C](./src/109.c)|Medium|
 |110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | [C](./src/110.c)|Easy|
 |112|[Path Sum](https://leetcode.com/problems/path-sum/) | [C](./src/112.c)|Easy|
+|118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [C](./src/118.c)|Easy|
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C](./src/121.c)|Easy|
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C](./src/125.c)|Easy|
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [C](./src/136.c)|Easy|
