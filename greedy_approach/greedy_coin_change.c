@@ -38,6 +38,14 @@ int compare_reverse(const void *a, const void *b) {
     return *y - *x;
 }
 
+/**
+ * @brief Checks whether the given sorted array of integers contains no duplicates
+ * 
+ * @param array Array to check
+ * @param size Size of the array
+ * @return true Contains no duplicates
+ * @return false Contains duplicates
+ */
 bool is_set(int *array, size_t size) {
     bool duplicate = false;
 
@@ -114,6 +122,10 @@ coin_change *compute_coins(int amount, int coin_set[], size_t coin_set_length) {
     return result;
 }
 
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
 void test() {
     int *result;
 
@@ -151,6 +163,10 @@ void test() {
     printf("All tests have passed!\n");
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
     test();
 }
