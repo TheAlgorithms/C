@@ -4,6 +4,7 @@ int n = 5;
 int c[10] = {12, 1, 2, 1, 4};
 int v[10] = {4, 2, 2, 1, 10};
 int W = 15;
+
 void simple_fill() {
     int cur_w;
     float tot_v;
@@ -29,7 +30,9 @@ void simple_fill() {
             tot_v += (1 + (float)cur_w/c[item]) * v[item];
         }
     }
+    
     printf("Filled the bag with objects worth %.2f$.\n", tot_v);
+    
 }
 int main(int argc, char *argv[]) {
     simple_fill();
