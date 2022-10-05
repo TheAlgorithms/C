@@ -3,12 +3,22 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+/**
+ * @brief Matrix struct for dynamically allocated memory
+ */
 typedef struct {
     int rows;
     int cols;
     double *data;
 } Matrix;
 
+/**
+ * @brief Create an uninitialized matrix object
+ * 
+ * @param rows height
+ * @param cols width
+ * @return Matrix 
+ */
 Matrix create_matrix(size_t rows, size_t cols) {
     Matrix m;
     m.rows = rows;
@@ -17,12 +27,28 @@ Matrix create_matrix(size_t rows, size_t cols) {
     return m;
 }
 
+/**
+ * @brief Helper to create an initialized matrix object from a 2D array
+ * 
+ * @param rows height
+ * @param cols width
+ * @param data array of values
+ * @return Matrix 
+ */
 Matrix matrix_from_array(size_t rows, size_t cols, double *data) {
     Matrix m = create_matrix(rows, cols);
     for (size_t i = 0; i < rows * cols; i++) m.data[i] = data[i];
     return m;
 }
 
+/**
+ * @brief Checks if two matrices are equal in size and values.
+ * 
+ * @param a Matrix
+ * @param b Matrix
+ * @return true if both matrices are equal in size and values
+ * @return false otherwise
+ */
 bool equals(Matrix a, Matrix b) {
     if (a.rows != b.rows || a.cols != b.cols)
     {
@@ -43,6 +69,11 @@ bool equals(Matrix a, Matrix b) {
     return true;
 }
 
+/**
+ * @brief Frees a matrices allocated memory.
+ * 
+ * @param m Matrix to free
+ */
 void free_matrix(Matrix m) { 
     free(m.data); 
 }
