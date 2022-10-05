@@ -6,14 +6,14 @@
  * @details This algorithm computes the needed coins from a given set of coins
  * that make up a given amount. It works greedy, so it chooses the biggest
  * possible coin that fits in the remaining amount until the remaining sum is
- * <=0.
+ * equal to 0 or no coin fits in the remaining amount.
  */
 
 #include <stdlib.h>  /// for qsort
 #include <stdbool.h> /// for bool type
-#include <string.h> /// for memcmp
-#include <assert.h> /// for assert
-#include <stdio.h> /// for printf
+#include <string.h>  /// for memcmp
+#include <assert.h>  /// for assert
+#include <stdio.h>   /// for IO operations
 
 /**
  * @brief A struct containing the result of the coin change algorithm.
@@ -26,7 +26,7 @@ typedef struct {
 } coin_change;
 
 /**
- * @brief Compare function for qsort to for qsort to sort in decreasing order
+ * @brief Compare function for qsort to sort in decreasing order
  *
  * @param a Element A
  * @param b Element B
@@ -87,7 +87,6 @@ coin_change *compute_coins(int amount, int coin_set[], size_t coin_set_length) {
                     current_size += 10;
 
                     if(!(coins = realloc(coins, current_size))) {
-
                         free(coins);
                         exit(1);
                     }
