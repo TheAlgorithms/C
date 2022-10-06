@@ -6,6 +6,7 @@
 
 #include <stdio.h>     /// for IO operations
 #include <stdlib.h>    /// for malloc() and free()
+#include <assert.h>    /// for testing using assert()
 
 /** This is the struct that defines the vector. */
 typedef struct {
@@ -131,10 +132,30 @@ void print(Vector* vec) {
 }
 
 /**
+ * This function tests the functions used to work with Vectors.
+ * @returns: none
+ */
+static void test() {
+    Vector vec;
+    init(&vec, 10);
+    assert(get(&vec, 0) == 10);
+    push(&vec, 20);
+    assert(get(&vec, 1) == 20);
+    set(&vec, 0, 11);
+    assert(get(&vec, 0) == 11);
+    assert(next(&vec) == 11);
+    set(&vec, 1, 22);
+    assert(get(&vec, 1) == 22);
+    assert(len(&vec) == 2);
+}
+
+/**
  * @brief Main function
  * @returns 0 on exit
  */
 int main() {
+    test();
+
     Vector vec;
     init(&vec, 10);
     push(&vec, 20);
