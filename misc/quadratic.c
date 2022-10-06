@@ -1,12 +1,14 @@
-//C program to find out the roots of a quadratic equation
+//C program to find out the roots and their nature of a quadratic equation
+//including the necessary header files
 #include <math.h>
 #include <stdio.h>
 int main()
 {
-    float a, b, c, d, root1, root2, real, imag;
+    float a, b, c, d, root1, root2, real, imag; //variable decalration
     printf("Enter coefficients a, b and c for the quadratic equation of the form 'ax^2+bx+c=0' (separated by spaces): ");
-    scanf("%f %f %f", &a, &b, &c);
-     d = b * b - 4 * a * c;
+    scanf("%f %f %f", &a, &b, &c); //input of the coefficients of quadratic equation
+    
+    d = b * b - 4 * a * c; //d is the discriminant for the input equation
 
     // condition for real and different roots
     if (d > 0)

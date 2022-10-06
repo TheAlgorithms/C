@@ -1,28 +1,33 @@
 //C program to display the Pascal's triangle upto the nth input row
-#include <stdio.h>
+#include <stdio.h> //inclusion of header file
 
-int main()
+int main()// main function body
 {
-    int row, c = 1, j, i, k;
-    printf("Input number of rows: ");
-    scanf("%d", &row);
-    for (i = 0; i < row; i++)
+    int row, c = 1, j, i, k; // declaration and initialisation of variables
+    
+    printf("Input number of rows: "); 
+    scanf("%d", &row); //user input
+    
+    for (i = 0; i < row; i++) //loop for each row from top to bottom
     {
-        for (j = 1; j <= row - i; j++)
+        // print spaces to align the numbers properly
+        for (j = 1; j <= row - i; j++) 
         {
              printf("  ");
         }   
-        for (k = 0; k <= i; k++)
+        
+        //loop to print the numbers
+        for (k = 0; k <= i; k++) 
         {
             if (k == 0 || i == 0)
                 c = 1;
             else
-                c = c * (i - k + 1) / k;
+                c = c * (i - k + 1) / k; // calculating the numbers by binomial coefficient method
             printf("% 4d", c);
         }
         printf("\n");
     }
-    return 0;
+    return 0; //exit by returning 0
 }
 /*
 Test case 1:
