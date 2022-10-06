@@ -24,3 +24,12 @@ int main()
     }
     return 0;
 }
+/*
+Test case 1:
+Input number of rows: 5
+            1
+          1   1
+        1   2   1
+      1   3   3   1     
+    1   4   6   4   1 
+*/
