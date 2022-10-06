@@ -150,6 +150,7 @@
 
 ## Greedy Approach
   * [Dijkstra](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/dijkstra.c)
+  * [Greedy Coin Change](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/greedy_coin_change.c)
   * [Prim](https://github.com/TheAlgorithms/C/blob/master/greedy_approach/prim.c)
 
 ## Hash
