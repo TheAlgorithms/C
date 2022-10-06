@@ -94,7 +94,7 @@ coin_change *compute_coins(int amount, int coin_set[], size_t coin_set_length) {
                 if(current_size >= size_used) {
                     current_size += 10;
 
-                    if(!(coins = realloc(coins, current_size))) {
+                    if(!(coins = realloc(coins, current_size * sizeof(int)))) {
                         free(coins);
                         exit(1);
                     }
