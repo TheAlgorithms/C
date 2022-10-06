@@ -1,7 +1,15 @@
-#include <assert.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdlib.h>
+/**
+ * @file
+ * @author [jerr-it](https://github.com/jerr-it)
+ * @brief This is a C implementation of the [transpose of a matrix](https://en.wikipedia.org/wiki/Transpose)
+ * @details In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal; 
+ * that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by A^T
+ */
+
+#include <assert.h>  /// for assert
+#include <stdbool.h> /// for bool
+#include <stddef.h>  /// for size_t
+#include <stdlib.h>  /// for malloc, free
 
 /**
  * @brief Matrix struct for dynamically allocated memory
@@ -98,6 +106,10 @@ Matrix transpose(Matrix m) {
     return t;
 }
 
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
 static void test() {
     /*
      *  [1 2 3] T = [1 4]
@@ -129,6 +141,10 @@ static void test() {
     free_matrix(c);
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
     test();
     return 0;
