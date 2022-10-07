@@ -35,15 +35,23 @@ static char game_table[9];
  * @note No checks are included for program execution failures!
  */
 int main()
-{   
+{   conver
     srand( (unsigned int)time(NULL));
     int l = 0;
     do
     {
         int n = 0;
 
-        // filling the table with multiple asterisks
-        for (int i = 0; i < 9; i++) game_table[i] = '*';
+        // filling the table with indices
+	game_table[0] = '1';
+        game_table[1] = '2';
+        game_table[2] = '3';
+        game_table[3] = '4';
+        game_table[4] = '5';
+        game_table[5] = '6';
+        game_table[6] = '7';
+        game_table[7] = '8';
+        game_table[8] = '9';
 
         // displaying the main menu
         printf("***************************************\n");
