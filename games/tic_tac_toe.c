@@ -35,7 +35,7 @@ static char game_table[9];
  * @note No checks are included for program execution failures!
  */
 int main()
-{   conver
+{   
     srand( (unsigned int)time(NULL));
     int l = 0;
     do
