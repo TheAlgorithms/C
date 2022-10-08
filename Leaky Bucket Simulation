@@ -1,0 +1,105 @@
+#include <stdio.h>
+#define size 20
+
+int front = -1, rear = -1;
+int queue[size];
+int bucketSize, outRate, nPacket, packetSize, storedSize=0, outgoing;
+
+void enqueue(int packSize)
+{
+    if (front == -1)
+    {
+        front++;
+    }
+    rear++;
+    if (rear == 20)
+    {
+        rear = 0;
+    }
+    queue[rear] = packSize;
+}
+
+int dequeue()
+{
+    int temp = queue[front];
+    if (front == rear)
+    {
+        front = rear = -1;
+    }
+    else
+    {
+        front++;
+    }
+    if (front == 20)
+    {
+        front = 0;
+    }
+    return temp;
+}
+
+void emptyBucket()
+{
+    printf("\nEmpying bucket!"); 
+    while (storedSize)
+    {
+        int outgoing = 0;
+        while (outgoing < outRate && storedSize > 0)
+        {
+            packetSize = dequeue();
+            outgoing += packetSize;
+            printf("\n-->Outgoing packet size = %d\n", packetSize);
+            storedSize -= packetSize;
+            printf("(%d out of %d left in bucket.", bucketSize - storedSize, bucketSize);
+        }        
+        sleep(1);
+    }
+}
+
+int main()
+{
+
+    printf("Enter the bucket size: ");
+    scanf("%d", &bucketSize);
+    printf("\nEnter outgoing rate: ");
+    scanf("%d", &outRate);
+
+    while (1)
+    {
+        int outgoing = 0;
+        printf("\nEnter the number of incoming packets: ");
+        scanf("%d", &nPacket);
+
+        if (nPacket == 0)
+        {
+            break;
+        }
+
+        for (int i = 0; i < nPacket; i++)
+        {
+            printf("\nEnter the size of packet[%d]: ", i + 1);
+            scanf("%d", &packetSize);
+
+            if (packetSize > bucketSize - storedSize)
+            {
+                printf("Packet Dropped");
+                emptyBucket();
+                i--;
+                continue;
+            }
+            storedSize += packetSize;
+            enqueue(packetSize);
+            printf("(%d out of %d in bucket).\n", bucketSize - storedSize, bucketSize);
+        }
+
+        while (outgoing < outRate && storedSize > 0)
+        {
+            packetSize = dequeue();
+            outgoing += packetSize;
+            printf("\n-->Outgoing packet size = %d\n", packetSize);
+            storedSize -= packetSize;
+            printf("\n(%d out of %d left in bucket).", bucketSize - storedSize, bucketSize);
+        }        
+        sleep(1);
+    }
+    emptyBucket();
+}
