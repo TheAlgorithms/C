@@ -1,65 +1,29 @@
-// A number is called as Armstrong number if sum of cubes of digits of number is
-// equal to the number itself.
-// For Example 153 is an Armstrong number because 153 = 1³+5³+3³.
 #include <stdio.h>
+#include <math.h>
 
-// Function to calculate x raised to the power y
-int power(int x, unsigned int y)
+int digcount(int);
+int arm(int,int);
+int main() 
 {
-    if (y == 0)
-        return 1;
-    if (y % 2 == 0)
-        return power(x, y / 2) * power(x, y / 2);
-    return x * power(x, y / 2) * power(x, y / 2);
+	int n;
+	printf("Enter a no.\n");
+	scanf("%d",&n);
+	if(arm(n,digcount(n)) == n)
+	    printf("%d is Armstrong\n",n);
+	else
+	    printf("%d is not Armstrong\n",n);
 }
-
-// Function to calculate order of the number
-int order(int x)
+int digcount(int a)
 {
-    int n = 0;
-    while (x)
-    {
-        n++;
-        x = x / 10;
-    }
-    return n;
-}
-
-// Function to check whether the given number is
-// Armstrong number or not
-int isArmstrong(int x)
-{
-    // Calling order function
-    int n = order(x);
-    int temp = x, sum = 0;
-    while (temp)
-    {
-        int r = temp % 10;
-        sum += power(r, n);
-        temp = temp / 10;
-    }
-
-    // If satisfies Armstrong condition
-    if (sum == x)
-        return 1;
-    else
+    if(a == 0)
         return 0;
+    else
+        return digcount(a/10) + 1;
 }
-
-//
-int main()
+int arm(int a,int l)
 {
-    int x = 153;
-    if (isArmstrong(x) == 1)
-        printf("True\n");
+    if(a == 0)
+        return 0;
     else
-        printf("False\n");
-
-    x = 1253;
-    if (isArmstrong(x) == 1)
-        printf("True\n");
-    else
-        printf("False\n");
-
-    return 0;
+        return (pow(a%10,l) + arm(a/10,l)) ;
 }
