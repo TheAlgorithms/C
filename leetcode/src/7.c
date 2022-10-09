@@ -1,17 +1,20 @@
-#include <limits.h>
-
-int reverse(int x)
-{
-    int rev = 0;
-    while (x != 0)
-    {
-        int pop = x % 10;
-        x /= 10;
-        if (rev > INT_MAX / 10 || (rev == INT_MAX / 10 && pop > 7))
-            return 0;
-        if (rev < INT_MIN / 10 || (rev == INT_MIN / 10 && pop < -8))
-            return 0;
-        rev = rev * 10 + pop;
+int reverse(int x){
+ int res=0;
+    
+    int s=1;
+    if(x > INT_MAX || x<(-INT_MAX)){
+        return 0;
     }
-    return rev;
+    if(x<0){
+        s=-1;
+        x*=-1;
+    }
+    while(x!=0){
+        if(res > INT_MAX/10){
+             return 0;
+        }
+        res=(res*10)+(x%10);
+        x/=10;
+     }
+    return (s*res);
 }
