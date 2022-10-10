@@ -3,6 +3,9 @@
  * inserting the selected item at each iteration. */
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
+
+#define ARR_SZ_CAP	1024
 
 /*Displays the array, passed to this method*/
 void display(int *arr, int n)
@@ -58,6 +61,8 @@ int main(int argc, const char *argv[])
     printf("Enter size of array:\n");
     scanf("%d", &n);  // E.g. 8
 
+    assert( n < ARR_SZ_CAP);
+
     printf("Enter the elements of the array\n");
     int i;
     int *arr = (int *)malloc(n * sizeof(int));
@@ -66,7 +71,7 @@ int main(int argc, const char *argv[])
         scanf("%d", &arr[i]);
     }
 
-    printf("Original array: ");		//testing change
+    printf("Original array: ");
     display(arr, n);
 
     insertionSort(arr, n);
