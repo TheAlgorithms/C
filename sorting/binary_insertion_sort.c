@@ -61,7 +61,7 @@ int main(int argc, const char *argv[])
     printf("Enter the elements of the array\n");
     int i;
     int *arr = (int *)malloc(n * sizeof(int));
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n; ++i)
     {
         scanf("%d", &arr[i]);
     }
