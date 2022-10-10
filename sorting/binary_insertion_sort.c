@@ -66,7 +66,7 @@ int main(int argc, const char *argv[])
         scanf("%d", &arr[i]);
     }
 
-    printf("Original array: ");
+    printf("Original array: ");		//testing change
     display(arr, n);
 
     insertionSort(arr, n);
