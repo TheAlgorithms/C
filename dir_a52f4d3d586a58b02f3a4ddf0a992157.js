@@ -11,6 +11,7 @@ var dir_a52f4d3d586a58b02f3a4ddf0a992157 =
     [ "postfix_evaluation.c", "df/d43/postfix__evaluation_8c.html", "df/d43/postfix__evaluation_8c" ],
     [ "prime.c", "da/d93/prime_8c.html", "da/d93/prime_8c" ],
     [ "prime_seive.c", "db/dd5/prime__seive_8c.html", "db/dd5/prime__seive_8c" ],
+    [ "run_length_encoding.c", "d1/dc7/run__length__encoding_8c.html", "d1/dc7/run__length__encoding_8c" ],
     [ "strong_number.c", "d4/dcc/strong__number_8c.html", "d4/dcc/strong__number_8c" ],
     [ "sudoku_solver.c", "de/dac/sudoku__solver_8c.html", "de/dac/sudoku__solver_8c" ],
     [ "union_find.c", "df/df3/union__find_8c.html", "df/df3/union__find_8c" ]

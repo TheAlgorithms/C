@@ -14,5 +14,7 @@ var searchData=
   ['root_11',['root',['../dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd',1,'segment_tree']]],
   ['row1_12',['row1',['../d9/d8b/structmat__3x3__.html#ac74f33a2e1ad1f6db74d94807cf1f64e',1,'mat_3x3_']]],
   ['row2_13',['row2',['../d9/d8b/structmat__3x3__.html#a8d7ae8fbcc408e3c30e9d64bbd28feaf',1,'mat_3x3_']]],
-  ['row3_14',['row3',['../d9/d8b/structmat__3x3__.html#a490bb6be52ea95b333b55b236af41563',1,'mat_3x3_']]]
+  ['row3_14',['row3',['../d9/d8b/structmat__3x3__.html#a490bb6be52ea95b333b55b236af41563',1,'mat_3x3_']]],
+  ['run_5flength_5fencode_15',['run_length_encode',['../d1/dc7/run__length__encoding_8c.html#ac3cc4a63cf2a14a08e05c5537ecf59c2',1,'run_length_encoding.c']]],
+  ['run_5flength_5fencoding_2ec_16',['run_length_encoding.c',['../d1/dc7/run__length__encoding_8c.html',1,'']]]
 ];

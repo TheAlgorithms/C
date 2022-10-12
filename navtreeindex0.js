@@ -113,6 +113,10 @@ var NAVTREEINDEX0 =
 "d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4":[15,0,14,4,5],
 "d1/dc2/ode__midpoint__euler_8c.html#a9ceb646336224ee890a269d0b4600d09":[15,0,14,4,0],
 "d1/dc2/ode__midpoint__euler_8c.html#affe6cc2ab040b94a29e6c41782f72d51":[15,0,14,4,4],
+"d1/dc7/run__length__encoding_8c.html":[15,0,13,11],
+"d1/dc7/run__length__encoding_8c.html#aa8dca7b867074164d5f45b0f3851269d":[15,0,13,11,2],
+"d1/dc7/run__length__encoding_8c.html#ac3cc4a63cf2a14a08e05c5537ecf59c2":[15,0,13,11,1],
+"d1/dc7/run__length__encoding_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,13,11,0],
 "d1/ded/group__misc.html":[13,3],
 "d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a":[13,3,0],
 "d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d":[13,3,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be":[15,0,15,17,0,5],
 "d4/d83/problem__401_2sol1_8c.html#ade1bdf2529e3c58f53bfb4d844f3a9d3":[15,0,15,17,0,1],
 "d4/d99/fibonacci__fast_8c.html":[15,0,13,4],
-"d4/d99/fibonacci__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,13,4,1],
-"d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3":[15,0,13,4,0],
-"d4/d99/ode__semi__implicit__euler_8c.html":[15,0,14,5],
-"d4/d99/ode__semi__implicit__euler_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,14,5,2],
-"d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb":[15,0,14,5,5]
+"d4/d99/fibonacci__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,13,4,1]
 };

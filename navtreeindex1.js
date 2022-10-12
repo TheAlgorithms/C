@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"d4/d99/fibonacci__fast_8c.html#a7a3d55bd19854075cba2eed6b63cb2d3":[15,0,13,4,0],
+"d4/d99/ode__semi__implicit__euler_8c.html":[15,0,14,5],
+"d4/d99/ode__semi__implicit__euler_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,14,5,2],
+"d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb":[15,0,14,5,5],
 "d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a":[15,0,14,5,1],
 "d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4":[15,0,14,5,3],
 "d4/d99/ode__semi__implicit__euler_8c.html#a9ceb646336224ee890a269d0b4600d09":[15,0,14,5,0],
@@ -12,10 +16,10 @@ var NAVTREEINDEX1 =
 "d4/dbd/problem__23_2sol2_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf":[15,0,15,12,1,0],
 "d4/dbd/problem__23_2sol2_8c.html#af920a16d6ef69dd604b283f427892e06":[15,0,15,12,1,5],
 "d4/dcb/md_hash__r_e_a_d_m_e.html":[9],
-"d4/dcc/strong__number_8c.html":[15,0,13,11],
-"d4/dcc/strong__number_8c.html#a03654cadb0cfe1195810dbe5da0265b5":[15,0,13,11,0],
-"d4/dcc/strong__number_8c.html#ae1a3968e7947464bee7714f6d43b7002":[15,0,13,11,2],
-"d4/dcc/strong__number_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,13,11,1],
+"d4/dcc/strong__number_8c.html":[15,0,13,12],
+"d4/dcc/strong__number_8c.html#a03654cadb0cfe1195810dbe5da0265b5":[15,0,13,12,0],
+"d4/dcc/strong__number_8c.html#ae1a3968e7947464bee7714f6d43b7002":[15,0,13,12,2],
+"d4/dcc/strong__number_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,13,12,1],
 "d4/dd4/struct_graph.html":[14,0,16],
 "d4/dd9/structtrie.html":[14,0,40],
 "d4/de3/hash__djb2_8c.html":[13,1,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "d9/d66/group__machine__learning.html":[13,2],
 "d9/d8b/structmat__3x3__.html":[13,0,1,0],
 "d9/d8b/structmat__3x3__.html#a490bb6be52ea95b333b55b236af41563":[13,0,1,0,2],
-"d9/d8b/structmat__3x3__.html#a8d7ae8fbcc408e3c30e9d64bbd28feaf":[13,0,1,0,1],
-"d9/d8b/structmat__3x3__.html#ac74f33a2e1ad1f6db74d94807cf1f64e":[13,0,1,0,0],
-"d9/da7/problem__10_2sol2_8c.html":[15,0,15,1,1],
-"d9/da7/problem__10_2sol2_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,15,1,1,0],
-"d9/dc9/hash__crc32_8c.html":[13,1,1]
+"d9/d8b/structmat__3x3__.html#a8d7ae8fbcc408e3c30e9d64bbd28feaf":[13,0,1,0,1]
 };
