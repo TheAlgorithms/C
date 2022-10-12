@@ -10,15 +10,18 @@ struct node
     struct node *link;
 };
 struct node *start = NULL;
-///////////////////////////////////////////////////////////
-struct node *createnode()  // function to create node
+
+/*function to create node
+ */
+struct node *createnode()
 {
     struct node *t;
     t = (struct node *)malloc(sizeof(struct node));
     return (t);
 }
-////////////////////////////////////////////////////////
-void insert()  // function to insert at first location
+/*function to insert at first location
+ */
+void insert()
 {
     struct node *p;
     p = createnode();
@@ -35,8 +38,27 @@ void insert()  // function to insert at first location
         start = p;
     }
 }
-///////////////////////////////////////////////////////////
-void deletion()  // function to delete from first position
+/*insert a node on index `index`*/
+void insert_at_index()
+{
+    struct node *node_before_insertion, *new_node;
+    int i, index;
+    printf("\nenter the index to insert");
+    scanf("%d", &index);
+    node_before_insertion = start;
+    // loop over the linkedin list until we point to index `index`
+    for (i = 1; i < index - 1; i++)
+    {
+        node_before_insertion = node_before_insertion->link;
+    }
+    new_node = createnode();
+    printf("\nenter the number to insert");
+    scanf("%d", &new_node->info);
+    new_node->link = node_before_insertion->link;
+    node_before_insertion->link = new_node;
+}
+/*function to delete from first position*/
+void deletion()
 {
     struct node *t;
     if (start == NULL)
@@ -51,8 +73,8 @@ void deletion()  // function to delete from first position
         free(p);
     }
 }
-///////////////////////////////////////////////////////
-void viewlist()  // function to display values
+/*function to display values*/
+void viewlist()
 {
     struct node *p;
     if (start == NULL)
@@ -69,7 +91,6 @@ void viewlist()  // function to display values
         }
     }
 }
-//////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -77,8 +98,9 @@ int main()
     while (1)
     {
         printf("\n1.add value at first location");
-        printf("\n2.delete value from first location");
-        printf("\n3.view value");
+        printf("\n2.insert value at index");
+        printf("\n3.delete value from first location");
+        printf("\n4.view value");
         printf("\nenter your choice");
         scanf("%d", &n);
         switch (n)
@@ -87,9 +109,12 @@ int main()
             insert();
             break;
         case 2:
-            deletion();
+            insert_at_index();
             break;
         case 3:
+            deletion();
+            break;
+        case 4:
             viewlist();
             break;
         default:
