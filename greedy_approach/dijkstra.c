@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// maximum number of nodes
 #define MAX 20
+// infinite distance
 #define INF 999
-
+//matrix representation of graph
 int mat[MAX][MAX];
+// number of vertices
 int V;
-
+// array to store distance of each node
 int dist[MAX];
 
 int q[MAX];
@@ -31,11 +33,15 @@ int queue_has_something() { return (qp > 0); }
 
 int visited[MAX];
 int vp = 0;
-
+// Function that implements Dijkstra's single source
+// shortest path algorithm for a graph represented using
+// adjacency matrix representation
 void dijkstra(int s)
 {
+    // set the distance of source as zero
     dist[s] = 0;
     int i;
+    // set the distance of rest of the nodes as infinite and push them into the queue
     for (i = 0; i < V; ++i)
     {
         if (i != s)
@@ -46,10 +52,12 @@ void dijkstra(int s)
     }
     while (queue_has_something())
     {
+        // mark the node with minimum distance as visited
         int u = dequeue();
         visited[vp++] = u;
         for (i = 0; i < V; ++i)
         {
+            // update the distance of adjacent nodes of u if getting a smaller distance
             if (mat[u][i])
             {
                 if (dist[i] > dist[u] + mat[u][i])
