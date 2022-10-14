@@ -50,6 +50,7 @@ void jobSequencing(int n, struct Jobs job_details[100])
             }
         }
     }
+
     printf("\nJobs to be done are : ");
     for (i=0; i<max_deadline; i++)
     {
