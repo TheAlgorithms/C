@@ -505,6 +505,9 @@ struct node *editContact(struct node *start, int ID)
     return start;
 }
 
+/*
+ @brief returns 0 on exit
+*/
 int main()
 {
     int ID;
