@@ -129,7 +129,7 @@ static inline void glutBitmapString(void *font, char *string)
 /**
  * @brief Function to graph (x,y) points on the OpenGL graphics window.
  *
- * @param x array containing absicca of points (must be pre-allocated)
+ * @param x array containing abscissae of points (must be pre-allocated)
  * @param y array containing ordinates of points (must be pre-allocated)
  * @param N number of points in the arrays
  */
