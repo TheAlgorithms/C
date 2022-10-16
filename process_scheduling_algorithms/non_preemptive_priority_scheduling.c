@@ -344,7 +344,11 @@ void test()
     printf("Average Waiting Time is : %f \n", CalculateWT(&root));
 }
 
-void main()
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
+int main()
 {
     test();
 
