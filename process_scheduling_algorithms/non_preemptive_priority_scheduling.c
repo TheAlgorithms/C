@@ -15,24 +15,23 @@
  * been executed.
  * @author [Aryan Raj](https://github.com/aryaraj132)
  */
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdbool.h>  /// for boolean data type
+#include <stdio.h>    /// for IO operations (`printf`)
+#include <stdlib.h>  /// for memory allocation eg: `malloc`, `realloc`, `free`, `exit`
 
 /**
  * @brief Structure to represent a process
- * ID: process ID
- * AT: arrival time
- * BT: burst time
- * priority: priority of the process
- * CT: completion time
- * TAT: turn around time
- * WT: waiting time
  */
 struct node
 {
-    int ID, AT, BT, priority, CT, WT, TAT;
-    struct node *next;
+    int ID;             ///< ID of the process node
+    int AT;             ///< Arrival Time of the process node
+    int BT;             ///< Burst Time of the process node
+    int priority;       ///< Priority of the process node
+    int CT;             ///< Completion Time of the process node
+    int WT;             ///< Waiting Time of the process node
+    int TAT;            ///< Turn Around Time of the process node
+    struct node *next;  ///< pointer to the node
 };
 
 /**
@@ -322,8 +321,11 @@ float CalculateWT(struct node **root)
     return avg;
 }
 
-// self implemented test case
-void test()
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
 {
     // Entered processes
     printf("ID Priority Arrival Time Burst Time \n");
