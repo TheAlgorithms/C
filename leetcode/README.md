@@ -27,6 +27,7 @@ LeetCode
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C](./src/35.c)|Easy|
 |38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [C](./src/38.c)|Easy|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C](./src/53.c)|Easy|
+|63|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| [C](./src/63.c)|Medium|
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [C](./src/66.c)|Easy|
 |82|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C](./src/82.c)|Medium|
 |83|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [C](./src/83.c)|Easy|
