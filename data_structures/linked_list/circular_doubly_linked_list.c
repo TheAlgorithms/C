@@ -181,6 +181,10 @@ void Display(struct node *start)
     printf("\n");
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     // Creating an empty list
