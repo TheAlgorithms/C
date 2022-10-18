@@ -94,3 +94,4 @@ LeetCode
 |1189|[Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | [C](./src/1189.c)|Easy|
 |1207|[Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) | [C](./src/1207.c)|Easy|
 |2130|[Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) | [C](./src/2130.c)|Medium|
+|2427|[Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/) | [C](./src/2427.c)|Easy|
