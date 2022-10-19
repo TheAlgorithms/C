@@ -1,0 +1,30 @@
+
+#include<stdio.h>
+int main() {
+ 
+    // Ask the user for the input
+    int num;
+    printf("Enter the number you want mutliplication table: ");
+    scanf("%d", &num);
+ 
+    // our counter.
+    int counter = 1;
+ 
+    // goto label
+    PRODUCT:
+        // print the table entry.
+        printf("%d * %d = %d \n", num, counter, num*counter);
+        
+        // Increment the counter
+        counter++;
+ 
+        // we will print multiplication table upto 10
+        // so check the `counter`
+        // if the 'counter' is below 10, then we will jump back to `PRODUCT` Label
+        // if the 'counter' is above 10, We will exit.
+        if (counter <= 10) {
+            goto PRODUCT;
+        }
+ 
+    return 0;
+}
