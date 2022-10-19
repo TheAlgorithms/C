@@ -13,6 +13,8 @@
     #include <stdlib.h>
 
     int i, j, k, a, b, u, v, n, ne = 1;
+    
+    //This is where we will store the cost of each vertex to its parents.
     int min, mincost = 0, cost[9][9], parent[9];
     int find(int);
     int uni(int, int);
@@ -28,7 +30,10 @@
             cost[i][j] = 999;
         }
       }
+      //Then it prints out what edges make up the Minimum Cost Spanning Tree for each iteration of the loop using printf().
       printf("The edges of Minimum Cost Spanning Tree are\n");
+      
+      //After this there is a while loop that goes through all nine vertices until it finds one with minimum cost (ne < n).
       while (ne < n) {
         for (i = 1, min = 999; i <= n; i++) {
           for (j = 1; j <= n; j++) {
