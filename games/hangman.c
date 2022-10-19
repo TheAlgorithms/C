@@ -9,13 +9,25 @@
 #include "hangman.h"
 
 
-/*generate random index to select word*/
+/**
+ * @brief Generate a random index
+ *
+ * @param low Floor of index
+ * @param high Ceiling of index
+ * @return Randomly generated index
+ */
 int gen_index(int low, int high) { 
     srand(time(0));
     
     return ((rand() % (high - low + 1)) + low); 
 } 
 
+/**
+ * @brief Display hangman game
+ *
+ * @param wg_cnt No. of wrong guess
+ * @param len Length of word
+ */
 void display(uint8_t wg_cnt, int len){
     int i = 0;
     printf("\033[H\033[J \n");
@@ -125,7 +137,13 @@ uint8_t hash_search(char data){
     return FALSE;
 }
 
-/*Check if location is free*/
+/**
+ * @brief Check hash table location is free
+ *
+ * @param data Hash table key
+ * @return true if empty
+ * @return false if non-empty
+ */
 uint8_t is_empty(char data) {
     data = tolower(data);
     if(NULL == ht->tbl[data-97].head){
@@ -170,7 +188,6 @@ int main(){
     display(0, strlen(words[gidx].string));
     while(len != 0){
         printf("Guess the word\n");
-        //c = getc(stdin);
         scanf(" %c",&c);
         c = tolower(c);
         if (c < 'a' || c > 'z'){
