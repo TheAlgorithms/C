@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//check sorting function
 bool check_sorted(int *a, int n)
 {
     while (--n >= 1)
