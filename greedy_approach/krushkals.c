@@ -11,13 +11,13 @@
   #include <stdio.h>   //for input or output
     #include <stdlib.h>  //It is a standard lib which is for general utility
 
-    int i, j, k, a, b, u, v, n, ne = 1;
     
     //This is where we will store the cost of each vertex to its parents.
     int min, mincost = 0, cost[9][9], parent[9];
     int find(int);
     int uni(int, int);
     void main() {
+      int i, j, k, a, b, u, v, n, ne = 1;
       printf("\n\tImplementation of Kruskal's Algorithm\n");
       printf("\nEnter the no. of vertices:");
       scanf("%d", & n);
