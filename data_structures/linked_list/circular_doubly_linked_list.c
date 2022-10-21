@@ -23,8 +23,8 @@
  */
 struct node
 {
-    struct node *prev, *next; // List pointers
-    int value;                // Data stored on each node
+    struct node *prev, *next;         ///< List pointers
+    int value = 0;                   ///> Data stored on each node
 };
 
 /**
