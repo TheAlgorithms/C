@@ -157,8 +157,8 @@ uint8_t is_empty(char data) {
  * @return 0 on exit
  */
 int main(){
-    uint8_t c,i, wrg_guess_cnt = 0;
-    uint32_t len = 0, idx = 0, gidx = 0;
+    uint8_t c, wrg_guess_cnt = 0;
+    uint32_t i=0, len = 0, idx = 0, gidx = 0;
 
     //Initialization
     //hash table
