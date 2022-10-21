@@ -1,6 +1,6 @@
 /**
  * @file hangman.c
- * @brief Hangman: A classic word game(https://en.wikipedia.org/wiki/Hangman_(game))
+ * @brief Hangman: The classic [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) word game
  * @details Hangman is word guessing game where the program will randomly pick a word 
  * from a word pool and represent it's letter in dashes"_ _ _". The user has to guess 
  * the right word within a particular number of chances.
