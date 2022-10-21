@@ -16,8 +16,8 @@
  *
  */
 
-#include <stdio.h>   // for IO operations
-#include <stdlib.h>  // for including functions involving memory allocation( eg. malloc,calloc)
+#include <stdio.h>   /// for IO operations
+#include <stdlib.h>  /// for including functions involving memory allocation such as `malloc`
 /**
  * @brief Node Structure Cicular Doubly linked list.
  */
