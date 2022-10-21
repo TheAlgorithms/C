@@ -9,7 +9,6 @@
  */
  
   #include <stdio.h>   //for input or output
-    #include <conio.h>  //for console input or output lib function.
     #include <stdlib.h>  //It is a standard lib which is for general utility
 
     int i, j, k, a, b, u, v, n, ne = 1;
