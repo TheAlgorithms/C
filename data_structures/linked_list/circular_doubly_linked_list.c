@@ -16,15 +16,16 @@
  *
  */
 
-#include <stdio.h>   /// for IO operations
-#include <stdlib.h>  /// for including functions involving memory allocation such as `malloc`
+#include <stdio.h>     /// for IO operations
+#include <stdlib.h>    /// for including functions involving memory allocation such as `malloc`
+#include <inttypes.h>  /// to provide a set of integer types with universally consistent definitions that are operating system-independent
 /**
  * @brief Node Structure Cicular Doubly linked list.
  */
 struct node
 {
     struct node *prev, *next;         ///< List pointers
-    int value = 0;                   ///> Data stored on each node
+    int64_t value;                   ///> Data stored on each node
 };
 
 /**
@@ -166,12 +167,12 @@ void Display(struct node *start)
     {
         while (temp->next != start)
         {
-            printf("%d -> ", temp->value);
+            printf("%lld -> ", temp->value);
             temp = temp->next;
         }
         if (temp->next == start)
         {
-            printf("%d", temp->value);
+            printf("%lld", temp->value);
         }
     }
     else
