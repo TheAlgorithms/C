@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
     [ "The Algorithms - C", "index.html", [
-      [ "Overview", "index.html#autotoc_md68", null ],
-      [ "Features", "index.html#autotoc_md69", null ],
-      [ "Documentation", "index.html#autotoc_md70", null ],
-      [ "Contributions", "index.html#autotoc_md71", null ]
+      [ "Overview", "index.html#autotoc_md69", null ],
+      [ "Features", "index.html#autotoc_md70", null ],
+      [ "Documentation", "index.html#autotoc_md71", null ],
+      [ "Contributions", "index.html#autotoc_md72", null ]
     ] ],
     [ "Contributor Covenant Code of Conduct", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
       [ "Our Pledge", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md1", null ],
