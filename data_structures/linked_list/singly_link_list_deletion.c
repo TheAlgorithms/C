@@ -4,6 +4,7 @@
   when passed with a key of the node.
 */
 #include <stdio.h>
+#include <stdlib.h>
 struct node
 {
     int info;
@@ -36,20 +37,34 @@ void insert()  // function to insert at first location
     }
 }
 ///////////////////////////////////////////////////////////
-void deletion()  // function to delete from first position
+void deletion(int pos)  // function to delete from any position
 {
     struct node *t;
     if (start == NULL)
-    {
-        printf("\nlist is empty");
+        {
+           printf("\nlist is empty");
+        }
+    else{
+        if(pos==1)
+        {
+            struct node *p;
+            p = start;
+            start = start->link;
+            free(p);
+         }
+         else
+         {
+            struct node *prev=start;
+            for(int i=2;i<pos;i++)
+            {
+              prev=prev->link;
+            }
+           struct node *n=prev->link;   //n points to required node to be deleted
+           prev->link=n->link;
+           free(n);
+        }
     }
-    else
-    {
-        struct node *p;
-        p = start;
-        start = start->link;
-        free(p);
-    }
+
 }
 ///////////////////////////////////////////////////////
 void viewlist()  // function to display values
@@ -73,11 +88,11 @@ void viewlist()  // function to display values
 
 int main()
 {
-    int n;
+    int n,pos;
     while (1)
     {
         printf("\n1.add value at first location");
-        printf("\n2.delete value from first location");
+        printf("\n2.delete value at required position");
         printf("\n3.view value");
         printf("\nenter your choice");
         scanf("%d", &n);
@@ -87,7 +102,10 @@ int main()
             insert();
             break;
         case 2:
-            deletion();
+           
+            printf("Enter the position where th element is to be deleted");
+            scanf("%d",&pos);
+            deletion(pos);
             break;
         case 3:
             viewlist();
@@ -98,3 +116,4 @@ int main()
     }
     return (0);
 }
+
