@@ -1,4 +1,3 @@
-# List of all files
 
 ## Audio
   * [Alaw](https://github.com/TheAlgorithms/C/blob/master/audio/alaw.c)
