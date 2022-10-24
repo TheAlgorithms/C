@@ -21,5 +21,6 @@ var searchData=
   ['allocatememoryfornode_18',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
   ['array_19',['Array',['../d9/d41/md_data_structures_array__r_e_a_d_m_e.html',1,'']]],
   ['atexitcalled_20',['atexitCalled',['../db/d84/malloc__dbg_8c.html#ad04afbbcb9f0f10bc7628ec4f0d7c950',1,'malloc_dbg.c']]],
-  ['avlnode_21',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
+  ['audio_21',['Audio',['../d5/d88/md__d_i_r_e_c_t_o_r_y.html',1,'']]],
+  ['avlnode_22',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
 ];

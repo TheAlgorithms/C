@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"d9/d8b/structmat__3x3__.html#ac74f33a2e1ad1f6db74d94807cf1f64e":[13,0,1,0,0],
 "d9/da7/problem__10_2sol2_8c.html":[15,0,15,1,1],
 "d9/da7/problem__10_2sol2_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[15,0,15,1,1,0],
 "d9/dc9/hash__crc32_8c.html":[13,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "dd/d79/remote__command__exec__udp__server_8c.html#a7e15c8e2885871839fc2b820dfbdb4ce":[15,0,1,2,1],
 "dd/d79/remote__command__exec__udp__server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[15,0,1,2,2],
 "dd/d7a/group__matrix.html":[13,0,1],
-"dd/d7a/group__matrix.html#ga9f844010cb96591fa94c9d533a500ab7":[13,0,1,1]
+"dd/d7a/group__matrix.html#ga9f844010cb96591fa94c9d533a500ab7":[13,0,1,1],
+"dd/d8b/problem__22_2sol1_8c.html":[15,0,15,11,0]
 };

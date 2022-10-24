@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"dd/d8b/problem__22_2sol1_8c.html":[15,0,15,11,0],
 "dd/d8b/problem__22_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[15,0,15,11,0,3],
 "dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63":[15,0,15,11,0,4],
 "dd/d8b/problem__22_2sol1_8c.html#a6cb9b08aacb61416795ee78bfceacd38":[15,0,15,11,0,1],
@@ -234,10 +233,10 @@ var NAVTREEINDEX3 =
 "globals_x.html":[15,1,0,24],
 "index.html":[],
 "index.html":[0],
-"index.html#autotoc_md69":[0,0],
-"index.html#autotoc_md70":[0,1],
-"index.html#autotoc_md71":[0,2],
-"index.html#autotoc_md72":[0,3],
+"index.html#autotoc_md68":[0,0],
+"index.html#autotoc_md69":[0,1],
+"index.html#autotoc_md70":[0,2],
+"index.html#autotoc_md71":[0,3],
 "modules.html":[13],
 "pages.html":[]
 };
