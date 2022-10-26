@@ -1,15 +1,19 @@
 /**
- * @file rot13.c
- * @brief ROT13 is a simple letter substitution cipher that replaces a
- * letter with the 13th letter after it in the alphabet.
- * https://en.wikipedia.org/wiki/ROT13
- * @details
+ * @file
+ * @brief [ROT13](https://en.wikipedia.org/wiki/ROT13) is a simple letter 
+ * substitution cipher that replaces a letter with the 13th letter after it in 
+ * the alphabet.
+ * @details ROT13 tranforms a piece of text examining its alphabetic characters
+ * and replacing each one by the letter 13 places further along in the alphabet,
+ * wrapping back to the beginning if necessary. A becomes N, B becomes O, and so
+ * on up to M, which becomes Z, then the sequence continues at the beginning of
+ * the alphabet: N becomes A, O becomes B, and so on to Z, which becomes M. 
  * @author [Jeremias Moreira Gomes](https://github.com/j3r3mias)
  */
 
-#include <stdio.h>
-#include <string.h>
-#include <assert.h>
+#include <stdio.h>     /// for IO operations
+#include <string.h>    /// for string operations
+#include <assert.h>    /// for assert
 
 /**
  * @brief Apply the ROT13 cipher
@@ -25,7 +29,11 @@ void rot13(char *s) {
     } 
 }
 
-void test() {
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test() {
     char test_01[] = "The more I C, the less I see.";
     rot13(test_01);
     assert(strcmp(test_01, "Gur zber V P, gur yrff V frr.") == 0);
