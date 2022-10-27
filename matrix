@@ -1,0 +1,219 @@
+//including the header files
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<mpi.h>
+
+//read_size function to read the size of the matrix
+int *read_size(int *array){
+  FILE* fp; //file pointer
+  char *line = NULL;
+  size_t len = 0;
+  ssize_t read;
+ 
+ //opening the file
+  fp = fopen("input.txt","r");
+  if(fp==NULL)
+    exit(EXIT_FAILURE); //exit if the file is not found
+  int type = 1;
+  int matrix_a_row, matrix_a_column, matrix_b_row, matrix_b_column; //variables to store the size of the matrix
+  int i,j,n;
+  i=0;
+  j=0;
+  while((read = getline(&line, &len, fp))!=-1){ //reading the file line by line
+    if(*line=='\n') //if the line is empty
+      type=2;
+
+    if(type==1){ //if the line is not empty
+      char *token1 = strtok(line, ", "); //tokenizing the line
+      while(token1!=NULL){
+        j++;
+        token1=strtok(NULL,", "); //tokenizing the line
+      }
+      matrix_a_column=j; //storing the size of the matrix
+      j=0;
+      i++;
+    }
+    else if(type==2){ //if the line is empty
+      matrix_a_row=i;
+      i=0;
+      type=3;} 
+    else if(type==3){ //if the line is not empty
+      char *token2 = strtok(line, ", ");
+      while(token2!=NULL){ //tokenizing the line
+        j++;
+        token2=strtok(NULL,", ");
+      }
+      matrix_b_column=j; //storing the size of the matrix 
+      j=0;
+      i++;
+    }
+  }
+  matrix_b_row=i;
+  fclose(fp); //closing the file
+ 
+ //storing the size of the matrix in an array
+  array[0]=matrix_a_row;
+  array[1]=matrix_a_column;
+  array[2]=matrix_b_row;
+  array[3]=matrix_b_column;
+
+  return array; //returning the array
+
+}
+
+//main function of the program where the matrix multiplication is performed
+int main(int argc, char* argv[]){
+  int array[4]; //array to store the size of the matrix
+  int i,j,k;
+  int x, c;
+  read_size(array); //calling the read_size function
+  //declaring the matrices
+  int a_row=array[0];
+  int a_column=array[1];
+  int b_row=array[2];
+  int b_column=array[3];
+  float matrix_a[a_row][a_column];
+  float matrix_b[b_row][b_column];
+  float matrix_c[a_column][b_column];
+  int myrank, p;
+  int NRPE;
+  double starttime, endtime;
+
+  //initializing the MPI environment
+  MPI_Init(&argc, &argv);
+  MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+  MPI_Comm_size(MPI_COMM_WORLD, &p);
+  MPI_Status status;
+
+  NRPE = a_column/p; //calculating the number of rows per process
+
+  //reading the matrix from the file
+  if(myrank == 0){
+    printf("\nParellel processing");
+    printf("\nMatrix a\n");
+
+    FILE* fp; //file pointer
+  char *line = NULL;
+  size_t len = 0;
+  ssize_t read;
+
+  //opening the file
+  fp = fopen("input.txt","r");
+  if(fp==NULL) //exit if the file is not found
+    exit(EXIT_FAILURE);
+  int type = 1; //variable to store the type of the line
+  int i,j,n;
+  i=0;
+  j=0;
+  while((read = getline(&line, &len, fp))!=-1){ //reading the file line by line
+    if(*line=='\n') //if the line is empty
+      type=2; 
+
+    if(type==1){ //if the line is not empty
+      char *token1 = strtok(line, ", ");
+      while(token1!=NULL){ //tokenizing the line
+        float y = atof(token1); //converting the string to float
+        matrix_a[i][j]=y;
+        j++;
+        token1=strtok(NULL,", "); //tokenizing the line
+      }
+      j=0;
+      i++;
+    }
+    else if(type==2){ //if the line is empty
+      i=0;
+      type=3;}
+    else if(type==3){
+      char *token2 = strtok(line, ", "); //tokenizing the line
+      while(token2!=NULL){
+        float y = atof(token2); //converting the string to float
+        matrix_b[i][j]=y;
+        j++;
+        token2=strtok(NULL,", ");   
+      }
+      j=0;
+      i++;
+    }
+  }
+  fclose(fp); //closing the file
+
+  //printing the matrix using the for loop
+  for(i=0;i<a_row;i++){
+    for(j=0;j<a_column;j++){
+      printf("%.3f\t",matrix_a[i][j]); //printing the matrix
+    }
+    printf("\n");
+  }
+ 
+  //printing the matrix using the for loop  
+  printf("\nMatrix b\n");
+  for(i=0;i<b_row;i++){
+    for(j=0;j<b_column;j++){
+      printf("%.3f\t",matrix_b[i][j]); //printing the matrix
+    }
+    printf("\n");
+  }
+    
+    //sending the matrix to the processes
+    for(i=0;i<a_row;i++){
+      MPI_Bcast(matrix_b[i], b_row*b_column, MPI_INT, 0, MPI_COMM_WORLD); //broadcasting the matrix
+    }
+ 
+    //printing the matrix using the for loop
+    printf("\n Matrix b by process : %d\n", myrank);
+    for(x=0;x<b_row;++x){
+      for(c=0;c<b_column;++c)
+        printf("%.3f\t", matrix_b[x][c]); //printing the matrix
+      printf("\n");
+    }
+  }
+
+  //sending the matrix to the processes
+  for(i=0;i<p;i++){
+    for(j=0;j<a_column;j++){
+      MPI_Send(&matrix_a[i][j], a_row*NRPE, MPI_INT, i, 0, MPI_COMM_WORLD); //sending the matrix using MPI_Send
+      NRPE++;
+    }
+  }
+
+
+  //receiving of each row of matrix a per process
+  MPI_Recv(matrix_a, a_row*NRPE, MPI_INT, 0, 0,MPI_COMM_WORLD, &status);
+
+  //multiplication
+  starttime = MPI_Wtime();
+  float sum;
+  for (i = 0; i <a_row; i++) { //looping through the rows of matrix a
+      for (j = 0; j <b_row; j++) {
+         sum = 0;
+         for (k = 0; k <b_column; k++) { //looping through the columns of matrix b
+            sum = sum + matrix_a[i][k] * matrix_b[k][j];
+         }
+         printf("\n");
+         matrix_c[i][j] = sum; //storing the result in the matrix c
+      }
+   }
+  endtime = MPI_Wtime(); //storing the end time
+
+
+  //printing the matrix using the for loop
+  if(myrank==0){
+    FILE*fout = fopen("output.txt","wb"); //opening the file
+    printf("Result Matrix :::\n");
+    for(i=0;i<a_row;i++){ //looping through the rows of matrix c
+      for(j=0;j<b_column;j++){
+        fprintf(fout,"%.3f\t",matrix_c[i][j]); //printing the matrix
+        printf("%.3f\t", matrix_c[i][j]); 
+      }
+      fprintf(fout,"\n"); //fprintf is used to print the matrix in the file
+      printf("\n");
+    }
+    printf("\n\nParellel Time of seconds ::: %f\n", endtime-starttime); //printing the time
+  }
+  return 0;
+  MPI_Finalize(); //finalizing the MPI environment
+}
+
+
+
