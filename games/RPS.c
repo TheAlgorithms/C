@@ -1,4 +1,8 @@
 // Rock Paper Scissors Program
+// RPS.c
+// Created by: David Gillick
+// I acknowledge that all my contributions will be made under the project's
+// license.
 #include <stdio.h>
 #include <stdlib.h>
 
