@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    int i, userScore = 0, computerScore = 0;
-    int userChoice, computerChoice;
+    int i, userScore = 0, computerScore = 0;  // record the score
+    int userChoice, computerChoice;           // record the choice
     int seed;
 
     printf("Please enter a random number seed: \n");
@@ -13,18 +13,24 @@ int main(void)
     srand(seed);
 
     // Checks user input is valid (1,2,3)
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < 10; i++)  // sets the game for 10 valid rounds
+
+        printf(
+            "Please enter 1 for Rock, 2 for Paper or 3 for Scissors: \n");  // prompts the user to enter a choice
     {
-        scanf(" %d", &userChoice);
-        while (userChoice > 3 || userChoice < 1)
+        scanf(" %d", &userChoice);  // user input
+        while (userChoice > 3 ||
+               userChoice < 1)  // checks if user input is valid
         {
-            scanf("%d", &userChoice);
+            printf("Invalid input, please enter 1, 2 or 3: \n");
+            scanf(" %d", &userChoice);
         }
 
         // This is the computer's choice
         computerChoice = rand() % 3 + 1;
 
         // This is the scoring system
+        // all possible outcomes
         if (userChoice == 1 && computerChoice == 3)
         {
             printf(
