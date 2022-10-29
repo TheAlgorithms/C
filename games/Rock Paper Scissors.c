@@ -1,9 +1,19 @@
+/**
+* @file Rock Paper Scissors.c
+* @author [Aswin P Kumar](https://github.com/AswinPradeep3)
+* @brief [Rock Paper Scissors game](https://en.wikipedia.org/wiki/Rock_paper_scissors)
+* implementation in c
+* @details Rock Paper Scissors is a game in which the user can play with the computer
+* The user has to select an option from rock, paper or scissor.
+* The option of the computer is randomly generated usinng the random()
+*/
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-// Function to implement the game
+// Main Function 
 int game(char you, char computer)
 {
 	// If both the choices of user and computer are same
