@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief Conversion of [roman numerals](https://en.wikipedia.org/wiki/Roman_numerals) to decimal
- * @details Roman numerals are an ancient Roman numeral system consisting of the symbosl I, V, X, L, C, D and M
+ * @details Roman numerals are an ancient Roman numeral system consisting of the symbols I, V, X, L, C, D, and M
  * 
  * @author [Focusucof](https://github.com/Focusucof)
  */
