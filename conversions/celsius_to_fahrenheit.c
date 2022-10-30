@@ -1,7 +1,7 @@
 /**
  * @file
- * @brief Conversion of temperature in degrees [Celcius](https://en.wikipedia.org/wiki/Celsius) to [Fahrenheit](https://en.wikipedia.org/wiki/Fahrenheit)
- * @details Converts a given value in Celcius to Fahrenheit
+ * @brief Conversion of temperature in degrees [celsius](https://en.wikipedia.org/wiki/Celsius) to [Fahrenheit](https://en.wikipedia.org/wiki/Fahrenheit)
+ * @details Converts a given value in celsius to Fahrenheit
  * 
  * @author [Focusucof](https://github.com/Focusucof)
  */
@@ -10,12 +10,12 @@
 #include <stdio.h>  /// for IO operations
 
 /**
- * @brief Convert Celcius to Fahrenheit
- * @param celcius Temperature in degrees Celcius double
+ * @brief Convert celsius to Fahrenheit
+ * @param celsius Temperature in degrees celsius double
  * @returns Double of temperature in degrees Fahrenheit
  */
- double celcius_to_fahrenheit(double celcius) {
-    return (celcius * 9.0 / 5.0) + 32.0;
+ double celcius_to_fahrenheit(double celsius) {
+    return (celsius * 9.0 / 5.0) + 32.0;
  }
 
 /**
