@@ -44,7 +44,8 @@ void deletion(int pos)  // function to delete from any position
         {
            printf("\nlist is empty");
         }
-    else{
+    else
+    {
         if(pos==1)
         {
             struct node *p;
