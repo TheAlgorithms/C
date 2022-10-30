@@ -400,6 +400,7 @@
   * [Comb Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/comb_sort.c)
   * [Counting Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/counting_sort.c)
   * [Cycle Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/cycle_sort.c)
+  * [Dnf Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/dnf_sort.c)
   * [Gnome Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/gnome_sort.c)
   * [Heap Sort](https://github.com/TheAlgorithms/C/blob/master/sorting/heap_sort.c)
   * [Heap Sort 2](https://github.com/TheAlgorithms/C/blob/master/sorting/heap_sort_2.c)
