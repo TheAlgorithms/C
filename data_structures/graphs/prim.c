@@ -91,10 +91,6 @@ void prims_MST(node *adjacency_list[], long long size_of_tree) {
         //while Heap ≠ Φ(empty)
 		long long u = extract_min(H, &heap_size, pos);// Extract-min from heap                 
 		visited[u] = 1;
-		if(u!=1)
-		{
-			printf("V(%d,%d):W=%d\n",v1[u],u,key[u]);
-		}
 		cost += key[u];
 		node *q = adjacency_list[u];
 		while(q) {
@@ -105,7 +101,6 @@ void prims_MST(node *adjacency_list[], long long size_of_tree) {
 				v1[u] = u;
 				adjust_min_heap(H, u, w, heap_size, pos);
 			}
-			printf("Adj u: %d ", u);
 			q = q->next;
 		}
 	}
@@ -114,7 +109,8 @@ void prims_MST(node *adjacency_list[], long long size_of_tree) {
 int main()
 {
 	long long i,j,k,w,size_of_tree,e;
-	
+    size_of_tree=5;
+    e=6;	
 	printf("\nNo. of vertices:%d\n",size_of_tree);
 	printf("\nNo. of edges:%d\n",e);
 	node *adjacency_list[max_edges_of_vertex]={NULL};
@@ -185,16 +181,16 @@ int main()
 		t->w=1;
 		t->next=adjacency_list[4];
 		adjacency_list[4]=t;
-	printf("\nInput Graph:");
+	printf("\nGraph:\n");
 	for(i=1;i<size_of_tree+1;i++)
 	{
-		printf("%d->",i);
+		printf("    %d  ->  ",i);
 		node *p=adjacency_list[i];
 		while(p!=NULL)
 		{
-			printf("%lld:%lld",p->u,p->w);
+			printf("%lld : %lld",p->u,p->w);
             if(p->next!=NULL){
-                printf(":");
+                printf(" : ");
             }
 			p=p->next;
 		}
