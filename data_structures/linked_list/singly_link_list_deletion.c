@@ -64,7 +64,6 @@ void deletion(int pos)  // function to delete from any position
            free(n);
         }
     }
-
 }
 ///////////////////////////////////////////////////////
 void viewlist()  // function to display values
@@ -88,11 +87,11 @@ void viewlist()  // function to display values
 
 int main()
 {
-    int n,pos;
+    int n=0,pos=0;
     while (1)
     {
         printf("\n1.add value at first location");
-        printf("\n2.delete value at required position");
+        printf("\n2.delete value at the given location");
         printf("\n3.view value");
         printf("\nenter your choice");
         scanf("%d", &n);
@@ -116,4 +115,3 @@ int main()
     }
     return (0);
 }
-
