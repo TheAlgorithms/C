@@ -29,6 +29,7 @@ static void test() {
 
     double output = celcius_to_fahrenheit(input);
 
+    // 1st test
     printf("TEST 1\n");
     printf("Input: %f\n", input);
     printf("Expected Output: %f\n", expected);
