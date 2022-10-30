@@ -19,7 +19,7 @@
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_hexadecimal.c)
   * [Binary To Octal](https://github.com/TheAlgorithms/C/blob/master/conversions/binary_to_octal.c)
   * [C Atoi Str To Integer](https://github.com/TheAlgorithms/C/blob/master/conversions/c_atoi_str_to_integer.c)
-  * [Celcius To Fahrenheit](https://github.com/TheAlgorithms/C/blob/master/conversions/celcius_to_fahrenheit.c)
+  * [Celsius To Fahrenheit](https://github.com/TheAlgorithms/C/blob/master/conversions/celsius_to_fahrenheit.c)
   * [Decimal To Any Base](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_any_base.c)
   * [Decimal To Binary](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary.c)
   * [Decimal To Binary Recursion](https://github.com/TheAlgorithms/C/blob/master/conversions/decimal_to_binary_recursion.c)
