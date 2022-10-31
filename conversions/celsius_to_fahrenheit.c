@@ -1,6 +1,7 @@
 /**
  * @file
- * @brief Conversion of temperature in degrees [celsius](https://en.wikipedia.org/wiki/Celsius) to [Fahrenheit](https://en.wikipedia.org/wiki/Fahrenheit)
+ * @brief Conversion of temperature in degrees from [Celsius](https://en.wikipedia.org/wiki/Celsius)
+ * to [Fahrenheit](https://en.wikipedia.org/wiki/Fahrenheit).
  * @details Converts a given value in celsius to Fahrenheit
  * 
  * @author [Focusucof](https://github.com/Focusucof)
