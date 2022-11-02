@@ -5,7 +5,7 @@
  * Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing))
  * is a scheduling algorithm that selects the tasks to execute based on
  * priority.
- * 
+ *
  * @details
  * In this algorithm, processes are executed according to their
  * priority. The process with the highest priority is to be executed first and
@@ -18,10 +18,10 @@
  * been executed.
  * @author [Aryan Raj](https://github.com/aryaraj132)
  */
+#include <assert.h>   /// for assert
 #include <stdbool.h>  /// for boolean data type
 #include <stdio.h>    /// for IO operations (`printf`)
 #include <stdlib.h>  /// for memory allocation eg: `malloc`, `realloc`, `free`, `exit`
-
 /**
  * @brief Structure to represent a process
  */
@@ -78,8 +78,8 @@ void insert(struct node **root, int id, int at, int bt, int prior)
  * @param root pointer to the head of the queue
  * @param id process ID
  * @returns void
-  */
-void delete (struct node **root, int id)
+ */
+void delete(struct node **root, int id)
 {
     struct node *ptr = *root, *prev;
     // if the root is null, return
@@ -194,7 +194,8 @@ void update(struct node **root, int id, int ct, int wt, int tat)
  * @param b pointer to the second process
  * @returns true if the priority of the first process is greater than the
  * the second process
- * @returns false if the priority of the first process is NOT greater than the second process
+ * @returns false if the priority of the first process is NOT greater than the
+ * second process
  */
 bool compare(struct node *a, struct node *b)
 {
@@ -332,12 +333,12 @@ float CalculateWT(struct node **root)
 static void test()
 {
     // Entered processes
-    printf("ID Priority Arrival Time Burst Time \n");
-    printf("1 0 5 1 \n");
-    printf("2 1 4 2 \n");
-    printf("3 2 3 3 \n");
-    printf("4 3 2 4 \n");
-    printf("5 4 1 5 \n");
+    // printf("ID Priority Arrival Time Burst Time \n");
+    // printf("1 0 5 1 \n");
+    // printf("2 1 4 2 \n");
+    // printf("3 2 3 3 \n");
+    // printf("4 3 2 4 \n");
+    // printf("5 4 1 5 \n");
 
     struct node *root = NULL;
     insert(&root, 1, 0, 5, 1);
@@ -345,9 +346,16 @@ static void test()
     insert(&root, 3, 2, 3, 3);
     insert(&root, 4, 3, 2, 4);
     insert(&root, 5, 4, 1, 5);
-    printf("Average Completion Time is : %f \n", CalculateCT(&root));
-    printf("Average Turn Around Time is : %f \n", CalculateTAT(&root));
-    printf("Average Waiting Time is : %f \n", CalculateWT(&root));
+    float avgCT = CalculateCT(&root);
+    float avgTAT = CalculateTAT(&root);
+    float avgWT = CalculateWT(&root);
+    assert(avgCT == 11);
+    assert(avgTAT == 9);
+    assert(avgWT == 6);
+    printf("[+] All tests have successfully passed!\n");
+    // printf("Average Completion Time is : %f \n", CalculateCT(&root));
+    // printf("Average Turn Around Time is : %f \n", CalculateTAT(&root));
+    // printf("Average Waiting Time is : %f \n", CalculateWT(&root));
 }
 
 /**
