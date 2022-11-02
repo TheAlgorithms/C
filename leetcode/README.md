@@ -77,3 +77,4 @@ git push origin solution/your-solution-name:solution/your-solution-name
 4. You're done now! You just have to make a [**pull request**](https://github.com/TheAlgorithms/C/compare). 🎉
 
 If you need any help, don't hesitate to ask and join our [**Discord server**](https://the-algorithms.com/discord)! 🙂
+
