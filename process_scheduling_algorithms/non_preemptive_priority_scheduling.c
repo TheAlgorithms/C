@@ -74,10 +74,10 @@ void insert(struct node **root, int id, int at, int bt, int prior)
     return;
 }
 /*
-  * @brief To delete a process from the queue
-    @param root pointer to the head of the queue
-    @param id process ID
-    @returns void
+ * @brief To delete a process from the queue
+ * @param root pointer to the head of the queue
+ * @param id process ID
+ * @returns void
   */
 void delete (struct node **root, int id)
 {
