@@ -1,6 +1,6 @@
 /**
  * @file
- * @details
+ * @brief
  * [Non-Preemptive Priority
  * Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing)#Priority_scheduling)
  * is a scheduling algorithm that selects the tasks to execute based on
