@@ -356,7 +356,7 @@ static void test()
  */
 int main()
 {
-    test();
+    test();  // run self-test implementations
 
     // For Menu Driven Program
     /*
