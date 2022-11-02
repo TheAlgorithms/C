@@ -189,11 +189,12 @@ void update(struct node **root, int id, int ct, int wt, int tat)
 }
 /**
  * @brief To compare the priority of two processes based on their arrival time
- and priority
-  @param a pointer to the first process
-  @param b pointer to the second process
-  @returns bool true if the priority of the first process is greater than the
-  second process, false otherwise
+ * and priority
+ * @param a pointer to the first process
+ * @param b pointer to the second process
+ * @returns true if the priority of the first process is greater than the
+ * the second process
+ * @returns false if the priority of the first process is NOT greater than the second process
  */
 bool compare(struct node *a, struct node *b)
 {
