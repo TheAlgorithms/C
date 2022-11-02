@@ -2,9 +2,12 @@
  * @file
  * @brief
  * [Non-Preemptive Priority
- * Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing)#Priority_scheduling)
+ * Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing))
  * is a scheduling algorithm that selects the tasks to execute based on
- * priority. In this algorithm, processes are executed according to their
+ * priority.
+ * 
+ * @details
+ * In this algorithm, processes are executed according to their
  * priority. The process with the highest priority is to be executed first and
  * so on. In this algorithm, a variable is maintained known as the time quantum.
  * The length of the time quantum is decided by the user. The process which is
