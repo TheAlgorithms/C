@@ -26,6 +26,7 @@
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | Medium            |
+| 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)                                                               | [C](./src/63.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
@@ -37,6 +38,7 @@
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)                                                     | [C](./src/110.c)  | Easy       |
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                             | [C](./src/112.c)  | Easy       |
 | 118  | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)                                                            | [C](./src/118.c)  | Easy       |
+| 119  | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)                                                      | [C](./src/119.c)  | Easy       |
 | 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                               | [C](./src/121.c)  | Easy       |
 | 125  | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                             | [C](./src/125.c)  | Easy       |
 | 136  | [Single Number](https://leetcode.com/problems/single-number/)                                                                   | [C](./src/136.c)  | Easy       |
