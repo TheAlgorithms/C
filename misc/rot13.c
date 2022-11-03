@@ -3,11 +3,12 @@
  * @brief [ROT13](https://en.wikipedia.org/wiki/ROT13) is a simple letter 
  * substitution cipher that replaces a letter with the 13th letter after it in 
  * the alphabet.
- * @details ROT13 tranforms a piece of text examining its alphabetic characters
- * and replacing each one by the letter 13 places further along in the alphabet,
- * wrapping back to the beginning if necessary. A becomes N, B becomes O, and so
- * on up to M, which becomes Z, then the sequence continues at the beginning of
- * the alphabet: N becomes A, O becomes B, and so on to Z, which becomes M. 
+ * @details ROT13 transforms a piece of text by examining its alphabetic
+ * characters and replacing each one with the letter 13 places further along in
+ * the alphabet, wrapping back to the beginning if necessary. A becomes N, B
+ * becomes O, and so on up to M, which becomes Z, then the sequence continues at
+ * the beginning of the alphabet: N becomes A, O becomes B, and so on to Z,
+ * which becomes M.
  * @author [Jeremias Moreira Gomes](https://github.com/j3r3mias)
  */
 
@@ -49,8 +50,11 @@ static void test() {
     printf("All tests have successfully passed!\n");
 }
 
-
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main() {
-    test();
+    test();  // run self-test implementations
     return 0;
 }
