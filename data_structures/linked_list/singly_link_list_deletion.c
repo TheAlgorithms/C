@@ -19,25 +19,43 @@ struct node *createnode()  // function to create node
     return (t);
 }
 ////////////////////////////////////////////////////////
-void insert()  // function to insert at first location
+int insert(int pos)  // function to insert at first location
 {
-    struct node *p;
-    p = createnode();
-    printf("\nenter the number to insert");
-    scanf("%d", &p->info);
-    p->link = NULL;
-    if (start == NULL)
+    struct node *new;
+    new = createnode();
+    printf("\nenter the number to be inserted :");
+    scanf("%d", &new->info);
+    if(pos==1)
     {
-        start = p;
+    new->link = NULL;
+       if (start == NULL)
+      {
+        start = new;
+      }
+      else
+      {
+        new->link = start;
+        start = new;
+       }
     }
-    else
-    {
-        p->link = start;
-        start = p;
-    }
+    else{
+       struct node *pre=start;
+       for(int i=1;i<pos-1;i++)
+       {
+           if (pre==NULL){
+             printf("Position not found!");
+             return;
+            }
+           pre=pre->link;
+       }
+          new->link=pre->link;
+          pre->link=new;
+          
+       }
+    return 0;
 }
 ///////////////////////////////////////////////////////////
-void deletion(int pos)  // function to delete from any position
+int deletion(int pos)  // function to delete from any position
 {
     struct node *t;
     if (start == NULL)
@@ -58,6 +76,10 @@ void deletion(int pos)  // function to delete from any position
             struct node *prev=start;
             for(int i=2;i<pos;i++)
             {
+              if (prev==NULL){
+             printf("Position not found!");
+             return;
+            }
               prev=prev->link;
             }
            struct node *n=prev->link;   //n points to required node to be deleted
@@ -65,6 +87,7 @@ void deletion(int pos)  // function to delete from any position
            free(n);
         }
     }
+  return 0;
 }
 ///////////////////////////////////////////////////////
 void viewlist()  // function to display values
@@ -88,22 +111,24 @@ void viewlist()  // function to display values
 
 int main()
 {
-    int n=0,pos=0;
+    int n=0,pos=0,p=0;
     while (1)
     {
-        printf("\n1.add value at first location");
+        printf("\n1.add value at the given location");
         printf("\n2.delete value at the given location");
         printf("\n3.view value");
-        printf("\nenter your choice");
+        printf("\nenter your choice :");
         scanf("%d", &n);
         switch (n)
         {
         case 1:
-            insert();
+        printf("enter the position where the element is to be added :");
+            scanf("%d",&p);
+            insert(p);
             break;
         case 2:
            
-            printf("Enter the position where th element is to be deleted");
+            printf("enter the position where the element is to be deleted :");
             scanf("%d",&pos);
             deletion(pos);
             break;
