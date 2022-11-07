@@ -24,6 +24,7 @@
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
+| 38   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | Medium            |
 | 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)                                                               | [C](./src/63.c)   | Medium     |
