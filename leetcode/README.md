@@ -91,6 +91,7 @@
 | 965  | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)                                                   | [C](./src/965.c)  | Easy       |
 | 977  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                                           | [C](./src/977.c)  | Easy       |
 | 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/) | [C](./src/1008.c) | Medium |
+| 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/)                                   | [C](./src/1009.c) | Easy       |
 | 1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)                             | [C](./src/1019.c) | Medium     |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)                                                               | [C](./src/1089.c) | Easy       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
