@@ -1,18 +1,5 @@
-int max(int a, int b){
-    if (a > b){
-        return a;
-    }
-    
-    return b;
-}
-
-int min(int a, int b){
-    if (a > b){
-        return b;
-    }
-    
-    return a;
-}
+#define max(x,y)(((x)>(y))?(x):(y))
+#define min(x,y)(((x)<(y))?(x):(y))
 
 // Max stack. Runtime: O(n), Space: O(n)
 // Algorithm description: 
