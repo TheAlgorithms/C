@@ -72,6 +72,7 @@
 | 442  | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)                               | [C](./src/442.c)  | Medium     |
 | 461  | [Hamming Distance](https://leetcode.com/problems/hamming-distance/)                                                             | [C](./src/461.c)  | Easy       |
 | 476  | [Number Complement](https://leetcode.com/problems/number-complement/)                                                           | [C](./src/476.c)  | Easy       |
+| 485  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)                                                     | [C](./src/485.c)  | Easy       |
 | 509  | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                             | [C](./src/509.c)  | Easy       |
 | 520  | [Detect Capital](https://leetcode.com/problems/detect-capital/)                                                                 | [C](./src/520.c)  | Easy       |
 | 561  | [Array Partition I](https://leetcode.com/problems/array-partition-i/)                                                           | [C](./src/561.c)  | Easy       |
