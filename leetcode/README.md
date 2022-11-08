@@ -26,6 +26,7 @@
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | Medium            |
+| 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)                                                               | [C](./src/63.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
@@ -89,6 +90,8 @@
 | 938  | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)                                                             | [C](./src/938.c)  | Easy       |
 | 965  | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)                                                   | [C](./src/965.c)  | Easy       |
 | 977  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                                           | [C](./src/977.c)  | Easy       |
+| 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/) | [C](./src/1008.c) | Medium |
+| 1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)                             | [C](./src/1019.c) | Medium     |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)                                                               | [C](./src/1089.c) | Easy       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
