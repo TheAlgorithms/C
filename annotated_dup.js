@@ -26,8 +26,8 @@ var annotated_dup =
     [ "max_heap", "d0/d8a/structmax__heap.html", null ],
     [ "MEMORY_INFORMATION", "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html", "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n" ],
     [ "min_heap", "de/dce/structmin__heap.html", null ],
-    [ "node", "d5/da1/structnode.html", "d5/da1/structnode" ],
     [ "Node", "db/d8b/struct_node.html", "db/d8b/struct_node" ],
+    [ "node", "d5/da1/structnode.html", "d5/da1/structnode" ],
     [ "observation", "d1/d5e/structobservation.html", "d1/d5e/structobservation" ],
     [ "pid", "d0/d43/structpid.html", null ],
     [ "quaternion_", "de/d58/structquaternion__.html", "de/d58/structquaternion__" ],
@@ -42,5 +42,6 @@ var annotated_dup =
     [ "tnode", "d8/d7a/structtnode.html", null ],
     [ "trie", "d4/dd9/structtrie.html", null ],
     [ "vec_3d_", "d5/db4/structvec__3d__.html", "d5/db4/structvec__3d__" ],
+    [ "Vector", "d4/d06/struct_vector.html", "d4/d06/struct_vector" ],
     [ "word_count_word", "df/ddb/structword__count__word.html", null ]
 ];

@@ -1,0 +1,4 @@
+<map id="clear" name="clear">
+<area shape="rect" id="node1" title="This function clears the contents of the Vector." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#a27a32c68950e464846b6730512968e4b" title="This function initilaizes the vector and gives it a size of 1 and initializes the first index to 0." alt="" coords="104,5,143,31"/>
+</map>

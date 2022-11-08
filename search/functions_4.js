@@ -4,7 +4,7 @@ var searchData=
   ['decimal_5fto_5fanybase_1',['decimal_to_anybase',['../d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c',1,'decimal_to_any_base.c']]],
   ['decimal_5fto_5fbinary_2',['decimal_to_binary',['../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8',1,'decimal_to_binary_recursion.c']]],
   ['decode_3',['decode',['../df/d27/alaw_8c.html#a093ac72124e3c2268d1150676e63175d',1,'alaw.c']]],
-  ['delete_4',['delete',['../da/d02/binary__search__tree_8c.html#a6983e8a91a3d25d7d000807f18ba2748',1,'delete(node *root, int data):&#160;binary_search_tree.c'],['../dd/d29/doubly__linked__list_8c.html#aa49167a68597f162e699b846fac0d446',1,'delete(List *list, int pos):&#160;doubly_linked_list.c']]],
+  ['delete_4',['delete',['../da/d02/binary__search__tree_8c.html#a6983e8a91a3d25d7d000807f18ba2748',1,'delete(node *root, int data):&#160;binary_search_tree.c'],['../dd/d29/doubly__linked__list_8c.html#aa49167a68597f162e699b846fac0d446',1,'delete(List *list, int pos):&#160;doubly_linked_list.c'],['../df/dfa/vector_8c.html#a2191fb0b42377eb385e1daf04bdfb939',1,'delete(Vector *vec):&#160;vector.c']]],
   ['delete_5fadaline_5',['delete_adaline',['../da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665',1,'adaline_learning.c']]],
   ['delete_5fbt_6',['delete_bt',['../df/d3c/threaded__binary__trees_8c.html#a284d683f74b6c884e79ba00d3d1c3317',1,'threaded_binary_trees.c']]],
   ['delete_5fnumber_7',['delete_number',['../d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae',1,'factorial_large_number.c']]],
