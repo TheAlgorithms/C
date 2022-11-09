@@ -1,4 +1,5 @@
-/* Prompt :
+/*
+Prompt:
 
 Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
 - '.' Matches any single character.
@@ -11,14 +12,16 @@ Constraints:
 1 <= p.length <= 30
 s contains only lowercase English letters.
 p contains only lowercase English letters, '.', and '*'.
+
 It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
 */
+
 bool isMatch(char* s, char* p);
 bool matchStar(char ch, char* s, char* p);
 
-// using Rob pikes Regexp matcher - https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html
-
-/* Implementation :
+/*
+Uses Rob pikes Regexp matcher - https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html
+Implementation:
     // match: search for regexp anywhere in text 
     int match(char *regexp, char *text)
     {
@@ -31,6 +34,7 @@ bool matchStar(char ch, char* s, char* p);
         return 0;
     }
 */
+
 bool matchStar(char ch, char* s, char* p) {
   do {
     if (isMatch(s, p))
