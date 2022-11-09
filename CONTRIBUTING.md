@@ -2,7 +2,7 @@
 
 ## Before contributing
 
-Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask on our [Discord server](https://discord.gg/c7MnfGFGa6), and clearly state your concerns.
+Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask on our [Discord server](https://the-algorithms.com/discord/), and clearly state your concerns.
 
 ## Contributing
 
