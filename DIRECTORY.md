@@ -110,6 +110,7 @@
       * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack_linked_list/stack.h)
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/trie/trie.c)
+  * [Vector](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/vector.c)
 
 ## Developer Tools
   * [Malloc Dbg](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/malloc_dbg.c)
@@ -161,7 +162,9 @@
 ## Leetcode
   * Src
     * [1](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1.c)
+    * [1008](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1008.c)
     * [101](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/101.c)
+    * [1019](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1019.c)
     * [104](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/104.c)
     * [108](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/108.c)
     * [1089](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1089.c)
@@ -222,6 +225,7 @@
     * [442](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/442.c)
     * [461](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/461.c)
     * [476](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/476.c)
+    * [485](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/485.c)
     * [509](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/509.c)
     * [520](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/53.c)
