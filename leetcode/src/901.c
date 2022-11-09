@@ -55,6 +55,7 @@ void stockSpannerFree(StockSpanner* obj) {
     }
 
     free(obj->sentry);
+    free(obj);
 }
 
 /**
