@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leetcode_0',['LeetCode',['../df/d58/md_leetcode__r_e_a_d_m_e.html',1,'']]]
+  ['leetcode_0',['LeetCode',['../d6/d77/md_leetcode__d_i_r_e_c_t_o_r_y.html',1,'']]]
 ];

@@ -4,7 +4,7 @@ var searchData=
   ['large_5fnum_1',['large_num',['../d6/d3d/factorial__large__number_8c.html#ab54882961780c41a4929a6d390f6522d',1,'factorial_large_number.c']]],
   ['lazy_5fsort_2',['lazy_sort',['../dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d',1,'sol1.c']]],
   ['lcm_3',['lcm',['../d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c',1,'sol3.c']]],
-  ['leetcode_4',['LeetCode',['../df/d58/md_leetcode__r_e_a_d_m_e.html',1,'']]],
+  ['leetcode_4',['LeetCode',['../d6/d77/md_leetcode__d_i_r_e_c_t_o_r_y.html',1,'']]],
   ['left_5',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node::left()'],['../db/d8b/struct_node.html#ad0976834843c7618677d22a10c495b36',1,'Node::left()']]],
   ['len_6',['len',['../d4/d06/struct_vector.html#a55870593ddea19c96770c2521b075059',1,'Vector']]],
   ['len_7',['LEN',['../df/d27/alaw_8c.html#a05b49c662c073f89e86804f7856622a0',1,'alaw.c']]],
