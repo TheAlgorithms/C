@@ -25,17 +25,16 @@
 /**
  * @brief Structure to represent a process
  */
-struct node
-{
-    int ID;             ///< ID of the process node
-    int AT;             ///< Arrival Time of the process node
-    int BT;             ///< Burst Time of the process node
-    int priority;       ///< Priority of the process node
-    int CT;             ///< Completion Time of the process node
-    int WT;             ///< Waiting Time of the process node
-    int TAT;            ///< Turn Around Time of the process node
-    struct node *next;  ///< pointer to the node
-};
+ typedef struct node {
+     int ID;             ///< ID of the process node
+     int AT;             ///< Arrival Time of the process node
+     int BT;             ///< Burst Time of the process node
+     int priority;       ///< Priority of the process node
+     int CT;             ///< Completion Time of the process node
+     int WT;             ///< Waiting Time of the process node
+     int TAT;            ///< Turn Around Time of the process node
+     struct node *next;  ///< pointer to the node
+ } node;
 
 /**
  * @brief To insert a new process in the queue
