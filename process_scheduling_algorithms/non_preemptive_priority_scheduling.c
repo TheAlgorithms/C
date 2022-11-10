@@ -45,11 +45,11 @@
  * @param prior priority of the process
  * @returns void
  */
-void insert(struct node **root, int id, int at, int bt, int prior)
+void insert(node **root, int id, int at, int bt, int prior)
 {
     // create a new node and initialize it
-    struct node *new = (struct node *)malloc(sizeof(struct node));
-    struct node *ptr = *root;
+    node *new = (node *)malloc(sizeof(node));
+    node *ptr = *root;
     new->ID = id;
     new->AT = at;
     new->BT = bt;
@@ -78,9 +78,9 @@ void insert(struct node **root, int id, int at, int bt, int prior)
  * @param id process ID
  * @returns void
  */
-void delete(struct node **root, int id)
+void delete(node **root, int id)
 {
-    struct node *ptr = *root, *prev;
+    node *ptr = *root, *prev;
     // if the root is null, return
     if (ptr == NULL)
     {
@@ -111,7 +111,7 @@ void delete(struct node **root, int id)
  * @param head pointer to the head of the queue
  * @returns void
  */
-void showList(struct node *head)
+void show_list(node *head)
 {
     printf("Process Priority AT BT CT TAT WT \n");
     while (head != NULL)
@@ -126,10 +126,10 @@ void showList(struct node *head)
  * @param root pointer to the head of the queue
  * @returns int total length of the queue
  */
-int LLength(struct node **root)
+int l_length(node **root)
 {
     int count = 0;
-    struct node *ptr = *root;
+    node *ptr = *root;
     while (ptr != NULL)
     {
         count++;
@@ -147,9 +147,9 @@ int LLength(struct node **root)
  * @param tat turn around time
  * @returns void
  */
-void update(struct node **root, int id, int ct, int wt, int tat)
+void update(node **root, int id, int ct, int wt, int tat)
 {
-    struct node *ptr = *root;
+    node *ptr = *root;
     // If process to be updated is head node
     if (ptr != NULL && ptr->ID == id)
     {
@@ -196,7 +196,7 @@ void update(struct node **root, int id, int ct, int wt, int tat)
  * @returns false if the priority of the first process is NOT greater than the
  * second process
  */
-bool compare(struct node *a, struct node *b)
+bool compare(node *a, node *b)
 {
     if (a->AT == b->AT)
     {
@@ -212,14 +212,14 @@ bool compare(struct node *a, struct node *b)
  * @param root pointer to the head of the queue
  * @returns float average completion time
  */
-float CalculateCT(struct node **root)
+float calculate_ct(node **root)
 {
     // calculate the total completion time of all the processes
-    struct node *ptr = *root, *prior, *rpt;
+    node *ptr = *root, *prior, *rpt;
     int ct = 0, i, time = 0;
-    int n = LLength(root);
+    int n = l_length(root);
     float avg, sum = 0;
-    struct node *duproot = NULL;
+    node *duproot = NULL;
     // create a duplicate queue
     while (ptr != NULL)
     {
@@ -279,15 +279,15 @@ float CalculateCT(struct node **root)
  * @param root pointer to the head of the queue
  * @returns float average turn around time
  */
-float CalculateTAT(struct node **root)
+float calculate_tat(node **root)
 {
     float avg, sum = 0;
-    int n = LLength(root);
-    struct node *ptr = *root;
+    int n = l_length(root);
+    node *ptr = *root;
     // calculate the completion time if not already calculated
     if (ptr->CT == 0)
     {
-        CalculateCT(root);
+        calculate_ct(root);
     }
     // calculate the total turn around time of all the processes
     while (ptr != NULL)
@@ -304,15 +304,15 @@ float CalculateTAT(struct node **root)
  * @param root pointer to the head of the queue
  * @returns float average waiting time
  */
-float CalculateWT(struct node **root)
+float calculate_wt(node **root)
 {
     float avg, sum = 0;
-    int n = LLength(root);
-    struct node *ptr = *root;
+    int n = l_length(root);
+    node *ptr = *root;
     // calculate the completion if not already calculated
     if (ptr->CT == 0)
     {
-        CalculateCT(root);
+        calculate_ct(root);
     }
     // calculate the total waiting time of all the processes
     while (ptr != NULL)
@@ -339,22 +339,22 @@ static void test()
     // printf("4 3 2 4 \n");
     // printf("5 4 1 5 \n");
 
-    struct node *root = NULL;
+    node *root = NULL;
     insert(&root, 1, 0, 5, 1);
     insert(&root, 2, 1, 4, 2);
     insert(&root, 3, 2, 3, 3);
     insert(&root, 4, 3, 2, 4);
     insert(&root, 5, 4, 1, 5);
-    float avgCT = CalculateCT(&root);
-    float avgTAT = CalculateTAT(&root);
-    float avgWT = CalculateWT(&root);
+    float avgCT = calculate_ct(&root);
+    float avgTAT = calculate_tat(&root);
+    float avgWT = calculate_wt(&root);
     assert(avgCT == 11);
     assert(avgTAT == 9);
     assert(avgWT == 6);
     printf("[+] All tests have successfully passed!\n");
-    // printf("Average Completion Time is : %f \n", CalculateCT(&root));
-    // printf("Average Turn Around Time is : %f \n", CalculateTAT(&root));
-    // printf("Average Waiting Time is : %f \n", CalculateWT(&root));
+    // printf("Average Completion Time is : %f \n", calculate_ct(&root));
+    // printf("Average Turn Around Time is : %f \n", calculate_tat(&root));
+    // printf("Average Waiting Time is : %f \n", calculate_wt(&root));
 }
 
 /**
@@ -367,7 +367,7 @@ int main()
 
     // For Menu Driven Program
     /*
-    struct node *root = NULL;
+    node *root = NULL;
     int option = 0, prior, bt, id, at;
     while (option != 7)
     {
@@ -398,16 +398,16 @@ int main()
             delete (&root, id);
             break;
         case 3:
-            showList(root);
+            show_list(root);
             break;
         case 4:
-            printf("Average Completion Time is : %f \n", CalculateCT(&root));
+            printf("Average Completion Time is : %f \n", calculate_ct(&root));
             break;
         case 5:
             printf("Average Turn Around Time is : %f \n",
-            CalculateTAT(&root)); break;
+            calculate_tat(&root)); break;
         case 6:
-            printf("Average Waiting Time is : %f \n", CalculateWT(&root));
+            printf("Average Waiting Time is : %f \n", calculate_wt(&root));
             break;
         default:
             break;
