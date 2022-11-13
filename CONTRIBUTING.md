@@ -2,13 +2,13 @@
 
 ## Before contributing
 
-Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask on our [Discord server](https://discord.gg/c7MnfGFGa6), and clearly state your concerns.
+Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitting pull requests, please make sure that you have **read the whole guidelines**. If you have any doubts about this contribution guide, please open [an issue](https://github.com/TheAlgorithms/C/issues/new/choose) or ask on our [Discord server](https://the-algorithms.com/discord/), and clearly state your concerns.
 
 ## Contributing
 
 ### Maintainer/reviewer
 
-**Please check the [reviewer code](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/REVIEWER_CODE.md) file for maintainers and reviewers.**
+**Please check the [reviewer code](https://github.com/TheAlgorithms/C/blob/master/REVIEWER_CODE.md) file for maintainers and reviewers.**
 
 ### Contributor
 
@@ -24,6 +24,10 @@ Being a contributor at The Algorithms, we request you to follow the points menti
 You can add new algorithms or data structures that are **not present in the repository** or that can **improve** the old implementations (**documentation**, **improving test cases**, removing bugs, or in any other reasonable sense)
 
 **Issues** Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request, and it will be evaluated by project maintainers.
+
+### LeetCode solutions
+
+For LeetCode solutions, please check its [**guide**](https://github.com/TheAlgorithms/C/blob/master/src/leetcode/README.md) to make a proper solution file.
 
 ### Making Changes
 
