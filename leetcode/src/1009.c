@@ -1,6 +1,3 @@
-#include<math.h>
-
-
 // Bit manipulation.
 // - Find the bit length of n using log2
 // - Create bit mask of bit length of n
