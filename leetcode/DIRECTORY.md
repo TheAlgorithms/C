@@ -12,9 +12,11 @@
 | 7    | [Reverse Integer](https://leetcode.com/problems/reverse-integer/)                                                               | [C](./src/7.c)    | Easy       |
 | 8    | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)                                                | [C](./src/8.c)    | Medium     |
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/)                                                           | [C](./src/9.c)    | Easy       |
+| 10   | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)                                       | [C](./src/10.c)   | Hard       |
 | 11   | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                                           | [C](./src/11.c)   | Medium     |
 | 12   | [Integer to Roman](https://leetcode.com/problems/integer-to-roman)                                                              | [C](./src/12.c)   | Medium     |
 | 13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/)                                                             | [C](./src/13.c)   | Easy       |
+| 14   | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)                                                     | [C](./src/14.c)   | Easy       |
 | 20   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)                                                           | [C](./src/20.c)   | Easy       |
 | 21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)                                                 | [C](./src/21.c)   | Easy       |
 | 24   | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)                                                       | [C](./src/24.c)   | Medium     |
@@ -25,8 +27,7 @@
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
-| 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | Medium            |
-| 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)                                                               | [C](./src/63.c)   | Medium     |
+| 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | [C](./src/62.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
@@ -38,7 +39,6 @@
 | 110  | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)                                                     | [C](./src/110.c)  | Easy       |
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                             | [C](./src/112.c)  | Easy       |
 | 118  | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)                                                            | [C](./src/118.c)  | Easy       |
-| 119  | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)                                                      | [C](./src/119.c)  | Easy       |
 | 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                               | [C](./src/121.c)  | Easy       |
 | 125  | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                             | [C](./src/125.c)  | Easy       |
 | 136  | [Single Number](https://leetcode.com/problems/single-number/)                                                                   | [C](./src/136.c)  | Easy       |
@@ -90,11 +90,8 @@
 | 938  | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)                                                             | [C](./src/938.c)  | Easy       |
 | 965  | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)                                                   | [C](./src/965.c)  | Easy       |
 | 977  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                                           | [C](./src/977.c)  | Easy       |
-| 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/) | [C](./src/1008.c) | Medium |
-| 1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)                             | [C](./src/1019.c) | Medium     |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)                                                               | [C](./src/1089.c) | Easy       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
-| 1695 | [Maximum Erasure Value](Maximum Erasure Value)                                                                                  | [C](./src/1695.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
