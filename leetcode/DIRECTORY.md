@@ -95,3 +95,4 @@
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
+| 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
