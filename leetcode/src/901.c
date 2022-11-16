@@ -64,4 +64,5 @@ void stockSpannerFree(StockSpanner* obj) {
  * int param_1 = stockSpannerNext(obj, price);
  
  * stockSpannerFree(obj);
+ */
 }
