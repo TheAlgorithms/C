@@ -1,11 +1,5 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-
 void sortColors(int* arr, int n){
-    
-    
     void swap(int *x, int *y){
     if (x==y)
         return;
@@ -29,8 +23,6 @@ void sortColors(int* arr, int n){
         }
     }
 }
-
-
 int main(){
     int n;
     scanf("%d",&n);
