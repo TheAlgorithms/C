@@ -65,4 +65,3 @@ void stockSpannerFree(StockSpanner* obj) {
  
  * stockSpannerFree(obj);
  */
-}
