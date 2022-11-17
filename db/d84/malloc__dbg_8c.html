@@ -418,11 +418,12 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  111</span> </div>
 <div class="line"><span class="lineno">  112</span>    <span class="keywordflow">while</span> (counter != elemPos)</div>
 <div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        tmp = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">  114</span>        tmp = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">  115</span>        counter++;</div>
 <div class="line"><span class="lineno">  116</span>    }</div>
 <div class="line"><span class="lineno">  117</span>    tmp-&gt;bytes += bytes;</div>
 <div class="line"><span class="lineno">  118</span>}</div>
+<div class="ttc" id="astructnode_html_a111a569ab2765add9b91c9f94cf9f063"><div class="ttname"><a href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">node::next</a></div><div class="ttdeci">struct node * next</div><div class="ttdoc">pointer to the node</div><div class="ttdef"><b>Definition:</b> bfs.c:24</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -459,7 +460,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (tmp-&gt;ptr == ptrToFree)</div>
 <div class="line"><span class="lineno">  216</span>    {</div>
 <div class="line"><span class="lineno">  217</span>        toFree = tmp;</div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="../../db/d84/malloc__dbg_8c.html#afebd751704cd878d2e4b88499519c6e3">memoryInformation</a> = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="../../db/d84/malloc__dbg_8c.html#afebd751704cd878d2e4b88499519c6e3">memoryInformation</a> = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">  219</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(toFree-&gt;<a class="code hl_variable" href="../../d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a6b0971c1415de6e0123b8d0d0a626fde">ptr</a>);</div>
 <div class="line"><span class="lineno">  220</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(toFree);</div>
 <div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d84/malloc__dbg_8c.html#afebd751704cd878d2e4b88499519c6e3">memoryInformation</a>)</div>
@@ -475,7 +476,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (tmp-&gt;ptr == ptrToFree) <span class="comment">// If we found the pointer that must be freed</span></div>
 <div class="line"><span class="lineno">  232</span>        {</div>
 <div class="line"><span class="lineno">  233</span>            toFree = tmp;</div>
-<div class="line"><span class="lineno">  234</span>            tmp = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">  234</span>            tmp = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">  235</span>            previous = toFree-&gt;<a class="code hl_variable" href="../../d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1cec46413acf776e3ee2b0b9241490c3">previous</a>;</div>
 <div class="line"><span class="lineno">  236</span> </div>
 <div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (previous)</div>
@@ -495,7 +496,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  251</span>            <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(toFree);</div>
 <div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span>        tmp = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">  254</span>        tmp = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">  255</span>    }</div>
 <div class="line"><span class="lineno">  256</span>}</div>
 </div><!-- fragment -->
@@ -550,7 +551,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   91</span>                <span class="keywordflow">return</span> counter;</div>
 <div class="line"><span class="lineno">   92</span>            }</div>
 <div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        tmp = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">   94</span>        tmp = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">   95</span>        counter++;</div>
 <div class="line"><span class="lineno">   96</span>    }</div>
 <div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> -1;</div>
@@ -685,7 +686,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  280</span>        printf(<span class="stringliteral">&quot;address : 0x%p in %s\t%s:%d\n&quot;</span>, tmp-&gt;ptr, tmp-&gt;functionName, tmp-&gt;fileName, tmp-&gt;line);</div>
 <div class="line"><span class="lineno">  281</span>        printf(<span class="stringliteral">&quot;\n====================================\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  282</span>        sum += tmp-&gt;bytes;</div>
-<div class="line"><span class="lineno">  283</span>        tmp = tmp-&gt;next;</div>
+<div class="line"><span class="lineno">  283</span>        tmp = tmp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">  284</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(previous);</div>
 <div class="line"><span class="lineno">  285</span>        nbBlocks++;</div>
 <div class="line"><span class="lineno">  286</span>    }</div>

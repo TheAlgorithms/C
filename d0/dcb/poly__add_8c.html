@@ -393,7 +393,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
 <div class="line"><span class="lineno">   93</span>    <span class="comment">// Creating a temporary linked list to store the resultant polynomial</span></div>
 <div class="line"><span class="lineno">   94</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *temp = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));</div>
-<div class="line"><span class="lineno">   95</span>    temp-&gt;next = NULL;</div>
+<div class="line"><span class="lineno">   95</span>    temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
 <div class="line"><span class="lineno">   96</span>    *pol =</div>
 <div class="line"><span class="lineno">   97</span>        temp;  <span class="comment">//*pol always points to the 1st node of the resultant polynomial</span></div>
 <div class="line"><span class="lineno">   98</span> </div>
@@ -437,10 +437,10 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  136</span><span class="comment">         */</span></div>
 <div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (poly1 &amp;&amp; poly2)</div>
 <div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            temp-&gt;next = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
+<div class="line"><span class="lineno">  139</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><span class="lineno">  140</span>                <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">  141</span>            temp = temp-&gt;next;         <span class="comment">// Increase the pointer temp</span></div>
-<div class="line"><span class="lineno">  142</span>            temp-&gt;next = NULL;</div>
+<div class="line"><span class="lineno">  141</span>            temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increase the pointer temp</span></div>
+<div class="line"><span class="lineno">  142</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
 <div class="line"><span class="lineno">  143</span>        }</div>
 <div class="line"><span class="lineno">  144</span>    }</div>
 <div class="line"><span class="lineno">  145</span>    <span class="comment">/* If one of the polynomials is exhausted</span></div>
@@ -449,10 +449,10 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  148</span><span class="comment">    */</span></div>
 <div class="line"><span class="lineno">  149</span>    <span class="keywordflow">while</span> (poly1 || poly2)</div>
 <div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        temp-&gt;next = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
+<div class="line"><span class="lineno">  151</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
 <div class="line"><span class="lineno">  152</span>            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">  153</span>        temp = temp-&gt;next;         <span class="comment">// Increasing the pointer</span></div>
-<div class="line"><span class="lineno">  154</span>        temp-&gt;next = NULL;</div>
+<div class="line"><span class="lineno">  153</span>        temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increasing the pointer</span></div>
+<div class="line"><span class="lineno">  154</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
 <div class="line"><span class="lineno">  155</span> </div>
 <div class="line"><span class="lineno">  156</span>        <span class="comment">/* If poly1 is not exhausted</span></div>
 <div class="line"><span class="lineno">  157</span><span class="comment">        place rest of that polynomial in temp</span></div>
@@ -474,6 +474,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  173</span>        }</div>
 <div class="line"><span class="lineno">  174</span>    }</div>
 <div class="line"><span class="lineno">  175</span>}</div>
+<div class="ttc" id="astructnode_html_a111a569ab2765add9b91c9f94cf9f063"><div class="ttname"><a href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">node::next</a></div><div class="ttdeci">struct node * next</div><div class="ttdoc">pointer to the node</div><div class="ttdef"><b>Definition:</b> bfs.c:24</div></div>
 </div><!-- fragment -->
 </div>
 </div>

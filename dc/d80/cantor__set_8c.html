@@ -175,13 +175,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span> (!head)</div>
 <div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (head-&gt;next)</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a>(head-&gt;next);</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (head-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>)</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a>(head-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>);</div>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(head);</div>
 <div class="line"><span class="lineno">   81</span>}</div>
 <div class="ttc" id="acantor__set_8c_html_a85df3c64a683100ac6246e1e034df43d"><div class="ttname"><a href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a></div><div class="ttdeci">void free_memory(CantorSet *head)</div><div class="ttdoc">Clear memory allocated by propagate function.</div><div class="ttdef"><b>Definition:</b> cantor_set.c:72</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="astructnode_html_a111a569ab2765add9b91c9f94cf9f063"><div class="ttname"><a href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">node::next</a></div><div class="ttdeci">struct node * next</div><div class="ttdoc">pointer to the node</div><div class="ttdef"><b>Definition:</b> bfs.c:24</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -239,7 +240,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  104</span>    }</div>
 <div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_struct" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> head = {.start = start_num, .end = end_num, .next = NULL};</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_struct" href="../../d9/dd7/struct__cantor__set.html">CantorSet</a> head = {.start = start_num, .end = end_num, .<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL};</div>
 <div class="line"><span class="lineno">  107</span> </div>
 <div class="line"><span class="lineno">  108</span>    <span class="comment">// loop to propagate each level from top to bottom</span></div>
 <div class="line"><span class="lineno">  109</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; levels; i++)</div>
@@ -253,7 +254,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  117</span>    <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab">print</a>(&amp;head);</div>
 <div class="line"><span class="lineno">  118</span> </div>
 <div class="line"><span class="lineno">  119</span>    <span class="comment">// delete all memory allocated</span></div>
-<div class="line"><span class="lineno">  120</span>    <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a>(head.next);</div>
+<div class="line"><span class="lineno">  120</span>    <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d">free_memory</a>(head.<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>);</div>
 <div class="line"><span class="lineno">  121</span> </div>
 <div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  123</span>}</div>
@@ -299,7 +300,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   60</span>        printf(<span class="stringliteral">&quot;\t&quot;</span>);</div>
 <div class="line"><span class="lineno">   61</span>        printf(<span class="stringliteral">&quot;[%lf] -- &quot;</span>, temp-&gt;start);</div>
 <div class="line"><span class="lineno">   62</span>        printf(<span class="stringliteral">&quot;[%lf]&quot;</span>, temp-&gt;end);</div>
-<div class="line"><span class="lineno">   63</span>        temp = temp-&gt;next;</div>
+<div class="line"><span class="lineno">   63</span>        temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">   64</span>    }</div>
 <div class="line"><span class="lineno">   65</span> </div>
 <div class="line"><span class="lineno">   66</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
@@ -349,13 +350,13 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   40</span>    newNode-&gt;start = (newNode-&gt;end) - diff;</div>
 <div class="line"><span class="lineno">   41</span> </div>
 <div class="line"><span class="lineno">   42</span>    <span class="comment">// update pointer to next set in this level</span></div>
-<div class="line"><span class="lineno">   43</span>    newNode-&gt;next = temp-&gt;next;</div>
+<div class="line"><span class="lineno">   43</span>    newNode-&gt;next = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;</div>
 <div class="line"><span class="lineno">   44</span> </div>
 <div class="line"><span class="lineno">   45</span>    <span class="comment">// point to next set</span></div>
-<div class="line"><span class="lineno">   46</span>    temp-&gt;next = newNode;</div>
+<div class="line"><span class="lineno">   46</span>    temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = newNode;</div>
 <div class="line"><span class="lineno">   47</span> </div>
 <div class="line"><span class="lineno">   48</span>    <span class="comment">// create next set</span></div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97">propagate</a>(temp-&gt;next-&gt;next);</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="../../dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97">propagate</a>(temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>);</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 </div><!-- fragment --><div class="dynheader">

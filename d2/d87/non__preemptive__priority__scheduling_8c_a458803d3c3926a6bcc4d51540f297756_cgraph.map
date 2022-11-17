@@ -1,0 +1,6 @@
+<map id="calculate_tat" name="calculate_tat">
+<area shape="rect" id="node1" title="To calculate the average turn around time of all the processes." alt="" coords="5,31,101,56"/>
+<area shape="rect" id="node2" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#abbb2446313782dd3ba9ff2a7ad0ce1df" title="To calculate the average completion time of all the processes." alt="" coords="149,5,241,31"/>
+<area shape="rect" id="node4" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a40e454ce0750e794007bf41a7102b3a9" title="To length process queue." alt="" coords="292,55,359,80"/>
+<area shape="rect" id="node3" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a01b8ee561d8532a44d665c2c854e0d09" title="To compare the priority of two processes based on their arrival time and priority." alt="" coords="289,5,361,31"/>
+</map>

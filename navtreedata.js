@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
     [ "The Algorithms - C", "index.html", [
-      [ "Overview", "index.html#autotoc_md74", null ],
-      [ "Features", "index.html#autotoc_md75", null ],
-      [ "Documentation", "index.html#autotoc_md76", null ],
-      [ "Contributions", "index.html#autotoc_md77", null ]
+      [ "Overview", "index.html#autotoc_md75", null ],
+      [ "Features", "index.html#autotoc_md76", null ],
+      [ "Documentation", "index.html#autotoc_md77", null ],
+      [ "Contributions", "index.html#autotoc_md78", null ]
     ] ],
     [ "Contributor Covenant Code of Conduct", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
       [ "Our Pledge", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md1", null ],
@@ -94,19 +94,20 @@ var NAVTREE =
       [ "Machine Learning", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md57", null ],
       [ "Misc", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md58", null ],
       [ "Numerical Methods", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md59", null ],
-      [ "Project Euler", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md60", null ],
-      [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md61", null ],
-      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md62", null ]
+      [ "Process Scheduling Algorithms", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md60", null ],
+      [ "Project Euler", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md61", null ],
+      [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md62", null ],
+      [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md63", null ]
     ] ],
     [ "Sample solutions for <a href=\"http://exercism.io/\" target=\"_blank\" >exercism.io</a>", "d7/db5/md_exercism__r_e_a_d_m_e.html", null ],
     [ "Hash algorithms", "d4/dcb/md_hash__r_e_a_d_m_e.html", null ],
     [ "LeetCode", "d6/d77/md_leetcode__d_i_r_e_c_t_o_r_y.html", null ],
     [ "📚 Contributing 📚", "df/d58/md_leetcode__r_e_a_d_m_e.html", [
-      [ "💻 Cloning/setting up the project 💻", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md69", null ],
-      [ "📝 Adding a new solution 📝", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md70", [
-        [ "📜 Adding your new solution to the list 📜", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md71", null ]
+      [ "💻 Cloning/setting up the project 💻", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md70", null ],
+      [ "📝 Adding a new solution 📝", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md71", [
+        [ "📜 Adding your new solution to the list 📜", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md72", null ]
       ] ],
-      [ "📦 Committing your changes 📦", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md72", null ]
+      [ "📦 Committing your changes 📦", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73", null ]
     ] ],
     [ "ProjectEuler", "d8/d81/md_project_euler__r_e_a_d_m_e.html", null ],
     [ "Guidelines for reviewers and maintainers", "dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html", null ],
@@ -135,10 +136,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be",
-"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md39",
-"dd/d79/remote__command__exec__udp__server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2",
-"globals_s.html"
+"d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a731603550d2238abb179f2b572f20d99",
+"d8/d75/fibonacci__formula_8c.html#a4d369ae048e0ccc7f515a243533cd946",
+"dd/d10/struct_stack.html",
+"globals_func_o.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -148,6 +148,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>vertex</b></td></tr>
 <tr class="separator:ab4b1f345158daee0725acecd5ba817b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a111a569ab2765add9b91c9f94cf9f063"><td class="memItemLeft" align="right" valign="top"><a id="a111a569ab2765add9b91c9f94cf9f063" name="a111a569ab2765add9b91c9f94cf9f063"></a>
 struct <a class="el" href="../../d5/da1/structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
+<tr class="memdesc:a111a569ab2765add9b91c9f94cf9f063"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the node <br /></td></tr>
 <tr class="separator:a111a569ab2765add9b91c9f94cf9f063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8973feda870a119ccdc25910254db0c"><td class="memItemLeft" align="right" valign="top"><a id="ac8973feda870a119ccdc25910254db0c" name="ac8973feda870a119ccdc25910254db0c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
@@ -161,13 +162,44 @@ struct <a class="el" href="../../d5/da1/structnode.html">node</a> *&#160;</td><t
 <tr class="memitem:a6f9100a3fe81d82776ce47ecdba94691"><td class="memItemLeft" align="right" valign="top"><a id="a6f9100a3fe81d82776ce47ecdba94691" name="a6f9100a3fe81d82776ce47ecdba94691"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 <tr class="separator:a6f9100a3fe81d82776ce47ecdba94691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c8b57ac0a76d72588561c81481c454"><td class="memItemLeft" align="right" valign="top"><a id="ac0c8b57ac0a76d72588561c81481c454" name="ac0c8b57ac0a76d72588561c81481c454"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b></td></tr>
+<tr class="memdesc:ac0c8b57ac0a76d72588561c81481c454"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the process node. <br /></td></tr>
+<tr class="separator:ac0c8b57ac0a76d72588561c81481c454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5507c3c76ddbda9c482749f3a8a8f0cc"><td class="memItemLeft" align="right" valign="top"><a id="a5507c3c76ddbda9c482749f3a8a8f0cc" name="a5507c3c76ddbda9c482749f3a8a8f0cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AT</b></td></tr>
+<tr class="memdesc:a5507c3c76ddbda9c482749f3a8a8f0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrival Time of the process node. <br /></td></tr>
+<tr class="separator:a5507c3c76ddbda9c482749f3a8a8f0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a6453f996d4c362c015fd4348ecc6e"><td class="memItemLeft" align="right" valign="top"><a id="ac0a6453f996d4c362c015fd4348ecc6e" name="ac0a6453f996d4c362c015fd4348ecc6e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BT</b></td></tr>
+<tr class="memdesc:ac0a6453f996d4c362c015fd4348ecc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Burst Time of the process node. <br /></td></tr>
+<tr class="separator:ac0a6453f996d4c362c015fd4348ecc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e51013eb31fc1f17866ca9fe8ac75b"><td class="memItemLeft" align="right" valign="top"><a id="a44e51013eb31fc1f17866ca9fe8ac75b" name="a44e51013eb31fc1f17866ca9fe8ac75b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b></td></tr>
+<tr class="memdesc:a44e51013eb31fc1f17866ca9fe8ac75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priority of the process node. <br /></td></tr>
+<tr class="separator:a44e51013eb31fc1f17866ca9fe8ac75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece40a25d30d3e0d2135007642b64882"><td class="memItemLeft" align="right" valign="top"><a id="aece40a25d30d3e0d2135007642b64882" name="aece40a25d30d3e0d2135007642b64882"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CT</b></td></tr>
+<tr class="memdesc:aece40a25d30d3e0d2135007642b64882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion Time of the process node. <br /></td></tr>
+<tr class="separator:aece40a25d30d3e0d2135007642b64882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878d22393f374f3861035e35b9edd653"><td class="memItemLeft" align="right" valign="top"><a id="a878d22393f374f3861035e35b9edd653" name="a878d22393f374f3861035e35b9edd653"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>WT</b></td></tr>
+<tr class="memdesc:a878d22393f374f3861035e35b9edd653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting Time of the process node. <br /></td></tr>
+<tr class="separator:a878d22393f374f3861035e35b9edd653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe30696293849bebed90520b8cf7ba3"><td class="memItemLeft" align="right" valign="top"><a id="abbe30696293849bebed90520b8cf7ba3" name="abbe30696293849bebed90520b8cf7ba3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TAT</b></td></tr>
+<tr class="memdesc:abbe30696293849bebed90520b8cf7ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn Around Time of the process node. <br /></td></tr>
+<tr class="separator:abbe30696293849bebed90520b8cf7ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="../../db/d8b/struct_node.html" title="Node, the basic data structure of the tree.">Node</a>, the basic data structure in the tree. </p>
+<p >for assert</p>
 <p >Kyler Smith, 2017 <a class="el" href="../../dd/d10/struct_stack.html" title="for printf() and scanf()">Stack</a> data structure implementation.</p>
 <p >INCLUDES.</p>
 <p >Defining the structure of the node which contains 'data' (type : integer), two pointers 'next' and 'pre' (type : struct node).</p>
-<p >creating a stucture with 'data'(type:int), two pointers 'next','pre' (type: struct node) . </p>
+<p >creating a stucture with 'data'(type:int), two pointers 'next','pre' (type: struct node) .</p>
+<p >for boolean data type for IO operations (<code>printf</code>) for memory allocation eg: <code>malloc</code>, <code>realloc</code>, <code>free</code>, <code>exit</code></p>
+<p >Structure to represent a process </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>data_structures/binary_trees/<a class="el" href="../../da/d02/binary__search__tree_8c.html">binary_search_tree.c</a></li>
 <li>data_structures/binary_trees/create_node.c</li>
@@ -186,6 +218,7 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 <li>data_structures/queue/<a class="el" href="../../d1/dbe/include_8h_source.html">include.h</a></li>
 <li>data_structures/stack.c</li>
 <li>data_structures/stack/parenthesis.c</li>
+<li>process_scheduling_algorithms/<a class="el" href="../../d2/d87/non__preemptive__priority__scheduling_8c.html">non_preemptive_priority_scheduling.c</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
