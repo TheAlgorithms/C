@@ -365,54 +365,5 @@ int main()
 {
     test();  // run self-test implementations
 
-    // For Menu Driven Program
-    /*
-    node *root = NULL;
-    int option = 0, prior, bt, id, at;
-    while (option != 7)
-    {
-        printf("1. Enter Process Details \n");
-        printf("2. Delete Process \n");
-        printf("3. Display Process \n");
-        printf("4. Calculate Avg Completion Time \n");
-        printf("5. Calculate Avg Turn Around Time \n");
-        printf("6. Calculate Avg Waiting Time \n");
-        printf("7. Exit. \n");
-        scanf("%d", &option);
-        switch (option)
-        {
-        case 1:
-            printf("Enter Process Id \n");
-            scanf("%d", &id);
-            printf("Enter Process Priority \n");
-            scanf("%d", &prior);
-            printf("Enter Process Arrival Time \n");
-            scanf("%d", &at);
-            printf("Enter Process Burst Time \n");
-            scanf("%d", &bt);
-            insert(&root, id, at, bt, prior);
-            break;
-        case 2:
-            printf("Enter Process Id \n");
-            scanf("%d", &id);
-            delete (&root, id);
-            break;
-        case 3:
-            show_list(root);
-            break;
-        case 4:
-            printf("Average Completion Time is : %f \n", calculate_ct(&root));
-            break;
-        case 5:
-            printf("Average Turn Around Time is : %f \n",
-            calculate_tat(&root)); break;
-        case 6:
-            printf("Average Waiting Time is : %f \n", calculate_wt(&root));
-            break;
-        default:
-            break;
-        }
-    }
-    */
     return 0;
 }
