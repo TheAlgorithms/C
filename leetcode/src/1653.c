@@ -1,5 +1,4 @@
 #define min(X, Y)  ((X) < (Y) ? (X) : (Y))
-#define getBoolToInt(VAL)  (VAL ? (1) : (0))
 
 // Dynamic programming approach. Down -> Up.
 // Runtime: O(n)
