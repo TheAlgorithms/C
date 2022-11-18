@@ -7,7 +7,8 @@
 int minimumDeletions(char * s){
     int len = strlen(s);
     
-    int aStateValue = getBoolToInt(s[0] == 'b');
+    int aStateValue = s[0] == 'b';
+
     int bStateValue = 0;
     
     int newAStateValue;
