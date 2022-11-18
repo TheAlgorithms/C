@@ -19,7 +19,8 @@ int minimumDeletions(char * s){
 
         newBStateValue = min(
                                aStateValue,
-                               bStateValue + getBoolToInt(s[i] == 'a')
+                               bStateValue + (s[i] == 'a')
+
                              );
             
         aStateValue = newAStateValue;
