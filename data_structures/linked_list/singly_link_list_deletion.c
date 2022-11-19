@@ -5,6 +5,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include<assert.h>
 struct node
 {
     int info;
@@ -19,12 +20,11 @@ struct node *createnode()  // function to create node
     return (t);
 }
 ////////////////////////////////////////////////////////
-int insert(int pos)  // function to insert at first location
+int insert(int pos,int d) 
 {
     struct node *new;
     new = createnode();
-    printf("\nenter the number to be inserted :");
-    scanf("%d", &new->info);
+    new->info=d;
     if(pos==1)
     {
     new->link = NULL;
@@ -40,11 +40,11 @@ int insert(int pos)  // function to insert at first location
     }
     else{
        struct node *pre=start;
-       for(int i=1;i<pos-1;i++)
+       for(int i=2;i<pos;i++)
        {
            if (pre==NULL){
              printf("Position not found!");
-             return;
+             return 0;
             }
            pre=pre->link;
        }
@@ -54,6 +54,7 @@ int insert(int pos)  // function to insert at first location
        }
     return 0;
 }
+
 ///////////////////////////////////////////////////////////
 int deletion(int pos)  // function to delete from any position
 {
@@ -78,7 +79,7 @@ int deletion(int pos)  // function to delete from any position
             {
               if (prev==NULL){
              printf("Position not found!");
-             return;
+             return 0;
             }
               prev=prev->link;
             }
@@ -108,12 +109,29 @@ void viewlist()  // function to display values
     }
 }
 //////////////////////////////////////////////////////////////////////
-
+int test(){
+    insert(1,1);
+    insert(2,2);
+    deletion(2);
+    viewlist;
+    return 0;
+}
 int main()
 {
-    int n=0,pos=0,p=0;
-    while (1)
+    int n=0,pos=0,p=0,num=0,c=0;
+    printf("\n1.self test mode");
+    printf("\n2.interactive mode");
+    printf("\nenter your choice:");
+    scanf("%d",&c);
+    if(c==1)
     {
+       assert(test()==0);
+       printf("Self test successfully passed!");
+     }
+    else if(c==2)
+    {
+      while (1)
+      {
         printf("\n1.add value at the given location");
         printf("\n2.delete value at the given location");
         printf("\n3.view value");
@@ -124,7 +142,9 @@ int main()
         case 1:
         printf("enter the position where the element is to be added :");
             scanf("%d",&p);
-            insert(p);
+            printf("enter the element is to be added :");
+            scanf("%d",&num);
+            insert(p,num);
             break;
         case 2:
            
@@ -138,6 +158,10 @@ int main()
         default:
             printf("\ninvalid choice");
         }
+      }
     }
-    return (0);
+    else{
+      printf("Invalid choice");
+     }
+    return 0;
 }
