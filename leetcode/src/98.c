@@ -11,12 +11,9 @@
 // Runtime: O(n)
 // Space: O(1)
 bool checkIsBst(struct TreeNode* node, bool leftBoundInf, int leftBound, bool rightBoundInf, int rightBound){
-    if (node == NULL){
-        return true;
-    }
-
     return 
-        (leftBoundInf || node->val > leftBound)
+        (node == NULL)
+        || (leftBoundInf || node->val > leftBound)
         && (rightBoundInf || node->val < rightBound)
         && checkIsBst(node->left, leftBoundInf, leftBound, false, node->val)
         && checkIsBst(node->right, false, node->val, rightBoundInf, rightBound);
