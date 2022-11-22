@@ -5,9 +5,9 @@
  Circular Doubly Linked List combines the properties of a doubly linked list and a circular linked list in which two consecutive elements are linked or connected by the previous and next pointer and the last node points to the first node via the next pointer and the first node points last node via the previous pointer.
 
  In this implementation, the menu driven code is written along with functions to insert at start, insrt at last, delete first node, delete last node and display list functions are coded.
-
+ 
  * Author: [Sahil Kandhare](https://github.com/SahilK-027)
- * Created on 12/10/2002
+ * Created on 12/10/2022
  *
  *
  * Cicular doubly linked list in C
