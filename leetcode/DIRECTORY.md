@@ -78,6 +78,7 @@
 | 561  | [Array Partition I](https://leetcode.com/problems/array-partition-i/)                                                           | [C](./src/561.c)  | Easy       |
 | 617  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)                                                 | [C](./src/617.c)  | Easy       |
 | 647  | [Palindromic Substring](https://leetcode.com/problems/palindromic-substrings/)                                                  | [C](./src/647.c)  | Medium     |
+| 669  | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)                                           | [C](./src/669.c)  | Medium     |
 | 674  | [Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)           | [C](./src/674.c)  | Easy       |
 | 700  | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)                                 | [C](./src/700.c)  | Easy       |
 | 701  | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)                             | [C](./src/701.c)  | Medium     |
