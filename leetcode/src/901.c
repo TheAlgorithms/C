@@ -1,5 +1,6 @@
 // Use monotonic stack.
-// Keep the stack of monotonic inxrease price and index.
+// Keep the stack of monotonically increasing price and index.
+
 // Runtime: O(n)
 // Space: O(n)
 typedef struct stack{
