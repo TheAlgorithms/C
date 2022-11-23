@@ -7,7 +7,7 @@
 // 10010*101  -> left: (4+1) + (1+1), right: (2-1) + (4-1)
 // Runtime: O(n)
 // Space: O(1)
-int* minOperations(char * boxes, int* returnSize){
+int* minOperations(char* boxes, int* returnSize){
     int leftOnes = 0;
     int leftCommonDistance = 0;
     
