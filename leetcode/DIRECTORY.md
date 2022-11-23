@@ -56,6 +56,7 @@
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                                                       | [C](./src/206.c)  | Easy       |
 | 215  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)                               | [C](./src/215.c)  | Medium     |
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                                                         | [C](./src/217.c)  | Easy       |
+| 223  | [Rectangle Area](https://leetcode.com/problems/rectangle-area/)                                                                 | [C](./src/223.c)  | Medium     |
 | 226  | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)                                                         | [C](./src/226.c)  | Easy       |
 | 231  | [Power of Two](https://leetcode.com/problems/power-of-two/)                                                                     | [C](./src/231.c)  | Easy       |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                 | [C](./src/234.c)  | Easy       |
@@ -96,4 +97,6 @@
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)                                     | [C](./src/1769.c) | Medium     |
+| 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
+| 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
