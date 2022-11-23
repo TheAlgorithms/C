@@ -19,7 +19,10 @@ long long numberOfWaysForChar(char * s, char c){
         
 }
 
-// Counting: Calculating sum of first ways of building. Then plus it to second and calculate with third.
+// numberOfWays returns the sum of number ways of selecting first building
+// and the number of ways of selecting second building which gives us the
+// number of ways of selecting three building such that no
+// consecutive buildings are in the same category.
 // Runtime: O(n)
 // Space: O(n)
 long long numberOfWays(char * s){
