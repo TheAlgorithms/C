@@ -29,5 +29,5 @@ int maximizeTarget(char * answerKey, char targetChar, int k){
 // Runtime: O(n)
 // Space: O(1)
 int maxConsecutiveAnswers(char * answerKey, int k){
-    return max(getMaxLength(answerKey, 'T', k), getMaxLength(answerKey, 'F', k));
+    return max(maximizeTarget(answerKey, 'T', k), maximizeTarget(answerKey, 'F', k));
 }
