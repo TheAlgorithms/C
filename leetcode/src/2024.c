@@ -1,6 +1,6 @@
 #define max(X, Y) ((X) > (Y) ? (X) : (Y))
 
-int getMaxLength(char * answerKey, char targetChar, int k){
+int maximizeTarget(char * answerKey, char targetChar, int k){
     int leftIndex = -1;
     int result = 0;
     int currTargetChars = 0;
