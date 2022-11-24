@@ -23,7 +23,7 @@ git checkout -b solution/your-solution-name
 All LeetCode problems can be found [**here**](https://leetcode.com/problemset/all/).\
 If you have a solution to any of these problems (which are not being [**repeated**](https://github.com/TheAlgorithms/C/blob/master/leetcode/DIRECTORY.md)), that's great! Here are the steps:
 
-1. Add a new file in `leetcode/src` with the number of the problem.\
+1. Add a new file in `leetcode/src` with the number of the problem.
     - For example: if the problem's number is 98, the filename should be `98.c`.
 2. Provide a small description of the solution at the top of the file. A function should go below that. For example:
 
@@ -47,9 +47,7 @@ Please use numerical order. For example: if the solution's number is `98`, add y
 This is the required format for new solutinos:
 
 ```markdown
-...
 | <solution number>   | [<solution name>](<leetcode link to problem>)                                   | [C](./src/<filename>.c)   | <difficulty>     |
-...
 ```
 
 ## 📦 Committing your changes 📦

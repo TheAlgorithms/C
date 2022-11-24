@@ -27,7 +27,7 @@ You can add new algorithms or data structures that are **not present in the repo
 
 ### LeetCode solutions
 
-For LeetCode solutions, please check its [**guide**](https://github.com/TheAlgorithms/C/blob/master/src/leetcode/README.md) to make a proper solution file.
+For LeetCode solutions, please check its [**guide**](https://github.com/TheAlgorithms/C/blob/master/leetcode/README.md) to make a proper solution file.
 
 ### Making Changes
 
