@@ -26,11 +26,11 @@ bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct List*
         return true;
     }
 
-    if (findPathOfTarget(node->left, target, pathItem)){
+    if (findTargetPath(node->left, target, pathItem)){
         return true;
     }
     
-    if (findPathOfTarget(node->right, target, pathItem)){
+    if (findTargetPath(node->right, target, pathItem)){
         return true;
     }
     
@@ -56,8 +56,8 @@ struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p,
     struct List* pPath = malloc(sizeof(struct List));
     struct List* qPath = malloc(sizeof(struct List));
     
-    findPathOfTarget(root, p, pPath);
-    findPathOfTarget(root, q, qPath);
+    findTargetPath(root, p, pPath);
+    findTargetPath(root, q, qPath);
     
     struct TreeNode* lowestTreeNode = NULL;
     struct List* pPathCursor = pPath->next;
