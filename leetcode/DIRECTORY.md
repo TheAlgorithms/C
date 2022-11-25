@@ -92,6 +92,7 @@
 | 938  | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)                                                             | [C](./src/938.c)  | Easy       |
 | 965  | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)                                                   | [C](./src/965.c)  | Easy       |
 | 977  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                                           | [C](./src/977.c)  | Easy       |
+| 985  | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                           | [C](./src/985.c)  | Medium     |
 | 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/)                                   | [C](./src/1009.c) | Easy       |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)                                                               | [C](./src/1089.c) | Easy       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
