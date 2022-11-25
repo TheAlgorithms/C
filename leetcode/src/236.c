@@ -7,17 +7,18 @@
  * };
  */
 
-struct List {
+// The list for TreeNodes.
+struct ListItem {
     struct TreeNode* node;
-    struct List* next;
+    struct ListItem* next;
 };
 
-bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct List* path){
+bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct ListItem* path){
     if (node == NULL){
         return false;
     }
     
-    struct List* pathItem = malloc(sizeof(struct List));
+    struct ListItem* pathItem = malloc(sizeof(struct ListItem));
     pathItem->node = node;
     pathItem->next = NULL;
     path->next = pathItem;
@@ -39,7 +40,7 @@ bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct List*
     return false;
 }
 
-void freeList(struct List* target){
+void freeList(struct ListItem* target){
     if (target->next != NULL){
         freeList(target->next);
     }
@@ -53,15 +54,15 @@ void freeList(struct List* target){
 // Runtime: O(n)
 // Space: O(n)
 struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
-    struct List* pPath = malloc(sizeof(struct List));
-    struct List* qPath = malloc(sizeof(struct List));
+    struct ListItem* pPath = malloc(sizeof(struct ListItem));
+    struct ListItem* qPath = malloc(sizeof(struct ListItem));
     
     findTargetPath(root, p, pPath);
     findTargetPath(root, q, qPath);
     
     struct TreeNode* lowestTreeNode = NULL;
-    struct List* pPathCursor = pPath->next;
-    struct List* qPathCursor = qPath->next;
+    struct ListItem* pPathCursor = pPath->next;
+    struct ListItem* qPathCursor = qPath->next;
     while(pPathCursor != NULL && qPathCursor != NULL) {
         if (pPathCursor->node->val == qPathCursor->node->val){
             lowestTreeNode = pPathCursor->node;
