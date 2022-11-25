@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337":[16,0,14,2,1],
+"dd/d08/newton__raphson__root_8c.html#af270a96662132d0385cb6b4637c5a689":[16,0,14,2,0],
 "dd/d10/struct_stack.html":[15,0,34],
 "dd/d10/struct_stack.html#a856ca6f4a9ffde43f0cb3b43cb4d044d":[15,0,34,0],
 "dd/d10/struct_stack.html#aa16cf0b36f9735ed00bde97a5013adaa":[15,0,34,1],
@@ -134,16 +136,16 @@ var NAVTREEINDEX3 =
 "df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,18,9,0],
 "df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3":[16,0,18,9,2],
 "df/d83/selection__sort_8c.html#aeafe7419cfceaeccaf49f22842d9a617":[16,0,18,9,1],
-"df/d86/structterm.html":[15,0,38],
-"df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74":[15,0,38,2],
-"df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b":[15,0,38,0],
-"df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a":[15,0,38,1],
+"df/d86/structterm.html":[15,0,40],
+"df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74":[15,0,40,2],
+"df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b":[15,0,40,0],
+"df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a":[15,0,40,1],
 "df/d98/quaternions_8c.html":[16,0,7,1],
 "df/da5/problem__9_2sol1_8c.html":[16,0,16,22,0],
 "df/da5/problem__9_2sol1_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[16,0,16,22,0,0],
 "df/db3/struct_l.html":[15,0,20],
 "df/dc6/acronym_8h_source.html":[16,0,5,0,0],
-"df/ddb/structword__count__word.html":[15,0,43],
+"df/ddb/structword__count__word.html":[15,0,45],
 "df/dea/structdata.html":[15,0,9],
 "df/df3/union__find_8c.html":[16,0,13,15],
 "df/df3/union__find_8c.html#a0592dba56693fad79136250c11e5a7fe":[16,0,13,15,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "globals_func_i.html":[16,1,1,9],
 "globals_func_j.html":[16,1,1,10],
 "globals_func_k.html":[16,1,1,11],
-"globals_func_l.html":[16,1,1,12],
-"globals_func_m.html":[16,1,1,13],
-"globals_func_n.html":[16,1,1,14]
+"globals_func_l.html":[16,1,1,12]
 };
