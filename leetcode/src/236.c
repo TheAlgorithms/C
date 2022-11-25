@@ -12,7 +12,7 @@ struct List {
     struct List* next;
 };
 
-bool findPathOfTarget(struct TreeNode* node, struct TreeNode* target, struct List* path){
+bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct List* path){
     if (node == NULL){
         return false;
     }
