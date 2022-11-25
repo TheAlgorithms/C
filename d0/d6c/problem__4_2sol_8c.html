@@ -182,22 +182,21 @@ Functions</h2></td></tr>
 
 <p>Main function. </p>
 <div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
-<div class="line"><span class="lineno">   27</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, j, <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> = 0;</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, j, max = 0;</div>
 <div class="line"><span class="lineno">   28</span>    <span class="keywordflow">for</span> (i = 100; i &lt;= 999; i++)</div>
 <div class="line"><span class="lineno">   29</span>    {</div>
 <div class="line"><span class="lineno">   30</span>        <span class="keywordflow">for</span> (j = 100; j &lt;= 999; j++)</div>
 <div class="line"><span class="lineno">   31</span>        {</div>
 <div class="line"><span class="lineno">   32</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p = i * j;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a>(p) &amp;&amp; p &gt; <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>)</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a>(p) &amp;&amp; p &gt; max)</div>
 <div class="line"><span class="lineno">   34</span>            {</div>
-<div class="line"><span class="lineno">   35</span>                <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> = p;</div>
+<div class="line"><span class="lineno">   35</span>                max = p;</div>
 <div class="line"><span class="lineno">   36</span>            }</div>
 <div class="line"><span class="lineno">   37</span>        }</div>
 <div class="line"><span class="lineno">   38</span>    }</div>
-<div class="line"><span class="lineno">   39</span>    printf(<span class="stringliteral">&quot;%u\n&quot;</span>, <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>);</div>
+<div class="line"><span class="lineno">   39</span>    printf(<span class="stringliteral">&quot;%u\n&quot;</span>, max);</div>
 <div class="line"><span class="lineno">   40</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   41</span>}</div>
-<div class="ttc" id="agroup__kohonen__2d_html_gaffe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdoc">shorthand for maximum value</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:39</div></div>
 <div class="ttc" id="aproblem__4_2sol_8c_html_adf9bea8d35848959bde5b3f277edf0c4"><div class="ttname"><a href="../../d0/d6c/problem__4_2sol_8c.html#adf9bea8d35848959bde5b3f277edf0c4">is_palindromic</a></div><div class="ttdeci">int is_palindromic(unsigned int n)</div><div class="ttdoc">Check if number is palindromic.</div><div class="ttdef"><b>Definition:</b> sol.c:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

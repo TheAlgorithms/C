@@ -187,8 +187,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> out;</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
 <div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>    uint16_t <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a> = numRows - 1;</div>
-<div class="line"><span class="lineno">   46</span>    uint16_t rr = 2 * <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>;</div>
+<div class="line"><span class="lineno">   45</span>    uint16_t max = numRows - 1;</div>
+<div class="line"><span class="lineno">   46</span>    uint16_t rr = 2 * max;</div>
 <div class="line"><span class="lineno">   47</span>    uint16_t i = 0;</div>
 <div class="line"><span class="lineno">   48</span>    uint16_t o = 0;</div>
 <div class="line"><span class="lineno">   49</span>    uint16_t delta = 0;</div>
@@ -201,7 +201,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>    }</div>
 <div class="line"><span class="lineno">   57</span> </div>
 <div class="line"><span class="lineno">   58</span>    <span class="comment">// middle rows</span></div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">for</span> (uint16_t l = 1; l &lt; <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>; l++)</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">for</span> (uint16_t l = 1; l &lt; max; l++)</div>
 <div class="line"><span class="lineno">   60</span>    {</div>
 <div class="line"><span class="lineno">   61</span>        i = l;</div>
 <div class="line"><span class="lineno">   62</span>        delta = 2 * l;</div>
@@ -214,7 +214,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   69</span>    }</div>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>    <span class="comment">// last row</span></div>
-<div class="line"><span class="lineno">   72</span>    i = <a class="code hl_define" href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a>;</div>
+<div class="line"><span class="lineno">   72</span>    i = max;</div>
 <div class="line"><span class="lineno">   73</span>    <span class="keywordflow">while</span> (i &lt; len)</div>
 <div class="line"><span class="lineno">   74</span>    {</div>
 <div class="line"><span class="lineno">   75</span>        out[o++] = in[i];</div>
@@ -223,7 +223,6 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   78</span> </div>
 <div class="line"><span class="lineno">   79</span>    <span class="keywordflow">return</span> out;</div>
 <div class="line"><span class="lineno">   80</span>}</div>
-<div class="ttc" id="agroup__kohonen__2d_html_gaffe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="../../d1/d6b/group__kohonen__2d.html#gaffe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdoc">shorthand for maximum value</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:39</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 </div><!-- fragment -->
 </div>
