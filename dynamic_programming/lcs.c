@@ -124,7 +124,7 @@ void test(void) {
 	}
 	
 	lcslen(s1, s2, l1, l2, L, B);
-	lcs = lcsbuild(s1, s2, l1, l2, L, B);
+	lcs = lcsbuild(s1, l1, l2, L, B);
 	
 	assert(L[l1][l2] == 27);
 	assert(strcmp(lcs, "CGTTCGGCTATGCTTCTACTTATTCTA") == 0);
