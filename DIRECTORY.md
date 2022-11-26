@@ -162,7 +162,9 @@
 ## Leetcode
   * Src
     * [1](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1.c)
+    * [10](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/10.c)
     * [1008](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1008.c)
+    * [1009](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1009.c)
     * [101](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/101.c)
     * [1019](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1019.c)
     * [104](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/104.c)
@@ -182,12 +184,15 @@
     * [125](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/125.c)
     * [13](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/13.c)
     * [136](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/136.c)
+    * [14](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/14.c)
     * [141](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/141.c)
     * [142](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/142.c)
+    * [1524](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1524.c)
     * [153](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/153.c)
     * [160](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/160.c)
     * [169](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/169.c)
     * [173](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/173.c)
+    * [1752](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1752.c)
     * [189](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/189.c)
     * [190](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/190.c)
     * [191](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/191.c)
@@ -200,6 +205,7 @@
     * [2130](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2130.c)
     * [215](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/215.c)
     * [217](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/217.c)
+    * [223](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/223.c)
     * [226](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/226.c)
     * [231](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/231.c)
     * [234](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/234.c)
@@ -292,6 +298,7 @@
   * [Prime Factoriziation](https://github.com/TheAlgorithms/C/blob/HEAD/misc/prime_factoriziation.c)
   * [Prime Seive](https://github.com/TheAlgorithms/C/blob/HEAD/misc/prime_seive.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/HEAD/misc/quartile.c)
+  * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rot13.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rselect.c)
   * [Run Length Encoding](https://github.com/TheAlgorithms/C/blob/HEAD/misc/run_length_encoding.c)
   * [Strong Number](https://github.com/TheAlgorithms/C/blob/HEAD/misc/strong_number.c)
@@ -317,6 +324,9 @@
   * [Realtime Stats](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/realtime_stats.c)
   * [Simpsons 1 3Rd Rule](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/simpsons_1_3rd_rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/variance.c)
+
+## Process Scheduling Algorithms
+  * [Non Preemptive Priority Scheduling](https://github.com/TheAlgorithms/C/blob/HEAD/process_scheduling_algorithms/non_preemptive_priority_scheduling.c)
 
 ## Project Euler
   * Problem 1
