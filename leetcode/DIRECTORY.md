@@ -33,6 +33,7 @@
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                   | [C](./src/94.c)   | Medium     |
+| 98   | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)                                       | [C](./src/98.c)   | Medium     |
 | 101  | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                                                                 | [C](./src/101.c)  | Easy       |
 | 104  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                                     | [C](./src/104.c)  | Easy       |
 | 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)         | [C](./src/108.c)  | Easy       |
