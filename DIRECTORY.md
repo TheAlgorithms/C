@@ -119,6 +119,9 @@
   * [Test Malloc Dbg](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/test_malloc_dbg.c)
   * [Test Min Printf](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/test_min_printf.c)
 
+## Dynamic Programming
+  * [Lcs](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/lcs.c)
+
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/HEAD/exercism/acronym/acronym.c)
@@ -190,6 +193,7 @@
     * [1524](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1524.c)
     * [153](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/153.c)
     * [160](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/160.c)
+    * [1653](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1653.c)
     * [169](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/169.c)
     * [173](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/173.c)
     * [1752](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1752.c)
@@ -207,6 +211,7 @@
     * [217](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/217.c)
     * [223](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/223.c)
     * [226](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/226.c)
+    * [2304](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2304.c)
     * [231](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/231.c)
     * [234](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/234.c)
     * [24](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/24.c)
@@ -228,6 +233,7 @@
     * [389](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/389.c)
     * [4](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/4.c)
     * [404](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/404.c)
+    * [42](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/42.c)
     * [442](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/442.c)
     * [461](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/461.c)
     * [476](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/476.c)
@@ -255,12 +261,14 @@
     * [852](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/852.c)
     * [876](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/876.c)
     * [9](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/9.c)
+    * [901](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/901.c)
     * [905](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/905.c)
     * [917](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/917.c)
     * [938](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/938.c)
     * [94](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/94.c)
     * [965](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/965.c)
     * [977](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/977.c)
+    * [985](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/985.c)
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C/blob/HEAD/machine_learning/adaline_learning.c)
