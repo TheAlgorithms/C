@@ -17,15 +17,3 @@ bool isSameTree(struct TreeNode *p, struct TreeNode *q)
     return (p->val == q->val && isSameTree(p->left, q->left) &&
             isSameTree(p->right, q->right));
 }
-
-void printTreePreOrder(struct TreeNode *p)
-{
-    if (p != NULL)
-    {
-        printf("%d", p->val);
-        printTreePreOrder(p->left);
-        printTreePreOrder(p->right);
-    }
-    else
-        printf("#");
-}
