@@ -268,6 +268,7 @@
     * [94](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/94.c)
     * [965](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/965.c)
     * [977](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/977.c)
+    * [98](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/98.c)
     * [985](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/985.c)
 
 ## Machine Learning
