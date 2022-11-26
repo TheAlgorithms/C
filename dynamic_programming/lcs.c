@@ -51,14 +51,13 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 /**
  * @breif Builds the LCS according to B using a traceback approach
  * @param1 s1 first null-terminated string
- * @param2 s2 second null-terminated string
- * @param3 l1 length of s1
- * @param4 l2 length of s2
- * @param5 L matrix of size l1 x l2
- * @param6 B matrix of size l1 x l2
+ * @param2 l1 length of s1
+ * @param3 l2 length of s2
+ * @param4 L matrix of size l1 x l2
+ * @param5 B matrix of size l1 x l2
  * @returns lcs longest common subsequence
  */
-char *lcsbuild(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
+char *lcsbuild(const char *s1, int l1, int l2, int **L, int **B) {
 	int	 i, j, lcsl;
 	char	*lcs;
 	lcsl = L[l1][l2];
@@ -86,8 +85,8 @@ char *lcsbuild(const char *s1, const char *s2, int l1, int l2, int **L, int **B)
 	return lcs;
 }
 /**
-   @brief test function
-   @returns void
+ * @brief test function
+ * @returns void
  */
 void test(void) {
 	/* https://en.wikipedia.org/wiki/Subsequence#Applications */
@@ -144,7 +143,6 @@ void test(void) {
 /**
  * @brief Main function
  * @returns 0 on exit
- * @returns 1 on error
  */
 int main(int argc, char *argv[]) {
 	
