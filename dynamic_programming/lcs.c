@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief [LCS](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) algorithm
+ * @brief [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) algorithm
  * @details
  * From Wikipedia: The longest common subsequence (LCS) problem is the problem
  * of finding the longest subsequence common to all sequences in a set of sequences
