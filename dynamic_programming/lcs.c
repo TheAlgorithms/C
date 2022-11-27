@@ -85,10 +85,10 @@ char *lcsbuild(const char *s1, int l1, int l2, int **L, int **B) {
 	return lcs;
 }
 /**
- * @brief test function
+ * @brief Self-test implementations
  * @returns void
  */
-void test(void) {
+static void test() {
 	/* https://en.wikipedia.org/wiki/Subsequence#Applications */
 	int **L, **B, j, l1, l2;
 	
