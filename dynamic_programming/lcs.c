@@ -138,6 +138,8 @@ static void test() {
 		free(L[j]), free(B[j]);
 	free(L);
 	free(B);
+
+	printf("All tests have successfully passed!\n");
 }
 
 /**
