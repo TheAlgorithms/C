@@ -6,12 +6,11 @@
  * of finding the longest subsequence common to all sequences in a set of sequences
  * (often just two sequences).
  * @author [Kurtz](https://github.com/itskurtz)
- * @see dynamic_programming/lcs.c
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
+#include <stdio.h>		/* for io operations */
+#include <stdlib.h>		/* for memory management & exit */
+#include <string.h>		/* for string manipulation & ooperations */
+#include <assert.h>		/* for asserts */
 
 enum {LEFT, UP, DIAG};
 
