@@ -1,18 +1,18 @@
-long long numberOfWaysForChar(char * s, char c){
-    long firstItemsNumber = 0;
-    long secondItemsNumber = 0;
+long numberOfWaysForChar(char * s, char c){
+    long firstBuildingAppearNumber = 0;
+    long secondBuildingAppearNumber = 0;
     long result = 0;
     
     int sLength = strlen(s);
     for (int i = 0; i < sLength; i++){
         if (s[i] == c){
-            result += secondItemsNumber;
+            result += secondBuildingAppearNumber;
 
-            firstItemsNumber += 1;
+            firstBuildingAppearNumber += 1;
             continue;
         }
 
-        secondItemsNumber += firstItemsNumber;
+        secondBuildingAppearNumber += firstBuildingAppearNumber;
     }
     
     return result;
