@@ -7,5 +7,6 @@ var dir_9babc524d57e25f3d9f4179cabc3599e =
     [ "infix_to_postfix.c", "db/d0c/infix__to__postfix_8c.html", "db/d0c/infix__to__postfix_8c" ],
     [ "infix_to_postfix2.c", "da/d96/infix__to__postfix2_8c.html", "da/d96/infix__to__postfix2_8c" ],
     [ "int_to_string.c", "dd/d53/int__to__string_8c.html", "dd/d53/int__to__string_8c" ],
-    [ "octal_to_hexadecimal.c", "d0/d8a/octal__to__hexadecimal_8c.html", "d0/d8a/octal__to__hexadecimal_8c" ]
+    [ "octal_to_hexadecimal.c", "d0/d8a/octal__to__hexadecimal_8c.html", "d0/d8a/octal__to__hexadecimal_8c" ],
+    [ "roman_numerals_to_decimal.c", "dd/de6/roman__numerals__to__decimal_8c.html", "dd/de6/roman__numerals__to__decimal_8c" ]
 ];

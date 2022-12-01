@@ -139,7 +139,7 @@ var NAVTREEINDEX =
 "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1f13725b3de5ca6ab99b238b712cb417",
 "d8/d71/group__k__means.html#gaf6259432561e794dea0e060f482d15e2",
 "dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337",
-"globals_func_m.html"
+"globals_func_h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
