@@ -1,7 +1,6 @@
-bool isPowerOfTwo(int n)
-{
-    if (!n)
-        return false;
-    while (n % 2 == 0) n /= 2;
-    return n == 1;
+// Without loops/recursion.
+// Runtime: O(1)
+// Space: O(1)
+bool isPowerOfTwo(int n){
+    return (n > 0) && ((n & (n - 1)) == 0);
 }
