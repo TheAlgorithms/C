@@ -1,5 +1,5 @@
-bool isVowel(char c){
-    switch(c){
+bool isVowel(char chr){
+    switch(chr){
         case 'a':
         case 'e':
         case 'i':
