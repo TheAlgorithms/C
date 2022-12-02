@@ -101,6 +101,7 @@
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
+| 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)                                                   | [C](./src/1695.c) | Medium     |
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)                                     | [C](./src/1769.c) | Medium     |
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
 | 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/)           | [C](./src/1653.c) | Medium     |
