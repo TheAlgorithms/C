@@ -9,8 +9,8 @@
 
 // The list for TreeNodes.
 struct ListItem {
-    struct TreeNode* node;
-    struct ListItem* next;
+    struct TreeNode* node; // TreeNode pointer
+    struct ListItem* next; // Pointer to the next ListItem
 };
 
 bool findTargetPath(struct TreeNode* node, struct TreeNode* target, struct ListItem* path){
