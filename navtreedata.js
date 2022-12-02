@@ -136,10 +136,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1f13725b3de5ca6ab99b238b712cb417",
-"d8/d71/group__k__means.html#gaf6259432561e794dea0e060f482d15e2",
-"dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337",
-"globals_func_h.html"
+"d4/d69/group__dual__quats.html",
+"d8/d38/queue_8h_source.html",
+"dd/d06/structsegment__tree.html#aa9dc376b5b219c4cec6546483527b853",
+"globals_func_d.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"d4/d69/group__dual__quats.html":[14,0,3],
+"d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f":[14,0,3,1],
+"d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html":[15,0,24],
+"d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1cec46413acf776e3ee2b0b9241490c3":[15,0,24,5],
 "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1f13725b3de5ca6ab99b238b712cb417":[15,0,24,2],
 "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a6b0971c1415de6e0123b8d0d0a626fde":[15,0,24,6],
 "d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a731603550d2238abb179f2b572f20d99":[15,0,24,3],
@@ -236,18 +240,14 @@ var NAVTREEINDEX1 =
 "d8/d10/structlist.html":[15,0,21],
 "d8/d10/structlist.html#a2054c799f7580787a500df82d14ace25":[15,0,21,0],
 "d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41":[15,0,21,1],
-"d8/d30/decimal__to__binary__recursion_8c.html":[16,0,2,2],
-"d8/d30/decimal__to__binary__recursion_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,2,2,2],
-"d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8":[16,0,2,2,0],
-"d8/d30/decimal__to__binary__recursion_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,2,2,1],
+"d8/d30/decimal__to__binary__recursion_8c.html":[16,0,2,3],
+"d8/d30/decimal__to__binary__recursion_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,2,3,2],
+"d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8":[16,0,2,3,0],
+"d8/d30/decimal__to__binary__recursion_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,2,3,1],
 "d8/d32/problem__25_2sol1_8c.html":[16,0,16,13,0],
 "d8/d32/problem__25_2sol1_8c.html#a001791a21d538b8b9176287ae60d9b61":[16,0,16,13,0,0],
 "d8/d32/problem__25_2sol1_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[16,0,16,13,0,3],
 "d8/d32/problem__25_2sol1_8c.html#a2b90df6bfbf0d18cd9a19c1a71453783":[16,0,16,13,0,2],
 "d8/d32/problem__25_2sol1_8c.html#abe5bc1f170b2108a19d0a16d30bd3235":[16,0,16,13,0,4],
-"d8/d32/problem__25_2sol1_8c.html#af9729befaffc1aab9ac9fedc4706e66c":[16,0,16,13,0,1],
-"d8/d38/queue_8h_source.html":[16,0,3,4,1],
-"d8/d71/group__k__means.html":[14,2,1],
-"d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9":[14,2,1,3],
-"d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7":[14,2,1,2]
+"d8/d32/problem__25_2sol1_8c.html#af9729befaffc1aab9ac9fedc4706e66c":[16,0,16,13,0,1]
 };
