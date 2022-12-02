@@ -8,7 +8,7 @@ Welcome to [TheAlgorithms/C](https://github.com/TheAlgorithms/C)! Before submitt
 
 ### Maintainer/reviewer
 
-**Please check the [reviewer code](https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/REVIEWER_CODE.md) file for maintainers and reviewers.**
+**Please check the [reviewer code](https://github.com/TheAlgorithms/C/blob/master/REVIEWER_CODE.md) file for maintainers and reviewers.**
 
 ### Contributor
 
@@ -24,6 +24,10 @@ Being a contributor at The Algorithms, we request you to follow the points menti
 You can add new algorithms or data structures that are **not present in the repository** or that can **improve** the old implementations (**documentation**, **improving test cases**, removing bugs, or in any other reasonable sense)
 
 **Issues** Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request, and it will be evaluated by project maintainers.
+
+### LeetCode solutions
+
+For LeetCode solutions, please check its [**guide**](https://github.com/TheAlgorithms/C/blob/master/leetcode/README.md) to make a proper solution file.
 
 ### Making Changes
 
