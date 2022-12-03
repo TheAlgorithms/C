@@ -109,12 +109,14 @@ void viewlist()  // function to display values
     }
 }
 //////////////////////////////////////////////////////////////////////
-int test(){
-    insert(1,1);
-    insert(2,2);
-    deletion(2);
+void test(){
+    insert(1,39);
+    assert(start->info==39);
+    insert(2,10);
+    insert(3,11);
+    deletion(1);
+   assert(start->info!=39);
     viewlist;
-    return 0;
 }
 int main()
 {
@@ -125,7 +127,7 @@ int main()
     scanf("%d",&c);
     if(c==1)
     {
-       assert(test()==0);
+       test();
        printf("Self test successfully passed!");
      }
     else if(c==2)
