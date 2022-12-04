@@ -108,4 +108,5 @@
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
+| 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                         | [C](./src/2256.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
