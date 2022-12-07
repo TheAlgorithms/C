@@ -1,16 +1,23 @@
-int rangeSumBST(struct TreeNode *root, int L, int R)
-{
-    if (root == NULL)
-    {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+int rangeSumBST(struct TreeNode* root, int low, int high){
+    if (root == NULL){
         return 0;
     }
-    else if (root->val >= L && root->val <= R)
-    {
-        return root->val + rangeSumBST(root->left, L, R) +
-               rangeSumBST(root->right, L, R);
+
+    int result = 0;
+    if (root->val >= low && root->val <= high){
+        result += root->val; 
     }
-    else
-    {
-        return rangeSumBST(root->left, L, R) + rangeSumBST(root->right, L, R);
-    }
+
+    result += rangeSumBST(root->left, low, high);
+    result += rangeSumBST(root->right, low, high);
+
+    return result;
 }
