@@ -152,19 +152,18 @@ some_new_fancy_category         is correct
 
 ##### Integrating CMake in a new directory
 
-In case a new directory is 100% required, `CMakeLists.txt` in the root directory needs to be updated, and a new `CMakeLists.txt` needs to be made within the new directory.\
+In case a new directory is 100% required, `CMakeLists.txt` file in the root directory needs to be updated, and a new `CMakeLists.txt` file needs to be created within the new directory.
+
 An example of how your new `CMakeLists.txt` file should look like. Note that if there are any extra libraries/setup required, you must include that in this file as well.
 
 ```cmake
 # If necessary, use the RELATIVE flag, otherwise each source file may be listed
-# with full pathname. RELATIVE may makes it easier to extract an executable name
+# with full pathname. The RELATIVE flag makes it easier to extract an executable's name
 # automatically.
+
 file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
-# file( GLOB APP_SOURCES ${CMAKE_SOURCE_DIR}/*.c )
-# AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} APP_SOURCES)
 foreach( testsourcefile ${APP_SOURCES} )
-    # I used a simple string replace, to cut off .cpp.
-    string( REPLACE ".c" "" testname ${testsourcefile} )
+    string( REPLACE ".c" "" testname ${testsourcefile} ) # File type. Example: `.c`, `.h`
     add_executable( ${testname} ${testsourcefile} )
 
     if(OpenMP_C_FOUND)
