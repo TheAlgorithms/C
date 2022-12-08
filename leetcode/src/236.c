@@ -50,7 +50,8 @@ void freeList(struct ListItem* target){
 
 
 // Find full path for p and q.
-// Find the longest common path in pathes.
+// Find the longest common path in paths.
+
 // Runtime: O(n)
 // Space: O(n)
 struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
