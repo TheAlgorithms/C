@@ -42,6 +42,7 @@
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                             | [C](./src/112.c)  | Easy       |
 | 118  | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)                                                            | [C](./src/118.c)  | Easy       |
 | 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                               | [C](./src/121.c)  | Easy       |
+| 124  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)                         | [C](./src/124.c)  | Hard       |
 | 125  | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                             | [C](./src/125.c)  | Easy       |
 | 136  | [Single Number](https://leetcode.com/problems/single-number/)                                                                   | [C](./src/136.c)  | Easy       |
 | 141  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                                                           | [C](./src/141.c)  | Easy       |
