@@ -1,6 +1,6 @@
 <map id="misc/rot13.c" name="misc/rot13.c">
-<area shape="rect" id="node1" title="ROT13 is a simple letter substitution cipher that replaces a letter with the 13th letter after it in ..." coords="77,5,171,31"/>
-<area shape="rect" id="node2" title=" " coords="5,79,67,104"/>
-<area shape="rect" id="node3" title=" " coords="91,79,157,104"/>
-<area shape="rect" id="node4" title=" " coords="181,79,251,104"/>
+<area shape="rect" id="node1" title="ROT13 is a simple letter substitution cipher that replaces a letter with the 13th letter after it in ..." alt="" coords="77,5,171,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,79,157,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,79,251,104"/>
 </map>

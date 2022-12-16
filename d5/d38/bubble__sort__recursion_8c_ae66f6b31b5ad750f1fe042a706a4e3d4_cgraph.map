@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Driver Code." coords="5,29,56,55"/>
-<area shape="rect" id="node2" href="$d5/d38/bubble__sort__recursion_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test function." coords="104,29,148,55"/>
-<area shape="rect" id="node3" href="$d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f" title="Bubble sort algorithm implements using recursion." coords="196,29,280,55"/>
+<area shape="rect" id="node1" title="Driver Code." alt="" coords="5,29,56,55"/>
+<area shape="rect" id="node2" href="$d5/d38/bubble__sort__recursion_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test function." alt="" coords="104,29,148,55"/>
+<area shape="rect" id="node3" href="$d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f" title="Bubble sort algorithm implements using recursion." alt="" coords="196,29,280,55"/>
 </map>
