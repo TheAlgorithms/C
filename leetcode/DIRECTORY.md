@@ -109,3 +109,4 @@
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
+| 2501 | [Longest Square Streak in an Array](https://leetcode.com/problems/longest-square-streak-in-an-array/description/)               | [C](./src/2501.c) | Medium     |
