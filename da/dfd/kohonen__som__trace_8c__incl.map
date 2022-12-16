@@ -1,7 +1,7 @@
 <map id="machine_learning/kohonen_som_trace.c" name="machine_learning/kohonen_som_trace.c">
-<area shape="rect" id="node1" title="Kohonen self organizing map (data tracing)" coords="78,5,254,45"/>
-<area shape="rect" id="node2" title=" " coords="5,93,68,119"/>
-<area shape="rect" id="node3" title=" " coords="93,93,154,119"/>
-<area shape="rect" id="node4" title=" " coords="178,93,242,119"/>
-<area shape="rect" id="node5" title=" " coords="266,93,325,119"/>
+<area shape="rect" id="node1" title="Kohonen self organizing map (data tracing)" alt="" coords="78,5,254,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,68,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,93,154,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="178,93,242,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="266,93,325,119"/>
 </map>

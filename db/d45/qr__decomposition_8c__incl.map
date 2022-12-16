@@ -1,8 +1,8 @@
 <map id="numerical_methods/qr_decomposition.c" name="numerical_methods/qr_decomposition.c">
-<area shape="rect" id="node1" title="Program to compute the QR decomposition of a given matrix." coords="79,5,229,45"/>
-<area shape="rect" id="node2" title=" " coords="5,167,68,192"/>
-<area shape="rect" id="node3" title=" " coords="107,167,169,192"/>
-<area shape="rect" id="node4" title=" " coords="206,167,270,192"/>
-<area shape="rect" id="node5" title=" " coords="289,93,347,119"/>
-<area shape="rect" id="node6" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." coords="95,93,213,119"/>
+<area shape="rect" id="node1" title="Program to compute the QR decomposition of a given matrix." alt="" coords="79,5,229,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,167,68,192"/>
+<area shape="rect" id="node3" title=" " alt="" coords="107,167,169,192"/>
+<area shape="rect" id="node4" title=" " alt="" coords="206,167,270,192"/>
+<area shape="rect" id="node5" title=" " alt="" coords="289,93,347,119"/>
+<area shape="rect" id="node6" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." alt="" coords="95,93,213,119"/>
 </map>

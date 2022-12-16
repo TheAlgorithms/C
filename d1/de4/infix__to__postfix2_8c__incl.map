@@ -1,9 +1,9 @@
 <map id="conversions/infix_to_postfix2.c" name="conversions/infix_to_postfix2.c">
-<area shape="rect" id="node1" title="Infix to Postfix converter implementation" coords="188,5,327,45"/>
-<area shape="rect" id="node2" title=" " coords="5,93,67,119"/>
-<area shape="rect" id="node3" title=" " coords="91,93,157,119"/>
-<area shape="rect" id="node4" title=" " coords="181,93,246,119"/>
-<area shape="rect" id="node5" title=" " coords="271,93,335,119"/>
-<area shape="rect" id="node6" title=" " coords="359,93,425,119"/>
-<area shape="rect" id="node7" title=" " coords="449,93,519,119"/>
+<area shape="rect" id="node1" title="Infix to Postfix converter implementation" alt="" coords="188,5,327,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,67,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,93,157,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,93,246,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="271,93,335,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="359,93,425,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="449,93,519,119"/>
 </map>

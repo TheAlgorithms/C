@@ -1,5 +1,5 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." coords="5,29,49,55"/>
-<area shape="rect" id="node2" href="$dd/de6/roman__numerals__to__decimal_8c.html#a1e86fb4466b6a175b910fa19c4a6ea03" title="Converts roman numerals into a decimal number." coords="97,29,225,55"/>
-<area shape="rect" id="node3" href="$dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88" title="for assert" coords="273,29,337,55"/>
+<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,29,49,55"/>
+<area shape="rect" id="node2" href="$dd/de6/roman__numerals__to__decimal_8c.html#a1e86fb4466b6a175b910fa19c4a6ea03" title="Converts roman numerals into a decimal number." alt="" coords="97,29,225,55"/>
+<area shape="rect" id="node3" href="$dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88" title="for assert" alt="" coords="273,29,337,55"/>
 </map>
