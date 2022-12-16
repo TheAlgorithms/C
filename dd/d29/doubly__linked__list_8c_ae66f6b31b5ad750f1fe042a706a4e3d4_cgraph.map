@@ -1,6 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." coords="5,67,56,92"/>
-<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#afa2b50f4716fc3b42221a72e676e1422" title="Example function." coords="104,67,175,92"/>
-<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." coords="230,29,277,55"/>
-<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." coords="223,103,284,128"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,67,56,92"/>
+<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#afa2b50f4716fc3b42221a72e676e1422" title="Example function." alt="" coords="104,67,175,92"/>
+<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="230,29,277,55"/>
+<area shape="rect" id="node4" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="223,103,284,128"/>
 </map>

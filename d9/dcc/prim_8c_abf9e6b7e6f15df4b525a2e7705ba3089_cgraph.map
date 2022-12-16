@@ -1,8 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." coords="5,31,56,56"/>
-<area shape="rect" id="node2" href="$d0/d51/celsius__to__fahrenheit_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." coords="125,5,169,31"/>
-<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." coords="104,55,191,80"/>
-<area shape="rect" id="node3" href="$d0/d51/celsius__to__fahrenheit_8c.html#aff11c1dfc058bd545a6af4312dfb45c5" title="for assert" coords="239,5,384,31"/>
-<area shape="rect" id="node5" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." coords="288,55,335,80"/>
-<area shape="rect" id="node6" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." coords="432,55,507,80"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,56"/>
+<area shape="rect" id="node2" href="$d0/d51/celsius__to__fahrenheit_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="125,5,169,31"/>
+<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="104,55,191,80"/>
+<area shape="rect" id="node3" href="$d0/d51/celsius__to__fahrenheit_8c.html#aff11c1dfc058bd545a6af4312dfb45c5" title="for assert" alt="" coords="239,5,384,31"/>
+<area shape="rect" id="node5" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="288,55,335,80"/>
+<area shape="rect" id="node6" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="432,55,507,80"/>
 </map>
