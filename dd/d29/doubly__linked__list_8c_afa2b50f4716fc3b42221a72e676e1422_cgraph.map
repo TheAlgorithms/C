@@ -1,5 +1,5 @@
 <map id="example" name="example">
-<area shape="rect" id="node1" title="Example function." coords="5,67,76,92"/>
-<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." coords="131,29,178,55"/>
-<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." coords="124,103,185,128"/>
+<area shape="rect" id="node1" title="Example function." alt="" coords="5,67,76,92"/>
+<area shape="rect" id="node2" href="$dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0" title="Print list function." alt="" coords="131,29,178,55"/>
+<area shape="rect" id="node3" href="$dd/d29/doubly__linked__list_8c.html#aedd04074dbc6af0de89051f97209311b" title="Search value into the list function." alt="" coords="124,103,185,128"/>
 </map>
