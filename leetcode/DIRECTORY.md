@@ -24,6 +24,7 @@
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/)                                                                 | [C](./src/27.c)   | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/)                                                           | [C](./src/28.c)   | Easy       |
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
+| 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                           | [C](./src/32.c)   | Hard       |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
@@ -106,7 +107,9 @@
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)                                     | [C](./src/1769.c) | Medium     |
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
 | 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/)           | [C](./src/1653.c) | Medium     |
+| 1704 | [Determine if String Halves Are Alike](Determine if String Halves Are Alike)                                                    | [C](./src/1704.c) | Easy       |
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
+| 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)                                   | [C](./src/2270.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
