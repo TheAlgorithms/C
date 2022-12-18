@@ -31,6 +31,7 @@
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | [C](./src/62.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
+| 79   | [Word Search](https://leetcode.com/problems/word-search/)                                                                       | [C](./src/79.c)   | Medium     |
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                   | [C](./src/94.c)   | Medium     |
@@ -61,6 +62,7 @@
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                                                         | [C](./src/217.c)  | Easy       |
 | 223  | [Rectangle Area](https://leetcode.com/problems/rectangle-area/)                                                                 | [C](./src/223.c)  | Medium     |
 | 226  | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)                                                         | [C](./src/226.c)  | Easy       |
+| 230  | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)                                   | [C](./src/230.c)  | Medium     |
 | 231  | [Power of Two](https://leetcode.com/problems/power-of-two/)                                                                     | [C](./src/231.c)  | Easy       |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                 | [C](./src/234.c)  | Easy       |
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                   | [C](./src/242.c)  | Easy       |
