@@ -24,12 +24,14 @@
 | 27   | [Remove Element](https://leetcode.com/problems/remove-element/)                                                                 | [C](./src/27.c)   | Easy       |
 | 28   | [Implement strStr()](https://leetcode.com/problems/implement-strstr/)                                                           | [C](./src/28.c)   | Easy       |
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
+| 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                           | [C](./src/32.c)   | Hard       |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | [C](./src/62.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
+| 79   | [Word Search](https://leetcode.com/problems/word-search/)                                                                       | [C](./src/79.c)   | Medium     |
 | 82   | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)                   | [C](./src/82.c)   | Medium     |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                         | [C](./src/83.c)   | Easy       |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                   | [C](./src/94.c)   | Medium     |
@@ -60,6 +62,7 @@
 | 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                                                         | [C](./src/217.c)  | Easy       |
 | 223  | [Rectangle Area](https://leetcode.com/problems/rectangle-area/)                                                                 | [C](./src/223.c)  | Medium     |
 | 226  | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)                                                         | [C](./src/226.c)  | Easy       |
+| 230  | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)                                   | [C](./src/230.c)  | Medium     |
 | 231  | [Power of Two](https://leetcode.com/problems/power-of-two/)                                                                     | [C](./src/231.c)  | Easy       |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                 | [C](./src/234.c)  | Easy       |
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                   | [C](./src/242.c)  | Easy       |
@@ -105,8 +108,11 @@
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)                                     | [C](./src/1769.c) | Medium     |
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
 | 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/)           | [C](./src/1653.c) | Medium     |
+| 1704 | [Determine if String Halves Are Alike](Determine if String Halves Are Alike)                                                    | [C](./src/1704.c) | Easy       |
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
 | 2125 | [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/description/)                   | [C](./src/2125.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
+| 2222 | [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings/)                         | [C](./src/2222.c) | Medium     |
+| 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)                                   | [C](./src/2270.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
