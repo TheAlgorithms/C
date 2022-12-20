@@ -90,6 +90,7 @@
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/)                                                                   | [C](./src/704.c)  | Easy       |
 | 709  | [To Lower Case](https://leetcode.com/problems/to-lower-case/)                                                                   | [C](./src/709.c)  | Easy       |
 | 771  | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)                                                           | [C](./src/771.c)  | Easy       |
+| 841  | [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/description/)                                                     | [C](./src/841.c)  | Medium     |
 | 852  | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)                                 | [C](./src/852.c)  | Easy       |
 | 876  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                           | [C](./src/876.c)  | Easy       |
 | 901  | [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                           | [C](./src/901.c)  | Medium     |
