@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"dd/d06/structsegment__tree.html#a973ab017a97678fdc6774543585897df":[15,0,34,0],
 "dd/d06/structsegment__tree.html#aa18d7cb422873a807707b26448dce7cd":[15,0,34,4],
 "dd/d06/structsegment__tree.html#aa9dc376b5b219c4cec6546483527b853":[15,0,34,1],
 "dd/d08/newton__raphson__root_8c.html":[16,0,14,2],
@@ -137,10 +138,10 @@ var NAVTREEINDEX3 =
 "df/d43/postfix__evaluation_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,13,8,2],
 "df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef":[16,0,13,8,4],
 "df/d58/md_leetcode__r_e_a_d_m_e.html":[11],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md70":[11,0],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md71":[11,1],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md72":[11,1,0],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73":[11,2],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md71":[11,0],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md72":[11,1],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73":[11,1,0],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,2],
 "df/d83/selection__sort_8c.html":[16,0,18,9],
 "df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,18,9,3],
 "df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,18,9,0],
@@ -246,8 +247,7 @@ var NAVTREEINDEX3 =
 "globals_defs.html":[16,1,4],
 "globals_e.html":[16,1,0,5],
 "globals_f.html":[16,1,0,6],
-"globals_func.html":[16,1,1],
 "globals_func.html":[16,1,1,0],
-"globals_func_a.html":[16,1,1,1],
-"globals_func_b.html":[16,1,1,2]
+"globals_func.html":[16,1,1],
+"globals_func_a.html":[16,1,1,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"globals_func_b.html":[16,1,1,2],
 "globals_func_c.html":[16,1,1,3],
 "globals_func_d.html":[16,1,1,4],
 "globals_func_e.html":[16,1,1,5],
@@ -44,10 +45,10 @@ var NAVTREEINDEX4 =
 "globals_x.html":[16,1,0,24],
 "index.html":[],
 "index.html":[0],
-"index.html#autotoc_md75":[0,0],
-"index.html#autotoc_md76":[0,1],
-"index.html#autotoc_md77":[0,2],
-"index.html#autotoc_md78":[0,3],
+"index.html#autotoc_md76":[0,0],
+"index.html#autotoc_md77":[0,1],
+"index.html#autotoc_md78":[0,2],
+"index.html#autotoc_md79":[0,3],
 "modules.html":[14],
 "pages.html":[]
 };

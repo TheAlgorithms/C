@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d8/d32/problem__25_2sol1_8c.html#abe5bc1f170b2108a19d0a16d30bd3235":[16,0,16,13,0,4],
 "d8/d32/problem__25_2sol1_8c.html#af9729befaffc1aab9ac9fedc4706e66c":[16,0,16,13,0,1],
 "d8/d38/queue_8h_source.html":[16,0,3,4,1],
 "d8/d71/group__k__means.html":[14,2,1],
@@ -26,9 +27,9 @@ var NAVTREEINDEX2 =
 "d8/de0/problem__9_2sol2_8c.html":[16,0,16,22,1],
 "d8/de0/problem__9_2sol2_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[16,0,16,22,1,0],
 "d9/d41/md_data_structures_array__r_e_a_d_m_e.html":[4],
-"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md37":[4,0],
-"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md38":[4,1],
-"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md39":[4,2],
+"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md38":[4,0],
+"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md39":[4,1],
+"d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md40":[4,2],
 "d9/d66/group__machine__learning.html":[14,2],
 "d9/d8b/structmat__3x3__.html":[14,0,1,0],
 "d9/d8b/structmat__3x3__.html#a490bb6be52ea95b333b55b236af41563":[14,0,1,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "dc/de5/structsubset.html":[15,0,38],
 "dd/d06/structsegment__tree.html":[15,0,34],
 "dd/d06/structsegment__tree.html#a5373ee53a5ac1cd7a9dcb89a4c23a04a":[15,0,34,2],
-"dd/d06/structsegment__tree.html#a5ad61abcbd2c25a4a71416281dba8f1e":[15,0,34,3],
-"dd/d06/structsegment__tree.html#a973ab017a97678fdc6774543585897df":[15,0,34,0]
+"dd/d06/structsegment__tree.html#a5ad61abcbd2c25a4a71416281dba8f1e":[15,0,34,3]
 };

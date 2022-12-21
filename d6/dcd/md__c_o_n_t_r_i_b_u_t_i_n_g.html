@@ -237,7 +237,7 @@ my_new_c_struct.c    is correct format
 @subsubsection autotoc_md29 Directory guidelines
 
 - We recommend adding files to existing directories as much as possible.
-- Use lowercase words with &lt;tt&gt;"_"&lt;/tt&gt; as separator ( no spaces or &lt;tt&gt;"-"&lt;/tt&gt; allowed )
+- Use lowercase words with &lt;tt&gt;"_"&lt;/tt&gt; as a separator ( no spaces or &lt;tt&gt;"-"&lt;/tt&gt; allowed )
 - For instance
 
 @icode{markdown} 
@@ -248,9 +248,45 @@ some_new_fancy_category         is correct
 - Filepaths will be used to dynamically create a directory of our algorithms.
 - Filepath validation will run on GitHub Actions to ensure compliance.
 
-@subsubsection autotoc_md30 Commit Guidelines
+@paragraph autotoc_md30 Integrating CMake in a new directory
 
-- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilt across multiple commits. Try to modify just one or two files in the same directory.  Pull requests that span multiple directories are often rejected.
+In case a new directory is 100% required, &lt;tt&gt;CMakeLists.txt&lt;/tt&gt; file in the root directory needs to be updated, and a new &lt;tt&gt;CMakeLists.txt&lt;/tt&gt; file needs to be created within the new directory.
+
+An example of how your new &lt;tt&gt;CMakeLists.txt&lt;/tt&gt; file should look like. Note that if there are any extra libraries/setup required, you must include that in this file as well.
+
+@icode{cmake} 
+# If necessary, use the RELATIVE flag, otherwise each source file may be listed
+# with full pathname. The RELATIVE flag makes it easier to extract an executable's name
+# automatically.
+
+file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
+foreach( testsourcefile ${APP_SOURCES} )
+    string( REPLACE ".c" "" testname ${testsourcefile} ) # File type. Example: `.c`, `.h`
+    add_executable( ${testname} ${testsourcefile} )
+
+    if(OpenMP_C_FOUND)
+        target_link_libraries(${testname} OpenMP::OpenMP_C)
+    endif()
+    if(MATH_LIBRARY)
+        target_link_libraries(${testname} ${MATH_LIBRARY})
+    endif()
+    install(TARGETS ${testname} DESTINATION "bin/&lt;foldername&gt;") # Folder name
+
+endforeach( testsourcefile ${APP_SOURCES} )
+@endicode
+
+The &lt;tt&gt;CMakeLists.txt&lt;/tt&gt; file in the root directory should be updated to include the new directory.\
+Include your new directory after the last subdirectory. Example:
+
+@icode{cmake} 
+...
+add_subdirectory(divide_and_conquer)
+add_subdirectory(&lt;foldername&gt;)
+@endicode
+
+@subsubsection autotoc_md31 Commit Guidelines
+
+- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilled across multiple commits. Try to modify just one or two files in the same directory. Pull requests that span multiple directories are often rejected.
 
 @icode{bash} 
 git add file_xyz.c
@@ -275,11 +311,11 @@ Common prefixes:
 - test: Correct existing tests or add new ones
 - chore: Miscellaneous changes that do not match any of the above.
 
-@subsection autotoc_md31 Pull Requests
+@subsection autotoc_md32 Pull Requests
 
 - Checkout our &lt;a href="<a href="https://github.com/TheAlgorithms/C/blob/master/.github/pull_request_template.md">https://github.com/TheAlgorithms/C/blob/master/.github/pull_request_template.md</a>" target="_blank" &gt;pull request template&lt;/a&gt;
 
-@subsubsection autotoc_md32 Building Locally
+@subsubsection autotoc_md33 Building Locally
 
 Before submitting a pull request, build the code locally or using the convenient &lt;a href="<a href="https://gitpod.io/#https://github.com/TheAlgorithms/C">https://gitpod.io/#https://github.com/TheAlgorithms/C</a>" target="_blank" &gt;&lt;img src="<a href="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod">https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod</a>" alt="Gitpod Ready-to-Code"/&gt;&lt;/a&gt; service.
 
@@ -287,7 +323,7 @@ Before submitting a pull request, build the code locally or using the convenient
 cmake -B build -S .
 @endicode
 
-@subsubsection autotoc_md33 Static Code Analyzer
+@subsubsection autotoc_md34 Static Code Analyzer
 
 We use &lt;a href="<a href="https://clang.llvm.org/extra/clang-tidy/">https://clang.llvm.org/extra/clang-tidy/</a>" target="_blank" &gt;&lt;tt&gt;clang-tidy&lt;/tt&gt;&lt;/a&gt; as a static code analyzer with a configuration in &lt;a href=".clang-tidy" target="_blank" &gt;&lt;tt&gt;.clang-tidy&lt;/tt&gt;&lt;/a&gt;.
 
@@ -295,7 +331,7 @@ We use &lt;a href="<a href="https://clang.llvm.org/extra/clang-tidy/">https://cl
 clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
 @endicode
 
-@subsubsection autotoc_md34 Code Formatter
+@subsubsection autotoc_md35 Code Formatter
 
 &lt;a href="<a href="https://clang.llvm.org/docs/ClangFormat.html">https://clang.llvm.org/docs/ClangFormat.html</a>" target="_blank" &gt;**&lt;tt&gt;clang-format&lt;/tt&gt;**&lt;/a&gt; is used for code formatting.
 
@@ -306,7 +342,7 @@ clang-tidy --fix --quiet -p build subfolder/file_to_check.c --
   - Linux (Debian): &lt;tt&gt;sudo apt-get install clang-format-10 clang-tidy-10&lt;/tt&gt;
 - Running (all platforms): &lt;tt&gt;clang-format -i -style="file" my_file.c&lt;/tt&gt;
 
-@subsubsection autotoc_md35 GitHub Actions
+@subsubsection autotoc_md36 GitHub Actions
 
 - Enable GitHub Actions on your fork of the repository.
 After enabling, it will execute &lt;tt&gt;clang-tidy&lt;/tt&gt; and &lt;tt&gt;clang-format&lt;/tt&gt; after every push (not a commit).
