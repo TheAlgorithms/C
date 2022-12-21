@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." coords="5,5,56,31"/>
-<area shape="rect" id="node2" href="$d0/d51/celsius__to__fahrenheit_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." coords="104,5,148,31"/>
-<area shape="rect" id="node3" href="$d0/d51/celsius__to__fahrenheit_8c.html#aff11c1dfc058bd545a6af4312dfb45c5" title="for assert" coords="196,5,341,31"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$d0/d51/celsius__to__fahrenheit_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="104,5,148,31"/>
+<area shape="rect" id="node3" href="$d0/d51/celsius__to__fahrenheit_8c.html#aff11c1dfc058bd545a6af4312dfb45c5" title="for assert" alt="" coords="196,5,341,31"/>
 </map>

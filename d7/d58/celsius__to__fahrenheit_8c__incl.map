@@ -1,5 +1,5 @@
 <map id="conversions/celsius_to_fahrenheit.c" name="conversions/celsius_to_fahrenheit.c">
-<area shape="rect" id="node1" title="Conversion of temperature in degrees from Celsius to Fahrenheit." coords="15,5,153,45"/>
-<area shape="rect" id="node2" title=" " coords="5,93,75,119"/>
-<area shape="rect" id="node3" title=" " coords="99,93,160,119"/>
+<area shape="rect" id="node1" title="Conversion of temperature in degrees from Celsius to Fahrenheit." alt="" coords="15,5,153,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,75,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,93,160,119"/>
 </map>

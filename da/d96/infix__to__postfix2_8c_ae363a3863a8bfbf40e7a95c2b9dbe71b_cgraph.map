@@ -1,8 +1,8 @@
 <map id="convert" name="convert">
-<area shape="rect" id="node1" title="Function to convert infix expression to postfix expression." coords="5,104,71,129"/>
-<area shape="rect" id="node2" href="$da/d96/infix__to__postfix2_8c.html#a653c98c68c558505b75b04c44b7c838e" title="Function to check whether the stack is empty or not." coords="119,5,189,31"/>
-<area shape="rect" id="node3" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." coords="133,55,175,80"/>
-<area shape="rect" id="node4" href="$da/d96/infix__to__postfix2_8c.html#a02d1bf0ff997efc46ba6fd0ec7952952" title="Function to check priority of operators." coords="123,104,185,129"/>
-<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" coords="129,177,179,203"/>
-<area shape="rect" id="node6" href="$da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf" title="Function to get top of the stack." coords="133,227,175,252"/>
+<area shape="rect" id="node1" title="Function to convert infix expression to postfix expression." alt="" coords="5,104,71,129"/>
+<area shape="rect" id="node2" href="$da/d96/infix__to__postfix2_8c.html#a653c98c68c558505b75b04c44b7c838e" title="Function to check whether the stack is empty or not." alt="" coords="119,5,189,31"/>
+<area shape="rect" id="node3" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." alt="" coords="133,55,175,80"/>
+<area shape="rect" id="node4" href="$da/d96/infix__to__postfix2_8c.html#a02d1bf0ff997efc46ba6fd0ec7952952" title="Function to check priority of operators." alt="" coords="123,104,185,129"/>
+<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="129,177,179,203"/>
+<area shape="rect" id="node6" href="$da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf" title="Function to get top of the stack." alt="" coords="133,227,175,252"/>
 </map>

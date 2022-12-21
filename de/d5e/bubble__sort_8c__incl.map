@@ -1,8 +1,8 @@
 <map id="sorting/bubble_sort.c" name="sorting/bubble_sort.c">
-<area shape="rect" id="node1" title="Bubble sort algorithm implementation" coords="157,5,299,31"/>
-<area shape="rect" id="node2" title=" " coords="5,79,75,104"/>
-<area shape="rect" id="node3" title=" " coords="99,79,173,104"/>
-<area shape="rect" id="node4" title=" " coords="197,79,259,104"/>
-<area shape="rect" id="node5" title=" " coords="283,79,347,104"/>
-<area shape="rect" id="node6" title=" " coords="371,79,429,104"/>
+<area shape="rect" id="node1" title="Bubble sort algorithm implementation" alt="" coords="157,5,299,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,75,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,79,173,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="197,79,259,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="283,79,347,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="371,79,429,104"/>
 </map>
