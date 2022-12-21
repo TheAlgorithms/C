@@ -1,4 +1,5 @@
-int comparer(const int* i, const int* j)
+int diff(const int* i, const int* j)
+
 {
     return *i - *j;
 }
