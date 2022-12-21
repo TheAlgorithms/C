@@ -86,6 +86,7 @@
     * [Min Heap](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/heap/min_heap.c)
   * Linked List
     * [Ascending Priority Queue](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/ascending_priority_queue.c)
+    * [Circular Doubly Linked List](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/circular_doubly_linked_list.c)
     * [Circular Linked List](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/circular_linked_list.c)
     * [Doubly Linked List](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/doubly_linked_list.c)
     * [Merge Linked Lists](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/merge_linked_lists.c)
@@ -212,6 +213,7 @@
     * [2130](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2130.c)
     * [215](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/215.c)
     * [217](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/217.c)
+    * [2222](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2222.c)
     * [223](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/223.c)
     * [226](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/226.c)
     * [2270](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2270.c)
