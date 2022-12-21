@@ -26,6 +26,7 @@
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
 | 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                           | [C](./src/32.c)   | Hard       |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
+| 37   | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                                   | [C](./src/37.c)   | Hard       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
