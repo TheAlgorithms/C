@@ -26,6 +26,7 @@
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
 | 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                           | [C](./src/32.c)   | Hard       |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
+| 37   | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                                   | [C](./src/37.c)   | Hard       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
@@ -65,8 +66,10 @@
 | 230  | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)                                   | [C](./src/230.c)  | Medium     |
 | 231  | [Power of Two](https://leetcode.com/problems/power-of-two/)                                                                     | [C](./src/231.c)  | Easy       |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                 | [C](./src/234.c)  | Easy       |
+| 236  | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)               | [C](./src/236.c)  | Medium     |
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                   | [C](./src/242.c)  | Easy       |
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                 | [C](./src/268.c)  | Easy       |
+| 274  | [H-Index](https://leetcode.com/problems/h-index/description/)                                                                   | [C](./src/274.c)  | Medium     |
 | 278  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)                                                           | [C](./src/278.c)  | Easy       |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                       | [C](./src/283.c)  | Easy       |
 | 287  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)                                           | [C](./src/287.c)  | Medium     |
