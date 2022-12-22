@@ -6,7 +6,7 @@ int compXClose(const int *i, const int *j, const int* x)
     return abs(*i - *x) - abs(*j - *x);
 }
 
-int stdcomp (const void * a, const void * b) //what is it returning?
+int stdcomp(const void * a, const void * b) //what is it returning?
 {
    return ( *(int*)a - *(int*)b ); //What is a and b?
 }
