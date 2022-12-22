@@ -103,13 +103,13 @@
 | 977  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                                           | [C](./src/977.c)  | Easy       |
 | 985  | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                           | [C](./src/985.c)  | Medium     |
 | 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/)                                   | [C](./src/1009.c) | Easy       |
-| 1026 | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/)                       | [C](./src/1026.c) | Medium       |
+| 1026 | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/)                          | [C](./src/1026.c) | Medium     |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)                                                               | [C](./src/1089.c) | Easy       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/)                                         | [C](./src/1184.c) | Easy       |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
 | 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)                                                   | [C](./src/1695.c) | Medium     |
-| 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)                                     | [C](./src/1769.c) | Medium     |
+| 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)          | [C](./src/1769.c) | Medium     |
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
 | 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/)           | [C](./src/1653.c) | Medium     |
 | 1704 | [Determine if String Halves Are Alike](Determine if String Halves Are Alike)                                                    | [C](./src/1704.c) | Easy       |
