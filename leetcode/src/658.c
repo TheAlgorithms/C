@@ -1,7 +1,7 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-int compXClose (const int *i, const int *j, const int* x)
+int compXClose(const int *i, const int *j, const int* x)
 {
     return abs(*i - *x) - abs(*j - *x);
 }
