@@ -227,6 +227,7 @@
     * [26](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/26.c)
     * [268](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/268.c)
     * [27](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/27.c)
+    * [274](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/274.c)
     * [278](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/278.c)
     * [28](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/28.c)
     * [283](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/283.c)
