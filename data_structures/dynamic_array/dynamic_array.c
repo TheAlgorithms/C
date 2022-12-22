@@ -18,7 +18,6 @@ void *add(dynamic_array_t *da, const void *value)
     {
         void **newItems =
             realloc(da->items, (da->capacity <<= 1) * sizeof(void **));
-        free(da->items);
 
         da->items = newItems;
     }
