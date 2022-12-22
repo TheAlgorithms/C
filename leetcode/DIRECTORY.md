@@ -69,6 +69,7 @@
 | 236  | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)               | [C](./src/236.c)  | Medium     |
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                   | [C](./src/242.c)  | Easy       |
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                 | [C](./src/268.c)  | Easy       |
+| 274  | [H-Index](https://leetcode.com/problems/h-index/description/)                                                                   | [C](./src/274.c)  | Medium     |
 | 278  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)                                                           | [C](./src/278.c)  | Easy       |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                       | [C](./src/283.c)  | Easy       |
 | 287  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)                                           | [C](./src/287.c)  | Medium     |
