@@ -210,7 +210,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   75</span>    <a class="code hl_function" href="../../d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d">test</a>(); <span class="comment">// execute the tests</span></div>
 <div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   77</span>}</div>
-<div class="ttc" id="agroup__misc_html_gaa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Test implementations.</div><div class="ttdef"><b>Definition:</b> prime_seive.c:56</div></div>
+<div class="ttc" id="agroup__misc_html_gaa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../d1/ded/group__misc.html#gaa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Test implementations.</div><div class="ttdef"><b>Definition:</b> prime_sieve.c:56</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -245,11 +245,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i=3;i&lt;=<a class="code hl_variable" href="../../db/dd5/prime__seive_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;i+=2) { p[i]=1; }</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i=3;i&lt;=<a class="code hl_variable" href="../../db/dd5/prime__seive_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;i+=2)</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i=3;i&lt;=<a class="code hl_variable" href="../../dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;i+=2) { p[i]=1; }</div>
+<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i=3;i&lt;=<a class="code hl_variable" href="../../dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;i+=2)</div>
 <div class="line"><span class="lineno">   25</span>    {</div>
 <div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span>(p[i]==1) {</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> j=i*i;j&lt;=<a class="code hl_variable" href="../../db/dd5/prime__seive_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;j+=i) {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> j=i*i;j&lt;=<a class="code hl_variable" href="../../dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a>;j+=i) {</div>
 <div class="line"><span class="lineno">   28</span>            p[j]=0;</div>
 <div class="line"><span class="lineno">   29</span>            }</div>
 <div class="line"><span class="lineno">   30</span>        }</div>
@@ -257,7 +257,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   32</span>    p[2]=1;</div>
 <div class="line"><span class="lineno">   33</span>    p[0]=p[1]=0;    </div>
 <div class="line"><span class="lineno">   34</span>}</div>
-<div class="ttc" id="aprime__seive_8c_html_ac1215a37edfa07d37edf6ec65f2235c7"><div class="ttname"><a href="../../db/dd5/prime__seive_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a></div><div class="ttdeci">const unsigned long long MAX_SIZE</div><div class="ttdoc">for assert for standard input output for general purpose standard library</div><div class="ttdef"><b>Definition:</b> prime_seive.c:11</div></div>
+<div class="ttc" id="aprime__sieve_8c_html_ac1215a37edfa07d37edf6ec65f2235c7"><div class="ttname"><a href="../../dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7">MAX_SIZE</a></div><div class="ttdeci">const unsigned long long MAX_SIZE</div><div class="ttdoc">for assert for standard input output for general purpose standard library</div><div class="ttdef"><b>Definition:</b> prime_sieve.c:11</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,7 +296,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   63</span>    assert(count(arr,size)==4);</div>
 <div class="line"><span class="lineno">   64</span>    printf(<span class="stringliteral">&quot;Passed\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   65</span>}</div>
-<div class="ttc" id="agroup__misc_html_gac1a7a8e00eeb590511465c28fae16e54"><div class="ttname"><a href="../../d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54">prime</a></div><div class="ttdeci">void prime(int *p)</div><div class="ttdoc">Prime Sieve works in O(nlogn) time.</div><div class="ttdef"><b>Definition:</b> prime_seive.c:21</div></div>
+<div class="ttc" id="agroup__misc_html_gac1a7a8e00eeb590511465c28fae16e54"><div class="ttname"><a href="../../d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54">prime</a></div><div class="ttdeci">void prime(int *p)</div><div class="ttdoc">Prime Sieve works in O(nlogn) time.</div><div class="ttdef"><b>Definition:</b> prime_sieve.c:21</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

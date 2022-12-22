@@ -37,7 +37,7 @@ var searchData=
   ['convert_34',['convert',['../db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1',1,'convert(char infix[], char postfix[]):&#160;infix_to_postfix.c'],['../da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b',1,'convert(char inf[]):&#160;infix_to_postfix2.c'],['../d0/df3/6_8c.html#afdf3bfe2dc8aadac13c7e6d051d3bd5d',1,'convert(char *in, uint16_t numRows):&#160;6.c']]],
   ['converted_5flen_35',['converted_len',['../d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711',1,'decimal_to_any_base.c']]],
   ['convertion_36',['convertion',['../d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d',1,'decimal_to_any_base.c']]],
-  ['count_37',['count',['../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a',1,'count():&#160;prime_seive.c'],['../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b',1,'cluster::count()']]],
+  ['count_37',['count',['../d1/ded/group__misc.html#ga6f8e8c9d25b5891d57e588d80d75028a',1,'count():&#160;prime_sieve.c'],['../d1/d99/structcluster.html#aaacf0562ee2d9e8866c66ddaa6527c2b',1,'cluster::count()']]],
   ['count_5fdivisors_38',['count_divisors',['../d7/d1f/problem__12_2sol1_8c.html#aa6ce6271f6156e219f9b290717f5a222',1,'sol1.c']]],
   ['crc32_39',['crc32',['../d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567',1,'hash_crc32.c']]],
   ['create_40',['create',['../dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f',1,'doubly_linked_list.c']]],

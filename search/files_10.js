@@ -5,5 +5,5 @@ var searchData=
   ['postfix_5fevaluation_2ec_2',['postfix_evaluation.c',['../df/d43/postfix__evaluation_8c.html',1,'']]],
   ['prim_2ec_3',['prim.c',['../d9/dcc/prim_8c.html',1,'']]],
   ['prime_2ec_4',['prime.c',['../da/d93/prime_8c.html',1,'']]],
-  ['prime_5fseive_2ec_5',['prime_seive.c',['../db/dd5/prime__seive_8c.html',1,'']]]
+  ['prime_5fsieve_2ec_5',['prime_sieve.c',['../dd/dd3/prime__sieve_8c.html',1,'']]]
 ];

@@ -13,6 +13,7 @@ var files_dup =
     [ "hash", "dir_72aaf47615111200018c039a56ef48be.html", "dir_72aaf47615111200018c039a56ef48be" ],
     [ "leetcode", "dir_03902f230b9e9b7c999f936617a23997.html", "dir_03902f230b9e9b7c999f936617a23997" ],
     [ "machine_learning", "dir_3343723ae086de42ee4ca9774da3a13f.html", "dir_3343723ae086de42ee4ca9774da3a13f" ],
+    [ "math", "dir_296d53ceaeaa7e099814a6def439fe8a.html", "dir_296d53ceaeaa7e099814a6def439fe8a" ],
     [ "misc", "dir_a52f4d3d586a58b02f3a4ddf0a992157.html", "dir_a52f4d3d586a58b02f3a4ddf0a992157" ],
     [ "numerical_methods", "dir_9c6faab82c22511b50177aa2e38e2780.html", "dir_9c6faab82c22511b50177aa2e38e2780" ],
     [ "process_scheduling_algorithms", "dir_63185e90e67935ef3eb5903a044c89e2.html", "dir_63185e90e67935ef3eb5903a044c89e2" ],

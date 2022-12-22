@@ -1,5 +1,5 @@
-<map id="misc/collatz.c" name="misc/collatz.c">
-<area shape="rect" id="node1" title="Implementation of Collatz&#39; conjecture" alt="" coords="27,5,130,31"/>
+<map id="math/collatz.c" name="math/collatz.c">
+<area shape="rect" id="node1" title="Implementation of Collatz&#39; conjecture" alt="" coords="27,5,131,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="91,79,155,104"/>
 </map>

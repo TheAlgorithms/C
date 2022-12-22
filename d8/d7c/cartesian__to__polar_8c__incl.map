@@ -1,4 +1,4 @@
-<map id="misc/cartesian_to_polar.c" name="misc/cartesian_to_polar.c">
+<map id="math/cartesian_to_polar.c" name="math/cartesian_to_polar.c">
 <area shape="rect" id="node1" title="Function to convert a Cartesian co&#45;ordinate to polar form." alt="" coords="88,5,259,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,75,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="99,79,162,104"/>

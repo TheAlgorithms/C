@@ -8,7 +8,7 @@ var searchData=
   ['power_5fof_5ften_5',['power_of_ten',['../d9/deb/min__printf_8h.html#a8421f89b76edcf21292c5100bfca586b',1,'min_printf.h']]],
   ['preorder_5fdisplay_6',['preorder_display',['../df/d3c/threaded__binary__trees_8c.html#a8169ba0dfd5b8183672e444d1434bf9c',1,'threaded_binary_trees.c']]],
   ['prim_7',['prim',['../d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853',1,'prim.c']]],
-  ['prime_8',['prime',['../d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54',1,'prime_seive.c']]],
+  ['prime_8',['prime',['../d1/ded/group__misc.html#gac1a7a8e00eeb590511465c28fae16e54',1,'prime_sieve.c']]],
   ['print_9',['print',['../dd/d29/doubly__linked__list_8c.html#a1fadec32fc369a8dcfbcd766e166efa0',1,'print(List *list):&#160;doubly_linked_list.c'],['../df/dfa/vector_8c.html#abdb067a98f90bcd9b0aa4ceb364d607f',1,'print(Vector *vec):&#160;vector.c'],['../dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab',1,'print(CantorSet *head):&#160;cantor_set.c'],['../d5/df4/group__sudoku.html#ga702ff4f95dde780c7d04fcdd1021b6c1',1,'print(const struct sudoku *a):&#160;sudoku_solver.c']]],
   ['print_5fdouble_5fvalue_10',['print_double_value',['../d9/deb/min__printf_8h.html#a4d63203d920bebd6a96f5f4aeccb21e5',1,'min_printf.h']]],
   ['print_5fint_5fvalue_11',['print_int_value',['../d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824',1,'min_printf.h']]],
