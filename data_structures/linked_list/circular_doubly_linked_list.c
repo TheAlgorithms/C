@@ -93,7 +93,7 @@ void insert_at_last(struct node **start, int data)
  * @param   start   starting pointer of list
  * @returns void
  */
-void delete_fist_node(struct node **start)
+void delete_first_node(struct node **start)
 {
     if (*start == NULL)
     {
