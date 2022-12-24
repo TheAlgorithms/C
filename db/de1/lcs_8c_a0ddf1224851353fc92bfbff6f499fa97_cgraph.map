@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,56,56"/>
+<area shape="rect" id="node2" href="$db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="104,31,148,56"/>
+<area shape="rect" id="node3" href="$db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0" title="@breif Builds the LCS according to B using a traceback approach" alt="" coords="196,5,263,31"/>
+<area shape="rect" id="node4" href="$db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6" title="@breif Computes LCS between s1 and s2 using a dynamic&#45;programming approach" alt="" coords="201,55,257,80"/>
+</map>

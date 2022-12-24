@@ -5,6 +5,7 @@ var files_dup =
     [ "conversions", "dir_9babc524d57e25f3d9f4179cabc3599e.html", "dir_9babc524d57e25f3d9f4179cabc3599e" ],
     [ "data_structures", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc.html", "dir_2e746e9d06bf2d8ff842208bcc6ebcfc" ],
     [ "developer_tools", "dir_abf1a26ece768c4076e73592705ae077.html", "dir_abf1a26ece768c4076e73592705ae077" ],
+    [ "dynamic_programming", "dir_8a20dd5bfd5341a725342bf72b6b686f.html", "dir_8a20dd5bfd5341a725342bf72b6b686f" ],
     [ "exercism", "dir_48bf5503321d91c557399989fed5dabd.html", "dir_48bf5503321d91c557399989fed5dabd" ],
     [ "games", "dir_4b6f782e158b0b98da980a0e11a23a15.html", "dir_4b6f782e158b0b98da980a0e11a23a15" ],
     [ "geometry", "dir_e3380d2178455503f266746fb14246a5.html", "dir_e3380d2178455503f266746fb14246a5" ],
