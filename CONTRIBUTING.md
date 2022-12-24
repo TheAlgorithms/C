@@ -139,7 +139,7 @@ my_new_c_struct.c    is correct format
 #### Directory guidelines
 
 - We recommend adding files to existing directories as much as possible.
-- Use lowercase words with ``"_"`` as separator ( no spaces or ```"-"``` allowed )
+- Use lowercase words with ``"_"`` as a separator ( no spaces or ```"-"``` allowed )
 - For instance
 
 ```markdown
@@ -150,9 +150,45 @@ some_new_fancy_category         is correct
 - Filepaths will be used to dynamically create a directory of our algorithms.
 - Filepath validation will run on GitHub Actions to ensure compliance.
 
+##### Integrating CMake in a new directory
+
+In case a new directory is 100% required, `CMakeLists.txt` file in the root directory needs to be updated, and a new `CMakeLists.txt` file needs to be created within the new directory.
+
+An example of how your new `CMakeLists.txt` file should look like. Note that if there are any extra libraries/setup required, you must include that in this file as well.
+
+```cmake
+# If necessary, use the RELATIVE flag, otherwise each source file may be listed
+# with full pathname. The RELATIVE flag makes it easier to extract an executable's name
+# automatically.
+
+file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.c )
+foreach( testsourcefile ${APP_SOURCES} )
+    string( REPLACE ".c" "" testname ${testsourcefile} ) # File type. Example: `.c`
+    add_executable( ${testname} ${testsourcefile} )
+
+    if(OpenMP_C_FOUND)
+        target_link_libraries(${testname} OpenMP::OpenMP_C)
+    endif()
+    if(MATH_LIBRARY)
+        target_link_libraries(${testname} ${MATH_LIBRARY})
+    endif()
+    install(TARGETS ${testname} DESTINATION "bin/<foldername>") # Folder name. Do NOT include `<>`
+
+endforeach( testsourcefile ${APP_SOURCES} )
+```
+
+The `CMakeLists.txt` file in the root directory should be updated to include the new directory.\
+Include your new directory after the last subdirectory. Example:
+
+```cmake
+...
+add_subdirectory(numerical_methods)
+add_subdirectory(<foldername>)
+```
+
 #### Commit Guidelines
 
-- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilt across multiple commits. Try to modify just one or two files in the same directory.  Pull requests that span multiple directories are often rejected.
+- It is recommended to keep your changes grouped logically within individual commits. Maintainers find it easier to understand changes that are logically spilled across multiple commits. Try to modify just one or two files in the same directory. Pull requests that span multiple directories are often rejected.
 
 ```bash
 git add file_xyz.c
