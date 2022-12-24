@@ -21,4 +21,4 @@ jobs:
         run: |
           git add leetcode/DIRECTORY.md
           git commit -am "updating DIRECTORY.md" ||  true
-          git push --force origin HEAD:$GITHUB_REF || true
+          git push origin HEAD:$GITHUB_REF || true
