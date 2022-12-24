@@ -17,7 +17,6 @@ jobs:
           scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
           git config --global user.name github-actions[bot]
           git config --global user.email 'github-actions@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - name: Update LeetCode's directory
         run: |
           git add leetcode/DIRECTORY.md
