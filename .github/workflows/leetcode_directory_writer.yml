@@ -14,7 +14,7 @@ jobs:
           python-version: 3.x
       - name: Write leectode DIRECTORY.md
         run: |
-          scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
+          python3 scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
           git config --global user.name github-actions[bot]
           git config --global user.email 'github-actions@users.noreply.github.com'
       - name: Update LeetCode's directory
