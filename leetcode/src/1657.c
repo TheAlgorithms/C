@@ -22,10 +22,12 @@ bool closeStrings(char * word1, char * word2){
     int* word1CharsCounter = charsCount(word1);
     int* word2CharsCounter = charsCount(word2);
 
+    // The lengths of both string should be equal
     if (strlen(word1) != strlen(word2)){
         return false;
     }
 
+    // The char should appear in both strings
     for (int i = 0; i < charLength; i++){
         if ((word1CharsCounter[i] != 0 && word2CharsCounter[i] == 0) ||
            (word1CharsCounter[i] == 0 && word2CharsCounter[i] != 0)){
@@ -36,6 +38,7 @@ bool closeStrings(char * word1, char * word2){
     qsort(word1CharsCounter, charLength, sizeof (int), (int(*) (const void *, const void *)) diff);
     qsort(word2CharsCounter, charLength, sizeof (int), (int(*) (const void *, const void *)) diff);
 
+    // appearing of chars should be the same in both strings.
     for (int i = 0; i < charLength; i++){
         if (word1CharsCounter[i] != word2CharsCounter[i]){
                return false;
