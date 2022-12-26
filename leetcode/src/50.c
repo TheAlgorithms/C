@@ -23,7 +23,7 @@ double myPow(double x, int n){
     }
 
     // n is the minimum int -2147483648, couldn't be converted in -n because maximum is 2147483647.
-    // this case we use (1 / pow(x, -(n + 1))) * n
+    // this case we use 1 / (pow(x, -(n + 1)) * n)
     if (n == -2147483648){
         return 1 / (powPositive(x, -(n + 1)) * x);
     }
