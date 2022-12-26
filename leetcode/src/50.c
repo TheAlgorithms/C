@@ -30,7 +30,7 @@ double myPow(double x, int n){
 
     // 1 / pow(x, -(n + 1))
     if (n < 0){
-        return ((double) 1) / powPositive(x, -n);
+        return 1 / powPositive(x, -n);
     }
 
     return powPositive(x, n);
