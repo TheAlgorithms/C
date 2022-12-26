@@ -29,6 +29,7 @@
 | 37   | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                                   | [C](./src/37.c)   | Hard       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
+| 50   | [Pow(x, n)](https://leetcode.com/problems/powx-n/description/)                                                                  | [C](./src/50.c)   | Medium     |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
 | 62   | [Unique Paths](https://leetcode.com/problems/unique-paths/description/)                                                         | [C](./src/62.c)   | Medium     |
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                             | [C](./src/66.c)   | Easy       |
