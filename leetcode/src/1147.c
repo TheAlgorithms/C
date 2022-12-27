@@ -28,7 +28,7 @@ int longestDecompositionDp(char* text, int textLen, int index, int* dp){
     
     for (int i = 0; i < (textLen - 2 * index) / 2; i++){
         if (ch == text[textLen - 1 - index - i] 
-            && substringsAreEqual(text, index, textLen - 1 - index - i, i + 1)){
+            && equalSubstrings(text, index, textLen - 1 - index - i, i + 1)){
                 return max(result, 2 + longestDecompositionDpCached(text, textLen, index + i + 1, dp));
         }
     }
