@@ -1,6 +1,6 @@
 #define max(a,b) (((a)>(b))?(a):(b))
 
-int compare (const int *i, const int *j)
+int compare (const int* i, const int* j)
 {
     return *i - *j;
 }
@@ -9,7 +9,7 @@ int compare (const int *i, const int *j)
 // Runtime: O(n*log(n))
 // Space: O(n)
 int maxFrequency(int* nums, int numsSize, int k){
-    qsort(nums, numsSize, sizeof (int), (int(*) (const void *, const void *)) compare);
+    qsort(nums, numsSize, sizeof (int), (int(*) (const void*, const void*)) compare);
     long* prefixSum = malloc(numsSize * sizeof(long));
     
     prefixSum[0] = nums[0];
