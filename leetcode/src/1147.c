@@ -1,6 +1,6 @@
 #define max(a,b) (((a)>(b))?(a):(b))
 
-bool substringsAreEqual(char* text, int firstIndex, int secondIndex, int length){
+bool equalSubstrings(char* text, int firstIndex, int secondIndex, int length){
     for (int i = 0; i < length; i++){
         if (text[firstIndex + i] != text[secondIndex + i]){
             return false;
