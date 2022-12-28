@@ -23,10 +23,9 @@ jobs:
           git config --global user.name github-actions[bot]
           git config --global user.email 'github-actions@users.noreply.github.com'
       - name: Filename Formatter
-        run: |
-          wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/filename_formatter.sh
-          chmod +x filename_formatter.sh
-          ./filename_formatter.sh . .c,.h
+        uses: TheAlgorithms/scripts/formatter@main
+        with:
+          filetypes: .c,.h
       - name: Update DIRECTORY.md
         run: |
           wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/build_directory_md.py
