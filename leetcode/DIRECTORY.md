@@ -119,4 +119,5 @@
 | 2222 | [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings/)                         | [C](./src/2222.c) | Medium     |
 | 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                         | [C](./src/2256.c) | Medium     |
 | 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)                                   | [C](./src/2270.c) | Medium     |
+| 2279 | [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/)             | [C](./src/2279.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
