@@ -123,6 +123,8 @@ static void test()
     insert(3, 11);
     deletion(1);
     assert(start->info != 39);
+
+    printf("Self-tests successfully passed!\n");
 }
 //////////////////////////////////////////////////////////////////
 int main()
@@ -135,7 +137,6 @@ int main()
     if (c == 1)
     {
         test();
-        printf("Self test successfully passed!");
     }
     else if (c == 2)
     {
