@@ -121,6 +121,9 @@
   * [Test Malloc Dbg](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/test_malloc_dbg.c)
   * [Test Min Printf](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/test_min_printf.c)
 
+## Dynamic Programming
+  * [Lcs](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/lcs.c)
+
 ## Exercism
   * Acronym
     * [Acronym](https://github.com/TheAlgorithms/C/blob/HEAD/exercism/acronym/acronym.c)
@@ -214,6 +217,7 @@
     * [217](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/217.c)
     * [2222](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2222.c)
     * [223](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/223.c)
+    * [2256](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2256.c)
     * [226](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/226.c)
     * [2270](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2270.c)
     * [230](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/230.c)
@@ -268,6 +272,7 @@
     * [771](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/771.c)
     * [79](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/79.c)
     * [8](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/8.c)
+    * [807](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/807.c)
     * [82](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/82.c)
     * [83](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/83.c)
     * [852](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/852.c)
