@@ -1,7 +1,10 @@
 # The objective of this GitHub Action is to update the leetcode DIRECTORY.md file (if needed)
 # when doing a git push
 name: leetcode_directory_writer
-on: [push]
+on:
+  push:
+    paths:
+      - "leetcode/src/**.c"
 jobs:
   build:
     runs-on: ubuntu-latest
