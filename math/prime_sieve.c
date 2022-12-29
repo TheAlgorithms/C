@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief [Prime Seive](https://leetcode.com/problems/count-primes/)
+ * @brief [Prime Sieve](https://leetcode.com/problems/count-primes/)
  * algorithm implementation.
  * @author [Divyansh Kushwaha](https://github.com/webdesignbydivyansh)
  */
