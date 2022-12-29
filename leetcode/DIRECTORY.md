@@ -115,6 +115,7 @@
 | 1704 | [Determine if String Halves Are Alike](Determine if String Halves Are Alike)                                                    | [C](./src/1704.c) | Easy       |
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
+| 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)               | [C](./src/2095.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
 | 2222 | [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings/)                         | [C](./src/2222.c) | Medium     |
 | 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                         | [C](./src/2256.c) | Medium     |
