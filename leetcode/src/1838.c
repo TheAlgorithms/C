@@ -1,6 +1,6 @@
 #define max(a,b) (((a)>(b))?(a):(b))
 
-int compare (const int* i, const int* j)
+int compare(const int* i, const int* j)
 {
     return *i - *j;
 }
