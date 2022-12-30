@@ -8,7 +8,7 @@ int compare(const int* i, const int* j)
 // Space: O(n)
 int maximumBags(int* capacity, int capacitySize, int* rocks, int rocksSize, int additionalRocks) {
     int* capacityLeft = malloc(capacitySize * sizeof(int));
-    for (int i = 0; i < capacitySize; i++){
+    for (int i = 0; i < capacitySize; i++) {
         capacityLeft[i] = capacity[i] - rocks[i];
     }
 
