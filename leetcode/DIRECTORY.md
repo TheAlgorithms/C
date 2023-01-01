@@ -26,6 +26,7 @@
 | 29   | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)                                                       | [C](./src/29.c)   | Medium     |
 | 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                           | [C](./src/32.c)   | Hard       |
 | 35   | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                 | [C](./src/35.c)   | Easy       |
+| 37   | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                                   | [C](./src/37.c)   | Hard       |
 | 38   | [Count and Say](https://leetcode.com/problems/count-and-say/)                                                                   | [C](./src/38.c)   | Easy       |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                       | [C](./src/42.c)   | Hard       |
 | 53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                                             | [C](./src/53.c)   | Easy       |
@@ -66,8 +67,10 @@
 | 230  | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)                                   | [C](./src/230.c)  | Medium     |
 | 231  | [Power of Two](https://leetcode.com/problems/power-of-two/)                                                                     | [C](./src/231.c)  | Easy       |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                 | [C](./src/234.c)  | Easy       |
+| 236  | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)               | [C](./src/236.c)  | Medium     |
 | 242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                   | [C](./src/242.c)  | Easy       |
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                 | [C](./src/268.c)  | Easy       |
+| 274  | [H-Index](https://leetcode.com/problems/h-index/description/)                                                                   | [C](./src/274.c)  | Medium     |
 | 278  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)                                                           | [C](./src/278.c)  | Easy       |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                       | [C](./src/283.c)  | Easy       |
 | 287  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)                                           | [C](./src/287.c)  | Medium     |
@@ -91,6 +94,7 @@
 | 704  | [Binary Search](https://leetcode.com/problems/binary-search/)                                                                   | [C](./src/704.c)  | Easy       |
 | 709  | [To Lower Case](https://leetcode.com/problems/to-lower-case/)                                                                   | [C](./src/709.c)  | Easy       |
 | 771  | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)                                                           | [C](./src/771.c)  | Easy       |
+| 807  | [Max Increase to Keep City Skyline](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/)               | [C](./src/807.c)  | Medium     |
 | 852  | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)                                 | [C](./src/852.c)  | Easy       |
 | 876  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                           | [C](./src/876.c)  | Easy       |
 | 901  | [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                           | [C](./src/901.c)  | Medium     |
@@ -113,5 +117,7 @@
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)                     | [C](./src/1752.c) | Easy       |
 | 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)                           | [C](./src/2024.c) | Medium     |
 | 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)                           | [C](./src/2130.c) | Medium     |
+| 2222 | [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings/)                         | [C](./src/2222.c) | Medium     |
+| 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                         | [C](./src/2256.c) | Medium     |
 | 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)                                   | [C](./src/2270.c) | Medium     |
 | 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid/)                                       | [C](./src/2304.c) | Medium     |
