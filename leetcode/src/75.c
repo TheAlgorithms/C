@@ -1,4 +1,3 @@
-#include <stdio.h>
 void swap(int *x, int *y){
     if (x==y)
         return;
