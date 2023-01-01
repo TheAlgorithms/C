@@ -5,6 +5,7 @@ void swap(int *x, int *y){
     *y= *x - *y;
     *x= *x - *y;
 }
+
 void sortColors(int* arr, int n){
     int start=0, mid=0, end=n-1;
     while(mid<=end){
