@@ -214,7 +214,7 @@ int main()
             Display(start);
             break;
         case 4:
-            delete_fist_node(&start);
+            delete_first_node(&start);
             break;
         case 5:
             delete_last_node(&start);
