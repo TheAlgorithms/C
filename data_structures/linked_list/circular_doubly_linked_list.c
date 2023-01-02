@@ -217,7 +217,7 @@ int main()
             flag = 0;
             break;
         default:
-            printf("\nIncorrect choice Re-Enter\n\n");
+            printf("\nIncorrect choice. Re-Enter values.\n\n");
         }
     }
     return 0;
