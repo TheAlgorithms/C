@@ -195,7 +195,7 @@ int main()
         switch (ch)
         {
         case 1:
-            printf("Enter the data ");
+            printf("Enter the data: ");
             scanf("%d", &value);
             insert_at_start(&start, value);
             break;
