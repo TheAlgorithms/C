@@ -190,7 +190,7 @@ int main()
     {
         int ch;
         printf("\nWhat do you want to perform?\n");
-        printf("ENTER YOUR CHOISE\n1. Insert At Start\n2. Insert At End\n3. DISPLAY LINKED LIST\n4. Delete First node\n5. Delete Last Node\n6. Exit\n");
+        printf("ENTER YOUR CHOICE\n1. Insert At Start\n2. Insert At End\n3. DISPLAY LINKED LIST\n4. Delete First node\n5. Delete Last Node\n6. Exit\n");
         scanf("%d", &ch);
         switch (ch)
         {
