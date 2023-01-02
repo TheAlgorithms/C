@@ -7,12 +7,6 @@
  In this implementation, the menu driven code is written along with functions to insert at start, insrt at last, delete first node, delete last node and display list functions are coded.
  
  * @author [Sahil Kandhare](https://github.com/SahilK-027)
- * Created on 12/10/2022
- *
- *
- * Cicular doubly linked list in C
- *
- * Compiled in Visual Studio Code
  *
  */
 
