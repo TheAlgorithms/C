@@ -200,7 +200,7 @@ int main()
             insert_at_start(&start, value);
             break;
         case 2:
-            printf("Enter the data ");
+            printf("Enter the data: ");
             scanf("%d", &value);
             insert_at_last(&start, value);
             break;
