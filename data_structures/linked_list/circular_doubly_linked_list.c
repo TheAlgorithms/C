@@ -185,7 +185,8 @@ int main()
     // Creating an empty list
     struct node *start = NULL;
     // Flg to stop loop and value to insert
-    int flag = 1, value;
+    int flag = 1;
+    uint64_t value = 0;
     while (flag == 1)
     {
         int ch;
