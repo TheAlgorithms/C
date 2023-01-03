@@ -19,7 +19,7 @@
 struct node
 {
     struct node *prev, *next;         ///< List pointers
-    int64_t value;                   ///< Data stored on each node
+    uint64_t value = 0;                   ///< Data stored on each node
 };
 
 /**
