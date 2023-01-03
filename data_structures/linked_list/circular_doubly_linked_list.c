@@ -28,7 +28,7 @@ struct node
  * @param   data    the data which we want to insert into list
  * @returns void
  */
-void insert_at_start(struct node **start, int data)
+void insert_at_start(struct node **start, uint64_t data)
 {
     struct node *n1;
     n1 = (struct node *)malloc(sizeof(struct node));
