@@ -283,7 +283,7 @@ void place()
 
     int e = rand() % 9;
 
-    if (e >= 0 && e <= 8)
+    if (e >= 0)
     {
         if (game_table[e] != 'x' && game_table[e] != 'o')
         {
