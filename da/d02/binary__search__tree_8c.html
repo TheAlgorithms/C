@@ -535,21 +535,22 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   54</span>    {</div>
 <div class="line"><span class="lineno">   55</span>        <span class="comment">// If it isn&#39;t null and the input key is greater than the root key,</span></div>
 <div class="line"><span class="lineno">   56</span>        <span class="comment">// insert in the right leaf</span></div>
-<div class="line"><span class="lineno">   57</span>        root-&gt;right = insert(root-&gt;right, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
+<div class="line"><span class="lineno">   57</span>        root-&gt;right = <a class="code hl_function" href="../../da/d02/binary__search__tree_8c.html#a031cc98830742bca57c0da81a0fb779f">insert</a>(root-&gt;right, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
 <div class="line"><span class="lineno">   58</span>    }</div>
 <div class="line"><span class="lineno">   59</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data &lt; root-&gt;<a class="code hl_struct" href="../../df/dea/structdata.html">data</a>)</div>
 <div class="line"><span class="lineno">   60</span>    {  <span class="comment">// If it isn&#39;t null and the input key is lower than the root key, insert</span></div>
 <div class="line"><span class="lineno">   61</span>       <span class="comment">// in the left leaf</span></div>
-<div class="line"><span class="lineno">   62</span>        root-&gt;left = insert(root-&gt;left, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
+<div class="line"><span class="lineno">   62</span>        root-&gt;left = <a class="code hl_function" href="../../da/d02/binary__search__tree_8c.html#a031cc98830742bca57c0da81a0fb779f">insert</a>(root-&gt;left, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
 <div class="line"><span class="lineno">   63</span>    }</div>
 <div class="line"><span class="lineno">   64</span>    <span class="comment">// Returns the modified tree</span></div>
 <div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> root;</div>
 <div class="line"><span class="lineno">   66</span>}</div>
+<div class="ttc" id="abinary__search__tree_8c_html_a031cc98830742bca57c0da81a0fb779f"><div class="ttname"><a href="../../da/d02/binary__search__tree_8c.html#a031cc98830742bca57c0da81a0fb779f">insert</a></div><div class="ttdeci">node * insert(node *root, int data)</div><div class="ttdoc">Insertion procedure, which inserts the input key in a new node in the tree.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:46</div></div>
 <div class="ttc" id="abinary__search__tree_8c_html_adf2169c1008551b20c4a59fcf0c9ab3b"><div class="ttname"><a href="../../da/d02/binary__search__tree_8c.html#adf2169c1008551b20c4a59fcf0c9ab3b">newNode</a></div><div class="ttdeci">node * newNode(int data)</div><div class="ttdoc">The node constructor, which receives the key value input and returns a node pointer.</div><div class="ttdef"><b>Definition:</b> binary_search_tree.c:28</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d02/binary__search__tree_8c_a031cc98830742bca57c0da81a0fb779f_cgraph.svg" width="191" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d02/binary__search__tree_8c_a031cc98830742bca57c0da81a0fb779f_cgraph.svg" width="191" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -593,7 +594,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  268</span>        <span class="keywordflow">case</span> 1:</div>
 <div class="line"><span class="lineno">  269</span>            printf(<span class="stringliteral">&quot;Enter the new node&#39;s value:\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  270</span>            scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;<a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
-<div class="line"><span class="lineno">  271</span>            root = insert(root, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
+<div class="line"><span class="lineno">  271</span>            root = <a class="code hl_function" href="../../da/d02/binary__search__tree_8c.html#a031cc98830742bca57c0da81a0fb779f">insert</a>(root, <a class="code hl_struct" href="../../df/dea/structdata.html">data</a>);</div>
 <div class="line"><span class="lineno">  272</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  273</span> </div>
 <div class="line"><span class="lineno">  274</span>        <span class="keywordflow">case</span> 2:</div>
@@ -635,7 +636,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d02/binary__search__tree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="174" height="280"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d02/binary__search__tree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="299" height="354"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
