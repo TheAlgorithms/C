@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from urllib.request import Request, urlopen
+import requests
 from pathlib import Path
 from os import listdir
 import json
