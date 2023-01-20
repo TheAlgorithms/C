@@ -114,6 +114,7 @@
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                         | [C](./src/1189.c) | Easy       |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                     | [C](./src/1207.c) | Easy       |
 | 1283 | [Find the Smallest Divisor Given a Threshold]https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/)  | [C](./src/1283.c) | Medium       |
+| 1657 | [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/description/)             | [C](./src/1657.c) | Medium     |
 | 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)                                                   | [C](./src/1695.c) | Medium     |
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)          | [C](./src/1769.c) | Medium     |
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)                           | [C](./src/1524.c) | Medium     |
