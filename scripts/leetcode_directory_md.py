@@ -22,7 +22,7 @@ def fetch_leetcode_folder_tasks(solutions_folder: Path) -> list[Task]:
     )
 
     content = urlopen(req).read()
-    content_dict = json.loads(content)
+    content_dict = resp.json()
 
     raw_tasks_id_dict = {}
 
