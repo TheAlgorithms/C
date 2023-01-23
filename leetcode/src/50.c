@@ -22,9 +22,11 @@ double myPow(double x, int n){
         return 1;
     }
 
-    // n is the minimum int -2147483648, couldn't be converted in -n because maximum is 2147483647.
-    // this case we use 1 / (pow(x, -(n + 1)) * n)
-    if (n == -2147483648){
+    const int LOWER_BOUND = -2147483648;
+
+    // n is the minimum int, couldn't be converted in -n because maximum is 2147483647.
+    // this case we use (1 / pow(x, -(n + 1))) * n
+    if (n == LOWER_BOUND){
         return 1 / (powPositive(x, -(n + 1)) * x);
     }
 
