@@ -10,7 +10,7 @@
  */
 
 #include <assert.h> /// for assert
-#include <stdio.h> /// for IO
+#include <stdio.h>  /// for IO operations
 #include <limits.h> /// for INT_MAX macro
 #include <stdlib.h> /// for malloc() and free()
 
