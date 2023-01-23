@@ -1,0 +1,30 @@
+# The objective of this GitHub Action is to update the leetcode DIRECTORY.md file (if needed)
+# when doing a git push
+name: leetcode_directory_writer
+on:
+  push:
+    paths:
+      - "leetcode/src/**.c"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - name: Add python dependencies
+        run: |
+          pip install requests
+      - name: Write leectode DIRECTORY.md
+        run: |
+          python3 scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
+          git config --global user.name github-actions[bot]
+          git config --global user.email 'github-actions@users.noreply.github.com'
+      - name: Update LeetCode's directory
+        run: |
+          git add leetcode/DIRECTORY.md
+          git commit -am "updating DIRECTORY.md" ||  true
+          git push origin HEAD:$GITHUB_REF || true
