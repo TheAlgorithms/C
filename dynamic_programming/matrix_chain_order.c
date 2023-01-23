@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief [Matrix Chain Order] (https://en.wikipedia.org/wiki/Matrix_chain_multiplication)
+ * @brief [Matrix Chain Order](https://en.wikipedia.org/wiki/Matrix_chain_multiplication)
  * @details
  * From Wikipedia: Matrix chain multiplication (or the matrix chain ordering problem)
  * is an optimization problem concerning the most efficient way to multiply a given sequence of matrices.
