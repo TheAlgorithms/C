@@ -64,10 +64,10 @@ void printSolution(int l,int *s,int i,int j) {
 }
 
 /**
- * @brief Main function, handles testing.
- * @returns 0
+ * @brief Self-test implementations
+ * @returns void
  */
-int main() {
+static void test() {
     int sizes[] = {35,15,5,10,20,25};
     int len = 6;
     int *sol = malloc(len * len * sizeof(int));
@@ -77,5 +77,13 @@ int main() {
     printf("Optimal ordering : ");
     printSolution(len,sol,0,5);
     free(sol);
+}
+
+/**
+ * @brief Main function
+ * @returns 0
+ */
+int main() {
+    test();
     return 0;
 }
