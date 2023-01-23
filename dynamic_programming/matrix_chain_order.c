@@ -84,6 +84,6 @@ static void test() {
  * @returns 0
  */
 int main() {
-    test();
+    test();  // run self-test implementations
     return 0;
 }
