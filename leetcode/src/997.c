@@ -1,4 +1,4 @@
-// Using hastable.
+// Using hashtable.
 // Runtime: O(n + len(trust))
 // Space: O(n)
 int findJudge(int n, int** trust, int trustSize, int* trustColSize){
