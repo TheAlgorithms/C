@@ -48,6 +48,7 @@ static void test()
     char str4[] = "11111";
 
     assert(hammingDistance(str3, str4) == 5);
+    printf("All tests have successfully passed!\n");
 }
 /**
  * @brief Main function
