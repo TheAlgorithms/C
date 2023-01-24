@@ -1,6 +1,7 @@
 /**
  * @file
- * @brief Hamming distance. https://en.wikipedia.org/wiki/Hamming_distance
+ * @brief [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance)
+ * algorithm implementation.
  * @details
  * In information theory, the Hamming distance between two strings of
  * equal length is the number of positions at which the corresponding symbols
