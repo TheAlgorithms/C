@@ -112,33 +112,34 @@
 | 965 | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)                                                                          | [C](./src/965.c)  | Easy       |
 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)                                                                  | [C](./src/977.c)  | Easy       |
 | 985 | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries)                                                  | [C](./src/985.c)  | Medium     |
-| 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)            | [C](./src/1008.c) | Medium     |
-| 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer)                                                          | [C](./src/1009.c) | Easy       |
-| 1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list)                                                    | [C](./src/1019.c) | Medium     |
-| 1026 | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor)                            | [C](./src/1026.c) | Medium     |
-| 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                      | [C](./src/1089.c) | Easy       |
-| 1147 | [Longest Chunked Palindrome Decomposition](https://leetcode.com/problems/longest-chunked-palindrome-decomposition)                                    | [C](./src/1147.c) | Hard       |
-| 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops)                                                                | [C](./src/1184.c) | Easy       |
-| 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)                                                                | [C](./src/1189.c) | Easy       |
-| 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences)                                                            | [C](./src/1207.c) | Easy       |
-| 1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold)                              | [C](./src/1283.c) | Medium     |
-| 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum)                                                  | [C](./src/1524.c) | Medium     |
-| 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced)                                  | [C](./src/1653.c) | Medium     |
-| 1657 | [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close)                                                | [C](./src/1657.c) | Medium     |
-| 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value)                                                                          | [C](./src/1695.c) | Medium     |
-| 1704 | [Determine if String Halves Are Alike](https://leetcode.com/problems/determine-if-string-halves-are-alike)                                            | [C](./src/1704.c) | Easy       |
-| 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated)                                            | [C](./src/1752.c) | Easy       |
-| 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)| [C](./src/1769.c) | Medium     |
-| 1833 | [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                                                        | [C](./src/1833.c) | Medium     |
-| 1838 | [Frequency of the Most Frequent Element](https://leetcode.com/problems/frequency-of-the-most-frequent-element)                                        | [C](./src/1838.c) | Medium     |
-| 2024 | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam)                                                  | [C](./src/2024.c) | Medium     |
-| 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list)                                      | [C](./src/2095.c) | Medium     |
-| 2125 | [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank)                                                      | [C](./src/2125.c) | Medium     |
-| 2130 | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)                                                  | [C](./src/2130.c) | Medium     |
-| 2222 | [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings)                                                | [C](./src/2222.c) | Medium     |
-| 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference)                                                                | [C](./src/2256.c) | Medium     |
-| 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array)                                                          | [C](./src/2270.c) | Medium     |
-| 2279 | [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                                    | [C](./src/2279.c) | Medium     |
-| 2304 | [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid)                                                              | [C](./src/2304.c) | Medium     |
-| 2482 | [Difference Between Ones and Zeros in Row and Column](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column)              | [C](./src/2482.c) | Medium     |
-| 2501 | [Longest Square Streak in an Array](https://leetcode.com/problems/longest-square-streak-in-an-array)                                                  | [C](./src/2501.c) | Medium     |
+| 997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge)                                                                              | [C](./src/997.c)  | Easy       |
+| 1008| [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)            | [C](./src/1008.c) | Medium     |
+| 1009| [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer)                                                          | [C](./src/1009.c) | Easy       |
+| 1019| [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list)                                                    | [C](./src/1019.c) | Medium     |
+| 1026| [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor)                            | [C](./src/1026.c) | Medium     |
+| 1089| [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                      | [C](./src/1089.c) | Easy       |
+| 1147| [Longest Chunked Palindrome Decomposition](https://leetcode.com/problems/longest-chunked-palindrome-decomposition)                                    | [C](./src/1147.c) | Hard       |
+| 1184| [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops)                                                                | [C](./src/1184.c) | Easy       |
+| 1189| [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)                                                                | [C](./src/1189.c) | Easy       |
+| 1207| [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences)                                                            | [C](./src/1207.c) | Easy       |
+| 1283| [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold)                              | [C](./src/1283.c) | Medium     |
+| 1524| [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum)                                                  | [C](./src/1524.c) | Medium     |
+| 1653| [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced)                                  | [C](./src/1653.c) | Medium     |
+| 1657| [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close)                                                | [C](./src/1657.c) | Medium     |
+| 1695| [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value)                                                                          | [C](./src/1695.c) | Medium     |
+| 1704| [Determine if String Halves Are Alike](https://leetcode.com/problems/determine-if-string-halves-are-alike)                                            | [C](./src/1704.c) | Easy       |
+| 1752| [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated)                                            | [C](./src/1752.c) | Easy       |
+| 1769| [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)| [C](./src/1769.c) | Medium     |
+| 1833| [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                                                        | [C](./src/1833.c) | Medium     |
+| 1838| [Frequency of the Most Frequent Element](https://leetcode.com/problems/frequency-of-the-most-frequent-element)                                        | [C](./src/1838.c) | Medium     |
+| 2024| [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam)                                                  | [C](./src/2024.c) | Medium     |
+| 2095| [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list)                                      | [C](./src/2095.c) | Medium     |
+| 2125| [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank)                                                      | [C](./src/2125.c) | Medium     |
+| 2130| [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)                                                  | [C](./src/2130.c) | Medium     |
+| 2222| [Number of Ways to Select Buildings](https://leetcode.com/problems/number-of-ways-to-select-buildings)                                                | [C](./src/2222.c) | Medium     |
+| 2256| [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference)                                                                | [C](./src/2256.c) | Medium     |
+| 2270| [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array)                                                          | [C](./src/2270.c) | Medium     |
+| 2279| [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                                    | [C](./src/2279.c) | Medium     |
+| 2304| [Minimum Path Cost in a Grid](https://leetcode.com/problems/minimum-path-cost-in-a-grid)                                                              | [C](./src/2304.c) | Medium     |
+| 2482| [Difference Between Ones and Zeros in Row and Column](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column)              | [C](./src/2482.c) | Medium     |
+| 2501| [Longest Square Streak in an Array](https://leetcode.com/problems/longest-square-streak-in-an-array)                                                  | [C](./src/2501.c) | Medium     |
