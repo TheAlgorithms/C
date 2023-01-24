@@ -77,6 +77,8 @@ static void test() {
     printf("Optimal ordering : ");
     printSolution(len,sol,0,5);
     free(sol);
+
+    printf("\n");
 }
 
 /**
