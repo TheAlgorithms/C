@@ -9,8 +9,8 @@
  * @author [Aybars Nazlica](https://github.com/aybarsnazlica)
  */
 
-#include <assert.h>
-#include <stdio.h>
+#include <assert.h>  /// for assert
+#include <stdio.h>   /// for IO operations
 
 /**
  * @brief Function to calculate the Hamming distance between two strings
