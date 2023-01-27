@@ -265,6 +265,7 @@
     * [461](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/461.c)
     * [476](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/476.c)
     * [485](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/485.c)
+    * [50](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/50.c)
     * [509](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/509.c)
     * [520](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/53.c)
