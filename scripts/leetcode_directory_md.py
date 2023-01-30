@@ -77,9 +77,9 @@ def print_directory_md(tasks_list: list[Task]) -> None:
 
     def formatted_string(header, title, solution, difficulty):
         return (
-            f"| {header.ljust(id_max_length)}"
-            + f"| {title.ljust(title_max_length)}"
-            + f"| {solution.ljust(solution_max_length)}"
+            f"| {header.rjust(id_max_length)}"
+            + f" | {title.ljust(title_max_length)}"
+            + f" | {solution.ljust(solution_max_length)}"
             + f" | {difficulty.ljust(difficulty_max_length)} |"
         )
 
