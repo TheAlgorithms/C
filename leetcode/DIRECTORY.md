@@ -118,6 +118,7 @@
 | 1019| [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list)                                                    | [C](./src/1019.c) | Medium     |
 | 1026| [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor)                            | [C](./src/1026.c) | Medium     |
 | 1089| [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                      | [C](./src/1089.c) | Easy       |
+| 1137| [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                                                        | [C](./src/1137.c) | Easy       |
 | 1147| [Longest Chunked Palindrome Decomposition](https://leetcode.com/problems/longest-chunked-palindrome-decomposition)                                    | [C](./src/1147.c) | Hard       |
 | 1184| [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops)                                                                | [C](./src/1184.c) | Easy       |
 | 1189| [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)                                                                | [C](./src/1189.c) | Easy       |
