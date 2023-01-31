@@ -43,12 +43,12 @@ static void test()
     char str1[] = "karolin";
     char str2[] = "kathrin";
 
-    assert(hammingDistance(str1, str2) == 3);
+    assert(hamming_distance(str1, str2) == 3);
 
     char str3[] = "00000";
     char str4[] = "11111";
 
-    assert(hammingDistance(str3, str4) == 5);
+    assert(hamming_distance(str3, str4) == 5);
     printf("All tests have successfully passed!\n");
 }
 /**
