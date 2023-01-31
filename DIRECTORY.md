@@ -188,6 +188,7 @@
     * [12](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/12.c)
     * [1207](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1207.c)
     * [121](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/121.c)
+    * [124](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/124.c)
     * [125](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/125.c)
     * [1283](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1283.c)
     * [13](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/13.c)
@@ -263,6 +264,7 @@
     * [461](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/461.c)
     * [476](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/476.c)
     * [485](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/485.c)
+    * [50](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/50.c)
     * [509](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/509.c)
     * [520](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/53.c)
@@ -335,6 +337,7 @@
 
 ## Misc
   * [Demonetization](https://github.com/TheAlgorithms/C/blob/HEAD/misc/demonetization.c)
+  * [Hamming Distance](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance.c)
   * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/HEAD/misc/lexicographic_permutations.c)
   * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/HEAD/misc/longest_subsequence.c)
   * [Mirror](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mirror.c)
