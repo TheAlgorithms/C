@@ -18,7 +18,7 @@
  * @param param2 string 2
  * @returns Hamming distance
  */
-int hammingDistance(char* str1, char* str2)
+int hamming_distance(char* str1, char* str2)
 {
     int i = 0, distance = 0;
 
