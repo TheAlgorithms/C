@@ -338,6 +338,7 @@
 
 ## Misc
   * [Demonetization](https://github.com/TheAlgorithms/C/blob/HEAD/misc/demonetization.c)
+  * [Hamming Distance](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance.c)
   * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/HEAD/misc/lexicographic_permutations.c)
   * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/HEAD/misc/longest_subsequence.c)
   * [Mirror](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mirror.c)
