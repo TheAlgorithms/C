@@ -55,12 +55,12 @@ int matrixChainOrder(int l,const int *p, int *s) {
 void printSolution(int l,int *s,int i,int j) {
     if(i == j) {
         printf("A%d",i);
-    } else {
-        putchar('(');
-        printSolution(l,s,i,s[i * l + j]);
-        printSolution(l,s,s[i * l + j] + 1,j);
-        putchar(')');
+        return
     }
+    putchar('(');
+    printSolution(l,s,i,s[i * l + j]);
+    printSolution(l,s,s[i * l + j] + 1,j);
+    putchar(')');
 }
 
 /**
