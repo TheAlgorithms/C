@@ -92,27 +92,24 @@ void delete_first_node(struct node **start)
     if (*start == NULL)
     {
         printf("⚠️list is Empty⚠️\n");
+        return;
     }
-    else
+    struct node *temp1, *temp2;
+    temp1 = *start;
+    temp2 = temp1->prev;
+    if (temp1 == temp2)
     {
-        struct node *temp1, *temp2;
-        temp1 = *start;
-        temp2 = temp1->prev;
-        if (temp1 == temp2)
-        {
-            free(temp2);
-            *start = NULL;
-        }
-        else
-        {
-            temp2->next = temp1->next;
-            (temp1->next)->prev = temp2;
-            *start = temp1->next;
-            free(temp1);
-            temp1 = NULL;
-        }
+        free(temp2);
+        *start = NULL;
         printf("\nNode succesfully deleted\n\n");
+        return;
     }
+    temp2->next = temp1->next;
+    (temp1->next)->prev = temp2;
+    *start = temp1->next;
+    free(temp1);
+    temp1 = NULL;
+    printf("\nNode succesfully deleted\n\n");
 }
 
 /**
@@ -125,26 +122,24 @@ void delete_last_node(struct node **start)
     if (*start == NULL)
     {
         printf("list is Empty\n");
+        return;
     }
-    else
+
+    struct node *temp1, *temp2;
+    temp1 = *start;
+    temp2 = temp1->prev;
+    if (temp1 == temp2)
     {
-        struct node *temp1, *temp2;
-        temp1 = *start;
-        temp2 = temp1->prev;
-        if (temp1 == temp2)
-        {
-            free(temp2);
-            *start = NULL;
-        }
-        else
-        {
-            (temp2->prev)->next = temp1;
-            temp1->prev = temp2->prev;
-            free(temp2);
-            temp2 = NULL;
-        }
+        free(temp2);
+        *start = NULL;
         printf("\nNode succesfully deleted\n\n");
+        return;
     }
+    (temp2->prev)->next = temp1;
+    temp1->prev = temp2->prev;
+    free(temp2);
+    temp2 = NULL;
+    printf("\nNode succesfully deleted\n\n");
 }
 
 /**
