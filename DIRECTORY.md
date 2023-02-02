@@ -305,6 +305,7 @@
     * [977](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/977.c)
     * [98](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/98.c)
     * [985](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/985.c)
+    * [997](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/997.c)
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C/blob/HEAD/machine_learning/adaline_learning.c)
