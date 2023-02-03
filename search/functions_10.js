@@ -21,12 +21,13 @@ var searchData=
   ['printmessage_18',['printMessage',['../db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef',1,'naval_battle.c']]],
   ['printmessagescore_19',['printMessageScore',['../db/de2/naval__battle_8c.html#a2d65de2c86c7015d7ca400dfca0f25dc',1,'naval_battle.c']]],
   ['printpositioning_20',['printPositioning',['../db/de2/naval__battle_8c.html#a5c84d83e31ca6a320b6ea8081402686a',1,'naval_battle.c']]],
-  ['printstray_21',['printsTray',['../db/de2/naval__battle_8c.html#ad527fa96e729742a231c4535e112526a',1,'naval_battle.c']]],
-  ['printtable_22',['printTable',['../db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543',1,'naval_battle.c']]],
-  ['priority_23',['priority',['../da/d96/infix__to__postfix2_8c.html#a02d1bf0ff997efc46ba6fd0ec7952952',1,'infix_to_postfix2.c']]],
-  ['problem_24',['problem',['../d4/d07/ode__forward__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_semi_implicit_euler.c']]],
-  ['propagate_25',['propagate',['../dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97',1,'cantor_set.c']]],
-  ['purge_26',['purge',['../da/d02/binary__search__tree_8c.html#a01151353aa2d9688934ed39208133241',1,'binary_search_tree.c']]],
-  ['push_27',['push',['../db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554',1,'push(struct Stack *p, char x):&#160;infix_to_postfix.c'],['../da/d96/infix__to__postfix2_8c.html#a90e051f23f741be4f8ca86c270d66489',1,'push(char opd):&#160;infix_to_postfix2.c'],['../df/dfa/vector_8c.html#a878dddf838dbd6d5a9a1da77a362ce56',1,'push(Vector *vec, int val):&#160;vector.c'],['../df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef',1,'push(int8_t opd):&#160;postfix_evaluation.c']]],
-  ['put_5fchar_28',['put_char',['../d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b',1,'min_printf.h']]]
+  ['printsolution_21',['printSolution',['../d8/d1e/matrix__chain__order_8c.html#ab49bc6e377a4b72a1295a953bc2520f5',1,'matrix_chain_order.c']]],
+  ['printstray_22',['printsTray',['../db/de2/naval__battle_8c.html#ad527fa96e729742a231c4535e112526a',1,'naval_battle.c']]],
+  ['printtable_23',['printTable',['../db/de2/naval__battle_8c.html#a3889e1ee574e03ffdde8804180d57543',1,'naval_battle.c']]],
+  ['priority_24',['priority',['../da/d96/infix__to__postfix2_8c.html#a02d1bf0ff997efc46ba6fd0ec7952952',1,'infix_to_postfix2.c']]],
+  ['problem_25',['problem',['../d4/d07/ode__forward__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4',1,'problem(const double *x, double *y, double *dy):&#160;ode_semi_implicit_euler.c']]],
+  ['propagate_26',['propagate',['../dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97',1,'cantor_set.c']]],
+  ['purge_27',['purge',['../da/d02/binary__search__tree_8c.html#a01151353aa2d9688934ed39208133241',1,'binary_search_tree.c']]],
+  ['push_28',['push',['../db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554',1,'push(struct Stack *p, char x):&#160;infix_to_postfix.c'],['../da/d96/infix__to__postfix2_8c.html#a90e051f23f741be4f8ca86c270d66489',1,'push(char opd):&#160;infix_to_postfix2.c'],['../df/dfa/vector_8c.html#a878dddf838dbd6d5a9a1da77a362ce56',1,'push(Vector *vec, int val):&#160;vector.c'],['../df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef',1,'push(int8_t opd):&#160;postfix_evaluation.c']]],
+  ['put_5fchar_29',['put_char',['../d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b',1,'min_printf.h']]]
 ];
