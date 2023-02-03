@@ -42,6 +42,6 @@ struct NodeDistributeInfo* getDisturb(struct TreeNode* node) {
 // We know that coins are the same number that nodes, and we can get coins by depth
 // Runtime: O(n)
 // Space: O(1)
-int distributeCoins(struct TreeNode* root){
+int distributeCoins(struct TreeNode* root) {
     return getDisturb(root)->distributeMoves;
 }
