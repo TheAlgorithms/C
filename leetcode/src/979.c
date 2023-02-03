@@ -15,7 +15,7 @@ struct NodeDistributeInfo {
 struct NodeDistributeInfo* getDisturb(struct TreeNode* node) {
     struct NodeDistributeInfo* result = malloc(sizeof(struct NodeDistributeInfo));
 
-    if (node == NULL){
+    if (node == NULL) {
         result->distributeMoves = 0;
         result->distributeExcess = 1;
         return result;
