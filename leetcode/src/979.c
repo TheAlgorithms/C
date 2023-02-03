@@ -12,7 +12,7 @@ struct NodeDistributeInfo {
     int distributeExcess;
 };
 
-struct NodeDistributeInfo* getDisturb(struct TreeNode* node){
+struct NodeDistributeInfo* getDisturb(struct TreeNode* node) {
     struct NodeDistributeInfo* result = malloc(sizeof(struct NodeDistributeInfo));
 
     if (node == NULL){
