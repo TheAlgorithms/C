@@ -7,7 +7,7 @@
  * };
  */
 
-struct NodeDistributeInfo{
+struct NodeDistributeInfo {
     int distributeMoves;
     int distributeExcess;
 };
