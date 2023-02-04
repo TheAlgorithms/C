@@ -29,6 +29,7 @@ var annotated_dup =
     [ "min_heap", "de/dce/structmin__heap.html", null ],
     [ "Node", "db/d8b/struct_node.html", "db/d8b/struct_node" ],
     [ "node", "d5/da1/structnode.html", "d5/da1/structnode" ],
+    [ "NodeDistributeInfo", "d0/d3a/struct_node_distribute_info.html", null ],
     [ "observation", "d1/d5e/structobservation.html", "d1/d5e/structobservation" ],
     [ "pid", "d0/d43/structpid.html", null ],
     [ "quaternion_", "de/d58/structquaternion__.html", "de/d58/structquaternion__" ],

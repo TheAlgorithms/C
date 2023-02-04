@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212":[16,0,16,6,3],
 "d4/d68/qr__decompose_8h_source.html":[16,0,16,6],
 "d4/d69/group__dual__quats.html":[14,0,3],
 "d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f":[14,0,3,1],
@@ -44,7 +45,7 @@ var NAVTREEINDEX1 =
 "d4/dcc/strong__number_8c.html#ae1a3968e7947464bee7714f6d43b7002":[16,0,14,9,2],
 "d4/dcc/strong__number_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,14,9,1],
 "d4/dd4/struct_graph.html":[15,0,16],
-"d4/dd9/structtrie.html":[15,0,43],
+"d4/dd9/structtrie.html":[15,0,44],
 "d4/de3/hash__djb2_8c.html":[14,1,2],
 "d4/dea/problem__14_2sol1_8c.html":[16,0,18,4,0],
 "d4/dea/problem__14_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,18,4,0,1],
@@ -77,7 +78,7 @@ var NAVTREEINDEX1 =
 "d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d":[16,0,18,18,2,0],
 "d5/d7c/problem__5_2sol3_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[16,0,18,18,2,2],
 "d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c":[16,0,18,18,2,1],
-"d5/d7e/struct_t.html":[15,0,40],
+"d5/d7e/struct_t.html":[15,0,41],
 "d5/d88/md__d_i_r_e_c_t_o_r_y.html":[7],
 "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md47":[7,0],
 "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md48":[7,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d8/d10/structlist.html":[15,0,21],
 "d8/d10/structlist.html#a2054c799f7580787a500df82d14ace25":[15,0,21,0],
 "d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41":[15,0,21,1],
-"d8/d1e/matrix__chain__order_8c.html":[16,0,5,1],
-"d8/d1e/matrix__chain__order_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,5,1,3]
+"d8/d1e/matrix__chain__order_8c.html":[16,0,5,1]
 };

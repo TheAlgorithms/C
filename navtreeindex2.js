@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d8/d1e/matrix__chain__order_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,5,1,3],
 "d8/d1e/matrix__chain__order_8c.html#ab49bc6e377a4b72a1295a953bc2520f5":[16,0,5,1,2],
 "d8/d1e/matrix__chain__order_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,5,1,0],
 "d8/d1e/matrix__chain__order_8c.html#aecddbc91839e5b13644eea4f1d34566b":[16,0,5,1,1],
@@ -22,7 +23,7 @@ var NAVTREEINDEX2 =
 "d8/d75/fibonacci__formula_8c.html#a4d369ae048e0ccc7f515a243533cd946":[16,0,14,5,0],
 "d8/d75/fibonacci__formula_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,14,5,2],
 "d8/d75/fibonacci__formula_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,14,5,1],
-"d8/d7a/structtnode.html":[15,0,42],
+"d8/d7a/structtnode.html":[15,0,43],
 "d8/d7c/dict_8h_source.html":[16,0,3,2,0],
 "d8/d81/md_project_euler__r_e_a_d_m_e.html":[12],
 "d8/da2/dynamic__array_8h_source.html":[16,0,3,3,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97":[16,0,14,0,5],
 "dc/d80/cantor__set_8c.html#a2b95c356aff8a282eaad255008fa5a94":[16,0,14,0,1],
 "dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab":[16,0,14,0,4],
-"dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d":[16,0,14,0,2],
-"dc/d80/cantor__set_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089":[16,0,14,0,3]
+"dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d":[16,0,14,0,2]
 };
