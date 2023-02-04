@@ -112,6 +112,7 @@
 |  938 | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)                                                                                     | [C](./src/938.c)  | Easy       |
 |  965 | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)                                                                           | [C](./src/965.c)  | Easy       |
 |  977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)                                                                   | [C](./src/977.c)  | Easy       |
+|  979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree)                                                       | [C](./src/979.c)  | Medium     |
 |  985 | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries)                                                   | [C](./src/985.c)  | Medium     |
 |  997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge)                                                                               | [C](./src/997.c)  | Easy       |
 | 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)             | [C](./src/1008.c) | Medium     |
