@@ -110,6 +110,7 @@
 |  917 | [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters)                                                                             | [C](./src/917.c)  | Easy       |
 |  931 | [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum)                                                                     | [C](./src/931.c)  | Medium     |
 |  938 | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)                                                                                     | [C](./src/938.c)  | Easy       |
+|  953 | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary)                                                           | [C](./src/953.c)  | Easy       |
 |  965 | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)                                                                           | [C](./src/965.c)  | Easy       |
 |  977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)                                                                   | [C](./src/977.c)  | Easy       |
 |  979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree)                                                       | [C](./src/979.c)  | Medium     |
