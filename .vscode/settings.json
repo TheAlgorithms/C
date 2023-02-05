@@ -5,6 +5,19 @@
   "editor.formatOnType": true,
   "files.insertFinalNewline": true,
   "files.associations": {
-    "random": "c"
+    "random": "c",
+    "forward_list": "c",
+    "ios": "c",
+    "list": "c",
+    "locale": "c",
+    "memory": "c",
+    "algorithm": "c",
+    "*.inc": "c",
+    "math.h": "c",
+    "stdlib.h": "c",
+    "stdio.h": "c",
+    "string.h": "c",
+    "counting_bloom_filter.h": "c",
+    "stdint.h": "c"
   }
 }

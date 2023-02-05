@@ -1,23 +1,43 @@
-#include "./counting_bloom_filter.h"
-#include <sys/resource.h>
+/**
+ * @file main.c
+ * @brief Test and example code for counting bloom filter
+ * https://en.wikipedia.org/wiki/Counting_Bloom_filter
+ * @author [Eric Breyer](https://github.com/ericbreyer)
+ * @see counting_bloom_filter.c, counting_bloom_filter.h
+ */
+#include <assert.h>  // assertions
+#include <stdio.h>   // printing
+#include <stdlib.h>  //rand
 
-int main(void) {
-    struct CountingBloomFilter * bf = construct_CountingBloomFilter(1000, .001);
-    int aP;
-    for(int i = 0; i < 100; ++i) {
-        
-        int * p = malloc(sizeof *p);
-        *p = rand();
-        aP = *p;
-        countingBloom_insert(bf, p, sizeof *p);
-        free(p);
+#include "counting_bloom_filter.h"  // include the structure
+
+int main(void)
+{
+    struct CountingBloomFilter* bf = construct_CountingBloomFilter(1000, .001);
+    int aNum;
+    for (int i = 0; i < 100; ++i)
+    {
+        aNum = rand();
+        countingBloom_insert(bf, &aNum, sizeof aNum);
     }
     countingBloom_printStats(bf);
-    printf("\nContains %d: %d\n", aP, countingBloom_contains(bf, &aP, sizeof aP));
-    countingBloom_remove(bf, &aP, sizeof aP);
-    printf("\nContains %d: %d\n", aP, countingBloom_contains(bf, &aP, sizeof aP));
-    --aP;
-    printf("Contains %d: %d\n", aP, countingBloom_contains(bf, &aP, sizeof aP));
+    printf("Contains %d: %d\n", aNum,
+           countingBloom_contains(bf, &aNum, sizeof aNum));
+
+    assert(countingBloom_contains(bf, &aNum, sizeof aNum) == PROBABLY_PRESENT);
+
+    countingBloom_remove(bf, &aNum, sizeof aNum);
+    printf("Contains %d: %d\n", aNum,
+           countingBloom_contains(bf, &aNum, sizeof aNum));
+
+    assert(countingBloom_contains(bf, &aNum, sizeof aNum) ==
+           DEFINITELY_NOT_PRESENT);
+    --aNum;
+    printf("Contains %d: %d\n", aNum,
+           countingBloom_contains(bf, &aNum, sizeof aNum));
+
+    assert(countingBloom_contains(bf, &aNum, sizeof aNum) ==
+           DEFINITELY_NOT_PRESENT);
     delete_CountingBloomFilter(bf);
     return 0;
 }

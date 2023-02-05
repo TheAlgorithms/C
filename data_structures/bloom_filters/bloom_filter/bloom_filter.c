@@ -1,7 +1,22 @@
-#include "./bloom_filter.h"
+/**
+ * @file bloom_filter.c
+ * @brief Implementation of a bloom filter
+ * https://en.wikipedia.org/wiki/Bloom_filter
+ * @author [Eric Breyer](https://github.com/ericbreyer)
+ * @see bloom_filter.h, main.c
+ */
 
-#include <math.h>
+#include "bloom_filter.h"  // interface
 
+#include <math.h>    // log
+#include <stdint.h>  // extended integer types
+
+/**
+ * @brief Helper function for hash
+ *
+ * @param[in] k the number to scramble
+ * @return int the scrambled number
+ */
 static inline int murmur_32_scramble(int k)
 {
     k *= 0xcc9e2d51;
@@ -9,6 +24,18 @@ static inline int murmur_32_scramble(int k)
     k *= 0x1b873593;
     return k;
 }
+
+/**
+ * @brief The hash function used to hash the values. Can simulate indefinite
+ * uniform independent hash functions by seeding this with a different number
+ * each time.
+ * Algorithm credit: https://en.wikipedia.org/wiki/MurmurHash#Algorithm
+ *
+ * @param[in] key the thing to hash
+ * @param[in] len the size of said key
+ * @param[in] seed the seed
+ * @return int the hashed key
+ */
 int murmur3_32(const uint8_t *key, size_t len, int seed)
 {
     seed = murmur_32_scramble((seed + pow(seed, 3)) * pow(2, seed));
@@ -46,30 +73,24 @@ int murmur3_32(const uint8_t *key, size_t len, int seed)
     return h;
 }
 
-// A union to store the counts as 4-bit buckets instead of 8.
-// Allows for the counting filter to be more space efficient.
-union Bits
-{
-    struct
-    {
-        unsigned int b1 : 1;
-        unsigned int b2 : 1;
-        unsigned int b3 : 1;
-        unsigned int b4 : 1;
-        unsigned int b5 : 1;
-        unsigned int b6 : 1;
-        unsigned int b7 : 1;
-        unsigned int b8 : 1;
-    } nibbles;
-    unsigned char byte_value;
-};
-
 struct BloomFilter
 {
+    /**
+     * @brief The number of hash functions this bloom filter will use.
+     */
     int hashFuncs;
+    /**
+     * @brief The number of buckets in the underlying array.
+     */
     int numSlots;
+    /**
+     * @brief The expected max number of elements to be inserted
+     */
     int maxElems;
-    union Bits internal[];
+    /**
+     * @brief The underlying array structure of the filter
+     */
+    unsigned char buckets[];
 };
 
 void bloom_printStats(struct BloomFilter *this)
@@ -79,7 +100,7 @@ void bloom_printStats(struct BloomFilter *this)
     {
         int slot = i / 8;
         int bit = i % 8;
-        if ((this->internal[(int)slot].byte_value >> bit) == 1)
+        if ((this->buckets[(int)slot] >> bit) == 1)
         {
             ++numOnes;
         }
@@ -102,7 +123,7 @@ void bloom_insert(struct BloomFilter *this, void *elem, size_t size)
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
         int slot = spot / 8;
         int bit = spot % 8;
-        this->internal[(int)slot].byte_value |= (1 << bit);
+        this->buckets[(int)slot] |= (1 << bit);
     }
     return;
 }
@@ -115,7 +136,7 @@ enum bloomResponse bloom_contains(struct BloomFilter *this, void *elem,
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
         int slot = spot / 8;
         int bit = spot % 8;
-        if ((this->internal[(int)slot].byte_value >> bit) == 0)
+        if ((this->buckets[(int)slot] >> bit) == 0)
         {
             return DEFINITELY_NOT_PRESENT;
         }
@@ -132,7 +153,7 @@ struct BloomFilter *construct_bloomFilter(int expectedElems,
     int k = ceil((m / expectedElems) * log(2));
 
     struct BloomFilter *new = calloc(
-        1, sizeof(struct BloomFilter) + sizeof(union Bits) * ((m + 1) / 8));
+        1, sizeof(struct BloomFilter) + sizeof(unsigned char) * ((m + 1) / 8));
     if (!new)
     {
         fprintf(stderr, "construct_bloomFilter no memory");
