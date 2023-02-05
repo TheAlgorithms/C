@@ -1,20 +1,22 @@
+#include "./counting_bloom_filter.h"
+
 #include <math.h>
 
-#include "./counting_bloom_filter.h"
-#include "../EBdefs.h"
-
-static inline int murmur_32_scramble(int k) {
+static inline int murmur_32_scramble(int k)
+{
     k *= 0xcc9e2d51;
     k = (k << 15) | (k >> 17);
     k *= 0x1b873593;
     return k;
 }
-int murmur3_32(const uint8_t *key, size_t len, int seed) {
-    seed = murmur_32_scramble((seed + pow(seed,3)) * pow(2,seed));
+int murmur3_32(const uint8_t *key, size_t len, int seed)
+{
+    seed = murmur_32_scramble((seed + pow(seed, 3)) * pow(2, seed));
     int h = seed;
     int k;
     /* Read in groups of 4. */
-    for (size_t i = len >> 2; i; i--) {
+    for (size_t i = len >> 2; i; i--)
+    {
         // Here is a source of differing results across endiannesses.
         // A swap here has no effects on hash properties though.
         memcpy(&k, key, sizeof(int));
@@ -25,7 +27,8 @@ int murmur3_32(const uint8_t *key, size_t len, int seed) {
     }
     /* Read the rest. */
     k = 0;
-    for (unsigned long i = len & 3; i; i--) {
+    for (unsigned long i = len & 3; i; i--)
+    {
         k <<= 8;
         k |= key[i - 1];
     }
@@ -43,79 +46,112 @@ int murmur3_32(const uint8_t *key, size_t len, int seed) {
     return h;
 }
 
-struct CountingBloomFilter {
+struct CountingBloomFilter
+{
     int hashFuncs;
     int numSlots;
     int maxElems;
-    union Nibbler internal[]; 
+    union Nibbler internal[];
 };
 
-void countingBloom_printStats(struct CountingBloomFilter *this) {
+void countingBloom_printStats(struct CountingBloomFilter *this)
+{
     int numOnes = 0;
-    for(int i = 0; i < this->numSlots; ++i) {
-        float slot = ((float) i)/ 2.0;
-        if(slot == (int)slot) {
-            if(this->internal[(int)slot].nibbles.first > 0) {
+    for (int i = 0; i < this->numSlots; ++i)
+    {
+        float slot = ((float)i) / 2.0;
+        if (slot == (int)slot)
+        {
+            if (this->internal[(int)slot].nibbles.first > 0)
+            {
                 ++numOnes;
             }
-        } else {
-            if(this->internal[(int)slot].nibbles.second > 0) {
+        }
+        else
+        {
+            if (this->internal[(int)slot].nibbles.second > 0)
+            {
                 ++numOnes;
             }
         }
     }
 
-    float nStar = -((float)this->numSlots/(float)this->hashFuncs) * log(1.0-((float)numOnes/(float)this->numSlots));
+    float nStar = -((float)this->numSlots / (float)this->hashFuncs) *
+                  log(1.0 - ((float)numOnes / (float)this->numSlots));
 
-    printf("Max Elements (n): %d \nHash Functions (k): %d \nSlots (m): %d\nEstimated Elements Inserted (n*): %f (estimate deteriorates as inserted elements approaches n)\n",
-            this->maxElems,
-            this->hashFuncs,
-            this->numSlots,
-            nStar);
+    printf(
+        "Max Elements (n): %d \nHash Functions (k): %d \nSlots (m): "
+        "%d\nEstimated Elements Inserted (n*): %f (estimate deteriorates as "
+        "inserted elements approaches n)\n",
+        this->maxElems, this->hashFuncs, this->numSlots, nStar);
 }
 
-int countingBloom_insert(struct CountingBloomFilter *this, void *elem, size_t size) {
-    for (int i = 0; i < this->hashFuncs; ++i) {
+int countingBloom_insert(struct CountingBloomFilter *this, void *elem,
+                         size_t size)
+{
+    for (int i = 0; i < this->hashFuncs; ++i)
+    {
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
-        float slot = ((float) spot)/ 2.0;
-        if(slot == (int)slot) {
-            if(this->internal[(int)slot].nibbles.first++ == 15) {
+        float slot = ((float)spot) / 2.0;
+        if (slot == (int)slot)
+        {
+            if (this->internal[(int)slot].nibbles.first++ == 15)
+            {
                 return 1;
             };
-        } else {
-            if(this->internal[(int)slot].nibbles.second++ == 15) {
+        }
+        else
+        {
+            if (this->internal[(int)slot].nibbles.second++ == 15)
+            {
                 return 1;
             };
         }
     }
     return 0;
 }
-int countingBloom_remove(struct CountingBloomFilter *this, void *elem, size_t size) {
-    for (int i = 0; i < this->hashFuncs; ++i) {
+int countingBloom_remove(struct CountingBloomFilter *this, void *elem,
+                         size_t size)
+{
+    for (int i = 0; i < this->hashFuncs; ++i)
+    {
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
-        float slot = ((float) spot)/ 2.0;
-        if(slot == (int)slot) {
-            if(this->internal[(int)slot].nibbles.first-- == 0) {
+        float slot = ((float)spot) / 2.0;
+        if (slot == (int)slot)
+        {
+            if (this->internal[(int)slot].nibbles.first-- == 0)
+            {
                 return 1;
             };
-        } else {
-            if(this->internal[(int)slot].nibbles.second-- == 0) {
+        }
+        else
+        {
+            if (this->internal[(int)slot].nibbles.second-- == 0)
+            {
                 return 1;
             };
         }
     }
     return 0;
 }
-enum bloomResponse countingBloom_contains(struct CountingBloomFilter *this, void *elem, size_t size) {
-    for (int i = 0; i < this->hashFuncs; ++i) {
+enum bloomResponse countingBloom_contains(struct CountingBloomFilter *this,
+                                          void *elem, size_t size)
+{
+    for (int i = 0; i < this->hashFuncs; ++i)
+    {
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
-        float slot = ((float) spot)/ 2.0;
-        if(slot == (int)slot) {
-            if(this->internal[(int)slot].nibbles.first == 0) {
+        float slot = ((float)spot) / 2.0;
+        if (slot == (int)slot)
+        {
+            if (this->internal[(int)slot].nibbles.first == 0)
+            {
                 return DEFINITELY_NOT_PRESENT;
             }
-        } else {
-            if(this->internal[(int)slot].nibbles.second == 0) {
+        }
+        else
+        {
+            if (this->internal[(int)slot].nibbles.second == 0)
+            {
                 return DEFINITELY_NOT_PRESENT;
             }
         }
@@ -123,16 +159,22 @@ enum bloomResponse countingBloom_contains(struct CountingBloomFilter *this, void
     return PROBABLY_PRESENT;
 }
 
-void delete_CountingBloomFilter(struct CountingBloomFilter *this) {
+void delete_CountingBloomFilter(struct CountingBloomFilter *this)
+{
     free(this);
 }
 
-struct CountingBloomFilter *construct_CountingBloomFilter(int expectedElems, float falsePositveProb) {
-    int m = -floor((expectedElems * log(falsePositveProb)) / pow(log(2),2));
+struct CountingBloomFilter *construct_CountingBloomFilter(
+    int expectedElems, float falsePositveProb)
+{
+    int m = -floor((expectedElems * log(falsePositveProb)) / pow(log(2), 2));
     int k = ceil((m / expectedElems) * log(2));
 
-    struct CountingBloomFilter * new = calloc(1, sizeof(struct CountingBloomFilter) + sizeof(union Nibbler)*((m+1)/2));
-    if(!new) {
+    struct CountingBloomFilter *new =
+        calloc(1, sizeof(struct CountingBloomFilter) +
+                      sizeof(union Nibbler) * ((m + 1) / 2));
+    if (!new)
+    {
         fprintf(stderr, "construct_CountingBloomFilter no memory");
         return NULL;
     }
