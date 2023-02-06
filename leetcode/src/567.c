@@ -46,7 +46,8 @@ bool checkInclusion(char* s1, char* s2) {
         int charNumberRight = s2[i + lengthS1] - 'a'; 
 
         charsCounter[charNumberLeft] -= 1;
-        if (charsCounter[charNumberLeft] == 0){
+        if (charsCounter[charNumberLeft] == 0) {
+
             diffChars -= 1;
         }
         else if (charsCounter[charNumberLeft] == -1){
