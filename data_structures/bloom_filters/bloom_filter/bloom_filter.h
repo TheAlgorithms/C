@@ -1,14 +1,20 @@
 /**
  * @file bloom_filter.h
  * @brief Declaration of a bloom filter
- * https://en.wikipedia.org/wiki/Bloom_filter
+ * [bloom filter](https://en.wikipedia.org/wiki/Bloom_filter)
+ * @details A Bloom filter is a space-efficient probabilistic data structure,
+ * that is used to test whether an element is a member of a set. False positive
+ * matches are possible, but false negatives are not – in other words, a query
+ * returns either "possibly in set" or "definitely not in set". Elements can be
+ * added to the set, but not removed (description of bloom filter from
+ * wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see bloom_filter.c, main.c
  */
 
-#include <stdio.h>   // logging
-#include <stdlib.h>  // free and calloc
-#include <string.h>  // memcpy
+#include <stdio.h>   /// logging
+#include <stdlib.h>  /// free and calloc
+#include <string.h>  /// memcpy
 #pragma once
 
 // Options for a set membership query.
@@ -51,7 +57,7 @@ void bloom_printStats(struct BloomFilter *this);
 void bloom_insert(struct BloomFilter *this, void *elem, size_t size);
 
 /**
- * @brief Querys the filter for item membership an item into the filter.
+ * @brief Querys the filter for an item's membership in the filter.
  *
  * @param[in] this the bloomFilter to perform the query on
  * @param[in] elem the pointer to the element to test

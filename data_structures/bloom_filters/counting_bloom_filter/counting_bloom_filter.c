@@ -1,15 +1,21 @@
 /**
  * @file counting_bloom_filter.c
  * @brief Implementation of a counting bloom filter
- * https://en.wikipedia.org/wiki/Counting_Bloom_filter
+ * [bloom filter](https://en.wikipedia.org/wiki/Counting_Bloom_filter)
+ * @details A Bloom filter is a space-efficient probabilistic data structure,
+ * that is used to test whether an element is a member of a set. False positive
+ * matches are possible, but false negatives are not – in other words, a query
+ * returns either "possibly in set" or "definitely not in set". Elements can be
+ * added to the set, and can also be removed in this counting variant.
+ * (description of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see counting_bloom_filter.h, main.c
  */
 
-#include "counting_bloom_filter.h"  // interface
+#include "counting_bloom_filter.h"  /// interface
 
-#include <math.h>    // log
-#include <stdint.h>  // extended integer types
+#include <math.h>    /// log
+#include <stdint.h>  /// extended integer types
 
 /**
  * @brief Helper function for hash
@@ -86,22 +92,10 @@ union Nibbler
 
 struct CountingBloomFilter
 {
-    /**
-     * @brief The number of hash functions this bloom filter will use.
-     */
-    int hashFuncs;
-    /**
-     * @brief The number of buckets in the underlying array.
-     */
-    int numSlots;
-    /**
-     * @brief The expected max number of elements to be inserted
-     */
-    int maxElems;
-    /**
-     * @brief The underlying array structure of the filter
-     */
-    union Nibbler buckets[];
+    int hashFuncs;  // The number of hash functions this bloom filter will use.
+    int numSlots;   // The number of buckets in the underlying array.
+    int maxElems;   // The expected max number of elements to be inserted
+    union Nibbler buckets[];  // The underlying array structure of the filter
 };
 
 void countingBloom_printStats(struct CountingBloomFilter *this)

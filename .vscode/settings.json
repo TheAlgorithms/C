@@ -18,6 +18,7 @@
     "stdio.h": "c",
     "string.h": "c",
     "counting_bloom_filter.h": "c",
-    "stdint.h": "c"
+    "stdint.h": "c",
+    "bloom_filter.h": "c"
   }
 }
