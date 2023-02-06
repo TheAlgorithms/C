@@ -42,7 +42,8 @@ bool checkInclusion(char* s1, char* s2) {
         return true;
     }
 
-    for(int i = 0; i < lengthS2 - lengthS1; i++){
+    for (int i = 0; i < lengthS2 - lengthS1; i++) {
+
         int charNumberLeft = s2[i] - 'a';
         int charNumberRight = s2[i + lengthS1] - 'a'; 
 
