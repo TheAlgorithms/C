@@ -30,7 +30,8 @@ bool checkInclusion(char* s1, char* s2) {
     countCharsForStringSlice(charsCounter, s2, lengthS1, 1);
 
     int diffChars = 0;
-    for(int i = 0; i < EnglishLettersNumber; i++){
+    for (int i = 0; i < EnglishLettersNumber; i++) {
+
         if (charsCounter[i] != 0) {
             diffChars++;
         }
