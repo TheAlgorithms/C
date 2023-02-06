@@ -4,16 +4,19 @@
  * Checking palindromes of types '..aa..' and '..bab..'
  */
 
+#include <stdlib.h>
+#include <string.h>
+
 char * longestPalindrome(char * s){
     int si_max = 0, ei_max = 0, sz_max = 0, sz, i, delta_i;
-    char ch;
+    char ch, *s_longest;
     if (s[1] == '\0') return s;
 
-	for (ch = s[1], i = 1; ch != '\0'; ch = s[++i]) {
-        if (s[i-1] == ch) {
+    for (ch = s[1], i = 1; ch != '\0'; ch = s[++i]) {
+        if (s[i - 1] == ch) {
             sz = 2;
             delta_i = 1;
-            while (i - 1 - delta_i >= 0 && s[i+delta_i] != '\0' && s[i - 1 - delta_i] == s[i + delta_i]) {
+            while (i - 1 - delta_i >= 0 && s[i + delta_i] != '\0' && s[i - 1 - delta_i] == s[i + delta_i]) {
                 sz += 2;
                 delta_i += 1;
             }
@@ -28,7 +31,7 @@ char * longestPalindrome(char * s){
     for (ch = s[0], i = 1; ch != '\0'; ch = s[++i]) {
         sz = 1;
         delta_i = 1;
-        while (i - delta_i >= 0 && s[i+delta_i] != '\0' && s[i - delta_i] == s[i + delta_i]) {
+        while (i - delta_i >= 0 && s[i + delta_i] != '\0' && s[i - delta_i] == s[i + delta_i]) {
             sz += 2;
             delta_i += 1;
         }
@@ -39,7 +42,9 @@ char * longestPalindrome(char * s){
         }
     }
 
-    s[ei_max + 1] = '\0';
-    s = s + si_max;
-    return s;
+    if ((s_longest = (char *) malloc(sizeof(s))) == NULL)
+        return NULL;
+    strncpy(s_longest, s + si_max, sz_max);
+
+    return s_longest;
 }
