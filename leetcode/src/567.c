@@ -67,7 +67,8 @@ bool checkInclusion(char* s1, char* s2) {
             diffChars += 1;
         }
 
-        if (diffChars == 0){
+        if (diffChars == 0) {
+
             return true;
         }
     }
