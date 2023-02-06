@@ -479,6 +479,7 @@
   * [Odd Even Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/odd_even_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/pancake_sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/partition_sort.c)
+  * [Patience Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/patience_sort.c)
   * [Pigeonhole Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/pigeonhole_sort.c)
   * [Quick Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/quick_sort.c)
   * [Radix Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/radix_sort.c)
