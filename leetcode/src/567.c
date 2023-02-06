@@ -7,7 +7,6 @@ void countCharsForStringSlice(int* charsCounter, char* s, int length, int sign) 
     }
 }
 
-
 // Sliding window
 // Calculate number of chars in the current slide. 
 // Runtime: O(n)
