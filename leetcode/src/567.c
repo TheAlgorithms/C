@@ -18,7 +18,8 @@ bool checkInclusion(char* s1, char* s2) {
     int lengthS1 = strlen(s1);
     int lengthS2 = strlen(s2);
 
-    if (lengthS1 > lengthS2){
+    if (lengthS1 > lengthS2) {
+
         return false;
     }
 
