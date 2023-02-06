@@ -91,6 +91,7 @@
 |  509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)                                                                                     | [C](./src/509.c)  | Easy       |
 |  520 | [Detect Capital](https://leetcode.com/problems/detect-capital)                                                                                         | [C](./src/520.c)  | Easy       |
 |  561 | [Array Partition](https://leetcode.com/problems/array-partition)                                                                                       | [C](./src/561.c)  | Easy       |
+|  567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string)                                                                           | [C](./src/567.c)  | Medium     |
 |  617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees)                                                                         | [C](./src/617.c)  | Easy       |
 |  647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)                                                                         | [C](./src/647.c)  | Medium     |
 |  669 | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree)                                                                   | [C](./src/669.c)  | Medium     |
