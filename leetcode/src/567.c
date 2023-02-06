@@ -1,6 +1,7 @@
 const int EnglishLettersNumber = 26;
 
-void countCharsForStringSlice(int* charsCounter, char* s, int length, int sign){
+void countCharsForStringSlice(int* charsCounter, char* s, int length, int sign) {
+
     for(int i = 0; i < length; i++){
         charsCounter[s[i] - 'a'] += sign;
     }
