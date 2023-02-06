@@ -13,7 +13,8 @@ void countCharsForStringSlice(int* charsCounter, char* s, int length, int sign) 
 // Calculate number of chars in the current slide. 
 // Runtime: O(n)
 // Space: O(1) - only number of english lowercase letters.
-bool checkInclusion(char* s1, char* s2){
+bool checkInclusion(char* s1, char* s2) {
+
     int lengthS1 = strlen(s1);
     int lengthS2 = strlen(s2);
 
