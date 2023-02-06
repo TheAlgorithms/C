@@ -1,15 +1,19 @@
 /**
  * @file main.c
  * @brief Test and example code for counting bloom filter
- * [bloom filter](https://en.wikipedia.org/wiki/Counting_Bloom_filter)
+ * [counting bloom
+ * filter](https://en.wikipedia.org/wiki/Counting_countingBloom_filter)
  * @details A Bloom filter is a space-efficient probabilistic data structure,
  * that is used to test whether an element is a member of a set. False positive
  * matches are possible, but false negatives are not – in other words, a query
  * returns either "possibly in set" or "definitely not in set". Elements can be
- * added to the set, and can also be removed in this counting variant.
- * (description of bloom filter from wikipedia)
+ * added to the set, and in this counting variant they can also can also be
+ * removed because the buckets use counters instead of bits. Thus an element can
+ * be removed simply by decrementing all its corrsponding buckets.  (description
+ * of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
- * @see counting_countingBloom_filter.c, counting_countingBloom_filter.h
+ * @see counting_countingcountingBloom_filter.c,
+ * counting_countingcountingBloom_filter.h
  */
 #include <assert.h>  /// assertions
 #include <stdio.h>   /// printing
@@ -17,43 +21,59 @@
 
 #include "counting_bloom_filter.h"  /// include the structure
 
-int test()
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
 {
-    struct BloomFilter* bf = construct_CountingBloomFilter(100, .001);
+    printf("Constructing a new filter.\n");
+    struct CountingBloomFilter* bf = construct_CountingBloomFilter(100, .001);
     int testNum;
+    printf("Inserting elements into the filter: ");
     for (int i = 0; i < 10; ++i)
     {
         testNum = i;
+        printf("%d, ", i);
         countingBloom_insert(bf, &testNum, sizeof testNum);
     }
+    printf("\n\nPrinting Stats:\n");
     countingBloom_printStats(bf);
-    assert(countingBloom_contains(bf, &testNum, sizeof testNum) ==
-           PROBABLY_PRESENT);
+    printf("\n");
+    testNum = 5;
+    printf("Checking %d's membership:\n", testNum);
+    enum bloomResponse res =
+        countingBloom_contains(bf, &testNum, sizeof testNum);
+    assert(res == PROBABLY_PRESENT);
+    printf("%d is %s.\n\n", testNum,
+           res == PROBABLY_PRESENT ? "probably present"
+                                   : "definitely not present");
+    printf("Removing %d from the filter\n", testNum);
+    countingBloom_remove(bf, &testNum, sizeof testNum);
+    printf("Checking %d's membership:\n", testNum);
+    res = countingBloom_contains(bf, &testNum, sizeof testNum);
+    assert(res == DEFINITELY_NOT_PRESENT);
+    printf("%d is %s.\n\n", testNum,
+           res == PROBABLY_PRESENT ? "probably present"
+                                   : "definitely not present");
     testNum = 1000;
-    assert(countingBloom_contains(bf, &testNum, sizeof testNum) ==
-           DEFINITELY_NOT_PRESENT);
+    printf("Checking %d's membership:\n", testNum);
+    res = countingBloom_contains(bf, &testNum, sizeof testNum);
+    assert(res == DEFINITELY_NOT_PRESENT);
+    printf("%d is %s.\n\n", testNum,
+           res == PROBABLY_PRESENT ? "probably present"
+                                   : "definitely not present");
+    printf("Deleting the filter.\n");
     delete_CountingBloomFilter(bf);
+    printf("Testing successfully completed!\n");
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main(void)
 {
     test();
-    struct BloomFilter* example = construct_CountingBloomFilter(100, .001);
-    int num = 5;
-    countingBloom_insert(example, &num, sizeof num);  // insert an item
-    enum bloomResponse res = countingBloom_contains(
-        example, &num, sizeof num);  // check for membership
-    if (res == DEFINITELY_NOT_PRESENT)
-        printf("%d is DEFINITELY_NOT_PRESENT\n", num);
-    else if (res == PROBABLY_PRESENT)
-        printf("%d is PROBABLY_PRESENT\n", num);
-    countingBloom_remove(example, &num, sizeof num);  // remove an item
-    res = countingBloom_contains(example, &num,
-                                 sizeof num);  // check for membership
-    if (res == DEFINITELY_NOT_PRESENT)
-        printf("%d is now DEFINITELY_NOT_PRESENT\n", num);
-    else if (res == PROBABLY_PRESENT)
-        printf("%d is now PROBABLY_PRESENT\n", num);
-    delete_CountingBloomFilter(example);
     return 0;
 }

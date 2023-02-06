@@ -81,10 +81,10 @@ int murmur3_32(const uint8_t *key, size_t len, int seed)
 
 struct BloomFilter
 {
-    int hashFuncs;  // The number of hash functions this bloom filter will use.
-    int numSlots;   // The number of buckets in the underlying array.
-    int maxElems;   // The expected max number of elements to be inserted
-    unsigned char buckets[];  // The underlying array structure of the filter
+    int hashFuncs;  ///< The number of hash functions this bloom filter will use
+    int numSlots;   ///< The number of buckets in the underlying array.
+    int maxElems;   ///< The expected max number of elements to be inserted
+    unsigned char buckets[];  ///< The underlying array structure of the filter
 };
 
 void bloom_printStats(struct BloomFilter *this)
@@ -141,9 +141,9 @@ enum bloomResponse bloom_contains(struct BloomFilter *this, void *elem,
 void delete_bloomFilter(struct BloomFilter *this) { free(this); }
 
 struct BloomFilter *construct_bloomFilter(int expectedElems,
-                                          float falsePositveProb)
+                                          float falsePositiveProb)
 {
-    int m = -floor((expectedElems * log(falsePositveProb)) / pow(log(2), 2));
+    int m = -floor((expectedElems * log(falsePositiveProb)) / pow(log(2), 2));
     int k = ceil((m / expectedElems) * log(2));
 
     struct BloomFilter *new = calloc(

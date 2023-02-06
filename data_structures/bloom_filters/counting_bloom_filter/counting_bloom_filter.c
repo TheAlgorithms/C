@@ -1,13 +1,15 @@
 /**
  * @file counting_bloom_filter.c
  * @brief Implementation of a counting bloom filter
- * [bloom filter](https://en.wikipedia.org/wiki/Counting_Bloom_filter)
+ * [counting bloom filter](https://en.wikipedia.org/wiki/Counting_Bloom_filter)
  * @details A Bloom filter is a space-efficient probabilistic data structure,
  * that is used to test whether an element is a member of a set. False positive
  * matches are possible, but false negatives are not – in other words, a query
  * returns either "possibly in set" or "definitely not in set". Elements can be
- * added to the set, and can also be removed in this counting variant.
- * (description of bloom filter from wikipedia)
+ * added to the set, and in this counting variant they can also can also be
+ * removed because the buckets use counters instead of bits. Thus an element can
+ * be removed simply by decrementing all its corrsponding buckets.  (description
+ * of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see counting_bloom_filter.h, main.c
  */
@@ -78,8 +80,10 @@ int murmur3_32(const uint8_t *key, size_t len, int seed)
     return h;
 }
 
-// A union to store the counts as 4-bit buckets instead of 8.
-// Allows for the counting filter to be more space efficient.
+/**
+ * @brief  A union to store the counts as 4-bit buckets instead of 8.
+ *         Allows for the counting filter to be more space efficient.
+ */
 union Nibbler
 {
     struct
@@ -92,10 +96,10 @@ union Nibbler
 
 struct CountingBloomFilter
 {
-    int hashFuncs;  // The number of hash functions this bloom filter will use.
-    int numSlots;   // The number of buckets in the underlying array.
-    int maxElems;   // The expected max number of elements to be inserted
-    union Nibbler buckets[];  // The underlying array structure of the filter
+    int hashFuncs;  ///< The number of hash functions the bloom filter will use.
+    int numSlots;   ///< The number of buckets in the underlying array.
+    int maxElems;   ///< The expected max number of elements to be inserted
+    union Nibbler buckets[];  ///< The underlying array structure of the filter
 };
 
 void countingBloom_printStats(struct CountingBloomFilter *this)

@@ -17,35 +17,50 @@
 
 #include "bloom_filter.h"  /// include the structure
 
-int test()
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test()
 {
+    printf("Constructing a new filter.\n");
     struct BloomFilter* bf = construct_bloomFilter(100, .001);
     int testNum;
+    printf("Inserting elements into the filter: ");
     for (int i = 0; i < 10; ++i)
     {
         testNum = i;
+        printf("%d, ", i);
         bloom_insert(bf, &testNum, sizeof testNum);
     }
+    printf("\n\nPrinting Stats:\n");
     bloom_printStats(bf);
-    assert(bloom_contains(bf, &testNum, sizeof testNum) == PROBABLY_PRESENT);
+    printf("\n");
+    testNum = 5;
+    printf("Checking %d's membership:\n", testNum);
+    enum bloomResponse res = bloom_contains(bf, &testNum, sizeof testNum);
+    assert(res == PROBABLY_PRESENT);
+    printf("%d is %s.\n\n", testNum,
+           res == PROBABLY_PRESENT ? "probably present"
+                                   : "definitely not present");
     testNum = 1000;
-    assert(bloom_contains(bf, &testNum, sizeof testNum) ==
-           DEFINITELY_NOT_PRESENT);
+    printf("Checking %d's membership:\n", testNum);
+    res = bloom_contains(bf, &testNum, sizeof testNum);
+    assert(res == DEFINITELY_NOT_PRESENT);
+    printf("%d is %s.\n\n", testNum,
+           res == PROBABLY_PRESENT ? "probably present"
+                                   : "definitely not present");
+    printf("Deleting the filter.\n");
     delete_bloomFilter(bf);
+    printf("Testing successfully completed!\n");
 }
 
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main(void)
 {
     test();
-    struct BloomFilter* example = construct_bloomFilter(100, .001);
-    int num = 5;
-    bloom_insert(example, &num, sizeof num);  // insert an item
-    enum bloomResponse res =
-        bloom_contains(example, &num, sizeof num);  // check for membership
-    if (res == DEFINITELY_NOT_PRESENT)
-        printf("%d is DEFINITELY_NOT_PRESENT\n", num);
-    else if (res == PROBABLY_PRESENT)
-        printf("%d is PROBABLY_PRESENT\n", num);
-    delete_bloomFilter(example);
     return 0;
 }
