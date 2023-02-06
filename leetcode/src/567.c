@@ -56,7 +56,8 @@ bool checkInclusion(char* s1, char* s2) {
         }
 
         charsCounter[charNumberRight] += 1;
-        if (charsCounter[charNumberRight] == 0){
+        if (charsCounter[charNumberRight] == 0) {
+
             diffChars -= 1;
         }
         else if (charsCounter[charNumberRight] == 1){
