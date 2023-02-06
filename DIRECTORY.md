@@ -51,6 +51,15 @@
     * [Segment Tree](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/binary_trees/segment_tree.c)
     * [Threaded Binary Trees](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/binary_trees/threaded_binary_trees.c)
     * [Words Alphabetical](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/binary_trees/words_alphabetical.c)
+  * Bloom Filters
+    * Bloom Filter
+      * [Bloom Filter](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/bloom_filter/bloom_filter.c)
+      * [Bloom Filter](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/bloom_filter/bloom_filter.h)
+      * [Main](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/bloom_filter/main.c)
+    * Counting Bloom Filter
+      * [Counting Bloom Filter](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/counting_bloom_filter/counting_bloom_filter.c)
+      * [Counting Bloom Filter](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/counting_bloom_filter/counting_bloom_filter.h)
+      * [Main](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/bloom_filters/counting_bloom_filter/main.c)
   * Dictionary
     * [Dict](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/dictionary/dict.c)
     * [Dict](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/dictionary/dict.h)
@@ -302,8 +311,10 @@
     * [931](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/931.c)
     * [938](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/938.c)
     * [94](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/94.c)
+    * [953](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/953.c)
     * [965](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/965.c)
     * [977](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/977.c)
+    * [979](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/979.c)
     * [98](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/98.c)
     * [985](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/985.c)
     * [997](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/997.c)
