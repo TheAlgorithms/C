@@ -79,12 +79,12 @@ void delete_bloomFilter(struct BloomFilter *this);
 /**
  * @brief Constructs an instance of a bloomFilter. For a desired number
  *          of elements to insert and false positive probability.
- * NOTE: mallocs memory for the struct
+ * NOTE: allocates memory for the struct
  *
  * @param[in] expectedElems the max number of elements expected
  *                          to be placed in the filter
  * @param[in] falsePositiveProb the desired false positive probability
- * @return the new struct bloomFilter* or NULL if the malloc failed
+ * @return the new struct bloomFilter* or NULL if the memory allocation failed
  */
 struct BloomFilter *construct_bloomFilter(int expectedElems,
                                           float falsePositiveProb);

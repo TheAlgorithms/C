@@ -9,7 +9,7 @@
  * returns either "possibly in set" or "definitely not in set". Elements can be
  * added to the set, and in this counting variant they can also can also be
  * removed because the buckets use counters instead of bits. Thus an element can
- * be removed simply by decrementing all its corrsponding buckets.  (description
+ * be removed simply by decrementing all its corresponding buckets. (description
  * of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see counting_countingcountingBloom_filter.c,

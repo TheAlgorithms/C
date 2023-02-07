@@ -119,7 +119,6 @@ void bloom_insert(struct BloomFilter *this, void *elem, size_t size)
         int bit = spot % 8;
         this->buckets[(int)slot] |= (1 << bit);
     }
-    return;
 }
 
 enum bloomResponse bloom_contains(struct BloomFilter *this, void *elem,
@@ -146,6 +145,7 @@ struct BloomFilter *construct_bloomFilter(int expectedElems,
     int m = -floor((expectedElems * log(falsePositiveProb)) / pow(log(2), 2));
     int k = ceil((m / expectedElems) * log(2));
 
+    // Using calloc to initialize all
     struct BloomFilter *new = calloc(
         1, sizeof(struct BloomFilter) + sizeof(unsigned char) * ((m + 1) / 8));
     if (!new)

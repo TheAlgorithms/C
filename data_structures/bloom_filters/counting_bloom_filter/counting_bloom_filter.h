@@ -8,7 +8,7 @@
  * returns either "possibly in set" or "definitely not in set". Elements can be
  * added to the set, and in this counting variant they can also can also be
  * removed because the buckets use counters instead of bits. Thus an element can
- * be removed simply by decrementing all its corrsponding buckets.  (description
+ * be removed simply by decrementing all its corresponding buckets. (description
  * of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see counting_bloom_filter.c, main.c
@@ -97,12 +97,13 @@ void delete_CountingBloomFilter(struct CountingBloomFilter *this);
 /**
  * @brief Constructs an instance of a CountingBloomFilter. For a desired number
  *          of elements to insert and false positive probability.
- * NOTE: mallocs memory for the struct
+ * NOTE: allocates memory for the struct
  *
  * @param[in] expectedElems the max number of elements expected
  *                          to be placed in the filter
- * @param[in] falsePositveProb the desired false positive probability
- * @return the new struct CountingBloomFilter* or NULL if the malloc failed
+ * @param[in] falsePositiveProb the desired false positive probability
+ * @return the new struct CountingBloomFilter* or NULL if the memory allocation
+ * failed
  */
 struct CountingBloomFilter *construct_CountingBloomFilter(
     int expectedElems, float falsePositiveProb);

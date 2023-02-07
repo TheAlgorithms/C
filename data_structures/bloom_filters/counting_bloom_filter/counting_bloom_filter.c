@@ -8,7 +8,7 @@
  * returns either "possibly in set" or "definitely not in set". Elements can be
  * added to the set, and in this counting variant they can also can also be
  * removed because the buckets use counters instead of bits. Thus an element can
- * be removed simply by decrementing all its corrsponding buckets.  (description
+ * be removed simply by decrementing all its corresponding buckets. (description
  * of bloom filter from wikipedia)
  * @author [Eric Breyer](https://github.com/ericbreyer)
  * @see counting_bloom_filter.h, main.c
@@ -81,17 +81,14 @@ int murmur3_32(const uint8_t *key, size_t len, int seed)
 }
 
 /**
- * @brief  A union to store the counts as 4-bit buckets instead of 8.
+ * @brief  A struct to store the counts as 4-bit buckets instead of 8.
  *         Allows for the counting filter to be more space efficient.
  */
-union Nibbler
+
+struct Nibbler
 {
-    struct
-    {
-        unsigned int first : 4;
-        unsigned int second : 4;
-    } nibbles;
-    unsigned char byte_value;
+    unsigned int first : 4;
+    unsigned int second : 4;
 };
 
 struct CountingBloomFilter
@@ -99,7 +96,7 @@ struct CountingBloomFilter
     int hashFuncs;  ///< The number of hash functions the bloom filter will use.
     int numSlots;   ///< The number of buckets in the underlying array.
     int maxElems;   ///< The expected max number of elements to be inserted
-    union Nibbler buckets[];  ///< The underlying array structure of the filter
+    struct Nibbler buckets[];  ///< The underlying array structure of the filter
 };
 
 void countingBloom_printStats(struct CountingBloomFilter *this)
@@ -108,16 +105,16 @@ void countingBloom_printStats(struct CountingBloomFilter *this)
     for (int i = 0; i < this->numSlots; ++i)
     {
         float slot = ((float)i) / 2.0;
-        if (slot == (int)slot)
+        if (slot == floorf(slot))
         {
-            if (this->buckets[(int)slot].nibbles.first > 0)
+            if (this->buckets[(int)slot].first > 0)
             {
                 ++numOnes;
             }
         }
         else
         {
-            if (this->buckets[(int)slot].nibbles.second > 0)
+            if (this->buckets[(int)slot].second > 0)
             {
                 ++numOnes;
             }
@@ -141,19 +138,19 @@ int countingBloom_insert(struct CountingBloomFilter *this, void *elem,
     {
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
         float slot = ((float)spot) / 2.0;
-        if (slot == (int)slot)
+        if (slot == floorf(slot))
         {
-            if (this->buckets[(int)slot].nibbles.first++ == 15)
+            if (this->buckets[(int)slot].first++ == 15)
             {
                 return 1;
-            };
+            }
         }
         else
         {
-            if (this->buckets[(int)slot].nibbles.second++ == 15)
+            if (this->buckets[(int)slot].second++ == 15)
             {
                 return 1;
-            };
+            }
         }
     }
     return 0;
@@ -165,19 +162,19 @@ int countingBloom_remove(struct CountingBloomFilter *this, void *elem,
     {
         int spot = murmur3_32((uint8_t *)elem, size, i) % this->numSlots;
         float slot = ((float)spot) / 2.0;
-        if (slot == (int)slot)
+        if (slot == floorf(slot))
         {
-            if (this->buckets[(int)slot].nibbles.first-- == 0)
+            if (this->buckets[(int)slot].first-- == 0)
             {
                 return 1;
-            };
+            }
         }
         else
         {
-            if (this->buckets[(int)slot].nibbles.second-- == 0)
+            if (this->buckets[(int)slot].second-- == 0)
             {
                 return 1;
-            };
+            }
         }
     }
     return 0;
@@ -191,14 +188,14 @@ enum bloomResponse countingBloom_contains(struct CountingBloomFilter *this,
         float slot = ((float)spot) / 2.0;
         if (slot == (int)slot)
         {
-            if (this->buckets[(int)slot].nibbles.first == 0)
+            if (this->buckets[(int)slot].first == 0)
             {
                 return DEFINITELY_NOT_PRESENT;
             }
         }
         else
         {
-            if (this->buckets[(int)slot].nibbles.second == 0)
+            if (this->buckets[(int)slot].second == 0)
             {
                 return DEFINITELY_NOT_PRESENT;
             }
@@ -218,9 +215,10 @@ struct CountingBloomFilter *construct_CountingBloomFilter(
     int m = -floor((expectedElems * log(falsePositiveProb)) / pow(log(2), 2));
     int k = ceil((m / expectedElems) * log(2));
 
+    // Using calloc to initialize all buckets to 0.
     struct CountingBloomFilter *new =
         calloc(1, sizeof(struct CountingBloomFilter) +
-                      sizeof(union Nibbler) * ((m + 1) / 2));
+                      sizeof(struct Nibbler) * ((m + 1) / 2));
     if (!new)
     {
         fprintf(stderr, "construct_CountingBloomFilter no memory");
