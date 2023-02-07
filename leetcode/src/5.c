@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char * longestPalindrome(char * s){
+char * longestPalindrome(char * s) {
     int si_max = 0, ei_max = 0, sz_max = 0, sz, i, delta_i;
     char ch, *s_longest;
     if (s[1] == '\0') return s;
@@ -45,6 +45,7 @@ char * longestPalindrome(char * s){
     if ((s_longest = (char *) malloc(sizeof(s))) == NULL)
         return NULL;
     strncpy(s_longest, s + si_max, sz_max);
+    s_longest[sz_max] = '\0';
 
     return s_longest;
 }
