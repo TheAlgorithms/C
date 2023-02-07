@@ -42,8 +42,9 @@ char * longestPalindrome(char * s) {
         }
     }
 
-    if ((s_longest = (char *) malloc(sizeof(s))) == NULL)
+    if ((s_longest = (char *) malloc(sizeof(s))) == NULL) {
         return NULL;
+    }
     strncpy(s_longest, s + si_max, sz_max);
     s_longest[sz_max] = '\0';
 
