@@ -2,7 +2,7 @@
 // Runtime: O(n)
 // Space: O(n)
 int jump(int* nums, int numsSize) {
-    if (numsSize == 1){
+    if (numsSize == 1) {
         return 0;
     }
 
