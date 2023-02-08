@@ -17,7 +17,7 @@ int jump(int* nums, int numsSize) {
         int* nextQueue = malloc(numsSize * sizeof(int));
         int nextQueueLength = 0;
 
-        for (int i = 0; i < queueLength; i++){
+        for (int i = 0; i < queueLength; i++) {
             int cell = queue[i];
             int jump = nums[cell];
 
