@@ -21,7 +21,7 @@ int jump(int* nums, int numsSize) {
             int cell = queue[i];
             int jump = nums[cell];
 
-            if (cell + jump >= numsSize - 1){
+            if (cell + jump >= numsSize - 1) {
                 free(visitedCells);
                 free(queue);
                 free(nextQueue);
