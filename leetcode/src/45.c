@@ -22,6 +22,9 @@ int jump(int* nums, int numsSize){
             int jump = nums[cell];
 
             if (cell + jump >= numsSize - 1){
+                free(visitedCells);
+                free(queue);
+                free(nextQueue);
                 return step;
             }
 
@@ -41,6 +44,7 @@ int jump(int* nums, int numsSize){
         queueLength = nextQueueLength;
     }
 
+    free(visitedCells);
     free(queue);
     return -1;
 }
