@@ -145,7 +145,7 @@ struct BloomFilter *construct_bloomFilter(int expectedElems,
     int m = -floor((expectedElems * log(falsePositiveProb)) / pow(log(2), 2));
     int k = ceil((m / expectedElems) * log(2));
 
-    // Using calloc to initialize all
+    // Using calloc to initialize all buckets to 0.
     struct BloomFilter *new = calloc(
         1, sizeof(struct BloomFilter) + sizeof(unsigned char) * ((m + 1) / 8));
     if (!new)

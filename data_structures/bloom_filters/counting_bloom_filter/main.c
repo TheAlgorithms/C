@@ -27,15 +27,27 @@
  */
 static void test()
 {
+    int err;
     printf("Constructing a new filter.\n");
     struct CountingBloomFilter* bf = construct_CountingBloomFilter(100, .001);
+    if (bf == NULL)
+    {
+        fprintf(stderr, "Not enough memory to create filter");
+    }
+    assert(bf);
+
     int testNum;
     printf("Inserting elements into the filter: ");
-    for (int i = 0; i < 10; ++i)
+    for (int i = 0; i < 100; ++i)
     {
         testNum = i;
         printf("%d, ", i);
-        countingBloom_insert(bf, &testNum, sizeof testNum);
+        err = countingBloom_insert(bf, &testNum, sizeof testNum);
+        if (err)
+        {
+            fprintf(stderr, "Insert caused a counter to overflow\n");
+        }
+        assert(!err);
     }
     printf("\n\nPrinting Stats:\n");
     countingBloom_printStats(bf);
@@ -49,7 +61,12 @@ static void test()
            res == PROBABLY_PRESENT ? "probably present"
                                    : "definitely not present");
     printf("Removing %d from the filter\n", testNum);
-    countingBloom_remove(bf, &testNum, sizeof testNum);
+    err = countingBloom_remove(bf, &testNum, sizeof testNum);
+    if (err)
+    {
+        fprintf(stderr, "Remove caused a counter to underflow\n");
+    }
+    assert(!err);
     printf("Checking %d's membership:\n", testNum);
     res = countingBloom_contains(bf, &testNum, sizeof testNum);
     assert(res == DEFINITELY_NOT_PRESENT);

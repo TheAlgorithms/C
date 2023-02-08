@@ -25,6 +25,11 @@ static void test()
 {
     printf("Constructing a new filter.\n");
     struct BloomFilter* bf = construct_bloomFilter(100, .001);
+    if (bf == NULL)
+    {
+        printf("Not enough memory to create filter");
+    }
+    assert(bf);
     int testNum;
     printf("Inserting elements into the filter: ");
     for (int i = 0; i < 10; ++i)
