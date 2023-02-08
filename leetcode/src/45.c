@@ -29,7 +29,7 @@ int jump(int* nums, int numsSize) {
             }
 
             // populate next queue wave for searching
-            for (int nextCell = cell; nextCell <= cell + jump; nextCell++){
+            for (int nextCell = cell; nextCell <= cell + jump; nextCell++) {
                 if (visitedCells[nextCell] == 0){
                     nextQueue[nextQueueLength++] = nextCell;
                     visitedCells[nextCell] = 1;
