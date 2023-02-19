@@ -1,10 +1,11 @@
 #include <stdlib.h> // for qsort()
 
 int cmp(const void* a, const void* b) {
-    return *(int*)a - *(int*)b;
+    const int *A = a, *B = b;
+    return (*A > *B) - (*A < *B);
 }
 
-int threeSumClosest(int* nums, int nums_size, int target) {        
+int threeSumClosest(int* nums, int nums_size, int target) {
     int i, j, k, result, sum3;
     qsort(nums, nums_size, sizeof(int), cmp);
     result = nums[0] + nums[1] + nums[2];
@@ -21,7 +22,7 @@ int threeSumClosest(int* nums, int nums_size, int target) {
             } else if (sum3 > target) {
                 k--;
             } else {
-                return sum3;                    
+                return sum3;
             }
         }
     }
