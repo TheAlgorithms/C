@@ -92,6 +92,7 @@
 |  509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)                                                                                     | [C](./src/509.c)  | Easy       |
 |  520 | [Detect Capital](https://leetcode.com/problems/detect-capital)                                                                                         | [C](./src/520.c)  | Easy       |
 |  561 | [Array Partition](https://leetcode.com/problems/array-partition)                                                                                       | [C](./src/561.c)  | Easy       |
+|  567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string)                                                                           | [C](./src/567.c)  | Medium     |
 |  617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees)                                                                         | [C](./src/617.c)  | Easy       |
 |  647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)                                                                         | [C](./src/647.c)  | Medium     |
 |  669 | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree)                                                                   | [C](./src/669.c)  | Medium     |
@@ -111,8 +112,10 @@
 |  917 | [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters)                                                                             | [C](./src/917.c)  | Easy       |
 |  931 | [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum)                                                                     | [C](./src/931.c)  | Medium     |
 |  938 | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)                                                                                     | [C](./src/938.c)  | Easy       |
+|  953 | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary)                                                           | [C](./src/953.c)  | Easy       |
 |  965 | [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)                                                                           | [C](./src/965.c)  | Easy       |
 |  977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)                                                                   | [C](./src/977.c)  | Easy       |
+|  979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree)                                                       | [C](./src/979.c)  | Medium     |
 |  985 | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries)                                                   | [C](./src/985.c)  | Medium     |
 |  997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge)                                                                               | [C](./src/997.c)  | Easy       |
 | 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)             | [C](./src/1008.c) | Medium     |
@@ -120,6 +123,7 @@
 | 1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list)                                                     | [C](./src/1019.c) | Medium     |
 | 1026 | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor)                             | [C](./src/1026.c) | Medium     |
 | 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                       | [C](./src/1089.c) | Easy       |
+| 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                                                         | [C](./src/1137.c) | Easy       |
 | 1147 | [Longest Chunked Palindrome Decomposition](https://leetcode.com/problems/longest-chunked-palindrome-decomposition)                                     | [C](./src/1147.c) | Hard       |
 | 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops)                                                                 | [C](./src/1184.c) | Easy       |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)                                                                 | [C](./src/1189.c) | Easy       |
