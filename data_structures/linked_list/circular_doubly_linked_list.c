@@ -11,7 +11,8 @@
  *
  * In this implementation, the menu-driven code is written along with functions
  * to insert at the head, insert at the last index, delete the first node,
- * delete the last node, and display list functions are coded.
+ * delete the last node, display list, reverse list and get list size functions
+ * are coded.
  *
  * @author [Sahil Kandhare](https://github.com/SahilK-027)
  *
@@ -23,7 +24,6 @@
 
 /**
  * @brief Circular Doubly linked list struct
- *
  */
 typedef struct node
 {
@@ -33,9 +33,8 @@ typedef struct node
 
 /**
  * @brief Create a list node
- *
- * @param data
- * @return ListNode*  newly created list node
+ * @param data                  The data which we want to insert into list
+ * @return ListNode*            newly created list node
  */
 ListNode *create_list(uint64_t data)
 {
@@ -47,11 +46,11 @@ ListNode *create_list(uint64_t data)
 }
 
 /**
- * @brief Insert the node at start of list
- *
- * @param head   starting pointer of list
- * @param data   The data which we want to insert into list
- * @return ListNode*
+ * @brief Insert a node at start of list
+ * @param head                  starting pointer of list
+ * @param data                  The data which we want to insert into list
+ * @return ListNode*            It return ListNode pointer with new node
+ * inserted at the head
  */
 ListNode *insert_at_head(ListNode *head, uint64_t data)
 {
@@ -75,11 +74,12 @@ ListNode *insert_at_head(ListNode *head, uint64_t data)
 }
 
 /**
- * @brief Insert the node at end of list
+ * @brief Insert a node at end of list
  *
- * @param head      starting pointer of list
- * @param data      The data which we want to insert into list
- * @return ListNode*
+ * @param head                  starting pointer of list
+ * @param data                  The data which we want to insert into list
+ * @return ListNode*            It return ListNode pointer with new node
+ * inserted at the tail of the original list.
  */
 ListNode *insert_at_last(ListNode *head, uint64_t data)
 {
@@ -105,8 +105,8 @@ ListNode *insert_at_last(ListNode *head, uint64_t data)
 /**
  * @brief  Function for deletion of the first node in list
  *
- * @param head      starting pointer of list
- * @return ListNode*
+ * @param head              starting pointer of list
+ * @return ListNode*        returns list pointer after deleting first node
  */
 ListNode *delete_first_node(ListNode *head)
 {
@@ -122,23 +122,22 @@ ListNode *delete_first_node(ListNode *head)
     {
         free(temp2);
         head = NULL;
-        printf("\nNode succesfully deleted\n\n");
+        printf("\nNode successfully deleted\n\n");
         return head;
     }
     temp2->next = temp1->next;
     (temp1->next)->prev = temp2;
     head = temp1->next;
     free(temp1);
-    temp1 = NULL;
-    printf("\nNode succesfully deleted\n\n");
+    printf("\nNode successfully deleted\n\n");
     return head;
 }
 
 /**
  * @brief Function for deletion of the last node in list
  *
- * @param head      starting pointer of list
- * @return ListNode*
+ * @param head              starting pointer of list
+ * @return ListNode*        returns list pointer after deleting last node
  */
 ListNode *delete_last_node(ListNode *head)
 {
@@ -155,28 +154,29 @@ ListNode *delete_last_node(ListNode *head)
     {
         free(temp2);
         head = NULL;
-        printf("\nNode succesfully deleted\n\n");
+        printf("\nNode successfully deleted\n\n");
         return head;
     }
     (temp2->prev)->next = temp1;
     temp1->prev = temp2->prev;
     free(temp2);
-    temp2 = NULL;
-    printf("\nNode succesfully deleted\n\n");
+    printf("\nNode successfully deleted\n\n");
     return head;
 }
 
 /**
  * @brief The function to reverse the linked list
  *
- * @param head      starting pointer of list
- * @return ListNode*
+ * @param head              starting pointer of list
+ * @return ListNode*        returns ListNode pointer of reversed linked list
  */
 ListNode *reverseLL(ListNode *head)
 {
     if (!head)
+    {
+        printf("list is Empty\n");
         return NULL;
-
+    }
     ListNode *new_head = NULL;
     ListNode *last = head->prev;
     ListNode *curr = last, *prev;
@@ -189,7 +189,7 @@ ListNode *reverseLL(ListNode *head)
         curr = prev;
     }
     new_head = insert_at_last(new_head, curr->value);
-
+    printf("\nList successfully reversed\n\n");
     return new_head;
 }
 
@@ -201,6 +201,10 @@ ListNode *reverseLL(ListNode *head)
  */
 int getsize(ListNode *head)
 {
+    if (!head)
+    {
+        return 0;
+    }
     int size = 1;
     ListNode *temp = head->next;
     while (temp != head)
@@ -259,48 +263,60 @@ int main()
         printf(
             "ENTER YOUR CHOICE\n1. Insert At head\n2. Insert At End\n3. "
             "Delete First node \n4. Delete Last Node \n5. Reverse List\n6. Get "
-            "List size\n7. Display List"
-            "\n8. Exit\n");
+            "List size\n7. Exit"
+            "\n");
         scanf("%d", &ch);
         switch (ch)
         {
-        case 1:
-            printf("Enter the data: ");
-            scanf("%lld", &value);
-            head = insert_at_head(head, value);
-            break;
-        case 2:
-            printf("Enter the data: ");
-            scanf("%lld", &value);
-            head = insert_at_last(head, value);
-            break;
-        case 3:
-            head = delete_first_node(head);
-            break;
-
-        case 4:
-            head = delete_last_node(head);
-            break;
-
-        case 5:
-            head = reverseLL(head);
-            printf("\nList succesfully reversed\n\n");
-            break;
-
-        case 6:
-            printf("\nSize of list is %d\n\n", getsize(head));
-            break;
-
-        case 7:
-            display(head);
-            break;
-
-        case 8:
-            flag = 0;
-            break;
-
-        default:
-            printf("\nIncorrect choice. Re-Enter values.\n\n");
+            {
+            case 1:
+                printf("Enter the data: ");
+                scanf("%lld", &value);
+                head = insert_at_head(head, value);
+                display(head);
+                break;
+            }
+            {
+            case 2:
+                printf("Enter the data: ");
+                scanf("%lld", &value);
+                head = insert_at_last(head, value);
+                display(head);
+                break;
+            }
+            {
+            case 3:
+                head = delete_first_node(head);
+                display(head);
+                break;
+            }
+            {
+            case 4:
+                head = delete_last_node(head);
+                display(head);
+                break;
+            }
+            {
+            case 5:
+                head = reverseLL(head);
+                display(head);
+                break;
+            }
+            {
+            case 6:
+                display(head);
+                printf("\nSize of list is %d\n\n", getsize(head));
+                break;
+            }
+            {
+            case 7:
+                flag = 0;
+                break;
+            }
+            {
+            default:
+                printf("\nIncorrect choice. Re-Enter values.\n\n");
+            }
         }
     }
     return 0;
