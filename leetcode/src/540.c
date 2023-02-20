@@ -1,7 +1,7 @@
 /**
  * Time complexity: O(log n).
  * Space complexity: O(1).
- * @details The array has a pattern that consists in that the existing sub-array to 
+ * @details The array has a pattern that consists in of the existing sub-array to 
  *          the left of the non-repeating number will satisfy the condition that 
  *          each pair of repeated elements have their first occurrence at the even index
  *          and their second occurrence at the odd index, and that the sub-array to 
