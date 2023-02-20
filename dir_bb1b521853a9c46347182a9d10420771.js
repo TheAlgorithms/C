@@ -9,6 +9,7 @@ var dir_bb1b521853a9c46347182a9d10420771 =
     [ "insertion_sort_recursive.c", "de/d0c/insertion__sort__recursive_8c.html", "de/d0c/insertion__sort__recursive_8c" ],
     [ "merge_sort.c", "d2/d83/merge__sort_8c.html", "d2/d83/merge__sort_8c" ],
     [ "odd_even_sort.c", "d1/d94/odd__even__sort_8c.html", "d1/d94/odd__even__sort_8c" ],
+    [ "patience_sort.c", "d2/d57/patience__sort_8c.html", "d2/d57/patience__sort_8c" ],
     [ "selection_sort.c", "df/d83/selection__sort_8c.html", "df/d83/selection__sort_8c" ],
     [ "selection_sort_recursive.c", "dc/d39/selection__sort__recursive_8c.html", "dc/d39/selection__sort__recursive_8c" ],
     [ "shell_sort2.c", "d6/ded/shell__sort2_8c.html", "d6/ded/shell__sort2_8c" ]

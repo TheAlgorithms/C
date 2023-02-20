@@ -1,5 +1,11 @@
 var NAVTREEINDEX3 =
 {
+"dc/d77/struct__big__int.html#ad8405989a924410942b39ec0e9fef30b":[15,0,0,1],
+"dc/d80/cantor__set_8c.html":[16,0,14,0],
+"dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97":[16,0,14,0,5],
+"dc/d80/cantor__set_8c.html#a2b95c356aff8a282eaad255008fa5a94":[16,0,14,0,1],
+"dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab":[16,0,14,0,4],
+"dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d":[16,0,14,0,2],
 "dc/d80/cantor__set_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089":[16,0,14,0,3],
 "dc/d80/collatz_8c.html":[16,0,14,2],
 "dc/d80/collatz_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[16,0,14,2,0],
@@ -159,11 +165,11 @@ var NAVTREEINDEX3 =
 "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,1],
 "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,1,0],
 "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md76":[11,2],
-"df/d83/selection__sort_8c.html":[16,0,20,9],
-"df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,20,9,3],
-"df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,20,9,0],
-"df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3":[16,0,20,9,2],
-"df/d83/selection__sort_8c.html#aeafe7419cfceaeccaf49f22842d9a617":[16,0,20,9,1],
+"df/d83/selection__sort_8c.html":[16,0,20,10],
+"df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,20,10,3],
+"df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,20,10,0],
+"df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3":[16,0,20,10,2],
+"df/d83/selection__sort_8c.html#aeafe7419cfceaeccaf49f22842d9a617":[16,0,20,10,1],
 "df/d86/structterm.html":[15,0,42],
 "df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74":[15,0,42,2],
 "df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b":[15,0,42,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX3 =
 "dir_c7ef0fcb2f2095a74f0a3a1634dfc798.html":[16,0,3,0],
 "dir_d20ad0b8de644c123692ba5582cc7a7b.html":[16,0,1],
 "dir_d4c35186c199e728d69dee6bf5b2473c.html":[16,0,18,22],
-"dir_d9112ab06cf4d4e5a25d385a268d1949.html":[16,0,18,2],
-"dir_d9e100c82ada2163abea49688a71e81c.html":[16,0,18,10],
-"dir_da574daf9ce9c05b45556bdc871ed1e3.html":[16,0,19],
-"dir_e3380d2178455503f266746fb14246a5.html":[16,0,8],
-"dir_e39df94f82619fa5256f1786519937be.html":[16,0,3,1],
-"dir_e79632891301b850df87e9c0030293fa.html":[16,0,9],
-"dir_eeeea13e3a5e5edad3499183767ce312.html":[16,0,18,8]
+"dir_d9112ab06cf4d4e5a25d385a268d1949.html":[16,0,18,2]
 };
