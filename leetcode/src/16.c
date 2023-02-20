@@ -28,4 +28,3 @@ int threeSumClosest(int* nums, int nums_size, int target) {
     }
     return result;
 }
-
