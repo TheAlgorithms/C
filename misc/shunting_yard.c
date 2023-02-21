@@ -113,6 +113,7 @@ int shuntingYard(const char *input, char *output) {
                     if(stackPointer == 0) {
                         fprintf(stderr,"Error: Mismatched parentheses\n");
                         free(operatorStack);
+                        free(str);
                         return 1;
                     }
 
