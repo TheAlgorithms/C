@@ -80,7 +80,7 @@ int shuntingYard(const char *input, char *output) {
 
     // We will parse the input with strtok(),
     // Since strtok() is destructive, we make a copy of the input to preserve the original string
-    char* str = malloc(sizeof(char) * inputLength);
+    char* str = malloc(sizeof(char) * inputLength + 1);
     strcpy(str,input);
     char* token = strtok(str," ");
 
