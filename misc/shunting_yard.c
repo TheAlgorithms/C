@@ -163,6 +163,8 @@ int shuntingYard(const char *input, char *output) {
         token = strtok(NULL," ");
     }
 
+    free(str);
+
     // Now all input has been exhausted,
     // Pop everything from the operator stack, then push them to the output
     while (stackPointer > 0) {
