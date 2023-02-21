@@ -9,15 +9,15 @@
  * pointer and the last node point to the first node via the next pointer, and
  * the first node points to the last node via the previous pointer.
  *
- * In this implementation, the menu-driven code is written along with functions
- * to insert at the head, insert at the last index, delete the first node,
- * delete the last node, display list, reverse list and get list size functions
- * are coded.
+ * In this implementation, functions to insert at the head, insert at the last
+ * index, delete the first node, delete the last node, display list, reverse
+ * list and get list size functions are coded.
  *
  * @author [Sahil Kandhare](https://github.com/SahilK-027)
  *
  */
 
+#include <assert.h>  /// to verify assumptions made by the program and print a diagnostic message if this assumption is false.
 #include <inttypes.h>  /// to provide a set of integer types with universally consistent definitions that are operating system-independent
 #include <stdio.h>     /// for IO operations
 #include <stdlib.h>  /// for including functions involving memory allocation such as `malloc`
@@ -33,10 +33,10 @@ typedef struct node
 
 /**
  * @brief Create a list node
- * @param data                  The data which we want to insert into list
- * @return ListNode*            newly created list node
+ * @param data                  the data that the node initialises with
+ * @return ListNode*            pointer to the newly created list node
  */
-ListNode *create_list(uint64_t data)
+ListNode *create_node(uint64_t data)
 {
     ListNode *new_list = (ListNode *)malloc(sizeof(ListNode));
     new_list->value = data;
@@ -47,22 +47,22 @@ ListNode *create_list(uint64_t data)
 
 /**
  * @brief Insert a node at start of list
- * @param head                  starting pointer of list
- * @param data                  The data which we want to insert into list
- * @return ListNode*            It return ListNode pointer with new node
+ * @param head                  start pointer of list
+ * @param data                  the data that the node initialises with
+ * @return ListNode*            pointer to the newly created list node
  * inserted at the head
  */
 ListNode *insert_at_head(ListNode *head, uint64_t data)
 {
     if (head == NULL)
     {
-        head = create_list(data);
+        head = create_node(data);
         return head;
     }
     else
     {
         ListNode *temp;
-        ListNode *new_node = create_list(data);
+        ListNode *new_node = create_node(data);
         temp = head->prev;
         new_node->next = head;
         head->prev = new_node;
@@ -76,22 +76,22 @@ ListNode *insert_at_head(ListNode *head, uint64_t data)
 /**
  * @brief Insert a node at end of list
  *
- * @param head                  starting pointer of list
- * @param data                  The data which we want to insert into list
- * @return ListNode*            It return ListNode pointer with new node
- * inserted at the tail of the original list.
+ * @param head                  start pointer of list
+ * @param data                  the data that the node initialises with
+ * @return ListNode*            pointer to the newly added list node that was
+ * inserted at the head of list.
  */
-ListNode *insert_at_last(ListNode *head, uint64_t data)
+ListNode *insert_at_tail(ListNode *head, uint64_t data)
 {
     if (head == NULL)
     {
-        head = create_list(data);
+        head = create_node(data);
         return head;
     }
     else
     {
         ListNode *temp1, *temp2;
-        ListNode *new_node = create_list(data);
+        ListNode *new_node = create_node(data);
         temp1 = head;
         temp2 = head->prev;
         new_node->prev = temp2;
@@ -105,14 +105,14 @@ ListNode *insert_at_last(ListNode *head, uint64_t data)
 /**
  * @brief  Function for deletion of the first node in list
  *
- * @param head              starting pointer of list
- * @return ListNode*        returns list pointer after deleting first node
+ * @param head              start pointer of list
+ * @return ListNode*        pointer to the list node after deleting first node
  */
-ListNode *delete_first_node(ListNode *head)
+ListNode *delete_from_head(ListNode *head)
 {
     if (head == NULL)
     {
-        printf("list is Empty\n");
+        printf("The list is empty\n");
         return head;
     }
     ListNode *temp1, *temp2;
@@ -122,28 +122,26 @@ ListNode *delete_first_node(ListNode *head)
     {
         free(temp2);
         head = NULL;
-        printf("\nNode successfully deleted\n\n");
         return head;
     }
     temp2->next = temp1->next;
     (temp1->next)->prev = temp2;
     head = temp1->next;
     free(temp1);
-    printf("\nNode successfully deleted\n\n");
     return head;
 }
 
 /**
  * @brief Function for deletion of the last node in list
  *
- * @param head              starting pointer of list
- * @return ListNode*        returns list pointer after deleting last node
+ * @param head              start pointer of list
+ * @return ListNode*        pointer to the list node after deleting first node
  */
-ListNode *delete_last_node(ListNode *head)
+ListNode *delete_from_tail(ListNode *head)
 {
     if (head == NULL)
     {
-        printf("list is Empty\n");
+        printf("The list is empty\n");
         return head;
     }
 
@@ -154,27 +152,25 @@ ListNode *delete_last_node(ListNode *head)
     {
         free(temp2);
         head = NULL;
-        printf("\nNode successfully deleted\n\n");
         return head;
     }
     (temp2->prev)->next = temp1;
     temp1->prev = temp2->prev;
     free(temp2);
-    printf("\nNode successfully deleted\n\n");
     return head;
 }
 
 /**
  * @brief The function to reverse the linked list
  *
- * @param head              starting pointer of list
- * @return ListNode*        returns ListNode pointer of reversed linked list
+ * @param head              start pointer of list
+ * @return ListNode*        pointer to the list node after reversing linked list
  */
-ListNode *reverseLL(ListNode *head)
+ListNode *reverse_list(ListNode *head)
 {
     if (!head)
     {
-        printf("list is Empty\n");
+        printf("The list is empty\n");
         return NULL;
     }
     ListNode *new_head = NULL;
@@ -185,18 +181,17 @@ ListNode *reverseLL(ListNode *head)
     while (curr->prev != last)
     {
         prev = curr->prev;
-        new_head = insert_at_last(new_head, curr->value);
+        new_head = insert_at_tail(new_head, curr->value);
         curr = prev;
     }
-    new_head = insert_at_last(new_head, curr->value);
-    printf("\nList successfully reversed\n\n");
+    new_head = insert_at_tail(new_head, curr->value);
     return new_head;
 }
 
 /**
  * @brief The function that will return current size of list
  *
- * @param head      starting pointer of list
+ * @param head      start pointer of list
  * @return int      size of list
  */
 int getsize(ListNode *head)
@@ -217,13 +212,13 @@ int getsize(ListNode *head)
 
 /**
  * @brief   Display list function
- * @param   head   starting pointer of list
+ * @param   head   start pointer of list
  * @returns void
  */
 
-void display(ListNode *head)
+void display_list(ListNode *head)
 {
-    printf("\nIts Your Linked-list\n\n");
+    printf("\nContents of your linked list: ");
     ListNode *temp;
     temp = head;
     if (head != NULL)
@@ -240,7 +235,7 @@ void display(ListNode *head)
     }
     else
     {
-        printf("list is Empty\n");
+        printf("The list is empty");
     }
     printf("\n");
 }
@@ -253,71 +248,59 @@ int main()
 {
     // Creating an empty list
     ListNode *head = NULL;
-    // Flg to stop loop and value to insert
-    int flag = 1;
-    uint64_t value = 0;
-    while (flag == 1)
-    {
-        int ch;
-        printf("\nWhat do you want to perform?\n");
-        printf(
-            "ENTER YOUR CHOICE\n1. Insert At head\n2. Insert At End\n3. "
-            "Delete First node \n4. Delete Last Node \n5. Reverse List\n6. Get "
-            "List size\n7. Exit"
-            "\n");
-        scanf("%d", &ch);
-        switch (ch)
-        {
-            {
-            case 1:
-                printf("Enter the data: ");
-                scanf("%lld", &value);
-                head = insert_at_head(head, value);
-                display(head);
-                break;
-            }
-            {
-            case 2:
-                printf("Enter the data: ");
-                scanf("%lld", &value);
-                head = insert_at_last(head, value);
-                display(head);
-                break;
-            }
-            {
-            case 3:
-                head = delete_first_node(head);
-                display(head);
-                break;
-            }
-            {
-            case 4:
-                head = delete_last_node(head);
-                display(head);
-                break;
-            }
-            {
-            case 5:
-                head = reverseLL(head);
-                display(head);
-                break;
-            }
-            {
-            case 6:
-                display(head);
-                printf("\nSize of list is %d\n\n", getsize(head));
-                break;
-            }
-            {
-            case 7:
-                flag = 0;
-                break;
-            }
-            {
-            default:
-                printf("\nIncorrect choice. Re-Enter values.\n\n");
-            }
-        }
-    }
+
+    // Accessing Empty list
+    assert(getsize(head) == 0);
+    printf("Current size: %d\n", getsize(head));
+    display_list(head);
+    assert(delete_from_head(head) == NULL);
+    head = delete_from_head(head);
+    display_list(head);
+    assert(delete_from_head(head) == NULL);
+    head = delete_from_tail(head);
+    display_list(head);
+
+    // Insert at head
+    head = insert_at_head(head, 3);
+    assert(insert_at_head(head, 3));
+    head = insert_at_head(head, 2);
+    head = insert_at_head(head, 1);
+    display_list(head);
+    printf("Current size: %d\n", getsize(head));
+
+    // Insert at tail
+    head = insert_at_tail(head, 4);
+    head = insert_at_tail(head, 5);
+    head = insert_at_tail(head, 6);
+    display_list(head);
+    printf("Current size: %d\n", getsize(head));
+
+    // Delete node from start of list
+    head = delete_from_head(head);
+    display_list(head);
+    printf("Current size: %d\n", getsize(head));
+
+    // Delete node from end of list
+    head = delete_from_tail(head);
+    display_list(head);
+    printf("Current size: %d\n", getsize(head));
+
+    // Reverse list
+    head = reverse_list(head);
+    assert(reverse_list(head));
+    display_list(head);
+
+    // Deletenodes to make list empty
+    head = delete_from_head(head);
+    display_list(head);
+    head = delete_from_head(head);
+    display_list(head);
+    head = delete_from_head(head);
+    display_list(head);
+    head = delete_from_tail(head);
+    display_list(head);
+    head = delete_from_tail(head);
+    assert(delete_from_tail(head) == NULL);
+    display_list(head);
     return 0;
 }
