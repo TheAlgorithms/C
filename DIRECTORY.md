@@ -200,6 +200,7 @@
     * [142](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/142.c)
     * [1524](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1524.c)
     * [153](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/153.c)
+    * [16](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/16.c)
     * [160](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/160.c)
     * [1653](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1653.c)
     * [1657](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1657.c)
