@@ -169,12 +169,12 @@ avlNode *delete (avlNode *node, int queryNum)
             delete (node->right, queryNum); /*Recursive deletion in R subtree*/
     else
     {
-        /*Single or No Child*/
+        /*Single or No Children*/
         if ((node->left == NULL) || (node->right == NULL))
         {
             avlNode *temp = node->left ? node->left : node->right;
 
-            /* No Child*/
+            /* No Children*/
             if (temp == NULL)
             {
                 temp = node;
@@ -187,7 +187,7 @@ avlNode *delete (avlNode *node, int queryNum)
         }
         else
         {
-            /*Two Child*/
+            /*Two Children*/
 
             /*Get the smallest key in the R subtree*/
             avlNode *temp = minNode(node->right);

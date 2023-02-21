@@ -10,23 +10,23 @@
  * instead of the server only sending and the client only receiving data,
  * The server and client can both send and receive data simultaneously. This is
  * implemented by using the `fork` function call so that in the server the child
- * process can recieve data and  parent process can send data, and in the client
+ * process can receive data and  parent process can send data, and in the client
  * the child process can send data and the parent process can receive data. It
  * runs an infinite loop and can send and receive messages indefinitely until
  * the user exits the loop. In this way, the Full Duplex Form of communication
  * can be represented using the TCP server-client model & socket programming
  */
 
-#include <arpa/inet.h>             /// For the type in_addr_t and in_port_t
-#include <netdb.h>                /// For structures returned by the network database library - formatted internet addresses and port numbers
-#include <netinet/in.h>          /// For in_addr and sockaddr_in structures
-#include <stdint.h>             /// For specific bit size values of variables
-#include <stdio.h>             /// Variable types, several macros, and various functions for performing input and output
-#include <stdlib.h>           /// Variable types, several macros, and various functions for performing general functions
-#include <string.h>          /// Various functions for manipulating arrays of characters
-#include <sys/socket.h>     /// For macro definitions related to the creation of sockets
-#include <sys/types.h>     /// For definitions to allow for the porting of BSD programs
-#include <unistd.h>       /// For miscellaneous symbolic constants and types, and miscellaneous functions
+#include <arpa/inet.h>  /// For the type in_addr_t and in_port_t
+#include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
+#include <netinet/in.h>  /// For in_addr and sockaddr_in structures
+#include <stdint.h>      /// For specific bit size values of variables
+#include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
+#include <stdlib.h>  /// Variable types, several macros, and various functions for performing general functions
+#include <string.h>  /// Various functions for manipulating arrays of characters
+#include <sys/socket.h>  /// For macro definitions related to the creation of sockets
+#include <sys/types.h>  /// For definitions to allow for the porting of BSD programs
+#include <unistd.h>  /// For miscellaneous symbolic constants and types, and miscellaneous functions
 
 #define PORT 10000  /// Define port over which communication will take place
 
@@ -56,7 +56,7 @@ int main()
                          /// for communication
 
     struct sockaddr_in server_addr,
-        client_addr;  ///< asic structures for all syscalls and functions that
+        client_addr;  ///< basic structures for all syscalls and functions that
                       /// deal with internet addresses. Structures for handling
                       /// internet addresses
     socklen_t ClientLen;  /// size of address

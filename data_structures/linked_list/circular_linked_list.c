@@ -16,7 +16,7 @@ struct  node  *first=NULL ;
 struct  node  *last=NULL ;
 /* first and last are global variables and need not be passed to any function. Any changes made to variables first and last by any of the functions in the program will be reflected in the entire program */
 
-/* This function is responsible for creating the Circularly Linked List right from the BEGINING. */
+/* This function is responsible for creating the Circularly Linked List right from the BEGINNING. */
 void  create()
 {
   int  i , n ;

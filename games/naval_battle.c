@@ -885,7 +885,7 @@ int main()
         if (plays % 2 != 0)
         {
             printMessageScore(pts1, pts2);
-            printMessage("Player's turn 1");
+            printMessage("Player 1's turn");
             printsTray(Player2, 1);
             scanf("%d %c", &line, &column);
 
@@ -911,7 +911,7 @@ int main()
         else
         {
             printMessageScore(pts1, pts2);
-            printMessage("Player's turn 1");
+            printMessage("Player 2's turn");
             printsTray(Player1, 1);
             scanf("%d %c", &line, &column);
 

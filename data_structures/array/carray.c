@@ -100,6 +100,8 @@ int updateValueCArray(CArray *array, int position, int value)
     {
         if (array->array[position] != 0)
         {
+            array->array[position] = value;
+            return SUCCESS;
         }
 
         else
@@ -126,6 +128,7 @@ int switchValuesCArray(CArray *array, int position1, int position2)
         int temp = array->array[position1];
         array->array[position1] = array->array[position2];
         array->array[position2] = temp;
+        return SUCCESS;
     }
     return INVALID_POSITION;
 }
