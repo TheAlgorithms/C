@@ -1,5 +1,12 @@
 /**
  * Letter Combinations of a Phone Number problem
+ * The algorithm determines the final size of the return array (combs) and allocates
+ * corresponding letter for each element, assuming that the return array is alphabetically sorted.
+ * It does so by running two loops for each letter:
+ *   - the first loop determines the starting positions of the sequence of subsequent letter positions
+ *   - the second loop determines the length of each subsequent sequence for each letter
+ * The size and space complexity are both O("size of final array"), as even though there are 4 loops,
+ * each element in the final array is accessed only once.
  */
 
 #include <stdlib.h> // for the malloc() function
