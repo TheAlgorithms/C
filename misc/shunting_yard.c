@@ -107,7 +107,20 @@ int shuntingYard(const char *input, char *output) {
 
             // If it's a right parenthesis, search for a left parenthesis to match it
             case ')': {
+                // Guard statement against accessing an empty stack
+                if(stackPointer < 1) {
+                    fprintf(stderr,"Error: Mismatched parentheses\n");
+                    free(operatorStack);
+                    free(str);
+                    return 1;
+                }
+
                 while (operatorStack[stackPointer - 1] != '(') {
+                    // strncat() with a count of 1 is used to append characters to output
+                    const unsigned int i = (stackPointer--) - 1;
+                    strncat(output, &operatorStack[i], 1);
+                    strcat(output," ");
+
                     // If the operator stack is exhausted before a match can be found,
                     // There must be a mismatch
                     if(stackPointer == 0) {
@@ -116,10 +129,6 @@ int shuntingYard(const char *input, char *output) {
                         free(str);
                         return 1;
                     }
-
-                    // strncat() with a count of 1 is used to append characters to output
-                    strncat(output,&operatorStack[(stackPointer--) - 1],1);
-                    strcat(output," ");
                 }
 
                 // Discards the parentheses now the matching is complete,
@@ -131,7 +140,8 @@ int shuntingYard(const char *input, char *output) {
 
             // If it's an operator(o1), we compare it to whatever is at the top of the operator stack(o2)
             default: {
-                if(stackPointer == 0) {
+                // Places the operator into the stack directly if it's empty
+                if(stackPointer < 1) {
                     operatorStack[stackPointer++] = token[0];
                     break;
                 }
@@ -177,8 +187,11 @@ int shuntingYard(const char *input, char *output) {
             return 1;
         }
 
-        strncat(output,&operatorStack[(stackPointer--) - 1],1);
-        strcat(output," ");
+        const unsigned int i = (stackPointer--) - 1;
+        strncat(output, &operatorStack[i], 1);
+        if (i != 0) {
+            strcat(output," ");
+        }
     }
 
     free(operatorStack);
@@ -199,7 +212,7 @@ static void test() {
     i = shuntingYard(in, out);
     printf("RPN: %s\n",out);
     printf("Return code: %d\n\n",i);
-    assert(strcmp(out,"3 4 2 1 - * + ") == 0);
+    assert(strcmp(out,"3 4 2 1 - * +") == 0);
     assert(i == 0);
 
     strcpy(in,"3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3");
@@ -207,7 +220,7 @@ static void test() {
     i = shuntingYard(in, out);
     printf("RPN: %s\n",out);
     printf("Return code: %d\n\n",i);
-    assert(strcmp(out,"3 4 2 * 1 5 - 2 3 ^ ^ / + ") == 0);
+    assert(strcmp(out,"3 4 2 * 1 5 - 2 3 ^ ^ / +") == 0);
     assert(i == 0);
 
     printf("Testing successfully completed!\n");
