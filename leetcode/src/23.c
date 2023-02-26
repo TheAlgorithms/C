@@ -5,7 +5,7 @@
  *     struct ListNode *next;
  * };
  * 
- * Algorithm merges pairwaise lists by divide on conquer.
+ * Algorithm merges pairwise lists by divide and conquer.
  * Space complexity O(n * k), time complexity O(k * n * log(k)), where n - average size of list and k - number of lists.
  */
 struct ListNode *merge_two(struct ListNode *ln1, struct ListNode *ln2) {
@@ -45,7 +45,7 @@ struct ListNode *mergeKLists(struct ListNode** lists, int lists_size) {
     if (lists_size == 0) {
         return NULL;
     }
-    struct ListNode **ml;
+    struct ListNode **ml, *head;
     int i, is_odd, sz = lists_size;
     ml = malloc(sizeof(struct ListNode*) * lists_size);
     for (i = 0; i < lists_size; i++) {
@@ -63,5 +63,7 @@ struct ListNode *mergeKLists(struct ListNode** lists, int lists_size) {
         }
         sz = sz / 2 + is_odd;
     }
-    return ml[0];
+	head = ml[0];
+	free(ml);
+    return head;
 }
