@@ -241,6 +241,33 @@ void display_list(ListNode *head)
 }
 
 /**
+ * @brief Self-test implementations
+ * @returns void
+ */
+static void test() {
+    ListNode *testList = NULL;
+    unsigned int array[] = {2,3,4,5,6};
+
+    assert(getsize(testList) == 0);
+    
+    printf("Testing inserting elements:\n");
+    for (int i = 0; i < 5; ++i) {
+        display_list(testList);
+        testList = insert_at_head(testList,array[i]);
+        assert(testList->value == array[i]);
+        assert(getsize(testList) == i + 1);
+    }
+    
+    printf("\nTesting removing elements:\n");
+    for (int i = 4; i > -1; --i) {
+        display_list(testList);
+        assert(testList->value == array[i]);
+        testList = delete_from_head(testList);
+        assert(getsize(testList) == i);
+    }
+}
+
+/**
  * @brief Main function
  * @returns 0 on exit
  */
