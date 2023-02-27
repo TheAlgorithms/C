@@ -19,11 +19,12 @@ var searchData=
   ['get_5fproduct_16',['get_product',['../dc/d63/problem__8_2sol1_8c.html#a9ffc8845f17b01a353767a40a3adf7bd',1,'sol1.c']]],
   ['get_5frand_17',['get_rand',['../d6/d2e/cartesian__to__polar_8c.html#a60e62b809ca9dcb1b20a140b30d30f60',1,'cartesian_to_polar.c']]],
   ['get_5fwidth_5fand_5fprecision_18',['get_width_and_precision',['../d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03',1,'min_printf.h']]],
-  ['getmax_19',['getMax',['../da/d02/binary__search__tree_8c.html#ad50f3debc5323bb7b71933effb64f30f',1,'binary_search_tree.c']]],
-  ['getpointertoword_20',['getPointerToWord',['../d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1',1,'words_alphabetical.c']]],
-  ['getprecedence_21',['getPrecedence',['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'infix_to_postfix.c']]],
-  ['graph_22',['Graph',['../d4/dd4/struct_graph.html',1,'']]],
-  ['graphrep_23',['GraphRep',['../d2/d6a/struct_graph_rep.html',1,'']]],
-  ['group_24',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]],
-  ['guidelines_20for_20reviewers_20and_20maintainers_25',['Guidelines for reviewers and maintainers',['../dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html',1,'']]]
+  ['getassociativity_19',['getAssociativity',['../dc/d73/shunting__yard_8c.html#a4ea3d659fb78b0de0fcc88188815d013',1,'shunting_yard.c']]],
+  ['getmax_20',['getMax',['../da/d02/binary__search__tree_8c.html#ad50f3debc5323bb7b71933effb64f30f',1,'binary_search_tree.c']]],
+  ['getpointertoword_21',['getPointerToWord',['../d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1',1,'words_alphabetical.c']]],
+  ['getprecedence_22',['getPrecedence',['../dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65',1,'getPrecedence(char operator):&#160;shunting_yard.c'],['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'getPrecedence(char op1, char op2):&#160;infix_to_postfix.c']]],
+  ['graph_23',['Graph',['../d4/dd4/struct_graph.html',1,'']]],
+  ['graphrep_24',['GraphRep',['../d2/d6a/struct_graph_rep.html',1,'']]],
+  ['group_25',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]],
+  ['guidelines_20for_20reviewers_20and_20maintainers_26',['Guidelines for reviewers and maintainers',['../dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html',1,'']]]
 ];

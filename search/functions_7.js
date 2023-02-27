@@ -18,7 +18,8 @@ var searchData=
   ['get_5fproduct_15',['get_product',['../dc/d63/problem__8_2sol1_8c.html#a9ffc8845f17b01a353767a40a3adf7bd',1,'sol1.c']]],
   ['get_5frand_16',['get_rand',['../d6/d2e/cartesian__to__polar_8c.html#a60e62b809ca9dcb1b20a140b30d30f60',1,'cartesian_to_polar.c']]],
   ['get_5fwidth_5fand_5fprecision_17',['get_width_and_precision',['../d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03',1,'min_printf.h']]],
-  ['getmax_18',['getMax',['../da/d02/binary__search__tree_8c.html#ad50f3debc5323bb7b71933effb64f30f',1,'binary_search_tree.c']]],
-  ['getpointertoword_19',['getPointerToWord',['../d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1',1,'words_alphabetical.c']]],
-  ['getprecedence_20',['getPrecedence',['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'infix_to_postfix.c']]]
+  ['getassociativity_18',['getAssociativity',['../dc/d73/shunting__yard_8c.html#a4ea3d659fb78b0de0fcc88188815d013',1,'shunting_yard.c']]],
+  ['getmax_19',['getMax',['../da/d02/binary__search__tree_8c.html#ad50f3debc5323bb7b71933effb64f30f',1,'binary_search_tree.c']]],
+  ['getpointertoword_20',['getPointerToWord',['../d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1',1,'words_alphabetical.c']]],
+  ['getprecedence_21',['getPrecedence',['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'getPrecedence(char op1, char op2):&#160;infix_to_postfix.c'],['../dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65',1,'getPrecedence(char operator):&#160;shunting_yard.c']]]
 ];
