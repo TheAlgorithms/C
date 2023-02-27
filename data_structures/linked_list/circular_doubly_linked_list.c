@@ -244,22 +244,25 @@ void display_list(ListNode *head)
  * @brief Self-test implementations
  * @returns void
  */
-static void test() {
+static void test()
+{
     ListNode *testList = NULL;
-    unsigned int array[] = {2,3,4,5,6};
+    unsigned int array[] = {2, 3, 4, 5, 6};
 
     assert(getsize(testList) == 0);
-    
+
     printf("Testing inserting elements:\n");
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; ++i)
+    {
         display_list(testList);
-        testList = insert_at_head(testList,array[i]);
+        testList = insert_at_head(testList, array[i]);
         assert(testList->value == array[i]);
         assert(getsize(testList) == i + 1);
     }
-    
+
     printf("\nTesting removing elements:\n");
-    for (int i = 4; i > -1; --i) {
+    for (int i = 4; i > -1; --i)
+    {
         display_list(testList);
         assert(testList->value == array[i]);
         testList = delete_from_head(testList);
@@ -273,77 +276,6 @@ static void test() {
  */
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
-    ListNode *arrList = NULL;
-    for (int i = 0; i < 5; i++)
-    {
-        arrList = insert_at_tail(arrList, arr[i]);
-    }
-    ListNode *validationList = NULL;
-    validationList = insert_at_head(validationList, 5);
-    validationList = insert_at_head(validationList, 4);
-    validationList = insert_at_head(validationList, 3);
-    validationList = insert_at_head(validationList, 2);
-    validationList = insert_at_head(validationList, 1);
-
-    ListNode *temp1 = validationList;
-    ListNode *temp2 = arrList;
-    while (temp1->next != validationList)
-    {
-        assert(temp1->value == temp2->value);
-        temp1 = temp1->next;
-        temp2 = temp2->next;
-    }
-
-    // Creating an empty list
-    ListNode *head = NULL;
-
-    // Accessing Empty list
-    printf("Current size: %d\n", getsize(head));
-    display_list(head);
-    head = delete_from_head(head);
-    display_list(head);
-    head = delete_from_tail(head);
-    display_list(head);
-
-    // Insert at head
-    head = insert_at_head(head, 3);
-    head = insert_at_head(head, 2);
-    head = insert_at_head(head, 1);
-    display_list(head);
-    printf("Current size: %d\n", getsize(head));
-
-    // Insert at tail
-    head = insert_at_tail(head, 4);
-    head = insert_at_tail(head, 5);
-    head = insert_at_tail(head, 6);
-    display_list(head);
-    printf("Current size: %d\n", getsize(head));
-
-    // Delete node from start of list
-    head = delete_from_head(head);
-    display_list(head);
-    printf("Current size: %d\n", getsize(head));
-
-    // Delete node from end of list
-    head = delete_from_tail(head);
-    display_list(head);
-    printf("Current size: %d\n", getsize(head));
-
-    // Reverse list
-    head = reverse_list(head);
-    display_list(head);
-
-    // Deletenodes to make list empty
-    head = delete_from_head(head);
-    display_list(head);
-    head = delete_from_head(head);
-    display_list(head);
-    head = delete_from_head(head);
-    display_list(head);
-    head = delete_from_tail(head);
-    display_list(head);
-    head = delete_from_tail(head);
-    display_list(head);
+    test();
     return 0;
 }
