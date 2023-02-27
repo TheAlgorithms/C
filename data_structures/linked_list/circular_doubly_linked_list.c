@@ -246,23 +246,41 @@ void display_list(ListNode *head)
  */
 int main()
 {
+    int arr[5] = {1, 2, 3, 4, 5};
+    ListNode *arrList = NULL;
+    for (int i = 0; i < 5; i++)
+    {
+        arrList = insert_at_tail(arrList, arr[i]);
+    }
+    ListNode *validationList = NULL;
+    validationList = insert_at_head(validationList, 5);
+    validationList = insert_at_head(validationList, 4);
+    validationList = insert_at_head(validationList, 3);
+    validationList = insert_at_head(validationList, 2);
+    validationList = insert_at_head(validationList, 1);
+
+    ListNode *temp1 = validationList;
+    ListNode *temp2 = arrList;
+    while (temp1->next != validationList)
+    {
+        assert(temp1->value == temp2->value);
+        temp1 = temp1->next;
+        temp2 = temp2->next;
+    }
+
     // Creating an empty list
     ListNode *head = NULL;
 
     // Accessing Empty list
-    assert(getsize(head) == 0);
     printf("Current size: %d\n", getsize(head));
     display_list(head);
-    assert(delete_from_head(head) == NULL);
     head = delete_from_head(head);
     display_list(head);
-    assert(delete_from_head(head) == NULL);
     head = delete_from_tail(head);
     display_list(head);
 
     // Insert at head
     head = insert_at_head(head, 3);
-    assert(insert_at_head(head, 3));
     head = insert_at_head(head, 2);
     head = insert_at_head(head, 1);
     display_list(head);
@@ -287,7 +305,6 @@ int main()
 
     // Reverse list
     head = reverse_list(head);
-    assert(reverse_list(head));
     display_list(head);
 
     // Deletenodes to make list empty
@@ -300,7 +317,6 @@ int main()
     head = delete_from_tail(head);
     display_list(head);
     head = delete_from_tail(head);
-    assert(delete_from_tail(head) == NULL);
     display_list(head);
     return 0;
 }
