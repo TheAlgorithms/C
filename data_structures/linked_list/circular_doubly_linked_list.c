@@ -10,8 +10,8 @@
  * the first node points to the last node via the previous pointer.
  *
  * In this implementation, functions to insert at the head, insert at the last
- * index, delete the first node, delete the last node, display list, reverse
- * list and get list size functions are coded.
+ * index, delete the first node, delete the last node, display list, and get
+ * list size functions are coded.
  *
  * @author [Sahil Kandhare](https://github.com/SahilK-027)
  *
@@ -161,34 +161,6 @@ ListNode *delete_from_tail(ListNode *head)
 }
 
 /**
- * @brief The function to reverse the linked list
- *
- * @param head              start pointer of list
- * @return ListNode*        pointer to the list node after reversing linked list
- */
-ListNode *reverse_list(ListNode *head)
-{
-    if (!head)
-    {
-        printf("The list is empty\n");
-        return NULL;
-    }
-    ListNode *new_head = NULL;
-    ListNode *last = head->prev;
-    ListNode *curr = last, *prev;
-
-    // traverse list in backward direction
-    while (curr->prev != last)
-    {
-        prev = curr->prev;
-        new_head = insert_at_tail(new_head, curr->value);
-        curr = prev;
-    }
-    new_head = insert_at_tail(new_head, curr->value);
-    return new_head;
-}
-
-/**
  * @brief The function that will return current size of list
  *
  * @param head      start pointer of list
@@ -225,12 +197,12 @@ void display_list(ListNode *head)
     {
         while (temp->next != head)
         {
-            printf("%lld -> ", temp->value);
+            printf("%" PRIu64 " -> ", temp->value);
             temp = temp->next;
         }
         if (temp->next == head)
         {
-            printf("%lld", temp->value);
+            printf("%" PRIu64, temp->value);
         }
     }
     else
@@ -245,14 +217,18 @@ void display_list(ListNode *head)
  * @param list pointer to the target list
  * @param index access location
  * @returns the value at the specified index,
- *          wrapping around if the index is larger than the size of the target list
+ *          wrapping around if the index is larger than the size of the target
+ * list
  */
-uint64_t get(ListNode *list, const int index) {
-    if (list == NULL || index < 0) {
+uint64_t get(ListNode *list, const int index)
+{
+    if (list == NULL || index < 0)
+    {
         exit(EXIT_FAILURE);
     }
     ListNode *temp = list;
-    for (int i = 0; i < index; ++i) {
+    for (int i = 0; i < index; ++i)
+    {
         temp = temp->next;
     }
     return temp->value;
@@ -286,38 +262,30 @@ static void test()
         testList = delete_from_head(testList);
         assert(getsize(testList) == i);
     }
-    
+
     printf("\nTesting inserting at tail:\n");
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; ++i)
+    {
         display_list(testList);
-        testList = insert_at_tail(testList,array[i]);
-        assert(get(testList,i) == array[i]);
+        testList = insert_at_tail(testList, array[i]);
+        assert(get(testList, i) == array[i]);
         assert(getsize(testList) == i + 1);
     }
 
-//    printf("\nTesting reverse list:\n");
-//    display_list(testList);
-//    reverse_list(testList);
-//    display_list(testList);
-//    for (int i = 0; i < 5; ++i) {
-//        assert(get(testList,i) == array[4 - i]);
-//    }
-//    reverse_list(testList);
-//    display_list(testList);
-//    for (int i = 0; i < 5; ++i) {
-//        assert(get(testList,i) == array[i]);
-//    }
-
     printf("\nTesting removing from tail:\n");
-    for (int i = 4; i > -1; --i) {
+    for (int i = 4; i > -1; --i)
+    {
         display_list(testList);
         testList = delete_from_tail(testList);
         assert(getsize(testList) == i);
         // If list is not empty, assert that accessing the just removed element
         // will wrap around to the list head
-        if (testList != NULL) {
-            assert(get(testList,i) == testList->value);
-        } else {
+        if (testList != NULL)
+        {
+            assert(get(testList, i) == testList->value);
+        }
+        else
+        {
             // If the list is empty, assert that the elements were removed after
             // the correct number of iterations
             assert(i == 0);
@@ -331,6 +299,6 @@ static void test()
  */
 int main()
 {
-    test(); // run self-test implementations
+    test();  // run self-test implementations
     return 0;
 }
