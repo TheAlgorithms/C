@@ -268,6 +268,43 @@ static void test()
         testList = delete_from_head(testList);
         assert(getsize(testList) == i);
     }
+    
+    printf("\nTesting inserting at tail:\n");
+    for (int i = 0; i < 5; ++i) {
+        display_list(testList);
+        testList = insert_at_tail(testList,array[i]);
+        assert(get(testList,i) == array[i]);
+        assert(getsize(testList) == i + 1);
+    }
+
+//    printf("\nTesting reverse list:\n");
+//    display_list(testList);
+//    reverse_list(testList);
+//    display_list(testList);
+//    for (int i = 0; i < 5; ++i) {
+//        assert(get(testList,i) == array[4 - i]);
+//    }
+//    reverse_list(testList);
+//    display_list(testList);
+//    for (int i = 0; i < 5; ++i) {
+//        assert(get(testList,i) == array[i]);
+//    }
+
+    printf("\nTesting removing from tail:\n");
+    for (int i = 4; i > -1; --i) {
+        display_list(testList);
+        testList = delete_from_tail(testList);
+        assert(getsize(testList) == i);
+        // If list is not empty, assert that accessing the just removed element
+        // will wrap around to the list head
+        if (testList != NULL) {
+            assert(get(testList,i) == testList->value);
+        } else {
+            // If the list is empty, assert that the elements were removed after
+            // the correct number of iterations
+            assert(i == 0);
+        }
+    }
 }
 
 /**
