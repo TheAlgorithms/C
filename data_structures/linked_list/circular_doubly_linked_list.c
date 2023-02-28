@@ -241,6 +241,24 @@ void display_list(ListNode *head)
 }
 
 /**
+ * @brief access the list by index
+ * @param list pointer to the target list
+ * @param index access location
+ * @returns the value at the specified index,
+ *          wrapping around if the index is larger than the size of the target list
+ */
+uint64_t get(ListNode *list, const int index) {
+    if (list == NULL || index < 0) {
+        exit(EXIT_FAILURE);
+    }
+    ListNode *temp = list;
+    for (int i = 0; i < index; ++i) {
+        temp = temp->next;
+    }
+    return temp->value;
+}
+
+/**
  * @brief Self-test implementations
  * @returns void
  */
