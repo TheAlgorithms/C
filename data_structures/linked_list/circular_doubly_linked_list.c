@@ -276,6 +276,6 @@ static void test()
  */
 int main()
 {
-    test();
+    test(); // run self-test implementations
     return 0;
 }
