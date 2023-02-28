@@ -36,6 +36,7 @@
 |   45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii)                                                                                             | [C](./src/45.c)   | Medium     |
 |   50 | [Pow(x, n)](https://leetcode.com/problems/powx-n)                                                                                                      | [C](./src/50.c)   | Medium     |
 |   53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)                                                                                     | [C](./src/53.c)   | Medium     |
+|    61 | [Rotate List](https://leetcode.com/problems/rotate-list)                                                                                                       | [C](./src/61.c)    | Medium       |
 |   62 | [Unique Paths](https://leetcode.com/problems/unique-paths)                                                                                             | [C](./src/62.c)   | Medium     |
 |   63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)                                                                                       | [C](./src/63.c)   | Medium     |
 |   66 | [Plus One](https://leetcode.com/problems/plus-one)                                                                                                     | [C](./src/66.c)   | Easy       |
