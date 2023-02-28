@@ -197,7 +197,7 @@ void display_list(ListNode *head)
     {
         while (temp->next != head)
         {
-            printf("%" PRIu64 " -> ", temp->value);
+            printf("%" PRIu64 " <-> ", temp->value);
             temp = temp->next;
         }
         if (temp->next == head)
