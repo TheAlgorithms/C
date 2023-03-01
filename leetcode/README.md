@@ -39,16 +39,8 @@ If you have a solution to any of these problems (which are not being [**repeated
 4. Doxygen documentation isn't used in LeetCode solutions. Simple/small documentation or comments should be fine.
 5. Don't include libraries/headers such as `stdio.h`. Your file should be the solution to the problem only.
 
-### 📜 Adding your new solution to the list 📜
-
-Great! You've added your solution. Now, you'll have to add it to `leetcode/DIRECTORY.md`.\
-Please use numerical order. For example: if the solution's number is `98`, add your solution after `97`, if available.
-
-This is the required format for new solutinos:
-
-```markdown
-| <solution number>   | [<solution name>](<leetcode link to problem>)                                   | [C](./src/<filename>.c)   | <difficulty>     |
-```
+> **Note**
+> There was a requirement to update the `leetcode/DIRECTORY.md` file with details of the solved problem. It's not required anymore. The information about the problem is fetched automatically throughout the LeetCode API.
 
 ## 📦 Committing your changes 📦
 
