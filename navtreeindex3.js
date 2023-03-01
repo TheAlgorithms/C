@@ -169,8 +169,7 @@ var NAVTREEINDEX3 =
 "df/d58/md_leetcode__r_e_a_d_m_e.html":[11],
 "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73":[11,0],
 "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,1],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,1,0],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md76":[11,2],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,2],
 "df/d83/selection__sort_8c.html":[16,0,20,10],
 "df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,20,10,3],
 "df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,20,10,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "dir_abf1a26ece768c4076e73592705ae077.html":[16,0,4],
 "dir_b2dbfa46230fd9f775c32c1836ed3764.html":[16,0,18,15],
 "dir_b3d331eabd4234f247030c297aaf021c.html":[16,0,18],
-"dir_b6018f60d424a2ef7e4c942ac681e38b.html":[16,0,3,7]
+"dir_b6018f60d424a2ef7e4c942ac681e38b.html":[16,0,3,7],
+"dir_bb1b521853a9c46347182a9d10420771.html":[16,0,20]
 };
