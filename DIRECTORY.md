@@ -357,6 +357,7 @@
   * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rot13.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rselect.c)
   * [Run Length Encoding](https://github.com/TheAlgorithms/C/blob/HEAD/misc/run_length_encoding.c)
+  * [Shunting Yard](https://github.com/TheAlgorithms/C/blob/HEAD/misc/shunting_yard.c)
   * [Sudoku Solver](https://github.com/TheAlgorithms/C/blob/HEAD/misc/sudoku_solver.c)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/C/blob/HEAD/misc/tower_of_hanoi.c)
   * [Union Find](https://github.com/TheAlgorithms/C/blob/HEAD/misc/union_find.c)
