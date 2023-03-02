@@ -123,6 +123,7 @@
 
 ## Dynamic Programming
   * [Lcs](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/lcs.c)
+  * [Matrix Chain Order](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/matrix_chain_order.c)
 
 ## Exercism
   * Acronym
@@ -180,6 +181,7 @@
     * [11](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/11.c)
     * [110](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/110.c)
     * [112](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/112.c)
+    * [1137](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1137.c)
     * [1147](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1147.c)
     * [118](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/118.c)
     * [1184](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1184.c)
@@ -269,6 +271,7 @@
     * [520](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/520.c)
     * [53](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/53.c)
     * [561](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/561.c)
+    * [567](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/567.c)
     * [6](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/6.c)
     * [617](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/617.c)
     * [62](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/62.c)
@@ -300,10 +303,13 @@
     * [931](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/931.c)
     * [938](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/938.c)
     * [94](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/94.c)
+    * [953](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/953.c)
     * [965](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/965.c)
     * [977](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/977.c)
+    * [979](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/979.c)
     * [98](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/98.c)
     * [985](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/985.c)
+    * [997](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/997.c)
 
 ## Machine Learning
   * [Adaline Learning](https://github.com/TheAlgorithms/C/blob/HEAD/machine_learning/adaline_learning.c)
@@ -473,6 +479,7 @@
   * [Odd Even Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/odd_even_sort.c)
   * [Pancake Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/pancake_sort.c)
   * [Partition Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/partition_sort.c)
+  * [Patience Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/patience_sort.c)
   * [Pigeonhole Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/pigeonhole_sort.c)
   * [Quick Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/quick_sort.c)
   * [Radix Sort](https://github.com/TheAlgorithms/C/blob/HEAD/sorting/radix_sort.c)
