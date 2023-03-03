@@ -10,5 +10,6 @@ var structnode =
     [ "priority", "d5/da1/structnode.html#a44e51013eb31fc1f17866ca9fe8ac75b", null ],
     [ "right", "d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c", null ],
     [ "TAT", "d5/da1/structnode.html#abbe30696293849bebed90520b8cf7ba3", null ],
+    [ "value", "d5/da1/structnode.html#a4df5127dc26bf42ff5d965d77823efb5", null ],
     [ "WT", "d5/da1/structnode.html#a878d22393f374f3861035e35b9edd653", null ]
 ];

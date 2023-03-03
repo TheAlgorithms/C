@@ -1,0 +1,4 @@
+<map id="delete_from_tail" name="delete_from_tail">
+<area shape="rect" id="node1" title="Function for deletion of the last node in list." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="168,5,215,31"/>
+</map>

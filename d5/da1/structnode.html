@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('d5/da1/structnode.html','../../'); ini
 <div class="dynheader">
 Collaboration diagram for node:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d1f/structnode__coll__graph.svg" width="143" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d1f/structnode__coll__graph.svg" width="143" height="143"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -146,10 +146,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
 <tr class="memitem:ab4b1f345158daee0725acecd5ba817b1"><td class="memItemLeft" align="right" valign="top"><a id="ab4b1f345158daee0725acecd5ba817b1" name="ab4b1f345158daee0725acecd5ba817b1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>vertex</b></td></tr>
 <tr class="separator:ab4b1f345158daee0725acecd5ba817b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111a569ab2765add9b91c9f94cf9f063"><td class="memItemLeft" align="right" valign="top"><a id="a111a569ab2765add9b91c9f94cf9f063" name="a111a569ab2765add9b91c9f94cf9f063"></a>
-struct <a class="el" href="../../d5/da1/structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
-<tr class="memdesc:a111a569ab2765add9b91c9f94cf9f063"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the node <br /></td></tr>
+<tr class="memitem:a111a569ab2765add9b91c9f94cf9f063"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d5/da1/structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a></td></tr>
+<tr class="memdesc:a111a569ab2765add9b91c9f94cf9f063"><td class="mdescLeft">&#160;</td><td class="mdescRight">List pointers.  <br /></td></tr>
 <tr class="separator:a111a569ab2765add9b91c9f94cf9f063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee3d227c728ce18a86e43ebc301046e"><td class="memItemLeft" align="right" valign="top"><a id="a7ee3d227c728ce18a86e43ebc301046e" name="a7ee3d227c728ce18a86e43ebc301046e"></a>
+struct <a class="el" href="../../d5/da1/structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>prev</b></td></tr>
+<tr class="separator:a7ee3d227c728ce18a86e43ebc301046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df5127dc26bf42ff5d965d77823efb5"><td class="memItemLeft" align="right" valign="top"><a id="a4df5127dc26bf42ff5d965d77823efb5" name="a4df5127dc26bf42ff5d965d77823efb5"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="memdesc:a4df5127dc26bf42ff5d965d77823efb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stored on each node. <br /></td></tr>
+<tr class="separator:a4df5127dc26bf42ff5d965d77823efb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8973feda870a119ccdc25910254db0c"><td class="memItemLeft" align="right" valign="top"><a id="ac8973feda870a119ccdc25910254db0c" name="ac8973feda870a119ccdc25910254db0c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:ac8973feda870a119ccdc25910254db0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,11 +202,32 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TAT</b></td></tr>
 <p>for assert</p>
 <p>Kyler Smith, 2017 <a class="el" href="../../dd/d10/struct_stack.html" title="for printf() and scanf()">Stack</a> data structure implementation.</p>
 <p>INCLUDES.</p>
+<p>to verify assumptions made by the program and print a diagnostic message if this assumption is false.</p>
+<p>to provide a set of integer types with universally consistent definitions that are operating system-independent for IO operations for including functions involving memory allocation such as <code>malloc</code></p>
+<p>Circular Doubly linked list struct</p>
 <p>Defining the structure of the node which contains 'data' (type : integer), two pointers 'next' and 'pre' (type : struct node).</p>
 <p>creating a stucture with 'data'(type:int), two pointers 'next','pre' (type: struct node) .</p>
 <p>for boolean data type for IO operations (<code>printf</code>) for memory allocation eg: <code>malloc</code>, <code>realloc</code>, <code>free</code>, <code>exit</code></p>
 <p>Structure to represent a process </p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a111a569ab2765add9b91c9f94cf9f063" name="a111a569ab2765add9b91c9f94cf9f063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111a569ab2765add9b91c9f94cf9f063">&#9670;&#160;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d5/da1/structnode.html">node</a> * node::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List pointers. </p>
+<p>pointer to the node </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>data_structures/binary_trees/<a class="el" href="../../da/d02/binary__search__tree_8c.html">binary_search_tree.c</a></li>
 <li>data_structures/binary_trees/create_node.c</li>
 <li>data_structures/binary_trees/red_black_tree.c</li>
@@ -210,6 +237,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TAT</b></td></tr>
 <li>data_structures/graphs/strongly_connected_components.c</li>
 <li>data_structures/graphs/topological_sort.c</li>
 <li>data_structures/linked_list/ascending_priority_queue.c</li>
+<li>data_structures/linked_list/<a class="el" href="../../dd/d19/circular__doubly__linked__list_8c.html">circular_doubly_linked_list.c</a></li>
 <li>data_structures/linked_list/circular_linked_list.c</li>
 <li>data_structures/linked_list/merge_linked_lists.c</li>
 <li>data_structures/linked_list/queue_linked_list.c</li>

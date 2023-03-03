@@ -20,7 +20,8 @@ var searchData=
   ['list_17',['list',['../d8/d10/structlist.html',1,'']]],
   ['list_18',['List',['../dd/d29/doubly__linked__list_8c.html#aa89b8bc105d9a09d4e7c06e8b34078a7',1,'doubly_linked_list.c']]],
   ['listitem_19',['ListItem',['../d1/d7d/struct_list_item.html',1,'']]],
-  ['llink_20',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]],
-  ['lu_5fdecompose_2ec_21',['lu_decompose.c',['../dc/d2e/lu__decompose_8c.html',1,'']]],
-  ['lu_5fdecomposition_22',['lu_decomposition',['../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4',1,'lu_decompose.c']]]
+  ['listnode_20',['ListNode',['../dd/d19/circular__doubly__linked__list_8c.html#a77bc93c58c46925ba49f51f2d1a32899',1,'circular_doubly_linked_list.c']]],
+  ['llink_21',['llink',['../db/d8b/struct_node.html#a60b73f452505cef98795d2c8de3e72ef',1,'Node']]],
+  ['lu_5fdecompose_2ec_22',['lu_decompose.c',['../dc/d2e/lu__decompose_8c.html',1,'']]],
+  ['lu_5fdecomposition_23',['lu_decomposition',['../dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4',1,'lu_decompose.c']]]
 ];

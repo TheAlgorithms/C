@@ -110,9 +110,10 @@ var NAVTREEINDEX1 =
 "d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063":[15,0,28,6],
 "d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2":[15,0,28,3],
 "d5/da1/structnode.html#a44e51013eb31fc1f17866ca9fe8ac75b":[15,0,28,7],
+"d5/da1/structnode.html#a4df5127dc26bf42ff5d965d77823efb5":[15,0,28,10],
 "d5/da1/structnode.html#a51e160f22dc6064bac4a4f9f1d931c2c":[15,0,28,8],
 "d5/da1/structnode.html#a5507c3c76ddbda9c482749f3a8a8f0cc":[15,0,28,0],
-"d5/da1/structnode.html#a878d22393f374f3861035e35b9edd653":[15,0,28,10],
+"d5/da1/structnode.html#a878d22393f374f3861035e35b9edd653":[15,0,28,11],
 "d5/da1/structnode.html#abbe30696293849bebed90520b8cf7ba3":[15,0,28,9],
 "d5/da1/structnode.html#ac0a6453f996d4c362c015fd4348ecc6e":[15,0,28,1],
 "d5/da1/structnode.html#ac0c8b57ac0a76d72588561c81481c454":[15,0,28,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d7/ddb/problem__23_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,18,12,0,4],
 "d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17":[16,0,18,12,0,2],
 "d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf":[16,0,18,12,0,0],
-"d7/de0/stack_8h_source.html":[16,0,3,9,1],
-"d7/dfd/structdual__quat__.html":[14,0,3,0]
+"d7/de0/stack_8h_source.html":[16,0,3,9,1]
 };

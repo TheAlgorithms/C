@@ -1,0 +1,13 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,153,56,179"/>
+<area shape="rect" id="node2" href="$dd/d19/circular__doubly__linked__list_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="104,153,148,179"/>
+<area shape="rect" id="node3" href="$dd/d19/circular__doubly__linked__list_8c.html#a1418cac5ddf9edb58fca97afce27b456" title="Function for deletion of the first node in list." alt="" coords="196,5,321,31"/>
+<area shape="rect" id="node4" href="$dd/d19/circular__doubly__linked__list_8c.html#abf4cdda9fbace9822612349d19ec2e72" title="Function for deletion of the last node in list." alt="" coords="201,55,316,80"/>
+<area shape="rect" id="node6" href="$dd/d19/circular__doubly__linked__list_8c.html#a5411df421a94177700868b34887d5d0e" title="Display list function." alt="" coords="215,104,302,129"/>
+<area shape="rect" id="node7" href="$dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1" title="access the list by index" alt="" coords="239,153,279,179"/>
+<area shape="rect" id="node8" href="$dd/d19/circular__doubly__linked__list_8c.html#a6a64eb6265e703639bbfec9c3db93e0c" title="The function that will return current size of list." alt="" coords="227,203,291,228"/>
+<area shape="rect" id="node9" href="$dd/d19/circular__doubly__linked__list_8c.html#a964882e633c25a29b12237e29f20fa9a" title="Insert a node at start of list." alt="" coords="205,252,312,277"/>
+<area shape="rect" id="node11" href="$dd/d19/circular__doubly__linked__list_8c.html#aee328f691615862c4298fe730d66027b" title="Insert a node at end of list." alt="" coords="211,301,307,327"/>
+<area shape="rect" id="node5" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="393,55,439,80"/>
+<area shape="rect" id="node10" href="$dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b" title="Create a list node." alt="" coords="369,276,463,301"/>
+</map>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d7/dfd/structdual__quat__.html":[14,0,3,0],
 "d7/dfd/structdual__quat__.html#a1b05fbc4135e4f9b731423f26527543d":[14,0,3,0,0],
 "d7/dfd/structdual__quat__.html#ad663036ace6a586f90a2f89386f7731a":[14,0,3,0,1],
 "d8/d10/structlist.html":[15,0,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "dc/d64/md__coding_guidelines.html#autotoc_md14":[2,0],
 "dc/d64/md__coding_guidelines.html#autotoc_md16":[2,1],
 "dc/d73/shunting__yard_8c.html":[16,0,15,5],
-"dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65":[16,0,15,5,1],
-"dc/d73/shunting__yard_8c.html#a4ea3d659fb78b0de0fcc88188815d013":[16,0,15,5,0]
+"dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65":[16,0,15,5,1]
 };

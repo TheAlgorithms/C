@@ -25,6 +25,6 @@ var searchData=
   ['crc32_22',['crc32',['../d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567',1,'hash_crc32.c']]],
   ['create_23',['create',['../dd/d29/doubly__linked__list_8c.html#a37890fb794cb2c436ffcc643c30ec57f',1,'doubly_linked_list.c']]],
   ['create_5fmatrix_24',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
-  ['create_5fnode_25',['create_node',['../df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d',1,'threaded_binary_trees.c']]],
+  ['create_5fnode_25',['create_node',['../df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d',1,'create_node(int data):&#160;threaded_binary_trees.c'],['../dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b',1,'create_node(uint64_t data):&#160;circular_doubly_linked_list.c']]],
   ['create_5fpolynomial_26',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]]
 ];

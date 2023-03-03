@@ -1,7 +1,7 @@
 var searchData=
 [
   ['gcd_0',['gcd',['../d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d',1,'sol3.c']]],
-  ['get_1',['get',['../df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250',1,'vector.c']]],
+  ['get_1',['get',['../dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1',1,'get(ListNode *list, const int index):&#160;circular_doubly_linked_list.c'],['../df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250',1,'get(Vector *vec, int index):&#160;vector.c']]],
   ['get_5fangle_2',['get_angle',['../de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8',1,'vectors_3d.c']]],
   ['get_5fch_3',['get_ch',['../d9/deb/min__printf_8h.html#a409d428c337bf5476567a228274f49f1',1,'min_printf.h']]],
   ['get_5fclock_5fdiff_4',['get_clock_diff',['../d2/df6/kohonen__som__topology_8c.html#a2256c10b16edba377b64a44b6c656908',1,'get_clock_diff(clock_t start_t, clock_t end_t):&#160;kohonen_som_topology.c'],['../d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908',1,'get_clock_diff(clock_t start_t, clock_t end_t):&#160;kohonen_som_trace.c']]],
@@ -21,5 +21,6 @@ var searchData=
   ['getassociativity_18',['getAssociativity',['../dc/d73/shunting__yard_8c.html#a4ea3d659fb78b0de0fcc88188815d013',1,'shunting_yard.c']]],
   ['getmax_19',['getMax',['../da/d02/binary__search__tree_8c.html#ad50f3debc5323bb7b71933effb64f30f',1,'binary_search_tree.c']]],
   ['getpointertoword_20',['getPointerToWord',['../d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1',1,'words_alphabetical.c']]],
-  ['getprecedence_21',['getPrecedence',['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'getPrecedence(char op1, char op2):&#160;infix_to_postfix.c'],['../dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65',1,'getPrecedence(char operator):&#160;shunting_yard.c']]]
+  ['getprecedence_21',['getPrecedence',['../db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787',1,'getPrecedence(char op1, char op2):&#160;infix_to_postfix.c'],['../dc/d73/shunting__yard_8c.html#a4438f2369c8f681d8d0dff2eb86d0e65',1,'getPrecedence(char operator):&#160;shunting_yard.c']]],
+  ['getsize_22',['getsize',['../dd/d19/circular__doubly__linked__list_8c.html#a6a64eb6265e703639bbfec9c3db93e0c',1,'circular_doubly_linked_list.c']]]
 ];
