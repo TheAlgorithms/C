@@ -18,30 +18,31 @@
 * };
 */
 
-struct ListNode* rotateRight(struct ListNode* head, int k){
-struct ListNode *ptr = head, *prev =NULL;
-int count = 0;
+struct ListNode* rotateRight(struct ListNode* head, int k) {
 
-while(ptr){
-    ptr = ptr->next;
-    count++;
-}
-if(count!=0)
-    k = k%count;
-while(k--){
-    ptr = head;
-    if(ptr==NULL)
-        return NULL;
-    if(ptr->next==NULL)
-        return ptr;
-    while(ptr->next){
-        prev = ptr;
+    struct ListNode *ptr = head, *prev =NULL;
+    int count = 0;
+
+    while(ptr) {
         ptr = ptr->next;
+        count++;
     }
-    ptr->next = head;
-    head = ptr;
-    prev->next = NULL;
-}
-return head;
+    if(count!=0)
+        k = k%count;
+    while(k--) {
+        ptr = head;
+        if(ptr==NULL)
+            return NULL;
+        if(ptr->next==NULL)
+            return ptr;
+        while(ptr->next) {
+            prev = ptr;
+            ptr = ptr->next;
+        }
+        ptr->next = head;
+        head = ptr;
+        prev->next = NULL;
+    }
+    return head;
 
 }
