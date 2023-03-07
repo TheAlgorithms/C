@@ -294,7 +294,7 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key, uint8_t
 	}
 
 
-	BLAKE2B(dest, blocks, dd, ll, nn);
+	BLAKE2B(dest, blocks, dd, ll, kk, nn);
 
 	return dest;
 }
