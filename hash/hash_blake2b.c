@@ -19,7 +19,8 @@
 #define bb 128
 
 /**
- * @define ceiling division macro without floats
+ * @define CEIL
+ * @breif ceiling division macro without floats
  *
  * @param a dividend
  * @param divisor
@@ -27,26 +28,39 @@
 #define CEIL(a, b) (((a) / (b)) + ((a) % (b) != 0))
 
 /**
- * @define min-value macro
+ * @define MIN
+ * @brief returns minimum value
  */
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 /**
- * @define max-value macro
+ * @define MAX
+ * @brief returns maximum value
  */
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 /**
- * @define macro to rotate 64-bit ints to the right
+ * @define ROTR64
+ * @brief macro to rotate 64-bit ints to the right
  * Ripped from RFC 7693
  */
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
+/**
+ * @var R1, R2, R3, R4
+ * @brief rotation constants for mixing function G
+ */ 
 static const uint8_t R1 = 32,
 	             R2 = 24,
 		     R3 = 16,
 		     R4 = 63;
 
+/**
+ * @var blake2b_iv
+ * @brief initialization vector
+ *
+ * blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the i:th prime number
+ */
 static const uint64_t blake2b_iv[8] = {
        0x6A09E667F3BCC908, 0xBB67AE8584CAA73B,
        0x3C6EF372FE94F82B, 0xA54FF53A5F1D36F1,
@@ -54,6 +68,10 @@ static const uint64_t blake2b_iv[8] = {
        0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179
 };
 
+/**
+ * @var blake2b_sigma
+ * @brief word shedule permutations for each round of the algorithm
+ */
 static const uint8_t blake2b_sigma[12][16] = {
            { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 },
            { 14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3 },
@@ -144,8 +162,19 @@ static void F(uint64_t h[8], uint64_t m[16], uint64_t t[2], int f)
 	}
 }
 
-/* Function is keyless */
-static int BLAKE2B(uint8_t *dest, uint64_t (*d)[16], size_t dd, uint64_t ll[2], uint8_t nn)
+/**
+ * @brief driver function to perform the hashing as described in specification
+ *
+ * @param dest destination of hashing digest
+ * @param d message blocks
+ * @param dd length of d
+ * @param ll 128-bit length of message
+ * @param kk length of secret key
+ * @param nn length of hash digest
+ *
+ * @returns 0 upon successful hash
+ */
+static int BLAKE2B(uint8_t *dest, uint64_t (*d)[16], size_t dd, uint64_t ll[2], uint8_t kk, uint8_t nn)
 {
 	uint8_t bytes[8];
 	uint64_t i, j;
@@ -157,7 +186,7 @@ static int BLAKE2B(uint8_t *dest, uint64_t (*d)[16], size_t dd, uint64_t ll[2], 
 		h[i] = blake2b_iv[i];
 	}
 
-	h[0] ^= 0x01010000 ^ nn;
+	h[0] ^= 0x01010000 ^ (kk << 8) ^ nn;
 
 	if(dd > 1)
 	{
@@ -194,11 +223,11 @@ static int BLAKE2B(uint8_t *dest, uint64_t (*d)[16], size_t dd, uint64_t ll[2], 
 
 /* @brief blake2b hash function
  *
- * @param message	The message to be hashed
- * @param len		Length of message (0 <= len < 2**128) (depends on sizeof(size_t) for this implementation)
+ * @param message the message to be hashed
+ * @param len length of message (0 <= len < 2**128) (depends on sizeof(size_t) for this implementation)
  * @param key optional secret key
  * @param kk length of optional secret key (0 <= kk <= 64)
- * @param nn		Length of output digest (1 <= nn < 64)
+ * @param nn length of output digest (1 <= nn < 64)
  *
  * @returns NULL if heap memory couldn't be allocated. Otherwise heap allocated memory nn bytes large
  */
@@ -270,6 +299,8 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key, uint8_t
 	return dest;
 }
 
+/** @} */
+
 static void assert_bytes(const uint8_t *expected, const uint8_t *actual, uint8_t len)
 {
 	uint8_t i;
@@ -283,8 +314,6 @@ static void assert_bytes(const uint8_t *expected, const uint8_t *actual, uint8_t
 		assert(expected[i] == actual[i]);
 	}
 }
-
-/** @} */
 
 /** Main function */
 int main()
