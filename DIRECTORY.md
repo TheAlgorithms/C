@@ -215,6 +215,7 @@
     * [1833](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1833.c)
     * [1838](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1838.c)
     * [189](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/189.c)
+    * [19](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/19.c)
     * [190](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/190.c)
     * [191](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/191.c)
     * [2](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2.c)
