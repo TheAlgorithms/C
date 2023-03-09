@@ -5,6 +5,14 @@
  * @author [Daniel Murrow](https://github.com/dsmurrow)
  * @brief [Blake2b cryptographic hash
  * function](https://www.rfc-editor.org/rfc/rfc7693)
+ *
+ * The Blake2b cryptographic hash function provides 
+ * hashes for data that are secure enough to be used in 
+ * cryptographic applications. It is designed to perform 
+ * optimally on 64-bit platforms. The algorithm can output
+ * digests between 1 and 64 bytes long, for messages up to
+ * 128 bits in length. Keyed hashing is also supported for
+ * keys up to 64 bytes in length.
  */
 #include <assert.h> /// for asserts
 #include <inttypes.h> /// for fixed-width integer types e.g. uint64_t and uint8_t
