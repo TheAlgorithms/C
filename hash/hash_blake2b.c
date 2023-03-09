@@ -19,6 +19,8 @@
 #include <stdio.h> /// for IO
 #include <stdlib.h> /// for malloc, calloc, and free. As well as size_t
 
+/* Warning suppressed is in blake2b() function, more
+ * details are over there */
 #ifdef __GNUC__
 #pragma GCC diagnostic ignored "-Wshift-count-overflow"
 #elif _MSC_VER
@@ -296,6 +298,11 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
     ll[0] = len & UINT64_MAX;
 
+    /* The C standard does not specify a maximum length for size_t,
+     * although most machines implement it to be the same length as uint64_t.
+     * On machines where size_t is 8 bytes long this will issue a compiler 
+     * warning, which is why it is suppressed. But on a machine where size_t
+     * is greater than 8 bytes, this will work as normal. */
     if (sizeof(len) > 8)
     {
         ll[1] = len >> 64;
