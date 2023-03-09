@@ -304,6 +304,10 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
 /** @} */
 
+/**
+ * @brief Self-test implementations
+ * @returns void
+ */
 static void assert_bytes(const uint8_t *expected, const uint8_t *actual,
                          uint8_t len)
 {
