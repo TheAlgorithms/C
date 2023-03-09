@@ -319,7 +319,10 @@ static void assert_bytes(const uint8_t *expected, const uint8_t *actual,
     }
 }
 
-/** Main function */
+/**
+ * @brief Main function
+ * @returns 0 on exit
+ */
 int main()
 {
     uint8_t *digest = NULL;
