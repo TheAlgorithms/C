@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-unsigned fib(int);
+unsigned int fib(int number);
 
 /* Driver Code */
 int main()
