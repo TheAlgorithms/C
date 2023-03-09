@@ -1,7 +1,7 @@
 /**
  * @addtogroup hash Hash algorithms
  * @{
- * @file hash_blake2b.c
+ * @file
  * @author [Daniel Murrow](https://github.com/dsmurrow)
  * @brief [Blake2b cryptographic hash
  * function](https://www.rfc-editor.org/rfc/rfc7693)
