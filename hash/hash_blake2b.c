@@ -6,10 +6,10 @@
  * @brief [Blake2b cryptographic hash
  * function](https://www.rfc-editor.org/rfc/rfc7693)
  */
-#include <assert.h>
-#include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <assert.h> /// for asserts
+#include <inttypes.h> /// for fixed-width integer types e.g. uint64_t and uint8_t
+#include <stdio.h> /// for IO
+#include <stdlib.h> /// for malloc, calloc, and free. As well as size_t
 
 #ifdef __GNUC__
 #pragma GCC diagnostic ignored "-Wshift-count-overflow"
