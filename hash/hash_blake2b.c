@@ -27,11 +27,15 @@
 #pragma warning(disable : 4293)
 #endif
 
+/**
+ * @define bb
+ * @brief the size of a data block in bytes
+ */
 #define bb 128
 
 /**
  * @define CEIL
- * @breif ceiling division macro without floats
+ * @brief ceiling division macro without floats
  *
  * @param a dividend
  * @param divisor
@@ -96,6 +100,10 @@ static const uint8_t blake2b_sigma[12][16] = {
 /**
  * @brief blake2b mixing function G
  *
+ * Shuffles values in block v depending on
+ * provided indeces a, b, c, and d. x and y
+ * are also mixed into the block.
+ *
  * @param v array of words to be mixed
  * @param a first index
  * @param b second index
@@ -119,6 +127,11 @@ static void G(uint64_t v[16], uint8_t a, uint8_t b, uint8_t c, uint8_t d,
 
 /**
  * @brief compression function F
+ *
+ * Securely mixes the values in block m into 
+ * the state vector h. Value at v[14] is also
+ * inverted if this is the final block to be
+ * compressed.
  *
  * @param h the state vector
  * @param m message vector to be compressed into h
