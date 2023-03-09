@@ -31,9 +31,7 @@ int main()
  */
 unsigned fib(int number)
 {
-    if (number == 1)
-        return 0;
-    else if (number == 2)
+    if (number == 1 || number == 2)
         return 1;
     else
         return fib(number - 1) + fib(number - 2);
