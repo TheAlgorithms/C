@@ -66,13 +66,6 @@ static const uint8_t R2 - 24; ///< Rotation constant 2 for mixing function G
 static const uint8_t R3 = 16; ///< Rotation constant 3 for mixing function G
 static const uint8_t R4 = 63; ///< Rotation constant 4 for mixing function G
 
-/**
- * @var blake2b_iv
- * @brief initialization vector
- *
- * blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the
- * i:th prime number
- */
 static const uint64_t blake2b_iv[8] = {0x6A09E667F3BCC908, 0xBB67AE8584CAA73B,
                                        0x3C6EF372FE94F82B, 0xA54FF53A5F1D36F1,
                                        0x510E527FADE682D1, 0x9B05688C2B3E6C1F,
