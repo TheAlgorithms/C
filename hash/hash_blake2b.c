@@ -61,11 +61,10 @@
  */
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
-/**
- * @var R1, R2, R3, R4
- * @brief rotation constants for mixing function G
- */
-static const uint8_t R1 = 32, R2 = 24, R3 = 16, R4 = 63;
+static const uint8_t R1 = 32; ///< Rotation constant 1 for mixing function G
+static const uint8_t R2 - 24; ///< Rotation constant 2 for mixing function G
+static const uint8_t R3 = 16; ///< Rotation constant 3 for mixing function G
+static const uint8_t R4 = 63; ///< Rotation constant 4 for mixing function G
 
 /**
  * @var blake2b_iv
@@ -77,12 +76,9 @@ static const uint8_t R1 = 32, R2 = 24, R3 = 16, R4 = 63;
 static const uint64_t blake2b_iv[8] = {0x6A09E667F3BCC908, 0xBB67AE8584CAA73B,
                                        0x3C6EF372FE94F82B, 0xA54FF53A5F1D36F1,
                                        0x510E527FADE682D1, 0x9B05688C2B3E6C1F,
-                                       0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179};
+                                       0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179}; ///< BLAKE2b Initialization vector
+                                                                                ///< blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the i:th prime number
 
-/**
- * @var blake2b_sigma
- * @brief word shedule permutations for each round of the algorithm
- */
 static const uint8_t blake2b_sigma[12][16] = {
     {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
     {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3},
@@ -95,7 +91,7 @@ static const uint8_t blake2b_sigma[12][16] = {
     {6, 15, 14, 9, 11, 3, 0, 8, 12, 2, 13, 7, 1, 4, 10, 5},
     {10, 2, 8, 4, 7, 6, 1, 5, 15, 11, 9, 14, 3, 12, 13, 0},
     {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
-    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3}};
+    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3}}; ///< word schedule permutations for each round of the algorithm
 
 /**
  * @brief blake2b mixing function G
