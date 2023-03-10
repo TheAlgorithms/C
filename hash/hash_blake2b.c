@@ -61,6 +61,9 @@
  */
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
+/** Padded input block containing bb bytes */
+typedef uint64_t block_t[16];
+
 static const uint8_t R1 = 32; ///< Rotation constant 1 for mixing function G
 static const uint8_t R2 = 24; ///< Rotation constant 2 for mixing function G
 static const uint8_t R3 = 16; ///< Rotation constant 3 for mixing function G
@@ -101,7 +104,7 @@ static const uint8_t blake2b_sigma[12][16] = {
  * @param x first word being mixed into v
  * @param y second word being mixed into y
  */
-static void G(uint64_t v[16], uint8_t a, uint8_t b, uint8_t c, uint8_t d,
+static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d,
               uint64_t x, uint64_t y)
 {
     v[a] += v[b] + x;
@@ -127,10 +130,10 @@ static void G(uint64_t v[16], uint8_t a, uint8_t b, uint8_t c, uint8_t d,
  * @param t 128-bit offset counter
  * @param f flag to indicate whether this is the final block
  */
-static void F(uint64_t h[8], uint64_t m[16], uint64_t t[2], int f)
+static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
 {
     int i;
-    uint64_t v[16];
+    block_t v;
 
     /* v[0..7] := h[0..7] */
     for (i = 0; i < 8; i++)
@@ -182,7 +185,7 @@ static void F(uint64_t h[8], uint64_t m[16], uint64_t t[2], int f)
  *
  * @returns 0 upon successful hash
  */
-static int BLAKE2B(uint8_t *dest, uint64_t (*d)[16], size_t dd, uint64_t ll[2],
+static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, uint64_t ll[2],
                    uint8_t kk, uint8_t nn)
 {
     uint8_t bytes[8];
@@ -247,9 +250,10 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
                  uint8_t kk, uint8_t nn)
 {
     uint8_t *dest = NULL;
-    uint64_t(*blocks)[16], ll[2], long_hold;
+    uint64_t ll[2], long_hold;
     size_t dd, has_key, i;
     size_t block_index, word_in_block;
+    block_t *blocks;
 
     if (message == NULL)
         len = 0;
@@ -261,7 +265,7 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
     dd = MAX(CEIL(kk, bb) + CEIL(len, bb), 1);
 
-    blocks = calloc(dd, sizeof(uint64_t[16]));
+    blocks = calloc(dd, sizeof(block_t));
     if (blocks == NULL)
         return NULL;
 
