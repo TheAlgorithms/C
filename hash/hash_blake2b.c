@@ -34,6 +34,18 @@
 #define bb 128
 
 /**
+ * @define KK_MAX
+ * @brief max key length for BLAKE2b
+ */
+#define KK_MAX 64
+
+/**
+ * @define NN_MAX
+ * @brief max length of BLAKE2b digest in bytes
+ */
+#define NN_MAX 64
+
+/**
  * @define CEIL
  * @brief ceiling division macro without floats
  *
@@ -62,7 +74,7 @@
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
 /** Padded input block containing bb bytes */
-typedef uint64_t block_t[16];
+typedef uint64_t block_t[bb / sizeof(uint64_t)];
 
 static const uint8_t R1 = 32; ///< Rotation constant 1 for mixing function G
 static const uint8_t R2 = 24; ///< Rotation constant 2 for mixing function G
@@ -260,8 +272,8 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
     if (key == NULL)
         kk = 0;
 
-    kk = MIN(kk, 64);
-    nn = MIN(nn, 64);
+    kk = MIN(kk, KK_MAX);
+    nn = MIN(nn, NN_MAX);
 
     dd = MAX(CEIL(kk, bb) + CEIL(len, bb), 1);
 
