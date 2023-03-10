@@ -349,6 +349,8 @@ static void assert_bytes(const uint8_t *expected, const uint8_t *actual,
     {
         assert(expected[i] == actual[i]);
     }
+
+    printf("All tests have successfully passed!\n");
 }
 
 /**
