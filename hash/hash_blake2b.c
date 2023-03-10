@@ -6,18 +6,18 @@
  * @brief [Blake2b cryptographic hash
  * function](https://www.rfc-editor.org/rfc/rfc7693)
  *
- * The Blake2b cryptographic hash function provides 
- * hashes for data that are secure enough to be used in 
- * cryptographic applications. It is designed to perform 
+ * The Blake2b cryptographic hash function provides
+ * hashes for data that are secure enough to be used in
+ * cryptographic applications. It is designed to perform
  * optimally on 64-bit platforms. The algorithm can output
  * digests between 1 and 64 bytes long, for messages up to
  * 128 bits in length. Keyed hashing is also supported for
  * keys up to 64 bytes in length.
  */
-#include <assert.h> /// for asserts
-#include <inttypes.h> /// for fixed-width integer types e.g. uint64_t and uint8_t
-#include <stdio.h> /// for IO
-#include <stdlib.h> /// for malloc, calloc, and free. As well as size_t
+#include <assert.h>    /// for asserts
+#include <inttypes.h>  /// for fixed-width integer types e.g. uint64_t and uint8_t
+#include <stdio.h>     /// for IO
+#include <stdlib.h>    /// for malloc, calloc, and free. As well as size_t
 
 /* Warning suppressed is in blake2b() function, more
  * details are over there */
@@ -76,16 +76,19 @@
 /** Padded input block containing bb bytes */
 typedef uint64_t block_t[bb / sizeof(uint64_t)];
 
-static const uint8_t R1 = 32; ///< Rotation constant 1 for mixing function G
-static const uint8_t R2 = 24; ///< Rotation constant 2 for mixing function G
-static const uint8_t R3 = 16; ///< Rotation constant 3 for mixing function G
-static const uint8_t R4 = 63; ///< Rotation constant 4 for mixing function G
+static const uint8_t R1 = 32;  ///< Rotation constant 1 for mixing function G
+static const uint8_t R2 = 24;  ///< Rotation constant 2 for mixing function G
+static const uint8_t R3 = 16;  ///< Rotation constant 3 for mixing function G
+static const uint8_t R4 = 63;  ///< Rotation constant 4 for mixing function G
 
-static const uint64_t blake2b_iv[8] = {0x6A09E667F3BCC908, 0xBB67AE8584CAA73B,
-                                       0x3C6EF372FE94F82B, 0xA54FF53A5F1D36F1,
-                                       0x510E527FADE682D1, 0x9B05688C2B3E6C1F,
-                                       0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179}; ///< BLAKE2b Initialization vector
-                                                                                ///< blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the i:th prime number
+static const uint64_t blake2b_iv[8] = {
+    0x6A09E667F3BCC908, 0xBB67AE8584CAA73B, 0x3C6EF372FE94F82B,
+    0xA54FF53A5F1D36F1, 0x510E527FADE682D1, 0x9B05688C2B3E6C1F,
+    0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179};  ///< BLAKE2b Initialization vector
+                                              ///< blake2b_iv[i] = floor(2**64 *
+                                              ///< frac(sqrt(prime(i+1)))),
+                                              ///< where prime(i) is the i:th
+                                              ///< prime number
 
 static const uint8_t blake2b_sigma[12][16] = {
     {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
@@ -99,7 +102,8 @@ static const uint8_t blake2b_sigma[12][16] = {
     {6, 15, 14, 9, 11, 3, 0, 8, 12, 2, 13, 7, 1, 4, 10, 5},
     {10, 2, 8, 4, 7, 6, 1, 5, 15, 11, 9, 14, 3, 12, 13, 0},
     {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
-    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3}}; ///< word schedule permutations for each round of the algorithm
+    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5,
+     3}};  ///< word schedule permutations for each round of the algorithm
 
 /**
  * @brief blake2b mixing function G
@@ -116,8 +120,8 @@ static const uint8_t blake2b_sigma[12][16] = {
  * @param x first word being mixed into v
  * @param y second word being mixed into y
  */
-static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d,
-              uint64_t x, uint64_t y)
+static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x,
+              uint64_t y)
 {
     v[a] += v[b] + x;
     v[d] = ROTR64(v[d] ^ v[a], R1);
@@ -132,7 +136,7 @@ static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d,
 /**
  * @brief compression function F
  *
- * Securely mixes the values in block m into 
+ * Securely mixes the values in block m into
  * the state vector h. Value at v[14] is also
  * inverted if this is the final block to be
  * compressed.
@@ -162,7 +166,9 @@ static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
     v[13] ^= t[1]; /* v[13] ^ (t >> w) */
 
     if (f)
+    {
         v[14] = ~v[14];
+    }
 
     for (i = 0; i < 12; i++)
     {
@@ -217,7 +223,9 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, uint64_t ll[2],
         for (i = 0; i < dd - 1; i++)
         {
             if (UINT64_MAX - t[0] <= bb)
+            {
                 t[1]++;
+            }
             t[0] += bb;
 
             F(h, d[i], t, 0);
@@ -268,9 +276,13 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
     block_t *blocks;
 
     if (message == NULL)
+    {
         len = 0;
+    }
     if (key == NULL)
+    {
         kk = 0;
+    }
 
     kk = MIN(kk, KK_MAX);
     nn = MIN(nn, NN_MAX);
@@ -279,7 +291,9 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
     blocks = calloc(dd, sizeof(block_t));
     if (blocks == NULL)
+    {
         return NULL;
+    }
 
     dest = malloc(nn * sizeof(uint8_t));
     if (dest == NULL)
@@ -318,7 +332,7 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
     /* The C standard does not specify a maximum length for size_t,
      * although most machines implement it to be the same length as uint64_t.
-     * On machines where size_t is 8 bytes long this will issue a compiler 
+     * On machines where size_t is 8 bytes long this will issue a compiler
      * warning, which is why it is suppressed. But on a machine where size_t
      * is greater than 8 bytes, this will work as normal. */
     if (sizeof(len) > 8)
@@ -331,6 +345,8 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
     }
 
     BLAKE2B(dest, blocks, dd, ll, kk, nn);
+
+    free(blocks);
 
     return dest;
 }
