@@ -62,7 +62,7 @@
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
 static const uint8_t R1 = 32; ///< Rotation constant 1 for mixing function G
-static const uint8_t R2 - 24; ///< Rotation constant 2 for mixing function G
+static const uint8_t R2 = 24; ///< Rotation constant 2 for mixing function G
 static const uint8_t R3 = 16; ///< Rotation constant 3 for mixing function G
 static const uint8_t R4 = 63; ///< Rotation constant 4 for mixing function G
 
