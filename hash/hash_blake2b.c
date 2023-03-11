@@ -75,7 +75,7 @@
 
 /**
  * @define U128_ZERO
- * @brief BLAKE2B accepts inputs up to 2**128
+ * @brief zero-value initializer for u128 type
  */
 #define U128_ZERO {0, 0}
 
@@ -124,7 +124,7 @@ static const uint8_t blake2b_sigma[12][16] = {
  */
 static inline void u128_fill(u128 dest, size_t n)
 {
-    dest[0] = n & UIN64_MAX;
+    dest[0] = n & UINT64_MAX;
     
     if (sizeof(n) > 8)
     {
@@ -157,7 +157,7 @@ static inline void u128_increment(u128 dest, uint64_t n)
         dest[1]++;
     }
     
-    dest[0] += n
+    dest[0] += n;
 }
 
 /**
@@ -205,7 +205,7 @@ static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x,
  *
  * @returns void
  */
-static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
+static void F(uint64_t h[8], block_t m, u128 t, int f)
 {
     int i;
     block_t v;
@@ -313,7 +313,7 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
         }
     }
     
-    if(kk == 0)
+    if(kk != 0)
     {
         u128_increment(ll, bb);
     }
