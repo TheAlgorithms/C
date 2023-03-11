@@ -77,7 +77,10 @@
  * @define U128_ZERO
  * @brief zero-value initializer for u128 type
  */
-#define U128_ZERO {0, 0}
+#define U128_ZERO \
+    {             \
+        0, 0      \
+    }
 
 /** 128-bit number represented as two uint64's */
 typedef uint64_t u128[2];
@@ -119,20 +122,20 @@ static const uint8_t blake2b_sigma[12][16] = {
  *
  * @param dest 128-bit number to get copied from n
  * @param n value put into dest
- * 
+ *
  * @returns void
  */
 static inline void u128_fill(u128 dest, size_t n)
 {
     dest[0] = n & UINT64_MAX;
-    
+
     if (sizeof(n) > 8)
     {
         /* The C standard does not specify a maximum length for size_t,
-        * although most machines implement it to be the same length as uint64_t.
-        * On machines where size_t is 8 bytes long this will issue a compiler
-        * warning, which is why it is suppressed. But on a machine where size_t
-        * is greater than 8 bytes, this will work as normal. */
+         * although most machines implement it to be the same length as
+         * uint64_t. On machines where size_t is 8 bytes long this will issue a
+         * compiler warning, which is why it is suppressed. But on a machine
+         * where size_t is greater than 8 bytes, this will work as normal. */
         dest[1] = n >> 64;
     }
     else
@@ -152,11 +155,11 @@ static inline void u128_fill(u128 dest, size_t n)
 static inline void u128_increment(u128 dest, uint64_t n)
 {
     /* Check for overflow */
-    if(UINT64_MAX - dest[0] <= n)
+    if (UINT64_MAX - dest[0] <= n)
     {
         dest[1]++;
     }
-    
+
     dest[0] += n;
 }
 
@@ -288,8 +291,8 @@ static void F(uint64_t h[8], block_t m, u128 t, int f)
  *
  * @returns 0 upon successful hash
  */
-static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
-                   uint8_t kk, uint8_t nn)
+static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll, uint8_t kk,
+                   uint8_t nn)
 {
     uint8_t bytes[8];
     uint64_t i, j;
@@ -312,21 +315,20 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
             F(h, d[i], t, 0);
         }
     }
-    
-    if(kk != 0)
+
+    if (kk != 0)
     {
         u128_increment(ll, bb);
     }
     F(h, d[dd - 1], ll, 1);
-   
 
-
-	/* copy bytes from h to destination buffer */
+    /* copy bytes from h to destination buffer */
     for (i = 0; i < nn; i++)
     {
-        if (i % 8 == 0)
+        if (i % sizeof(uint64_t) == 0)
         {
-            for (j = 0; j < 8; j++)
+            /* copy values from uint64 to 8 u8's */
+            for (j = 0; j < sizeof(uint64_t); j++)
             {
                 uint16_t offset = 8 * j;
                 uint64_t mask = 0xFF;
@@ -418,7 +420,7 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
         blocks[block_index][word_in_block] |= long_hold;
     }
-    
+
     u128_fill(ll, len);
 
     BLAKE2B(dest, blocks, dd, ll, kk, nn);
