@@ -73,6 +73,15 @@
  */
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
+/**
+ * @define U128_ZERO
+ * @brief BLAKE2B accepts inputs up to 2**128
+ */
+#define U128_ZERO {0, 0}
+
+/** 128-bit number represented as two uint64's */
+typedef uint64_t u128[2];
+
 /** Padded input block containing bb bytes */
 typedef uint64_t block_t[bb / sizeof(uint64_t)];
 
@@ -106,6 +115,52 @@ static const uint8_t blake2b_sigma[12][16] = {
      3}};  ///< word schedule permutations for each round of the algorithm
 
 /**
+ * @brief put value of n into dest
+ *
+ * @param dest 128-bit number to get copied from n
+ * @param n value put into dest
+ * 
+ * @returns void
+ */
+static inline void u128_fill(u128 dest, size_t n)
+{
+    dest[0] = n & UIN64_MAX;
+    
+    if (sizeof(n) > 8)
+    {
+        /* The C standard does not specify a maximum length for size_t,
+        * although most machines implement it to be the same length as uint64_t.
+        * On machines where size_t is 8 bytes long this will issue a compiler
+        * warning, which is why it is suppressed. But on a machine where size_t
+        * is greater than 8 bytes, this will work as normal. */
+        dest[1] = n >> 64;
+    }
+    else
+    {
+        dest[1] = 0;
+    }
+}
+
+/**
+ * @brief increment an 128-bit number by a given amount
+ *
+ * @param dest the value being incremented
+ * @param n what dest is being increased by
+ *
+ * @returns void
+ */
+static inline void u128_increment(u128 dest, uint64_t n)
+{
+    /* Check for overflow */
+    if(UINT64_MAX - dest[0] <= n)
+    {
+        dest[1]++;
+    }
+    
+    dest[0] += n
+}
+
+/**
  * @brief blake2b mixing function G
  *
  * Shuffles values in block v depending on
@@ -119,6 +174,8 @@ static const uint8_t blake2b_sigma[12][16] = {
  * @param d fourth index
  * @param x first word being mixed into v
  * @param y second word being mixed into y
+ *
+ * @returns void
  */
 static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x,
               uint64_t y)
@@ -145,6 +202,8 @@ static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x,
  * @param m message vector to be compressed into h
  * @param t 128-bit offset counter
  * @param f flag to indicate whether this is the final block
+ *
+ * @returns void
  */
 static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
 {
@@ -194,6 +253,32 @@ static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
 /**
  * @brief driver function to perform the hashing as described in specification
  *
+ * pseudocode: (credit to authors of RFC 7693 listed above)
+ * FUNCTION BLAKE2( d[0..dd-1], ll, kk, nn )
+ * |
+ * |     h[0..7] := IV[0..7]          // Initialization Vector.
+ * |
+ * |     // Parameter block p[0]
+ * |     h[0] := h[0] ^ 0x01010000 ^ (kk << 8) ^ nn
+ * |
+ * |     // Process padded key and data blocks
+ * |     IF dd > 1 THEN
+ * |     |       FOR i = 0 TO dd - 2 DO
+ * |     |       |       h := F( h, d[i], (i + 1) * bb, FALSE )
+ * |     |       END FOR.
+ * |     END IF.
+ * |
+ * |     // Final block.
+ * |     IF kk = 0 THEN
+ * |     |       h := F( h, d[dd - 1], ll, TRUE )
+ * |     ELSE
+ * |     |       h := F( h, d[dd - 1], ll + bb, TRUE )
+ * |     END IF.
+ * |
+ * |     RETURN first "nn" bytes from little-endian word array h[].
+ * |
+ * END FUNCTION.
+ *
  * @param dest destination of hashing digest
  * @param d message blocks
  * @param dd length of d
@@ -203,12 +288,13 @@ static void F(uint64_t h[8], block_t m, uint64_t t[2], int f)
  *
  * @returns 0 upon successful hash
  */
-static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, uint64_t ll[2],
+static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
                    uint8_t kk, uint8_t nn)
 {
     uint8_t bytes[8];
     uint64_t i, j;
-    uint64_t t[2] = {0, 0}, h[8];
+    uint64_t h[8];
+    u128 t = U128_ZERO;
 
     /* h[0..7] = IV[0..7] */
     for (i = 0; i < 8; i++)
@@ -222,18 +308,17 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, uint64_t ll[2],
     {
         for (i = 0; i < dd - 1; i++)
         {
-            if (UINT64_MAX - t[0] <= bb)
-            {
-                t[1]++;
-            }
-            t[0] += bb;
-
+            u128_increment(t, bb);
             F(h, d[i], t, 0);
         }
     }
-
+    
+    if(kk == 0)
+    {
+        u128_increment(ll, bb);
+    }
     F(h, d[dd - 1], ll, 1);
-
+    
     for (i = 0; i < nn; i++)
     {
         if (i % 8 == 0)
@@ -270,9 +355,10 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
                  uint8_t kk, uint8_t nn)
 {
     uint8_t *dest = NULL;
-    uint64_t ll[2], long_hold;
+    uint64_t long_hold;
     size_t dd, has_key, i;
     size_t block_index, word_in_block;
+    u128 ll;
     block_t *blocks;
 
     if (message == NULL)
@@ -327,23 +413,8 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
         blocks[block_index][word_in_block] |= long_hold;
     }
-
-    ll[0] = len & UINT64_MAX;
-
-
-    if (sizeof(len) > 8)
-    {
-        /* The C standard does not specify a maximum length for size_t,
-        * although most machines implement it to be the same length as uint64_t.
-        * On machines where size_t is 8 bytes long this will issue a compiler
-        * warning, which is why it is suppressed. But on a machine where size_t
-        * is greater than 8 bytes, this will work as normal. */
-        ll[1] = len >> 64;
-    }
-    else
-    {
-        ll[1] = 0;
-    }
+    
+    u128_fill(ll, len);
 
     BLAKE2B(dest, blocks, dd, ll, kk, nn);
 
