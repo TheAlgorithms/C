@@ -318,7 +318,10 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
         u128_increment(ll, bb);
     }
     F(h, d[dd - 1], ll, 1);
-    
+   
+
+
+	/* copy bytes from h to destination buffer */
     for (i = 0; i < nn; i++)
     {
         if (i % 8 == 0)
@@ -340,6 +343,8 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll,
 }
 
 /* @brief blake2b hash function
+ *
+ * This is the front-end function that sets up the argument for BLAKE2B().
  *
  * @param message the message to be hashed
  * @param len length of message (0 <= len < 2**128) (depends on sizeof(size_t)
