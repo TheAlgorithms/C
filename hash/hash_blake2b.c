@@ -330,13 +330,14 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
 
     ll[0] = len & UINT64_MAX;
 
-    /* The C standard does not specify a maximum length for size_t,
-     * although most machines implement it to be the same length as uint64_t.
-     * On machines where size_t is 8 bytes long this will issue a compiler
-     * warning, which is why it is suppressed. But on a machine where size_t
-     * is greater than 8 bytes, this will work as normal. */
+
     if (sizeof(len) > 8)
     {
+        /* The C standard does not specify a maximum length for size_t,
+        * although most machines implement it to be the same length as uint64_t.
+        * On machines where size_t is 8 bytes long this will issue a compiler
+        * warning, which is why it is suppressed. But on a machine where size_t
+        * is greater than 8 bytes, this will work as normal. */
         ll[1] = len >> 64;
     }
     else
