@@ -1,0 +1,4 @@
+<map id="free_poly" name="free_poly">
+<area shape="rect" id="node1" title="Frees memory space." alt="" coords="5,5,80,31"/>
+<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="128,5,175,31"/>
+</map>

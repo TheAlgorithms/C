@@ -195,34 +195,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
-<div class="line"><span class="lineno">   56</span>    <span class="comment">// Creating the polynomial using temporary linked lists</span></div>
-<div class="line"><span class="lineno">   57</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *temp1, *temp2;</div>
-<div class="line"><span class="lineno">   58</span>    temp1 = *poly;  <span class="comment">// Contains the null pointer</span></div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    <span class="comment">// Initiating first term</span></div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span> (temp1 == NULL)</div>
-<div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        temp2 = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">   65</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> = <a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">   66</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> = <a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// Updating the null pointer with the address of the first node of the</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">// polynomial just created</span></div>
-<div class="line"><span class="lineno">   69</span>        *poly = temp2;</div>
-<div class="line"><span class="lineno">   70</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = NULL;  <span class="comment">// Increasing the pointer temp2</span></div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">// Creating the rest of the nodes</span></div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   74</span>    {</div>
-<div class="line"><span class="lineno">   75</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">   77</span>        temp2 = temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;       <span class="comment">// Increasing the pointer temp2</span></div>
-<div class="line"><span class="lineno">   78</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> = <a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">   79</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> = <a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">   80</span>        temp2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a> = NULL;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="line"><span class="lineno">   82</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">// Creating the polynomial using temporary linked lists</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> **temp1 = poly;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span> (*temp1)</div>
+<div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        temp1 = &amp;(*temp1)-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment">// Now temp1 reaches to the end of the list</span></div>
+<div class="line"><span class="lineno">   59</span>    *temp1 = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Create the term and linked as the tail</span></div>
+<div class="line"><span class="lineno">   61</span>    (*temp1)-&gt;coef = <a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">   62</span>    (*temp1)-&gt;pow = <a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">   63</span>    (*temp1)-&gt;next = NULL;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="astructterm_html"><div class="ttname"><a href="../../df/d86/structterm.html">term</a></div><div class="ttdoc">identifier for single-variable polynomial coefficients as a linked list</div><div class="ttdef"><b>Definition:</b> poly_add.c:20</div></div>
 <div class="ttc" id="astructterm_html_a057f161d279d856d11786aa96fc87f74"><div class="ttname"><a href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">term::pow</a></div><div class="ttdeci">int pow</div><div class="ttdoc">power of the polynomial term</div><div class="ttdef"><b>Definition:</b> poly_add.c:22</div></div>
@@ -255,17 +243,17 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>{</div>
-<div class="line"><span class="lineno">  184</span>    <span class="keywordflow">while</span> (poly != NULL)</div>
-<div class="line"><span class="lineno">  185</span>    {</div>
-<div class="line"><span class="lineno">  186</span>        printf(<span class="stringliteral">&quot;%d x^%d&quot;</span>, poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>, poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>);</div>
-<div class="line"><span class="lineno">  187</span>        poly = poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (poly != NULL)</div>
-<div class="line"><span class="lineno">  189</span>        {</div>
-<div class="line"><span class="lineno">  190</span>            printf(<span class="stringliteral">&quot; + &quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="line"><span class="lineno">  193</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>{</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">while</span> (poly != NULL)</div>
+<div class="line"><span class="lineno">  167</span>    {</div>
+<div class="line"><span class="lineno">  168</span>        printf(<span class="stringliteral">&quot;%d x^%d&quot;</span>, poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>, poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>);</div>
+<div class="line"><span class="lineno">  169</span>        poly = poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (poly != NULL)</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            printf(<span class="stringliteral">&quot; + &quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -294,21 +282,22 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (!poly)</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">while</span> (poly)</div>
 <div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span>;  <span class="comment">// NULL pointer does not need delete</span></div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">while</span> (!poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>)</div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>);  <span class="comment">// Deletes next term</span></div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(poly);  <span class="comment">// delete the current term</span></div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="line"><span class="lineno">   45</span>}</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *<a class="code hl_function" href="../../df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f">next</a> = poly-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(poly);</div>
+<div class="line"><span class="lineno">   37</span>        poly = <a class="code hl_function" href="../../df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f">next</a>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="line"><span class="lineno">   39</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
-</div><!-- fragment -->
+<div class="ttc" id="avector_8c_html_af2f92e8cc55e764980bc0573ab5cd06f"><div class="ttname"><a href="../../df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f">next</a></div><div class="ttdeci">int next(Vector *vec)</div><div class="ttdoc">This function gets the next item from the Vector each time it's called.</div><div class="ttdef"><b>Definition:</b> vector.c:102</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_a5a103fff33166d6e4d975b8b63c6e895_cgraph.svg" width="180" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
@@ -329,14 +318,14 @@ Functions</h2></td></tr>
 
 <p>Main function. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on exit </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>{</div>
-<div class="line"><span class="lineno">  313</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *poly1 = NULL, *poly2 = NULL, *poly3 = NULL;</div>
-<div class="line"><span class="lineno">  314</span>    <a class="code hl_function" href="../../d2/df6/kohonen__som__topology_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0">test1</a>(poly1, poly2, poly3);</div>
-<div class="line"><span class="lineno">  315</span>    <a class="code hl_function" href="../../d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0">test2</a>(poly1, poly2, poly3);</div>
-<div class="line"><span class="lineno">  316</span>    <a class="code hl_function" href="../../d2/df6/kohonen__som__topology_8c.html#a6d0455dd5c30adda100e95f0423c786e">test3</a>(poly1, poly2, poly3);</div>
-<div class="line"><span class="lineno">  317</span> </div>
-<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  319</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>{</div>
+<div class="line"><span class="lineno">  295</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *poly1 = NULL, *poly2 = NULL, *poly3 = NULL;</div>
+<div class="line"><span class="lineno">  296</span>    <a class="code hl_function" href="../../d2/df6/kohonen__som__topology_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0">test1</a>(poly1, poly2, poly3);</div>
+<div class="line"><span class="lineno">  297</span>    <a class="code hl_function" href="../../d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0">test2</a>(poly1, poly2, poly3);</div>
+<div class="line"><span class="lineno">  298</span>    <a class="code hl_function" href="../../d2/df6/kohonen__som__topology_8c.html#a6d0455dd5c30adda100e95f0423c786e">test3</a>(poly1, poly2, poly3);</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  301</span>}</div>
 <div class="ttc" id="ak__means__clustering_8c_html_a0283886819c7c140a023582b7269e2d0"><div class="ttname"><a href="../../d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0">test2</a></div><div class="ttdeci">void test2()</div><div class="ttdef"><b>Definition:</b> k_means_clustering.c:356</div></div>
 <div class="ttc" id="akohonen__som__topology_8c_html_a1440a7779ac56f47a3f355ce4a8c7da0"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0">test1</a></div><div class="ttdeci">void test1()</div><div class="ttdoc">Test that creates a random set of points distributed in four clusters in 2D space and trains an SOM t...</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:406</div></div>
 <div class="ttc" id="akohonen__som__topology_8c_html_a6d0455dd5c30adda100e95f0423c786e"><div class="ttname"><a href="../../d2/df6/kohonen__som__topology_8c.html#a6d0455dd5c30adda100e95f0423c786e">test3</a></div><div class="ttdeci">void test3()</div><div class="ttdoc">Test that creates a random set of points distributed in eight clusters in 3D space and trains an SOM ...</div><div class="ttdef"><b>Definition:</b> kohonen_som_topology.c:609</div></div>
@@ -390,90 +379,90 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
-<div class="line"><span class="lineno">   93</span>    <span class="comment">// Creating a temporary linked list to store the resultant polynomial</span></div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *temp = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));</div>
-<div class="line"><span class="lineno">   95</span>    temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
-<div class="line"><span class="lineno">   96</span>    *pol =</div>
-<div class="line"><span class="lineno">   97</span>        temp;  <span class="comment">//*pol always points to the 1st node of the resultant polynomial</span></div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>    <span class="comment">// Comparing the powers of the nodes of both the polynomials</span></div>
-<div class="line"><span class="lineno">  100</span>    <span class="comment">// until one gets exhausted</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">while</span> (poly1 &amp;&amp; poly2)</div>
-<div class="line"><span class="lineno">  102</span>    {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="comment">/* If the power of the first polynomial is greater than the power of the</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">       second one place the power and coefficient of that node of the first</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">       polynomial in temp and increase the pointer poly1</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">       */</span></div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> &gt; poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>)</div>
-<div class="line"><span class="lineno">  108</span>        {</div>
-<div class="line"><span class="lineno">  109</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">  110</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">  111</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        <span class="comment">/* If the power of the second polynomial is greater than the power of</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">          the first one place the power and coefficient of that node of the</span></div>
-<div class="line"><span class="lineno">  115</span><span class="comment">          second polynomial in temp and increase the pointer poly2</span></div>
-<div class="line"><span class="lineno">  116</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> &lt; poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>)</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            temp-&gt;coef = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">  120</span>            temp-&gt;pow = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">  121</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        <span class="comment">/* If both of them have same power then sum the coefficients</span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">          place both the summed coefficient and the power in temp</span></div>
-<div class="line"><span class="lineno">  125</span><span class="comment">          increase both the pointers poly1 and poly2</span></div>
-<div class="line"><span class="lineno">  126</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> + poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">  130</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">  131</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  132</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="comment">/* If none of the polynomials are exhausted</span></div>
-<div class="line"><span class="lineno">  135</span><span class="comment">         dynamically create a node in temp</span></div>
-<div class="line"><span class="lineno">  136</span><span class="comment">         */</span></div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (poly1 &amp;&amp; poly2)</div>
-<div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
-<div class="line"><span class="lineno">  140</span>                <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">  141</span>            temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increase the pointer temp</span></div>
-<div class="line"><span class="lineno">  142</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="line"><span class="lineno">  145</span>    <span class="comment">/* If one of the polynomials is exhausted</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">    place the rest of the other polynomial as it is in temp</span></div>
-<div class="line"><span class="lineno">  147</span><span class="comment">    by creating nodes dynamically</span></div>
-<div class="line"><span class="lineno">  148</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">while</span> (poly1 || poly2)</div>
-<div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
-<div class="line"><span class="lineno">  153</span>        temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increasing the pointer</span></div>
-<div class="line"><span class="lineno">  154</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>        <span class="comment">/* If poly1 is not exhausted</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">        place rest of that polynomial in temp</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (poly1)</div>
-<div class="line"><span class="lineno">  160</span>        {</div>
-<div class="line"><span class="lineno">  161</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">  162</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">  163</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        <span class="comment">/* If poly2 is not exhausted</span></div>
-<div class="line"><span class="lineno">  166</span><span class="comment">       place rest of that polynomial in temp</span></div>
-<div class="line"><span class="lineno">  167</span><span class="comment">       */</span></div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (poly2)</div>
-<div class="line"><span class="lineno">  169</span>        {</div>
-<div class="line"><span class="lineno">  170</span>            temp-&gt;coef = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
-<div class="line"><span class="lineno">  171</span>            temp-&gt;pow = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
-<div class="line"><span class="lineno">  172</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-<div class="line"><span class="lineno">  175</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment">// Creating a temporary linked list to store the resultant polynomial</span></div>
+<div class="line"><span class="lineno">   76</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *temp = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));</div>
+<div class="line"><span class="lineno">   77</span>    temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
+<div class="line"><span class="lineno">   78</span>    *pol =</div>
+<div class="line"><span class="lineno">   79</span>        temp;  <span class="comment">//*pol always points to the 1st node of the resultant polynomial</span></div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <span class="comment">// Comparing the powers of the nodes of both the polynomials</span></div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// until one gets exhausted</span></div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">while</span> (poly1 &amp;&amp; poly2)</div>
+<div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="comment">/* If the power of the first polynomial is greater than the power of the</span></div>
+<div class="line"><span class="lineno">   86</span><span class="comment">       second one place the power and coefficient of that node of the first</span></div>
+<div class="line"><span class="lineno">   87</span><span class="comment">       polynomial in temp and increase the pointer poly1</span></div>
+<div class="line"><span class="lineno">   88</span><span class="comment">       */</span></div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> &gt; poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">   92</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">   93</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="comment">/* If the power of the second polynomial is greater than the power of</span></div>
+<div class="line"><span class="lineno">   96</span><span class="comment">          the first one place the power and coefficient of that node of the</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment">          second polynomial in temp and increase the pointer poly2</span></div>
+<div class="line"><span class="lineno">   98</span><span class="comment">        */</span></div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a> &lt; poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            temp-&gt;coef = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">  102</span>            temp-&gt;pow = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">  103</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="comment">/* If both of them have same power then sum the coefficients</span></div>
+<div class="line"><span class="lineno">  106</span><span class="comment">          place both the summed coefficient and the power in temp</span></div>
+<div class="line"><span class="lineno">  107</span><span class="comment">          increase both the pointers poly1 and poly2</span></div>
+<div class="line"><span class="lineno">  108</span><span class="comment">        */</span></div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a> + poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">  112</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">  113</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  114</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        <span class="comment">/* If none of the polynomials are exhausted</span></div>
+<div class="line"><span class="lineno">  117</span><span class="comment">         dynamically create a node in temp</span></div>
+<div class="line"><span class="lineno">  118</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (poly1 &amp;&amp; poly2)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
+<div class="line"><span class="lineno">  123</span>            temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increase the pointer temp</span></div>
+<div class="line"><span class="lineno">  124</span>            temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment">/* If one of the polynomials is exhausted</span></div>
+<div class="line"><span class="lineno">  128</span><span class="comment">    place the rest of the other polynomial as it is in temp</span></div>
+<div class="line"><span class="lineno">  129</span><span class="comment">    by creating nodes dynamically</span></div>
+<div class="line"><span class="lineno">  130</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">while</span> (poly1 || poly2)</div>
+<div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = (<span class="keyword">struct </span><a class="code hl_struct" href="../../df/d86/structterm.html">term</a> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="../../df/d86/structterm.html">term</a>));  <span class="comment">// Dynamic node creation</span></div>
+<div class="line"><span class="lineno">  135</span>        temp = temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a>;         <span class="comment">// Increasing the pointer</span></div>
+<div class="line"><span class="lineno">  136</span>        temp-&gt;<a class="code hl_variable" href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">next</a> = NULL;</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>        <span class="comment">/* If poly1 is not exhausted</span></div>
+<div class="line"><span class="lineno">  139</span><span class="comment">        place rest of that polynomial in temp</span></div>
+<div class="line"><span class="lineno">  140</span><span class="comment">        */</span></div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (poly1)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            temp-&gt;coef = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">  144</span>            temp-&gt;pow = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">  145</span>            poly1 = poly1-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        <span class="comment">/* If poly2 is not exhausted</span></div>
+<div class="line"><span class="lineno">  148</span><span class="comment">       place rest of that polynomial in temp</span></div>
+<div class="line"><span class="lineno">  149</span><span class="comment">       */</span></div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (poly2)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            temp-&gt;coef = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a5a730814391f70179da78c657e6e6f7b">coef</a>;</div>
+<div class="line"><span class="lineno">  153</span>            temp-&gt;pow = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#a057f161d279d856d11786aa96fc87f74">pow</a>;</div>
+<div class="line"><span class="lineno">  154</span>            poly2 = poly2-&gt;<a class="code hl_variable" href="../../df/d86/structterm.html#ab7ac49a58cc431c9838c855bf59a243a">next</a>;</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  157</span>}</div>
 <div class="ttc" id="astructnode_html_a111a569ab2765add9b91c9f94cf9f063"><div class="ttname"><a href="../../d5/da1/structnode.html#a111a569ab2765add9b91c9f94cf9f063">node::next</a></div><div class="ttdeci">struct node * next</div><div class="ttdoc">List pointers.</div><div class="ttdef"><b>Definition:</b> bfs.c:24</div></div>
 </div><!-- fragment -->
 </div>
@@ -520,38 +509,38 @@ Here is the call graph for this function:</div>
 
 <p>Test function 1. </p>
 <p>Polynomial 1 is 5 x^2 + 3 x^1 + 2 x^0 Polynomial 2 is 7 x^3 + 9 x^1 + 10 x^0 Resultant polynomial is 7 x^3 + 5 x^2 + 12 x^1 + 12 x^0 </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
-<div class="line"><span class="lineno">  206</span>    printf(<span class="stringliteral">&quot;\n----Test 1----\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  207</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
-<div class="line"><span class="lineno">  208</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 5, 2);</div>
-<div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 3, 1);</div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 2, 0);</div>
-<div class="line"><span class="lineno">  211</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
-<div class="line"><span class="lineno">  214</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 7, 3);</div>
-<div class="line"><span class="lineno">  215</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 9, 1);</div>
-<div class="line"><span class="lineno">  216</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 10, 0);</div>
-<div class="line"><span class="lineno">  217</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
-<div class="line"><span class="lineno">  218</span> </div>
-<div class="line"><span class="lineno">  219</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
-<div class="line"><span class="lineno">  220</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  221</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
-<div class="line"><span class="lineno">  222</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>    <span class="comment">// Frees memory space</span></div>
-<div class="line"><span class="lineno">  225</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
-<div class="line"><span class="lineno">  226</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
-<div class="line"><span class="lineno">  227</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
-<div class="line"><span class="lineno">  228</span>}</div>
-<div class="ttc" id="apoly__add_8c_html_a29eace09ec1373a92003075f1c2f6d9d"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a></div><div class="ttdeci">void create_polynomial(struct term **poly, int coef, int pow)</div><div class="ttdoc">The function will create a polynomial.</div><div class="ttdef"><b>Definition:</b> poly_add.c:54</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>{</div>
+<div class="line"><span class="lineno">  188</span>    printf(<span class="stringliteral">&quot;\n----Test 1----\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  189</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
+<div class="line"><span class="lineno">  190</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 5, 2);</div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 3, 1);</div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 2, 0);</div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
+<div class="line"><span class="lineno">  196</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 7, 3);</div>
+<div class="line"><span class="lineno">  197</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 9, 1);</div>
+<div class="line"><span class="lineno">  198</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 10, 0);</div>
+<div class="line"><span class="lineno">  199</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
+<div class="line"><span class="lineno">  202</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  203</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
+<div class="line"><span class="lineno">  204</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>    <span class="comment">// Frees memory space</span></div>
+<div class="line"><span class="lineno">  207</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
+<div class="line"><span class="lineno">  208</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
+<div class="line"><span class="lineno">  210</span>}</div>
+<div class="ttc" id="apoly__add_8c_html_a29eace09ec1373a92003075f1c2f6d9d"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a></div><div class="ttdeci">void create_polynomial(struct term **poly, int coef, int pow)</div><div class="ttdoc">The function will create a polynomial.</div><div class="ttdef"><b>Definition:</b> poly_add.c:48</div></div>
 <div class="ttc" id="apoly__add_8c_html_a5a103fff33166d6e4d975b8b63c6e895"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a></div><div class="ttdeci">void free_poly(struct term *poly)</div><div class="ttdoc">Frees memory space.</div><div class="ttdef"><b>Definition:</b> poly_add.c:31</div></div>
-<div class="ttc" id="apoly__add_8c_html_a6ff38afe4720527c9513139cbab460af"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a></div><div class="ttdeci">void poly_add(struct term **pol, struct term *poly1, struct term *poly2)</div><div class="ttdoc">The function will add 2 polynomials.</div><div class="ttdef"><b>Definition:</b> poly_add.c:91</div></div>
-<div class="ttc" id="apoly__add_8c_html_ab9b9bedcb99f279d491d1b856791a36d"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a></div><div class="ttdeci">void display_polynomial(struct term *poly)</div><div class="ttdoc">The function will display the polynomial.</div><div class="ttdef"><b>Definition:</b> poly_add.c:182</div></div>
+<div class="ttc" id="apoly__add_8c_html_a6ff38afe4720527c9513139cbab460af"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a></div><div class="ttdeci">void poly_add(struct term **pol, struct term *poly1, struct term *poly2)</div><div class="ttdoc">The function will add 2 polynomials.</div><div class="ttdef"><b>Definition:</b> poly_add.c:73</div></div>
+<div class="ttc" id="apoly__add_8c_html_ab9b9bedcb99f279d491d1b856791a36d"><div class="ttname"><a href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a></div><div class="ttdeci">void display_polynomial(struct term *poly)</div><div class="ttdoc">The function will display the polynomial.</div><div class="ttdef"><b>Definition:</b> poly_add.c:164</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_ab215107dbb50c7efa811a687ce9b95af_cgraph.svg" width="242" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_ab215107dbb50c7efa811a687ce9b95af_cgraph.svg" width="336" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -599,39 +588,39 @@ Here is the call graph for this function:</div>
 
 <p>Test function 2. </p>
 <p>Polynomial 1 is 3 x^5 + 1 x^4 + 2 x^3 + -2 x^1 + 5 x^0 Polynomial 2 is 2 x^5 + 3 x^3 + 7 x^1 + 2 x^0 Resultant polynomial is 5 x^5 + 1 x^4 + 5 x^3 + 5 x^1 + 7 x^0 </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>{</div>
-<div class="line"><span class="lineno">  241</span>    printf(<span class="stringliteral">&quot;\n----Test 2----\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  242</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
-<div class="line"><span class="lineno">  243</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 3, 5);</div>
-<div class="line"><span class="lineno">  244</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 1, 4);</div>
-<div class="line"><span class="lineno">  245</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 2, 3);</div>
-<div class="line"><span class="lineno">  246</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, -2, 1);</div>
-<div class="line"><span class="lineno">  247</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 5, 0);</div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
-<div class="line"><span class="lineno">  250</span> </div>
-<div class="line"><span class="lineno">  251</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
-<div class="line"><span class="lineno">  252</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 2, 5);</div>
-<div class="line"><span class="lineno">  253</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 3, 3);</div>
-<div class="line"><span class="lineno">  254</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 7, 1);</div>
-<div class="line"><span class="lineno">  255</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 2, 0);</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
-<div class="line"><span class="lineno">  260</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  261</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
-<div class="line"><span class="lineno">  262</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>    <span class="comment">// Frees memory space</span></div>
-<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
-<div class="line"><span class="lineno">  266</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
-<div class="line"><span class="lineno">  267</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
-<div class="line"><span class="lineno">  268</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>{</div>
+<div class="line"><span class="lineno">  223</span>    printf(<span class="stringliteral">&quot;\n----Test 2----\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
+<div class="line"><span class="lineno">  225</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 3, 5);</div>
+<div class="line"><span class="lineno">  226</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 1, 4);</div>
+<div class="line"><span class="lineno">  227</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 2, 3);</div>
+<div class="line"><span class="lineno">  228</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, -2, 1);</div>
+<div class="line"><span class="lineno">  229</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 5, 0);</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
+<div class="line"><span class="lineno">  234</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 2, 5);</div>
+<div class="line"><span class="lineno">  235</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 3, 3);</div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 7, 1);</div>
+<div class="line"><span class="lineno">  237</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 2, 0);</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
+<div class="line"><span class="lineno">  242</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
+<div class="line"><span class="lineno">  244</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>    <span class="comment">// Frees memory space</span></div>
+<div class="line"><span class="lineno">  247</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
+<div class="line"><span class="lineno">  248</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
+<div class="line"><span class="lineno">  249</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
+<div class="line"><span class="lineno">  250</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_a0c5173884bd798a6ca6f437b9b932409_cgraph.svg" width="242" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_a0c5173884bd798a6ca6f437b9b932409_cgraph.svg" width="336" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -679,36 +668,36 @@ Here is the call graph for this function:</div>
 
 <p>Test function 3. </p>
 <p>Polynomial 1 is -12 x^0 + 8 x^1 + 4 x^3 Polynomial 2 is 5 x^0 + -13 x^1 + 3 x^3 Resultant polynomial is -7 x^0 + -5 x^1 + 7 x^3 </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>{</div>
-<div class="line"><span class="lineno">  281</span>    printf(<span class="stringliteral">&quot;\n----Test 3----\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  282</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
-<div class="line"><span class="lineno">  283</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, -12, 0);</div>
-<div class="line"><span class="lineno">  284</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 8, 1);</div>
-<div class="line"><span class="lineno">  285</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 4, 3);</div>
-<div class="line"><span class="lineno">  286</span> </div>
-<div class="line"><span class="lineno">  287</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
-<div class="line"><span class="lineno">  288</span> </div>
-<div class="line"><span class="lineno">  289</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
-<div class="line"><span class="lineno">  290</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 5, 0);</div>
-<div class="line"><span class="lineno">  291</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, -13, 1);</div>
-<div class="line"><span class="lineno">  292</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 3, 3);</div>
-<div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
-<div class="line"><span class="lineno">  295</span> </div>
-<div class="line"><span class="lineno">  296</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
-<div class="line"><span class="lineno">  297</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  298</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
-<div class="line"><span class="lineno">  299</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  300</span> </div>
-<div class="line"><span class="lineno">  301</span>    <span class="comment">// Frees memory space</span></div>
-<div class="line"><span class="lineno">  302</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
-<div class="line"><span class="lineno">  303</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
-<div class="line"><span class="lineno">  304</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
-<div class="line"><span class="lineno">  305</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>{</div>
+<div class="line"><span class="lineno">  263</span>    printf(<span class="stringliteral">&quot;\n----Test 3----\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  264</span>    printf(<span class="stringliteral">&quot;\nFirst Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 1st polynomial</span></div>
+<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, -12, 0);</div>
+<div class="line"><span class="lineno">  266</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 8, 1);</div>
+<div class="line"><span class="lineno">  267</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly1, 4, 3);</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly1);</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>    printf(<span class="stringliteral">&quot;\nSecond Polynomial:\n&quot;</span>);  <span class="comment">// Defining the 2nd polynomial</span></div>
+<div class="line"><span class="lineno">  272</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 5, 0);</div>
+<div class="line"><span class="lineno">  273</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, -13, 1);</div>
+<div class="line"><span class="lineno">  274</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d">create_polynomial</a>(&amp;poly2, 3, 3);</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly2);</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af">poly_add</a>(&amp;poly3, poly1, poly2);  <span class="comment">// Adding the two polynomials</span></div>
+<div class="line"><span class="lineno">  279</span>    printf(<span class="stringliteral">&quot;\nResultant polynomial:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  280</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d">display_polynomial</a>(poly3);</div>
+<div class="line"><span class="lineno">  281</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  282</span> </div>
+<div class="line"><span class="lineno">  283</span>    <span class="comment">// Frees memory space</span></div>
+<div class="line"><span class="lineno">  284</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly1);</div>
+<div class="line"><span class="lineno">  285</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly2);</div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_function" href="../../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895">free_poly</a>(poly3);</div>
+<div class="line"><span class="lineno">  287</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_ab138609c765e2fd8b89e9c107cd40d57_cgraph.svg" width="242" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dcb/poly__add_8c_ab138609c765e2fd8b89e9c107cd40d57_cgraph.svg" width="336" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
