@@ -30,17 +30,11 @@ struct term
  */
 void free_poly(struct term *poly)
 {
-    if (!poly)
+    while (poly)
     {
-        return;  // NULL pointer does not need delete
-    }
-    else
-    {
-        while (!poly->next)
-        {
-            free(poly->next);  // Deletes next term
-        }
-        free(poly);  // delete the current term
+        struct term *next = poly->next;
+        free(poly);
+        poly = next;
     }
 }
 
@@ -54,31 +48,19 @@ void free_poly(struct term *poly)
 void create_polynomial(struct term **poly, int coef, int pow)
 {
     // Creating the polynomial using temporary linked lists
-    struct term *temp1, *temp2;
-    temp1 = *poly;  // Contains the null pointer
+    struct term **temp1 = poly;
 
-    // Initiating first term
-    if (temp1 == NULL)
+    while (*temp1)
     {
-        temp2 = (struct term *)malloc(
-            sizeof(struct term));  // Dynamic node creation
-        temp2->coef = coef;
-        temp2->pow = pow;
-        // Updating the null pointer with the address of the first node of the
-        // polynomial just created
-        *poly = temp2;
-        temp2->next = NULL;  // Increasing the pointer temp2
+        temp1 = &(*temp1)->next;
     }
-    // Creating the rest of the nodes
-    else
-    {
-        temp2->next = (struct term *)malloc(
-            sizeof(struct term));  // Dynamic node creation
-        temp2 = temp2->next;       // Increasing the pointer temp2
-        temp2->coef = coef;
-        temp2->pow = pow;
-        temp2->next = NULL;
-    }
+
+    // Now temp1 reaches to the end of the list
+    *temp1 = (struct term *)malloc(
+        sizeof(struct term));  // Create the term and linked as the tail
+    (*temp1)->coef = coef;
+    (*temp1)->pow = pow;
+    (*temp1)->next = NULL;
 }
 
 /**
