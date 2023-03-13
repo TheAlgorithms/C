@@ -1,15 +1,41 @@
 /**
- * @file fibonacci.c
+ * @file
  * @brief Program to print the nth term of the Fibonacci series.
- * @details Fibonacci series generally starts from 0 and 1. Every next term in
- *the series is equal to the sum of the two preceding terms.
- **/
+ * @details
+ * Fibonacci series generally starts from 0 and 1. Every next term in
+ * the series is equal to the sum of the two preceding terms.
+ */
 
-#include <stdio.h>
+#include <stdio.h>  /// for input and output
+#include <stdlib.h>
+/**
+ * @brief Determines the nth Fibonacci term
+ * @param number - n in "nth term" and it can't be negative as well as zero
+ * @return nth term in unsigned type
+ * @warning
+ * Only till 47th and 48th fibonacci element can be stored in 'int' and
+ * 'unsigned' respectively (takes more than 20 seconds to print)
+ */
+unsigned int fib(int number)
+{
+    // Check for negative integers
+    if (number < 0)
+    {
+        fprintf(stderr, "Illegal Argument Is Passed!\n");
+        exit(EXIT_FAILURE);
+    }
 
-unsigned fib(int);
+    // Base conditions
+    if (number == 1)
+        return 0;
 
-/* Driver Code */
+    if (number == 2)
+        return 1;
+
+    // Recursive call to the function
+    return fib(number - 1) + fib(number - 2);
+}
+
 int main()
 {
     int number;
@@ -18,7 +44,7 @@ int main()
     printf("Enter n to find nth fibonacci element: ");
     scanf("%d", &number);
 
-    printf("%u\n", fib(number));
+    printf("Fibonacci element %d is %u\n", number, fib(number));
     return 0;
 }
 
@@ -29,12 +55,3 @@ int main()
  * @warning Only till 47th and 48th fibonacci element can be stored in 'int' and
  * 'unsigned' respectively (takes more than 20 seconds to print)
  */
-unsigned fib(int number)
-{
-    if (number == 1)
-        return 0;
-    else if (number == 2)
-        return 1;
-    else
-        return fib(number - 1) + fib(number - 2);
-}
