@@ -1,0 +1,6 @@
+<map id="BLAKE2B" name="BLAKE2B">
+<area shape="rect" id="node1" title="driver function to perform the hashing as described in specification" alt="" coords="5,31,87,56"/>
+<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd" title="compression function F" alt="" coords="173,5,211,31"/>
+<area shape="rect" id="node4" href="$d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e" title="increment an 128&#45;bit number by a given amount" alt="" coords="135,55,249,80"/>
+<area shape="rect" id="node3" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="297,5,336,31"/>
+</map>

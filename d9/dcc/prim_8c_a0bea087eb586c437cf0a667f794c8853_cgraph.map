@@ -1,4 +1,5 @@
 <map id="prim" name="prim">
-<area shape="rect" id="node1" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="5,5,52,31"/>
-<area shape="rect" id="node2" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="100,5,175,31"/>
+<area shape="rect" id="node1" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="5,31,52,56"/>
+<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="118,5,157,31"/>
+<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="100,55,175,80"/>
 </map>

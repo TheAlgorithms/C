@@ -6,6 +6,7 @@ var searchData=
   ['binarysearch_3',['binarySearch',['../d3/d47/modified__binary__search_8c.html#a0cfaa56aacf960e4628a0fb27add8890',1,'modified_binary_search.c']]],
   ['binarysearch1_4',['binarysearch1',['../df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582',1,'binary_search.c']]],
   ['binarysearch2_5',['binarysearch2',['../df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032',1,'binary_search.c']]],
-  ['bubble_5fsort_6',['bubble_sort',['../d2/d6d/bubble__sort__2_8c.html#a7406723363363b34f29d18f5a80f1281',1,'bubble_sort_2.c']]],
-  ['bubblesort_7',['bubbleSort',['../dd/de4/bubble__sort_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort_recursion.c']]]
+  ['blake2b_6',['BLAKE2B',['../d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582',1,'hash_blake2b.c']]],
+  ['bubble_5fsort_7',['bubble_sort',['../d2/d6d/bubble__sort__2_8c.html#a7406723363363b34f29d18f5a80f1281',1,'bubble_sort_2.c']]],
+  ['bubblesort_8',['bubbleSort',['../dd/de4/bubble__sort_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f',1,'bubbleSort(int *arr, int size):&#160;bubble_sort_recursion.c']]]
 ];

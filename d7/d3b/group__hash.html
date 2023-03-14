@@ -99,7 +99,10 @@ $(document).ready(function(){initNavTree('d7/d3b/group__hash.html','../../'); in
 <div class="header">
   <div class="summary">
 <a href="#files">Files</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Hash algorithms</div></div>
 </div><!--header-->
 <div class="contents">
@@ -108,6 +111,9 @@ $(document).ready(function(){initNavTree('d7/d3b/group__hash.html','../../'); in
 Files</h2></td></tr>
 <tr class="memitem:d3/d39/hash__adler32_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d39/hash__adler32_8c.html">hash_adler32.c</a></td></tr>
 <tr class="memdesc:d3/d39/hash__adler32_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">32-bit <a href="https://en.wikipedia.org/wiki/Adler-32" target="_blank">Adler hash</a> algorithm <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d1d/hash__blake2b_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1d/hash__blake2b_8c.html">hash_blake2b.c</a></td></tr>
+<tr class="memdesc:dc/d1d/hash__blake2b_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://www.rfc-editor.org/rfc/rfc7693" target="_blank">Blake2b cryptographic hash function</a> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d9/dc9/hash__crc32_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc9/hash__crc32_8c.html">hash_crc32.c</a></td></tr>
 <tr class="memdesc:d9/dc9/hash__crc32_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">32-bit <a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check#CRC-32_algorithm" target="_blank">CRC hash</a> algorithm <br /></td></tr>
@@ -122,6 +128,44 @@ Files</h2></td></tr>
 <tr class="memdesc:d0/d57/hash__xor8_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit <a href="https://en.wikipedia.org/wiki/XOR_cipher" target="_blank">XOR hash</a> algorithm for ASCII characters <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gafe4fb267f5fd876bc5f069b0a76054e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:gafe4fb267f5fd876bc5f069b0a76054e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">for asserts  <br /></td></tr>
+<tr class="separator:gafe4fb267f5fd876bc5f069b0a76054e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ee4dc21c835217a5a1dddfb48b43063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga1ee4dc21c835217a5a1dddfb48b43063">KK_MAX</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:ga1ee4dc21c835217a5a1dddfb48b43063"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define KK_MAX  <br /></td></tr>
+<tr class="separator:ga1ee4dc21c835217a5a1dddfb48b43063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e69b76332a4a7e970d2b4e29674cff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga27e69b76332a4a7e970d2b4e29674cff">NN_MAX</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:ga27e69b76332a4a7e970d2b4e29674cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define NN_MAX  <br /></td></tr>
+<tr class="separator:ga27e69b76332a4a7e970d2b4e29674cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa6921cfca101af04b9dcc8d29bc7b16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gafa6921cfca101af04b9dcc8d29bc7b16">CEIL</a>(a,  b)&#160;&#160;&#160;(((a) / (b)) + ((a) % (b) != 0))</td></tr>
+<tr class="memdesc:gafa6921cfca101af04b9dcc8d29bc7b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define CEIL  <br /></td></tr>
+<tr class="separator:gafa6921cfca101af04b9dcc8d29bc7b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a,  b)&#160;&#160;&#160;((a) &lt; (b) ? (a) : (b))</td></tr>
+<tr class="memdesc:ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define MIN  <br /></td></tr>
+<tr class="separator:ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a,  b)&#160;&#160;&#160;((a) &gt; (b) ? (a) : (b))</td></tr>
+<tr class="memdesc:gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define MAX  <br /></td></tr>
+<tr class="separator:gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1293f9b91cd85591875a9453ba71f1a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a>(n,  offset)&#160;&#160;&#160;(((n) &gt;&gt; (offset)) ^ ((n) &lt;&lt; (64 - (offset))))</td></tr>
+<tr class="memdesc:ga1293f9b91cd85591875a9453ba71f1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define ROTR64  <br /></td></tr>
+<tr class="separator:ga1293f9b91cd85591875a9453ba71f1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf1984a095293c68f7dad2d31790ec3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gaaf1984a095293c68f7dad2d31790ec3b">U128_ZERO</a></td></tr>
+<tr class="memdesc:gaaf1984a095293c68f7dad2d31790ec3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">@define U128_ZERO  <br /></td></tr>
+<tr class="separator:gaaf1984a095293c68f7dad2d31790ec3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gac7cf56cc7cc7b14ceded8253b45db728"><td class="memItemLeft" align="right" valign="top"><a id="gac7cf56cc7cc7b14ceded8253b45db728" name="gac7cf56cc7cc7b14ceded8253b45db728"></a>
+typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>u128</b>[2]</td></tr>
+<tr class="memdesc:gac7cf56cc7cc7b14ceded8253b45db728"><td class="mdescLeft">&#160;</td><td class="mdescRight">128-bit number represented as two uint64's <br /></td></tr>
+<tr class="separator:gac7cf56cc7cc7b14ceded8253b45db728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad587ec486728a1423ca04c21482e0685"><td class="memItemLeft" align="right" valign="top"><a id="gad587ec486728a1423ca04c21482e0685" name="gad587ec486728a1423ca04c21482e0685"></a>
+typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>block_t</b>[<a class="el" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>/sizeof(uint64_t)]</td></tr>
+<tr class="memdesc:gad587ec486728a1423ca04c21482e0685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padded input block containing bb bytes. <br /></td></tr>
+<tr class="separator:gad587ec486728a1423ca04c21482e0685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga506f0227a3b5f9434a503e09a3cb672b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b">adler32</a> (const char *s)</td></tr>
@@ -130,6 +174,23 @@ Functions</h2></td></tr>
 <tr class="memitem:ga994ea8b243b6c0fbef734551ec5765dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga994ea8b243b6c0fbef734551ec5765dd">test_adler32</a> ()</td></tr>
 <tr class="memdesc:ga994ea8b243b6c0fbef734551ec5765dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test function for <a class="el" href="../../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" title="32-bit Adler algorithm implementation">adler32</a>.  <br /></td></tr>
 <tr class="separator:ga994ea8b243b6c0fbef734551ec5765dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94c9f3e74306c2b7ac5f141d8454dbe9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga94c9f3e74306c2b7ac5f141d8454dbe9">u128_fill</a> (<a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> dest, size_t n)</td></tr>
+<tr class="memdesc:ga94c9f3e74306c2b7ac5f141d8454dbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">put value of n into dest  <br /></td></tr>
+<tr class="separator:ga94c9f3e74306c2b7ac5f141d8454dbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaead2e4f50d0c512905c07ddd564e082e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e">u128_increment</a> (<a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> dest, uint64_t n)</td></tr>
+<tr class="memdesc:gaead2e4f50d0c512905c07ddd564e082e"><td class="mdescLeft">&#160;</td><td class="mdescRight">increment an 128-bit number by a given amount  <br /></td></tr>
+<tr class="separator:gaead2e4f50d0c512905c07ddd564e082e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga049d44b5a4804ca5a1b7a290f3fa3202"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a> (<a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x, uint64_t y)</td></tr>
+<tr class="memdesc:ga049d44b5a4804ca5a1b7a290f3fa3202"><td class="mdescLeft">&#160;</td><td class="mdescRight">blake2b mixing function G  <br /></td></tr>
+<tr class="separator:ga049d44b5a4804ca5a1b7a290f3fa3202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37e02cbf2df2247d31ab92f443990dbd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd">F</a> (uint64_t h[8], <a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> m, <a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> t, int f)</td></tr>
+<tr class="memdesc:ga37e02cbf2df2247d31ab92f443990dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">compression function F  <br /></td></tr>
+<tr class="separator:ga37e02cbf2df2247d31ab92f443990dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa42f7c30fb9921ba2eafa8b68b23582"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582">BLAKE2B</a> (uint8_t *dest, <a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> *d, size_t dd, <a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> ll, uint8_t kk, uint8_t nn)</td></tr>
+<tr class="memdesc:gafa42f7c30fb9921ba2eafa8b68b23582"><td class="mdescLeft">&#160;</td><td class="mdescRight">driver function to perform the hashing as described in specification  <br /></td></tr>
+<tr class="separator:gafa42f7c30fb9921ba2eafa8b68b23582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2cd4bc8e8097fff865741a0efc42eca"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gaf2cd4bc8e8097fff865741a0efc42eca">blake2b</a> (const uint8_t *message, size_t len, const uint8_t *key, uint8_t kk, uint8_t nn)</td></tr>
+<tr class="separator:gaf2cd4bc8e8097fff865741a0efc42eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga483e7ee6db1dc09a0f3e683e028ec567"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567">crc32</a> (const char *s)</td></tr>
 <tr class="memdesc:ga483e7ee6db1dc09a0f3e683e028ec567"><td class="mdescLeft">&#160;</td><td class="mdescRight">32-bit CRC algorithm implementation  <br /></td></tr>
 <tr class="separator:ga483e7ee6db1dc09a0f3e683e028ec567"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,8 +215,237 @@ Functions</h2></td></tr>
 <tr class="memitem:ga39d4c16427acbf8bbe744f6d8ed61dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#ga39d4c16427acbf8bbe744f6d8ed61dc0">test_xor8</a> ()</td></tr>
 <tr class="memdesc:ga39d4c16427acbf8bbe744f6d8ed61dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test function for <a class="el" href="../../d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb" title="8-bit XOR algorithm implementation">xor8</a>.  <br /></td></tr>
 <tr class="separator:ga39d4c16427acbf8bbe744f6d8ed61dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga725275fda6544f05ec52cd3c0599de70"><td class="memItemLeft" align="right" valign="top"><a id="ga725275fda6544f05ec52cd3c0599de70" name="ga725275fda6544f05ec52cd3c0599de70"></a>
+static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>R1</b> = 32</td></tr>
+<tr class="memdesc:ga725275fda6544f05ec52cd3c0599de70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation constant 1 for mixing function G. <br /></td></tr>
+<tr class="separator:ga725275fda6544f05ec52cd3c0599de70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga636ffdae3b9f1559ae5419320d10a901"><td class="memItemLeft" align="right" valign="top"><a id="ga636ffdae3b9f1559ae5419320d10a901" name="ga636ffdae3b9f1559ae5419320d10a901"></a>
+static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>R2</b> = 24</td></tr>
+<tr class="memdesc:ga636ffdae3b9f1559ae5419320d10a901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation constant 2 for mixing function G. <br /></td></tr>
+<tr class="separator:ga636ffdae3b9f1559ae5419320d10a901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1a3efdb45c4a807074d73fb8435144f"><td class="memItemLeft" align="right" valign="top"><a id="gac1a3efdb45c4a807074d73fb8435144f" name="gac1a3efdb45c4a807074d73fb8435144f"></a>
+static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>R3</b> = 16</td></tr>
+<tr class="memdesc:gac1a3efdb45c4a807074d73fb8435144f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation constant 3 for mixing function G. <br /></td></tr>
+<tr class="separator:gac1a3efdb45c4a807074d73fb8435144f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf05b277482f6c423d3d2ee7f273e4da1"><td class="memItemLeft" align="right" valign="top"><a id="gaf05b277482f6c423d3d2ee7f273e4da1" name="gaf05b277482f6c423d3d2ee7f273e4da1"></a>
+static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>R4</b> = 63</td></tr>
+<tr class="memdesc:gaf05b277482f6c423d3d2ee7f273e4da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation constant 4 for mixing function G. <br /></td></tr>
+<tr class="separator:gaf05b277482f6c423d3d2ee7f273e4da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaac4e8c647ac9882ec38de284382c0b"><td class="memItemLeft" align="right" valign="top">static const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gabaac4e8c647ac9882ec38de284382c0b">blake2b_iv</a> [8]</td></tr>
+<tr class="memdesc:gabaac4e8c647ac9882ec38de284382c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLAKE2b Initialization vector blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the i:th prime number.  <br /></td></tr>
+<tr class="separator:gabaac4e8c647ac9882ec38de284382c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac97f6ce73af41a0bd4bce78b3f42f6c8"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/group__hash.html#gac97f6ce73af41a0bd4bce78b3f42f6c8">blake2b_sigma</a> [12][16]</td></tr>
+<tr class="memdesc:gac97f6ce73af41a0bd4bce78b3f42f6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">word schedule permutations for each round of the algorithm  <br /></td></tr>
+<tr class="separator:gac97f6ce73af41a0bd4bce78b3f42f6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gafe4fb267f5fd876bc5f069b0a76054e4" name="gafe4fb267f5fd876bc5f069b0a76054e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe4fb267f5fd876bc5f069b0a76054e4">&#9670;&#160;</a></span>bb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define bb&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>for asserts </p>
+<p>for fixed-width integer types e.g. uint64_t and uint8_t for IO for malloc, calloc, and free. As well as size_t @define bb</p>
+<p>the size of a data block in bytes </p>
+
+</div>
+</div>
+<a id="gafa6921cfca101af04b9dcc8d29bc7b16" name="gafa6921cfca101af04b9dcc8d29bc7b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa6921cfca101af04b9dcc8d29bc7b16">&#9670;&#160;</a></span>CEIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CEIL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((a) / (b)) + ((a) % (b) != 0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define CEIL </p>
+<p>ceiling division macro without floats</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>dividend </td></tr>
+    <tr><td class="paramname">divisor</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1ee4dc21c835217a5a1dddfb48b43063" name="ga1ee4dc21c835217a5a1dddfb48b43063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ee4dc21c835217a5a1dddfb48b43063">&#9670;&#160;</a></span>KK_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KK_MAX&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define KK_MAX </p>
+<p>max key length for BLAKE2b </p>
+
+</div>
+</div>
+<a id="gafa99ec4acc4ecb2dc3c2d05da15d0e3f" name="gafa99ec4acc4ecb2dc3c2d05da15d0e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">&#9670;&#160;</a></span>MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((a) &gt; (b) ? (a) : (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define MAX </p>
+<p>returns maximum value </p>
+
+</div>
+</div>
+<a id="ga3acffbd305ee72dcd4593c0d8af64a4f" name="ga3acffbd305ee72dcd4593c0d8af64a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3acffbd305ee72dcd4593c0d8af64a4f">&#9670;&#160;</a></span>MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((a) &lt; (b) ? (a) : (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define MIN </p>
+<p>returns minimum value </p>
+
+</div>
+</div>
+<a id="ga27e69b76332a4a7e970d2b4e29674cff" name="ga27e69b76332a4a7e970d2b4e29674cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27e69b76332a4a7e970d2b4e29674cff">&#9670;&#160;</a></span>NN_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NN_MAX&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define NN_MAX </p>
+<p>max length of BLAKE2b digest in bytes </p>
+
+</div>
+</div>
+<a id="ga1293f9b91cd85591875a9453ba71f1a3" name="ga1293f9b91cd85591875a9453ba71f1a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1293f9b91cd85591875a9453ba71f1a3">&#9670;&#160;</a></span>ROTR64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ROTR64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((n) &gt;&gt; (offset)) ^ ((n) &lt;&lt; (64 - (offset))))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@define ROTR64 </p>
+<p>macro to rotate 64-bit ints to the right Ripped from RFC 7693 </p>
+
+</div>
+</div>
+<a id="gaaf1984a095293c68f7dad2d31790ec3b" name="gaaf1984a095293c68f7dad2d31790ec3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf1984a095293c68f7dad2d31790ec3b">&#9670;&#160;</a></span>U128_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define U128_ZERO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {             \</div>
+<div class="line">        0, 0      \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>@define U128_ZERO </p>
+<p>zero-value initializer for u128 type </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga506f0227a3b5f9434a503e09a3cb672b" name="ga506f0227a3b5f9434a503e09a3cb672b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga506f0227a3b5f9434a503e09a3cb672b">&#9670;&#160;</a></span>adler32()</h2>
@@ -196,6 +486,269 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> (b &lt;&lt; 16) | a;</div>
 <div class="line"><span class="lineno">   32</span>}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="gaf2cd4bc8e8097fff865741a0efc42eca" name="gaf2cd4bc8e8097fff865741a0efc42eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2cd4bc8e8097fff865741a0efc42eca">&#9670;&#160;</a></span>blake2b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * blake2b </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>kk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>nn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  363</span>{</div>
+<div class="line"><span class="lineno">  364</span>    uint8_t *dest = NULL;</div>
+<div class="line"><span class="lineno">  365</span>    uint64_t long_hold;</div>
+<div class="line"><span class="lineno">  366</span>    <span class="keywordtype">size_t</span> dd, has_key, i;</div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordtype">size_t</span> block_index, word_in_block;</div>
+<div class="line"><span class="lineno">  368</span>    <a class="code hl_typedef" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> ll;</div>
+<div class="line"><span class="lineno">  369</span>    <a class="code hl_typedef" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> *blocks;</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>    <span class="keywordflow">if</span> (message == NULL)</div>
+<div class="line"><span class="lineno">  372</span>    {</div>
+<div class="line"><span class="lineno">  373</span>        len = 0;</div>
+<div class="line"><span class="lineno">  374</span>    }</div>
+<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">if</span> (key == NULL)</div>
+<div class="line"><span class="lineno">  376</span>    {</div>
+<div class="line"><span class="lineno">  377</span>        kk = 0;</div>
+<div class="line"><span class="lineno">  378</span>    }</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>    kk = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(kk, <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga1ee4dc21c835217a5a1dddfb48b43063">KK_MAX</a>);</div>
+<div class="line"><span class="lineno">  381</span>    nn = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(nn, <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga27e69b76332a4a7e970d2b4e29674cff">NN_MAX</a>);</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>    dd = <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(<a class="code hl_define" href="../../d7/d3b/group__hash.html#gafa6921cfca101af04b9dcc8d29bc7b16">CEIL</a>(kk, <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>) + <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafa6921cfca101af04b9dcc8d29bc7b16">CEIL</a>(len, <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>), 1);</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>    blocks = <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(dd, <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a>));</div>
+<div class="line"><span class="lineno">  386</span>    <span class="keywordflow">if</span> (blocks == NULL)</div>
+<div class="line"><span class="lineno">  387</span>    {</div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+<div class="line"><span class="lineno">  390</span> </div>
+<div class="line"><span class="lineno">  391</span>    dest = <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(nn * <span class="keyword">sizeof</span>(uint8_t));</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span> (dest == NULL)</div>
+<div class="line"><span class="lineno">  393</span>    {</div>
+<div class="line"><span class="lineno">  394</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(blocks);</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>    <span class="comment">/* If there is a secret key it occupies the first block */</span></div>
+<div class="line"><span class="lineno">  399</span>    <span class="keywordflow">for</span> (i = 0; i &lt; kk; i++)</div>
+<div class="line"><span class="lineno">  400</span>    {</div>
+<div class="line"><span class="lineno">  401</span>        long_hold = message[i];</div>
+<div class="line"><span class="lineno">  402</span>        long_hold &lt;&lt;= 8 * (i % 8);</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>        word_in_block = (i % <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>) / 8;</div>
+<div class="line"><span class="lineno">  405</span>        <span class="comment">/* block_index will always be 0 because kk &lt;= 64 and bb = 128*/</span></div>
+<div class="line"><span class="lineno">  406</span>        blocks[0][word_in_block] |= long_hold;</div>
+<div class="line"><span class="lineno">  407</span>    }</div>
+<div class="line"><span class="lineno">  408</span> </div>
+<div class="line"><span class="lineno">  409</span>    has_key = kk &gt; 0 ? 1 : 0;</div>
+<div class="line"><span class="lineno">  410</span> </div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">for</span> (i = 0; i &lt; len; i++)</div>
+<div class="line"><span class="lineno">  412</span>    {</div>
+<div class="line"><span class="lineno">  413</span>        <span class="comment">/* long_hold exists because the bit-shifting will overflow if we don&#39;t</span></div>
+<div class="line"><span class="lineno">  414</span><span class="comment">         * store the value */</span></div>
+<div class="line"><span class="lineno">  415</span>        long_hold = message[i];</div>
+<div class="line"><span class="lineno">  416</span>        long_hold &lt;&lt;= 8 * (i % 8);</div>
+<div class="line"><span class="lineno">  417</span> </div>
+<div class="line"><span class="lineno">  418</span>        block_index = has_key + (i / <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>);</div>
+<div class="line"><span class="lineno">  419</span>        word_in_block = (i % <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>) / 8;</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>        blocks[block_index][word_in_block] |= long_hold;</div>
+<div class="line"><span class="lineno">  422</span>    }</div>
+<div class="line"><span class="lineno">  423</span> </div>
+<div class="line"><span class="lineno">  424</span>    <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga94c9f3e74306c2b7ac5f141d8454dbe9">u128_fill</a>(ll, len);</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span>    <a class="code hl_function" href="../../d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582">BLAKE2B</a>(dest, blocks, dd, ll, kk, nn);</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(blocks);</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">return</span> dest;</div>
+<div class="line"><span class="lineno">  431</span>}</div>
+<div class="ttc" id="agroup__hash_html_ga1ee4dc21c835217a5a1dddfb48b43063"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga1ee4dc21c835217a5a1dddfb48b43063">KK_MAX</a></div><div class="ttdeci">#define KK_MAX</div><div class="ttdoc">@define KK_MAX</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:40</div></div>
+<div class="ttc" id="agroup__hash_html_ga27e69b76332a4a7e970d2b4e29674cff"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga27e69b76332a4a7e970d2b4e29674cff">NN_MAX</a></div><div class="ttdeci">#define NN_MAX</div><div class="ttdoc">@define NN_MAX</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:46</div></div>
+<div class="ttc" id="agroup__hash_html_ga3acffbd305ee72dcd4593c0d8af64a4f"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a></div><div class="ttdeci">#define MIN(a, b)</div><div class="ttdoc">@define MIN</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:61</div></div>
+<div class="ttc" id="agroup__hash_html_ga94c9f3e74306c2b7ac5f141d8454dbe9"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga94c9f3e74306c2b7ac5f141d8454dbe9">u128_fill</a></div><div class="ttdeci">static void u128_fill(u128 dest, size_t n)</div><div class="ttdoc">put value of n into dest</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:128</div></div>
+<div class="ttc" id="agroup__hash_html_gac7cf56cc7cc7b14ceded8253b45db728"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a></div><div class="ttdeci">uint64_t u128[2]</div><div class="ttdoc">128-bit number represented as two uint64's</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:86</div></div>
+<div class="ttc" id="agroup__hash_html_gad587ec486728a1423ca04c21482e0685"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a></div><div class="ttdeci">uint64_t block_t[bb/sizeof(uint64_t)]</div><div class="ttdoc">Padded input block containing bb bytes.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:89</div></div>
+<div class="ttc" id="agroup__hash_html_gafa42f7c30fb9921ba2eafa8b68b23582"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582">BLAKE2B</a></div><div class="ttdeci">static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll, uint8_t kk, uint8_t nn)</div><div class="ttdoc">driver function to perform the hashing as described in specification</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:294</div></div>
+<div class="ttc" id="agroup__hash_html_gafa6921cfca101af04b9dcc8d29bc7b16"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gafa6921cfca101af04b9dcc8d29bc7b16">CEIL</a></div><div class="ttdeci">#define CEIL(a, b)</div><div class="ttdoc">@define CEIL</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:55</div></div>
+<div class="ttc" id="agroup__hash_html_gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdoc">@define MAX</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:67</div></div>
+<div class="ttc" id="agroup__hash_html_gafe4fb267f5fd876bc5f069b0a76054e4"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a></div><div class="ttdeci">#define bb</div><div class="ttdoc">for asserts</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:34</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
+<div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gafa42f7c30fb9921ba2eafa8b68b23582" name="gafa42f7c30fb9921ba2eafa8b68b23582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa42f7c30fb9921ba2eafa8b68b23582">&#9670;&#160;</a></span>BLAKE2B()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int BLAKE2B </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a>&#160;</td>
+          <td class="paramname"><em>ll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>kk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>nn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>driver function to perform the hashing as described in specification </p>
+<p>pseudocode: (credit to authors of RFC 7693 listed above) FUNCTION BLAKE2( d[0..dd-1], ll, kk, nn ) | | h[0..7] := IV[0..7] // Initialization <a class="el" href="../../d4/d06/struct_vector.html" title="for IO operations">Vector</a>. | | // Parameter block p[0] | h[0] := h[0] ^ 0x01010000 ^ (kk &lt;&lt; 8) ^ nn | | // Process padded key and data blocks | IF dd &gt; 1 THEN | | FOR i = 0 TO dd - 2 DO | | | h := F( h, d[i], (i + 1) * bb, FALSE ) | | END FOR. | END IF. | | // Final block. | IF kk = 0 THEN | | h := F( h, d[dd - 1], ll, TRUE ) | ELSE | | h := F( h, d[dd - 1], ll + bb, TRUE ) | END IF. | | RETURN first "nn" bytes from little-endian word array h[]. | END FUNCTION.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>destination of hashing digest </td></tr>
+    <tr><td class="paramname">d</td><td>message blocks </td></tr>
+    <tr><td class="paramname">dd</td><td>length of d </td></tr>
+    <tr><td class="paramname">ll</td><td>128-bit length of message </td></tr>
+    <tr><td class="paramname">kk</td><td>length of secret key </td></tr>
+    <tr><td class="paramname">nn</td><td>length of hash digest</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 upon successful hash </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  296</span>{</div>
+<div class="line"><span class="lineno">  297</span>    uint8_t bytes[8];</div>
+<div class="line"><span class="lineno">  298</span>    uint64_t i, j;</div>
+<div class="line"><span class="lineno">  299</span>    uint64_t h[8];</div>
+<div class="line"><span class="lineno">  300</span>    <a class="code hl_typedef" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a> t = <a class="code hl_define" href="../../d7/d3b/group__hash.html#gaaf1984a095293c68f7dad2d31790ec3b">U128_ZERO</a>;</div>
+<div class="line"><span class="lineno">  301</span> </div>
+<div class="line"><span class="lineno">  302</span>    <span class="comment">/* h[0..7] = IV[0..7] */</span></div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">for</span> (i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  304</span>    {</div>
+<div class="line"><span class="lineno">  305</span>        h[i] = <a class="code hl_variable" href="../../d7/d3b/group__hash.html#gabaac4e8c647ac9882ec38de284382c0b">blake2b_iv</a>[i];</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>    h[0] ^= 0x01010000 ^ (kk &lt;&lt; 8) ^ nn;</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>    <span class="keywordflow">if</span> (dd &gt; 1)</div>
+<div class="line"><span class="lineno">  311</span>    {</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">for</span> (i = 0; i &lt; dd - 1; i++)</div>
+<div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            <a class="code hl_function" href="../../d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e">u128_increment</a>(t, <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>);</div>
+<div class="line"><span class="lineno">  315</span>            <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd">F</a>(h, d[i], t, 0);</div>
+<div class="line"><span class="lineno">  316</span>        }</div>
+<div class="line"><span class="lineno">  317</span>    }</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">if</span> (kk != 0)</div>
+<div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e">u128_increment</a>(ll, <a class="code hl_define" href="../../d7/d3b/group__hash.html#gafe4fb267f5fd876bc5f069b0a76054e4">bb</a>);</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
+<div class="line"><span class="lineno">  323</span>    <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd">F</a>(h, d[dd - 1], ll, 1);</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>    <span class="comment">/* copy bytes from h to destination buffer */</span></div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nn; i++)</div>
+<div class="line"><span class="lineno">  327</span>    {</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">if</span> (i % <span class="keyword">sizeof</span>(uint64_t) == 0)</div>
+<div class="line"><span class="lineno">  329</span>        {</div>
+<div class="line"><span class="lineno">  330</span>            <span class="comment">/* copy values from uint64 to 8 u8&#39;s */</span></div>
+<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">for</span> (j = 0; j &lt; <span class="keyword">sizeof</span>(uint64_t); j++)</div>
+<div class="line"><span class="lineno">  332</span>            {</div>
+<div class="line"><span class="lineno">  333</span>                uint16_t offset = 8 * j;</div>
+<div class="line"><span class="lineno">  334</span>                uint64_t mask = 0xFF;</div>
+<div class="line"><span class="lineno">  335</span>                mask &lt;&lt;= offset;</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>                bytes[j] = (h[i / 8] &amp; (mask)) &gt;&gt; offset;</div>
+<div class="line"><span class="lineno">  338</span>            }</div>
+<div class="line"><span class="lineno">  339</span>        }</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>        dest[i] = bytes[i % 8];</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  345</span>}</div>
+<div class="ttc" id="agroup__hash_html_ga37e02cbf2df2247d31ab92f443990dbd"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd">F</a></div><div class="ttdeci">static void F(uint64_t h[8], block_t m, u128 t, int f)</div><div class="ttdoc">compression function F</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:211</div></div>
+<div class="ttc" id="agroup__hash_html_gaaf1984a095293c68f7dad2d31790ec3b"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gaaf1984a095293c68f7dad2d31790ec3b">U128_ZERO</a></div><div class="ttdeci">#define U128_ZERO</div><div class="ttdoc">@define U128_ZERO</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:80</div></div>
+<div class="ttc" id="agroup__hash_html_gabaac4e8c647ac9882ec38de284382c0b"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gabaac4e8c647ac9882ec38de284382c0b">blake2b_iv</a></div><div class="ttdeci">static const uint64_t blake2b_iv[8]</div><div class="ttdoc">BLAKE2b Initialization vector blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))),...</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:96</div></div>
+<div class="ttc" id="agroup__hash_html_gaead2e4f50d0c512905c07ddd564e082e"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e">u128_increment</a></div><div class="ttdeci">static void u128_increment(u128 dest, uint64_t n)</div><div class="ttdoc">increment an 128-bit number by a given amount</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:155</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d3b/group__hash_gafa42f7c30fb9921ba2eafa8b68b23582_cgraph.svg" width="342" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ga483e7ee6db1dc09a0f3e683e028ec567" name="ga483e7ee6db1dc09a0f3e683e028ec567"></a>
@@ -275,6 +828,215 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>    }</div>
 <div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> hash;</div>
 <div class="line"><span class="lineno">   28</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga37e02cbf2df2247d31ab92f443990dbd" name="ga37e02cbf2df2247d31ab92f443990dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37e02cbf2df2247d31ab92f443990dbd">&#9670;&#160;</a></span>F()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void F </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>h</em>[8], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compression function F </p>
+<p>Securely mixes the values in block m into the state vector h. Value at v[14] is also inverted if this is the final block to be compressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>the state vector </td></tr>
+    <tr><td class="paramname">m</td><td>message vector to be compressed into h </td></tr>
+    <tr><td class="paramname">t</td><td>128-bit offset counter </td></tr>
+    <tr><td class="paramname">f</td><td>flag to indicate whether this is the final block</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>{</div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  214</span>    <a class="code hl_typedef" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a> v;</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <span class="comment">/* v[0..7] := h[0..7] */</span></div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">for</span> (i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        v[i] = h[i];</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span>    <span class="comment">/* v[8..15] := IV[0..7] */</span></div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">for</span> (; i &lt; 16; i++)</div>
+<div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>        v[i] = <a class="code hl_variable" href="../../d7/d3b/group__hash.html#gabaac4e8c647ac9882ec38de284382c0b">blake2b_iv</a>[i - 8];</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>    v[12] ^= t[0]; <span class="comment">/* v[12] ^ (t mod 2**w) */</span></div>
+<div class="line"><span class="lineno">  228</span>    v[13] ^= t[1]; <span class="comment">/* v[13] ^ (t &gt;&gt; w) */</span></div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">if</span> (f)</div>
+<div class="line"><span class="lineno">  231</span>    {</div>
+<div class="line"><span class="lineno">  232</span>        v[14] = ~v[14];</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">for</span> (i = 0; i &lt; 12; i++)</div>
+<div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>        <span class="keyword">const</span> uint8_t *s = <a class="code hl_variable" href="../../d7/d3b/group__hash.html#gac97f6ce73af41a0bd4bce78b3f42f6c8">blake2b_sigma</a>[i];</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 0, 4, 8, 12, m[s[0]], m[s[1]]);</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 1, 5, 9, 13, m[s[2]], m[s[3]]);</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 2, 6, 10, 14, m[s[4]], m[s[5]]);</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 3, 7, 11, 15, m[s[6]], m[s[7]]);</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 0, 5, 10, 15, m[s[8]], m[s[9]]);</div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 1, 6, 11, 12, m[s[10]], m[s[11]]);</div>
+<div class="line"><span class="lineno">  246</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 2, 7, 8, 13, m[s[12]], m[s[13]]);</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_function" href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a>(v, 3, 4, 9, 14, m[s[14]], m[s[15]]);</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">for</span> (i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  251</span>    {</div>
+<div class="line"><span class="lineno">  252</span>        h[i] ^= v[i] ^ v[i + 8];</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+<div class="line"><span class="lineno">  254</span>}</div>
+<div class="ttc" id="agroup__hash_html_ga049d44b5a4804ca5a1b7a290f3fa3202"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202">G</a></div><div class="ttdeci">static void G(block_t v, uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint64_t x, uint64_t y)</div><div class="ttdoc">blake2b mixing function G</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:183</div></div>
+<div class="ttc" id="agroup__hash_html_gac97f6ce73af41a0bd4bce78b3f42f6c8"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gac97f6ce73af41a0bd4bce78b3f42f6c8">blake2b_sigma</a></div><div class="ttdeci">static const uint8_t blake2b_sigma[12][16]</div><div class="ttdoc">word schedule permutations for each round of the algorithm</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:105</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d3b/group__hash_ga37e02cbf2df2247d31ab92f443990dbd_cgraph.svg" width="136" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ga049d44b5a4804ca5a1b7a290f3fa3202" name="ga049d44b5a4804ca5a1b7a290f3fa3202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga049d44b5a4804ca5a1b7a290f3fa3202">&#9670;&#160;</a></span>G()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void G </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685">block_t</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>blake2b mixing function G </p>
+<p>Shuffles values in block v depending on provided indeces a, b, c, and d. x and y are also mixed into the block.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>array of words to be mixed </td></tr>
+    <tr><td class="paramname">a</td><td>first index </td></tr>
+    <tr><td class="paramname">b</td><td>second index </td></tr>
+    <tr><td class="paramname">c</td><td>third index </td></tr>
+    <tr><td class="paramname">d</td><td>fourth index </td></tr>
+    <tr><td class="paramname">x</td><td>first word being mixed into v </td></tr>
+    <tr><td class="paramname">y</td><td>second word being mixed into y</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>{</div>
+<div class="line"><span class="lineno">  186</span>    v[a] += v[b] + x;</div>
+<div class="line"><span class="lineno">  187</span>    v[d] = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a>(v[d] ^ v[a], <a class="code hl_variable" href="../../d7/d3b/group__hash.html#ga725275fda6544f05ec52cd3c0599de70">R1</a>);</div>
+<div class="line"><span class="lineno">  188</span>    v[c] += v[d];</div>
+<div class="line"><span class="lineno">  189</span>    v[b] = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a>(v[b] ^ v[c], <a class="code hl_variable" href="../../d7/d3b/group__hash.html#ga636ffdae3b9f1559ae5419320d10a901">R2</a>);</div>
+<div class="line"><span class="lineno">  190</span>    v[a] += v[b] + y;</div>
+<div class="line"><span class="lineno">  191</span>    v[d] = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a>(v[d] ^ v[a], <a class="code hl_variable" href="../../d7/d3b/group__hash.html#gac1a3efdb45c4a807074d73fb8435144f">R3</a>);</div>
+<div class="line"><span class="lineno">  192</span>    v[c] += v[d];</div>
+<div class="line"><span class="lineno">  193</span>    v[b] = <a class="code hl_define" href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a>(v[b] ^ v[c], <a class="code hl_variable" href="../../d7/d3b/group__hash.html#gaf05b277482f6c423d3d2ee7f273e4da1">R4</a>);</div>
+<div class="line"><span class="lineno">  194</span>}</div>
+<div class="ttc" id="agroup__hash_html_ga1293f9b91cd85591875a9453ba71f1a3"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga1293f9b91cd85591875a9453ba71f1a3">ROTR64</a></div><div class="ttdeci">#define ROTR64(n, offset)</div><div class="ttdoc">@define ROTR64</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:74</div></div>
+<div class="ttc" id="agroup__hash_html_ga636ffdae3b9f1559ae5419320d10a901"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga636ffdae3b9f1559ae5419320d10a901">R2</a></div><div class="ttdeci">static const uint8_t R2</div><div class="ttdoc">Rotation constant 2 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:92</div></div>
+<div class="ttc" id="agroup__hash_html_ga725275fda6544f05ec52cd3c0599de70"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga725275fda6544f05ec52cd3c0599de70">R1</a></div><div class="ttdeci">static const uint8_t R1</div><div class="ttdoc">Rotation constant 1 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:91</div></div>
+<div class="ttc" id="agroup__hash_html_gac1a3efdb45c4a807074d73fb8435144f"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gac1a3efdb45c4a807074d73fb8435144f">R3</a></div><div class="ttdeci">static const uint8_t R3</div><div class="ttdoc">Rotation constant 3 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:93</div></div>
+<div class="ttc" id="agroup__hash_html_gaf05b277482f6c423d3d2ee7f273e4da1"><div class="ttname"><a href="../../d7/d3b/group__hash.html#gaf05b277482f6c423d3d2ee7f273e4da1">R4</a></div><div class="ttdeci">static const uint8_t R4</div><div class="ttdoc">Rotation constant 4 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:94</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -486,6 +1248,124 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ga94c9f3e74306c2b7ac5f141d8454dbe9" name="ga94c9f3e74306c2b7ac5f141d8454dbe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94c9f3e74306c2b7ac5f141d8454dbe9">&#9670;&#160;</a></span>u128_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void u128_fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a>&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>put value of n into dest </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>128-bit number to get copied from n </td></tr>
+    <tr><td class="paramname">n</td><td>value put into dest</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
+<div class="line"><span class="lineno">  130</span>    dest[0] = n &amp; UINT64_MAX;</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">if</span> (<span class="keyword">sizeof</span>(n) &gt; 8)</div>
+<div class="line"><span class="lineno">  133</span>    {</div>
+<div class="line"><span class="lineno">  134</span>        <span class="comment">/* The C standard does not specify a maximum length for size_t,</span></div>
+<div class="line"><span class="lineno">  135</span><span class="comment">         * although most machines implement it to be the same length as</span></div>
+<div class="line"><span class="lineno">  136</span><span class="comment">         * uint64_t. On machines where size_t is 8 bytes long this will issue a</span></div>
+<div class="line"><span class="lineno">  137</span><span class="comment">         * compiler warning, which is why it is suppressed. But on a machine</span></div>
+<div class="line"><span class="lineno">  138</span><span class="comment">         * where size_t is greater than 8 bytes, this will work as normal. */</span></div>
+<div class="line"><span class="lineno">  139</span>        dest[1] = n &gt;&gt; 64;</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>        dest[1] = 0;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaead2e4f50d0c512905c07ddd564e082e" name="gaead2e4f50d0c512905c07ddd564e082e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaead2e4f50d0c512905c07ddd564e082e">&#9670;&#160;</a></span>u128_increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void u128_increment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728">u128</a>&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>increment an 128-bit number by a given amount </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>the value being incremented </td></tr>
+    <tr><td class="paramname">n</td><td>what dest is being increased by</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>    <span class="comment">/* Check for overflow */</span></div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> (UINT64_MAX - dest[0] &lt;= n)</div>
+<div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        dest[1]++;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    dest[0] += n;</div>
+<div class="line"><span class="lineno">  164</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="gae4836b42b998b336298f3b19dcc9cdeb" name="gae4836b42b998b336298f3b19dcc9cdeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae4836b42b998b336298f3b19dcc9cdeb">&#9670;&#160;</a></span>xor8()</h2>
 
@@ -521,6 +1401,73 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   28</span>    <span class="keywordflow">return</span> (((hash ^ 0xff) + 1) &amp; 0xff);</div>
 <div class="line"><span class="lineno">   29</span>}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="gabaac4e8c647ac9882ec38de284382c0b" name="gabaac4e8c647ac9882ec38de284382c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabaac4e8c647ac9882ec38de284382c0b">&#9670;&#160;</a></span>blake2b_iv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t blake2b_iv[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x6A09E667F3BCC908, 0xBB67AE8584CAA73B, 0x3C6EF372FE94F82B,</div>
+<div class="line">    0xA54FF53A5F1D36F1, 0x510E527FADE682D1, 0x9B05688C2B3E6C1F,</div>
+<div class="line">    0x1F83D9ABFB41BD6B, 0x5BE0CD19137E2179}</div>
+</div><!-- fragment -->
+<p>BLAKE2b Initialization vector blake2b_iv[i] = floor(2**64 * frac(sqrt(prime(i+1)))), where prime(i) is the i:th prime number. </p>
+
+</div>
+</div>
+<a id="gac97f6ce73af41a0bd4bce78b3f42f6c8" name="gac97f6ce73af41a0bd4bce78b3f42f6c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac97f6ce73af41a0bd4bce78b3f42f6c8">&#9670;&#160;</a></span>blake2b_sigma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t blake2b_sigma[12][16]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},</div>
+<div class="line">    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3},</div>
+<div class="line">    {11, 8, 12, 0, 5, 2, 15, 13, 10, 14, 3, 6, 7, 1, 9, 4},</div>
+<div class="line">    {7, 9, 3, 1, 13, 12, 11, 14, 2, 6, 5, 10, 4, 0, 15, 8},</div>
+<div class="line">    {9, 0, 5, 7, 2, 4, 10, 15, 14, 1, 11, 12, 6, 8, 3, 13},</div>
+<div class="line">    {2, 12, 6, 10, 0, 11, 8, 3, 4, 13, 7, 5, 15, 14, 1, 9},</div>
+<div class="line">    {12, 5, 1, 15, 14, 13, 4, 10, 0, 7, 6, 3, 9, 2, 8, 11},</div>
+<div class="line">    {13, 11, 7, 14, 12, 1, 3, 9, 5, 0, 15, 4, 8, 6, 2, 10},</div>
+<div class="line">    {6, 15, 14, 9, 11, 3, 0, 8, 12, 2, 13, 7, 1, 4, 10, 5},</div>
+<div class="line">    {10, 2, 8, 4, 7, 6, 1, 5, 15, 11, 9, 14, 3, 12, 13, 0},</div>
+<div class="line">    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},</div>
+<div class="line">    {14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5,</div>
+<div class="line">     3}}</div>
+</div><!-- fragment -->
+<p>word schedule permutations for each round of the algorithm </p>
+
 </div>
 </div>
 </div><!-- contents -->

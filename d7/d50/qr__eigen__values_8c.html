@@ -135,7 +135,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0">create_matrix</a> (double **A, int N)</td></tr>
 <tr class="memdesc:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a square matrix of given size with random elements  <br /></td></tr>
 <tr class="separator:a7d96c5e4ae1bd6d29791bcc23a4cb2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5835240036dc02ee9a13e65c559fb907"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907">mat_mul</a> (double **A, double **B, double **OUT, int R1, int C1, int R2, int C2)</td></tr>
+<tr class="memitem:a5835240036dc02ee9a13e65c559fb907"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907">mat_mul</a> (double **A, double **B, double **OUT, int <a class="el" href="../../d7/d3b/group__hash.html#ga725275fda6544f05ec52cd3c0599de70">R1</a>, int C1, int <a class="el" href="../../d7/d3b/group__hash.html#ga636ffdae3b9f1559ae5419320d10a901">R2</a>, int C2)</td></tr>
 <tr class="memdesc:a5835240036dc02ee9a13e65c559fb907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform multiplication of two matrices.  <br /></td></tr>
 <tr class="separator:a5835240036dc02ee9a13e65c559fb907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d8ed79786d17df48396b333c09d05bb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d50/qr__eigen__values_8c.html#a0d8ed79786d17df48396b333c09d05bb">eigen_values</a> (double **A, double *eigen_vals, int mat_size, char debug_print)</td></tr>
@@ -569,7 +569,7 @@ Here is the call graph for this function:</div>
 </li>
 </ul>
 <div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (C1 != R2)</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (C1 != <a class="code hl_variable" href="../../d7/d3b/group__hash.html#ga636ffdae3b9f1559ae5419320d10a901">R2</a>)</div>
 <div class="line"><span class="lineno">   63</span>    {</div>
 <div class="line"><span class="lineno">   64</span>        perror(<span class="stringliteral">&quot;Matrix dimensions mismatch!&quot;</span>);</div>
 <div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> OUT;</div>
@@ -579,7 +579,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   69</span><span class="preprocessor">#ifdef _OPENMP</span></div>
 <div class="line"><span class="lineno">   70</span><span class="preprocessor">#pragma omp for</span></div>
 <div class="line"><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (i = 0; i &lt; R1; i++)</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code hl_variable" href="../../d7/d3b/group__hash.html#ga725275fda6544f05ec52cd3c0599de70">R1</a>; i++)</div>
 <div class="line"><span class="lineno">   73</span>    {</div>
 <div class="line"><span class="lineno">   74</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; C2; j++)</div>
 <div class="line"><span class="lineno">   75</span>        {</div>
@@ -589,6 +589,8 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   79</span>    }</div>
 <div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> OUT;</div>
 <div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="agroup__hash_html_ga636ffdae3b9f1559ae5419320d10a901"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga636ffdae3b9f1559ae5419320d10a901">R2</a></div><div class="ttdeci">static const uint8_t R2</div><div class="ttdoc">Rotation constant 2 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:92</div></div>
+<div class="ttc" id="agroup__hash_html_ga725275fda6544f05ec52cd3c0599de70"><div class="ttname"><a href="../../d7/d3b/group__hash.html#ga725275fda6544f05ec52cd3c0599de70">R1</a></div><div class="ttdeci">static const uint8_t R1</div><div class="ttdoc">Rotation constant 1 for mixing function G.</div><div class="ttdef"><b>Definition:</b> hash_blake2b.c:91</div></div>
 </div><!-- fragment -->
 </div>
 </div>

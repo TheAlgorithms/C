@@ -10,5 +10,6 @@ var searchData=
   ['addmeminfo_7',['addMemInfo',['../db/d84/malloc__dbg_8c.html#a062aa89cafd39a97971a2eb22653ff2a',1,'malloc_dbg.c']]],
   ['addwordtotree_8',['addWordToTree',['../d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9',1,'words_alphabetical.c']]],
   ['adler32_9',['adler32',['../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b',1,'hash_adler32.c']]],
-  ['allocatememoryfornode_10',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]]
+  ['allocatememoryfornode_10',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
+  ['assert_5fbytes_11',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]]
 ];
