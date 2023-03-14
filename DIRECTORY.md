@@ -161,6 +161,7 @@
 
 ## Hash
   * [Hash Adler32](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_adler32.c)
+  * [Hash Blake2B](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_blake2b.c)
   * [Hash Crc32](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_crc32.c)
   * [Hash Djb2](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_djb2.c)
   * [Hash Sdbm](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_sdbm.c)
@@ -215,6 +216,7 @@
     * [1833](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1833.c)
     * [1838](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/1838.c)
     * [189](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/189.c)
+    * [19](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/19.c)
     * [190](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/190.c)
     * [191](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/191.c)
     * [2](https://github.com/TheAlgorithms/C/blob/HEAD/leetcode/src/2.c)
