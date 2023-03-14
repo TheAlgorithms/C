@@ -44,9 +44,9 @@ unsigned int fib(int number)
  */
 static void test()
 {
-    assert(fib(5));
-    assert(fib(2));
-    assert(fib(9));
+    assert(fib(5) == 3);
+    assert(fib(2) == 1);
+    assert(fib(9) == 21);
 }
 
 /**
