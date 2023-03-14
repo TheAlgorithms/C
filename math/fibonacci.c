@@ -9,6 +9,7 @@
 #include <assert.h>  /// for assert()
 #include <stdio.h>   /// for input, output
 #include <stdlib.h>  /// for exit() - to exit the program
+
 /**
  * @brief Determines the nth Fibonacci term
  * @param number - n in "nth term" and it can't be negative as well as zero
@@ -37,13 +38,21 @@ unsigned int fib(int number)
     return fib(number - 1) + fib(number - 2);
 }
 
-void test()
+/**
+ * @brief self-test implementation
+ * @return void
+ */
+static void test()
 {
-    assert(fib(1));
+    assert(fib(5));
     assert(fib(2));
     assert(fib(9));
 }
 
+/**
+ * @brief Main function
+ * @return 0 on exit
+ */
 int main()
 {
     int number;
