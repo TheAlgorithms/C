@@ -56,6 +56,7 @@ static void test()
 int main()
 {
     int number;
+    char buffer[8];
 
     // Performing the test
     test();
@@ -63,7 +64,11 @@ int main()
 
     // Getting n
     printf("Enter n to find nth fibonacci element: ");
-    scanf("%d", &number);
+    scanf("%2[0-9]s", buffer);
+
+    number = atoi(buffer);
+
+    printf(">>>%d\n", number);
 
     printf("Fibonacci element %d is %u\n", number, fib(number));
     return 0;
