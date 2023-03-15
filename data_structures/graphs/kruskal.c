@@ -31,7 +31,7 @@ struct Graph *createGraph(int V, int E)
     graph->V = V;
     graph->E = E;
 
-    graph->edge = (struct Edge*)malloc(sizeof( struct Edge)*E);
+    graph->edge = (struct Edge*)malloc(sizeof(struct Edge) * E);
 
     return graph;
 }
