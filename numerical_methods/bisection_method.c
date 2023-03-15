@@ -20,7 +20,7 @@
 #define NMAX 50         // maximum number of iterations
 
 /**
- * @brief Function documentation
+ * @brief Function to check if two values have the same sign
  * @param a First value
  * @param b Second value
  * @returns `sign`
@@ -38,7 +38,7 @@ float func(float x)
 }
 
 /**
- * @brief Function documentation
+ * @brief Root-finding method for a continuous function
  * @param x_left Lower interval value
  * @param x_right Upper interval value
  * @param tolerance error threshold
