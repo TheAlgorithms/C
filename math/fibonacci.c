@@ -64,11 +64,18 @@ int main()
 
     // Getting n
     printf("Enter n to find nth fibonacci element: ");
-    scanf("%2[0-9]s", buffer);
+    scanf("%3[0-9]s", buffer);  // Inputting only the first two digits as this
+                                // program can handle only till 48th element
 
-    number = atoi(buffer);
+    number = atoi(buffer);  // Converting the string to integer (atoi - argument
+                            // to integer)
 
-    printf(">>>%d\n", number);
+    // Exit if n is greater than 48
+    if (number >= 48)
+    {
+        printf("Sorry, n can't be greater than 48.\n");
+        exit(EXIT_FAILURE);
+    }
 
     printf("Fibonacci element %d is %u\n", number, fib(number));
     return 0;
