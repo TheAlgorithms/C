@@ -56,7 +56,7 @@ float bisection(float x_left, float x_right, float tolerance)
         middle = (x_left + x_right) / 2;  // bisect the interval
         float error = fabs(x_left - x_right) / 2;
 
-        if (func(middle) == 0.0 || error < tolerance)
+        if (fabs(func(middle)) <= EPSILON || error < tolerance)
         {
             return middle;
         }
