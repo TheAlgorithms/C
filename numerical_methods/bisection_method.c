@@ -65,7 +65,7 @@ double bisection(double x_left, double x_right, double tolerance)
             return middle;
         }
 
-        if (sign(func(middle), func(x_left)) >= 0.0)
+        if (sign(func(middle), func(x_left)) > 0.0)
         {
             x_left = middle;  // new lower interval
         }
