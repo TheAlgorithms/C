@@ -14,7 +14,7 @@
  */
 
 #include <assert.h>  /// for assert
-#include <math.h>    /// for pow and fabs
+#include <math.h>    /// for fabs
 
 #define EPSILON 0.0001  // a small positive infinitesimal quantity
 #define NMAX 50         // maximum number of iterations
@@ -38,7 +38,7 @@ double sign(double a, double b)
  */
 double func(double x)
 {
-    return pow(x, 3.0) + 2.0 * x - 10.0;  // f(x) = x**3 + 2x - 10
+    return x * x * x + 2.0 * x - 10.0;  // f(x) = x**3 + 2x - 10
 }
 
 /**
@@ -60,7 +60,7 @@ double bisection(double x_left, double x_right, double tolerance)
         middle = (x_left + x_right) / 2;  // bisect the interval
         double error = middle - x_left;
 
-        if (fabs(func(middle)) <= EPSILON || error < tolerance)
+        if (fabs(func(middle)) < EPSILON || error < tolerance)
         {
             return middle;
         }
@@ -87,9 +87,9 @@ static void test()
 {
     /* Compares root value that is found by the bisection method within a given
      * floating point error*/
-    assert(fabs(bisection(1.0, 2.0, 0.0001) - 1.847473) <=
+    assert(fabs(bisection(1.0, 2.0, 0.0001) - 1.847473) <
            EPSILON);  // the algorithm works as expected
-    assert(fabs(bisection(100.0, 250.0, 0.0001) - 249.999928) <=
+    assert(fabs(bisection(100.0, 250.0, 0.0001) - 249.999928) <
            EPSILON);  // the algorithm works as expected
 }
 
