@@ -25,7 +25,7 @@
  * @param b Second value
  * @returns `sign`
  */
-float sign(float a, float b) { return a * b; }
+float sign(float a, float b) { return (a > 0 && b > 0) + (a < 0 && b < 0) - (a > 0 && b < 0) - (a < 0 && b > 0); }
 
 /**
  * @brief Polynomial function for root finding
