@@ -25,14 +25,18 @@
  * @param b Second value
  * @returns `sign`
  */
-float sign(float a, float b) { return (a > 0 && b > 0) + (a < 0 && b < 0) - (a > 0 && b < 0) - (a < 0 && b > 0); }
+double sign(double a, double b)
+{
+    return (a > 0 && b > 0) + (a < 0 && b < 0) - (a > 0 && b < 0) -
+           (a < 0 && b > 0);
+}
 
 /**
  * @brief Polynomial function for root finding
  * @param x
  * @returns `function evaluation result`
  */
-float func(float x)
+double func(double x)
 {
     return pow(x, 3.0) + 2.0 * x - 10.0;  // f(x) = x**3 + 2x - 10
 }
@@ -46,15 +50,15 @@ float func(float x)
  * maximum number of iterations
  * @returns `-1` if bisection method fails
  */
-float bisection(float x_left, float x_right, float tolerance)
+double bisection(double x_left, double x_right, double tolerance)
 {
-    int n = 1;     // step counter
-    float middle;  // midpoint
+    int n = 1;      // step counter
+    double middle;  // midpoint
 
     while (n <= NMAX)
     {
         middle = (x_left + x_right) / 2;  // bisect the interval
-        float error = middle - x_left;
+        double error = middle - x_left;
 
         if (fabs(func(middle)) <= EPSILON || error < tolerance)
         {
@@ -72,7 +76,7 @@ float bisection(float x_left, float x_right, float tolerance)
 
         n++;  // increase step counter
     }
-    return -1.0;  // method failed (maximum number of steps exceeded)
+    return -1;  // method failed (maximum number of steps exceeded)
 }
 
 /**
