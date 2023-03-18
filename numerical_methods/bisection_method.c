@@ -1,8 +1,8 @@
 /**
  * @file
- * @brief In mathematics, the bisection method is a root-finding method that
+ * @brief In mathematics, the [Bisection Method](https://en.wikipedia.org/wiki/Bisection_method) is a root-finding method that
  * applies to any continuous function for which one knows two values with
- * opposite signs. https://en.wikipedia.org/wiki/Bisection_method
+ * opposite signs.
  * @details
  * The method consists of repeatedly bisecting the interval
  * defined by these values and then selecting the subinterval in which the
