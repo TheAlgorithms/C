@@ -6,7 +6,7 @@
  * with opposite signs.
  * @details
  * The method consists of repeatedly bisecting the interval
- * defined by these values and then selecting the subinterval in which the
+ * defined by the two values and then selecting the subinterval in which the
  * function changes sign, and therefore must contain a root. It is a very
  * simple and robust method, but it is also relatively slow. Because of this,
  * it is often used to obtain a rough approximation to a solution which is
@@ -33,8 +33,8 @@ double sign(double a, double b)
 }
 
 /**
- * @brief Polynomial function for root finding
- * @param x Input value (an element of the function's domain)
+ * @brief Continuous function for root-finding
+ * @param x Real input variable
  * @returns `function evaluation result`
  */
 double func(double x)
@@ -43,9 +43,10 @@ double func(double x)
 }
 
 /**
- * @brief Root-finding method for a continuous function
- * @param x_left Lower interval value
- * @param x_right Upper interval value
+ * @brief Root-finding method for a continuous function given two values with
+ * opposite signs
+ * @param x_left Lower endpoint value of the interval
+ * @param x_right Upper endpoint value of the interval
  * @param tolerance Error threshold
  * @returns `root of the function` if bisection method succeed within the
  * maximum number of iterations
@@ -68,11 +69,11 @@ double bisection(double x_left, double x_right, double tolerance)
 
         if (sign(func(middle), func(x_left)) > 0.0)
         {
-            x_left = middle;  // new lower interval
+            x_left = middle;  // new lower endpoint
         }
         else
         {
-            x_right = middle;  // new upper interval
+            x_right = middle;  // new upper endpoint
         }
 
         n++;  // increase step counter
