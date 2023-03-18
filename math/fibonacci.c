@@ -7,9 +7,10 @@
  */
 
 #include <assert.h>  /// for assert()
+#include <errno.h>  /// for errno - to determine whether there is an using strtol()
 #include <stdio.h>   /// for input, output
 #include <stdlib.h>  /// for exit() - to exit the program
-
+#include <string.h>  /// for strlen()
 /**
  * @brief Determines the nth Fibonacci term
  * @param number - n in "nth term" and it can't be negative as well as zero
@@ -39,6 +40,42 @@ unsigned int fib(int number)
 }
 
 /**
+ * @brief Get the input from the user
+ * @return valid argument to the fibonacci function
+ */
+int getInput(void)
+{
+    int num, success = 0;
+    char buffer[4], *endPtr;
+
+    do
+    {
+        fgets(buffer, 4, stdin);  // Inputs the value from user
+
+        errno = 0;  // Reseting the errno value
+        num = strtol(buffer, &endPtr,
+                     10);  // Attempts to convert the string to integer
+
+        if (strlen(buffer) > 3 || num > 48)
+            success = 0;  // Three digit numbers are not allowed
+        else if (errno == ERANGE)
+            success = 0;  // ERANGE value is the error when arg. of strtol() is
+                          // beyond long int limit
+        else if (endPtr == buffer)
+            success = 0;  // No character is entered
+        else if (*endPtr != '\0' && *endPtr != '\n')
+            success = 0;  // *endptr is neither end of string nor newline
+        else
+            success = 1;
+
+    } while ((!success));  // Repeat until valid
+                           // number is entered
+
+    printf("Entered digit: %d\n", num);
+    return num;
+}
+
+/**
  * @brief self-test implementation
  * @return void
  */
@@ -55,27 +92,17 @@ static void test()
  */
 int main()
 {
-    int number;
-    char buffer[8];
-
     // Performing the test
     test();
     printf("Tests passed...\n");
 
     // Getting n
-    printf("Enter n to find nth fibonacci element: ");
-    scanf("%2[0-9]", buffer);  // Inputting only the first two digits as this
-                               // program can handle only till 48th element
+    printf(
+        "Enter n to find nth fibonacci element...\n"
+        "Note: You would be asked to enter input until valid number ( less "
+        "than or equal to 48 ) is entered.\n");
 
-    sscanf(buffer, "%d", &number);  // Converting the string to integer (atoi -
-                                    // argument to integer)
-
-    // Exit if n is greater than 48
-    if (number >= 48)
-    {
-        printf("Sorry, n can't be greater than 48.\n");
-        exit(EXIT_FAILURE);
-    }
+    int number = getInput();
 
     printf("Fibonacci element %d is %u\n", number, fib(number));
     return 0;
