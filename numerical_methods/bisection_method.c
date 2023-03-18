@@ -1,8 +1,9 @@
 /**
  * @file
- * @brief In mathematics, the [Bisection Method](https://en.wikipedia.org/wiki/Bisection_method) is a root-finding method that
- * applies to any continuous function for which one knows two values with
- * opposite signs.
+ * @brief In mathematics, the [Bisection
+ * Method](https://en.wikipedia.org/wiki/Bisection_method) is a root-finding
+ * method that applies to any continuous function for which one knows two values
+ * with opposite signs.
  * @details
  * The method consists of repeatedly bisecting the interval
  * defined by these values and then selecting the subinterval in which the
@@ -33,7 +34,7 @@ double sign(double a, double b)
 
 /**
  * @brief Polynomial function for root finding
- * @param x
+ * @param x Input value (an element of the function's domain)
  * @returns `function evaluation result`
  */
 double func(double x)
@@ -45,7 +46,7 @@ double func(double x)
  * @brief Root-finding method for a continuous function
  * @param x_left Lower interval value
  * @param x_right Upper interval value
- * @param tolerance error threshold
+ * @param tolerance Error threshold
  * @returns `root of the function` if bisection method succeed within the
  * maximum number of iterations
  * @returns `-1` if bisection method fails
