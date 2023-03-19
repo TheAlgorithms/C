@@ -46,22 +46,24 @@ unsigned int fib(int number)
 int getInput(void)
 {
     int num;
-    char buffer[4], *endPtr;
+    char buffer[256], *endPtr;
 
-    while (1) { // Repeat until a valid number is entered
+    while (1)
+    {  // Repeat until a valid number is entered
         printf("Please enter a valid number:");
-        fgets(buffer, 4, stdin);  // Inputs the value from user
+        fgets(buffer, 256, stdin);  // Inputs the value from user
 
-        num = strtol(buffer, &endPtr, 10);  // Attempts to convert the string to integer
+        num = strtol(buffer, &endPtr,
+                     10);  // Attempts to convert the string to integer
 
         // Checking the input
-        // Characters other than digits are included in the input
-        if ( ( *endPtr != '\0' && *endPtr != '\n' ) ||
+        if (  // Characters other than digits are included in the input
+            (*endPtr != '\0' && *endPtr != '\n') ||
             // No characters are entered
             endPtr == buffer ||
             // The number is too large
-            ( strlen(buffer) > 3 || num > 48 ) ) {
-
+            (strlen(buffer) > 3 || num > 48))
+        {
             continue;
         }
 
