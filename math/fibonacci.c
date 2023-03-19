@@ -10,7 +10,6 @@
 #include <errno.h>  /// for errno - to determine whether there is an using strtol()
 #include <stdio.h>   /// for input, output
 #include <stdlib.h>  /// for exit() - to exit the program
-#include <string.h>  /// for strlen()
 /**
  * @brief Determines the nth Fibonacci term
  * @param number - n in "nth term" and it can't be negative as well as zero
@@ -45,24 +44,27 @@ unsigned int fib(int number)
  */
 int getInput(void)
 {
-    int num;
-    char buffer[256], *endPtr;
+    int num, excess_len;
+    char buffer[3], *endPtr;
 
     while (1)
     {  // Repeat until a valid number is entered
         printf("Please enter a valid number:");
-        fgets(buffer, 256, stdin);  // Inputs the value from user
+        fgets(buffer, 3, stdin);  // Inputs the value from user
+
+        excess_len = 0;
+        while (getchar() != '\n') excess_len++;
 
         num = strtol(buffer, &endPtr,
                      10);  // Attempts to convert the string to integer
 
         // Checking the input
-        if (  // Characters other than digits are included in the input
+        if (  // The number is too large
+            (excess_len > 0 || num > 48) ||
+            // Characters other than digits are included in the input
             (*endPtr != '\0' && *endPtr != '\n') ||
             // No characters are entered
-            endPtr == buffer ||
-            // The number is too large
-            (strlen(buffer) > 3 || num > 48))
+            endPtr == buffer)
         {
             continue;
         }
@@ -70,7 +72,7 @@ int getInput(void)
         break;
     }
 
-    printf("Entered digit: %d\n", num);
+    printf("\nEntered digit: %d\n", num);
     return num;
 }
 
