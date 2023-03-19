@@ -45,31 +45,28 @@ unsigned int fib(int number)
  */
 int getInput(void)
 {
-    int num, success = 0;
+    int num;
     char buffer[4], *endPtr;
 
-    do
-    {
+    while (1) { // Repeat until a valid number is entered
+        printf("Please enter a valid number:");
         fgets(buffer, 4, stdin);  // Inputs the value from user
 
-        errno = 0;  // Reseting the errno value
-        num = strtol(buffer, &endPtr,
-                     10);  // Attempts to convert the string to integer
+        num = strtol(buffer, &endPtr, 10);  // Attempts to convert the string to integer
 
-        if (strlen(buffer) > 3 || num > 48)
-            success = 0;  // Three digit numbers are not allowed
-        else if (errno == ERANGE)
-            success = 0;  // ERANGE value is the error when arg. of strtol() is
-                          // beyond long int limit
-        else if (endPtr == buffer)
-            success = 0;  // No character is entered
-        else if (*endPtr != '\0' && *endPtr != '\n')
-            success = 0;  // *endptr is neither end of string nor newline
-        else
-            success = 1;
+        // Checking the input
+        // Characters other than digits are included in the input
+        if ( ( *endPtr != '\0' && *endPtr != '\n' ) ||
+            // No characters are entered
+            endPtr == buffer ||
+            // The number is too large
+            ( strlen(buffer) > 3 || num > 48 ) ) {
 
-    } while ((!success));  // Repeat until valid
-                           // number is entered
+            continue;
+        }
+
+        break;
+    }
 
     printf("Entered digit: %d\n", num);
     return num;
