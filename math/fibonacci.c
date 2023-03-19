@@ -52,6 +52,8 @@ int getInput(void)
         printf("Please enter a valid number:");
         fgets(buffer, 3, stdin);  // Inputs the value from user
 
+        if (*buffer = '\n')  // No characters are entered
+            continue;
         excess_len = 0;
         while (getchar() != '\n') excess_len++;
 
