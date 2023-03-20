@@ -52,10 +52,12 @@ int getInput(void)
         printf("Please enter a valid number:");
         fgets(buffer, 3, stdin);  // Inputs the value from user
 
-        if (*buffer = '\n')  // No characters are entered
-            continue;
         excess_len = 0;
-        while (getchar() != '\n') excess_len++;
+        if (!(buffer[0] == '\n' ||
+            buffer[1] == '\n' ||
+            buffer[2] == '\n')) {
+            while (getchar() != '\n') excess_len++;
+        }
 
         num = strtol(buffer, &endPtr,
                      10);  // Attempts to convert the string to integer
