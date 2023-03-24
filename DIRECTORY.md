@@ -161,6 +161,7 @@
 
 ## Hash
   * [Hash Adler32](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_adler32.c)
+  * [Hash Blake2B](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_blake2b.c)
   * [Hash Crc32](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_crc32.c)
   * [Hash Djb2](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_djb2.c)
   * [Hash Sdbm](https://github.com/TheAlgorithms/C/blob/HEAD/hash/hash_sdbm.c)
