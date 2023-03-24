@@ -14,10 +14,10 @@
  * 128 bits in length. Keyed hashing is also supported for
  * keys up to 64 bytes in length.
  */
-#include <assert.h>    // for asserts
-#include <inttypes.h>  // for fixed-width integer types e.g. uint64_t and uint8_t
-#include <stdio.h>     // for IO
-#include <stdlib.h>    // for malloc, calloc, and free. As well as size_t
+#include <assert.h>    /// for asserts
+#include <inttypes.h>  /// for fixed-width integer types e.g. uint64_t and uint8_t
+#include <stdio.h>     /// for IO
+#include <stdlib.h>    /// for malloc, calloc, and free. As well as size_t
 
 /* Warning suppressed is in blake2b() function, more
  * details are over there */
