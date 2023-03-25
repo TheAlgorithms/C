@@ -28,53 +28,45 @@
 #endif
 
 /**
- * @define bb
  * @brief the size of a data block in bytes
  */
 #define bb 128
 
 /**
- * @define KK_MAX
  * @brief max key length for BLAKE2b
  */
 #define KK_MAX 64
 
 /**
- * @define NN_MAX
  * @brief max length of BLAKE2b digest in bytes
  */
 #define NN_MAX 64
 
 /**
- * @define CEIL
  * @brief ceiling division macro without floats
  *
  * @param a dividend
- * @param divisor
+ * @param b divisor
  */
 #define CEIL(a, b) (((a) / (b)) + ((a) % (b) != 0))
 
 /**
- * @define MIN
  * @brief returns minimum value
  */
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 /**
- * @define MAX
  * @brief returns maximum value
  */
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 /**
- * @define ROTR64
  * @brief macro to rotate 64-bit ints to the right
  * Ripped from RFC 7693
  */
 #define ROTR64(n, offset) (((n) >> (offset)) ^ ((n) << (64 - (offset))))
 
 /**
- * @define U128_ZERO
  * @brief zero-value initializer for u128 type
  */
 #define U128_ZERO \
@@ -344,7 +336,8 @@ static int BLAKE2B(uint8_t *dest, block_t *d, size_t dd, u128 ll, uint8_t kk,
     return 0;
 }
 
-/* @brief blake2b hash function
+/** 
+ * @brief blake2b hash function
  *
  * This is the front-end function that sets up the argument for BLAKE2B().
  *
