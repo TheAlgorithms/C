@@ -16,6 +16,7 @@
 
 #include <assert.h>  /// for assert
 #include <math.h>    /// for fabs
+#include <stdio.h>   /// for IO operations
 
 #define EPSILON 0.0001  // a small positive infinitesimal quantity
 #define NMAX 50         // maximum number of iterations
