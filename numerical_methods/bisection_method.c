@@ -22,10 +22,12 @@
 #define NMAX 50         // maximum number of iterations
 
 /**
- * @brief Function to check if two values have the same sign
- * @param a First value
- * @param b Second value
- * @returns `sign`
+ * @brief Function to check if two input values have the same sign (the property
+ * of being positive or negative)
+ * @param a Input value
+ * @param b Input value
+ * @returns 1.0 if the input values have the same sign,
+ * @returns -1.0 if the input values have different signs
  */
 double sign(double a, double b)
 {
@@ -34,9 +36,9 @@ double sign(double a, double b)
 }
 
 /**
- * @brief Continuous function for root-finding
+ * @brief Continuous function for which we want to find the root
  * @param x Real input variable
- * @returns `function evaluation result`
+ * @returns The evaluation result of the function using the input value
  */
 double func(double x)
 {
@@ -95,7 +97,7 @@ static void test()
     assert(fabs(bisection(100.0, 250.0, 0.0001) - 249.999928) <
            EPSILON);  // the algorithm works as expected
 
-           printf("All tests have successfully passed!\n");
+    printf("All tests have successfully passed!\n");
 }
 
 /**
