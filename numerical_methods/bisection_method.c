@@ -93,6 +93,8 @@ static void test()
            EPSILON);  // the algorithm works as expected
     assert(fabs(bisection(100.0, 250.0, 0.0001) - 249.999928) <
            EPSILON);  // the algorithm works as expected
+
+           printf("All tests have successfully passed!\n");
 }
 
 /**
