@@ -391,7 +391,7 @@ uint8_t *blake2b(const uint8_t *message, size_t len, const uint8_t *key,
     /* If there is a secret key it occupies the first block */
     for (i = 0; i < kk; i++)
     {
-        long_hold = message[i];
+        long_hold = key[i];
         long_hold <<= 8 * (i % 8);
 
         word_in_block = (i % bb) / 8;
