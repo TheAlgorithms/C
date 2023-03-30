@@ -345,6 +345,7 @@ struct NFA* compileFromAST(struct ASTNode* root) {
             return nfa;
         }
     }
+    destroyNFA(nfa);
     return NULL;
 }
 
@@ -499,6 +500,7 @@ void transit(struct NFA* nfa, char input) {
     for (int i = 0; i < NSCount; ++i) {
         nfa->currentStates[i] = newStates[i];
     }
+    free(newStates);
 }
 
 /**
