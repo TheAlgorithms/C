@@ -200,6 +200,7 @@ struct ASTNode* buildAST(const char* input) {
     // Discard parentheses
     if(input[0] == '(' && input[len - 1] == ')') {
         char* temp = substring(input, 1, len - 2);
+        destroyNode(node);
         node = buildAST(temp);
 
         free(temp);
