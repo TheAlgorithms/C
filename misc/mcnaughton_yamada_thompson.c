@@ -167,13 +167,13 @@ size_t indexOf(const char* str, char key) {
 }
 
 /**
- * @brief utility function to create a substring
+ * @brief utility function to create a subString
  * @param str target string
  * @param begin starting index, inclusive
  * @param end ending index, inclusive
- * @returns pointer to the newly created substring
+ * @returns pointer to the newly created subString
  */
-char* substring(const char* str, size_t begin, size_t end) {
+char* subString(const char* str, size_t begin, size_t end) {
     char* res = malloc(end - begin + 2);
     strncpy(res, str + begin, end - begin + 1);
     res[end - begin + 1] = '\0';
@@ -204,7 +204,7 @@ struct ASTNode* buildAST(const char* input) {
 
     // Discard parentheses
     if(input[0] == '(' && input[len - 1] == ')') {
-        char* temp = substring(input, 1, len - 2);
+        char* temp = subString(input, 1, len - 2);
         destroyNode(node);
         node = buildAST(temp);
 
@@ -217,8 +217,8 @@ struct ASTNode* buildAST(const char* input) {
     if(index) {
         node->content = '|';
 
-        char* temp1 = substring(input, 0, index - 1);
-        char* temp2 = substring(input, index + 1, len - 1);
+        char* temp1 = subString(input, 0, index - 1);
+        char* temp2 = subString(input, index + 1, len - 1);
         node->left = buildAST(temp1);
         node->right = buildAST(temp2);
 
@@ -232,8 +232,8 @@ struct ASTNode* buildAST(const char* input) {
     if(index) {
         node->content = '\n';
 
-        char* temp1 = substring(input, 0, index - 1);
-        char* temp2 = substring(input, index + 1, len - 1);
+        char* temp1 = subString(input, 0, index - 1);
+        char* temp2 = subString(input, index + 1, len - 1);
         node->left = buildAST(temp1);
         node->right = buildAST(temp2);
 
@@ -246,7 +246,7 @@ struct ASTNode* buildAST(const char* input) {
     // Testing with indexOf() is unnecessary here,
     // Since all other possibilities have been exhausted
     node->content = '*';
-    char* temp = substring(input, 0, len - 2);
+    char* temp = subString(input, 0, len - 2);
     node->left = buildAST(temp);
     node->right = NULL;
 
@@ -351,6 +351,8 @@ struct NFA* compileFromAST(struct ASTNode* root) {
             return nfa;
         }
     }
+
+    // Fallback, shouldn't happen in normal operation
     destroyNFA(nfa);
     return NULL;
 }
@@ -574,6 +576,11 @@ static void test(void) {
     testHelper("(c|a*b)*", "caba", 0);
     testHelper("", "", 1);
     testHelper("", "1", 0);
+    testHelper("(0|(1(01*(00)*0)*1)*)*","11",1);
+    testHelper("(0|(1(01*(00)*0)*1)*)*","110",1);
+    testHelper("(0|(1(01*(00)*0)*1)*)*","1100",1);
+    testHelper("(0|(1(01*(00)*0)*1)*)*","10000",0);
+    testHelper("(0|(1(01*(00)*0)*1)*)*","00000",1);
 }
 
 /**
