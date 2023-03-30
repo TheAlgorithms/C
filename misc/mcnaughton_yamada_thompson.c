@@ -113,6 +113,7 @@ char* preProcessing(const char* input) {
         str[0] = '\0';
         return str;
     }
+
     char* str = malloc(len * 2);
     size_t op = 0;
 
@@ -396,7 +397,7 @@ void postProcessing(struct NFA* nfa) {
         postProcessing(nfa->subs[i]);
     }
 
-    // If a state does not have any empty character accepting rules,
+    // If a state does not have any empty character accepting rule,
     // we add a rule that circles back to itself
     // So this state will be preserved when
     // empty characters are inputted
@@ -472,9 +473,11 @@ void transit(struct NFA* nfa, char input) {
         for (int i = nfa->CSCount - 1; i > -1; --i) {
             struct NFAState *pState = nfa->currentStates[i];
             nfa->CSCount--;
+
             struct NFAState** states = malloc(sizeof(struct NFAState*) * 10);
             int sc = 0;
             findEmpty(pState, states, &sc);
+
             for (int j = 0; j < sc; ++j) {
                 if(!contains(newStates,NSCount, states[j])) {
                     newStates[NSCount++] = states[j];
@@ -490,7 +493,7 @@ void transit(struct NFA* nfa, char input) {
             // it can be refilled
             nfa->CSCount--;
 
-            // Iterate through rules of this state
+            // Iterates through rules of this state
             for (int j = 0; j < pState->ruleCount; ++j) {
                 const struct transRule *pRule = pState->rules[j];
 
@@ -499,9 +502,8 @@ void transit(struct NFA* nfa, char input) {
                         newStates[NSCount++] = pRule->target;
                     }
                 }
-
             }
-    }
+        }
     }
 
     nfa->CSCount = NSCount;
@@ -539,11 +541,10 @@ void testHelper(const char* regex, const char* string, const int expected) {
     char* temp = preProcessing(regex);
     struct ASTNode* node = buildAST(temp);
 
-
     struct NFA* nfa = compileFromAST(node);
     postProcessing(nfa);
 
-    // reallocate the outermost NFA's current states pool
+    // reallocates the outermost NFA's current states pool
     // because it will actually be used to store all the states
     nfa->currentStates = realloc(nfa->currentStates, sizeof(struct NFAState*) * 100);
     // Starts the NFA by add its starting state to the pool
