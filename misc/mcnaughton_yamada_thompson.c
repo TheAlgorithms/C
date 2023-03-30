@@ -40,7 +40,7 @@ struct ASTNode* buildAST(const char* input);
  */
 struct transRule {
     struct NFAState* target; ///< pointer to the state to transit to
-    char cond;               ///< the character required to activate this transition
+    char cond;               ///< the input required to activate this transition
 };
 
 struct transRule* createRule(struct NFAState* state, char c);
@@ -48,8 +48,8 @@ void destroyRule(struct transRule* rule);
 
 /**
  * @brief Definition for a NFA state. Each NFAState object is initialized
- *        to have a capacity of three rules, since there will only at most two
- *        outgoing rules, and one empty character circular rule
+ *        to have a capacity of three rules, since there will only be at most two
+ *        outgoing rules and one empty character circular rule in this algorithm
  */
 struct NFAState {
     int ruleCount;            ///< number of transition rules this state have
@@ -90,7 +90,7 @@ int isAccepting(const struct NFA* nfa);
 /* End definitions, begin abstract syntax tree construction */
 
 /**
- * @brief helper function to determines whether a character should be
+ * @brief helper function to determine whether a character should be
  *        considered a character literal
  * @param ch the character to be tested
  * @returns `1` if it is a character literal
@@ -108,6 +108,11 @@ int isLiteral(const char ch) {
  */
 char* preProcessing(const char* input) {
     const size_t len = strlen(input);
+    if(len == 0) {
+        char* str = malloc(1);
+        str[0] = '\0';
+        return str;
+    }
     char* str = malloc(len * 2);
     size_t op = 0;
 
@@ -157,7 +162,7 @@ size_t indexOf(const char* str, char key) {
     // Due to the way this function is intended to be used,
     // it's safe to assume the character will not appear as
     // the string's first character
-    // thus `0` is used as `not found`
+    // thus `0` is used as the `not found` value
     return 0;
 }
 
@@ -252,7 +257,7 @@ struct ASTNode* buildAST(const char* input) {
 /* End AST construction, begins the actual algorithm itself */
 
 /**
- * @brief helper function to recursively redirect rule targets
+ * @brief helper function to recursively redirect transition rule targets
  * @param nfa target NFA
  * @param src the state to redirect away from
  * @param dest the state to redirect to
@@ -280,7 +285,7 @@ struct NFA* compileFromAST(struct ASTNode* root) {
         return nfa;
     }
 
-    // Character literals,
+    // Character literals
     if (isLiteral(root->content)) {
         addRule(nfa, createRule(nfa->statePool[1], root->content), 0);
         return nfa;
@@ -292,8 +297,8 @@ struct NFA* compileFromAST(struct ASTNode* root) {
             struct NFA* ln = compileFromAST(root->left);
             struct NFA* rn = compileFromAST(root->right);
 
-            // Redirects all rules target ln's accepting state to
-            // rn's starting state
+            // Redirects all rules targeting ln's accepting state to
+            // target rn's starting state
             redirect(ln, ln->statePool[1], rn->statePool[0]);
 
             // Manually creates and initializes a special
@@ -312,7 +317,7 @@ struct NFA* compileFromAST(struct ASTNode* root) {
             wrapper->subs[wrapper->subCount++] = ln;
             wrapper->subs[wrapper->subCount++] = rn;
 
-            // Maps the wrapper NFA's starting and ending state
+            // Maps the wrapper NFA's starting and ending states
             // to its sub NFAs
             wrapper->statePool[0] = ln->statePool[0];
             wrapper->statePool[1] = rn->statePool[1];
@@ -353,9 +358,9 @@ struct NFA* compileFromAST(struct ASTNode* root) {
 /* Ends the algorithm, begins NFA utility functions*/
 
 /**
- * @brief add a state to a NFA
+ * @brief adds a state to a NFA
  * @param nfa target NFA
- * @param state NFA state to be added
+ * @param state the NFA state to be added
  * @returns void
  */
 void addState(struct NFA* nfa, struct NFAState* state) {
@@ -363,10 +368,10 @@ void addState(struct NFA* nfa, struct NFAState* state) {
 }
 
 /**
- * @brief add a transition rule to a NFA
+ * @brief adds a transition rule to a NFA
  * @param nfa target NFA
  * @param rule the rule to be added
- * @param loc which state this rule will be added to
+ * @param loc which state this rule should be added to
  * @returns void
  */
 void addRule(struct NFA* nfa, struct transRule* rule, int loc) {
@@ -377,7 +382,7 @@ void addRule(struct NFA* nfa, struct transRule* rule, int loc) {
 
 /**
  * @brief performs postprocessing on a compiled NFA,
- *        add empty character transition rules where
+ *        add circular empty character transition rules where
  *        it's needed for the NFA to function correctly
  * @param nfa target NFA
  * @returns void
@@ -531,10 +536,9 @@ int isAccepting(const struct NFA* nfa) {
 void testHelper(const char* regex, const char* string, const int expected) {
     char* temp = preProcessing(regex);
     struct ASTNode* node = buildAST(temp);
-    free(temp);
+
 
     struct NFA* nfa = compileFromAST(node);
-    destroyNode(node);
     postProcessing(nfa);
 
     // reallocate the outermost NFA's current states pool
@@ -552,7 +556,10 @@ void testHelper(const char* regex, const char* string, const int expected) {
     transit(nfa, '\0');
 
     assert(isAccepting(nfa) == expected);
+
     destroyNFA(nfa);
+    destroyNode(node);
+    free(temp);
 }
 
 /**
@@ -565,6 +572,8 @@ static void test(void) {
     testHelper("(c|a*b)", "ca", 0);
     testHelper("(c|a*b)*", "caaab", 1);
     testHelper("(c|a*b)*", "caba", 0);
+    testHelper("", "", 1);
+    testHelper("", "1", 0);
 }
 
 /**
