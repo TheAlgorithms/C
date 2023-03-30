@@ -357,6 +357,7 @@
   * [Hamming Distance](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance.c)
   * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/HEAD/misc/lexicographic_permutations.c)
   * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/HEAD/misc/longest_subsequence.c)
+  * [Mcnaughton Yamada Thompson](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mcnaughton_yamada_thompson.c)
   * [Mirror](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mirror.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/HEAD/misc/pid.c)
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/HEAD/misc/poly_add.c)
