@@ -520,6 +520,9 @@ int isAccepting(const struct NFA* nfa) {
 
 /**
  * @brief Testing helper function
+ * @param regex the regular expression to be used
+ * @param string the string to match against
+ * @param expected expected results
  * @returns void
  */
 void testHelper(const char* regex, const char* string, const int expected) {
