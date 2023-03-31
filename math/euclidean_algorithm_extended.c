@@ -60,6 +60,9 @@ static inline void calculate_next_xy(int quotient, int prev[2])
 /**
  * @brief performs the extended Euclidean algorithm on integer inputs a and b
  *
+ * @param a first integer input
+ * @param b second integer input
+ *
  * @returns euclidean_result_t containing the gcd, and values x and y such that
  * ax + by = gcd
  */
@@ -106,6 +109,12 @@ euclidean_result_t extended_euclidean_algorithm(int a, int b)
 /**
  * @brief perform one single check on the result of the algorithm with provided
  * parameters and expected output
+ *
+ * @param a first paramater for Euclidean algorithm
+ * @param b second parameter for Euclidean algorithm
+ * @param gcd expected value of result.gcd
+ * @param x expected value of result.x
+ * @param y expected value of result.y
  *
  * @returns void
  */
