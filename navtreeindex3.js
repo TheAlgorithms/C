@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"dc/d2e/lu__decompose_8c.html#aae40b90a8efd645c749128cf8072bbb4":[16,0,17,1,1],
 "dc/d32/problem__5_2sol1_8c.html":[16,0,19,18,0],
 "dc/d32/problem__5_2sol1_8c.html#a24b470eef1ce1da4401c03ae250f93e3":[16,0,19,18,0,0],
 "dc/d32/problem__5_2sol1_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[16,0,19,18,0,1],
@@ -203,9 +202,9 @@ var NAVTREEINDEX3 =
 "df/d43/postfix__evaluation_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,16,2,2],
 "df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef":[16,0,16,2,4],
 "df/d58/md_leetcode__r_e_a_d_m_e.html":[11],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,0],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,1],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md76":[11,2],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73":[11,0],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,1],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,2],
 "df/d83/selection__sort_8c.html":[16,0,21,10],
 "df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,21,10,3],
 "df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,21,10,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "dir_16e00c78ef36d1842d0d8a4afc46b852.html":[16,0,19,14],
 "dir_1833eb69ceee7a265ffba4c38c8243d2.html":[16,0,19,16],
 "dir_18cba55772148686552805a354a79093.html":[16,0,19,6],
-"dir_2176ba3565d8b1fe2a106d18679cc7bf.html":[16,0,4,9]
+"dir_2176ba3565d8b1fe2a106d18679cc7bf.html":[16,0,4,9],
+"dir_261dd1200fad5b2fe1eca9af8320656e.html":[16,0,4,6]
 };
