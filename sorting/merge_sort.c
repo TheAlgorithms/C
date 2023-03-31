@@ -33,7 +33,7 @@ void swap(int *a, int *b)
 void merge(int *a, int l, int r, int n)
 {
     int *b = (int *)malloc(n * sizeof(int)); /* dynamic memory must be freed */
-    if (!b)
+    if (!b) /* return to main if can't malloc memory */
         return ;
     int c = l;
     int p1, p2;
@@ -71,6 +71,7 @@ void merge(int *a, int l, int r, int n)
     }
 
     for (c = l; c < r + 1; c++) a[c] = b[c];
+
     free(b);
 }
 
@@ -104,13 +105,13 @@ int main(void)
     int *a, n, i;
     printf("Enter Array size: ");
     scanf("%d", &n);
-    if (n <= 0)
+    if (n <= 0) /* exit program if arraysize is not greater than 0 */
     {
         printf("Array size must be Greater than 0!\n");
         return 1;
     }
     a = (int *)malloc(n * sizeof(int));
-    if (!a)
+    if (!a) /* exit program if can't malloc memory */
         return 1;
     for (i = 0; i < n; i++)
     {
