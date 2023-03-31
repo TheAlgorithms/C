@@ -33,8 +33,11 @@ void swap(int *a, int *b)
 void merge(int *a, int l, int r, int n)
 {
     int *b = (int *)malloc(n * sizeof(int)); /* dynamic memory must be freed */
-    if (!b) /* return to main if can't malloc memory */
-        return ;
+    if (b == NULL) /* return to main if can't malloc memory */
+    {
+        printf("Can't Malloc! Please try again.");
+        exit(1);
+    }
     int c = l;
     int p1, p2;
     p1 = l;
@@ -111,8 +114,11 @@ int main(void)
         return 1;
     }
     a = (int *)malloc(n * sizeof(int));
-    if (!a) /* exit program if can't malloc memory */
+    if (a == NULL) /* exit program if can't malloc memory */
+    {
+        printf("Can't Malloc! Please try again.");
         return 1;
+    }
     for (i = 0; i < n; i++)
     {
         printf("Enter number[%d]: ", i);
@@ -126,6 +132,7 @@ int main(void)
         printf("%d ", a[i]);
     }
     printf("\n");
+
     free(a);
 
     return 0;
