@@ -445,10 +445,11 @@ static void assert_bytes(const uint8_t *expected, const uint8_t *actual,
 }
 
 /**
- * @brief Main function
- * @returns 0 on exit
+ * @brief testing function
+ *
+ * @returns void
  */
-int main()
+static void test()
 {
     uint8_t *digest = NULL;
 
@@ -536,6 +537,15 @@ int main()
     free(digest);
 
     printf("all tests have successfully passed!\n");
+}
 
+/**
+ * @brief main function
+ *
+ * @returns 0 on successful program exit
+ */
+int main()
+{
+    test();
     return 0;
 }
