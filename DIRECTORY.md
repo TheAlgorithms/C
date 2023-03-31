@@ -2,6 +2,9 @@
 ## Audio
   * [Alaw](https://github.com/TheAlgorithms/C/blob/HEAD/audio/alaw.c)
 
+## Cipher
+  * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/cipher/rot13.c)
+
 ## Client Server
   * [Client](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/client.c)
   * [Remote Command Exec Udp Client](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/remote_command_exec_udp_client.c)
@@ -207,7 +210,6 @@
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/HEAD/misc/poly_add.c)
   * [Postfix Evaluation](https://github.com/TheAlgorithms/C/blob/HEAD/misc/postfix_evaluation.c)
   * [Quartile](https://github.com/TheAlgorithms/C/blob/HEAD/misc/quartile.c)
-  * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rot13.c)
   * [Rselect](https://github.com/TheAlgorithms/C/blob/HEAD/misc/rselect.c)
   * [Run Length Encoding](https://github.com/TheAlgorithms/C/blob/HEAD/misc/run_length_encoding.c)
   * [Shunting Yard](https://github.com/TheAlgorithms/C/blob/HEAD/misc/shunting_yard.c)
