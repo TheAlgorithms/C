@@ -42,7 +42,7 @@ static inline void xy_push(int arr[2], int newval)
 /**
  * @brief calculates the value of x or y and push those into the small 'queues'
  *
- * Both x and y are found by taking their value from 2 iterations ago minus the
+ * @details Both x and y are found by taking their value from 2 iterations ago minus the
  * product of their value from 1 iteration ago and the most recent quotient.
  *
  * @param quotient the quotient from the latest iteration of the Euclidean
