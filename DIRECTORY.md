@@ -219,6 +219,7 @@
   * [Union Find](https://github.com/TheAlgorithms/C/blob/HEAD/misc/union_find.c)
 
 ## Numerical Methods
+  * [Bisection Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/bisection_method.c)
   * [Durand Kerner Roots](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/durand_kerner_roots.c)
   * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/gauss_elimination.c)
   * [Gauss Seidel Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/gauss_seidel_method.c)
