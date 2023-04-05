@@ -582,6 +582,8 @@ static void test(void) {
     testHelper("(0|(1(01*(00)*0)*1)*)*","1100",1);
     testHelper("(0|(1(01*(00)*0)*1)*)*","10000",0);
     testHelper("(0|(1(01*(00)*0)*1)*)*","00000",1);
+
+    printf("All tests have successfully passed!\n");
 }
 
 /**
