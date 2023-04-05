@@ -1,0 +1,26 @@
+name: 'Update copyright license'
+on:
+  schedule:
+    - cron: '0 0 1 1 *'
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update the License
+        run: |
+          (echo "Copyright (C) 2016-$(date +"%Y") TheAlgorithms and contributors";  tail -n +2 License) > License.tmp
+          mv License.tmp License
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        id: commit-push
+        with:
+          commit_message: "docs: updating `License` copyright"
+          branch: "license-${{ github.sha }}"
+          create_branch: true
+      - name: Creating and merging the PR
+        shell: bash
+        if: steps.commit-push.outputs.changes_detected == 'true'
+        run: |
+          gh pr create --base ${GITHUB_REF##*/} --head license-${{ github.sha }} --title 'docs: updating `License` copyright' --body 'Updated License copyright (see the diff. for changes).'
+        env:
+          GH_TOKEN: ${{ github.token }}
