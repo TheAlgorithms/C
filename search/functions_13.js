@@ -23,12 +23,13 @@ var searchData=
   ['shuntingyard_20',['shuntingYard',['../dc/d73/shunting__yard_8c.html#aab4ea5886f3335a6c26621ccce6bce8f',1,'shunting_yard.c']]],
   ['sigma_21',['sigma',['../d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be',1,'sol1.c']]],
   ['sigma2_22',['sigma2',['../d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788',1,'sol1.c']]],
-  ['solve_23',['solve',['../d5/df4/group__sudoku.html#gadfe0ed5085b4775d8fa00b434cc0fdfc',1,'sudoku_solver.c']]],
-  ['spirograph_24',['spirograph',['../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3',1,'spirograph.c']]],
-  ['stats_5fcomputer1_25',['stats_computer1',['../dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628',1,'realtime_stats.c']]],
-  ['stats_5fcomputer2_26',['stats_computer2',['../dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96',1,'realtime_stats.c']]],
-  ['sum_5fof_5fdivisors_27',['sum_of_divisors',['../df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93',1,'sol1.c']]],
-  ['sum_5fof_5fprimes_28',['sum_of_primes',['../d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5',1,'sol1.c']]],
-  ['swap_29',['swap',['../dd/de4/bubble__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort_recursion.c'],['../de/dff/heap__sort__2_8c.html#aaf68497ab808b560dbf109da6435905a',1,'swap(int8_t *first, int8_t *second):&#160;heap_sort_2.c'],['../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8',1,'swap(int *a, int *b):&#160;merge_sort.c'],['../d1/d94/odd__even__sort_8c.html#ac2eee54959bc040cfcb56d2d8047853a',1,'swap(int32_t *first, int32_t *second):&#160;odd_even_sort.c'],['../df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;selection_sort.c'],['../dc/d39/selection__sort__recursive_8c.html#aaf68497ab808b560dbf109da6435905a',1,'swap(int8_t *first, int8_t *second):&#160;selection_sort_recursive.c']]],
-  ['symbol_30',['symbol',['../dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88',1,'roman_numerals_to_decimal.c']]]
+  ['sign_23',['sign',['../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae',1,'bisection_method.c']]],
+  ['solve_24',['solve',['../d5/df4/group__sudoku.html#gadfe0ed5085b4775d8fa00b434cc0fdfc',1,'sudoku_solver.c']]],
+  ['spirograph_25',['spirograph',['../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3',1,'spirograph.c']]],
+  ['stats_5fcomputer1_26',['stats_computer1',['../dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628',1,'realtime_stats.c']]],
+  ['stats_5fcomputer2_27',['stats_computer2',['../dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96',1,'realtime_stats.c']]],
+  ['sum_5fof_5fdivisors_28',['sum_of_divisors',['../df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93',1,'sol1.c']]],
+  ['sum_5fof_5fprimes_29',['sum_of_primes',['../d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5',1,'sol1.c']]],
+  ['swap_30',['swap',['../dd/de4/bubble__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort.c'],['../d5/d38/bubble__sort__recursion_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;bubble_sort_recursion.c'],['../de/dff/heap__sort__2_8c.html#aaf68497ab808b560dbf109da6435905a',1,'swap(int8_t *first, int8_t *second):&#160;heap_sort_2.c'],['../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8',1,'swap(int *a, int *b):&#160;merge_sort.c'],['../d1/d94/odd__even__sort_8c.html#ac2eee54959bc040cfcb56d2d8047853a',1,'swap(int32_t *first, int32_t *second):&#160;odd_even_sort.c'],['../df/d83/selection__sort_8c.html#ad126fa7239be97373c96861adc70b1d3',1,'swap(int *first, int *second):&#160;selection_sort.c'],['../dc/d39/selection__sort__recursive_8c.html#aaf68497ab808b560dbf109da6435905a',1,'swap(int8_t *first, int8_t *second):&#160;selection_sort_recursive.c']]],
+  ['symbol_31',['symbol',['../dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88',1,'roman_numerals_to_decimal.c']]]
 ];

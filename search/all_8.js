@@ -17,6 +17,6 @@ var searchData=
   ['free_5fpoly_14',['free_poly',['../d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895',1,'poly_add.c']]],
   ['freetreememory_15',['freeTreeMemory',['../d3/d78/words__alphabetical_8c.html#a840902ada0e956eb01b529be178748cc',1,'words_alphabetical.c']]],
   ['frequency_16',['frequency',['../db/d8b/struct_node.html#abe1c200da58f5276c6fd74f640a29a02',1,'Node']]],
-  ['func_17',['func',['../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;client.c'],['../d1/d20/server_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;server.c'],['../dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925',1,'func(double complex x):&#160;newton_raphson_root.c']]],
+  ['func_17',['func',['../dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;client.c'],['../d1/d20/server_8c.html#ac17020a38607ab29ce18939d5194a32a',1,'func(int sockfd):&#160;server.c'],['../da/d4a/bisection__method_8c.html#aba60904b56a5dce7e291d2f7d62e9782',1,'func(double x):&#160;bisection_method.c'],['../dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925',1,'func(double complex x):&#160;newton_raphson_root.c']]],
   ['functionname_18',['functionName',['../d4/d73/struct_m_e_m_o_r_y___i_n_f_o_r_m_a_t_i_o_n.html#a1f13725b3de5ca6ab99b238b712cb417',1,'MEMORY_INFORMATION']]]
 ];

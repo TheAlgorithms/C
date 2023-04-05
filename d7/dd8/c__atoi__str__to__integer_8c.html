@@ -157,12 +157,12 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
 <div class="line"><span class="lineno">   18</span>    <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">   19</span>    <span class="keywordtype">int</span> sign;</div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a>;</div>
 <div class="line"><span class="lineno">   20</span>    <span class="keywordtype">long</span> value;</div>
 <div class="line"><span class="lineno">   21</span>    <span class="keywordtype">long</span> prev;</div>
 <div class="line"><span class="lineno">   22</span> </div>
 <div class="line"><span class="lineno">   23</span>    i = 0;</div>
-<div class="line"><span class="lineno">   24</span>    sign = 1;</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> = 1;</div>
 <div class="line"><span class="lineno">   25</span>    value = 0;</div>
 <div class="line"><span class="lineno">   26</span> </div>
 <div class="line"><span class="lineno">   27</span>    <span class="comment">/* skipping the spaces */</span></div>
@@ -172,12 +172,12 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   31</span>    <span class="comment">/* store the sign if it is negative sign */</span></div>
 <div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span> (str[i] == <span class="charliteral">&#39;-&#39;</span>)</div>
 <div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        sign = -1;</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> = -1;</div>
 <div class="line"><span class="lineno">   35</span>    i++;</div>
 <div class="line"><span class="lineno">   36</span>    }</div>
 <div class="line"><span class="lineno">   37</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (str[i] == <span class="charliteral">&#39;+&#39;</span>)</div>
 <div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        sign = 1;</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> = 1;</div>
 <div class="line"><span class="lineno">   40</span>    i++;</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
 <div class="line"><span class="lineno">   42</span> </div>
@@ -185,18 +185,25 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   44</span>    <span class="keywordflow">while</span> (str[i] &gt;= 48 &amp;&amp; str[i] &lt;= 57 &amp;&amp; str[i] != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><span class="lineno">   45</span>    {</div>
 <div class="line"><span class="lineno">   46</span>        prev = value;</div>
-<div class="line"><span class="lineno">   47</span>        value = value * 10 + sign * (str[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">   47</span>        value = value * 10 + <a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> * (str[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><span class="lineno">   48</span> </div>
 <div class="line"><span class="lineno">   49</span>        <span class="comment">/* managing the overflow */</span></div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (sign == 1 &amp;&amp; prev &gt; value)</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> == 1 &amp;&amp; prev &gt; value)</div>
 <div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> (-1);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sign == -1 &amp;&amp; prev &lt; value)</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a> == -1 &amp;&amp; prev &lt; value)</div>
 <div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> (0);</div>
 <div class="line"><span class="lineno">   54</span>        i++;</div>
 <div class="line"><span class="lineno">   55</span>    }</div>
 <div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> (value);</div>
 <div class="line"><span class="lineno">   57</span>}</div>
-</div><!-- fragment -->
+<div class="ttc" id="abisection__method_8c_html_a858396a5abdb7865e71cf803fdcb37ae"><div class="ttname"><a href="../../da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae">sign</a></div><div class="ttdeci">double sign(double a, double b)</div><div class="ttdoc">Function to check if two input values have the same sign (the property of being positive or negative)</div><div class="ttdef"><b>Definition:</b> bisection_method.c:32</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dd8/c__atoi__str__to__integer_8c_ad19049ebfc2088bc1e75e7e958f7b60f_cgraph.svg" width="163" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
@@ -243,7 +250,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dd8/c__atoi__str__to__integer_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="302" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dd8/c__atoi__str__to__integer_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="396" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -278,7 +285,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dd8/c__atoi__str__to__integer_8c_a8c66c03637e48e375b80b5d7791e57be_cgraph.svg" width="203" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dd8/c__atoi__str__to__integer_8c_a8c66c03637e48e375b80b5d7791e57be_cgraph.svg" width="298" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

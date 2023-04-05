@@ -1,4 +1,5 @@
 <map id="test_c_atoi" name="test_c_atoi">
 <area shape="rect" id="node1" title="test the function implementation" alt="" coords="5,5,92,31"/>
 <area shape="rect" id="node2" href="$d7/dd8/c__atoi__str__to__integer_8c.html#ad19049ebfc2088bc1e75e7e958f7b60f" title="the function take a string and return an integer" alt="" coords="140,5,197,31"/>
+<area shape="rect" id="node3" href="$da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae" title="Function to check if two input values have the same sign (the property of being positive or negative)" alt="" coords="245,5,292,31"/>
 </map>

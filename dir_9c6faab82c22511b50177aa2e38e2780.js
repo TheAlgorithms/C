@@ -1,5 +1,6 @@
 var dir_9c6faab82c22511b50177aa2e38e2780 =
 [
+    [ "bisection_method.c", "da/d4a/bisection__method_8c.html", "da/d4a/bisection__method_8c" ],
     [ "durand_kerner_roots.c", "da/d38/durand__kerner__roots_8c.html", "da/d38/durand__kerner__roots_8c" ],
     [ "lu_decompose.c", "dc/d2e/lu__decompose_8c.html", "dc/d2e/lu__decompose_8c" ],
     [ "newton_raphson_root.c", "dd/d08/newton__raphson__root_8c.html", "dd/d08/newton__raphson__root_8c" ],
