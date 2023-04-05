@@ -536,7 +536,7 @@ static void test()
 
     free(digest);
 
-    printf("all tests have successfully passed!\n");
+    printf("All tests have successfully passed!\n");
 }
 
 /**
