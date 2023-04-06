@@ -4,7 +4,7 @@
  * @brief Program to perform the [extended Euclidean
  * algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
  *
- * The extended Euclidean algorithm, on top of finding the GCD (greatest common
+ * @details The extended Euclidean algorithm, on top of finding the GCD (greatest common
  * divisor) of two integers a and b, also finds the values x and y such that
  * ax+by = gcd(a, b)
  */
