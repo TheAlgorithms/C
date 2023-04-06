@@ -36,7 +36,7 @@ void merge(int *a, int l, int r, int n)
     if (b == NULL) /* return to main if can't malloc memory */
     {
         printf("Can't Malloc! Please try again.");
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     int c = l;
     int p1, p2;
