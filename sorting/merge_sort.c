@@ -33,7 +33,7 @@ void swap(int *a, int *b)
 void merge(int *a, int l, int r, int n)
 {
     int *b = (int *)malloc(n * sizeof(int)); /* dynamic memory must be freed */
-    if (b == NULL) /* return to main if can't malloc memory */
+    if (b == NULL)
     {
         printf("Can't Malloc! Please try again.");
         exit(EXIT_FAILURE);
