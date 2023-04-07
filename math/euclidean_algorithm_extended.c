@@ -129,8 +129,7 @@ static inline void single_test(int a, int b, int gcd, int x, int y)
 }
 
 /**
- * @brief perform tests on known results
- *
+ * @brief Perform tests on known results
  * @returns void
  */
 static void test()
@@ -141,17 +140,15 @@ static void test()
     single_test(99, 303, 3, -16, 49);
     single_test(14005, 3507, 1, -305, 1218);
 
-    printf("all tests have successfully passed!\n");
+    printf("All tests have successfully passed!\n");
 }
 
 /**
- * @brief main function
- *
+ * @brief Main Function
  * @returns 0 upon successful program exit
  */
 int main()
 {
-    test();
-
+    test();  // run self-test implementations
     return 0;
 }
