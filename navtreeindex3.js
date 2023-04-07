@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"dc/d18/structsudoku.html#a0f01e2782e82306e6fab9a8578006f56":[14,4,0,2],
 "dc/d18/structsudoku.html#a160365012280c3e10f1b31e914e8f129":[14,4,0,1],
 "dc/d18/structsudoku.html#a507f788b793d4d3d6f6a70415be84ded":[14,4,0,0],
 "dc/d1d/hash__blake2b_8c.html":[14,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f":[16,0,4,10,8],
 "dir_03902f230b9e9b7c999f936617a23997.html":[16,0,13],
 "dir_0472225043064b54f3dfff9011a9fae0.html":[16,0,4,9,0],
-"dir_079e1f799fb08a8a0b98cb030ab15687.html":[16,0,19,13],
-"dir_0bc3e2a5baf077fa21dadc079776fcac.html":[16,0,19,7]
+"dir_079e1f799fb08a8a0b98cb030ab15687.html":[16,0,19,13]
 };

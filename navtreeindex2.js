@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d7/d91/problem__15_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,5,0,0],
 "d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6":[16,0,19,5,0,1],
 "d7/d98/spirograph_8c.html":[16,0,10,0],
 "d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3":[16,0,10,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "db/de2/naval__battle_8c.html#ab6e31f8df36de67ff967859069ccfc56":[16,0,8,0,0],
 "db/de2/naval__battle_8c.html#ad527fa96e729742a231c4535e112526a":[16,0,8,0,7],
 "db/de2/naval__battle_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,8,0,2],
-"dc/d18/structsudoku.html":[14,4,0],
-"dc/d18/structsudoku.html#a0f01e2782e82306e6fab9a8578006f56":[14,4,0,2]
+"dc/d18/structsudoku.html":[14,4,0]
 };

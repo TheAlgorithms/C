@@ -17,6 +17,7 @@ var group__hash =
     [ "block_t", "d7/d3b/group__hash.html#gad587ec486728a1423ca04c21482e0685", null ],
     [ "u128", "d7/d3b/group__hash.html#gac7cf56cc7cc7b14ceded8253b45db728", null ],
     [ "adler32", "d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b", null ],
+    [ "blake2b", "d7/d3b/group__hash.html#gaf2cd4bc8e8097fff865741a0efc42eca", null ],
     [ "BLAKE2B", "d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582", null ],
     [ "crc32", "d7/d3b/group__hash.html#ga483e7ee6db1dc09a0f3e683e028ec567", null ],
     [ "djb2", "d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b", null ],
