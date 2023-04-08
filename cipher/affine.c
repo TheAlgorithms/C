@@ -148,7 +148,7 @@ void affine_decrypt(char *s, affine_key_t key)
  *
  * @returns void
  */
-void test_string(char *s, int a, int b)
+void test_string(const char *s, int a, int b)
 {
     char *copy = malloc((strlen(s) + 1) * sizeof(char));
     strcpy(copy, s);
