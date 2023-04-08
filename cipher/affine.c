@@ -22,7 +22,8 @@
 #define ALPHABET_SIZE 95
 
 /**
- * @brief used to convert a printable byte (32 to 126) to an element of the group Z_95 (0 to 94)
+ * @brief used to convert a printable byte (32 to 126) to an element of the
+ * group Z_95 (0 to 94)
  */
 #define Z95_CONVERSION_CONSTANT 32
 
@@ -46,20 +47,19 @@ typedef struct
 int modular_multiplicative_inverse(unsigned int a, unsigned int m)
 {
     int x[2] = {1, 0};
-    int previous_remainder;
     div_t div_result;
 
-    if(m == 0) return 0;
+    if (m == 0)
+        return 0;
     a %= m;
-    if(a == 0) return 0;
+    if (a == 0)
+        return 0;
 
     div_result.rem = a;
 
     while (div_result.rem > 0)
     {
         div_result = div(m, a);
-
-        previous_remainder = a;
 
         m = a;
         a = div_result.rem;
