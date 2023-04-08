@@ -94,7 +94,7 @@ affine_key_t inverse_key(affine_key_t key)
 }
 
 /**
- * Encrypts character string s with key
+ * @brief Encrypts character string s with key
  *
  * @param s string to be encrypted
  * @param key affine key used for encryption
