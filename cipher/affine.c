@@ -22,6 +22,11 @@
 #define ALPHABET_SIZE 95
 
 /**
+ * @brief used to convert a printable byte (32 to 126) to an element of the group Z_95 (0 to 94)
+ */
+#define Z95_CONVERSION_CONSTANT 32
+
+/**
  * @brief a structure representing an affine cipher key
  */
 typedef struct
@@ -38,14 +43,15 @@ typedef struct
  *
  * @returns the modular multiplicative inverse of a mod m
  */
-int modular_multiplicative_inverse(int a, int m)
+int modular_multiplicative_inverse(unsigned int a, unsigned int m)
 {
     int x[2] = {1, 0};
     int previous_remainder;
     div_t div_result;
 
-    assert(a > 0 && m > 0);
+    if(m == 0) return 0;
     a %= m;
+    if(a == 0) return 0;
 
     div_result.rem = a;
 
@@ -64,8 +70,6 @@ int modular_multiplicative_inverse(int a, int m)
         x[1] = x[0];
         x[0] = next;
     }
-
-    assert(previous_remainder == 1);
 
     return x[1];
 }
@@ -105,13 +109,13 @@ void affine_encrypt(char *s, affine_key_t key)
 {
     for (int i = 0; s[i] != '\0'; i++)
     {
-        int c = (int)s[i] - ' ';
+        int c = (int)s[i] - Z95_CONVERSION_CONSTANT;
 
         c *= key.a;
         c += key.b;
         c %= ALPHABET_SIZE;
 
-        s[i] = (char)(c + ' ');
+        s[i] = (char)(c + Z95_CONVERSION_CONSTANT);
     }
 }
 
@@ -129,13 +133,13 @@ void affine_decrypt(char *s, affine_key_t key)
 
     for (int i = 0; s[i] != '\0'; i++)
     {
-        int c = (int)s[i] - ' ';
+        int c = (int)s[i] - Z95_CONVERSION_CONSTANT;
 
         c += inverse.b;
         c *= inverse.a;
         c %= ALPHABET_SIZE;
 
-        s[i] = (char)(c + ' ');
+        s[i] = (char)(c + Z95_CONVERSION_CONSTANT);
     }
 }
 
