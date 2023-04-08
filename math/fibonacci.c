@@ -1,9 +1,10 @@
 /**
  * @file
  * @brief Program to print the nth term of the Fibonacci series.
- * @details
+ * @details 
  * Fibonacci series generally starts from 0 and 1. Every next term in
  * the series is equal to the sum of the two preceding terms.
+ * For further info: https://en.wikipedia.org/wiki/Fibonacci_sequence
  */
 
 #include <assert.h>  /// for assert()
