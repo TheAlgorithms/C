@@ -6,7 +6,7 @@
  * @details Given an alphabet of length M with characters with numeric values
  * 0-(M-1), an arbitrary character x can be transformed with the expression (ax
  * + b) % M into our ciphertext character. The only caveat is that a must be
- * relatively prime with M in order for this tranformation to be invertible,
+ * relatively prime with M in order for this transformation to be invertible,
  * i.e., gcd(a, M) = 1.
  * @author [Daniel Murrow](https://github.com/dsmurrow)
  */
