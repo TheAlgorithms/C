@@ -49,11 +49,13 @@ int modular_multiplicative_inverse(unsigned int a, unsigned int m)
     int x[2] = {1, 0};
     div_t div_result;
 
-    if (m == 0)
+    if (m == 0) {
         return 0;
+    }
     a %= m;
-    if (a == 0)
+    if (a == 0) {
         return 0;
+    }
 
     div_result.rem = a;
 
