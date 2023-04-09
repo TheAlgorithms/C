@@ -5,6 +5,9 @@
  * Fibonacci series generally starts from 0 and 1. Every next term in
  * the series is equal to the sum of the two preceding terms.
  * For further info: https://en.wikipedia.org/wiki/Fibonacci_sequence
+ *
+ * @author [Luiz Carlos Aguiar C](https://github.com/IKuuhakuI)
+ * @author [Niranjan](https://github.com/niranjank2022)
  */
 
 #include <assert.h>  /// for assert()
