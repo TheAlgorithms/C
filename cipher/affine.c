@@ -176,7 +176,7 @@ void test_string(const char *s, const char *ciphertext, int a, int b)
  *
  * @returns void
  */
-void tests()
+static void tests()
 {
     test_string("Hello!", "&3ddy2", 7, 11);
     test_string("TheAlgorithms/C", "DNC}=jHS2zN!7;E", 67, 67);
