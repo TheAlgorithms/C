@@ -309,45 +309,50 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
 <div class="line"><span class="lineno">   35</span>    <span class="keywordtype">int</span> *b = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* dynamic memory must be freed */</span></div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordtype">int</span> c = l;</div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">int</span> p1, p2;</div>
-<div class="line"><span class="lineno">   38</span>    p1 = l;</div>
-<div class="line"><span class="lineno">   39</span>    p2 = ((l + r) / 2) + 1;</div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1) &amp;&amp; (p2 &lt; r + 1))</div>
-<div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (a[p1] &lt;= a[p2])</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            b[c++] = a[p1];</div>
-<div class="line"><span class="lineno">   45</span>            p1++;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">if</span> (b == NULL)</div>
+<div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        printf(<span class="stringliteral">&quot;Can&#39;t Malloc! Please try again.&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>        exit(EXIT_FAILURE);</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">int</span> c = l;</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordtype">int</span> p1, p2;</div>
+<div class="line"><span class="lineno">   43</span>    p1 = l;</div>
+<div class="line"><span class="lineno">   44</span>    p2 = ((l + r) / 2) + 1;</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1) &amp;&amp; (p2 &lt; r + 1))</div>
+<div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (a[p1] &lt;= a[p2])</div>
 <div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            b[c++] = a[p2];</div>
-<div class="line"><span class="lineno">   50</span>            p2++;</div>
+<div class="line"><span class="lineno">   49</span>            b[c++] = a[p1];</div>
+<div class="line"><span class="lineno">   50</span>            p1++;</div>
 <div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span> (p2 == r + 1)</div>
-<div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1))</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            b[c++] = a[p1];</div>
-<div class="line"><span class="lineno">   59</span>            p1++;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">while</span> ((p2 &lt; r + 1))</div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            b[c++] = a[p2];</div>
-<div class="line"><span class="lineno">   67</span>            p2++;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">for</span> (c = l; c &lt; r + 1; c++) a[c] = b[c];</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(b);</div>
-<div class="line"><span class="lineno">   74</span>}</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            b[c++] = a[p2];</div>
+<div class="line"><span class="lineno">   55</span>            p2++;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (p2 == r + 1)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1))</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            b[c++] = a[p1];</div>
+<div class="line"><span class="lineno">   64</span>            p1++;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">while</span> ((p2 &lt; r + 1))</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            b[c++] = a[p2];</div>
+<div class="line"><span class="lineno">   72</span>            p2++;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">for</span> (c = l; c &lt; r + 1; c++) a[c] = b[c];</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(b);</div>
+<div class="line"><span class="lineno">   79</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 </div><!-- fragment -->
 </div>
@@ -400,22 +405,22 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (r - l == 1)</div>
-<div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (a[l] &gt; a[r])</div>
-<div class="line"><span class="lineno">   87</span>            swap(&amp;a[l], &amp;a[r]);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l != r)</div>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (r - l == 1)</div>
 <div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, l, (l + r) / 2);</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, ((l + r) / 2) + 1, r);</div>
-<div class="line"><span class="lineno">   93</span>        merge(a, l, r, n);</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>    <span class="comment">/* no change if l == r */</span></div>
-<div class="line"><span class="lineno">   97</span>}</div>
-<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:82</div></div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (a[l] &gt; a[r])</div>
+<div class="line"><span class="lineno">   92</span>            swap(&amp;a[l], &amp;a[r]);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l != r)</div>
+<div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, l, (l + r) / 2);</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, ((l + r) / 2) + 1, r);</div>
+<div class="line"><span class="lineno">   98</span>        merge(a, l, r, n);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">/* no change if l == r */</span></div>
+<div class="line"><span class="lineno">  102</span>}</div>
+<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:87</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

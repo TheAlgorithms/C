@@ -149,26 +149,40 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Main function. </p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>{</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordtype">int</span> *a, n, i;</div>
-<div class="line"><span class="lineno">  104</span>    scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
-<div class="line"><span class="lineno">  105</span>    a = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  107</span>    {</div>
-<div class="line"><span class="lineno">  108</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;a[i]);</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, 0, n - 1);</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        printf(<span class="stringliteral">&quot; %d&quot;</span>, a[i]);</div>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>{</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordtype">int</span> *a, n, i;</div>
+<div class="line"><span class="lineno">  109</span>    printf(<span class="stringliteral">&quot;Enter Array size: &quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span>    scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (n &lt;= 0) <span class="comment">/* exit program if arraysize is not greater than 0 */</span></div>
+<div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        printf(<span class="stringliteral">&quot;Array size must be Greater than 0!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><span class="lineno">  115</span>    }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(a);</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  120</span>}</div>
-<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:82</div></div>
+<div class="line"><span class="lineno">  116</span>    a = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> (a == NULL) <span class="comment">/* exit program if can&#39;t malloc memory */</span></div>
+<div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        printf(<span class="stringliteral">&quot;Can&#39;t Malloc! Please try again.&quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        printf(<span class="stringliteral">&quot;Enter number[%d]: &quot;</span>, i);</div>
+<div class="line"><span class="lineno">  125</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;a[i]);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, 0, n - 1);</div>
+<div class="line"><span class="lineno">  129</span>    printf(<span class="stringliteral">&quot;Sorted Array: &quot;</span>);</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        printf(<span class="stringliteral">&quot;%d &quot;</span>, a[i]);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(a);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  139</span>}</div>
+<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:87</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment --><div class="dynheader">
