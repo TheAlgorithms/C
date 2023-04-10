@@ -192,7 +192,7 @@ static void tests()
         "\\2V6B6&0S\\2%D=p;0'\\2tD&60Z\\2*6&0>j",
         51, 18);
 
-    printf("all tests have successfully passed!\n");
+    printf("All tests have successfully passed!\n");
 }
 
 /**
