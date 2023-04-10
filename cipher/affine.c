@@ -33,7 +33,7 @@
 typedef struct
 {
     int a;  ///< what the character is being multiplied by
-    int b;  ///< what is being added after the multiplication with a
+    int b;  ///< what is being added after the multiplication with `a`
 } affine_key_t;
 
 /**
