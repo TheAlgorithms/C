@@ -33,6 +33,11 @@ void swap(int *a, int *b)
 void merge(int *a, int l, int r, int n)
 {
     int *b = (int *)malloc(n * sizeof(int)); /* dynamic memory must be freed */
+    if (b == NULL)
+    {
+        printf("Can't Malloc! Please try again.");
+        exit(EXIT_FAILURE);
+    }
     int c = l;
     int p1, p2;
     p1 = l;
@@ -101,18 +106,32 @@ void merge_sort(int *a, int n, int l, int r)
 int main(void)
 {
     int *a, n, i;
+    printf("Enter Array size: ");
     scanf("%d", &n);
+    if (n <= 0) /* exit program if arraysize is not greater than 0 */
+    {
+        printf("Array size must be Greater than 0!\n");
+        return 1;
+    }
     a = (int *)malloc(n * sizeof(int));
+    if (a == NULL) /* exit program if can't malloc memory */
+    {
+        printf("Can't Malloc! Please try again.");
+        return 1;
+    }
     for (i = 0; i < n; i++)
     {
+        printf("Enter number[%d]: ", i);
         scanf("%d", &a[i]);
     }
 
     merge_sort(a, n, 0, n - 1);
+    printf("Sorted Array: ");
     for (i = 0; i < n; i++)
     {
-        printf(" %d", a[i]);
+        printf("%d ", a[i]);
     }
+    printf("\n");
 
     free(a);
 
