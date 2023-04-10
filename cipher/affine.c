@@ -42,7 +42,7 @@ typedef struct
  * @param a number we are finding the inverse for
  * @param m the modulus the inversion is based on
  *
- * @returns the modular multiplicative inverse of a mod m
+ * @returns the modular multiplicative inverse of `a` mod `m`
  */
 int modular_multiplicative_inverse(unsigned int a, unsigned int m)
 {
