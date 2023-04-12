@@ -1,0 +1,5 @@
+<map id="createNFA" name="createNFA">
+<area shape="rect" id="node1" title="creates and initializes a NFA" alt="" coords="5,31,91,56"/>
+<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124" title="adds a state to a NFA" alt="" coords="146,5,221,31"/>
+<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a" title="creates and initializes a NFA state" alt="" coords="139,55,228,80"/>
+</map>

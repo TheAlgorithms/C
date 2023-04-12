@@ -5,6 +5,7 @@ var searchData=
   ['word_2',['word',['../db/d8b/struct_node.html#afa6ccc6414d3e0bcacb715dcdf764bca',1,'Node']]],
   ['word_5fcount_5fword_3',['word_count_word',['../df/ddb/structword__count__word.html',1,'']]],
   ['words_5falphabetical_2ec_4',['words_alphabetical.c',['../d3/d78/words__alphabetical_8c.html',1,'']]],
-  ['writecontentoftreetofile_5',['writeContentOfTreeToFile',['../d3/d78/words__alphabetical_8c.html#a22516c70583c9fa78e4edffb063836cc',1,'words_alphabetical.c']]],
-  ['wt_6',['WT',['../d5/da1/structnode.html#a878d22393f374f3861035e35b9edd653',1,'node']]]
+  ['wrapperflag_5',['wrapperFlag',['../d3/dd7/struct_n_f_a.html#a46968ad64f39e9c62b8fb7970d494422',1,'NFA']]],
+  ['writecontentoftreetofile_6',['writeContentOfTreeToFile',['../d3/d78/words__alphabetical_8c.html#a22516c70583c9fa78e4edffb063836cc',1,'words_alphabetical.c']]],
+  ['wt_7',['WT',['../d5/da1/structnode.html#a878d22393f374f3861035e35b9edd653',1,'node']]]
 ];

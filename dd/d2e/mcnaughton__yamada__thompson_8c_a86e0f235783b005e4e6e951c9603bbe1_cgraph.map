@@ -1,0 +1,5 @@
+<map id="postProcessing" name="postProcessing">
+<area shape="rect" id="node1" title="performs postprocessing on a compiled NFA, add circular empty character transition rules where it&#39;s n..." alt="" coords="5,31,117,56"/>
+<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a4ed0049e15d45e0d75a991fbb6f8963c" title="adds a transition rule to a NFA" alt="" coords="173,5,243,31"/>
+<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc" title="creates and initializes a transition rule" alt="" coords="165,55,251,80"/>
+</map>

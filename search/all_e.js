@@ -9,7 +9,7 @@ var searchData=
   ['lcsbuild_6',['lcsbuild',['../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0',1,'lcs.c']]],
   ['lcslen_7',['lcslen',['../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6',1,'lcs.c']]],
   ['leetcode_8',['LeetCode',['../d6/d77/md_leetcode__d_i_r_e_c_t_o_r_y.html',1,'']]],
-  ['left_9',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node::left()'],['../db/d8b/struct_node.html#ad0976834843c7618677d22a10c495b36',1,'Node::left()']]],
+  ['left_9',['left',['../d5/da1/structnode.html#af7109e6ffd82cbbb705e486fd0ce92f0',1,'node::left()'],['../db/d8b/struct_node.html#ad0976834843c7618677d22a10c495b36',1,'Node::left()'],['../d8/d66/struct_a_s_t_node.html#a7e8efcf6431aca1ee186e775443abfcc',1,'ASTNode::left()']]],
   ['len_10',['len',['../d4/d06/struct_vector.html#a55870593ddea19c96770c2521b075059',1,'Vector']]],
   ['len_11',['LEN',['../df/d27/alaw_8c.html#a05b49c662c073f89e86804f7856622a0',1,'alaw.c']]],
   ['len_12',['len',['../df/dfa/vector_8c.html#a6f8a49f17bf315bdc30749a57bc7bc93',1,'vector.c']]],

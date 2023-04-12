@@ -1,0 +1,5 @@
+<map id="NFA" name="NFA">
+<area shape="rect" id="node1" title="Definition for the NFA itself." alt="" coords="5,185,55,211"/>
+<area shape="rect" id="node2" href="$d4/d97/struct_n_f_a_state.html" title="Definition for a NFA state." alt="" coords="47,5,127,31"/>
+<area shape="rect" id="node3" href="$d9/dd9/structtrans_rule.html" title="Definition for a NFA state transition rule." alt="" coords="116,95,195,121"/>
+</map>

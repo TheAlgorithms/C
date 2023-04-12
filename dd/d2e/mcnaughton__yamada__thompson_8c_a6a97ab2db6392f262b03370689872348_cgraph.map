@@ -1,0 +1,3 @@
+<map id="destroyNode" name="destroyNode">
+<area shape="rect" id="node1" title="recursively destroys a AST" alt="" coords="5,29,101,55"/>
+</map>

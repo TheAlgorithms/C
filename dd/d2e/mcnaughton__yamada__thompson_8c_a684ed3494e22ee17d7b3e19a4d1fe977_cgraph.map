@@ -1,0 +1,5 @@
+<map id="destroyNFA" name="destroyNFA">
+<area shape="rect" id="node1" title="recursively destroys a NFA" alt="" coords="5,31,97,56"/>
+<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e" title="destroys a transition rule object" alt="" coords="147,5,239,31"/>
+<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652" title="destroys a NFA state" alt="" coords="145,55,241,80"/>
+</map>
