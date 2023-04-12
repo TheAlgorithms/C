@@ -205,6 +205,7 @@
   * [Hamming Distance](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance.c)
   * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/HEAD/misc/lexicographic_permutations.c)
   * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/HEAD/misc/longest_subsequence.c)
+  * [Mcnaughton Yamada Thompson](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mcnaughton_yamada_thompson.c)
   * [Mirror](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mirror.c)
   * [Pid](https://github.com/TheAlgorithms/C/blob/HEAD/misc/pid.c)
   * [Poly Add](https://github.com/TheAlgorithms/C/blob/HEAD/misc/poly_add.c)
@@ -218,6 +219,7 @@
   * [Union Find](https://github.com/TheAlgorithms/C/blob/HEAD/misc/union_find.c)
 
 ## Numerical Methods
+  * [Bisection Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/bisection_method.c)
   * [Durand Kerner Roots](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/durand_kerner_roots.c)
   * [Gauss Elimination](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/gauss_elimination.c)
   * [Gauss Seidel Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/gauss_seidel_method.c)
