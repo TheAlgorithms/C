@@ -1,0 +1,5 @@
+<map id="inverse_key" name="inverse_key">
+<area shape="rect" id="node1" title="Given a valid affine cipher key, this function will produce the inverse key." alt="" coords="5,13,97,38"/>
+<area shape="rect" id="node2" href="$d8/daf/affine_8c.html#a06c3bb0ae5d5e9ddc65f8fce1b82e1dd" title="finds the value x such that (a * x) % m = 1" alt="" coords="145,5,296,45"/>
+<area shape="rect" id="node3" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="344,13,391,38"/>
+</map>

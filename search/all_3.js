@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_0',['a',['../dc/d18/structsudoku.html#a507f788b793d4d3d6f6a70415be84ded',1,'sudoku']]],
+  ['a_0',['a',['../dd/d22/structaffine__key__t.html#a25e46eff592f342478c114be24a91fce',1,'affine_key_t::a()'],['../dc/d18/structsudoku.html#a507f788b793d4d3d6f6a70415be84ded',1,'sudoku::a()']]],
   ['abundant_5fflags_1',['abundant_flags',['../d4/dbd/problem__23_2sol2_8c.html#af920a16d6ef69dd604b283f427892e06',1,'sol2.c']]],
   ['accuracy_2',['ACCURACY',['../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY():&#160;durand_kerner_roots.c'],['../dd/d08/newton__raphson__root_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY():&#160;newton_raphson_root.c']]],
   ['adaline_3',['adaline',['../d2/daa/structadaline.html',1,'']]],
@@ -19,13 +19,18 @@ var searchData=
   ['addstate_16',['addState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124',1,'mcnaughton_yamada_thompson.c']]],
   ['addwordtotree_17',['addWordToTree',['../d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9',1,'words_alphabetical.c']]],
   ['adler32_18',['adler32',['../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b',1,'hash_adler32.c']]],
-  ['alaw_2ec_19',['alaw.c',['../df/d27/alaw_8c.html',1,'']]],
-  ['allocatememoryfornode_20',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
-  ['array_21',['Array',['../d9/d41/md_data_structures_array__r_e_a_d_m_e.html',1,'']]],
-  ['assert_5fbytes_22',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]],
-  ['astnode_23',['ASTNode',['../d8/d66/struct_a_s_t_node.html',1,'']]],
-  ['at_24',['AT',['../d5/da1/structnode.html#a5507c3c76ddbda9c482749f3a8a8f0cc',1,'node']]],
-  ['atexitcalled_25',['atexitCalled',['../db/d84/malloc__dbg_8c.html#ad04afbbcb9f0f10bc7628ec4f0d7c950',1,'malloc_dbg.c']]],
-  ['audio_26',['Audio',['../d5/d88/md__d_i_r_e_c_t_o_r_y.html',1,'']]],
-  ['avlnode_27',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
+  ['affine_2ec_19',['affine.c',['../d8/daf/affine_8c.html',1,'']]],
+  ['affine_5fdecrypt_20',['affine_decrypt',['../d8/daf/affine_8c.html#a310ff5abff6e8d74949ee35552737d37',1,'affine.c']]],
+  ['affine_5fencrypt_21',['affine_encrypt',['../d8/daf/affine_8c.html#a0e9b074b109264adec79026eed67e875',1,'affine.c']]],
+  ['affine_5fkey_5ft_22',['affine_key_t',['../dd/d22/structaffine__key__t.html',1,'']]],
+  ['alaw_2ec_23',['alaw.c',['../df/d27/alaw_8c.html',1,'']]],
+  ['allocatememoryfornode_24',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
+  ['alphabet_5fsize_25',['ALPHABET_SIZE',['../d8/daf/affine_8c.html#a6572f1706059832f94025fa12c6c45ed',1,'affine.c']]],
+  ['array_26',['Array',['../d9/d41/md_data_structures_array__r_e_a_d_m_e.html',1,'']]],
+  ['assert_5fbytes_27',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]],
+  ['astnode_28',['ASTNode',['../d8/d66/struct_a_s_t_node.html',1,'']]],
+  ['at_29',['AT',['../d5/da1/structnode.html#a5507c3c76ddbda9c482749f3a8a8f0cc',1,'node']]],
+  ['atexitcalled_30',['atexitCalled',['../db/d84/malloc__dbg_8c.html#ad04afbbcb9f0f10bc7628ec4f0d7c950',1,'malloc_dbg.c']]],
+  ['audio_31',['Audio',['../d5/d88/md__d_i_r_e_c_t_o_r_y.html',1,'']]],
+  ['avlnode_32',['AVLnode',['../d2/d71/struct_a_v_lnode.html',1,'']]]
 ];

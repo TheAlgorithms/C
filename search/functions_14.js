@@ -16,11 +16,13 @@ var searchData=
   ['test_5ffunction_13',['test_function',['../dc/d47/realtime__stats_8c.html#aa54c915581fcc495489175a4386d59fd',1,'realtime_stats.c']]],
   ['test_5flamniscate_14',['test_lamniscate',['../d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614',1,'kohonen_som_trace.c']]],
   ['test_5fsdbm_15',['test_sdbm',['../d7/d3b/group__hash.html#gab87679863646255178427a56dc33e453',1,'hash_sdbm.c']]],
-  ['test_5fxor8_16',['test_xor8',['../d7/d3b/group__hash.html#ga39d4c16427acbf8bbe744f6d8ed61dc0',1,'hash_xor8.c']]],
-  ['testarray_17',['testArray',['../d2/d57/patience__sort_8c.html#af0cc492037e002ba5145e2e770ed0e66',1,'patience_sort.c']]],
-  ['testhelper_18',['testHelper',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a38faadeab39bb48716f1065bc05abec8',1,'mcnaughton_yamada_thompson.c']]],
-  ['testzigzag_19',['testZigZag',['../d0/df3/6_8c.html#a109c3813445bcf97d154a671119deae9',1,'6.c']]],
-  ['to_5fpolar_20',['to_polar',['../d6/d2e/cartesian__to__polar_8c.html#afb80d77f0c994240309ccddcc9525e70',1,'cartesian_to_polar.c']]],
-  ['top_21',['Top',['../da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf',1,'infix_to_postfix2.c']]],
-  ['transit_22',['transit',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aebe16fbf12c8ac089501ebcae6f0c050',1,'mcnaughton_yamada_thompson.c']]]
+  ['test_5fstring_16',['test_string',['../d8/daf/affine_8c.html#a0c4679d9b7da3c5b310586cd6c1fc2c5',1,'affine.c']]],
+  ['test_5fxor8_17',['test_xor8',['../d7/d3b/group__hash.html#ga39d4c16427acbf8bbe744f6d8ed61dc0',1,'hash_xor8.c']]],
+  ['testarray_18',['testArray',['../d2/d57/patience__sort_8c.html#af0cc492037e002ba5145e2e770ed0e66',1,'patience_sort.c']]],
+  ['testhelper_19',['testHelper',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a38faadeab39bb48716f1065bc05abec8',1,'mcnaughton_yamada_thompson.c']]],
+  ['tests_20',['tests',['../d8/daf/affine_8c.html#a483bb8ccf42aaf7375a83e91490eda1e',1,'affine.c']]],
+  ['testzigzag_21',['testZigZag',['../d0/df3/6_8c.html#a109c3813445bcf97d154a671119deae9',1,'6.c']]],
+  ['to_5fpolar_22',['to_polar',['../d6/d2e/cartesian__to__polar_8c.html#afb80d77f0c994240309ccddcc9525e70',1,'cartesian_to_polar.c']]],
+  ['top_23',['Top',['../da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf',1,'infix_to_postfix2.c']]],
+  ['transit_24',['transit',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aebe16fbf12c8ac089501ebcae6f0c050',1,'mcnaughton_yamada_thompson.c']]]
 ];

@@ -12,12 +12,11 @@ var searchData=
   ['nfa_9',['NFA',['../d3/dd7/struct_n_f_a.html',1,'']]],
   ['nfastate_10',['NFAState',['../d4/d97/struct_n_f_a_state.html',1,'']]],
   ['nn_5fmax_11',['NN_MAX',['../d7/d3b/group__hash.html#ga27e69b76332a4a7e970d2b4e29674cff',1,'hash_blake2b.c']]],
-  ['node_12',['node',['../d5/da1/structnode.html',1,'']]],
-  ['node_13',['Node',['../db/d8b/struct_node.html',1,'']]],
-  ['node_14',['node',['../da/d02/binary__search__tree_8c.html#af4aeda155dbe167f1c1cf38cb65bf324',1,'node():&#160;binary_search_tree.c'],['../df/d3c/threaded__binary__trees_8c.html#ad8ecdcce462dd8e170ae1f164935aaa6',1,'node():&#160;threaded_binary_trees.c'],['../d2/d87/non__preemptive__priority__scheduling_8c.html#af4aeda155dbe167f1c1cf38cb65bf324',1,'node():&#160;non_preemptive_priority_scheduling.c']]],
-  ['nodedistributeinfo_15',['NodeDistributeInfo',['../d0/d3a/struct_node_distribute_info.html',1,'']]],
-  ['non_5fpreemptive_5fpriority_5fscheduling_2ec_16',['non_preemptive_priority_scheduling.c',['../d2/d87/non__preemptive__priority__scheduling_8c.html',1,'']]],
-  ['num_5fdigits_17',['num_digits',['../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0',1,'_large_num']]],
-  ['num_5fweights_18',['num_weights',['../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1',1,'adaline']]],
-  ['number_5fof_5fpaths_19',['number_of_paths',['../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6',1,'sol1.c']]]
+  ['node_12',['Node',['../db/d8b/struct_node.html',1,'']]],
+  ['node_13',['node',['../d5/da1/structnode.html',1,'node'],['../da/d02/binary__search__tree_8c.html#af4aeda155dbe167f1c1cf38cb65bf324',1,'node():&#160;binary_search_tree.c'],['../df/d3c/threaded__binary__trees_8c.html#ad8ecdcce462dd8e170ae1f164935aaa6',1,'node():&#160;threaded_binary_trees.c'],['../d2/d87/non__preemptive__priority__scheduling_8c.html#af4aeda155dbe167f1c1cf38cb65bf324',1,'node():&#160;non_preemptive_priority_scheduling.c']]],
+  ['nodedistributeinfo_14',['NodeDistributeInfo',['../d0/d3a/struct_node_distribute_info.html',1,'']]],
+  ['non_5fpreemptive_5fpriority_5fscheduling_2ec_15',['non_preemptive_priority_scheduling.c',['../d2/d87/non__preemptive__priority__scheduling_8c.html',1,'']]],
+  ['num_5fdigits_16',['num_digits',['../d3/d5a/struct__large__num.html#a3fd11c0b413bbabfb8737d4ae73e5aa0',1,'_large_num']]],
+  ['num_5fweights_17',['num_weights',['../d2/daa/structadaline.html#a53314e737a0a5ff4552a03bcc9dafbc1',1,'adaline']]],
+  ['number_5fof_5fpaths_18',['number_of_paths',['../d7/d91/problem__15_2sol1_8c.html#a4650d1d3897633d84253f93433f601d6',1,'sol1.c']]]
 ];

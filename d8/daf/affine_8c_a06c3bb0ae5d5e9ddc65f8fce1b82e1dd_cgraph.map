@@ -1,0 +1,4 @@
+<map id="modular_multiplicative_inverse" name="modular_multiplicative_inverse">
+<area shape="rect" id="node1" title="finds the value x such that (a * x) % m = 1" alt="" coords="5,5,156,45"/>
+<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="204,13,251,38"/>
+</map>

@@ -12,6 +12,8 @@ var searchData=
   ['addstate_9',['addState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124',1,'mcnaughton_yamada_thompson.c']]],
   ['addwordtotree_10',['addWordToTree',['../d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9',1,'words_alphabetical.c']]],
   ['adler32_11',['adler32',['../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b',1,'hash_adler32.c']]],
-  ['allocatememoryfornode_12',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
-  ['assert_5fbytes_13',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]]
+  ['affine_5fdecrypt_12',['affine_decrypt',['../d8/daf/affine_8c.html#a310ff5abff6e8d74949ee35552737d37',1,'affine.c']]],
+  ['affine_5fencrypt_13',['affine_encrypt',['../d8/daf/affine_8c.html#a0e9b074b109264adec79026eed67e875',1,'affine.c']]],
+  ['allocatememoryfornode_14',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
+  ['assert_5fbytes_15',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]]
 ];
