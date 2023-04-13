@@ -16,6 +16,7 @@ var annotated_dup =
     [ "dynamic_array", "d6/d42/structdynamic__array.html", null ],
     [ "Edge", "d5/db4/struct_edge.html", null ],
     [ "elem", "d0/d6b/structelem.html", null ],
+    [ "euclidean_result", "d8/d1e/structeuclidean__result.html", "d8/d1e/structeuclidean__result" ],
     [ "euler_", "d2/de8/structeuler__.html", "d2/de8/structeuler__" ],
     [ "Graph", "d4/dd4/struct_graph.html", null ],
     [ "GraphRep", "d2/d6a/struct_graph_rep.html", null ],

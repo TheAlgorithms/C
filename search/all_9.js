@@ -1,7 +1,7 @@
 var searchData=
 [
   ['g_0',['G',['../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202',1,'hash_blake2b.c']]],
-  ['gcd_1',['gcd',['../d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d',1,'sol3.c']]],
+  ['gcd_1',['gcd',['../d8/d1e/structeuclidean__result.html#af112efeacb49a666b59047336c968607',1,'euclidean_result::gcd()'],['../d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d',1,'gcd(unsigned long a, unsigned long b):&#160;sol3.c']]],
   ['geometry_5fdatatypes_2eh_2',['geometry_datatypes.h',['../d0/dc7/geometry__datatypes_8h.html',1,'']]],
   ['get_3',['get',['../dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1',1,'get(ListNode *list, const int index):&#160;circular_doubly_linked_list.c'],['../df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250',1,'get(Vector *vec, int index):&#160;vector.c']]],
   ['get_5fangle_4',['get_angle',['../de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8',1,'vectors_3d.c']]],

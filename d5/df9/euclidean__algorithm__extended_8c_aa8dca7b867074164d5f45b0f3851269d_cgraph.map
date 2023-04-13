@@ -1,0 +1,8 @@
+<map id="test" name="test">
+<area shape="rect" id="node1" title="Perform tests on known results." alt="" coords="5,31,49,56"/>
+<area shape="rect" id="node2" href="$d5/df9/euclidean__algorithm__extended_8c.html#aaa5f87fdd4cc35a6c77e255416de66ba" title="perform one single check on the result of the algorithm with provided parameters and expected output" alt="" coords="97,31,183,56"/>
+<area shape="rect" id="node3" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="231,23,368,63"/>
+<area shape="rect" id="node4" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="416,31,543,56"/>
+<area shape="rect" id="node5" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="603,5,649,31"/>
+<area shape="rect" id="node6" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="591,55,661,80"/>
+</map>

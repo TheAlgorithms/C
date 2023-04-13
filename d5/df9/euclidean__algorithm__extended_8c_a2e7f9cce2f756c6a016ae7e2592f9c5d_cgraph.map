@@ -1,0 +1,6 @@
+<map id="extended_euclidean_algorithm" name="extended_euclidean_algorithm">
+<area shape="rect" id="node1" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="5,23,143,63"/>
+<area shape="rect" id="node2" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="191,31,317,56"/>
+<area shape="rect" id="node3" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="377,5,424,31"/>
+<area shape="rect" id="node4" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="365,55,436,80"/>
+</map>

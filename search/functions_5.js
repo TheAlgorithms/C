@@ -9,5 +9,6 @@ var searchData=
   ['evaluate_6',['evaluate',['../df/d43/postfix__evaluation_8c.html#a4494492c8fc2509f602acc8228a3b623',1,'postfix_evaluation.c']]],
   ['exact_5fsolution_7',['exact_solution',['../d4/d07/ode__forward__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_forward_euler.c'],['../d1/dc2/ode__midpoint__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_midpoint_euler.c'],['../d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a',1,'exact_solution(const double *x, double *y):&#160;ode_semi_implicit_euler.c']]],
   ['example_8',['example',['../dd/d29/doubly__linked__list_8c.html#afa2b50f4716fc3b42221a72e676e1422',1,'doubly_linked_list.c']]],
-  ['exponential_5fsearch_9',['exponential_search',['../da/d6c/exponential__search_8c.html#a82d4de0907b9601a376febf50955bacd',1,'exponential_search.c']]]
+  ['exponential_5fsearch_9',['exponential_search',['../da/d6c/exponential__search_8c.html#a82d4de0907b9601a376febf50955bacd',1,'exponential_search.c']]],
+  ['extended_5feuclidean_5falgorithm_10',['extended_euclidean_algorithm',['../d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d',1,'euclidean_algorithm_extended.c']]]
 ];
