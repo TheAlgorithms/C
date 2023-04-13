@@ -14,6 +14,7 @@
 #include <errno.h>  /// for errno - to determine whether there is an using strtol()
 #include <stdio.h>   /// for input, output
 #include <stdlib.h>  /// for exit() - to exit the program
+#include <time.h>   /// to calculate time taken by fib()
 /**
  * @brief Determines the nth Fibonacci term
  * @param number - n in "nth term" and it can't be negative as well as zero
@@ -80,7 +81,7 @@ int getInput(void)
         break;
     }
 
-    printf("\nEntered digit: %d\n", num);
+    printf("\nEntered digit: %d (it might take sometime)\n", num);
     return num;
 }
 
@@ -112,7 +113,12 @@ int main()
         "than or equal to 48 ) is entered.\n");
 
     int number = getInput();
+    clock_t start, end;
 
-    printf("Fibonacci element %d is %u\n", number, fib(number));
+    start = clock();
+    printf("Fibonacci element %d is %u ", number, fib(number));
+    end = clock();
+
+    printf("in %.3f seconds.\n", ((double)(end - start)) / CLOCKS_PER_SEC );
     return 0;
 }
