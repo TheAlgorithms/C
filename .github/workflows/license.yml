@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Update the License
         run: |
-          (echo "Copyright (C) 2016-$(date +"%Y") TheAlgorithms and contributors";  tail -n +2 License) > License.tmp
-          mv License.tmp License
+          (echo "Copyright (C) 2016-$(date +"%Y") TheAlgorithms and contributors";  tail -n +2 LICENSE) > License.tmp
+          mv License.tmp LICENSE
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         id: commit-push
