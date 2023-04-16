@@ -1,5 +1,5 @@
 /**
- * @hangman.c
+ * @file
  * @brief C implementation of hangman game. Wikipedia: https://en.wikipedia.org/wiki/Hangman_(game)
  * @details
  * Simple, readable version of hangman.
