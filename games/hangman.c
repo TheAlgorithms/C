@@ -17,7 +17,7 @@
 // global variable - word to guess
 char current_word[100] = "";
 
-//functions
+// function prototypes
 void new_game(); // creates a new game
 int new_guess(char, const char guesses[], int size); // checks if player has already played letter
 int in_word(char, const char word[], unsigned int size); // checks if letter is in word
