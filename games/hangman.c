@@ -15,7 +15,7 @@
 #include <assert.h> /// for self-testing
 
 // global variable - word to guess
-char current_word[30] = "";
+char current_word[100] = "";
 
 //functions
 void new_game(); // creates a new game
