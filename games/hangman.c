@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief C implementation of hangman game. Wikipedia: https://en.wikipedia.org/wiki/Hangman_(game)
+ * @brief C Implementation of [Hangman Game](https://en.wikipedia.org/wiki/Hangman_(game)) 
  * @details
  * Simple, readable version of hangman.
  * Changed graphic to duck instead of traditional stick figure (same number of guesses).
