@@ -27,7 +27,7 @@
 |   24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                                               | [C](./src/24.c)   | Medium     |
 |   26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array)                                               | [C](./src/26.c)   | Easy       |
 |   27 | [Remove Element](https://leetcode.com/problems/remove-element)                                                                                         | [C](./src/27.c)   | Easy       |
-|   28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)                 | [C](./src/28.c)   | Medium     |
+|   28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)                 | [C](./src/28.c)   | Easy       |
 |   29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers)                                                                               | [C](./src/29.c)   | Medium     |
 |   32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses)                                                                   | [C](./src/32.c)   | Hard       |
 |   35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position)                                                                         | [C](./src/35.c)   | Easy       |

@@ -18,13 +18,22 @@ jobs:
       - name: Add python dependencies
         run: |
           pip install requests
-      - name: Write leectode DIRECTORY.md
+      - name: Write LeetCode DIRECTORY.md
         run: |
           python3 scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
-          git config --global user.name github-actions[bot]
-          git config --global user.email 'github-actions@users.noreply.github.com'
-      - name: Update LeetCode's directory
+          git pull || true
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        id: commit-push
+        with:
+          commit_message: "docs: updating `leetcode/DIRECTORY.md`"
+          branch: "leetcode-directory-${{ github.sha }}"
+          create_branch: true
+      - name: Creating and merging the PR
+        shell: bash
+        if: steps.commit-push.outputs.changes_detected == 'true'
         run: |
-          git add leetcode/DIRECTORY.md
-          git commit -am "updating DIRECTORY.md" ||  true
-          git push origin HEAD:$GITHUB_REF || true
+          gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).'
+          gh pr merge --admin --merge --subject 'docs: updating `leetcode/DIRECTORY.md' --delete-branch
+        env:
+          GH_TOKEN: ${{ github.token }}
