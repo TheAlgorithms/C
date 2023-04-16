@@ -7,7 +7,7 @@
 * The first while loop iterates over the linked list to count the number of nodes. This loop takes O(n) time
 * The next if statement takes O(1) time.
 * The second while loop rotates the linked list by k positions. The loop runs k times and performs a constant amount of work in each iteration, including traversing the linked list to find the last node, setting the new head, and updating the pointers. The loop takes O(k) time.
-* Overall time complexity of the code is O(n + k).
+* Time complexity of the code is O(n * k) in worst case.
 *
 * The code uses only a constant amount of extra memory, regardless of the size of the input. Therefore, the space complexity of the code is O(1).
 
