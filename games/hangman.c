@@ -15,12 +15,12 @@
 #include <assert.h> /// for self-testing
 
 // global variable - word to guess
-char current_word[] = "";
+char current_word[30] = "";
 
 //functions
 void new_game(); // creates a new game
 int new_guess(char, const char guesses[], int size); // checks if player has already played letter
-int in_word(char, char word[], unsigned int size); // checks if letter is in word
+int in_word(char, const char word[], unsigned int size); // checks if letter is in word
 void picture(int score); // outputs image of duck (instead of hang man)
 void won(int score); // checks if player has won or lost
 
@@ -45,16 +45,16 @@ int main() {
 
     test();
 
-    int i;
+
     char guess;
-    char guesses[25] = {}; // previous guesses
+    char guesses[25] = ""; // previous guesses
     int guesses_size;
     int incorrect = 0; // incorrect guesses counter
     char hidden[100] = ""; // hidden word
 
     new_game();
 
-    for (i = 0; i < ((strlen(current_word)) - 1); i++) {
+    for (int i = 0; i < (strlen(current_word)); i++) {
         hidden[i] = '_';
     }
 
@@ -64,20 +64,21 @@ int main() {
             printf("\n****************************\n");
             printf("Your word: ");
 
-            for (i = 0; i < (strlen(current_word) - 1); i++) {
+            for (int i = 0; i < (strlen(current_word)); i++) {
                 printf("%c ", hidden[i]);
             }
 
             if ((strlen(guesses)) > 0) {
                 printf("\nSo far, you have guessed: ");
-                for (i = 0; i < (strlen(guesses)); i++) {
+                for (int i = 0; i < (strlen(guesses)); i++) {
                     printf("%c ", guesses[i]);
                 }
             }
 
-            printf("\nYou have %d guesses left.", (13 - incorrect));
+            printf("\nYou have %d guesses left.", (12 - incorrect));
             printf("\nPlease enter a letter: ");
             scanf(" %c", &guess);
+            guess = tolower(guess);
 
             guesses_size = sizeof(guesses) / sizeof(char);
 
@@ -87,8 +88,8 @@ int main() {
 
         if (in_word(guess, current_word, strlen(current_word)) == 1) {
             printf("That letter is in the word!");
-            for (i = 0; i < strlen(current_word); i++) {
-                if (tolower(current_word[i]) == guess) {
+            for (int i = 0; i < strlen(current_word); i++) {
+                if ((current_word[i]) == guess) {
                     hidden[i] = guess;
                 }
             }
@@ -113,9 +114,7 @@ int main() {
  */
 int new_guess(char new_guess, const char guesses[], int size) {
 
-    int j;
-
-    for (j = 0; j < size; j++) {
+    for (int j = 0; j < size; j++) {
         if (guesses[j] == new_guess) {
             printf("\nYou have already guessed that letter.");
             return 1;
@@ -132,12 +131,10 @@ int new_guess(char new_guess, const char guesses[], int size) {
  * @returns 1 if letter is in word
  * @returns -1 if letter is not in word
  */
-int in_word(char letter, char word[], unsigned int size) {
+int in_word(char letter, const char word[], unsigned int size) {
 
-    int i;
-
-    for (i = 0; i < size; i++) {
-        if (tolower(word[i]) == letter) {
+    for (int i = 0; i < size; i++) {
+        if ((word[i]) == letter) {
             return 1;
         }
     }
@@ -158,20 +155,32 @@ void new_game() {
     FILE *fptr;
     fptr = fopen("words.txt", "r");
 
+    if (fptr == NULL){
+        fprintf(stderr, "File not found.");
+        exit(EXIT_FAILURE);
+    }
+
     // counts number of words in file - assumes each word on new line
     while (fgets(current_word, 100, fptr) != NULL) {
         line_number++;
     }
-    fclose(fptr);
+    rewind(fptr);
 
     srand(time(NULL));
     random_num = rand() % line_number;
 
     // selects randomly generated word
-    fptr = fopen("words.txt", "r");
-    while (s < random_num){
+    while (s <= random_num){
         fgets(current_word, 100, fptr);
         s++;
+    }
+
+    // formats string correctly
+    if (strchr(current_word, '\n') != NULL){
+        current_word[strlen(current_word) - 1] = '\0';
+    }
+    else {
+        current_word[strlen(current_word)] = '\0';
     }
     fclose(fptr);
 }
@@ -186,7 +195,7 @@ void won(int score) {
         printf("\nYou lost! The word was: %s", current_word);
     }
     else {
-        printf("\nYou won! You had %d guesses left", (13 - score));
+        printf("\nYou won! You had %d guesses left", (12 - score));
     }
 }
 
@@ -198,6 +207,12 @@ void won(int score) {
 void picture(int score) {
 
     switch(score) {
+
+        case 12:
+            printf("\n      _\n"
+                   "  __( ' )> \n"
+                   " \\_ < _ ) ");
+            break;
 
         case 11:
             printf("\n      _\n"
