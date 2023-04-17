@@ -1,28 +1,39 @@
 /**
  * @file
- * @brief C Implementation of [Hangman Game](https://en.wikipedia.org/wiki/Hangman_(game)) 
+ * @brief C implementation of [Hangman Game](https://en.wikipedia.org/wiki/Hangman_(game))
  * @details
  * Simple, readable version of hangman.
  * Changed graphic to duck instead of traditional stick figure (same number of guesses).
  * @author [AtlantaEmrys2002](https://github.com/AtlantaEmrys2002)
 */
 
+#include <assert.h> /// for self-testing
 #include <ctype.h> /// for main()
 #include <stdio.h> /// for main(), new_word(), new_guess(), won()
 #include <stdlib.h> /// for all functions
 #include <string.h> /// for main()
 #include <time.h> /// for new_game()
-#include <assert.h> /// for self-testing
 
-// global variable - word to guess
-char current_word[100] = "";
+/*
+ * @brief game_instance structure that holds current state of game
+ */
+struct game_instance{
+
+    char current_word[30]; /// word to be guessed by player
+    char hidden[30]; /// hidden version of word that is displayed to player
+    int size; /// size of word
+    int incorrect; /// number of incorrect guesses
+    char guesses[25]; /// previous guesses
+    int guesses_size; /// size of guesses array
+
+};
 
 // function prototypes
-void new_game(); // creates a new game
+struct game_instance new_game(); // creates a new game
 int new_guess(char, const char guesses[], int size); // checks if player has already played letter
 int in_word(char, const char word[], unsigned int size); // checks if letter is in word
 void picture(int score); // outputs image of duck (instead of hang man)
-void won(int score); // checks if player has won or lost
+void won(const char word[], int score); // checks if player has won or lost
 
 /**
  * @brief Self-test Implementations
@@ -45,62 +56,51 @@ int main() {
 
     test();
 
-
-    char guess;
-    char guesses[25] = ""; // previous guesses
-    int guesses_size;
-    int incorrect = 0; // incorrect guesses counter
-    char hidden[100] = ""; // hidden word
-
-    new_game();
-
-    for (int i = 0; i < (strlen(current_word)); i++) {
-        hidden[i] = '_';
-    }
+    struct game_instance game = new_game(); // new game created
+    char guess; // current letter guessed by player
 
     // main loop - asks player for guesses
-    while ((strchr(hidden, '_') != NULL) && incorrect <= 12) {
+    while ((strchr(game.hidden, '_') != NULL) && game.incorrect <= 12) {
         do {
             printf("\n****************************\n");
             printf("Your word: ");
 
-            for (int i = 0; i < (strlen(current_word)); i++) {
-                printf("%c ", hidden[i]);
+            for (int i = 0; i < game.size; i++) {
+                printf("%c ", game.hidden[i]);
             }
 
-            if ((strlen(guesses)) > 0) {
+            if (game.guesses_size > 0) {
                 printf("\nSo far, you have guessed: ");
-                for (int i = 0; i < (strlen(guesses)); i++) {
-                    printf("%c ", guesses[i]);
+                for (int i = 0; i < game.guesses_size; i++) {
+                    printf("%c ", game.guesses[i]);
                 }
             }
 
-            printf("\nYou have %d guesses left.", (12 - incorrect));
+            printf("\nYou have %d guesses left.", (13 - game.incorrect));
             printf("\nPlease enter a letter: ");
             scanf(" %c", &guess);
             guess = tolower(guess);
 
-            guesses_size = sizeof(guesses) / sizeof(char);
+        } while (new_guess(guess, game.guesses, game.guesses_size) != -1);
 
-        } while (new_guess(guess, guesses, guesses_size) != -1);
+        game.guesses[game.guesses_size] = guess; // adds new letter to guesses array
+        game.guesses_size++; // updates size of guesses array
 
-        guesses[strlen(guesses)] = guess; // adds new letter to guesses array
-
-        if (in_word(guess, current_word, strlen(current_word)) == 1) {
+        if (in_word(guess, game.current_word, game.size) == 1) {
             printf("That letter is in the word!");
-            for (int i = 0; i < strlen(current_word); i++) {
-                if ((current_word[i]) == guess) {
-                    hidden[i] = guess;
+            for (int i = 0; i < game.size; i++) {
+                if ((game.current_word[i]) == guess) {
+                    game.hidden[i] = guess;
                 }
             }
         } else {
             printf("That letter is not in the word.\n");
-            incorrect++;
+            (game.incorrect)++;
         }
-        picture(incorrect);
+        picture(game.incorrect);
     }
 
-    won(incorrect);
+    won(game.current_word, game.incorrect);
     return 0;
 }
 
@@ -120,12 +120,13 @@ int new_guess(char new_guess, const char guesses[], int size) {
             return 1;
         }
     }
+
     return -1;
 }
 
 /**
  * @brief checks if letter is in current word
- * @param letter letter guessed by user
+ * @param letter letter guessed by player
  * @param word current word
  * @param size length of word
  * @returns 1 if letter is in word
@@ -144,13 +145,15 @@ int in_word(char letter, const char word[], unsigned int size) {
 
 /**
  * @brief creates a new game - generates a random word and stores in global variable current_word
- * @returns void
+ * @returns current_game - a new game instance containing randomly selected word, its length and hidden version of word
  */
-void new_game() {
+struct game_instance new_game() {
 
     int line_number = 0;
     int random_num;
     int s = 0;
+    struct game_instance current_game;
+    char word[30];
 
     FILE *fptr;
     fptr = fopen("words.txt", "r");
@@ -161,9 +164,10 @@ void new_game() {
     }
 
     // counts number of words in file - assumes each word on new line
-    while (fgets(current_word, 100, fptr) != NULL) {
+    while (fgets(word, 100, fptr) != NULL) {
         line_number++;
     }
+
     rewind(fptr);
 
     srand(time(NULL));
@@ -171,28 +175,40 @@ void new_game() {
 
     // selects randomly generated word
     while (s <= random_num){
-        fgets(current_word, 100, fptr);
+        fgets(word, 30, fptr);
         s++;
     }
 
     // formats string correctly
-    if (strchr(current_word, '\n') != NULL){
-        current_word[strlen(current_word) - 1] = '\0';
+    if (strchr(word, '\n') != NULL){
+        word[strlen(word) - 1] = '\0';
     }
     else {
-        current_word[strlen(current_word)] = '\0';
+        word[strlen(word)] = '\0';
     }
     fclose(fptr);
+
+    // creates new game instance
+    strcpy(current_game.current_word, word);
+    current_game.size = strlen(word);
+    for (int i = 0; i < (strlen(word)); i++) {
+        current_game.hidden[i] = '_';
+    }
+    current_game.incorrect = 0;
+    current_game.guesses_size = 0;
+
+    return current_game;
 }
 
 /**
  * @brief checks if player has won or lost
+ * @param word the word player has attempted to guess
  * @param score how many incorrect guesses player has made
  * @returns void
  */
-void won(int score) {
+void won(const char word[], int score) {
     if (score > 12) {
-        printf("\nYou lost! The word was: %s", current_word);
+        printf("\nYou lost! The word was: %s", word);
     }
     else {
         printf("\nYou won! You had %d guesses left", (12 - score));
@@ -200,7 +216,7 @@ void won(int score) {
 }
 
 /*
- * @brief gradually draws duck as user gets letters incorrect
+ * @brief gradually draws duck as player gets letters incorrect
  * @param score how many incorrect guesses player has made
  * @returns void
  */
