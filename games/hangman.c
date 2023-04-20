@@ -164,7 +164,7 @@ struct game_instance new_game() {
     }
 
     // counts number of words in file - assumes each word on new line
-    while (fgets(word, 100, fptr) != NULL) {
+    while (fgets(word, 30, fptr) != NULL) {
         line_number++;
     }
 
