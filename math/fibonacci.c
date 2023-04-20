@@ -20,8 +20,8 @@
  * @param number - n in "nth term" and it can't be negative as well as zero
  * @return nth term in unsigned type
  * @warning
- * Only till 47th and 48th fibonacci element can be stored in 'int' and
- * 'unsigned' respectively (takes more than 20 seconds to print)
+ * Only till 47th and 48th fibonacci element can be stored in `int` and
+ * `unsigned int` respectively (takes more than 20 seconds to print)
  */
 unsigned int fib(int number)
 {
