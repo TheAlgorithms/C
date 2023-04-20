@@ -11,7 +11,7 @@
  */
 
 #include <assert.h>  /// for assert()
-#include <errno.h>  /// for errno - to determine whether there is an using strtol()
+#include <errno.h>  /// for errno - to determine whether there is an error while using strtol()
 #include <stdio.h>   /// for input, output
 #include <stdlib.h>  /// for exit() - to exit the program
 #include <time.h>   /// to calculate time taken by fib()
