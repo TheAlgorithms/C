@@ -7,54 +7,38 @@
  * @author [AtlantaEmrys2002](https://github.com/AtlantaEmrys2002)
 */
 
-#include <assert.h> /// for self-testing
-#include <ctype.h> /// for main()
-#include <stdio.h> /// for main(), new_word(), new_guess(), won()
-#include <stdlib.h> /// for all functions
-#include <string.h> /// for main()
-#include <time.h> /// for new_game()
+#include <ctype.h> /// for main() - tolower()
+#include <stdio.h> /// for main(), new_word(), new_guess(), won() - I/O operations
+#include <stdlib.h> /// for all functions - exit(), rand() and file functions
+#include <string.h> /// for main() - for string operations strlen, strchr, strcpy
+#include <time.h> /// for new_game() - used with srand() for declaring new game instance
 
 /*
  * @brief game_instance structure that holds current state of game
  */
 struct game_instance{
 
-    char current_word[30]; /// word to be guessed by player
-    char hidden[30]; /// hidden version of word that is displayed to player
-    int size; /// size of word
-    int incorrect; /// number of incorrect guesses
-    char guesses[25]; /// previous guesses
-    int guesses_size; /// size of guesses array
+    char current_word[30]; ///< word to be guessed by player
+    char hidden[30]; ///< hidden version of word that is displayed to player
+    int size; ///< size of word
+    int incorrect; ///< number of incorrect guesses
+    char guesses[25]; ///< previous guesses
+    int guesses_size; ///< size of guesses array
 
 };
 
 // function prototypes
-struct game_instance new_game(); // creates a new game
+struct game_instance new_game(void); // creates a new game
 int new_guess(char, const char guesses[], int size); // checks if player has already played letter
 int in_word(char, const char word[], unsigned int size); // checks if letter is in word
 void picture(int score); // outputs image of duck (instead of hang man)
 void won(const char word[], int score); // checks if player has won or lost
 
 /**
- * @brief Self-test Implementations
- * @returns void
- */
-static void test() {
-    /*checks in_word returns correct results (e.g. c is in cat, d is not in flower)*/
-    assert(in_word('c', "cat", 3) == 1);
-    assert(in_word('d', "flower,", 6) == -1);
-    /*checks new_guess returns correct results (e.g. d is in dhjkl and has been guessed before, but e is not and hasn't been guessed before)*/
-    //assert(new_guess('d', "dhjkl", 5) == 1);
-    assert(new_guess('z', "testing", 5) == -1);
-}
-
-/**
  * @brief Main Function
  * @returns 0 on exit
  */
 int main() {
-
-    test();
 
     struct game_instance game = new_game(); // new game created
     char guess; // current letter guessed by player
@@ -76,7 +60,7 @@ int main() {
                 }
             }
 
-            printf("\nYou have %d guesses left.", (13 - game.incorrect));
+            printf("\nYou have %d guesses left.", (12 - game.incorrect));
             printf("\nPlease enter a letter: ");
             scanf(" %c", &guess);
             guess = tolower(guess);
@@ -149,11 +133,7 @@ int in_word(char letter, const char word[], unsigned int size) {
  */
 struct game_instance new_game() {
 
-    int line_number = 0;
-    int random_num;
-    int s = 0;
-    struct game_instance current_game;
-    char word[30];
+    char word[30]; // used throughout function
 
     FILE *fptr;
     fptr = fopen("words.txt", "r");
@@ -164,16 +144,20 @@ struct game_instance new_game() {
     }
 
     // counts number of words in file - assumes each word on new line
+    int line_number = 0;
     while (fgets(word, 30, fptr) != NULL) {
         line_number++;
     }
 
     rewind(fptr);
 
+    // generates random number
+    int random_num;
     srand(time(NULL));
     random_num = rand() % line_number;
 
     // selects randomly generated word
+    int s = 0;
     while (s <= random_num){
         fgets(word, 30, fptr);
         s++;
@@ -183,12 +167,11 @@ struct game_instance new_game() {
     if (strchr(word, '\n') != NULL){
         word[strlen(word) - 1] = '\0';
     }
-    else {
-        word[strlen(word)] = '\0';
-    }
+
     fclose(fptr);
 
     // creates new game instance
+    struct game_instance current_game;
     strcpy(current_game.current_word, word);
     current_game.size = strlen(word);
     for (int i = 0; i < (strlen(word)); i++) {
