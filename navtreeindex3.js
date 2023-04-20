@@ -1,5 +1,10 @@
 var NAVTREEINDEX3 =
 {
+"db/d80/problem__20_2sol1_8c.html#a0dd8af03e6cc8187e996db564ff90960":[16,0,19,9,0,2],
+"db/d80/problem__20_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,9,0,3],
+"db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1":[16,0,19,9,0,4],
+"db/d80/problem__20_2sol1_8c.html#a62cbbd106aad52daadb9403a07d0da32":[16,0,19,9,0,1],
+"db/d84/malloc__dbg_8c.html":[16,0,5,0],
 "db/d84/malloc__dbg_8c.html#a062aa89cafd39a97971a2eb22653ff2a":[16,0,5,0,2],
 "db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797":[16,0,5,0,8],
 "db/d84/malloc__dbg_8c.html#a37914d05ba1fe8848aa1b48cda719422":[16,0,5,0,7],
@@ -192,8 +197,8 @@ var NAVTREEINDEX3 =
 "dd/d93/client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,2,0,4],
 "dd/d95/word__count_8h_source.html":[16,0,7,4,0],
 "dd/da2/structbuffer.html":[15,0,8],
-"dd/dd3/prime__sieve_8c.html":[16,0,15,9],
-"dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7":[16,0,15,9,4],
+"dd/dd3/prime__sieve_8c.html":[16,0,15,10],
+"dd/dd3/prime__sieve_8c.html#ac1215a37edfa07d37edf6ec65f2235c7":[16,0,15,10,4],
 "dd/de4/bubble__sort_8c.html":[16,0,21,1],
 "dd/de4/bubble__sort_8c.html#aa8989f6c9bfd1f040854fa18b180114f":[16,0,21,1,0],
 "dd/de4/bubble__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,21,1,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX3 =
 "de/dff/heap__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,21,4,5],
 "de/dff/heap__sort__2_8c.html#aaf68497ab808b560dbf109da6435905a":[16,0,21,4,4],
 "de/dff/heap__sort__2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,21,4,3],
-"df/d16/palindrome_8c.html":[16,0,15,7],
-"df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba":[16,0,15,7,0],
-"df/d16/palindrome_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,15,7,1],
-"df/d1a/problem__21_2sol1_8c.html":[16,0,19,10,0],
-"df/d1a/problem__21_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,10,0,0],
-"df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93":[16,0,19,10,0,1]
+"df/d16/palindrome_8c.html":[16,0,15,8]
 };

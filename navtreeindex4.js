@@ -1,5 +1,10 @@
 var NAVTREEINDEX4 =
 {
+"df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba":[16,0,15,8,0],
+"df/d16/palindrome_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,15,8,1],
+"df/d1a/problem__21_2sol1_8c.html":[16,0,19,10,0],
+"df/d1a/problem__21_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,10,0,0],
+"df/d1a/problem__21_2sol1_8c.html#aacf4b7e708651d2164e86958f2c29c93":[16,0,19,10,0,1],
 "df/d27/alaw_8c.html":[16,0,0,0],
 "df/d27/alaw_8c.html#a05b49c662c073f89e86804f7856622a0":[16,0,0,0,0],
 "df/d27/alaw_8c.html#a093ac72124e3c2268d1150676e63175d":[16,0,0,0,1],

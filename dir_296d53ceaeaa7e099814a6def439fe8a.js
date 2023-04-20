@@ -5,6 +5,7 @@ var dir_296d53ceaeaa7e099814a6def439fe8a =
     [ "collatz.c", "dc/d80/collatz_8c.html", "dc/d80/collatz_8c" ],
     [ "euclidean_algorithm_extended.c", "d5/df9/euclidean__algorithm__extended_8c.html", "d5/df9/euclidean__algorithm__extended_8c" ],
     [ "factorial_large_number.c", "d6/d3d/factorial__large__number_8c.html", "d6/d3d/factorial__large__number_8c" ],
+    [ "fibonacci.c", "d0/d6f/fibonacci_8c.html", "d0/d6f/fibonacci_8c" ],
     [ "fibonacci_fast.c", "d4/d99/fibonacci__fast_8c.html", "d4/d99/fibonacci__fast_8c" ],
     [ "fibonacci_formula.c", "d8/d75/fibonacci__formula_8c.html", "d8/d75/fibonacci__formula_8c" ],
     [ "palindrome.c", "df/d16/palindrome_8c.html", "df/d16/palindrome_8c" ],
