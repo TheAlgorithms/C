@@ -139,7 +139,7 @@ struct game_instance new_game() {
     fptr = fopen("words.txt", "r");
 
     if (fptr == NULL){
-        fprintf(stderr, "File not found.");
+        fprintf(stderr, "File not found.\n");
         exit(EXIT_FAILURE);
     }
 
