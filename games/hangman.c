@@ -136,7 +136,7 @@ struct game_instance new_game() {
     char word[30]; // used throughout function
 
     FILE *fptr;
-    fptr = fopen("words.txt", "r");
+    fptr = fopen("games/words.txt", "r");
 
     if (fptr == NULL){
         fprintf(stderr, "File not found.\n");
@@ -191,10 +191,10 @@ struct game_instance new_game() {
  */
 void won(const char word[], int score) {
     if (score > 12) {
-        printf("\nYou lost! The word was: %s", word);
+        printf("\nYou lost! The word was: %s.\n", word);
     }
     else {
-        printf("\nYou won! You had %d guesses left", (12 - score));
+        printf("\nYou won! You had %d guesses left.\n", (12 - score));
     }
 }
 
