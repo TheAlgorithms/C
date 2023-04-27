@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"db/d80/problem__20_2sol1_8c.html":[16,0,19,9,0],
 "db/d80/problem__20_2sol1_8c.html#a0dd8af03e6cc8187e996db564ff90960":[16,0,19,9,0,2],
 "db/d80/problem__20_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,9,0,3],
 "db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1":[16,0,19,9,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "de/dff/heap__sort__2_8c.html#a672a47d865e7fa18f1ff23001ef4a485":[16,0,21,4,2],
 "de/dff/heap__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,21,4,5],
 "de/dff/heap__sort__2_8c.html#aaf68497ab808b560dbf109da6435905a":[16,0,21,4,4],
-"de/dff/heap__sort__2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,21,4,3],
-"df/d16/palindrome_8c.html":[16,0,15,8]
+"de/dff/heap__sort__2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,21,4,3]
 };

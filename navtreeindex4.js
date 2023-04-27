@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"df/d16/palindrome_8c.html":[16,0,15,8],
 "df/d16/palindrome_8c.html#a6320493ddee0ca4614423721c5d6f4ba":[16,0,15,8,0],
 "df/d16/palindrome_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,15,8,1],
 "df/d1a/problem__21_2sol1_8c.html":[16,0,19,10,0],
@@ -34,9 +35,9 @@ var NAVTREEINDEX4 =
 "df/d43/postfix__evaluation_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,16,3,2],
 "df/d43/postfix__evaluation_8c.html#af395c540f7e70a8d82d055a0aa42bbef":[16,0,16,3,4],
 "df/d58/md_leetcode__r_e_a_d_m_e.html":[11],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md73":[11,0],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,1],
-"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,2],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74":[11,0],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75":[11,1],
+"df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md76":[11,2],
 "df/d83/selection__sort_8c.html":[16,0,21,10],
 "df/d83/selection__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,21,10,3],
 "df/d83/selection__sort_8c.html#ac0f2228420376f4db7e1274f2b41667c":[16,0,21,10,0],
@@ -194,10 +195,10 @@ var NAVTREEINDEX4 =
 "globals_z.html":[16,1,0,25],
 "index.html":[],
 "index.html":[0],
-"index.html#autotoc_md77":[0,0],
-"index.html#autotoc_md78":[0,1],
-"index.html#autotoc_md79":[0,2],
-"index.html#autotoc_md80":[0,3],
+"index.html#autotoc_md78":[0,0],
+"index.html#autotoc_md79":[0,1],
+"index.html#autotoc_md80":[0,2],
+"index.html#autotoc_md81":[0,3],
 "modules.html":[14],
 "pages.html":[]
 };
