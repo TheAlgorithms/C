@@ -1,7 +1,7 @@
 <map id="conversions/c_atoi_str_to_integer.c" name="conversions/c_atoi_str_to_integer.c">
-<area shape="rect" id="node1" title="Recoding the original atoi function in stdlib.h." alt="" coords="107,5,237,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,75,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,93,160,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="184,93,248,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="273,93,338,119"/>
+<area shape="rect" id="node1" title="Recoding the original atoi function in stdlib.h." alt="" coords="105,5,235,46"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,94,74,120"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,94,158,120"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,94,245,120"/>
+<area shape="rect" id="node5" title=" " alt="" coords="269,94,333,120"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="conversions/decimal_to_any_base.c" name="conversions/decimal_to_any_base.c">
-<area shape="rect" id="node1" title="Decimal to any&#45;base is a C function wich convert positive decimal integer to any positive ascii base ..." alt="" coords="189,5,331,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,67,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,93,157,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,93,246,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="271,93,345,119"/>
-<area shape="rect" id="node6" title=" " alt="" coords="369,93,439,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="463,93,527,119"/>
+<area shape="rect" id="node1" title="Decimal to any&#45;base is a C function wich convert positive decimal integer to any positive ascii base ..." alt="" coords="187,5,327,46"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,94,66,120"/>
+<area shape="rect" id="node3" title=" " alt="" coords="90,94,154,120"/>
+<area shape="rect" id="node4" title=" " alt="" coords="178,94,242,120"/>
+<area shape="rect" id="node5" title=" " alt="" coords="266,94,341,120"/>
+<area shape="rect" id="node6" title=" " alt="" coords="365,94,434,120"/>
+<area shape="rect" id="node7" title=" " alt="" coords="457,94,521,120"/>
 </map>

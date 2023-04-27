@@ -1,12 +1,12 @@
 <map id="client_server/tcp_half_duplex_server.c" name="client_server/tcp_half_duplex_server.c">
-<area shape="rect" id="node1" title="Server&#45;side implementation of TCP Half Duplex Communication" alt="" coords="339,5,486,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,71,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="95,93,181,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="205,93,271,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="295,93,357,119"/>
-<area shape="rect" id="node6" title=" " alt="" coords="381,93,445,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="469,93,535,119"/>
-<area shape="rect" id="node8" title=" " alt="" coords="559,93,656,119"/>
-<area shape="rect" id="node9" title=" " alt="" coords="681,93,771,119"/>
-<area shape="rect" id="node10" title=" " alt="" coords="796,93,864,119"/>
+<area shape="rect" id="node1" title="Server&#45;side implementation of TCP Half Duplex Communication" alt="" coords="334,5,480,46"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,94,70,120"/>
+<area shape="rect" id="node3" title=" " alt="" coords="94,94,179,120"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,94,267,120"/>
+<area shape="rect" id="node5" title=" " alt="" coords="291,94,352,120"/>
+<area shape="rect" id="node6" title=" " alt="" coords="375,94,439,120"/>
+<area shape="rect" id="node7" title=" " alt="" coords="463,94,527,120"/>
+<area shape="rect" id="node8" title=" " alt="" coords="551,94,647,120"/>
+<area shape="rect" id="node9" title=" " alt="" coords="672,94,761,120"/>
+<area shape="rect" id="node10" title=" " alt="" coords="785,94,853,120"/>
 </map>

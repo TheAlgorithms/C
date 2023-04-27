@@ -1,6 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,56,55"/>
-<area shape="rect" id="node2" href="$d0/d6f/fibonacci_8c.html#ae082919377416805160894716b2344d7" title="for assert() for errno &#45; to determine whether there is an error while using strtol()" alt="" coords="221,29,260,55"/>
-<area shape="rect" id="node3" href="$d0/d6f/fibonacci_8c.html#aeb1b48abe7f99ab8e1d71426f28ab025" title="Get the input from the user." alt="" coords="104,29,173,55"/>
-<area shape="rect" id="node4" href="$d0/d6f/fibonacci_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="self&#45;test implementation" alt="" coords="117,79,161,104"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="node2" href="$d0/d6f/fibonacci_8c.html#ae082919377416805160894716b2344d7" title="for assert() for errno &#45; to determine whether there is an error while using strtol()" alt="" coords="219,29,257,55"/>
+<area shape="rect" id="node3" href="$d0/d6f/fibonacci_8c.html#aeb1b48abe7f99ab8e1d71426f28ab025" title="Get the input from the user." alt="" coords="103,29,171,55"/>
+<area shape="rect" id="node4" href="$d0/d6f/fibonacci_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="self&#45;test implementation" alt="" coords="115,79,159,104"/>
 </map>

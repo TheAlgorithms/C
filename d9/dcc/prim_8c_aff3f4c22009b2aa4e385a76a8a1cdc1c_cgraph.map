@@ -1,8 +1,8 @@
 <map id="test" name="test">
 <area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,55,49,80"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="210,5,249,31"/>
-<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="97,55,144,80"/>
-<area shape="rect" id="node5" href="$de/dcf/rot13_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="99,104,143,129"/>
-<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="192,55,267,80"/>
-<area shape="rect" id="node6" href="$de/dcf/rot13_8c.html#aff3bdb59af9eabba91420f23eb01718c" title="for IO operations" alt="" coords="204,104,255,129"/>
+<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="209,5,247,31"/>
+<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="97,55,143,80"/>
+<area shape="rect" id="node5" href="$de/dcf/rot13_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="98,104,142,130"/>
+<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="191,55,265,80"/>
+<area shape="rect" id="node6" href="$de/dcf/rot13_8c.html#aff3bdb59af9eabba91420f23eb01718c" title="for IO operations" alt="" coords="203,104,253,130"/>
 </map>

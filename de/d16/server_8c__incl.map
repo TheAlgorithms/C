@@ -1,10 +1,10 @@
 <map id="client_server/server.c" name="client_server/server.c">
-<area shape="rect" id="node1" title="Server side implementation of Server&#45;Client system." alt="" coords="237,5,384,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,79,155,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="179,79,245,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="269,79,352,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="377,79,442,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="466,79,563,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="587,79,655,104"/>
+<area shape="rect" id="node1" title="Server side implementation of Server&#45;Client system." alt="" coords="234,5,379,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,66,105"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,79,153,105"/>
+<area shape="rect" id="node4" title=" " alt="" coords="177,79,241,105"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,79,347,105"/>
+<area shape="rect" id="node6" title=" " alt="" coords="371,79,436,105"/>
+<area shape="rect" id="node7" title=" " alt="" coords="459,79,556,105"/>
+<area shape="rect" id="node8" title=" " alt="" coords="579,79,647,105"/>
 </map>
