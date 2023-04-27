@@ -1,27 +1,20 @@
 // Given a string s, returns the number of segments in the string.
-int countSegments(char *s) {
-    int i, l = strlen(s), segments = 0;
-    if (l == 0) { // Return early for empty string
-        return 0;
-    }
+int countSegments(char * s){
+    int sLen = strlen(s);
+    int prevSpace = 1;
+    int result = 0;
+    char currChar;
 
-    for (i = 0; i < l; i++) {
-        if (s[i] != ' ') {
-            break; // Skip to first non-space character
+    for (int i = 0; i < sLen; i++){
+        currChar = s[i];
+
+        //A string of whitespaces will only be counted once as the condition below is only true when we transition from whitespace to non-whitespace.
+        //Since we start with assumed whitespace (prevSpace = 1), initial whitespaces are handled as well, if any
+        if (s[i] != ' ' && prevSpace) {
+            result++;
         }
+        prevSpace = (currChar == ' ');
     }
 
-    //Start from the first non-space character index, calculated above
-    for (; i < l;) {
-        while (i < l && s[i] != ' ') { // Iterate till current character is not a space
-           i++;
-        } 
-        //We hit a space, so increment count
-        segments++;
-        while (i < l && s[i] == ' ') { //Skip consecutive spaces
-            i++;
-        }
-    }
-
-    return segments;
+    return result;
 }
