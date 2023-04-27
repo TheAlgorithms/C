@@ -109,6 +109,9 @@ static void test() {
     assert(func(...) == ...); // this ensures that the algorithm works as expected
 
     // can have multiple checks
+
+    // this lets the user know that the tests passed
+    printf("All tests have successfully passed!\n");
 }
 
 /**
