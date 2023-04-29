@@ -3,6 +3,7 @@
   * [Alaw](https://github.com/TheAlgorithms/C/blob/HEAD/audio/alaw.c)
 
 ## Cipher
+  * [Affine](https://github.com/TheAlgorithms/C/blob/HEAD/cipher/affine.c)
   * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/cipher/rot13.c)
 
 ## Client Server
@@ -182,6 +183,7 @@
   * [Cartesian To Polar](https://github.com/TheAlgorithms/C/blob/HEAD/math/cartesian_to_polar.c)
   * [Catalan](https://github.com/TheAlgorithms/C/blob/HEAD/math/catalan.c)
   * [Collatz](https://github.com/TheAlgorithms/C/blob/HEAD/math/collatz.c)
+  * [Euclidean Algorithm Extended](https://github.com/TheAlgorithms/C/blob/HEAD/math/euclidean_algorithm_extended.c)
   * [Factorial](https://github.com/TheAlgorithms/C/blob/HEAD/math/factorial.c)
   * [Factorial Large Number](https://github.com/TheAlgorithms/C/blob/HEAD/math/factorial_large_number.c)
   * [Factorial Trailing Zeroes](https://github.com/TheAlgorithms/C/blob/HEAD/math/factorial_trailing_zeroes.c)
