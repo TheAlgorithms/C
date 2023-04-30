@@ -4,6 +4,21 @@ permissions:
   contents: write
 
 jobs:
+  label_on_fail:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["question"]
+            })
   MainSequence:
     name: Code Formatter
     runs-on: ubuntu-latest
