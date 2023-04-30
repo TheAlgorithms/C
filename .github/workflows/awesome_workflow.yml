@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-    if: ${{ github.event_name == 'pull_request' }} && ${{ github.event.workflow_run.conclusion == 'failure' }}
+    if: |
+      ${{ github.event_name == 'pull_request' }} &&
+      ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
       - uses: actions/github-script@v6
         with:
