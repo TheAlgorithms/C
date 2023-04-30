@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main Function." alt="" coords="5,92,55,118"/>
+<area shape="rect" id="node2" href="$dc/dc5/hangman_8c.html#a6f5bb35e025e731286ce890c90286d2e" title="checks if letter is in current word" alt="" coords="113,5,180,31"/>
+<area shape="rect" id="node3" href="$dc/dc5/hangman_8c.html#ad4130a1d1092d32dcfa4a46019e27d45" title="creates a new game &#45; generates a random word and stores in global variable current_word" alt="" coords="104,55,189,80"/>
+<area shape="rect" id="node4" href="$dc/dc5/hangman_8c.html#a9611b43141ac2e6ba245487c493599fc" title="checks if letter has been guessed before" alt="" coords="103,128,190,154"/>
+<area shape="rect" id="node5" href="$dc/dc5/hangman_8c.html#a669e745d87eb1740ab9b1f3b73bb7336" title="checks if player has won or lost" alt="" coords="124,177,169,203"/>
+</map>

@@ -19,6 +19,7 @@ var annotated_dup =
     [ "elem", "d0/d6b/structelem.html", null ],
     [ "euclidean_result", "d8/d1e/structeuclidean__result.html", "d8/d1e/structeuclidean__result" ],
     [ "euler_", "d2/de8/structeuler__.html", "d2/de8/structeuler__" ],
+    [ "game_instance", "d1/d01/structgame__instance.html", "d1/d01/structgame__instance" ],
     [ "Graph", "d4/dd4/struct_graph.html", null ],
     [ "GraphRep", "d2/d6a/struct_graph_rep.html", null ],
     [ "hash_set_t", "d0/df1/structhash__set__t.html", null ],

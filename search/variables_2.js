@@ -9,5 +9,6 @@ var searchData=
   ['cscount_6',['CSCount',['../d3/dd7/struct_n_f_a.html#a38e4fdb290def5942dc14eff7c6211ba',1,'NFA']]],
   ['ct_7',['CT',['../d5/da1/structnode.html#aece40a25d30d3e0d2135007642b64882',1,'node']]],
   ['current_8',['current',['../d4/d06/struct_vector.html#a8cb577f14bea1a6c1fbf85717b3ee4f9',1,'Vector']]],
-  ['currentstates_9',['currentStates',['../d3/dd7/struct_n_f_a.html#ad400f1830095be00a7fdff804d6405c0',1,'NFA']]]
+  ['current_5fword_9',['current_word',['../d1/d01/structgame__instance.html#ad3caed9fb908aa7dba2aa25e8debdfdf',1,'game_instance']]],
+  ['currentstates_10',['currentStates',['../d3/dd7/struct_n_f_a.html#ad400f1830095be00a7fdff804d6405c0',1,'NFA']]]
 ];

@@ -1,0 +1,3 @@
+<map id="new_guess" name="new_guess">
+<area shape="rect" id="node1" title="checks if letter has been guessed before" alt="" coords="5,29,93,55"/>
+</map>
