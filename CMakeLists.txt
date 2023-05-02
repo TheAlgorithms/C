@@ -63,6 +63,8 @@ add_subdirectory(project_euler)
 add_subdirectory(machine_learning)
 add_subdirectory(process_scheduling_algorithms)
 add_subdirectory(numerical_methods)
+add_subdirectory(math)
+add_subdirectory(cipher)
 
 ## Configure Doxygen documentation system
 cmake_policy(SET CMP0054 NEW)
