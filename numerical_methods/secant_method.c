@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Find a continuous function's root by using a succession 
+ * @brief [Wikipedia link](https://en.wikipedia.org/wiki/Secant_method). Find a continuous function's root by using a succession 
  * of roots of secant lines to approximate it, starting from the 
  * given points' secant line.
  * @author [Samuel Pires](https://github.com/disnoca)
@@ -45,7 +45,7 @@ double secant_method(double x0, double x1, double tolerance)
 		x1 = x2;
 
 		// return value if it meets tolerance
-		if(fabs(x1-x0) < TOLERANCE)
+		if(fabs(x1-x0) < tolerance)
 			return x2;
 	}
 
@@ -70,7 +70,7 @@ static void test() {
  * @brief Main function
  * @returns 0 on exit
  */
-int main(int argc, char **argv) 
+int main() 
 {
 	test();		// run self-test implementations
 	return 0;
