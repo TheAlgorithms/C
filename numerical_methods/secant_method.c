@@ -59,11 +59,14 @@ double secant_method(double x0, double x1, double tolerance)
  */
 static void test()
 {
-    // calculates two different roots for f(x) = x^2 - 3, which are sqrt(3) and
-    // -sqrt(3) respectively
+    // compares root values found by the secant method within the tolerance
     assert(secant_method(0.2, 0.5, TOLERANCE) - sqrt(3) < TOLERANCE);
     // the algorithm works as expected
     assert(fabs(secant_method(-2, -5, TOLERANCE)) - sqrt(3) < TOLERANCE);
+    // the algorithm works as expected
+    assert(secant_method(-3, 2, TOLERANCE) - sqrt(3) < TOLERANCE);
+    // the algorithm works as expected
+    assert(fabs(secant_method(1, -1.5, TOLERANCE)) - sqrt(3) < TOLERANCE);
     // the algorithm works as expected
 
     printf("All tests have successfully passed!\n");
