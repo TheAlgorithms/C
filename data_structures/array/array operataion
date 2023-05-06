@@ -1,0 +1,260 @@
+// array operataion
+#include<stdio.h>
+#include<stdlib.h>
+struct array
+{
+    int *a;
+    int size;
+    int length;
+};
+void dislpay(struct array arr)
+{
+    int i;
+    for ( i = 0; i < arr.length; i++)
+    {
+        printf("\n%d",arr.a[i]);
+    }
+}
+void add(struct array *arr,int val)
+{
+   if (arr->length<arr->size)
+   {
+     arr->a[arr->length]=val;
+     arr->length++;
+   }
+   else
+   {
+    printf("array is full");
+   }
+}
+void insert(struct array *arr,int index,int val)
+{
+    int i;
+    if (arr->length<arr->size)
+   {
+     if (index>=0 && index<=arr->length)
+     {
+        for ( i = arr->length; i > index; i--)
+        {
+            arr->a[i]=arr->a[i-1];
+        }
+        arr->a[index]=val;
+        arr->length++;
+     }
+     else
+     {
+        printf("invalid index");
+     }  
+   }
+   else
+   {
+    printf("array is full");
+   } 
+}
+int delete(struct array *arr,int index)
+{
+    int i,val;
+    if (index>=0 && index<=arr->length)
+     {
+       val= arr->a[index];
+        for ( i = index; i <arr->length-1; i++)
+        {
+            arr->a[i]=arr->a[i+1];
+        }
+        arr->length--;
+        return val;
+     }
+     else
+     {
+        printf("invalid index");
+        return 0;
+     }
+}
+void sort(struct array arr)
+{
+    int i,j,temp;
+    for ( i = 0; i < arr.length; i++)
+    {
+        for ( j = i+1; j < arr.length; j++)
+        {
+            if (arr.a[i]>arr.a[j])
+            {
+                temp=arr.a[i];
+                arr.a[i]=arr.a[j];
+                arr.a[j]=temp;
+            } 
+        }
+    }
+}
+void linear_search(struct array arr,int key)
+{
+    int i;
+    for ( i = 0; i < arr.length; i++)
+    {
+        if (key==arr.a[i])
+        {
+            printf("%d is found at %d index",key,i);
+        }
+        else
+        {
+            printf("%d is not found ",key);
+        }
+    }
+}
+void binary_search(struct array arr,int low,int high,int key)
+{
+    int mid;
+    sort(arr);
+    mid=(low+high)/2;
+    if (low<high)
+    {
+        if (arr.a[mid]==key)
+        {
+        printf("%d is found at %d index",key,mid);
+        }
+        else if (key>arr.a[mid])
+        {
+            binary_search(arr,mid,high,key);
+        }
+        else if (key<arr.a[mid])
+        {
+            binary_search(arr,low,mid,key);
+        }
+    }
+    else
+    {
+        printf("%d is not found",key);
+    }
+}
+void reverse(struct array arr)
+{
+    int i,temp;
+    for ( i = 0; i < arr.length/2; i++)
+    {
+        arr.a[arr.length-i-1]=arr.a[i];
+    }
+}
+int max(struct array arr)
+{
+    int i,m;
+    m=arr.a[0];
+    for ( i = 1; i < arr.length; i++)
+    {
+        if (arr.a[i]>m)
+        {
+            m=arr.a[i];
+        }
+    }
+    return m;
+}
+int mim(struct array arr)
+{
+    int i,m;
+    m=arr.a[0];
+    for ( i = 1; i < arr.length; i++)
+    {
+        if (arr.a[i]<m)
+        {
+            m=arr.a[i];
+        }
+    }
+    return m;
+}
+int sum(struct array arr)
+{
+    int total=0,i;
+    for ( i = 0; i < arr.length; i++)
+    {
+        total=total+arr.a[i];
+    }
+    return total;
+}
+float avg (struct array arr)
+{
+    int total=0,i;
+    for ( i = 0; i < arr.length; i++)
+    {
+        total=total+arr.a[i];
+    }
+    return total/arr.length;
+}
+int main()
+{
+    int i,n,c,low,high,key,index;
+    struct array arr;
+    printf("enter the size of array:");
+    scanf("%d",&arr.size);
+    arr.a=(int*)malloc(arr.size*sizeof(int));
+    arr.length=0;
+    printf("enter number of element:");
+    scanf("%d",&n);
+    printf("enter the array element:");
+    for ( i = 0; i < n; i++)
+    {
+        scanf("%d",&arr.a[i]);
+    }
+    arr.length=n;
+    do
+    {
+        printf("\n 1 add\n 2 insert \n 3 delete \n 4 sort \n 5 display \n 6 linear search \n 7 binary search \n 8 reverse \n 9 sum \n 10 avg \n 11 max \n 12 min \n 13 exit");   
+        printf("\n enter your choice");
+        scanf("%d",&c);
+        switch (c)
+        {
+        case 1:
+             printf("\n enter value");
+             scanf("%d",&key);
+             add(&arr,key);
+            break;
+        case 2:
+             printf("\n enter value and index");
+             scanf("%d %d",&key,&index);
+             insert(&arr,index,key);
+             break;
+        case 3:
+             printf("\n enter  index");
+             scanf("%d",&index);
+             delete(&arr,index);
+             break;
+        case 4:
+             sort(arr);
+             break;
+        case 5:
+             dislpay(arr);
+             break;
+        case 6:
+             printf("\n enter value");
+             scanf("%d",&key);
+             linear_search(arr,key);
+             break;
+        case 7:
+             printf("\n enter value");
+             scanf("%d",&key);
+             low=0;
+             high=arr.length-1;
+             binary_search(arr,low,high,key);
+             break;
+        case 8:
+             reverse(arr);
+             break;
+        case 9:
+             printf("\n sum is %d",sum(arr));
+             break; 
+        case 10:
+             printf("\n averge is %f",avg(arr));
+             break;
+        case 11:
+             printf("\n largest value is %d",max(arr));
+             break;
+        case 12:
+             printf("\n smallest is %d",sum(arr));
+             break;       
+        case 13:
+             printf("\n exit");
+             break;      
+        default:
+             printf(" incorrect choice");
+            break;
+        }
+    } while (c!=13);
+}
