@@ -5,9 +5,9 @@ int start=0;
         long long int ans=0;
         while(start <= end){
                long long int mid=(start+end)/2;
+                long long int val=mid*mid;
                if(mid*mid == x){
-                         ans=mid;
-                         break;
+                         return mid;
                 }
 //if mid is less than the square root of the number(x) store the value of mid in ans.
                if( mid*mid < x){
