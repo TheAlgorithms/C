@@ -18,6 +18,7 @@ int main()
  * number****************/
 void decimal2Hexadecimal(long num)
 {
+	char hex_letters[]="abcdef";
     long decimalnum = num;
     long quotient, remainder;
     int i, j = 0;
@@ -29,17 +30,17 @@ void decimal2Hexadecimal(long num)
     {
         remainder = quotient % 16;
         if (remainder < 10)
-            hexadecimalnum[j++] = 48 + remainder;
+            hexadecimalnum[j++] = '0' + remainder;
 
         else
-            hexadecimalnum[j++] = 55 + remainder;
+            hexadecimalnum[j++] =  hex_letters[remainder-10];// 'A'
 
         quotient = quotient / 16;
     }
 
     // print the hexadecimal number
-
-    for (i = j; i >= 0; i--)
+	printf("0x");
+    for (i = j-1; i >= 0; i--)
     {
         printf("%c", hexadecimalnum[i]);
     }
