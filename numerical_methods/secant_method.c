@@ -27,7 +27,8 @@ double func(double x)
  * @brief Root-finding method for a continuous function given two points
  * @param x0 One of the starting secant points
  * @param x1 One of the starting secant points
- * @param tolerance Tolerance
+ * @param tolerance Determines how accurate the returned value is. The returned
+ * value will be within `tolerance` of the actual root
  * @returns `root of the function` if secant method succeed within the
  * maximum number of iterations
  * @returns `-1` if secant method fails
