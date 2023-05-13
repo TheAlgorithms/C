@@ -148,6 +148,7 @@
     * [Word Count](https://github.com/TheAlgorithms/C/blob/HEAD/exercism/word_count/word_count.h)
 
 ## Games
+  * [Hangman](https://github.com/TheAlgorithms/C/blob/HEAD/games/hangman.c)
   * [Naval Battle](https://github.com/TheAlgorithms/C/blob/HEAD/games/naval_battle.c)
   * [Tic Tac Toe](https://github.com/TheAlgorithms/C/blob/HEAD/games/tic_tac_toe.c)
 
