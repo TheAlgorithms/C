@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief [Wikipedia link](https://en.wikipedia.org/wiki/Secant_method). Find a
+ * @brief [Secant Method](https://en.wikipedia.org/wiki/Secant_method) implementation. Find a
  * continuous function's root by using a succession of roots of secant lines to
  * approximate it, starting from the given points' secant line.
  * @author [Samuel Pires](https://github.com/disnoca)
