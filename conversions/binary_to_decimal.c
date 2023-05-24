@@ -1,24 +1,31 @@
-/**
- * Modified 07/12/2017, Kyler Smith
- *
- */
-
 #include <stdio.h>
 
 int main()
 {
-    int remainder, number = 0, decimal_number = 0, temp = 1;
-    printf("\n Enter any binary number= ");
-    scanf("%d", &number);
+    int binary_number, decimal_number = 0, temp = 1;
 
-    // Iterate over the number until the end.
-    while (number > 0)
+    // Input the binary number
+    printf("Enter any binary number: ");
+    scanf("%d", &binary_number);
+
+    // Convert binary to decimal
+    while (binary_number > 0)
     {
-        remainder = number % 10;
-        number = number / 10;
-        decimal_number += remainder * temp;
-        temp = temp * 2;  // used as power of 2
+        // Extract the rightmost digit of the binary number
+        int digit = binary_number % 10;
+
+        // Multiply the rightmost digit with the corresponding power of 2 and add to the decimal number
+        decimal_number += digit * temp;
+
+        // Remove the rightmost digit from the binary number
+        binary_number /= 10;
+
+        // Increase the power of 2 for the next digit
+        temp *= 2;
     }
 
-    printf("%d\n", decimal_number);
+    // Output the decimal equivalent
+    printf("Decimal equivalent: %d\n", decimal_number);
+
+    return 0;
 }
