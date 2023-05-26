@@ -1,3 +1,9 @@
+/**
+* Modified 24/05/2023, Indrranil Pawar 
+*
+* C program that converts a binary number to its decimal equivalent.
+*/
+
 #include <stdio.h>
 
 int main()
