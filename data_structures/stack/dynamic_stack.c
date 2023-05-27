@@ -18,15 +18,15 @@
  */
 typedef struct DArrayStack
 {
-    int capacity, top; /// to store capacity and top of the stack
+    int capacity, top; ///< to store capacity and top of the stack
     int *arrPtr;       ///< array pointer
 } DArrayStack;
 
 /**
  * @brief Create a Stack object
  *
- * @param cap: Capacity of stack
- * @return DArrayStack*: Newly created stack object pointer
+ * @param cap Capacity of stack
+ * @return DArrayStack* Newly created stack object pointer
  */
 DArrayStack *create_stack(int cap)
 {
@@ -42,8 +42,8 @@ DArrayStack *create_stack(int cap)
 /**
  * @brief As this is stack implementation using dynamic array this function will expand the size of the stack by twice as soon as the stack is full.
  *
- * @param ptr: Stack pointer
- * @param cap: Capacity of stack
+ * @param ptr Stack pointer
+ * @param cap Capacity of stack
  * @return DArrayStack*: Modified stack
  */
 DArrayStack *double_array(DArrayStack *ptr, int cap)
@@ -64,8 +64,8 @@ DArrayStack *double_array(DArrayStack *ptr, int cap)
 /**
  * @brief As this is stack implementation using dynamic array this function will shrink the size of stack by twice as soon as the stack's capacity and size has significant difference.
  *
- * @param ptr: Stack pointer
- * @param cap: Capacity of stack
+ * @param ptr Stack pointer
+ * @param cap Capacity of stack
  * @return DArrayStack*: Modified stack
  */
 DArrayStack *shrink_array(DArrayStack *ptr, int cap)
@@ -86,9 +86,9 @@ DArrayStack *shrink_array(DArrayStack *ptr, int cap)
 /**
  * @brief The push function pushes the element onto the stack.
  *
- * @param ptr: Stack pointer
- * @param data: Value to be pushed onto stack
- * @return int: Position of top pointer
+ * @param ptr Stack pointer
+ * @param data Value to be pushed onto stack
+ * @return int Position of top pointer
  */
 int push(DArrayStack *ptr, int data)
 {
@@ -110,8 +110,8 @@ int push(DArrayStack *ptr, int data)
 /**
  * @brief The pop function to pop an element from the stack.
  *
- * @param ptr: Stack pointer
- * @return int: Popped value
+ * @param ptr Stack pointer
+ * @return int Popped value
  */
 int pop(DArrayStack *ptr)
 {
@@ -137,8 +137,8 @@ int pop(DArrayStack *ptr)
 /**
  * @brief To retrieve or fetch the first element of the Stack or the element present at the top of the Stack.
  *
- * @param ptr: Stack pointer
- * @return int: Top of the stack
+ * @param ptr Stack pointer
+ * @return int Top of the stack
  */
 int peek(DArrayStack *ptr)
 {
@@ -153,8 +153,8 @@ int peek(DArrayStack *ptr)
 /**
  * @brief To display the current capacity of the stack.
  *
- * @param ptr: Stack pointer
- * @return int: Current capacity of the stack
+ * @param ptr Stack pointer
+ * @return int Current capacity of the stack
  */
 int show_capacity(DArrayStack *ptr)
 {
@@ -164,8 +164,8 @@ int show_capacity(DArrayStack *ptr)
 /**
  * @brief The function is used to check whether the stack is empty or not and return true or false accordingly.
  *
- * @param ptr: Stack pointer
- * @return int: returns 1 -> true OR returns 0 -> false
+ * @param ptr Stack pointer
+ * @return int returns 1 -> true OR returns 0 -> false
  */
 int isempty(DArrayStack *ptr)
 {
@@ -179,8 +179,8 @@ int isempty(DArrayStack *ptr)
 /**
  * @brief Used to get the size of the Stack or the number of elements present in the Stack.
  *
- * @param ptr: Stack pointer
- * @return int: size of stack
+ * @param ptr Stack pointer
+ * @return int size of stack
  */
 int stack_size(DArrayStack *ptr)
 {
