@@ -1,7 +1,7 @@
 /**
  * @file
  *
- * @details
+ * @brief
  * Dynamic [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)), just like Dynamic Array, is a stack data structure whose the length or capacity (maximum number of elements that can be stored) increases or decreases in real time based on the operations (like insertion or deletion) performed on it.
  *
  * In this implementation, functions such as PUSH, POP, PEEK, show_capacity, isempty, and stack_size are coded to implement dynamic stack.
