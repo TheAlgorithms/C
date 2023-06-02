@@ -138,7 +138,7 @@ var NAVTREEINDEX =
 "d4/d06/struct_vector.html#afd870750f3874ee097833fc8a1dc809e",
 "d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b",
 "db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554",
-"de/dac/sudoku__solver_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4"
+"de/d7b/group__vec__3d.html#ga97da356cb7d5da73a0ac9bad09a435cc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

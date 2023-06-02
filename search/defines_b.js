@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z95_5fconversion_5fconstant_0',['Z95_CONVERSION_CONSTANT',['../d8/daf/affine_8c.html#ab71b58691a05cc7afefcc3bc168f0119',1,'affine.c']]]
+  ['tolerance_0',['TOLERANCE',['../db/d72/secant__method_8c.html#a30c17564229ec2e37dfea9c6c9ad643e',1,'secant_method.c']]]
 ];
