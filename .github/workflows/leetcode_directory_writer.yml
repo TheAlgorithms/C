@@ -21,7 +21,6 @@ jobs:
       - name: Write LeetCode DIRECTORY.md
         run: |
           python3 scripts/leetcode_directory_md.py 2>&1 | tee leetcode/DIRECTORY.md
-          git pull || true
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         id: commit-push
@@ -34,6 +33,5 @@ jobs:
         if: steps.commit-push.outputs.changes_detected == 'true'
         run: |
           gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).'
-          gh pr merge --admin --merge --subject 'docs: updating `leetcode/DIRECTORY.md' --delete-branch
         env:
           GH_TOKEN: ${{ github.token }}
