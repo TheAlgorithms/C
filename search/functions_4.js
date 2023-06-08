@@ -19,5 +19,6 @@ var searchData=
   ['display_5fpolynomial_16',['display_polynomial',['../d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d',1,'poly_add.c']]],
   ['djb2_17',['djb2',['../d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b',1,'hash_djb2.c']]],
   ['dot_5fprod_18',['dot_prod',['../de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84',1,'vectors_3d.c']]],
-  ['duplicatenumber_19',['duplicateNumber',['../d2/d9b/floyd__cycle__detection__algorithm_8c.html#ac7af29ae53c6659f2881fb080b080f9d',1,'floyd_cycle_detection_algorithm.c']]]
+  ['double_5farray_19',['double_array',['../d5/d24/dynamic__stack_8c.html#ac01c5d1d1000ed68b5ff093c5ff36854',1,'dynamic_stack.c']]],
+  ['duplicatenumber_20',['duplicateNumber',['../d2/d9b/floyd__cycle__detection__algorithm_8c.html#ac7af29ae53c6659f2881fb080b080f9d',1,'floyd_cycle_detection_algorithm.c']]]
 ];

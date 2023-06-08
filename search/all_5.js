@@ -50,13 +50,14 @@ var searchData=
   ['create_5fmatrix_47',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
   ['create_5fnode_48',['create_node',['../df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d',1,'create_node(int data):&#160;threaded_binary_trees.c'],['../dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b',1,'create_node(uint64_t data):&#160;circular_doubly_linked_list.c']]],
   ['create_5fpolynomial_49',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]],
-  ['createnfa_50',['createNFA',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a2491d4e9e630ebb9880260379779cf63',1,'mcnaughton_yamada_thompson.c']]],
-  ['createnode_51',['createNode',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6',1,'mcnaughton_yamada_thompson.c']]],
-  ['createrule_52',['createRule',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc',1,'mcnaughton_yamada_thompson.c']]],
-  ['createstate_53',['createState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a',1,'mcnaughton_yamada_thompson.c']]],
-  ['cscount_54',['CSCount',['../d3/dd7/struct_n_f_a.html#a38e4fdb290def5942dc14eff7c6211ba',1,'NFA']]],
-  ['ct_55',['CT',['../d5/da1/structnode.html#aece40a25d30d3e0d2135007642b64882',1,'node']]],
-  ['current_56',['current',['../d4/d06/struct_vector.html#a8cb577f14bea1a6c1fbf85717b3ee4f9',1,'Vector']]],
-  ['current_5fword_57',['current_word',['../d1/d01/structgame__instance.html#ad3caed9fb908aa7dba2aa25e8debdfdf',1,'game_instance']]],
-  ['currentstates_58',['currentStates',['../d3/dd7/struct_n_f_a.html#ad400f1830095be00a7fdff804d6405c0',1,'NFA']]]
+  ['create_5fstack_50',['create_stack',['../d5/d24/dynamic__stack_8c.html#ab628a00140af56945b3f514cef0b3da0',1,'dynamic_stack.c']]],
+  ['createnfa_51',['createNFA',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a2491d4e9e630ebb9880260379779cf63',1,'mcnaughton_yamada_thompson.c']]],
+  ['createnode_52',['createNode',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6',1,'mcnaughton_yamada_thompson.c']]],
+  ['createrule_53',['createRule',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc',1,'mcnaughton_yamada_thompson.c']]],
+  ['createstate_54',['createState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a',1,'mcnaughton_yamada_thompson.c']]],
+  ['cscount_55',['CSCount',['../d3/dd7/struct_n_f_a.html#a38e4fdb290def5942dc14eff7c6211ba',1,'NFA']]],
+  ['ct_56',['CT',['../d5/da1/structnode.html#aece40a25d30d3e0d2135007642b64882',1,'node']]],
+  ['current_57',['current',['../d4/d06/struct_vector.html#a8cb577f14bea1a6c1fbf85717b3ee4f9',1,'Vector']]],
+  ['current_5fword_58',['current_word',['../d1/d01/structgame__instance.html#ad3caed9fb908aa7dba2aa25e8debdfdf',1,'game_instance']]],
+  ['currentstates_59',['currentStates',['../d3/dd7/struct_n_f_a.html#ad400f1830095be00a7fdff804d6405c0',1,'NFA']]]
 ];

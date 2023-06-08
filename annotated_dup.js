@@ -11,6 +11,7 @@ var annotated_dup =
     [ "buffer", "dd/da2/structbuffer.html", null ],
     [ "CArray", "d4/d2d/struct_c_array.html", null ],
     [ "cluster", "d1/d99/structcluster.html", "d1/d99/structcluster" ],
+    [ "DArrayStack", "d4/d67/struct_d_array_stack.html", "d4/d67/struct_d_array_stack" ],
     [ "data", "df/dea/structdata.html", null ],
     [ "Dict", "d4/dfe/struct_dict.html", null ],
     [ "dual_quat_", "d7/dfd/structdual__quat__.html", "d7/dfd/structdual__quat__" ],

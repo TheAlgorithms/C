@@ -29,8 +29,9 @@ var searchData=
   ['create_5fmatrix_26',['create_matrix',['../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0',1,'qr_eigen_values.c']]],
   ['create_5fnode_27',['create_node',['../df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d',1,'create_node(int data):&#160;threaded_binary_trees.c'],['../dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b',1,'create_node(uint64_t data):&#160;circular_doubly_linked_list.c']]],
   ['create_5fpolynomial_28',['create_polynomial',['../d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d',1,'poly_add.c']]],
-  ['createnfa_29',['createNFA',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a2491d4e9e630ebb9880260379779cf63',1,'mcnaughton_yamada_thompson.c']]],
-  ['createnode_30',['createNode',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6',1,'mcnaughton_yamada_thompson.c']]],
-  ['createrule_31',['createRule',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc',1,'mcnaughton_yamada_thompson.c']]],
-  ['createstate_32',['createState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a',1,'mcnaughton_yamada_thompson.c']]]
+  ['create_5fstack_29',['create_stack',['../d5/d24/dynamic__stack_8c.html#ab628a00140af56945b3f514cef0b3da0',1,'dynamic_stack.c']]],
+  ['createnfa_30',['createNFA',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a2491d4e9e630ebb9880260379779cf63',1,'mcnaughton_yamada_thompson.c']]],
+  ['createnode_31',['createNode',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6',1,'mcnaughton_yamada_thompson.c']]],
+  ['createrule_32',['createRule',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc',1,'mcnaughton_yamada_thompson.c']]],
+  ['createstate_33',['createState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a',1,'mcnaughton_yamada_thompson.c']]]
 ];

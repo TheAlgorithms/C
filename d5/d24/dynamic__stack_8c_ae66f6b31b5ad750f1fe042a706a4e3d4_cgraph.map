@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,141,55,167"/>
+<area shape="rect" id="node2" href="$d5/d24/dynamic__stack_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,141,146,167"/>
+<area shape="rect" id="node3" href="$d5/d24/dynamic__stack_8c.html#ab628a00140af56945b3f514cef0b3da0" title="Create a Stack object." alt="" coords="200,5,296,31"/>
+<area shape="rect" id="node4" href="$d5/d24/dynamic__stack_8c.html#a0eebbddad64a35d337093293466e26a1" title="The function is used to check whether the stack is empty or not and return true or false accordingly." alt="" coords="215,55,282,80"/>
+<area shape="rect" id="node5" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." alt="" coords="227,104,269,130"/>
+<area shape="rect" id="node6" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="224,177,273,203"/>
+<area shape="rect" id="node7" href="$d5/d24/dynamic__stack_8c.html#a9fe3f4e1147dd49a0ad4ca8f0228827d" title="To display the current capacity of the stack." alt="" coords="194,227,302,252"/>
+<area shape="rect" id="node8" href="$d5/d24/dynamic__stack_8c.html#ad46c93f9aac8431f73dc5e3a4413097e" title="Used to get the size of the Stack or the number of elements present in the Stack." alt="" coords="206,276,290,302"/>
+</map>
