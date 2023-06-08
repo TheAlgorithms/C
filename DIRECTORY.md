@@ -238,6 +238,7 @@
   * [Qr Decomposition](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/qr_eigen_values.c)
   * [Realtime Stats](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/realtime_stats.c)
+  * [Secant Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/secant_method.c)
   * [Simpsons 1 3Rd Rule](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/simpsons_1_3rd_rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/variance.c)
 
