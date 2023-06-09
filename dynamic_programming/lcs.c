@@ -31,8 +31,8 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 
 	/* loop over the simbols in my sequences
 	   save the directions according to the LCS */
-	for (i = 1; i <= l1; ++i)
-		for (j = 1; j <= l2; ++j)
+	for (i = 1; i <= l1; ++i) {
+		for (j = 1; j <= l2; ++j) {
 			if (s1[i-1] == s2[j-1]) {
 				L[i][j] = 1 + L[i-1][j-1];
 				B[i][j] = DIAG;
@@ -44,7 +44,9 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 			else {
 				L[i][j] = L[i-1][j];
 				B[i][j] = UP;
-			}
+            }
+		}
+	}
 }
 
 /**
@@ -76,10 +78,12 @@ char *lcsbuild(const char *s1, int l1, int l2, int **L, int **B) {
 			i = i - 1;
 			j = j - 1;
 		}
-		else if (B[i][j] == LEFT)
-			j = j - 1;
-		else
-			i = i - 1;
+		else if (B[i][j] == LEFT) {
+            j = j - 1;
+		}
+		else {
+            i = i - 1;
+        }
 	}
 	return lcs;
 }
@@ -133,8 +137,9 @@ static void test() {
 	printf("LCS: %s\n", lcs);
 
 	free(lcs);	
-	for (j = 0; j <= l1; j++)
-		free(L[j]), free(B[j]);
+	for (j = 0; j <= l1; j++) {
+        free(L[j]), free(B[j]);
+	}
 	free(L);
 	free(B);
 
