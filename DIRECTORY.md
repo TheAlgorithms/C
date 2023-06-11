@@ -107,6 +107,7 @@
     * [Queue](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/queue/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack.c)
   * Stack
+    * [Dynamic Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/dynamic_stack.c)
     * [Main](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/main.c)
     * [Parenthesis](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/parenthesis.c)
     * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack.c)
