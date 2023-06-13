@@ -3,8 +3,10 @@ name: "Code Scanning - Action"
 on:
   push:
     branches: [master]
+    branches: [dynamic_programming_knapsack]
   pull_request:
     branches: [master]
+    branches: [dynamic_programming_knapsack]
   schedule:
     #        ┌───────────── minute (0 - 59)
     #        │  ┌───────────── hour (0 - 23)
