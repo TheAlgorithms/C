@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0" target="_top" xlink:title="@breif Builds the LCS according to B using a traceback approach">
+<g id="a_node2"><a xlink:href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0" target="_top" xlink:title="Builds the LCS according to B using a traceback approach.">
 <polygon fill="white" stroke="#666666" points="117.5,-56.25 68.5,-56.25 68.5,-37 117.5,-37 117.5,-56.25"/>
 <text text-anchor="middle" x="93" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">lcsbuild</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6" target="_top" xlink:title="@breif Computes LCS between s1 and s2 using a dynamic&#45;programming approach">
+<g id="a_node3"><a xlink:href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6" target="_top" xlink:title="Computes LCS between s1 and s2 using a dynamic&#45;programming approach.">
 <polygon fill="white" stroke="#666666" points="113.75,-19.25 72.25,-19.25 72.25,0 113.75,0 113.75,-19.25"/>
 <text text-anchor="middle" x="93" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">lcslen</text>
 </a>

@@ -128,10 +128,10 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac107a0b0233dacb9e8cd3a983d6740b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6">lcslen</a> (const char *s1, const char *s2, int l1, int l2, int **<a class="el" href="../../df/db3/struct_l.html">L</a>, int **B)</td></tr>
-<tr class="memdesc:ac107a0b0233dacb9e8cd3a983d6740b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">@breif Computes LCS between s1 and s2 using a dynamic-programming approach  <br /></td></tr>
+<tr class="memdesc:ac107a0b0233dacb9e8cd3a983d6740b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes LCS between s1 and s2 using a dynamic-programming approach.  <br /></td></tr>
 <tr class="separator:ac107a0b0233dacb9e8cd3a983d6740b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741c9173a9fef243518f5c2352b81fc0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0">lcsbuild</a> (const char *s1, int l1, int l2, int **<a class="el" href="../../df/db3/struct_l.html">L</a>, int **B)</td></tr>
-<tr class="memdesc:a741c9173a9fef243518f5c2352b81fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">@breif Builds the LCS according to B using a traceback approach  <br /></td></tr>
+<tr class="memdesc:a741c9173a9fef243518f5c2352b81fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the LCS according to B using a traceback approach.  <br /></td></tr>
 <tr class="separator:a741c9173a9fef243518f5c2352b81fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8dca7b867074164d5f45b0f3851269d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a> ()</td></tr>
 <tr class="memdesc:aa8dca7b867074164d5f45b0f3851269d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self-test implementations.  <br /></td></tr>
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{LEFT, UP, DIAG};</div>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{LEFT, UP, DIAG};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,45 +204,49 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>@breif Builds the LCS according to B using a traceback approach </p>
+<p>Builds the LCS according to B using a traceback approach. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">1</td><td>s1 first null-terminated string </td></tr>
-    <tr><td class="paramname">2</td><td>l1 length of s1 </td></tr>
-    <tr><td class="paramname">3</td><td>l2 length of s2 </td></tr>
-    <tr><td class="paramname">4</td><td><a class="el" href="../../df/db3/struct_l.html">L</a> matrix of size l1 x l2 </td></tr>
-    <tr><td class="paramname">5</td><td>B matrix of size l1 x l2 </td></tr>
+    <tr><td class="paramname">s1</td><td>first null-terminated string </td></tr>
+    <tr><td class="paramname">l1</td><td>length of s1 </td></tr>
+    <tr><td class="paramname">l2</td><td>length of s2 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../df/db3/struct_l.html">L</a></td><td>matrix of size l1 x l2 </td></tr>
+    <tr><td class="paramname">B</td><td>matrix of size l1 x l2 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lcs longest common subsequence </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                 {</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordtype">int</span>  i, j, lcsl;</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">char</span>    *lcs;</div>
-<div class="line"><span class="lineno">   62</span>    lcsl = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2];</div>
-<div class="line"><span class="lineno">   63</span>    </div>
-<div class="line"><span class="lineno">   64</span>    <span class="comment">/* my lcs is at least the empty symbol */</span></div>
-<div class="line"><span class="lineno">   65</span>    lcs = (<span class="keywordtype">char</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(lcsl+1, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)); <span class="comment">/* null-terminated \0 */</span></div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (!lcs) {</div>
-<div class="line"><span class="lineno">   67</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    i = l1, j = l2;</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">while</span> (i &gt; 0 &amp;&amp; j &gt; 0) {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="comment">/* walk the matrix backwards */</span></div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (B[i][j] == DIAG) {</div>
-<div class="line"><span class="lineno">   75</span>            lcs[--lcsl] = s1[i-1];</div>
-<div class="line"><span class="lineno">   76</span>            i = i - 1;</div>
-<div class="line"><span class="lineno">   77</span>            j = j - 1;</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (B[i][j] == LEFT)</div>
-<div class="line"><span class="lineno">   80</span>            j = j - 1;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   82</span>            i = i - 1;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> lcs;</div>
-<div class="line"><span class="lineno">   85</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                 {</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordtype">int</span>  i, j, lcsl;</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordtype">char</span>    *lcs;</div>
+<div class="line"><span class="lineno">   67</span>    lcsl = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2];</div>
+<div class="line"><span class="lineno">   68</span>    </div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">/* my lcs is at least the empty symbol */</span></div>
+<div class="line"><span class="lineno">   70</span>    lcs = (<span class="keywordtype">char</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(lcsl+1, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)); <span class="comment">/* null-terminated \0 */</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span> (!lcs) {</div>
+<div class="line"><span class="lineno">   72</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    i = l1, j = l2;</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">while</span> (i &gt; 0 &amp;&amp; j &gt; 0) {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="comment">/* walk the matrix backwards */</span></div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (B[i][j] == DIAG) {</div>
+<div class="line"><span class="lineno">   80</span>            lcs[--lcsl] = s1[i-1];</div>
+<div class="line"><span class="lineno">   81</span>            i = i - 1;</div>
+<div class="line"><span class="lineno">   82</span>            j = j - 1;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (B[i][j] == LEFT)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            j = j - 1;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            i = i - 1;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">return</span> lcs;</div>
+<div class="line"><span class="lineno">   94</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 <div class="ttc" id="astruct_l_html"><div class="ttname"><a href="../../df/db3/struct_l.html">L</a></div><div class="ttdef"><b>Definition:</b> list.h:8</div></div>
 </div><!-- fragment -->
@@ -298,41 +302,43 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>@breif Computes LCS between s1 and s2 using a dynamic-programming approach </p>
+<p>Computes LCS between s1 and s2 using a dynamic-programming approach. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">1</td><td>s1 first null-terminated string </td></tr>
-    <tr><td class="paramname">2</td><td>s2 second null-terminated string </td></tr>
-    <tr><td class="paramname">3</td><td>l1 length of s1 </td></tr>
-    <tr><td class="paramname">4</td><td>l2 length of s2 </td></tr>
-    <tr><td class="paramname">5</td><td><a class="el" href="../../df/db3/struct_l.html">L</a> matrix of size l1 x l2 </td></tr>
-    <tr><td class="paramname">6</td><td>B matrix of size l1 x l2 </td></tr>
+    <tr><td class="paramname">s1</td><td>first null-terminated string </td></tr>
+    <tr><td class="paramname">s2</td><td>second null-terminated string </td></tr>
+    <tr><td class="paramname">l1</td><td>length of s1 </td></tr>
+    <tr><td class="paramname">l2</td><td>length of s2 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../df/db3/struct_l.html">L</a></td><td>matrix of size l1 x l2 </td></tr>
+    <tr><td class="paramname">B</td><td>matrix of size l1 x l2 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                              {</div>
-<div class="line"><span class="lineno">   28</span>    <span class="comment">/* B is the directions matrix</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">       L is the LCS matrix */</span></div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>    <span class="comment">/* loop over the simbols in my sequences</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">       save the directions according to the LCS */</span></div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">for</span> (i = 1; i &lt;= l1; ++i)</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">for</span> (j = 1; j &lt;= l2; ++j)</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (s1[i-1] == s2[j-1]) {</div>
-<div class="line"><span class="lineno">   37</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = 1 + <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j-1];</div>
-<div class="line"><span class="lineno">   38</span>                B[i][j] = DIAG;</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j] &lt; <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j-1]) {</div>
-<div class="line"><span class="lineno">   41</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j-1];</div>
-<div class="line"><span class="lineno">   42</span>                B[i][j] = LEFT;</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   45</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j];</div>
-<div class="line"><span class="lineno">   46</span>                B[i][j] = UP;</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                              {</div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment">/* B is the directions matrix</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment">       L is the LCS matrix */</span></div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment">/* loop over the simbols in my sequences</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment">       save the directions according to the LCS */</span></div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">for</span> (i = 1; i &lt;= l1; ++i) {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (j = 1; j &lt;= l2; ++j) {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (s1[i-1] == s2[j-1]) {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = 1 + <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j-1];</div>
+<div class="line"><span class="lineno">   41</span>                B[i][j] = DIAG;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j] &lt; <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j-1]) {</div>
+<div class="line"><span class="lineno">   44</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j-1];</div>
+<div class="line"><span class="lineno">   45</span>                B[i][j] = LEFT;</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   48</span>                <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i][j] = <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[i-1][j];</div>
+<div class="line"><span class="lineno">   49</span>                B[i][j] = UP;</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="line"><span class="lineno">   53</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -371,11 +377,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on exit </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                 {</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_function" href="../../db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a>();  <span class="comment">// run self-test implementations</span></div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  153</span>}</div>
-<div class="ttc" id="alcs_8c_html_aa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Self-test implementations.</div><div class="ttdef"><b>Definition:</b> lcs.c:90</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                 {</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_function" href="../../db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a>();  <span class="comment">// run self-test implementations</span></div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+<div class="ttc" id="alcs_8c_html_aa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../db/de1/lcs_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Self-test implementations.</div><div class="ttdef"><b>Definition:</b> lcs.c:100</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -411,61 +417,63 @@ Here is the call graph for this function:</div>
 
 <p>Self-test implementations. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                   {</div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment">/* https://en.wikipedia.org/wiki/Subsequence#Applications */</span></div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordtype">int</span> **<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, **B, j, l1, l2;</div>
-<div class="line"><span class="lineno">   93</span>    </div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordtype">char</span> *s1 = <span class="stringliteral">&quot;ACGGTGTCGTGCTATGCTGATGCTGACTTATATGCTA&quot;</span>;</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">char</span> *s2 = <span class="stringliteral">&quot;CGTTCGGCTATCGTACGTTCTATTCTATGATTTCTAA&quot;</span>;</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordtype">char</span> *lcs;</div>
-<div class="line"><span class="lineno">   97</span>    </div>
-<div class="line"><span class="lineno">   98</span>    l1 = strlen(s1);</div>
-<div class="line"><span class="lineno">   99</span>    l2 = strlen(s2);</div>
-<div class="line"><span class="lineno">  100</span>    </div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a> = (<span class="keywordtype">int</span> **)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l1+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span> *));</div>
-<div class="line"><span class="lineno">  102</span>    B = (<span class="keywordtype">int</span> **)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l1+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span> *));</div>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                   {</div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">/* https://en.wikipedia.org/wiki/Subsequence#Applications */</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordtype">int</span> **<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, **B, j, l1, l2;</div>
 <div class="line"><span class="lineno">  103</span>    </div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>) {</div>
-<div class="line"><span class="lineno">  105</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>        exit(1);</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!B) {</div>
-<div class="line"><span class="lineno">  109</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
-<div class="line"><span class="lineno">  110</span>        exit(1);</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">for</span> (j = 0; j &lt;= l1; j++) {</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j] = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l2+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]) {</div>
-<div class="line"><span class="lineno">  115</span>            perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
-<div class="line"><span class="lineno">  116</span>            exit(1);</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        B[j] = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l2+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]) {</div>
-<div class="line"><span class="lineno">  120</span>            perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>            exit(1);</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="line"><span class="lineno">  124</span>    </div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6">lcslen</a>(s1, s2, l1, l2, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, B);</div>
-<div class="line"><span class="lineno">  126</span>    lcs = <a class="code hl_function" href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0">lcsbuild</a>(s1, l1, l2, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, B);</div>
-<div class="line"><span class="lineno">  127</span>    </div>
-<div class="line"><span class="lineno">  128</span>    assert(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2] == 27);</div>
-<div class="line"><span class="lineno">  129</span>    assert(strcmp(lcs, <span class="stringliteral">&quot;CGTTCGGCTATGCTTCTACTTATTCTA&quot;</span>) == 0);</div>
-<div class="line"><span class="lineno">  130</span>    </div>
-<div class="line"><span class="lineno">  131</span>    printf(<span class="stringliteral">&quot;S1: %s\tS2: %s\n&quot;</span>, s1, s2);</div>
-<div class="line"><span class="lineno">  132</span>    printf(<span class="stringliteral">&quot;LCS len:%3d\n&quot;</span>, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2]);</div>
-<div class="line"><span class="lineno">  133</span>    printf(<span class="stringliteral">&quot;LCS: %s\n&quot;</span>, lcs);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(lcs);  </div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span> (j = 0; j &lt;= l1; j++)</div>
-<div class="line"><span class="lineno">  137</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]), <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(B[j]);</div>
-<div class="line"><span class="lineno">  138</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>);</div>
-<div class="line"><span class="lineno">  139</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(B);</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>    printf(<span class="stringliteral">&quot;All tests have successfully passed!\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  142</span>}</div>
-<div class="ttc" id="alcs_8c_html_a741c9173a9fef243518f5c2352b81fc0"><div class="ttname"><a href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0">lcsbuild</a></div><div class="ttdeci">char * lcsbuild(const char *s1, int l1, int l2, int **L, int **B)</div><div class="ttdoc">@breif Builds the LCS according to B using a traceback approach</div><div class="ttdef"><b>Definition:</b> lcs.c:59</div></div>
-<div class="ttc" id="alcs_8c_html_ac107a0b0233dacb9e8cd3a983d6740b6"><div class="ttname"><a href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6">lcslen</a></div><div class="ttdeci">void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B)</div><div class="ttdoc">@breif Computes LCS between s1 and s2 using a dynamic-programming approach</div><div class="ttdef"><b>Definition:</b> lcs.c:27</div></div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordtype">char</span> *s1 = <span class="stringliteral">&quot;ACGGTGTCGTGCTATGCTGATGCTGACTTATATGCTA&quot;</span>;</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordtype">char</span> *s2 = <span class="stringliteral">&quot;CGTTCGGCTATCGTACGTTCTATTCTATGATTTCTAA&quot;</span>;</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordtype">char</span> *lcs;</div>
+<div class="line"><span class="lineno">  107</span>    </div>
+<div class="line"><span class="lineno">  108</span>    l1 = strlen(s1);</div>
+<div class="line"><span class="lineno">  109</span>    l2 = strlen(s2);</div>
+<div class="line"><span class="lineno">  110</span>    </div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a> = (<span class="keywordtype">int</span> **)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l1+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span> *));</div>
+<div class="line"><span class="lineno">  112</span>    B = (<span class="keywordtype">int</span> **)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l1+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span> *));</div>
+<div class="line"><span class="lineno">  113</span>    </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>) {</div>
+<div class="line"><span class="lineno">  115</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
+<div class="line"><span class="lineno">  116</span>        exit(1);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (!B) {</div>
+<div class="line"><span class="lineno">  119</span>        perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span>        exit(1);</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">for</span> (j = 0; j &lt;= l1; j++) {</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j] = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l2+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]) {</div>
+<div class="line"><span class="lineno">  125</span>            perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>            exit(1);</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>        B[j] = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(l2+1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (!<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]) {</div>
+<div class="line"><span class="lineno">  130</span>            perror(<span class="stringliteral">&quot;calloc: &quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>            exit(1);</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    </div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_function" href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6">lcslen</a>(s1, s2, l1, l2, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, B);</div>
+<div class="line"><span class="lineno">  136</span>    lcs = <a class="code hl_function" href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0">lcsbuild</a>(s1, l1, l2, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>, B);</div>
+<div class="line"><span class="lineno">  137</span>    </div>
+<div class="line"><span class="lineno">  138</span>    assert(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2] == 27);</div>
+<div class="line"><span class="lineno">  139</span>    assert(strcmp(lcs, <span class="stringliteral">&quot;CGTTCGGCTATGCTTCTACTTATTCTA&quot;</span>) == 0);</div>
+<div class="line"><span class="lineno">  140</span>    </div>
+<div class="line"><span class="lineno">  141</span>    printf(<span class="stringliteral">&quot;S1: %s\tS2: %s\n&quot;</span>, s1, s2);</div>
+<div class="line"><span class="lineno">  142</span>    printf(<span class="stringliteral">&quot;LCS len:%3d\n&quot;</span>, <a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[l1][l2]);</div>
+<div class="line"><span class="lineno">  143</span>    printf(<span class="stringliteral">&quot;LCS: %s\n&quot;</span>, lcs);</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(lcs);</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">for</span> (j = 0; j &lt;= l1; j++)</div>
+<div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>[j]), <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(B[j]);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(<a class="code hl_struct" href="../../df/db3/struct_l.html">L</a>);</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(B);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    printf(<span class="stringliteral">&quot;All tests have successfully passed!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>}</div>
+<div class="ttc" id="alcs_8c_html_a741c9173a9fef243518f5c2352b81fc0"><div class="ttname"><a href="../../db/de1/lcs_8c.html#a741c9173a9fef243518f5c2352b81fc0">lcsbuild</a></div><div class="ttdeci">char * lcsbuild(const char *s1, int l1, int l2, int **L, int **B)</div><div class="ttdoc">Builds the LCS according to B using a traceback approach.</div><div class="ttdef"><b>Definition:</b> lcs.c:64</div></div>
+<div class="ttc" id="alcs_8c_html_ac107a0b0233dacb9e8cd3a983d6740b6"><div class="ttname"><a href="../../db/de1/lcs_8c.html#ac107a0b0233dacb9e8cd3a983d6740b6">lcslen</a></div><div class="ttdeci">void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B)</div><div class="ttdoc">Computes LCS between s1 and s2 using a dynamic-programming approach.</div><div class="ttdef"><b>Definition:</b> lcs.c:30</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
