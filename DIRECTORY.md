@@ -128,6 +128,7 @@
   * [Test Min Printf](https://github.com/TheAlgorithms/C/blob/HEAD/developer_tools/test_min_printf.c)
 
 ## Dynamic Programming
+  * [Knapsack](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/knapsack.c)
   * [Lcs](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/lcs.c)
   * [Matrix Chain Order](https://github.com/TheAlgorithms/C/blob/HEAD/dynamic_programming/matrix_chain_order.c)
 
