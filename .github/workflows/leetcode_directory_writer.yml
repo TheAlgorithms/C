@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - "leetcode/src/**.c"
+    branches:
+      - main
 jobs:
   build:
     if: github.repository == 'TheAlgorithms/C' # We only need this to run in our repository.
@@ -37,6 +39,7 @@ jobs:
         shell: bash
         run: |
           if [[ `git status --porcelain` ]]; then
-          gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).'
+            gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).'
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
