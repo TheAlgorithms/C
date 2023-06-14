@@ -26,11 +26,6 @@ jobs:
         uses: TheAlgorithms/scripts/formatter@main
         with:
           filetypes: .c,.h
-      - name: Update DIRECTORY.md
-        run: |
-          wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/build_directory_md.py
-          python3 build_directory_md.py C . .c,.h leetcode/ > DIRECTORY.md
-          git commit -m "updating DIRECTORY.md" DIRECTORY.md || true
       - name: Get file changes
         run: |
           git branch
