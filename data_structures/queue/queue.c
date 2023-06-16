@@ -61,8 +61,10 @@ int deque()
         if (head->pre == NULL)
             head = NULL;
         else
+        {
             head = head->pre;
-        head->next = NULL;
+            head->next = NULL;
+        }
     }
     return returnData;
 }
