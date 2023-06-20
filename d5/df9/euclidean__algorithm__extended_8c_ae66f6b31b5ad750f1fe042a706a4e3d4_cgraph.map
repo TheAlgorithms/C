@@ -1,9 +1,15 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d5/df9/euclidean__algorithm__extended_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Perform tests on known results." alt="" coords="103,31,146,56"/>
-<area shape="rect" id="node3" href="$d5/df9/euclidean__algorithm__extended_8c.html#aaa5f87fdd4cc35a6c77e255416de66ba" title="perform one single check on the result of the algorithm with provided parameters and expected output" alt="" coords="194,31,278,56"/>
-<area shape="rect" id="node4" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="326,23,463,64"/>
-<area shape="rect" id="node5" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="511,31,637,56"/>
-<area shape="rect" id="node6" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="697,5,743,31"/>
-<area shape="rect" id="node7" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="685,55,755,80"/>
+<area shape="rect" id="Node000001" title="Main Function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d5/df9/euclidean__algorithm__extended_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Perform tests on known results." alt="" coords="103,31,146,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,41,88,41,88,46,55,46"/>
+<area shape="rect" id="Node000003" href="$d5/df9/euclidean__algorithm__extended_8c.html#aaa5f87fdd4cc35a6c77e255416de66ba" title="perform one single check on the result of the algorithm with provided parameters and expected output" alt="" coords="194,31,278,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,41,179,41,179,46,146,46"/>
+<area shape="rect" id="Node000004" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="326,23,463,64"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="279,41,311,41,311,46,279,46"/>
+<area shape="rect" id="Node000005" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="511,31,637,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,41,496,41,496,46,463,46"/>
+<area shape="rect" id="Node000006" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="697,5,743,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="637,30,682,22,683,27,638,35"/>
+<area shape="rect" id="Node000007" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="685,55,755,80"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="638,51,671,57,670,62,637,57"/>
 </map>

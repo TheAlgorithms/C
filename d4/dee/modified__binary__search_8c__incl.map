@@ -1,5 +1,7 @@
 <map id="searching/modified_binary_search.c" name="searching/modified_binary_search.c">
-<area shape="rect" id="node1" title="Modified binary search algorithm" alt="" coords="13,5,143,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,66,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,94,153,120"/>
+<area shape="rect" id="Node000001" title="Modified binary search algorithm" alt="" coords="13,5,143,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,66,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,48,51,82,47,79,65,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,94,153,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,45,110,79,105,82,86,48"/>
 </map>

@@ -1,7 +1,12 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function." alt="" coords="5,92,55,118"/>
-<area shape="rect" id="node2" href="$dc/dc5/hangman_8c.html#a6f5bb35e025e731286ce890c90286d2e" title="checks if letter is in current word" alt="" coords="113,5,180,31"/>
-<area shape="rect" id="node3" href="$dc/dc5/hangman_8c.html#ad4130a1d1092d32dcfa4a46019e27d45" title="creates a new game &#45; generates a random word and stores in global variable current_word" alt="" coords="104,55,189,80"/>
-<area shape="rect" id="node4" href="$dc/dc5/hangman_8c.html#a9611b43141ac2e6ba245487c493599fc" title="checks if letter has been guessed before" alt="" coords="103,128,190,154"/>
-<area shape="rect" id="node5" href="$dc/dc5/hangman_8c.html#a669e745d87eb1740ab9b1f3b73bb7336" title="checks if player has won or lost" alt="" coords="124,177,169,203"/>
+<area shape="rect" id="Node000001" title="Main Function." alt="" coords="5,92,55,118"/>
+<area shape="rect" id="Node000002" href="$dc/dc5/hangman_8c.html#a6f5bb35e025e731286ce890c90286d2e" title="checks if letter is in current word" alt="" coords="113,5,180,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,89,101,40,106,37,109,41,104,44,47,93"/>
+<area shape="rect" id="Node000003" href="$dc/dc5/hangman_8c.html#ad4130a1d1092d32dcfa4a46019e27d45" title="creates a new game &#45; generates a random word and stores in global variable current_word" alt="" coords="104,55,189,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,95,89,83,91,88,56,100"/>
+<area shape="rect" id="Node000004" href="$dc/dc5/hangman_8c.html#a9611b43141ac2e6ba245487c493599fc" title="checks if letter has been guessed before" alt="" coords="103,128,190,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="56,110,90,120,88,126,54,115"/>
+<area shape="rect" id="Node000005" href="$dc/dc5/hangman_8c.html#a669e745d87eb1740ab9b1f3b73bb7336" title="checks if player has won or lost" alt="" coords="124,177,169,203"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="47,116,104,164,112,169,109,174,101,168,43,120"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="126,129,122,119,124,110,133,104,146,101,161,104,169,111,165,115,159,109,146,107,135,109,129,113,127,119,131,127"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="test_c_atoi" name="test_c_atoi">
-<area shape="rect" id="node1" title="test the function implementation" alt="" coords="5,5,91,31"/>
-<area shape="rect" id="node2" href="$d7/dd8/c__atoi__str__to__integer_8c.html#ad19049ebfc2088bc1e75e7e958f7b60f" title="the function take a string and return an integer" alt="" coords="139,5,195,31"/>
-<area shape="rect" id="node3" href="$da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae" title="Function to check if two input values have the same sign (the property of being positive or negative)" alt="" coords="243,5,288,31"/>
+<area shape="rect" id="Node000001" title="test the function implementation" alt="" coords="5,5,91,31"/>
+<area shape="rect" id="Node000002" href="$d7/dd8/c__atoi__str__to__integer_8c.html#ad19049ebfc2088bc1e75e7e958f7b60f" title="the function take a string and return an integer" alt="" coords="139,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,16,123,16,123,21,91,21"/>
+<area shape="rect" id="Node000003" href="$da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae" title="Function to check if two input values have the same sign (the property of being positive or negative)" alt="" coords="243,5,288,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,16,228,16,228,21,195,21"/>
 </map>

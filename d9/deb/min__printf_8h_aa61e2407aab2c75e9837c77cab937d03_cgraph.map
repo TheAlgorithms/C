@@ -1,5 +1,7 @@
 <map id="get_width_and_precision" name="get_width_and_precision">
-<area shape="rect" id="node1" title="Takes width and precision specified from the format of the string." alt="" coords="5,31,170,56"/>
-<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="218,5,299,31"/>
-<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="221,55,296,80"/>
+<area shape="rect" id="Node000001" title="Takes width and precision specified from the format of the string." alt="" coords="5,31,170,56"/>
+<area shape="rect" id="Node000002" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="218,5,299,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,29,203,24,203,29,170,34"/>
+<area shape="rect" id="Node000003" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="221,55,296,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,52,207,58,206,63,170,58"/>
 </map>

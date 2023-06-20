@@ -1,5 +1,7 @@
 <map id="searching/sentinel_linear_search.c" name="searching/sentinel_linear_search.c">
-<area shape="rect" id="node1" title="Linear Search with Sentinel algorithm implementation" alt="" coords="16,5,143,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,66,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,94,158,120"/>
+<area shape="rect" id="Node000001" title="Linear Search with Sentinel algorithm implementation" alt="" coords="16,5,143,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,66,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,48,52,82,47,79,66,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,94,158,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,45,112,79,107,82,88,48"/>
 </map>

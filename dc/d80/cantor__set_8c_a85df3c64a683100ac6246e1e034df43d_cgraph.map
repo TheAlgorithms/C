@@ -1,3 +1,4 @@
 <map id="free_memory" name="free_memory">
-<area shape="rect" id="node1" title="Clear memory allocated by propagate function." alt="" coords="5,29,103,55"/>
+<area shape="rect" id="Node000001" title="Clear memory allocated by propagate function." alt="" coords="5,29,103,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="36,30,33,21,35,12,42,5,54,3,67,6,73,13,69,16,64,10,54,8,45,10,40,14,38,20,41,28"/>
 </map>

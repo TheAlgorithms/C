@@ -1,6 +1,9 @@
 <map id="math/palindrome.c" name="math/palindrome.c">
-<area shape="rect" id="node1" title="Program to identify if a number is palindrome number or not." alt="" coords="71,5,200,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,74,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,79,173,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="197,79,258,105"/>
+<area shape="rect" id="Node000001" title="Program to identify if a number is palindrome number or not." alt="" coords="71,5,200,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,34,69,72,65,68,118,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,173,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,31,138,64,133,64,133,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,79,258,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,29,202,68,199,72,149,34"/>
 </map>

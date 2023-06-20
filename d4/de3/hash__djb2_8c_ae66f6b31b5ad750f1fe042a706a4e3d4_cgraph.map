@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga9f76001544014905468dc812336110d5" title="Test function for djb2." alt="" coords="103,5,177,31"/>
-<area shape="rect" id="node3" href="$d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b" title="DJB2 algorithm implementation." alt="" coords="225,5,270,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga9f76001544014905468dc812336110d5" title="Test function for djb2." alt="" coords="103,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d7/d3b/group__hash.html#ga1ac362fa25f7c35d104205985f8e754b" title="DJB2 algorithm implementation." alt="" coords="225,5,270,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,16,210,16,210,21,177,21"/>
 </map>

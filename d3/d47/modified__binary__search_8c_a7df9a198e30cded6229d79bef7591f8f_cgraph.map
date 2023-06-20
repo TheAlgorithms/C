@@ -1,4 +1,5 @@
 <map id="modifiedBinarySearch" name="modifiedBinarySearch">
-<area shape="rect" id="node1" title="Function to perform binary search on the mid values of row to get the desired pair of rows where the ..." alt="" coords="5,5,154,31"/>
-<area shape="rect" id="node2" href="$d3/d47/modified__binary__search_8c.html#a0cfaa56aacf960e4628a0fb27add8890" title="This function does Binary search for x in i&#45;th row from j_low to j_high." alt="" coords="202,5,299,31"/>
+<area shape="rect" id="Node000001" title="Function to perform binary search on the mid values of row to get the desired pair of rows where the ..." alt="" coords="5,5,154,31"/>
+<area shape="rect" id="Node000002" href="$d3/d47/modified__binary__search_8c.html#a0cfaa56aacf960e4628a0fb27add8890" title="This function does Binary search for x in i&#45;th row from j_low to j_high." alt="" coords="202,5,299,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,16,187,16,187,21,154,21"/>
 </map>

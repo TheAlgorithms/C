@@ -1,6 +1,10 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,31,49,56"/>
-<area shape="rect" id="node2" href="$df/d27/alaw_8c.html#a093ac72124e3c2268d1150676e63175d" title="8bit alaw to 16bit pcm" alt="" coords="97,5,160,31"/>
-<area shape="rect" id="node4" href="$df/d27/alaw_8c.html#a751d8e2c1975706e4d876316518c54c4" title="16bit pcm to 8bit alaw" alt="" coords="97,55,160,80"/>
-<area shape="rect" id="node3" href="$da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae" title="Function to check if two input values have the same sign (the property of being positive or negative)" alt="" coords="208,31,253,56"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,31,49,56"/>
+<area shape="rect" id="Node000002" href="$df/d27/alaw_8c.html#a093ac72124e3c2268d1150676e63175d" title="8bit alaw to 16bit pcm" alt="" coords="97,5,160,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,36,82,27,83,32,50,41"/>
+<area shape="rect" id="Node000004" href="$df/d27/alaw_8c.html#a751d8e2c1975706e4d876316518c54c4" title="16bit pcm to 8bit alaw" alt="" coords="97,55,160,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="50,46,83,54,82,59,49,51"/>
+<area shape="rect" id="Node000003" href="$da/d4a/bisection__method_8c.html#a858396a5abdb7865e71cf803fdcb37ae" title="Function to check if two input values have the same sign (the property of being positive or negative)" alt="" coords="208,31,253,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,23,195,32,193,37,160,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="160,57,193,49,195,55,161,63"/>
 </map>

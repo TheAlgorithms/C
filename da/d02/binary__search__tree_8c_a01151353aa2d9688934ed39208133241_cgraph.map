@@ -1,3 +1,4 @@
 <map id="purge" name="purge">
-<area shape="rect" id="node1" title="Utilitary procedure to free all nodes in a tree." alt="" coords="5,29,59,55"/>
+<area shape="rect" id="Node000001" title="Utilitary procedure to free all nodes in a tree." alt="" coords="5,29,59,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="21,29,20,12,25,5,32,3,40,6,44,13,39,16,37,10,32,8,28,9,25,13,26,29"/>
 </map>

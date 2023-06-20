@@ -1,7 +1,13 @@
 <map id="qr_decompose" name="qr_decompose">
-<area shape="rect" id="node1" title="Decompose matrix &#160;using Gram&#45;Schmidt process." alt="" coords="5,48,112,74"/>
-<area shape="rect" id="node2" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="297,23,379,48"/>
-<area shape="rect" id="node3" href="$d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" title="Compute magnitude of vector." alt="" coords="160,23,249,48"/>
-<area shape="rect" id="node4" href="$d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" title="Compute projection of vector &#160;on &#160;defined as." alt="" coords="162,72,247,98"/>
-<area shape="rect" id="node5" href="$d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" title="Compute vector subtraction." alt="" coords="162,121,247,147"/>
+<area shape="rect" id="Node000001" title="Decompose matrix &#160;using Gram&#45;Schmidt process." alt="" coords="5,48,112,74"/>
+<area shape="rect" id="Node000002" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="297,23,379,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,45,114,24,159,8,192,3,225,4,286,15,285,21,225,9,192,8,160,13,117,29,81,50"/>
+<area shape="rect" id="Node000003" href="$d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" title="Compute magnitude of vector." alt="" coords="160,23,249,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,49,145,43,146,48,113,54"/>
+<area shape="rect" id="Node000004" href="$d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" title="Compute projection of vector &#160;on &#160;defined as." alt="" coords="162,72,247,98"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="113,67,148,73,147,78,112,72"/>
+<area shape="rect" id="Node000005" href="$d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" title="Compute vector subtraction." alt="" coords="162,121,247,147"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="87,72,165,112,163,117,85,77"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="249,33,282,33,282,38,249,38"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="241,69,287,52,288,57,242,74"/>
 </map>

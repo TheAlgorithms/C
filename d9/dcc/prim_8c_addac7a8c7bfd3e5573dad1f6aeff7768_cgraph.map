@@ -1,6 +1,10 @@
 <map id="user_graph" name="user_graph">
-<area shape="rect" id="node1" title="Function user_graph(); gets user input adj." alt="" coords="5,29,91,55"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="251,5,289,31"/>
-<area shape="rect" id="node3" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="139,55,185,80"/>
-<area shape="rect" id="node4" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="233,55,307,80"/>
+<area shape="rect" id="Node000001" title="Function user_graph(); gets user input adj." alt="" coords="5,29,91,55"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="251,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,35,236,19,237,24,91,40"/>
+<area shape="rect" id="Node000003" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="139,55,185,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,49,125,57,123,62,90,54"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="184,55,236,30,238,35,187,59"/>
+<area shape="rect" id="Node000004" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="233,55,307,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="186,65,218,65,218,70,186,70"/>
 </map>

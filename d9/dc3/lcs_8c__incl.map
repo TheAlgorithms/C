@@ -1,7 +1,11 @@
 <map id="dynamic_programming/lcs.c" name="dynamic_programming/lcs.c">
-<area shape="rect" id="node1" title="Longest Common Subsequence algorithm" alt="" coords="89,5,241,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,66,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,94,153,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="177,94,241,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="265,94,334,120"/>
+<area shape="rect" id="Node000001" title="Longest Common Subsequence algorithm" alt="" coords="89,5,241,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,66,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,49,69,88,66,84,131,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,94,153,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,48,137,82,132,79,152,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,94,241,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,45,197,79,193,82,173,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="265,94,334,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="200,44,268,84,265,88,197,49"/>
 </map>

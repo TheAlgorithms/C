@@ -1,5 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,43,55,68"/>
-<area shape="rect" id="node2" href="$db/d80/problem__20_2sol1_8c.html#a0dd8af03e6cc8187e996db564ff90960" title="Function that allocates memory to add another digit at the MSB." alt="" coords="117,5,191,31"/>
-<area shape="rect" id="node3" href="$db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1" title="Function to remove digits preceeding the current digit." alt="" coords="103,79,205,104"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,43,55,68"/>
+<area shape="rect" id="Node000002" href="$db/d80/problem__20_2sol1_8c.html#a0dd8af03e6cc8187e996db564ff90960" title="Function that allocates memory to add another digit at the MSB." alt="" coords="117,5,191,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,46,102,31,103,36,56,51"/>
+<area shape="rect" id="Node000003" href="$db/d80/problem__20_2sol1_8c.html#a54a02c4b963fdb16f24959e0137763f1" title="Function to remove digits preceeding the current digit." alt="" coords="103,79,205,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,60,94,71,93,77,55,65"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="132,79,128,70,130,61,139,54,154,52,170,55,178,62,174,66,167,60,154,57,141,59,135,64,133,70,137,77"/>
 </map>

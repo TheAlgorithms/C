@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['a_0',['a',['../dd/d22/structaffine__key__t.html#a25e46eff592f342478c114be24a91fce',1,'affine_key_t::a()'],['../dc/d18/structsudoku.html#a507f788b793d4d3d6f6a70415be84ded',1,'sudoku::a()']]],
+  ['a_0',['a',['../dd/d22/structaffine__key__t.html#a25e46eff592f342478c114be24a91fce',1,'affine_key_t::a'],['../dc/d18/structsudoku.html#a507f788b793d4d3d6f6a70415be84ded',1,'sudoku::a']]],
   ['abundant_5fflags_1',['abundant_flags',['../d4/dbd/problem__23_2sol2_8c.html#af920a16d6ef69dd604b283f427892e06',1,'sol2.c']]],
-  ['accuracy_2',['ACCURACY',['../dd/d08/newton__raphson__root_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY():&#160;newton_raphson_root.c'],['../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY():&#160;durand_kerner_roots.c']]],
+  ['accuracy_2',['ACCURACY',['../dd/d08/newton__raphson__root_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY:&#160;newton_raphson_root.c'],['../da/d38/durand__kerner__roots_8c.html#af270a96662132d0385cb6b4637c5a689',1,'ACCURACY:&#160;durand_kerner_roots.c']]],
   ['adaline_3',['adaline',['../d2/daa/structadaline.html',1,'']]],
   ['adaline_20learning_20algorithm_4',['Adaline learning algorithm',['../da/d2a/group__adaline.html',1,'']]],
   ['adaline_5faccuracy_5',['ADALINE_ACCURACY',['../da/d2a/group__adaline.html#gab4d49d73dec94c092b7ffadba55fb020',1,'adaline_learning.c']]],
@@ -26,7 +26,7 @@ var searchData=
   ['alaw_2ec_23',['alaw.c',['../df/d27/alaw_8c.html',1,'']]],
   ['allocatememoryfornode_24',['allocateMemoryForNode',['../d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9',1,'words_alphabetical.c']]],
   ['alphabet_5fsize_25',['ALPHABET_SIZE',['../d8/daf/affine_8c.html#a6572f1706059832f94025fa12c6c45ed',1,'affine.c']]],
-  ['array_26',['Array',['../d9/d41/md_data_structures_array__r_e_a_d_m_e.html',1,'']]],
+  ['array_26',['Array',['../d0/dd9/md_data__structures_2array_2_r_e_a_d_m_e.html',1,'']]],
   ['arrptr_27',['arrPtr',['../d4/d67/struct_d_array_stack.html#aae446fbaecfeae53a970e7a63b74c126',1,'DArrayStack']]],
   ['assert_5fbytes_28',['assert_bytes',['../dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144',1,'hash_blake2b.c']]],
   ['astnode_29',['ASTNode',['../d8/d66/struct_a_s_t_node.html',1,'']]],

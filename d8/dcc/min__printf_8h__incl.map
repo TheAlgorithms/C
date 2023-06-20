@@ -1,6 +1,9 @@
 <map id="developer_tools/min_printf.h" name="developer_tools/min_printf.h">
-<area shape="rect" id="node1" title="Implementation of a function similar to printf" alt="" coords="58,5,195,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,69,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="93,94,160,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="184,94,253,120"/>
+<area shape="rect" id="Node000001" title="Implementation of a function similar to printf" alt="" coords="58,5,195,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,69,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,48,63,86,60,82,102,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,94,160,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,46,129,79,124,79,124,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="184,94,253,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,44,195,82,191,86,147,48"/>
 </map>

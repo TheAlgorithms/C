@@ -1,7 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a" title="Exact solution of the problem." alt="" coords="116,5,222,31"/>
-<area shape="rect" id="node3" href="$d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55" title="Compute approximation using the semi&#45;implicit&#45;Euler method in the given limits." alt="" coords="103,55,235,80"/>
-<area shape="rect" id="node4" href="$d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb" title="Compute next step approximation using the semi&#45;implicit&#45;Euler method." alt="" coords="283,55,447,80"/>
-<area shape="rect" id="node5" href="$d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first&#45;order differential equations." alt="" coords="495,55,563,80"/>
+<area shape="rect" id="Node000001" title="Main Function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d4/d99/ode__semi__implicit__euler_8c.html#a8caee977b26888d34040b122e0e28e3a" title="Exact solution of the problem." alt="" coords="116,5,222,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,36,101,28,102,33,56,42"/>
+<area shape="rect" id="Node000003" href="$d4/d99/ode__semi__implicit__euler_8c.html#ad80059877222f885b549f2d0a3dc6b55" title="Compute approximation using the semi&#45;implicit&#45;Euler method in the given limits." alt="" coords="103,55,235,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,45,89,51,88,56,55,50"/>
+<area shape="rect" id="Node000004" href="$d4/d99/ode__semi__implicit__euler_8c.html#a720b7e995d2bbc615f94a2c7dbcf84eb" title="Compute next step approximation using the semi&#45;implicit&#45;Euler method." alt="" coords="283,55,447,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="235,65,268,65,268,70,235,70"/>
+<area shape="rect" id="Node000005" href="$d4/d99/ode__semi__implicit__euler_8c.html#a97075291390a68c262ed66e157a57eb4" title="Problem statement for a system with first&#45;order differential equations." alt="" coords="495,55,563,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="448,65,480,65,480,70,448,70"/>
 </map>

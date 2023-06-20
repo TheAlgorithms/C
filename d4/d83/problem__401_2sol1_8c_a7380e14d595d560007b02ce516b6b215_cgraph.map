@@ -1,4 +1,5 @@
 <map id="get_divisors" name="get_divisors">
-<area shape="rect" id="node1" title="Get all integer divisors of a number." alt="" coords="5,5,97,31"/>
-<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="145,5,193,31"/>
+<area shape="rect" id="Node000001" title="Get all integer divisors of a number." alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000002" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="145,5,193,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,130,16,130,21,97,21"/>
 </map>

@@ -1,6 +1,10 @@
 <map id="is_sum_of_abundant" name="is_sum_of_abundant">
-<area shape="rect" id="node1" title="check if a given number can be represented as a sum of two abundant numbers." alt="" coords="5,31,147,56"/>
-<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" title="Find the next abundant number after N and not including N." alt="" coords="195,5,326,31"/>
-<area shape="rect" id="node3" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="374,31,465,56"/>
-<area shape="rect" id="node4" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="513,31,650,56"/>
+<area shape="rect" id="Node000001" title="check if a given number can be represented as a sum of two abundant numbers." alt="" coords="5,31,147,56"/>
+<area shape="rect" id="Node000002" href="$d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" title="Find the next abundant number after N and not including N." alt="" coords="195,5,326,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,31,180,27,181,32,147,36"/>
+<area shape="rect" id="Node000003" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="374,31,465,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="147,41,359,41,359,46,147,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,26,360,31,359,37,326,31"/>
+<area shape="rect" id="Node000004" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="513,31,650,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="466,41,499,41,499,46,466,46"/>
 </map>

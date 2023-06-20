@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde":[16,0,4,1,1,7],
+"da/da0/segment__tree_8c.html#a776abfa81cde9016a2885dca7cfc05ab":[16,0,4,1,1,8],
+"da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb":[16,0,4,1,1,4],
+"da/da0/segment__tree_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,4,1,1,11],
 "da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75":[16,0,4,1,1,5],
 "da/da0/segment__tree_8c.html#ac206721972f739510cb11f7c0a6a8f63":[16,0,4,1,1,2],
 "da/da0/segment__tree_8c.html#aca549b5311d32ab1a703b4a4605821d8":[16,0,4,1,1,1],
@@ -23,6 +27,7 @@ var NAVTREEINDEX3 =
 "db/d0c/infix__to__postfix_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,3,5,5],
 "db/d0c/infix__to__postfix_8c.html#afa8471c76bc57b12ad21de22beb39021":[16,0,3,5,3],
 "db/d0c/infix__to__postfix_8c.html#afd8245c04b202240390de23170f72d6b":[16,0,3,5,4],
+"db/d5f/md_leetcode_2_d_i_r_e_c_t_o_r_y.html":[10],
 "db/d72/secant__method_8c.html":[16,0,17,11],
 "db/d72/secant__method_8c.html#a213829e8511060395c4a31ad8920ef0a":[16,0,17,11,3],
 "db/d72/secant__method_8c.html#a30c17564229ec2e37dfea9c6c9ad643e":[16,0,17,11,0],
@@ -128,7 +133,6 @@ var NAVTREEINDEX3 =
 "dc/d9a/group__quats.html#ga8cc5e5b7a5fa492423ecf034c8bb52bd":[14,0,2,2],
 "dc/d9a/group__quats.html#gaacd70a16b61dd47a19eb5fb729c2669b":[14,0,2,3],
 "dc/d9a/group__quats.html#gaf5ad0f9c4f0facc5a9c3735a178156b1":[14,0,2,6],
-"dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html":[13],
 "dc/dc5/hangman_8c.html":[16,0,8,0],
 "dc/dc5/hangman_8c.html#a669e745d87eb1740ab9b1f3b73bb7336":[16,0,8,0,5],
 "dc/dc5/hangman_8c.html#a6f5bb35e025e731286ce890c90286d2e":[16,0,8,0,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "dd/de6/roman__numerals__to__decimal_8c.html#a1e86fb4466b6a175b910fa19c4a6ea03":[16,0,3,9,1],
 "dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88":[16,0,3,9,2],
 "dd/de6/roman__numerals__to__decimal_8c.html#aa8dca7b867074164d5f45b0f3851269d":[16,0,3,9,3],
-"dd/de6/roman__numerals__to__decimal_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,3,9,0],
-"dd/df0/problem__19_2sol1_8c.html":[16,0,19,7,0],
-"dd/df0/problem__19_2sol1_8c.html#a3c04138a5bfe5d72780bb7e82a18e627":[16,0,19,7,0,2],
-"dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e":[16,0,19,7,0,1],
-"dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75":[16,0,19,7,0,0]
+"dd/de6/roman__numerals__to__decimal_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[16,0,3,9,0]
 };

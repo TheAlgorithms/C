@@ -2,7 +2,7 @@ var searchData=
 [
   ['g_0',['G',['../d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202',1,'hash_blake2b.c']]],
   ['game_5finstance_1',['game_instance',['../d1/d01/structgame__instance.html',1,'']]],
-  ['gcd_2',['gcd',['../d8/d1e/structeuclidean__result.html#af112efeacb49a666b59047336c968607',1,'euclidean_result::gcd()'],['../d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d',1,'gcd(unsigned long a, unsigned long b):&#160;sol3.c']]],
+  ['gcd_2',['gcd',['../d8/d1e/structeuclidean__result.html#af112efeacb49a666b59047336c968607',1,'euclidean_result::gcd'],['../d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d',1,'gcd(unsigned long a, unsigned long b):&#160;sol3.c']]],
   ['geometry_5fdatatypes_2eh_3',['geometry_datatypes.h',['../d0/dc7/geometry__datatypes_8h.html',1,'']]],
   ['get_4',['get',['../dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1',1,'get(ListNode *list, const int index):&#160;circular_doubly_linked_list.c'],['../df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250',1,'get(Vector *vec, int index):&#160;vector.c']]],
   ['get_5fangle_5',['get_angle',['../de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8',1,'vectors_3d.c']]],
@@ -32,5 +32,5 @@ var searchData=
   ['group_29',['group',['../d1/d5e/structobservation.html#a2db8ace685c08aa7b52f5a28b0843aab',1,'observation']]],
   ['guesses_30',['guesses',['../d1/d01/structgame__instance.html#a742506bd6e2e03ce63e504ef6abdf643',1,'game_instance']]],
   ['guesses_5fsize_31',['guesses_size',['../d1/d01/structgame__instance.html#affc18c8be0e07b6b19914458ed853aa7',1,'game_instance']]],
-  ['guidelines_20for_20reviewers_20and_20maintainers_32',['Guidelines for reviewers and maintainers',['../dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html',1,'']]]
+  ['guidelines_20for_20reviewers_20and_20maintainers_32',['Guidelines for reviewers and maintainers',['../d7/d1b/md__r_e_v_i_e_w_e_r___c_o_d_e.html',1,'']]]
 ];

@@ -1,6 +1,11 @@
 <map id="decimal_to_anybase" name="decimal_to_anybase">
-<area shape="rect" id="node1" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="5,103,146,128"/>
-<area shape="rect" id="node2" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="197,29,299,55"/>
-<area shape="rect" id="node3" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="207,103,289,128"/>
-<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="194,152,302,178"/>
+<area shape="rect" id="Node000001" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="5,103,146,128"/>
+<area shape="rect" id="Node000002" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="197,29,299,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,100,201,59,203,64,109,104"/>
+<area shape="rect" id="Node000003" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="207,103,289,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="146,113,192,113,192,118,146,118"/>
+<area shape="rect" id="Node000004" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="194,152,302,178"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="124,126,187,145,186,150,122,132"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="219,30,213,21,216,11,228,5,248,3,270,6,281,13,278,17,268,11,248,8,230,10,220,15,218,20,223,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="219,104,213,94,216,84,228,78,248,76,270,79,281,86,278,91,268,84,248,81,230,83,220,88,218,93,223,101"/>
 </map>

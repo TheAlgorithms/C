@@ -1,10 +1,20 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,165,55,191"/>
-<area shape="rect" id="node2" href="$df/d3c/threaded__binary__trees_8c.html#a284d683f74b6c884e79ba00d3d1c3317" title="deletion of a node from the tree if the node isn&#39;t present in the tree, it takes no action." alt="" coords="127,5,202,31"/>
-<area shape="rect" id="node3" href="$df/d3c/threaded__binary__trees_8c.html#a4c1e06b5f0876ec9c1bd6817f3b7eda7" title="performs inorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="110,79,219,104"/>
-<area shape="rect" id="node4" href="$df/d3c/threaded__binary__trees_8c.html#a823432888332fc9f0aa6072cff28c3bb" title="inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tr..." alt="" coords="129,128,200,154"/>
-<area shape="rect" id="node6" href="$df/d3c/threaded__binary__trees_8c.html#a5a82ae0ee13788be51ca4ba6cddb0719" title="performs postorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="103,201,226,227"/>
-<area shape="rect" id="node7" href="$df/d3c/threaded__binary__trees_8c.html#a8169ba0dfd5b8183672e444d1434bf9c" title="performs preorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="106,275,223,300"/>
-<area shape="rect" id="node8" href="$df/d3c/threaded__binary__trees_8c.html#a306d567466f22e1e927aaed97d8bb58c" title="searches for the element" alt="" coords="134,324,195,350"/>
-<area shape="rect" id="node5" href="$df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d" title="creates a new node param[in] data value to be inserted" alt="" coords="274,128,366,154"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,165,55,191"/>
+<area shape="rect" id="Node000002" href="$df/d3c/threaded__binary__trees_8c.html#a284d683f74b6c884e79ba00d3d1c3317" title="deletion of a node from the tree if the node isn&#39;t present in the tree, it takes no action." alt="" coords="127,5,202,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,164,55,106,75,71,101,40,112,32,115,36,104,44,79,74,60,108,37,166"/>
+<area shape="rect" id="Node000003" href="$df/d3c/threaded__binary__trees_8c.html#a4c1e06b5f0876ec9c1bd6817f3b7eda7" title="performs inorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="110,79,219,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="42,163,68,138,101,113,110,109,112,113,104,118,72,142,46,167"/>
+<area shape="rect" id="Node000004" href="$df/d3c/threaded__binary__trees_8c.html#a823432888332fc9f0aa6072cff28c3bb" title="inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tr..." alt="" coords="129,128,200,154"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="54,169,114,152,115,157,56,174"/>
+<area shape="rect" id="Node000006" href="$df/d3c/threaded__binary__trees_8c.html#a5a82ae0ee13788be51ca4ba6cddb0719" title="performs postorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="103,201,226,227"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="56,182,101,194,99,200,54,187"/>
+<area shape="rect" id="Node000007" href="$df/d3c/threaded__binary__trees_8c.html#a8169ba0dfd5b8183672e444d1434bf9c" title="performs preorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="106,275,223,300"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="48,189,104,237,136,263,133,267,101,242,45,194"/>
+<area shape="rect" id="Node000008" href="$df/d3c/threaded__binary__trees_8c.html#a306d567466f22e1e927aaed97d8bb58c" title="searches for the element" alt="" coords="134,324,195,350"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="37,191,60,248,79,282,104,311,122,322,119,327,101,315,75,285,55,250,33,193"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="141,79,137,70,139,61,149,54,164,52,182,55,190,62,187,66,180,60,164,57,151,59,144,64,142,70,146,77"/>
+<area shape="rect" id="Node000005" href="$df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d" title="creates a new node param[in] data value to be inserted" alt="" coords="274,128,366,154"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="200,138,260,138,260,144,200,144"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="141,202,137,193,139,183,149,177,164,175,182,178,190,185,187,189,180,182,164,180,151,182,144,186,142,192,146,200"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="141,275,137,266,139,257,149,250,164,248,182,251,190,258,187,262,180,256,164,253,151,255,144,260,142,266,146,273"/>
 </map>

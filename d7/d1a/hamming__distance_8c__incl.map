@@ -1,5 +1,7 @@
 <map id="misc/hamming_distance.c" name="misc/hamming_distance.c">
-<area shape="rect" id="node1" title="Hamming distance algorithm implementation." alt="" coords="5,5,179,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="14,79,82,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="106,79,166,105"/>
+<area shape="rect" id="Node000001" title="Hamming distance algorithm implementation." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="14,79,82,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,33,65,68,61,65,82,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,79,166,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,30,123,65,119,68,97,33"/>
 </map>

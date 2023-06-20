@@ -1,5 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Driver Code." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$d8/d30/decimal__to__binary__recursion_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,29,146,55"/>
-<area shape="rect" id="node3" href="$d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8" title="Decimal to binary using recursion algorithm." alt="" coords="194,29,320,55"/>
+<area shape="rect" id="Node000001" title="Driver Code." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$d8/d30/decimal__to__binary__recursion_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,29,146,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="rect" id="Node000003" href="$d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8" title="Decimal to binary using recursion algorithm." alt="" coords="194,29,320,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,40,179,40,179,45,147,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="234,30,230,21,232,11,242,5,257,3,274,6,283,13,279,17,272,10,257,8,244,10,237,14,235,20,239,28"/>
 </map>

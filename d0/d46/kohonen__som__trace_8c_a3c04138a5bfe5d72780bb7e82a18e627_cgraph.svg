@@ -5,339 +5,396 @@
  -->
 <!-- Title: main Pages: 1 -->
 <!--zoomable 279 -->
+
 <svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }
 ]]></style>
-<script type="text/javascript"><![CDATA[
-var edges = document.getElementsByTagName('g');
-if (edges && edges.length) {
-  for (var i=0;i<edges.length;i++) {
-    if (edges[i].id.substr(0,4)=='edge') {
-      edges[i].setAttribute('class','edge');
-    }
-  }
-}
-]]></script>
-        <defs>
-                <circle id="rim" cx="0" cy="0" r="7"/>
-                <circle id="rim2" cx="0" cy="0" r="3.5"/>
-                <g id="zoomPlus">
-                        <use xlink:href="#rim" fill="#404040">
-                                <set attributeName="fill" to="#808080" begin="zoomplus.mouseover" end="zoomplus.mouseout"/>
-                        </use>
-                        <path d="M-4,0h8M0,-4v8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
-                </g>
-                <g id="zoomMin">
-                        <use xlink:href="#rim" fill="#404040">
-                                <set attributeName="fill" to="#808080" begin="zoomminus.mouseover" end="zoomminus.mouseout"/>
-                        </use>
-                        <path d="M-4,0h8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
-                </g>
-                <g id="dirArrow">
-                        <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-               <g id="resetDef">
-                       <use xlink:href="#rim2" fill="#404040">
-                               <set attributeName="fill" to="#808080" begin="reset.mouseover" end="reset.mouseout"/>
-                       </use>
-               </g>
-        </defs>
 
-<script type="text/javascript">
+<defs>
+  <circle id="rim" cx="0" cy="0" r="7"/>
+  <circle id="rim2" cx="0" cy="0" r="3.5"/>
+  <g id="zoomPlus">
+    <use xlink:href="#rim" fill="#404040"><set attributeName="fill" to="#808080" begin="zoomplus.mouseover" end="zoomplus.mouseout"/></use>
+    <path d="M-4,0h8M0,-4v8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
+  </g>
+  <g id="zoomMin">
+    <use xlink:href="#rim" fill="#404040"><set attributeName="fill" to="#808080" begin="zoomminus.mouseover" end="zoomminus.mouseout"/></use>
+    <path d="M-4,0h8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
+  </g>
+  <g id="arrowUp" transform="translate(30 24)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowRight" transform="rotate(90) translate(36 -43)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowDown" transform="rotate(180) translate(-30 -48)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowLeft" transform="rotate(270) translate(-36 17)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="resetDef">
+    <use xlink:href="#rim2" fill="#404040"><set attributeName="fill" to="#808080" begin="reset.mouseover" end="reset.mouseout"/></use>
+  </g>
+</defs>
+<script type="application/ecmascript">
 var viewWidth = 607;
 var viewHeight = 279;
 var sectionId = 'dynsection-1';
 </script>
-<script xlink:href="../../svgpan.js"/>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>main</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Main function.">
+<g id="a_Node000001"><a xlink:title="Main function.">
 <polygon fill="#999999" stroke="#666666" points="37,-150.25 0,-150.25 0,-131 37,-131 37,-150.25"/>
 <text text-anchor="middle" x="18.5" y="-136.75" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908" target="_top" xlink:title="Convert clock cycle difference to time in seconds.">
+<g id="a_Node000002"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908" target="_top" xlink:title="Convert clock cycle difference to time in seconds.">
 <polygon fill="white" stroke="#666666" points="149.75,-206.25 73,-206.25 73,-187 149.75,-187 149.75,-206.25"/>
 <text text-anchor="middle" x="111.38" y="-192.75" font-family="Helvetica,sans-Serif" font-size="10.00">get_clock_diff</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M32.28,-150.63C42.87,-158.69 58.48,-170.05 73,-178.62 74.77,-179.67 76.6,-180.7 78.47,-181.72"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="76.42,-185.11 86.92,-186.57 79.62,-178.89 76.42,-185.11"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" target="_top" xlink:title="Test that creates a random set of points distributed near the circumference of a circle and trains an...">
+<g id="a_Node000003"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" target="_top" xlink:title="Test that creates a random set of points distributed near the circumference of a circle and trains an...">
 <polygon fill="white" stroke="#666666" points="130.25,-169.25 92.5,-169.25 92.5,-150 130.25,-150 130.25,-169.25"/>
 <text text-anchor="middle" x="111.38" y="-155.75" font-family="Helvetica,sans-Serif" font-size="10.00">test1</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.45,-144.38C50.07,-147.02 67.21,-150.6 81.7,-153.63"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="80.64,-157.19 91.15,-155.81 82.08,-150.34 80.64,-157.19"/>
+</a>
+</g>
 </g>
 <!-- Node10 -->
-<g id="node10" class="node">
+<g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title="Test that creates a random set of points distributed near the locus of the Lamniscate of Gerono and t...">
+<g id="a_Node000010"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title="Test that creates a random set of points distributed near the locus of the Lamniscate of Gerono and t...">
 <polygon fill="white" stroke="#666666" points="130.25,-132.25 92.5,-132.25 92.5,-113 130.25,-113 130.25,-132.25"/>
 <text text-anchor="middle" x="111.38" y="-118.75" font-family="Helvetica,sans-Serif" font-size="10.00">test2</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
-<g id="edge10" class="edge">
+<g id="edge10_Node000001_Node000010" class="edge">
 <title>Node1&#45;&gt;Node10</title>
+<g id="a_edge10_Node000001_Node000010"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.45,-137.07C50.07,-134.57 67.21,-131.18 81.7,-128.3"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="82.02,-131.61 91.15,-126.24 80.66,-124.75 82.02,-131.61"/>
+</a>
+</g>
 </g>
 <!-- Node12 -->
-<g id="node12" class="node">
+<g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a6d0455dd5c30adda100e95f0423c786e" target="_top" xlink:title="Test that creates a random set of points distributed in six clusters in 3D space.">
+<g id="a_Node000012"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a6d0455dd5c30adda100e95f0423c786e" target="_top" xlink:title="Test that creates a random set of points distributed in six clusters in 3D space.">
 <polygon fill="white" stroke="#666666" points="130.25,-95.25 92.5,-95.25 92.5,-76 130.25,-76 130.25,-95.25"/>
 <text text-anchor="middle" x="111.38" y="-81.75" font-family="Helvetica,sans-Serif" font-size="10.00">test3</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
-<g id="edge16" class="edge">
+<g id="edge16_Node000001_Node000012" class="edge">
 <title>Node1&#45;&gt;Node12</title>
+<g id="a_edge16_Node000001_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M32.75,-130.59C43.35,-122.79 58.75,-111.92 73,-103.62 76.05,-101.85 79.3,-100.1 82.57,-98.42"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="83.78,-101.23 91.21,-93.68 80.69,-94.95 83.78,-101.23"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" target="_top" xlink:title="Helper function to generate a random number in a given interval.">
+<g id="a_Node000004"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" target="_top" xlink:title="Helper function to generate a random number in a given interval.">
 <polygon fill="white" stroke="#666666" points="418.38,-188.25 364.88,-188.25 364.88,-169 418.38,-169 418.38,-188.25"/>
 <text text-anchor="middle" x="391.62" y="-174.75" font-family="Helvetica,sans-Serif" font-size="10.00">_random</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.69,-165.49C137.33,-168.33 144.48,-172.3 149.75,-177.62 176.31,-204.49 153.88,-234.34 185.75,-254.62 225.78,-280.1 247.61,-269.98 292.5,-254.62 325.94,-243.19 356.81,-215.21 374.68,-196.58"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="376.91,-199.24 381.15,-189.53 371.78,-194.48 376.91,-199.24"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" target="_top" xlink:title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given...">
+<g id="a_Node000005"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" target="_top" xlink:title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given...">
 <polygon fill="white" stroke="#666666" points="292.5,-132.25 185.75,-132.25 185.75,-113 292.5,-113 292.5,-132.25"/>
 <text text-anchor="middle" x="239.12" y="-118.75" font-family="Helvetica,sans-Serif" font-size="10.00">kohonen_som_tracer</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000003_Node000005" class="edge">
 <title>Node3&#45;&gt;Node5</title>
+<g id="a_edge4_Node000003_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-154.24C147.11,-149.4 171.95,-142.1 193.6,-135.72"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="194.32,-138.87 202.93,-132.69 192.35,-132.15 194.32,-138.87"/>
+</a>
+</g>
 </g>
 <!-- Node8 -->
-<g id="node8" class="node">
+<g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" target="_top" xlink:title="Save a given n&#45;dimensional data martix to file.">
+<g id="a_Node000008"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" target="_top" xlink:title="Save a given n&#45;dimensional data martix to file.">
 <polygon fill="white" stroke="#666666" points="277.5,-95.25 200.75,-95.25 200.75,-76 277.5,-76 277.5,-95.25"/>
 <text text-anchor="middle" x="239.12" y="-81.75" font-family="Helvetica,sans-Serif" font-size="10.00">save_nd_data</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
+<g id="edge7_Node000003_Node000008" class="edge">
 <title>Node3&#45;&gt;Node8</title>
+<g id="a_edge7_Node000003_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.62,-152.45C136.96,-149.55 143.93,-145.87 149.75,-141.62 168.54,-127.91 166.19,-116.21 185.75,-103.62 187.54,-102.47 189.41,-101.39 191.34,-100.36"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="192.69,-103.13 200.29,-95.74 189.74,-96.78 192.69,-103.13"/>
+</a>
+</g>
 </g>
 <!-- Node9 -->
-<g id="node9" class="node">
+<g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8" target="_top" xlink:title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ...">
+<g id="a_Node000009"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8" target="_top" xlink:title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ...">
 <polygon fill="white" stroke="#666666" points="269.62,-245.25 208.62,-245.25 208.62,-226 269.62,-226 269.62,-245.25"/>
 <text text-anchor="middle" x="239.12" y="-231.75" font-family="Helvetica,sans-Serif" font-size="10.00">test_circle</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node9 -->
-<g id="edge8" class="edge">
+<g id="edge8_Node000003_Node000009" class="edge">
 <title>Node3&#45;&gt;Node9</title>
+<g id="a_edge8_Node000003_Node000009"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.49,-166.98C136.82,-169.9 143.82,-173.54 149.75,-177.62 167.88,-190.1 167.5,-199.32 185.75,-211.62 190.73,-214.98 196.25,-218.08 201.78,-220.86"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="200.11,-224.42 210.65,-225.51 203.1,-218.08 200.11,-224.42"/>
+</a>
+</g>
 </g>
 <!-- Node6 -->
-<g id="node6" class="node">
+<g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" target="_top" xlink:title="Update weights of the SOM using Kohonen algorithm.">
+<g id="a_Node000006"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" target="_top" xlink:title="Update weights of the SOM using Kohonen algorithm.">
 <polygon fill="white" stroke="#666666" points="454.75,-132.25 328.5,-132.25 328.5,-113 454.75,-113 454.75,-132.25"/>
 <text text-anchor="middle" x="391.62" y="-118.75" font-family="Helvetica,sans-Serif" font-size="10.00">kohonen_update_weights</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
+<g id="edge5_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
+<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M292.76,-122.62C300.72,-122.62 309.05,-122.62 317.34,-122.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="317.2,-126.13 327.2,-122.62 317.2,-119.13 317.2,-126.13"/>
+</a>
+</g>
 </g>
 <!-- Node7 -->
-<g id="node7" class="node">
+<g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" target="_top" xlink:title="Get minimum value and index of the value in a vector.">
+<g id="a_Node000007"><a xlink:href="../../d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" target="_top" xlink:title="Get minimum value and index of the value in a vector.">
 <polygon fill="white" stroke="#666666" points="599,-132.25 490.75,-132.25 490.75,-113 599,-113 599,-132.25"/>
 <text text-anchor="middle" x="544.88" y="-118.75" font-family="Helvetica,sans-Serif" font-size="10.00">kohonen_get_min_1d</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
+<g id="edge6_Node000006_Node000007" class="edge">
 <title>Node6&#45;&gt;Node7</title>
+<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M455.02,-122.62C463.07,-122.62 471.34,-122.62 479.42,-122.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="479.31,-126.13 489.31,-122.62 479.31,-119.13 479.31,-126.13"/>
+</a>
+</g>
 </g>
 <!-- Node9&#45;&gt;Node4 -->
-<g id="edge9" class="edge">
+<g id="edge9_Node000009_Node000004" class="edge">
 <title>Node9&#45;&gt;Node4</title>
+<g id="a_edge9_Node000009_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M266.68,-225.57C291.05,-216.34 327.34,-202.59 354.36,-192.36"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="355.47,-195.3 363.58,-188.49 352.99,-188.76 355.47,-195.3"/>
+</a>
+</g>
 </g>
 <!-- Node10&#45;&gt;Node4 -->
-<g id="edge11" class="edge">
+<g id="edge11_Node000010_Node000004" class="edge">
 <title>Node10&#45;&gt;Node4</title>
+<g id="a_edge11_Node000010_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.62,-129.8C136.96,-132.7 143.93,-136.38 149.75,-140.62 168.54,-154.34 164.38,-169.43 185.75,-178.62 240.49,-202.17 311.32,-194.9 353.74,-187.06"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="354.27,-190.33 363.4,-184.97 352.92,-183.46 354.27,-190.33"/>
+</a>
+</g>
 </g>
 <!-- Node10&#45;&gt;Node5 -->
-<g id="edge12" class="edge">
+<g id="edge12_Node000010_Node000005" class="edge">
 <title>Node10&#45;&gt;Node5</title>
+<g id="a_edge12_Node000010_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-122.62C142.45,-122.62 158.55,-122.62 174.7,-122.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="174.27,-126.13 184.27,-122.62 174.27,-119.13 174.27,-126.13"/>
+</a>
+</g>
 </g>
 <!-- Node10&#45;&gt;Node8 -->
-<g id="edge13" class="edge">
+<g id="edge13_Node000010_Node000008" class="edge">
 <title>Node10&#45;&gt;Node8</title>
+<g id="a_edge13_Node000010_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-117.24C147.11,-112.4 171.95,-105.1 193.6,-98.72"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="194.32,-101.87 202.93,-95.69 192.35,-95.15 194.32,-101.87"/>
+</a>
+</g>
 </g>
 <!-- Node11 -->
-<g id="node11" class="node">
+<g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614" target="_top" xlink:title="Creates a random set of points distributed near the locus of the Lamniscate of Gerono.">
+<g id="a_Node000011"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614" target="_top" xlink:title="Creates a random set of points distributed near the locus of the Lamniscate of Gerono.">
 <polygon fill="white" stroke="#666666" points="281.62,-169.25 196.62,-169.25 196.62,-150 281.62,-150 281.62,-169.25"/>
 <text text-anchor="middle" x="239.12" y="-155.75" font-family="Helvetica,sans-Serif" font-size="10.00">test_lamniscate</text>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
-<g id="edge14" class="edge">
+<g id="edge14_Node000010_Node000011" class="edge">
 <title>Node10&#45;&gt;Node11</title>
+<g id="a_edge14_Node000010_Node000011"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-128.01C147.11,-132.85 171.95,-140.15 193.6,-146.53"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="192.35,-150.1 202.93,-149.56 194.32,-143.38 192.35,-150.1"/>
+</a>
+</g>
 </g>
 <!-- Node11&#45;&gt;Node4 -->
-<g id="edge15" class="edge">
+<g id="edge15_Node000011_Node000004" class="edge">
 <title>Node11&#45;&gt;Node4</title>
+<g id="a_edge15_Node000011_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M282.05,-164.92C304.56,-167.76 332.07,-171.23 353.76,-173.97"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="353.16,-177.55 363.52,-175.33 354.03,-170.6 353.16,-177.55"/>
+</a>
+</g>
 </g>
 <!-- Node12&#45;&gt;Node4 -->
-<g id="edge17" class="edge">
+<g id="edge17_Node000012_Node000004" class="edge">
 <title>Node12&#45;&gt;Node4</title>
+<g id="a_edge17_Node000012_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.67,-76.75C165.23,-61.38 241.27,-34.39 292.5,-66.62 323.79,-86.32 303.55,-114.33 328.5,-141.62 336.52,-150.4 347.12,-157.75 357.28,-163.52"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="355.31,-166.98 365.79,-168.57 358.6,-160.79 355.31,-166.98"/>
+</a>
+</g>
 </g>
 <!-- Node12&#45;&gt;Node5 -->
-<g id="edge18" class="edge">
+<g id="edge18_Node000012_Node000005" class="edge">
 <title>Node12&#45;&gt;Node5</title>
+<g id="a_edge18_Node000012_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-91.01C147.11,-95.85 171.95,-103.15 193.6,-109.53"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="192.35,-113.1 202.93,-112.56 194.32,-106.38 192.35,-113.1"/>
+</a>
+</g>
 </g>
 <!-- Node12&#45;&gt;Node8 -->
-<g id="edge19" class="edge">
+<g id="edge19_Node000012_Node000008" class="edge">
 <title>Node12&#45;&gt;Node8</title>
+<g id="a_edge19_Node000012_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M130.66,-85.62C146.08,-85.62 168.86,-85.62 189.49,-85.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="189.35,-89.13 199.35,-85.62 189.35,-82.13 189.35,-89.13"/>
+</a>
+</g>
 </g>
 <!-- Node13 -->
-<g id="node13" class="node">
+<g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" target="_top" xlink:title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points.">
+<g id="a_Node000013"><a xlink:href="../../d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" target="_top" xlink:title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points.">
 <polygon fill="white" stroke="#666666" points="282.75,-19.25 195.5,-19.25 195.5,0 282.75,0 282.75,-19.25"/>
 <text text-anchor="middle" x="239.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">test_3d_classes</text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node13 -->
-<g id="edge20" class="edge">
+<g id="edge20_Node000012_Node000013" class="edge">
 <title>Node12&#45;&gt;Node13</title>
+<g id="a_edge20_Node000012_Node000013"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M124.88,-75.66C139.11,-64.59 163.3,-46.57 185.75,-33.62 191.55,-30.28 197.9,-27.04 204.11,-24.09"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="205.04,-27.05 212.66,-19.7 202.11,-20.69 205.04,-27.05"/>
+</a>
+</g>
 </g>
 <!-- Node13&#45;&gt;Node4 -->
-<g id="edge21" class="edge">
+<g id="edge21_Node000013_Node000004" class="edge">
 <title>Node13&#45;&gt;Node4</title>
+<g id="a_edge21_Node000013_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M273.05,-19.75C280.21,-23.21 287.22,-27.74 292.5,-33.62 326.3,-71.28 296.78,-102.21 328.5,-141.62 335.7,-150.57 345.69,-157.85 355.56,-163.51"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="353.79,-167.07 364.27,-168.63 357.06,-160.87 353.79,-167.07"/>
+</a>
+</g>
 </g>
 </g>
 </svg>
-        <g id="navigator" transform="translate(0 0)" fill="#404254">
-                <rect fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width=".5" x="0" y="0" width="60" height="60"/>
-                <use id="zoomplus" xlink:href="#zoomPlus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/>
-                <use id="zoomminus" xlink:href="#zoomMin" x="42" y="9" onmousedown="handleZoom(evt,'out')"/>
-                <use id="reset" xlink:href="#resetDef" x="30" y="36" onmousedown="handleReset()"/>
-                <g id="arrowUp" xlink:href="#dirArrow" transform="translate(30 24)" onmousedown="handlePan(0,-1)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowUp.mouseover" end="arrowUp.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowRight" xlink:href="#dirArrow" transform="rotate(90) translate(36 -43)" onmousedown="handlePan(1,0)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowRight.mouseover" end="arrowRight.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowDown" xlink:href="#dirArrow" transform="rotate(180) translate(-30 -48)" onmousedown="handlePan(0,1)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowDown.mouseover" end="arrowDown.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowLeft" xlink:href="#dirArrow" transform="rotate(270) translate(-36 17)" onmousedown="handlePan(-1,0)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowLeft.mouseover" end="arrowLeft.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-        </g>
-        <svg viewBox="0 0 15 15" width="100%" height="30px" preserveAspectRatio="xMaxYMin meet">
-         <g id="arrow_out" transform="scale(0.3 0.3)">
-          <a xlink:href="kohonen__som__trace_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph_org.svg" target="_base">
-           <rect id="button" ry="5" rx="5" y="6" x="6" height="38" width="38"
-                fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width="1.0"/>
-           <path id="arrow"
-             d="M 11.500037,31.436501 C 11.940474,20.09759 22.043105,11.32322 32.158766,21.979434 L 37.068811,17.246167 C 37.068811,17.246167 37.088388,32 37.088388,32 L 22.160133,31.978069 C 22.160133,31.978069 26.997745,27.140456 26.997745,27.140456 C 18.528582,18.264221 13.291696,25.230495 11.500037,31.436501 z"
-             style="fill:#404040;"/>
-          </a>
-         </g>
-        </svg>
+
+<g id="navigator" transform="translate(0 0)" fill="#404254">
+  <rect fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width=".5" x="0" y="0" width="60" height="60"/>
+  <use id="zoomplus" xlink:href="#zoomPlus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/>
+  <use id="zoomminus" xlink:href="#zoomMin" x="42" y="9" onmousedown="handleZoom(evt,'out')"/>
+  <use id="reset" xlink:href="#resetDef" x="30" y="36" onmousedown="handleReset()"/>
+   <use id="arrowup" xlink:href="#arrowUp" x="0" y="0" onmousedown="handlePan(0,-1)"/>
+  <use id="arrowright" xlink:href="#arrowRight" x="0" y="0" onmousedown="handlePan(1,0)"/>
+  <use id="arrowdown" xlink:href="#arrowDown" x="0" y="0" onmousedown="handlePan(0,1)"/>
+  <use id="arrowleft" xlink:href="#arrowLeft" x="0" y="0" onmousedown="handlePan(-1,0)"/>
+</g>
+<svg viewBox="0 0 15 15" width="100%" height="30px" preserveAspectRatio="xMaxYMin meet">
+ <g id="arrow_out" transform="scale(0.3 0.3)">
+  <a xlink:href="kohonen__som__trace_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph_org.svg" target="_base">
+   <rect id="button" ry="5" rx="5" y="6" x="6" height="38" width="38"
+        fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width="1.0"/>
+   <path id="arrow"
+     d="M 11.500037,31.436501 C 11.940474,20.09759 22.043105,11.32322 32.158766,21.979434 L 37.068811,17.246167 C 37.068811,17.246167 37.088388,32 37.088388,32 L 22.160133,31.978069 C 22.160133,31.978069 26.997745,27.140456 26.997745,27.140456 C 18.528582,18.264221 13.291696,25.230495 11.500037,31.436501 z"
+     style="fill:#404040;"/>
+  </a>
+ </g>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

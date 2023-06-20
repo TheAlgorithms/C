@@ -6,46 +6,77 @@
 <!-- Title: createNFA Pages: 1 -->
 <svg width="174pt" height="64pt"
  viewBox="0.00 0.00 173.50 64.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60.25)">
 <title>createNFA</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="creates and initializes a NFA">
+<g id="a_Node000001"><a xlink:title="creates and initializes a NFA">
 <polygon fill="#999999" stroke="#666666" points="63.25,-37.25 0,-37.25 0,-18 63.25,-18 63.25,-37.25"/>
 <text text-anchor="middle" x="31.62" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">createNFA</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124" target="_top" xlink:title="adds a state to a NFA">
+<g id="a_Node000002"><a xlink:href="../../dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124" target="_top" xlink:title="adds a state to a NFA">
 <polygon fill="white" stroke="#666666" points="159.88,-56.25 104.88,-56.25 104.88,-37 159.88,-37 159.88,-56.25"/>
 <text text-anchor="middle" x="132.38" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">addState</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M63.6,-33.58C73.24,-35.44 83.96,-37.5 93.99,-39.43"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="93.03,-43 103.51,-41.46 94.35,-36.13 93.03,-43"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a" target="_top" xlink:title="creates and initializes a NFA state">
+<g id="a_Node000003"><a xlink:href="../../dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a" target="_top" xlink:title="creates and initializes a NFA state">
 <polygon fill="white" stroke="#666666" points="165.5,-19.25 99.25,-19.25 99.25,0 165.5,0 165.5,-19.25"/>
 <text text-anchor="middle" x="132.38" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">createState</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M63.6,-21.98C71.39,-20.56 79.89,-19.01 88.15,-17.5"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="88.59,-20.8 97.8,-15.56 87.34,-13.91 88.59,-20.8"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

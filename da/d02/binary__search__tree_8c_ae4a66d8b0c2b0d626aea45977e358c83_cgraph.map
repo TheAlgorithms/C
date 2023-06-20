@@ -1,3 +1,4 @@
 <map id="height" name="height">
-<area shape="rect" id="node1" title="Utilitary procedure to measure the height of the binary tree." alt="" coords="5,29,62,55"/>
+<area shape="rect" id="Node000001" title="Utilitary procedure to measure the height of the binary tree." alt="" coords="5,29,62,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="22,29,21,12,26,5,34,3,42,6,46,13,41,16,38,10,33,8,29,10,26,14,27,29"/>
 </map>

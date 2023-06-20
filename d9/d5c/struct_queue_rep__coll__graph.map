@@ -1,4 +1,6 @@
 <map id="QueueRep" name="QueueRep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,218,89,244"/>
-<area shape="rect" id="node2" href="$d5/da1/structnode.html" title="Node, the basic data structure in the tree." alt="" coords="22,60,72,86"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,218,89,244"/>
+<area shape="rect" id="Node000002" href="$d5/da1/structnode.html" title="Node, the basic data structure in the tree." alt="" coords="22,60,72,86"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,100,50,218,44,218,44,100"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="73,51,90,54,96,62,98,73,94,87,84,94,71,95,58,89,60,84,72,90,83,89,90,84,93,73,91,64,87,59,72,56"/>
 </map>

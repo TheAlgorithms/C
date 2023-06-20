@@ -1,4 +1,5 @@
 <map id="adaline_predict" name="adaline_predict">
-<area shape="rect" id="node1" title="predict the output of the model for given set of features" alt="" coords="5,5,114,31"/>
-<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="162,5,287,31"/>
+<area shape="rect" id="Node000001" title="predict the output of the model for given set of features" alt="" coords="5,5,114,31"/>
+<area shape="rect" id="Node000002" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="162,5,287,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,16,147,16,147,21,114,21"/>
 </map>

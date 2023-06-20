@@ -6,31 +6,59 @@
 <!-- Title: test_xor8 Pages: 1 -->
 <svg width="135pt" height="27pt"
  viewBox="0.00 0.00 135.25 27.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23.25)">
 <title>test_xor8</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Test function for xor8.">
+<g id="a_Node000001"><a xlink:title="Test function for xor8.">
 <polygon fill="#999999" stroke="#666666" points="56.5,-19.25 0,-19.25 0,0 56.5,0 56.5,-19.25"/>
 <text text-anchor="middle" x="28.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">test_xor8</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb" target="_top" xlink:title="8&#45;bit XOR algorithm implementation">
+<g id="a_Node000002"><a xlink:href="../../d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb" target="_top" xlink:title="8&#45;bit XOR algorithm implementation">
 <polygon fill="white" stroke="#666666" points="127.25,-19.25 92.5,-19.25 92.5,0 127.25,0 127.25,-19.25"/>
 <text text-anchor="middle" x="109.88" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">xor8</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M56.65,-9.62C64.72,-9.62 73.55,-9.62 81.62,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="81.35,-13.13 91.35,-9.62 81.35,-6.13 81.35,-13.13"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

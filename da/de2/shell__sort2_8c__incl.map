@@ -1,6 +1,9 @@
 <map id="sorting/shell_sort2.c" name="sorting/shell_sort2.c">
-<area shape="rect" id="node1" title="Shell sort algorithm implementation." alt="" coords="52,5,190,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,66,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,79,153,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="176,79,234,105"/>
+<area shape="rect" id="Node000001" title="Shell sort algorithm implementation." alt="" coords="52,5,190,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,34,62,72,59,67,105,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,153,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,31,124,64,118,64,118,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="176,79,234,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,30,182,67,178,72,133,34"/>
 </map>

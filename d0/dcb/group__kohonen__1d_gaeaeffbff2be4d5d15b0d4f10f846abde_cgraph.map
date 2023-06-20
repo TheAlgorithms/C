@@ -1,5 +1,7 @@
 <map id="kohonen_som_tracer" name="kohonen_som_tracer">
-<area shape="rect" id="node1" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="5,5,148,31"/>
-<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="196,5,364,31"/>
-<area shape="rect" id="node3" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="412,5,556,31"/>
+<area shape="rect" id="Node000001" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="5,5,148,31"/>
+<area shape="rect" id="Node000002" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="196,5,364,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,16,181,16,181,21,148,21"/>
+<area shape="rect" id="Node000003" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="412,5,556,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,16,397,16,397,21,364,21"/>
 </map>

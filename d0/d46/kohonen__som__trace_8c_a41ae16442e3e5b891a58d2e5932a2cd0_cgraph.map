@@ -1,4 +1,5 @@
 <map id="test_3d_classes" name="test_3d_classes">
-<area shape="rect" id="node1" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="5,5,122,31"/>
-<area shape="rect" id="node2" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="170,5,241,31"/>
+<area shape="rect" id="Node000001" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="5,5,122,31"/>
+<area shape="rect" id="Node000002" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="170,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
 </map>

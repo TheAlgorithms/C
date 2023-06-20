@@ -6,46 +6,77 @@
 <!-- Title: get_next_abundant Pages: 1 -->
 <svg width="349pt" height="27pt"
  viewBox="0.00 0.00 349.25 27.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23.25)">
 <title>get_next_abundant</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Find the next abundant number after N and not including N.">
+<g id="a_Node000001"><a xlink:title="Find the next abundant number after N and not including N.">
 <polygon fill="#999999" stroke="#666666" points="98.5,-19.25 0,-19.25 0,0 98.5,0 98.5,-19.25"/>
 <text text-anchor="middle" x="49.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">get_next_abundant</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" target="_top" xlink:title="Is the given number an abundant number (1) or not (0)">
+<g id="a_Node000002"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" target="_top" xlink:title="Is the given number an abundant number (1) or not (0)">
 <polygon fill="white" stroke="#666666" points="203,-19.25 134.5,-19.25 134.5,0 203,0 203,-19.25"/>
 <text text-anchor="middle" x="168.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">is_abundant</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M98.72,-9.62C106.8,-9.62 115.14,-9.62 123.12,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="123.08,-13.13 133.08,-9.62 123.08,-6.13 123.08,-13.13"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" target="_top" xlink:title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect.">
+<g id="a_Node000003"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" target="_top" xlink:title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect.">
 <polygon fill="white" stroke="#666666" points="341.25,-19.25 239,-19.25 239,0 341.25,0 341.25,-19.25"/>
 <text text-anchor="middle" x="290.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">get_perfect_number</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M203.32,-9.62C211.08,-9.62 219.57,-9.62 228.1,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="227.87,-13.13 237.87,-9.62 227.87,-6.13 227.87,-13.13"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

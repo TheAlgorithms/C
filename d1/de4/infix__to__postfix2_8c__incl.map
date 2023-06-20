@@ -1,9 +1,15 @@
 <map id="conversions/infix_to_postfix2.c" name="conversions/infix_to_postfix2.c">
-<area shape="rect" id="node1" title="Infix to Postfix converter implementation" alt="" coords="186,5,323,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,66,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="90,94,154,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="178,94,242,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="267,94,330,120"/>
-<area shape="rect" id="node6" title=" " alt="" coords="354,94,418,120"/>
-<area shape="rect" id="node7" title=" " alt="" coords="443,94,511,120"/>
+<area shape="rect" id="Node000001" title="Infix to Postfix converter implementation" alt="" coords="186,5,323,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,66,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,49,80,92,78,87,199,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,94,154,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,49,156,88,153,84,220,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,94,242,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,48,226,82,222,79,241,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="267,94,330,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="267,45,287,79,282,82,263,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="354,94,418,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="288,44,355,84,352,88,286,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="443,94,511,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="311,44,430,86,428,91,309,49"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="data_structures/binary_trees/binary_search_tree.c" name="data_structures/binary_trees/binary_search_tree.c">
-<area shape="rect" id="node1" title="A basic unbalanced binary search tree implementation in C." alt="" coords="5,5,188,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="24,94,84,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="108,94,171,120"/>
+<area shape="rect" id="Node000001" title="A basic unbalanced binary search tree implementation in C." alt="" coords="5,5,188,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="24,94,84,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,48,70,82,65,79,84,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="108,94,171,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,45,128,79,123,82,105,48"/>
 </map>

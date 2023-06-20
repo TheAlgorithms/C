@@ -1,6 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,79,55,104"/>
-<area shape="rect" id="node2" href="$dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d" title="Clear memory allocated by propagate function." alt="" coords="103,29,200,55"/>
-<area shape="rect" id="node3" href="$dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab" title="Print sets in the current range to stdout" alt="" coords="128,79,175,104"/>
-<area shape="rect" id="node4" href="$dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97" title="Iterative constructor of all sets in the current level." alt="" coords="112,152,191,178"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,79,55,104"/>
+<area shape="rect" id="Node000002" href="$dc/d80/cantor__set_8c.html#a85df3c64a683100ac6246e1e034df43d" title="Clear memory allocated by propagate function." alt="" coords="103,29,200,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,79,103,59,105,64,56,84"/>
+<area shape="rect" id="Node000003" href="$dc/d80/cantor__set_8c.html#a75ee530cd7148a63249784ad3dda8fab" title="Print sets in the current range to stdout" alt="" coords="128,79,175,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="55,89,113,89,113,94,55,94"/>
+<area shape="rect" id="Node000004" href="$dc/d80/cantor__set_8c.html#a1f156d2b53b80305bd2fa3ff5fdf3c97" title="Iterative constructor of all sets in the current level." alt="" coords="112,152,191,178"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="55,103,117,141,115,146,52,107"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="130,30,126,21,128,11,137,5,151,3,167,6,175,13,171,17,165,10,151,8,139,10,133,14,131,20,135,28"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="130,153,126,143,128,134,137,128,151,125,167,128,175,135,171,139,165,133,151,131,139,133,133,137,131,143,135,151"/>
 </map>

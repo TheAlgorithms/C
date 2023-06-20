@@ -1,5 +1,7 @@
 <map id="createNFA" name="createNFA">
-<area shape="rect" id="node1" title="creates and initializes a NFA" alt="" coords="5,31,90,56"/>
-<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124" title="adds a state to a NFA" alt="" coords="145,5,219,31"/>
-<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a" title="creates and initializes a NFA state" alt="" coords="138,55,226,80"/>
+<area shape="rect" id="Node000001" title="creates and initializes a NFA" alt="" coords="5,31,90,56"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a799974b5bc43a844a200715db21b1124" title="adds a state to a NFA" alt="" coords="145,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,33,130,25,131,30,91,38"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aa87c20bf2b324829943accce4bbff84a" title="creates and initializes a NFA state" alt="" coords="138,55,226,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,48,123,54,122,60,90,54"/>
 </map>

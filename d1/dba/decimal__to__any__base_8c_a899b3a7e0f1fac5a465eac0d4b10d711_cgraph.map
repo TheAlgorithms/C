@@ -1,3 +1,4 @@
 <map id="converted_len" name="converted_len">
-<area shape="rect" id="node1" title="Calculate the final length of the converted number." alt="" coords="5,29,108,55"/>
+<area shape="rect" id="Node000001" title="Calculate the final length of the converted number." alt="" coords="5,29,108,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="38,30,35,21,37,11,44,5,57,3,70,6,77,13,73,16,67,10,56,8,47,10,41,14,40,20,43,28"/>
 </map>

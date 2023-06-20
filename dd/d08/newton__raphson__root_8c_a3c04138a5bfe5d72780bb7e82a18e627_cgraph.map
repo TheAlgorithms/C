@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337" title="Return first order derivative of the function." alt="" coords="103,5,163,31"/>
-<area shape="rect" id="node3" href="$dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925" title="Return value of the function to find the root for." alt="" coords="110,55,156,80"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337" title="Return first order derivative of the function." alt="" coords="103,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,35,88,27,89,32,56,40"/>
+<area shape="rect" id="Node000003" href="$dd/d08/newton__raphson__root_8c.html#a72f87d423a488946b319627a454d3925" title="Return value of the function to find the root for." alt="" coords="110,55,156,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,47,96,56,94,61,54,52"/>
 </map>

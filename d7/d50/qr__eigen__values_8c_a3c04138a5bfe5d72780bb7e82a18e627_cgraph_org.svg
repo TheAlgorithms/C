@@ -9,208 +9,256 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 192.25)">
 <title>main</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="main function">
+<g id="a_Node000001"><a xlink:title="main function">
 <polygon fill="#999999" stroke="#666666" points="37,-112.25 0,-112.25 0,-93 37,-93 37,-112.25"/>
 <text text-anchor="middle" x="18.5" y="-98.75" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0" target="_top" xlink:title="create a square matrix of given size with random elements">
+<g id="a_Node000002"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a7d96c5e4ae1bd6d29791bcc23a4cb2b0" target="_top" xlink:title="create a square matrix of given size with random elements">
 <polygon fill="white" stroke="#666666" points="148.25,-188.25 73,-188.25 73,-169 148.25,-169 148.25,-188.25"/>
 <text text-anchor="middle" x="110.62" y="-174.75" font-family="Helvetica,sans-Serif" font-size="10.00">create_matrix</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M28.47,-112.4C38.71,-123.31 56.22,-141.18 73,-154.62 76.37,-157.33 80.06,-160.02 83.74,-162.56"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="81.48,-165.92 91.75,-168.52 85.34,-160.08 81.48,-165.92"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a0d8ed79786d17df48396b333c09d05bb" target="_top" xlink:title="Compute eigen values using iterative shifted QR decomposition algorithm as follows:">
+<g id="a_Node000003"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a0d8ed79786d17df48396b333c09d05bb" target="_top" xlink:title="Compute eigen values using iterative shifted QR decomposition algorithm as follows:">
 <polygon fill="white" stroke="#666666" points="257.25,-93.25 184.25,-93.25 184.25,-74 257.25,-74 257.25,-93.25"/>
 <text text-anchor="middle" x="220.75" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">eigen_values</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.41,-110.72C47.61,-114.88 60.76,-119.52 73,-121.62 105.96,-127.3 115.8,-129.71 148.25,-121.62 165.59,-117.3 183.34,-107.9 196.82,-99.53"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="198.32,-102.08 204.81,-93.71 194.52,-96.21 198.32,-102.08"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a90562ce8c3707401e9c5809dece68d6a" target="_top" xlink:title="function to display matrix on stdout">
+<g id="a_Node000005"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a90562ce8c3707401e9c5809dece68d6a" target="_top" xlink:title="function to display matrix on stdout">
 <polygon fill="white" stroke="#666666" points="366.62,-37.25 299.62,-37.25 299.62,-18 366.62,-18 366.62,-37.25"/>
 <text text-anchor="middle" x="333.12" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">print_matrix</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
-<g id="edge12" class="edge">
+<g id="edge12_Node000001_Node000005" class="edge">
 <title>Node1&#45;&gt;Node5</title>
+<g id="a_edge12_Node000001_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M25.64,-92.59C34.34,-79.4 51.6,-56.72 73,-46.62 142.7,-13.75 234.78,-16.29 288.32,-21.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="287.83,-25.2 298.14,-22.79 288.58,-18.24 287.83,-25.2"/>
+</a>
+</g>
 </g>
 <!-- Node11 -->
-<g id="node11" class="node">
+<g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" target="_top" xlink:title="test function to compute eigen values of a 2x2 matrix">
+<g id="a_Node000011"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" target="_top" xlink:title="test function to compute eigen values of a 2x2 matrix">
 <polygon fill="white" stroke="#666666" points="129.5,-112.25 91.75,-112.25 91.75,-93 129.5,-93 129.5,-112.25"/>
 <text text-anchor="middle" x="110.62" y="-98.75" font-family="Helvetica,sans-Serif" font-size="10.00">test1</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node11 -->
-<g id="edge13" class="edge">
+<g id="edge13_Node000001_Node000011" class="edge">
 <title>Node1&#45;&gt;Node11</title>
+<g id="a_edge13_Node000001_Node000011"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.31,-102.62C49.69,-102.62 66.48,-102.62 80.76,-102.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="80.55,-106.13 90.55,-102.62 80.55,-99.13 80.55,-106.13"/>
+</a>
+</g>
 </g>
 <!-- Node12 -->
-<g id="node12" class="node">
+<g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title="test function to compute eigen values of a 2x2 matrix">
+<g id="a_Node000012"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title="test function to compute eigen values of a 2x2 matrix">
 <polygon fill="white" stroke="#666666" points="129.5,-75.25 91.75,-75.25 91.75,-56 129.5,-56 129.5,-75.25"/>
 <text text-anchor="middle" x="110.62" y="-61.75" font-family="Helvetica,sans-Serif" font-size="10.00">test2</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
-<g id="edge15" class="edge">
+<g id="edge15_Node000001_Node000012" class="edge">
 <title>Node1&#45;&gt;Node12</title>
+<g id="a_edge15_Node000001_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.31,-95.31C49.94,-90.13 67.15,-83.06 81.61,-77.13"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="82.63,-80.08 90.55,-73.05 79.97,-73.61 82.63,-80.08"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907" target="_top" xlink:title="Perform multiplication of two matrices.">
+<g id="a_Node000004"><a xlink:href="../../d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907" target="_top" xlink:title="Perform multiplication of two matrices.">
 <polygon fill="white" stroke="#666666" points="359.88,-111.25 306.38,-111.25 306.38,-92 359.88,-92 359.88,-111.25"/>
 <text text-anchor="middle" x="333.12" y="-97.75" font-family="Helvetica,sans-Serif" font-size="10.00">mat_mul</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M257.59,-89.47C269.63,-91.43 283.09,-93.63 295.22,-95.61"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="294.47,-99.19 304.91,-97.35 295.6,-92.29 294.47,-99.19"/>
+</a>
+</g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000003_Node000005" class="edge">
 <title>Node3&#45;&gt;Node5</title>
+<g id="a_edge4_Node000003_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M240.12,-73.5C254.48,-65.68 275,-54.69 293.25,-45.62 295.41,-44.55 297.66,-43.46 299.92,-42.37"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="301.27,-45.13 308.82,-37.7 298.29,-38.8 301.27,-45.13"/>
+</a>
+</g>
 </g>
 <!-- Node6 -->
-<g id="node6" class="node">
+<g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56" target="_top" xlink:title="Decompose matrix &#160;using Gram&#45;Schmidt process.">
+<g id="a_Node000006"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56" target="_top" xlink:title="Decompose matrix &#160;using Gram&#45;Schmidt process.">
 <polygon fill="white" stroke="#666666" points="373,-74.25 293.25,-74.25 293.25,-55 373,-55 373,-74.25"/>
 <text text-anchor="middle" x="333.12" y="-60.75" font-family="Helvetica,sans-Serif" font-size="10.00">qr_decompose</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
+<g id="edge5_Node000003_Node000006" class="edge">
 <title>Node3&#45;&gt;Node6</title>
+<g id="a_edge5_Node000003_Node000006"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M257.59,-77.46C265.46,-76.1 273.94,-74.64 282.26,-73.21"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="282.78,-76.5 292.04,-71.35 281.59,-69.6 282.78,-76.5"/>
+</a>
+</g>
 </g>
 <!-- Node7 -->
-<g id="node7" class="node">
+<g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" target="_top" xlink:title="Compute dot product of two vectors of equal lengths.">
+<g id="a_Node000007"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" target="_top" xlink:title="Compute dot product of two vectors of equal lengths.">
 <polygon fill="white" stroke="#666666" points="573.75,-93.25 512,-93.25 512,-74 573.75,-74 573.75,-93.25"/>
 <text text-anchor="middle" x="542.88" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">vector_dot</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
+<g id="edge6_Node000006_Node000007" class="edge">
 <title>Node6&#45;&gt;Node7</title>
+<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M356.46,-74.63C361.91,-77.16 367.7,-79.93 373,-82.62 389.32,-90.92 391.28,-98.03 409,-102.62 440.52,-110.79 477.23,-104.38 504.06,-96.87"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="504.97,-99.96 513.55,-93.74 502.97,-93.25 504.97,-99.96"/>
+</a>
+</g>
 </g>
 <!-- Node8 -->
-<g id="node8" class="node">
+<g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" target="_top" xlink:title="Compute magnitude of vector.">
+<g id="a_Node000008"><a xlink:href="../../d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" target="_top" xlink:title="Compute magnitude of vector.">
 <polygon fill="white" stroke="#666666" points="476,-93.25 409,-93.25 409,-74 476,-74 476,-93.25"/>
 <text text-anchor="middle" x="442.5" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">vector_mag</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
+<g id="edge7_Node000006_Node000008" class="edge">
 <title>Node6&#45;&gt;Node8</title>
+<g id="a_edge7_Node000006_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M373.5,-71.59C381.48,-73 389.92,-74.5 398.03,-75.93"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="397.37,-79.55 407.83,-77.84 398.59,-72.65 397.37,-79.55"/>
+</a>
+</g>
 </g>
 <!-- Node9 -->
-<g id="node9" class="node">
+<g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" target="_top" xlink:title="Compute projection of vector &#160;on &#160;defined as.">
+<g id="a_Node000009"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" target="_top" xlink:title="Compute projection of vector &#160;on &#160;defined as.">
 <polygon fill="white" stroke="#666666" points="474.5,-56.25 410.5,-56.25 410.5,-37 474.5,-37 474.5,-56.25"/>
 <text text-anchor="middle" x="442.5" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">vector_proj</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node9 -->
-<g id="edge9" class="edge">
+<g id="edge9_Node000006_Node000009" class="edge">
 <title>Node6&#45;&gt;Node9</title>
+<g id="a_edge9_Node000006_Node000009"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M373.5,-58.02C382,-56.6 391.02,-55.09 399.61,-53.65"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="399.91,-56.98 409.2,-51.87 398.76,-50.07 399.91,-56.98"/>
+</a>
+</g>
 </g>
 <!-- Node10 -->
-<g id="node10" class="node">
+<g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" target="_top" xlink:title="Compute vector subtraction.">
+<g id="a_Node000010"><a xlink:href="../../d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" target="_top" xlink:title="Compute vector subtraction.">
 <polygon fill="white" stroke="#666666" points="474.5,-19.25 410.5,-19.25 410.5,0 474.5,0 474.5,-19.25"/>
 <text text-anchor="middle" x="442.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">vector_sub</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node10 -->
-<g id="edge11" class="edge">
+<g id="edge11_Node000006_Node000010" class="edge">
 <title>Node6&#45;&gt;Node10</title>
+<g id="a_edge11_Node000006_Node000010"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M356.44,-54.58C361.89,-52.05 367.68,-49.29 373,-46.62 380.83,-42.7 398.29,-33.27 413.62,-24.91"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="415.17,-27.5 422.27,-19.64 411.81,-21.36 415.17,-27.5"/>
+</a>
+</g>
 </g>
 <!-- Node8&#45;&gt;Node7 -->
-<g id="edge8" class="edge">
+<g id="edge8_Node000008_Node000007" class="edge">
 <title>Node8&#45;&gt;Node7</title>
+<g id="a_edge8_Node000008_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M476.26,-83.62C484.1,-83.62 492.56,-83.62 500.73,-83.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="500.59,-87.13 510.59,-83.62 500.59,-80.13 500.59,-87.13"/>
+</a>
+</g>
 </g>
 <!-- Node9&#45;&gt;Node7 -->
-<g id="edge10" class="edge">
+<g id="edge10_Node000009_Node000007" class="edge">
 <title>Node9&#45;&gt;Node7</title>
+<g id="a_edge10_Node000009_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M470.38,-56.74C481.01,-60.73 493.4,-65.39 504.85,-69.7"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="503.43,-73.28 514.03,-73.53 505.9,-66.73 503.43,-73.28"/>
+</a>
+</g>
 </g>
 <!-- Node11&#45;&gt;Node3 -->
-<g id="edge14" class="edge">
+<g id="edge14_Node000011_Node000003" class="edge">
 <title>Node11&#45;&gt;Node3</title>
+<g id="a_edge14_Node000011_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M129.97,-99.4C141.91,-97.3 158.07,-94.46 173.38,-91.77"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="173.54,-95.12 182.79,-89.94 172.33,-88.23 173.54,-95.12"/>
+</a>
+</g>
 </g>
 <!-- Node12&#45;&gt;Node3 -->
-<g id="edge16" class="edge">
+<g id="edge16_Node000012_Node000003" class="edge">
 <title>Node12&#45;&gt;Node3</title>
+<g id="a_edge16_Node000012_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M129.97,-68.68C141.8,-70.65 157.76,-73.3 172.94,-75.83"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="172.35,-79.45 182.79,-77.64 173.5,-72.54 172.35,-79.45"/>
+</a>
+</g>
 </g>
 </g>
 </svg>

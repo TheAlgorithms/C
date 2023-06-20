@@ -1,6 +1,9 @@
 <map id="sigma" name="sigma">
-<area shape="rect" id="node1" title="sum of squares of factors of numbers from 1 thru N" alt="" coords="5,5,62,31"/>
-<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788" title="compute sum of squares of all integer factors of a number" alt="" coords="110,5,173,31"/>
-<area shape="rect" id="node3" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="221,5,312,31"/>
-<area shape="rect" id="node4" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="360,5,409,31"/>
+<area shape="rect" id="Node000001" title="sum of squares of factors of numbers from 1 thru N" alt="" coords="5,5,62,31"/>
+<area shape="rect" id="Node000002" href="$d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788" title="compute sum of squares of all integer factors of a number" alt="" coords="110,5,173,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,16,95,16,95,21,62,21"/>
+<area shape="rect" id="Node000003" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="221,5,312,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,16,206,16,206,21,174,21"/>
+<area shape="rect" id="Node000004" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="360,5,409,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="313,16,346,16,346,21,313,21"/>
 </map>

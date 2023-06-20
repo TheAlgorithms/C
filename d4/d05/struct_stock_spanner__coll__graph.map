@@ -1,4 +1,6 @@
 <map id="StockSpanner" name="StockSpanner">
-<area shape="rect" id="node1" title=" " alt="" coords="5,109,109,135"/>
-<area shape="rect" id="node2" href="$d4/d11/structstack.html" title=" " alt="" coords="30,5,84,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,109,135"/>
+<area shape="rect" id="Node000002" href="$d4/d11/structstack.html" title=" " alt="" coords="30,5,84,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,46,60,109,54,109,54,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="100,7,107,11,110,19,102,28,84,30,84,25,99,24,105,18,103,15,97,12"/>
 </map>

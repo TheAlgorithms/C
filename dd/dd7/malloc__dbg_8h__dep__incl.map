@@ -1,5 +1,7 @@
 <map id="developer_tools/malloc_dbg.h" name="developer_tools/malloc_dbg.h">
-<area shape="rect" id="node1" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="91,5,245,46"/>
-<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="5,94,160,135"/>
-<area shape="rect" id="node3" href="$dd/d11/test__malloc__dbg_8c.html" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="184,94,322,135"/>
+<area shape="rect" id="Node000001" title="Header file that contains macros used to replace malloc/calloc and free." alt="" coords="91,5,245,46"/>
+<area shape="rect" id="Node000002" href="$db/d84/malloc__dbg_8c.html" title="This file contains malloc_dbg, calloc_dbg, free_dbg and printLeaks implementations." alt="" coords="5,94,160,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,59,104,95,100,92,136,55"/>
+<area shape="rect" id="Node000003" href="$dd/d11/test__malloc__dbg_8c.html" title="File used to test the malloc_dbg, calloc_dbg and free_dbg functions." alt="" coords="184,94,322,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,55,236,92,232,95,195,59"/>
 </map>

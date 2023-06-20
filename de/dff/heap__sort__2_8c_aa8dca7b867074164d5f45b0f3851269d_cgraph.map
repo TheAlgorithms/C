@@ -1,6 +1,9 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,31,49,56"/>
-<area shape="rect" id="node2" href="$de/dff/heap__sort__2_8c.html#a672a47d865e7fa18f1ff23001ef4a485" title="Heap Sort algorithm." alt="" coords="97,31,170,56"/>
-<area shape="rect" id="node3" href="$de/dff/heap__sort__2_8c.html#a00cd944b33a5fe5972111ded9b49793c" title="heapifyDown Adjusts new root to the correct position in the heap This heapify procedure can be though..." alt="" coords="218,5,315,31"/>
-<area shape="rect" id="node4" href="$de/dff/heap__sort__2_8c.html#a619753b978f962aa2337e1fdb4e59e33" title="heapifyUp Adjusts arr[i] to the correct position in the heap This heapify procedure can be thought of..." alt="" coords="227,55,307,80"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,31,49,56"/>
+<area shape="rect" id="Node000002" href="$de/dff/heap__sort__2_8c.html#a672a47d865e7fa18f1ff23001ef4a485" title="Heap Sort algorithm." alt="" coords="97,31,170,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,41,82,41,82,46,49,46"/>
+<area shape="rect" id="Node000003" href="$de/dff/heap__sort__2_8c.html#a00cd944b33a5fe5972111ded9b49793c" title="heapifyDown Adjusts new root to the correct position in the heap This heapify procedure can be though..." alt="" coords="218,5,315,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,34,203,28,204,33,171,39"/>
+<area shape="rect" id="Node000004" href="$de/dff/heap__sort__2_8c.html#a619753b978f962aa2337e1fdb4e59e33" title="heapifyUp Adjusts arr[i] to the correct position in the heap This heapify procedure can be thought of..." alt="" coords="227,55,307,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="171,47,212,55,211,60,170,53"/>
 </map>

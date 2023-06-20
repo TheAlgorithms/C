@@ -6,121 +6,167 @@
 <!-- Title: main Pages: 1 -->
 <svg width="344pt" height="101pt"
  viewBox="0.00 0.00 343.50 101.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 97.25)">
 <title>main</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Main function.">
+<g id="a_Node000001"><a xlink:title="Main function.">
 <polygon fill="#999999" stroke="#666666" points="37,-74.25 0,-74.25 0,-55 37,-55 37,-74.25"/>
 <text text-anchor="middle" x="18.5" y="-60.75" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/d98/spirograph_8c.html#a708a4c1a4d0c4acc4c447310dd4db27f" target="_top" xlink:title="Test function to save resulting points to a CSV file.">
+<g id="a_Node000002"><a xlink:href="../../d7/d98/spirograph_8c.html#a708a4c1a4d0c4acc4c447310dd4db27f" target="_top" xlink:title="Test function to save resulting points to a CSV file.">
 <polygon fill="white" stroke="#666666" points="108.12,-93.25 75.62,-93.25 75.62,-74 108.12,-74 108.12,-93.25"/>
 <text text-anchor="middle" x="91.88" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">test</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.14,-69.32C45.48,-71.54 55.6,-74.23 64.79,-76.68"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="63.81,-80.31 74.37,-79.5 65.61,-73.54 63.81,-80.31"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="../../d6/d76/k__means__clustering_8c.html#a0283886819c7c140a023582b7269e2d0" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="110.75,-56.25 73,-56.25 73,-37 110.75,-37 110.75,-56.25"/>
 <text text-anchor="middle" x="91.88" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">test2</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000001_Node000004" class="edge">
 <title>Node1&#45;&gt;Node4</title>
+<g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.14,-60.18C44.81,-58.24 53.98,-55.93 62.55,-53.77"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="63.1,-56.99 71.94,-51.15 61.39,-50.2 63.1,-56.99"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3" target="_top" xlink:title="Generate spirograph curve into arrays x and y such that the i^th point in 2D is represented by (x[i],...">
+<g id="a_Node000003"><a xlink:href="../../d7/d98/spirograph_8c.html#a0daa148091ec953809fc172289f773d3" target="_top" xlink:title="Generate spirograph curve into arrays x and y such that the i^th point in 2D is represented by (x[i],...">
 <polygon fill="white" stroke="#666666" points="207.75,-93.25 146.75,-93.25 146.75,-74 207.75,-74 207.75,-93.25"/>
 <text text-anchor="middle" x="177.25" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">spirograph</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M108.56,-83.62C116.3,-83.62 126.04,-83.62 135.7,-83.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="135.46,-87.13 145.46,-83.62 135.46,-80.13 135.46,-87.13"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d8/d71/group__k__means.html#gaf6259432561e794dea0e060f482d15e2" target="_top" xlink:title=" ">
+<g id="a_Node000005"><a xlink:href="../../d8/d71/group__k__means.html#gaf6259432561e794dea0e060f482d15e2" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="202.5,-56.25 152,-56.25 152,-37 202.5,-37 202.5,-56.25"/>
 <text text-anchor="middle" x="177.25" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">kMeans</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M110.97,-46.62C119.69,-46.62 130.47,-46.62 140.73,-46.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="140.55,-50.13 150.55,-46.62 140.55,-43.13 140.55,-50.13"/>
+</a>
+</g>
 </g>
 <!-- Node8 -->
-<g id="node8" class="node">
+<g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d6/d76/k__means__clustering_8c.html#a5b4ba704e02672e59cfa35f82e3db28a" target="_top" xlink:title=" ">
+<g id="a_Node000008"><a xlink:href="../../d6/d76/k__means__clustering_8c.html#a5b4ba704e02672e59cfa35f82e3db28a" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="204.75,-19.25 149.75,-19.25 149.75,0 204.75,0 204.75,-19.25"/>
 <text text-anchor="middle" x="177.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">printEPS</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
+<g id="edge7_Node000004_Node000008" class="edge">
 <title>Node4&#45;&gt;Node8</title>
+<g id="a_edge7_Node000004_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M110.97,-38.6C120.57,-34.33 132.67,-28.96 143.84,-24.01"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="145.01,-26.87 152.73,-19.62 142.17,-20.48 145.01,-26.87"/>
+</a>
+</g>
 </g>
 <!-- Node6 -->
-<g id="node6" class="node">
+<g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7" target="_top" xlink:title=" ">
+<g id="a_Node000006"><a xlink:href="../../d8/d71/group__k__means.html#gadee39a3f17bf5144df5592e48dbfc9f7" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="335.5,-74.25 243.75,-74.25 243.75,-55 335.5,-55 335.5,-74.25"/>
 <text text-anchor="middle" x="289.62" y="-60.75" font-family="Helvetica,sans-Serif" font-size="10.00">calculateCentroid</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
+<g id="edge5_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
+<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M202.75,-50.62C211.61,-52.06 222.02,-53.76 232.47,-55.47"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="231.89,-59.08 242.32,-57.24 233.02,-52.17 231.89,-59.08"/>
+</a>
+</g>
 </g>
 <!-- Node7 -->
-<g id="node7" class="node">
+<g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9" target="_top" xlink:title=" ">
+<g id="a_Node000007"><a xlink:href="../../d8/d71/group__k__means.html#gad339c41d3ee9e6729aca9e9ab3f7d2d9" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="331.75,-37.25 247.5,-37.25 247.5,-18 331.75,-18 331.75,-37.25"/>
 <text text-anchor="middle" x="289.62" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">calculateNearst</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
+<g id="edge6_Node000005_Node000007" class="edge">
 <title>Node5&#45;&gt;Node7</title>
+<g id="a_edge6_Node000005_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M202.75,-42.41C212.76,-40.68 224.76,-38.62 236.56,-36.59"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="237.02,-39.89 246.29,-34.74 235.84,-32.99 237.02,-39.89"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

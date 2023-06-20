@@ -1,5 +1,8 @@
 <map id="push" name="push">
-<area shape="rect" id="node1" title="The push function pushes the element onto the stack." alt="" coords="5,43,55,68"/>
-<area shape="rect" id="node2" href="$d5/d24/dynamic__stack_8c.html#ac01c5d1d1000ed68b5ff093c5ff36854" title="As this is stack implementation using dynamic array this function will expand the size of the stack b..." alt="" coords="103,5,198,31"/>
-<area shape="rect" id="node3" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="126,79,175,104"/>
+<area shape="rect" id="Node000001" title="The push function pushes the element onto the stack." alt="" coords="5,43,55,68"/>
+<area shape="rect" id="Node000002" href="$d5/d24/dynamic__stack_8c.html#ac01c5d1d1000ed68b5ff093c5ff36854" title="As this is stack implementation using dynamic array this function will expand the size of the stack b..." alt="" coords="103,5,198,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,45,92,33,94,38,56,50"/>
+<area shape="rect" id="Node000003" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="126,79,175,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,60,112,77,111,83,54,65"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="129,79,125,70,128,61,136,54,150,52,166,55,174,62,170,66,163,60,150,57,138,59,132,64,130,70,134,77"/>
 </map>

@@ -1,10 +1,17 @@
 <map id="numerical_methods/durand_kerner_roots.c" name="numerical_methods/durand_kerner_roots.c">
-<area shape="rect" id="node1" title="Compute all possible approximate roots of any given polynomial using Durand Kerner algorithm" alt="" coords="225,5,403,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,87,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="110,94,174,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="198,94,259,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="284,94,344,120"/>
-<area shape="rect" id="node6" title=" " alt="" coords="368,94,431,120"/>
-<area shape="rect" id="node7" title=" " alt="" coords="455,94,520,120"/>
-<area shape="rect" id="node8" title=" " alt="" coords="544,94,601,120"/>
+<area shape="rect" id="Node000001" title="Compute all possible approximate roots of any given polynomial using Durand Kerner algorithm" alt="" coords="225,5,403,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,87,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,49,102,92,100,87,246,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,94,174,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="272,49,183,90,180,85,270,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="198,94,259,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,48,254,86,251,82,291,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="284,94,344,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="317,46,317,79,311,79,311,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="368,94,431,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="337,44,377,82,374,86,333,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="455,94,520,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="358,44,449,85,446,90,356,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="544,94,601,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="379,44,531,90,529,95,378,49"/>
 </map>

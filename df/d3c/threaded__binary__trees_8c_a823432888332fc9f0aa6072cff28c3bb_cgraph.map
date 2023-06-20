@@ -1,4 +1,5 @@
 <map id="insert_bt" name="insert_bt">
-<area shape="rect" id="node1" title="inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tr..." alt="" coords="5,5,77,31"/>
-<area shape="rect" id="node2" href="$df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d" title="creates a new node param[in] data value to be inserted" alt="" coords="125,5,217,31"/>
+<area shape="rect" id="Node000001" title="inserts a node into the tree param[in,out] root pointer to node pointer to the topmost node of the tr..." alt="" coords="5,5,77,31"/>
+<area shape="rect" id="Node000002" href="$df/d3c/threaded__binary__trees_8c.html#a4802bca3f38251543b4aba6765e0390d" title="creates a new node param[in] data value to be inserted" alt="" coords="125,5,217,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,16,110,16,110,21,77,21"/>
 </map>

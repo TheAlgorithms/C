@@ -1,8 +1,15 @@
 <map id="buildAST" name="buildAST">
-<area shape="rect" id="node1" title="recursively constructs a AST from a preprocessed regex string" alt="" coords="5,104,80,130"/>
-<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6" title="creates and initializes a AST node" alt="" coords="131,5,220,31"/>
-<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6a97ab2db6392f262b03370689872348" title="recursively destroys a AST" alt="" coords="128,79,223,104"/>
-<area shape="rect" id="node4" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aab463320a19667bd604db2405abefd55" title="utility function to locate the first occurrence of a character in a string while respecting parenthes..." alt="" coords="142,128,209,154"/>
-<area shape="rect" id="node5" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a072d13f905ab9438d38d7415df222817" title="utility function to create a subString" alt="" coords="137,177,214,203"/>
-<area shape="rect" id="node6" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="271,177,323,203"/>
+<area shape="rect" id="Node000001" title="recursively constructs a AST from a preprocessed regex string" alt="" coords="5,104,80,130"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="19,105,15,95,18,86,27,80,43,77,60,80,68,88,65,92,57,85,42,83,29,85,22,89,20,95,24,102"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6" title="creates and initializes a AST node" alt="" coords="131,5,220,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="55,102,86,72,126,40,132,36,134,41,129,44,90,76,58,106"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6a97ab2db6392f262b03370689872348" title="recursively destroys a AST" alt="" coords="128,79,223,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="80,107,113,101,114,106,81,112"/>
+<area shape="rect" id="Node000004" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aab463320a19667bd604db2405abefd55" title="utility function to locate the first occurrence of a character in a string while respecting parenthes..." alt="" coords="142,128,209,154"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="81,121,128,130,127,135,80,126"/>
+<area shape="rect" id="Node000005" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a072d13f905ab9438d38d7415df222817" title="utility function to create a subString" alt="" coords="137,177,214,203"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="67,128,129,164,136,168,134,172,126,168,64,132"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="154,79,150,70,152,61,161,54,175,52,191,55,199,62,195,66,189,60,175,57,163,59,157,64,155,70,159,77"/>
+<area shape="rect" id="Node000006" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="271,177,323,203"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="214,188,256,188,256,193,214,193"/>
 </map>

@@ -6,24 +6,52 @@
 <!-- Title: MEMORY_INFORMATION Pages: 1 -->
 <svg width="199pt" height="31pt"
  viewBox="0.00 0.00 198.75 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
 <title>MEMORY_INFORMATION</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="For the malloc, calloc and free functions.">
+<g id="a_Node000001"><a xlink:title="For the malloc, calloc and free functions.">
 <polygon fill="#999999" stroke="#666666" points="136,-20.88 0,-20.88 0,-1.62 136,-1.62 136,-20.88"/>
 <text text-anchor="middle" x="68" y="-7.38" font-family="Helvetica,sans-Serif" font-size="10.00">MEMORY_INFORMATION</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node1 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000001" class="edge">
 <title>Node1&#45;&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000001"><a xlink:title=" ">
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M147.29,-13.63C151.5,-13.05 154,-12.25 154,-11.25 154,-9.56 146.91,-8.46 136.48,-7.96"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="147.15,-10.22 137.48,-14.54 147.74,-17.19 147.15,-10.22"/>
-<text text-anchor="middle" x="172.38" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00"> next</text>
-<text text-anchor="middle" x="172.38" y="-1.75" font-family="Helvetica,sans-Serif" font-size="10.00">previous</text>
+</a>
+</g>
+<text text-anchor="middle" x="172.38" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> next</text>
+<text text-anchor="middle" x="172.38" y="-1.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">previous</text>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

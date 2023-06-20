@@ -1,7 +1,12 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="367,5,474,31"/>
-<area shape="rect" id="node3" href="$d6/d3d/factorial__large__number_8c.html#ad398ddbd594ca69a5e6dfc894925341e" title="multiply large number with another integer and store the result in the same large number" alt="" coords="117,31,184,56"/>
-<area shape="rect" id="node5" href="$d6/d3d/factorial__large__number_8c.html#ace5f6aa21955d4e4bdc89228c2f91234" title="create a new large number" alt="" coords="103,80,198,106"/>
-<area shape="rect" id="node4" href="$d6/d3d/factorial__large__number_8c.html#af2869d36c22a2b8f93d3166a84e124b3" title="add a digit to the large number" alt="" coords="246,31,319,56"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d6/d3d/factorial__large__number_8c.html#ab5c854e0df76165c31899e69eceeeaae" title="delete all memory allocated for large number" alt="" coords="367,5,474,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,30,102,16,169,8,236,5,353,9,353,14,236,10,169,13,103,21,56,35"/>
+<area shape="rect" id="Node000003" href="$d6/d3d/factorial__large__number_8c.html#ad398ddbd594ca69a5e6dfc894925341e" title="multiply large number with another integer and store the result in the same large number" alt="" coords="117,31,184,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,41,102,41,102,46,55,46"/>
+<area shape="rect" id="Node000005" href="$d6/d3d/factorial__large__number_8c.html#ace5f6aa21955d4e4bdc89228c2f91234" title="create a new large number" alt="" coords="103,80,198,106"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="56,51,105,71,103,76,54,56"/>
+<area shape="rect" id="Node000004" href="$d6/d3d/factorial__large__number_8c.html#af2869d36c22a2b8f93d3166a84e124b3" title="add a digit to the large number" alt="" coords="246,31,319,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,41,231,41,231,46,184,46"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="319,34,352,28,353,33,320,39"/>
 </map>

@@ -1,8 +1,15 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,103,55,128"/>
-<area shape="rect" id="node2" href="$d1/dba/decimal__to__any__base_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,103,146,128"/>
-<area shape="rect" id="node3" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="194,103,334,128"/>
-<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="385,29,488,55"/>
-<area shape="rect" id="node5" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="396,103,477,128"/>
-<area shape="rect" id="node6" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="382,152,491,178"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,103,55,128"/>
+<area shape="rect" id="Node000002" href="$d1/dba/decimal__to__any__base_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,103,146,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,113,88,113,88,118,55,118"/>
+<area shape="rect" id="Node000003" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="194,103,334,128"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,113,179,113,179,118,146,118"/>
+<area shape="rect" id="Node000004" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="385,29,488,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="296,100,390,59,392,64,298,104"/>
+<area shape="rect" id="Node000005" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="396,103,477,128"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="335,113,381,113,381,118,335,118"/>
+<area shape="rect" id="Node000006" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="382,152,491,178"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="313,126,376,145,374,150,311,132"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="407,30,402,21,405,11,417,5,437,3,458,6,469,13,466,17,456,11,436,8,419,10,409,15,407,20,412,28"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="407,104,402,94,405,84,417,78,437,76,458,79,469,86,466,91,456,84,436,81,419,83,409,88,407,93,412,101"/>
 </map>

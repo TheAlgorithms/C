@@ -1,6 +1,9 @@
 <map id="numerical_methods/secant_method.c" name="numerical_methods/secant_method.c">
-<area shape="rect" id="node1" title="Secant Method implementation." alt="" coords="40,5,218,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,74,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,94,160,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="184,94,244,120"/>
+<area shape="rect" id="Node000001" title="Secant Method implementation." alt="" coords="40,5,218,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,74,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,48,66,86,62,82,105,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,160,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,46,132,79,126,79,126,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="184,94,244,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,44,192,82,189,86,148,48"/>
 </map>

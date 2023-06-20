@@ -1,6 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$da/d6c/exponential__search_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="used to run the self&#45;test implementations" alt="" coords="103,29,146,55"/>
-<area shape="rect" id="node3" href="$da/d6c/exponential__search_8c.html#a82d4de0907b9601a376febf50955bacd" title="used to perform the exponential search over the given array" alt="" coords="194,29,327,55"/>
-<area shape="rect" id="node4" href="$da/d6c/exponential__search_8c.html#aae97ef76c065e91c188f1f8c8076869a" title="used to perform the binary search over the given array" alt="" coords="375,29,478,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$da/d6c/exponential__search_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="used to run the self&#45;test implementations" alt="" coords="103,29,146,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="rect" id="Node000003" href="$da/d6c/exponential__search_8c.html#a82d4de0907b9601a376febf50955bacd" title="used to perform the exponential search over the given array" alt="" coords="194,29,327,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,40,179,40,179,45,147,45"/>
+<area shape="rect" id="Node000004" href="$da/d6c/exponential__search_8c.html#aae97ef76c065e91c188f1f8c8076869a" title="used to perform the binary search over the given array" alt="" coords="375,29,478,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,40,361,40,361,45,328,45"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="398,30,393,21,396,11,408,5,427,3,448,6,458,13,455,17,446,11,426,8,409,10,400,15,398,20,403,28"/>
 </map>

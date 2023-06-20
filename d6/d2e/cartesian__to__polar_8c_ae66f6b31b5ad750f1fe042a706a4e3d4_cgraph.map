@@ -1,6 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d6/d2e/cartesian__to__polar_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test implementation." alt="" coords="103,31,146,56"/>
-<area shape="rect" id="node3" href="$d6/d2e/cartesian__to__polar_8c.html#a60e62b809ca9dcb1b20a140b30d30f60" title="Generate a random number in the given limits." alt="" coords="194,5,265,31"/>
-<area shape="rect" id="node4" href="$d6/d2e/cartesian__to__polar_8c.html#afb80d77f0c994240309ccddcc9525e70" title="Function to convert cartesian coordinates to polar." alt="" coords="196,55,263,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d6/d2e/cartesian__to__polar_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test implementation." alt="" coords="103,31,146,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,41,88,41,88,46,55,46"/>
+<area shape="rect" id="Node000003" href="$d6/d2e/cartesian__to__polar_8c.html#a60e62b809ca9dcb1b20a140b30d30f60" title="Generate a random number in the given limits." alt="" coords="194,5,265,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,36,179,28,180,33,147,41"/>
+<area shape="rect" id="Node000004" href="$d6/d2e/cartesian__to__polar_8c.html#afb80d77f0c994240309ccddcc9525e70" title="Function to convert cartesian coordinates to polar." alt="" coords="196,55,263,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="147,46,182,54,181,59,146,51"/>
 </map>

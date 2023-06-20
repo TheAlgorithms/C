@@ -1,3 +1,4 @@
 <map id="inOrder" name="inOrder">
-<area shape="rect" id="node1" title="Traversal procedure to list the current keys in the tree in order of value (from the left to the righ..." alt="" coords="5,29,69,55"/>
+<area shape="rect" id="Node000001" title="Traversal procedure to list the current keys in the tree in order of value (from the left to the righ..." alt="" coords="5,29,69,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="24,29,24,12,29,5,37,3,46,6,51,13,46,16,43,10,37,8,32,10,29,14,30,29"/>
 </map>

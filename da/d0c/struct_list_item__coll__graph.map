@@ -1,3 +1,4 @@
 <map id="ListItem" name="ListItem">
-<area shape="rect" id="node1" title="Definition for a binary tree node." alt="" coords="5,5,74,31"/>
+<area shape="rect" id="Node000001" title="Definition for a binary tree node." alt="" coords="5,5,74,31"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="90,12,100,18,91,24,74,26,74,20,90,19,95,18,88,17"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="project_euler/problem_15/sol1.c" name="project_euler/problem_15/sol1.c">
-<area shape="rect" id="node1" title="Problem 15 solution" alt="" coords="52,5,197,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,70,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="94,94,154,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="178,94,241,120"/>
+<area shape="rect" id="Node000001" title="Problem 15 solution" alt="" coords="52,5,197,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,70,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,48,64,86,60,82,101,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,94,154,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,46,127,79,122,79,122,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,94,241,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,44,187,82,184,86,143,48"/>
 </map>

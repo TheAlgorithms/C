@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c" title="Compute Least Common Multiple (LCM) of two numbers." alt="" coords="103,5,145,31"/>
-<area shape="rect" id="node3" href="$d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d" title="Compute Greatest Common Divisor (GCD) of two numbers using Euclids algorithm." alt="" coords="193,5,235,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d5/d7c/problem__5_2sol3_8c.html#ae9606f1867e9921867d6572f51377b4c" title="Compute Least Common Multiple (LCM) of two numbers." alt="" coords="103,5,145,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d5/d7c/problem__5_2sol3_8c.html#a59347107cbfdf48d51108e50280e760d" title="Compute Greatest Common Divisor (GCD) of two numbers using Euclids algorithm." alt="" coords="193,5,235,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,16,178,16,178,21,145,21"/>
 </map>

@@ -1,13 +1,24 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,153,55,179"/>
-<area shape="rect" id="node2" href="$dd/d19/circular__doubly__linked__list_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,153,146,179"/>
-<area shape="rect" id="node3" href="$dd/d19/circular__doubly__linked__list_8c.html#a1418cac5ddf9edb58fca97afce27b456" title="Function for deletion of the first node in list." alt="" coords="194,5,318,31"/>
-<area shape="rect" id="node4" href="$dd/d19/circular__doubly__linked__list_8c.html#abf4cdda9fbace9822612349d19ec2e72" title="Function for deletion of the last node in list." alt="" coords="200,55,313,80"/>
-<area shape="rect" id="node6" href="$dd/d19/circular__doubly__linked__list_8c.html#a5411df421a94177700868b34887d5d0e" title="Display list function." alt="" coords="213,104,299,130"/>
-<area shape="rect" id="node7" href="$dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1" title="access the list by index" alt="" coords="237,153,276,179"/>
-<area shape="rect" id="node8" href="$dd/d19/circular__doubly__linked__list_8c.html#a6a64eb6265e703639bbfec9c3db93e0c" title="The function that will return current size of list." alt="" coords="225,203,288,228"/>
-<area shape="rect" id="node9" href="$dd/d19/circular__doubly__linked__list_8c.html#a964882e633c25a29b12237e29f20fa9a" title="Insert a node at start of list." alt="" coords="203,252,309,278"/>
-<area shape="rect" id="node11" href="$dd/d19/circular__doubly__linked__list_8c.html#aee328f691615862c4298fe730d66027b" title="Insert a node at end of list." alt="" coords="209,301,304,327"/>
-<area shape="rect" id="node5" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="389,55,436,80"/>
-<area shape="rect" id="node10" href="$dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b" title="Create a list node." alt="" coords="366,276,459,302"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,153,55,179"/>
+<area shape="rect" id="Node000002" href="$dd/d19/circular__doubly__linked__list_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,153,146,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,164,88,164,88,169,55,169"/>
+<area shape="rect" id="Node000003" href="$dd/d19/circular__doubly__linked__list_8c.html#a1418cac5ddf9edb58fca97afce27b456" title="Function for deletion of the first node in list." alt="" coords="194,5,318,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,152,149,99,168,68,192,40,196,37,199,41,196,44,172,71,154,101,132,154"/>
+<area shape="rect" id="Node000004" href="$dd/d19/circular__doubly__linked__list_8c.html#abf4cdda9fbace9822612349d19ec2e72" title="Function for deletion of the last node in list." alt="" coords="200,55,313,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="133,151,158,121,192,89,200,85,202,89,196,94,162,124,137,155"/>
+<area shape="rect" id="Node000006" href="$dd/d19/circular__doubly__linked__list_8c.html#a5411df421a94177700868b34887d5d0e" title="Display list function." alt="" coords="213,104,299,130"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="145,156,205,133,207,138,147,161"/>
+<area shape="rect" id="Node000007" href="$dd/d19/circular__doubly__linked__list_8c.html#ac53a0550fa74838246bc783ddc005ec1" title="access the list by index" alt="" coords="237,153,276,179"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="146,164,222,164,222,169,146,169"/>
+<area shape="rect" id="Node000008" href="$dd/d19/circular__doubly__linked__list_8c.html#a6a64eb6265e703639bbfec9c3db93e0c" title="The function that will return current size of list." alt="" coords="225,203,288,228"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="147,172,211,196,209,201,145,177"/>
+<area shape="rect" id="Node000009" href="$dd/d19/circular__doubly__linked__list_8c.html#a964882e633c25a29b12237e29f20fa9a" title="Insert a node at start of list." alt="" coords="203,252,309,278"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="137,178,162,208,196,239,202,243,200,247,192,243,158,212,133,181"/>
+<area shape="rect" id="Node000011" href="$dd/d19/circular__doubly__linked__list_8c.html#aee328f691615862c4298fe730d66027b" title="Insert a node at end of list." alt="" coords="209,301,304,327"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="132,178,154,231,172,262,196,288,199,291,196,295,192,292,168,265,149,234,127,180"/>
+<area shape="rect" id="Node000005" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="389,55,436,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="313,65,375,65,375,70,313,70"/>
+<area shape="rect" id="Node000010" href="$dd/d19/circular__doubly__linked__list_8c.html#a4a89f96b090dfdb505b714195e59ca5b" title="Create a list node." alt="" coords="366,276,459,302"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="310,270,352,277,352,282,310,276"/>
+<area shape="poly" id="edge11_Node000011_Node000010" title=" " alt="" coords="304,304,352,296,352,301,305,309"/>
 </map>

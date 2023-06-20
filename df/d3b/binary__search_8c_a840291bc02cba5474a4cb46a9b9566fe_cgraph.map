@@ -1,6 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,55,55,80"/>
-<area shape="rect" id="node2" href="$df/d3b/binary__search_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test implementations." alt="" coords="103,55,146,80"/>
-<area shape="rect" id="node3" href="$df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582" title="Recursive implementation." alt="" coords="194,29,296,55"/>
-<area shape="rect" id="node4" href="$df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032" title="Iterative implementation." alt="" coords="194,79,296,104"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,55,55,80"/>
+<area shape="rect" id="Node000002" href="$df/d3b/binary__search_8c.html#ae1a3968e7947464bee7714f6d43b7002" title="Test implementations." alt="" coords="103,55,146,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,65,88,65,88,70,55,70"/>
+<area shape="rect" id="Node000003" href="$df/d3b/binary__search_8c.html#a40855c608ca64048d04cff6526f0a582" title="Recursive implementation." alt="" coords="194,29,296,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,60,179,53,180,59,147,66"/>
+<area shape="rect" id="Node000004" href="$df/d3b/binary__search_8c.html#a908fd6d2ad0bba33f63f8454888a0032" title="Iterative implementation." alt="" coords="194,79,296,104"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="147,69,180,76,179,81,146,74"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="224,30,220,21,222,11,231,5,245,3,261,6,269,13,265,17,258,10,245,8,233,10,227,14,225,20,229,28"/>
 </map>

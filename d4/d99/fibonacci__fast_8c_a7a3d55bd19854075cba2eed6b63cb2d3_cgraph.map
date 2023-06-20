@@ -1,3 +1,4 @@
 <map id="fib" name="fib">
-<area shape="rect" id="node1" title="Get the &#160;and &#160;Fibonacci number using recursive half&#45;interval decimation." alt="" coords="5,29,44,55"/>
+<area shape="rect" id="Node000001" title="Get the &#160;and &#160;Fibonacci number using recursive half&#45;interval decimation." alt="" coords="5,29,44,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="16,29,15,12,24,3,31,6,34,14,29,15,27,10,25,8,20,14,21,29"/>
 </map>

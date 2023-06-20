@@ -1,4 +1,5 @@
 <map id="games/naval_battle.c" name="games/naval_battle.c">
-<area shape="rect" id="node1" title="naval_battle implementation in C using only the stdio.h for Standard Input and Output." alt="" coords="5,5,151,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="48,79,108,105"/>
+<area shape="rect" id="Node000001" title="naval_battle implementation in C using only the stdio.h for Standard Input and Output." alt="" coords="5,5,151,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="48,79,108,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,31,81,64,75,64,75,31"/>
 </map>

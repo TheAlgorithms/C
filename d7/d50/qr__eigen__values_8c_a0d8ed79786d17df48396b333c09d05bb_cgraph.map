@@ -1,10 +1,19 @@
 <map id="eigen_values" name="eigen_values">
-<area shape="rect" id="node1" title="Compute eigen values using iterative shifted QR decomposition algorithm as follows:" alt="" coords="5,55,103,80"/>
-<area shape="rect" id="node2" href="$d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907" title="Perform multiplication of two matrices." alt="" coords="168,5,240,31"/>
-<area shape="rect" id="node3" href="$d4/d68/qr__decompose_8h.html#a90562ce8c3707401e9c5809dece68d6a" title="function to display matrix on stdout" alt="" coords="159,55,249,80"/>
-<area shape="rect" id="node4" href="$d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56" title="Decompose matrix &#160;using Gram&#45;Schmidt process." alt="" coords="151,104,257,130"/>
-<area shape="rect" id="node5" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="442,79,525,104"/>
-<area shape="rect" id="node6" href="$d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" title="Compute magnitude of vector." alt="" coords="305,79,394,104"/>
-<area shape="rect" id="node7" href="$d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" title="Compute projection of vector &#160;on &#160;defined as." alt="" coords="307,128,392,154"/>
-<area shape="rect" id="node8" href="$d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" title="Compute vector subtraction." alt="" coords="307,177,392,203"/>
+<area shape="rect" id="Node000001" title="Compute eigen values using iterative shifted QR decomposition algorithm as follows:" alt="" coords="5,55,103,80"/>
+<area shape="rect" id="Node000002" href="$d7/d50/qr__eigen__values_8c.html#a5835240036dc02ee9a13e65c559fb907" title="Perform multiplication of two matrices." alt="" coords="168,5,240,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,51,153,32,155,37,96,57"/>
+<area shape="rect" id="Node000003" href="$d4/d68/qr__decompose_8h.html#a90562ce8c3707401e9c5809dece68d6a" title="function to display matrix on stdout" alt="" coords="159,55,249,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,65,144,65,144,70,103,70"/>
+<area shape="rect" id="Node000004" href="$d4/d68/qr__decompose_8h.html#a45c7640d9d22c89c11beb1f567843c56" title="Decompose matrix &#160;using Gram&#45;Schmidt process." alt="" coords="151,104,257,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="96,78,150,96,148,101,95,84"/>
+<area shape="rect" id="Node000005" href="$d4/d68/qr__decompose_8h.html#a3a584b79941a43d775f9d4ce446dbe05" title="Compute dot product of two vectors of equal lengths." alt="" coords="442,79,525,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,101,256,91,279,75,304,64,337,59,371,60,432,71,431,76,370,65,338,64,306,69,282,80,258,95,236,106"/>
+<area shape="rect" id="Node000006" href="$d4/d68/qr__decompose_8h.html#abeec1f78a7a7e7251687e75340331212" title="Compute magnitude of vector." alt="" coords="305,79,394,104"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="257,105,290,99,291,104,258,110"/>
+<area shape="rect" id="Node000007" href="$d4/d68/qr__decompose_8h.html#a2ed4977f38642dca8b10c16a823c740b" title="Compute projection of vector &#160;on &#160;defined as." alt="" coords="307,128,392,154"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="258,123,293,129,292,134,257,128"/>
+<area shape="rect" id="Node000008" href="$d4/d68/qr__decompose_8h.html#a5ee39e7c8fce8a604dcf7009ce101c02" title="Compute vector subtraction." alt="" coords="307,177,392,203"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="233,128,310,168,308,173,230,133"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="395,89,427,89,427,94,395,94"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="386,125,432,108,434,113,388,130"/>
 </map>

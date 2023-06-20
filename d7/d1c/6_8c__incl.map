@@ -1,8 +1,13 @@
 <map id="leetcode/src/6.c" name="leetcode/src/6.c">
-<area shape="rect" id="node1" title="Implementation of the ZigZag Conversion Leetcode problem." alt="" coords="160,5,274,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,74,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,79,162,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,79,247,105"/>
-<area shape="rect" id="node5" title=" " alt="" coords="271,79,334,105"/>
-<area shape="rect" id="node6" title=" " alt="" coords="358,79,422,105"/>
+<area shape="rect" id="Node000001" title="Implementation of the ZigZag Conversion Leetcode problem." alt="" coords="160,5,274,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,34,84,75,82,71,186,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,162,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,34,158,72,154,67,200,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,79,247,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="220,31,220,64,214,64,214,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="271,79,334,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="233,29,279,67,275,72,230,34"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="358,79,422,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="247,29,348,71,346,75,245,34"/>
 </map>

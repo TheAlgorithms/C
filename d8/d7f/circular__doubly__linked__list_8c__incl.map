@@ -1,7 +1,11 @@
 <map id="data_structures/linked_list/circular_doubly_linked_list.c" name="data_structures/linked_list/circular_doubly_linked_list.c">
-<area shape="rect" id="node1" title=" " alt="" coords="109,5,258,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,109,74,135"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,109,176,135"/>
-<area shape="rect" id="node4" title=" " alt="" coords="200,109,260,135"/>
-<area shape="rect" id="node5" title=" " alt="" coords="284,109,347,135"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,5,258,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,109,74,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,64,74,103,71,99,137,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,109,176,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,63,153,97,148,94,167,60"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,109,260,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,60,219,94,214,97,196,63"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="284,109,347,135"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="226,59,286,98,284,103,223,64"/>
 </map>

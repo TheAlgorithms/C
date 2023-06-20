@@ -1,6 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$dd/de6/roman__numerals__to__decimal_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,29,146,55"/>
-<area shape="rect" id="node3" href="$dd/de6/roman__numerals__to__decimal_8c.html#a1e86fb4466b6a175b910fa19c4a6ea03" title="Converts roman numerals into a decimal number." alt="" coords="194,29,321,55"/>
-<area shape="rect" id="node4" href="$dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88" title="for assert" alt="" coords="369,29,433,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$dd/de6/roman__numerals__to__decimal_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,29,146,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="rect" id="Node000003" href="$dd/de6/roman__numerals__to__decimal_8c.html#a1e86fb4466b6a175b910fa19c4a6ea03" title="Converts roman numerals into a decimal number." alt="" coords="194,29,321,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,40,179,40,179,45,147,45"/>
+<area shape="rect" id="Node000004" href="$dd/de6/roman__numerals__to__decimal_8c.html#a95b7915cdb0df66a0aae7b769d3bbf88" title="for assert" alt="" coords="369,29,433,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="322,40,354,40,354,45,322,45"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="376,30,372,21,374,11,385,5,401,3,419,6,429,13,425,17,417,11,401,8,386,10,379,14,377,20,381,28"/>
 </map>

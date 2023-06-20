@@ -1,10 +1,19 @@
 <map id="test1" name="test1">
-<area shape="rect" id="node1" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="5,107,56,132"/>
-<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="116,5,196,31"/>
-<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="465,57,574,83"/>
-<area shape="rect" id="node6" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="256,56,417,82"/>
-<area shape="rect" id="node7" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="104,157,208,183"/>
-<area shape="rect" id="node8" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="109,207,203,232"/>
-<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="272,7,401,32"/>
-<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="622,57,747,83"/>
+<area shape="rect" id="Node000001" title="test function to predict points in a 2D coordinate system above the line &#160;as +1 and others as &#45;1." alt="" coords="5,107,56,132"/>
+<area shape="rect" id="Node000002" href="$da/d2a/group__adaline.html#gaa52120912e32d2893fe1c6d78da5befd" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="116,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,104,102,48,117,37,121,41,105,52,46,108"/>
+<area shape="rect" id="Node000004" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="465,57,574,83"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="56,117,208,111,312,104,417,92,455,84,456,90,418,97,312,109,209,117,56,122"/>
+<area shape="rect" id="Node000006" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="256,56,417,82"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="56,110,103,98,241,77,242,82,104,103,57,115"/>
+<area shape="rect" id="Node000007" href="$da/d2a/group__adaline.html#ga6f35caa3084772cc126ac7b20f67f665" title="delete dynamically allocated memory" alt="" coords="104,157,208,183"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="57,127,110,149,108,154,55,132"/>
+<area shape="rect" id="Node000008" href="$da/d2a/group__adaline.html#gacd88962c5f6341e43cbc69b4a7d3485b" title="Default constructor." alt="" coords="109,207,203,232"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="44,131,70,162,105,193,111,197,108,201,102,198,66,165,40,134"/>
+<area shape="rect" id="Node000003" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="272,7,401,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="196,16,257,16,257,22,196,21"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="197,27,275,49,273,54,196,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="387,30,457,50,456,55,385,36"/>
+<area shape="rect" id="Node000005" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="622,57,747,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="574,68,607,68,607,73,574,73"/>
 </map>

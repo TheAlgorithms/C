@@ -1,10 +1,21 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,129,55,155"/>
-<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#a27a32c68950e464846b6730512968e4b" title="This function initilaizes the vector and gives it a size of 1 and initializes the first index to 0." alt="" coords="202,5,241,31"/>
-<area shape="rect" id="node3" href="$df/dfa/vector_8c.html#abdb067a98f90bcd9b0aa4ceb364d607f" title="This function prints the entire Vector as a list." alt="" coords="103,231,149,256"/>
-<area shape="rect" id="node4" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="197,79,246,104"/>
-<area shape="rect" id="node5" href="$df/dfa/vector_8c.html#a6facac5424445995bd2f8bb03ffcb548" title="This function sets an item at the specified index of the Vector." alt="" coords="202,227,241,252"/>
-<area shape="rect" id="node6" href="$df/dfa/vector_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="This function tests the functions used to work with Vectors." alt="" coords="104,129,148,155"/>
-<area shape="rect" id="node7" href="$df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250" title="This function get the item at the specified index of the Vector." alt="" coords="202,177,241,203"/>
-<area shape="rect" id="node8" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="199,128,245,154"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,129,55,155"/>
+<area shape="rect" id="Node000002" href="$df/dfa/vector_8c.html#a27a32c68950e464846b6730512968e4b" title="This function initilaizes the vector and gives it a size of 1 and initializes the first index to 0." alt="" coords="202,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,127,101,91,188,35,191,39,104,95,51,131"/>
+<area shape="rect" id="Node000003" href="$df/dfa/vector_8c.html#abdb067a98f90bcd9b0aa4ceb364d607f" title="This function prints the entire Vector as a list." alt="" coords="103,231,149,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="45,154,105,218,101,222,42,157"/>
+<area shape="rect" id="Node000004" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="197,79,246,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="54,130,102,114,182,96,183,101,103,119,56,135"/>
+<area shape="rect" id="Node000005" href="$df/dfa/vector_8c.html#a6facac5424445995bd2f8bb03ffcb548" title="This function sets an item at the specified index of the Vector." alt="" coords="202,227,241,252"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="56,152,190,221,188,226,54,157"/>
+<area shape="rect" id="Node000006" href="$df/dfa/vector_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="This function tests the functions used to work with Vectors." alt="" coords="104,129,148,155"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="55,140,89,140,89,145,55,145"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="204,79,201,70,203,61,210,54,222,52,234,55,241,62,237,66,232,60,222,57,212,59,208,63,206,70,209,77"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="133,127,158,91,195,41,199,44,162,94,138,130"/>
+<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="147,129,182,109,185,114,149,133"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="141,153,199,214,199,214,195,218,195,217,138,157"/>
+<area shape="rect" id="Node000007" href="$df/dfa/vector_8c.html#a15f534ebe962fda31cc191852befc250" title="This function get the item at the specified index of the Vector." alt="" coords="202,177,241,203"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="149,150,190,172,188,176,147,155"/>
+<area shape="rect" id="Node000008" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="199,128,245,154"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="148,139,184,139,184,144,148,145"/>
 </map>

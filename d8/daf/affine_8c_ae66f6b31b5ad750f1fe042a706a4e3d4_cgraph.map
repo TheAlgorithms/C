@@ -1,10 +1,17 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,38,55,64"/>
-<area shape="rect" id="node2" href="$d8/daf/affine_8c.html#a483bb8ccf42aaf7375a83e91490eda1e" title="Test multiple strings." alt="" coords="103,38,153,64"/>
-<area shape="rect" id="node3" href="$d8/daf/affine_8c.html#a0c4679d9b7da3c5b310586cd6c1fc2c5" title="Tests a given string." alt="" coords="201,38,283,64"/>
-<area shape="rect" id="node4" href="$d8/daf/affine_8c.html#a310ff5abff6e8d74949ee35552737d37" title="Decrypts an affine ciphertext." alt="" coords="331,13,435,39"/>
-<area shape="rect" id="node8" href="$d8/daf/affine_8c.html#a0e9b074b109264adec79026eed67e875" title="Encrypts character string s with key." alt="" coords="331,62,435,88"/>
-<area shape="rect" id="node5" href="$d8/daf/affine_8c.html#af5a0c4b8aa0d2d1f670529da61979c8d" title="Given a valid affine cipher key, this function will produce the inverse key." alt="" coords="483,13,574,39"/>
-<area shape="rect" id="node6" href="$d8/daf/affine_8c.html#a06c3bb0ae5d5e9ddc65f8fce1b82e1dd" title="finds the value x such that (a * x) % m = 1" alt="" coords="622,5,772,46"/>
-<area shape="rect" id="node7" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="820,13,867,39"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,38,55,64"/>
+<area shape="rect" id="Node000002" href="$d8/daf/affine_8c.html#a483bb8ccf42aaf7375a83e91490eda1e" title="Test multiple strings." alt="" coords="103,38,153,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,48,88,48,88,54,55,54"/>
+<area shape="rect" id="Node000003" href="$d8/daf/affine_8c.html#a0c4679d9b7da3c5b310586cd6c1fc2c5" title="Tests a given string." alt="" coords="201,38,283,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="153,48,186,48,186,54,153,54"/>
+<area shape="rect" id="Node000004" href="$d8/daf/affine_8c.html#a310ff5abff6e8d74949ee35552737d37" title="Decrypts an affine ciphertext." alt="" coords="331,13,435,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="283,41,316,35,317,40,284,46"/>
+<area shape="rect" id="Node000008" href="$d8/daf/affine_8c.html#a0e9b074b109264adec79026eed67e875" title="Encrypts character string s with key." alt="" coords="331,62,435,88"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="284,55,317,61,316,66,283,61"/>
+<area shape="rect" id="Node000005" href="$d8/daf/affine_8c.html#af5a0c4b8aa0d2d1f670529da61979c8d" title="Given a valid affine cipher key, this function will produce the inverse key." alt="" coords="483,13,574,39"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="435,23,468,23,468,28,435,28"/>
+<area shape="rect" id="Node000006" href="$d8/daf/affine_8c.html#a06c3bb0ae5d5e9ddc65f8fce1b82e1dd" title="finds the value x such that (a * x) % m = 1" alt="" coords="622,5,772,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="575,23,607,23,607,28,575,28"/>
+<area shape="rect" id="Node000007" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="820,13,867,39"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="773,23,805,23,805,28,773,28"/>
 </map>

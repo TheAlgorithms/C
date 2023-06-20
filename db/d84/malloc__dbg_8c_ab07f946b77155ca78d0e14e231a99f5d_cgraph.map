@@ -1,5 +1,7 @@
 <map id="calloc_dbg" name="calloc_dbg">
-<area shape="rect" id="node1" title="calloc_dbg function is a wrapper around the calloc function." alt="" coords="5,31,89,56"/>
-<area shape="rect" id="node2" href="$db/d84/malloc__dbg_8c.html#a062aa89cafd39a97971a2eb22653ff2a" title="addMemInfo function add a memory allocation in the memoryInfo list." alt="" coords="137,5,230,31"/>
-<area shape="rect" id="node3" href="$db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797" title="printLeaks function is used to print all the memory leaks." alt="" coords="143,55,224,80"/>
+<area shape="rect" id="Node000001" title="calloc_dbg function is a wrapper around the calloc function." alt="" coords="5,31,89,56"/>
+<area shape="rect" id="Node000002" href="$db/d84/malloc__dbg_8c.html#a062aa89cafd39a97971a2eb22653ff2a" title="addMemInfo function add a memory allocation in the memoryInfo list." alt="" coords="137,5,230,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,33,121,27,122,32,90,38"/>
+<area shape="rect" id="Node000003" href="$db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797" title="printLeaks function is used to print all the memory leaks." alt="" coords="143,55,224,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="90,48,129,55,128,60,89,53"/>
 </map>

@@ -1,9 +1,20 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,80,49,106"/>
-<area shape="rect" id="node2" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#abbb2446313782dd3ba9ff2a7ad0ce1df" title="To calculate the average completion time of all the processes." alt="" coords="240,105,331,131"/>
-<area shape="rect" id="node4" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a5d0943b2e0e1b48b9c3a575a7f262c36" title="To insert a new process in the queue." alt="" coords="388,155,442,180"/>
-<area shape="rect" id="node6" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a458803d3c3926a6bcc4d51540f297756" title="To calculate the average turn around time of all the processes." alt="" coords="97,55,192,80"/>
-<area shape="rect" id="node7" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#ae5e4de64ef6c5676d5013d90229a875c" title="To calculate the average waiting time of all the processes." alt="" coords="97,5,192,31"/>
-<area shape="rect" id="node3" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a01b8ee561d8532a44d665c2c854e0d09" title="To compare the priority of two processes based on their arrival time and priority." alt="" coords="379,105,451,131"/>
-<area shape="rect" id="node5" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a40e454ce0750e794007bf41a7102b3a9" title="To length process queue." alt="" coords="382,55,448,80"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,80,49,106"/>
+<area shape="rect" id="Node000002" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#abbb2446313782dd3ba9ff2a7ad0ce1df" title="To calculate the average completion time of all the processes." alt="" coords="240,105,331,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,92,226,110,225,115,49,98"/>
+<area shape="rect" id="Node000004" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a5d0943b2e0e1b48b9c3a575a7f262c36" title="To insert a new process in the queue." alt="" coords="388,155,442,180"/>
+<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="50,97,97,112,249,143,374,160,373,166,249,148,96,117,48,102"/>
+<area shape="rect" id="Node000006" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a458803d3c3926a6bcc4d51540f297756" title="To calculate the average turn around time of all the processes." alt="" coords="97,55,192,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="48,86,81,78,83,84,49,91"/>
+<area shape="rect" id="Node000007" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#ae5e4de64ef6c5676d5013d90229a875c" title="To calculate the average waiting time of all the processes." alt="" coords="97,5,192,31"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="43,77,95,40,102,36,104,41,98,44,46,82"/>
+<area shape="rect" id="Node000003" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a01b8ee561d8532a44d665c2c854e0d09" title="To compare the priority of two processes based on their arrival time and priority." alt="" coords="379,105,451,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,116,365,116,365,121,332,121"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="323,129,375,150,374,155,321,134"/>
+<area shape="rect" id="Node000005" href="$d2/d87/non__preemptive__priority__scheduling_8c.html#a40e454ce0750e794007bf41a7102b3a9" title="To length process queue." alt="" coords="382,55,448,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="319,102,367,83,369,88,321,107"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="183,78,235,97,234,102,182,83"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="192,65,367,65,367,70,192,70"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="175,29,194,40,261,93,258,97,190,44,172,34"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="192,22,332,46,368,54,367,59,331,51,192,28"/>
 </map>

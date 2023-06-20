@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75" title="Function to get the number of days in a month." alt="" coords="103,5,220,31"/>
-<area shape="rect" id="node3" href="$dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e" title="Check if input year is a leap year." alt="" coords="114,55,209,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$dd/df0/problem__19_2sol1_8c.html#ab7f9ad087f124b8e0615aa535b4c8a75" title="Function to get the number of days in a month." alt="" coords="103,5,220,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,36,88,30,89,35,55,41"/>
+<area shape="rect" id="Node000003" href="$dd/df0/problem__19_2sol1_8c.html#a6561b1adc8a19c092679b9874da24e2e" title="Check if input year is a leap year." alt="" coords="114,55,209,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,45,100,54,99,59,54,51"/>
 </map>

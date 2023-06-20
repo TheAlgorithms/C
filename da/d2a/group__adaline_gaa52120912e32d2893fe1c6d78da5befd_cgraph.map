@@ -1,7 +1,11 @@
 <map id="adaline_fit" name="adaline_fit">
-<area shape="rect" id="node1" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="5,31,86,56"/>
-<area shape="rect" id="node2" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="150,5,279,31"/>
-<area shape="rect" id="node5" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="134,55,295,80"/>
-<area shape="rect" id="node3" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="343,5,451,31"/>
-<area shape="rect" id="node4" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="499,5,625,31"/>
+<area shape="rect" id="Node000001" title="Update the weights of the model using supervised learning for an array of vectors." alt="" coords="5,31,86,56"/>
+<area shape="rect" id="Node000002" href="$da/d2a/group__adaline.html#ga20d3642e0a87f36fdb7bf91b023cd166" title="Update the weights of the model using supervised learning for one feature vector." alt="" coords="150,5,279,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,35,135,27,136,33,87,40"/>
+<area shape="rect" id="Node000005" href="$da/d2a/group__adaline.html#gadb1a7acb555ad62daaf3806bf2fed036" title="Operator to print the weights of the model." alt="" coords="134,55,295,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="87,47,120,51,119,57,86,52"/>
+<area shape="rect" id="Node000003" href="$da/d2a/group__adaline.html#gac70b578aee679005fd336073969c3d94" title="predict the output of the model for given set of features" alt="" coords="343,5,451,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,16,328,16,328,21,279,21"/>
+<area shape="rect" id="Node000004" href="$da/d2a/group__adaline.html#ga43576566b020c4157d4fb28f0dd45cfa" title="Heaviside activation function" alt="" coords="499,5,625,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="452,16,485,16,485,21,452,21"/>
 </map>

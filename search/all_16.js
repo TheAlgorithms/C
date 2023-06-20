@@ -37,7 +37,7 @@ var searchData=
   ['tnode_34',['tnode',['../d8/d7a/structtnode.html',1,'']]],
   ['to_5fpolar_35',['to_polar',['../d6/d2e/cartesian__to__polar_8c.html#afb80d77f0c994240309ccddcc9525e70',1,'cartesian_to_polar.c']]],
   ['tolerance_36',['TOLERANCE',['../db/d72/secant__method_8c.html#a30c17564229ec2e37dfea9c6c9ad643e',1,'secant_method.c']]],
-  ['top_37',['top',['../d4/d67/struct_d_array_stack.html#a0207dbf74f0f8623933bec50c36b4c4f',1,'DArrayStack::top()'],['../dd/d10/struct_stack.html#ad62fb36816185f3eef3a6f735a61f54a',1,'Stack::top()']]],
+  ['top_37',['top',['../d4/d67/struct_d_array_stack.html#a0207dbf74f0f8623933bec50c36b4c4f',1,'DArrayStack::top'],['../dd/d10/struct_stack.html#ad62fb36816185f3eef3a6f735a61f54a',1,'Stack::top']]],
   ['top_38',['Top',['../da/d96/infix__to__postfix2_8c.html#a2d1c13296ce9c42bb5dd7d834e2802bf',1,'infix_to_postfix2.c']]],
   ['tos_39',['tos',['../dd/d10/struct_stack.html#ac2dbef151bc913684a90b06836725ef9',1,'Stack']]],
   ['transit_40',['transit',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#aebe16fbf12c8ac089501ebcae6f0c050',1,'mcnaughton_yamada_thompson.c']]],

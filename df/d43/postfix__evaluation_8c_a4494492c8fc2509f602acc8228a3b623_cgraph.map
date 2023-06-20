@@ -1,5 +1,8 @@
 <map id="evaluate" name="evaluate">
-<area shape="rect" id="node1" title="Function to evaluate postfix expression." alt="" coords="5,43,76,68"/>
-<area shape="rect" id="node2" href="$df/d43/postfix__evaluation_8c.html#a8546e4b3f61be1f09ce47f428116ad7d" title="Function to pop from the stack." alt="" coords="127,5,170,31"/>
-<area shape="rect" id="node3" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="124,79,173,104"/>
+<area shape="rect" id="Node000001" title="Function to evaluate postfix expression." alt="" coords="5,43,76,68"/>
+<area shape="rect" id="Node000002" href="$df/d43/postfix__evaluation_8c.html#a8546e4b3f61be1f09ce47f428116ad7d" title="Function to pop from the stack." alt="" coords="127,5,170,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,41,113,28,114,33,77,46"/>
+<area shape="rect" id="Node000003" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="124,79,173,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="77,65,110,76,109,81,75,70"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="129,79,126,70,128,61,136,54,148,52,162,55,170,62,166,66,160,60,148,57,138,59,132,64,131,70,134,77"/>
 </map>

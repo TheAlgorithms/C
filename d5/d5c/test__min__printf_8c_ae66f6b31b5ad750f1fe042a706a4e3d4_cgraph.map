@@ -1,15 +1,31 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="for min_printf function for printf function" alt="" coords="5,131,55,156"/>
-<area shape="rect" id="node2" href="$d9/deb/min__printf_8h.html#a33e08c05f8c656a0fee465c2e8d2ecf9" title="min_printf is the function same as printf" alt="" coords="103,131,181,156"/>
-<area shape="rect" id="node3" href="$d9/deb/min__printf_8h.html#a409d428c337bf5476567a228274f49f1" title="Returns specific required next character." alt="" coords="281,5,341,31"/>
-<area shape="rect" id="node4" href="$d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03" title="Takes width and precision specified from the format of the string." alt="" coords="229,55,393,80"/>
-<area shape="rect" id="node7" href="$d9/deb/min__printf_8h.html#a4d63203d920bebd6a96f5f4aeccb21e5" title="The algorithm here is also the same as the print_int_value function." alt="" coords="247,156,376,182"/>
-<area shape="rect" id="node10" href="$d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824" title=" " alt="" coords="461,104,567,130"/>
-<area shape="rect" id="node11" href="$d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b" title="Prints one character on screen." alt="" coords="642,279,714,304"/>
-<area shape="rect" id="node13" href="$d9/deb/min__printf_8h.html#af569209570eca8bc6770fb7d9dc873e6" title=" " alt="" coords="269,355,354,380"/>
-<area shape="rect" id="node5" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="473,5,555,31"/>
-<area shape="rect" id="node6" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="477,55,551,80"/>
-<area shape="rect" id="node8" href="$d9/deb/min__printf_8h.html#aefb40d94d5d9fa2a28bc64755dde096f" title="Calculates the number of digits in a number." alt="" coords="441,203,587,228"/>
-<area shape="rect" id="node9" href="$d9/deb/min__printf_8h.html#a8421f89b76edcf21292c5100bfca586b" title=" " alt="" coords="464,153,564,179"/>
-<area shape="rect" id="node12" href="$d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e" title="Reverses a string using two pointer algorithm" alt="" coords="635,104,721,130"/>
+<area shape="rect" id="Node000001" title="for min_printf function for printf function" alt="" coords="5,131,55,156"/>
+<area shape="rect" id="Node000002" href="$d9/deb/min__printf_8h.html#a33e08c05f8c656a0fee465c2e8d2ecf9" title="min_printf is the function same as printf" alt="" coords="103,131,181,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,141,88,141,88,146,55,146"/>
+<area shape="rect" id="Node000003" href="$d9/deb/min__printf_8h.html#a409d428c337bf5476567a228274f49f1" title="Returns specific required next character." alt="" coords="281,5,341,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,129,179,85,202,61,228,40,265,24,268,29,230,44,205,65,183,88,153,132"/>
+<area shape="rect" id="Node000004" href="$d9/deb/min__printf_8h.html#aa61e2407aab2c75e9837c77cab937d03" title="Takes width and precision specified from the format of the string." alt="" coords="229,55,393,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="166,128,228,97,259,84,261,89,230,102,169,133"/>
+<area shape="rect" id="Node000007" href="$d9/deb/min__printf_8h.html#a4d63203d920bebd6a96f5f4aeccb21e5" title="The algorithm here is also the same as the print_int_value function." alt="" coords="247,156,376,182"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="182,147,233,154,232,160,181,152"/>
+<area shape="rect" id="Node000010" href="$d9/deb/min__printf_8h.html#a0a848efdf2ee124bba62e056eb9ab824" title=" " alt="" coords="461,104,567,130"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="181,138,446,119,447,124,182,143"/>
+<area shape="rect" id="Node000011" href="$d9/deb/min__printf_8h.html#ad2f9a02e1d69f58e2fb1248f49d09f4b" title="Prints one character on screen." alt="" coords="642,279,714,304"/>
+<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="165,155,212,184,279,220,358,255,442,281,491,289,540,293,627,292,627,298,540,298,490,294,441,286,356,260,277,225,209,188,162,159"/>
+<area shape="rect" id="Node000013" href="$d9/deb/min__printf_8h.html#af569209570eca8bc6770fb7d9dc873e6" title=" " alt="" coords="269,355,354,380"/>
+<area shape="poly" id="edge14_Node000002_Node000013" title=" " alt="" coords="148,156,156,191,172,238,196,289,212,313,231,333,257,350,254,355,227,338,208,316,192,292,167,240,151,192,143,157"/>
+<area shape="rect" id="Node000005" href="$d9/deb/min__printf_8h.html#ad4908ab912d8dc481225e33ca3285c21" title="Checks if a character is a number." alt="" coords="473,5,555,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="367,51,458,29,460,34,368,57"/>
+<area shape="rect" id="Node000006" href="$d9/deb/min__printf_8h.html#aa8a17b7d234a2fb2174da02074a14055" title="Stores character to the buffer&#45;&gt;buffr_char" alt="" coords="477,55,551,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="394,65,462,65,462,70,394,70"/>
+<area shape="rect" id="Node000008" href="$d9/deb/min__printf_8h.html#aefb40d94d5d9fa2a28bc64755dde096f" title="Calculates the number of digits in a number." alt="" coords="441,203,587,228"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="371,180,441,196,440,201,370,185"/>
+<area shape="rect" id="Node000009" href="$d9/deb/min__printf_8h.html#a8421f89b76edcf21292c5100bfca586b" title=" " alt="" coords="464,153,564,179"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="376,165,450,164,450,170,376,171"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="363,153,446,131,448,137,365,158"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="334,180,382,209,442,238,540,267,628,283,627,288,539,272,440,243,379,214,331,185"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="568,127,588,139,617,168,640,201,670,263,665,266,635,204,613,171,585,143,566,132"/>
+<area shape="rect" id="Node000012" href="$d9/deb/min__printf_8h.html#a8d68ec60643cacdb402176549565754e" title="Reverses a string using two pointer algorithm" alt="" coords="635,104,721,130"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="567,114,620,114,620,120,567,120"/>
+<area shape="poly" id="edge15_Node000013_Node000011" title=" " alt="" coords="354,364,461,357,524,347,586,333,641,309,643,314,587,338,525,353,461,362,354,370"/>
 </map>

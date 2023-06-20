@@ -1,3 +1,4 @@
 <map id="MEMORY_INFORMATION" name="MEMORY_INFORMATION">
-<area shape="rect" id="node1" title="For the malloc, calloc and free functions." alt="" coords="5,8,187,33"/>
+<area shape="rect" id="Node000001" title="For the malloc, calloc and free functions." alt="" coords="5,8,187,33"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="203,15,213,21,188,27,187,22,208,20,201,20"/>
 </map>

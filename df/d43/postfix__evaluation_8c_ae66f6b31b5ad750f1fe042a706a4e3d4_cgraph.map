@@ -1,7 +1,12 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,43,55,68"/>
-<area shape="rect" id="node2" href="$df/d43/postfix__evaluation_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,43,146,68"/>
-<area shape="rect" id="node3" href="$df/d43/postfix__evaluation_8c.html#a4494492c8fc2509f602acc8228a3b623" title="Function to evaluate postfix expression." alt="" coords="194,43,264,68"/>
-<area shape="rect" id="node4" href="$df/d43/postfix__evaluation_8c.html#a8546e4b3f61be1f09ce47f428116ad7d" title="Function to pop from the stack." alt="" coords="316,5,358,31"/>
-<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="312,79,362,104"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,43,55,68"/>
+<area shape="rect" id="Node000002" href="$df/d43/postfix__evaluation_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,43,146,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,53,88,53,88,58,55,58"/>
+<area shape="rect" id="Node000003" href="$df/d43/postfix__evaluation_8c.html#a4494492c8fc2509f602acc8228a3b623" title="Function to evaluate postfix expression." alt="" coords="194,43,264,68"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,53,179,53,179,58,146,58"/>
+<area shape="rect" id="Node000004" href="$df/d43/postfix__evaluation_8c.html#a8546e4b3f61be1f09ce47f428116ad7d" title="Function to pop from the stack." alt="" coords="316,5,358,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="264,41,301,28,303,33,266,46"/>
+<area shape="rect" id="Node000005" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="312,79,362,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="266,65,299,76,297,81,264,70"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="318,79,314,70,316,61,324,54,337,52,351,55,358,62,354,66,349,60,337,57,326,59,321,64,320,70,323,77"/>
 </map>

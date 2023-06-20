@@ -1,4 +1,5 @@
 <map id="developer_tools/min_printf.h" name="developer_tools/min_printf.h">
-<area shape="rect" id="node1" title="Implementation of a function similar to printf" alt="" coords="6,5,143,46"/>
-<area shape="rect" id="node2" href="$d5/d5c/test__min__printf_8c.html" title="File used to test min_printf function." alt="" coords="5,94,144,135"/>
+<area shape="rect" id="Node000001" title="Implementation of a function similar to printf" alt="" coords="6,5,143,46"/>
+<area shape="rect" id="Node000002" href="$d5/d5c/test__min__printf_8c.html" title="File used to test min_printf function." alt="" coords="5,94,144,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,61,77,94,72,94,72,61"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="tnode" name="tnode">
-<area shape="rect" id="node1" title=" " alt="" coords="5,15,59,41"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,59,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="75,21,85,28,76,34,59,35,59,30,75,29,80,28,72,26"/>
 </map>

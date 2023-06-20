@@ -1,3 +1,4 @@
 <map id="getMax" name="getMax">
-<area shape="rect" id="node1" title="Utilitary procedure to find the greatest key in the left subtree." alt="" coords="5,29,70,55"/>
+<area shape="rect" id="Node000001" title="Utilitary procedure to find the greatest key in the left subtree." alt="" coords="5,29,70,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="25,29,24,12,29,5,38,3,47,6,51,13,47,16,43,10,37,8,32,10,29,14,30,29"/>
 </map>

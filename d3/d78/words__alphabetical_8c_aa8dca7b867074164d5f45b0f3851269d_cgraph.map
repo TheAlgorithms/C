@@ -1,11 +1,24 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,101,49,127"/>
-<area shape="rect" id="node2" href="$d3/d78/words__alphabetical_8c.html#af1f9b6eb320d872ba0766dc8bd070075" title="Closes the file after reading or writing." alt="" coords="335,5,408,31"/>
-<area shape="rect" id="node4" href="$d3/d78/words__alphabetical_8c.html#a840902ada0e956eb01b529be178748cc" title="Frees memory when program is terminating." alt="" coords="124,76,240,102"/>
-<area shape="rect" id="node5" href="$d3/d78/words__alphabetical_8c.html#a151b2c78ae821d0495faf936a1c2530f" title="Reads words from file to tree." alt="" coords="104,125,260,151"/>
-<area shape="rect" id="node9" href="$d3/d78/words__alphabetical_8c.html#a22516c70583c9fa78e4edffb063836cc" title="Writes contents of tree to another file alphabetically." alt="" coords="97,199,267,224"/>
-<area shape="rect" id="node3" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="687,64,826,90"/>
-<area shape="rect" id="node6" href="$d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9" title="Adds word (node) to the correct position in tree." alt="" coords="315,113,427,139"/>
-<area shape="rect" id="node7" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="475,64,639,90"/>
-<area shape="rect" id="node8" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="495,113,619,139"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,101,49,127"/>
+<area shape="rect" id="Node000002" href="$d3/d78/words__alphabetical_8c.html#af1f9b6eb320d872ba0766dc8bd070075" title="Closes the file after reading or writing." alt="" coords="335,5,408,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,99,58,67,75,50,95,37,153,17,213,8,271,6,320,9,320,14,271,11,214,13,154,22,98,42,79,54,62,70,38,102"/>
+<area shape="rect" id="Node000004" href="$d3/d78/words__alphabetical_8c.html#a840902ada0e956eb01b529be178748cc" title="Frees memory when program is terminating." alt="" coords="124,76,240,102"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="48,108,108,98,109,103,49,113"/>
+<area shape="rect" id="Node000005" href="$d3/d78/words__alphabetical_8c.html#a151b2c78ae821d0495faf936a1c2530f" title="Reads words from file to tree." alt="" coords="104,125,260,151"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="49,115,90,121,89,126,48,120"/>
+<area shape="rect" id="Node000009" href="$d3/d78/words__alphabetical_8c.html#a22516c70583c9fa78e4edffb063836cc" title="Writes contents of tree to another file alphabetically." alt="" coords="97,199,267,224"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="47,125,98,161,144,189,141,193,95,166,44,129"/>
+<area shape="rect" id="Node000003" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="687,64,826,90"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,19,512,31,639,49,685,58,684,63,638,54,512,36,408,24"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="155,77,150,67,153,58,164,52,182,49,202,52,211,60,208,64,200,57,182,55,166,57,157,61,156,67,160,74"/>
+<area shape="rect" id="Node000006" href="$d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9" title="Adds word (node) to the correct position in tree." alt="" coords="315,113,427,139"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="259,131,300,128,300,133,260,136"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="340,114,334,105,337,95,350,89,371,87,395,90,406,97,403,101,393,95,371,92,352,94,341,99,339,104,344,111"/>
+<area shape="rect" id="Node000007" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="475,64,639,90"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="422,110,491,91,493,97,423,115"/>
+<area shape="rect" id="Node000008" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="495,113,619,139"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="428,124,480,124,480,129,428,129"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="639,74,672,74,672,80,639,80"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="611,110,687,91,688,96,613,115"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="155,200,150,190,153,180,164,174,182,172,202,175,211,182,208,186,200,180,182,177,166,179,157,184,156,189,160,197"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0" title="Shell sort algorithm." alt="" coords="106,5,184,31"/>
-<area shape="rect" id="node3" href="$d5/d4c/group__sorting.html#gaeccaf61ff47279384d1dba8d869d5c2f" title="Helper function to print array values." alt="" coords="103,55,187,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d5/d4c/group__sorting.html#ga5bc16eaf3ffe6a6ab66780dd445904c0" title="Shell sort algorithm." alt="" coords="106,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,36,91,27,92,33,56,41"/>
+<area shape="rect" id="Node000003" href="$d5/d4c/group__sorting.html#gaeccaf61ff47279384d1dba8d869d5c2f" title="Helper function to print array values." alt="" coords="103,55,187,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,46,89,53,88,58,55,51"/>
 </map>

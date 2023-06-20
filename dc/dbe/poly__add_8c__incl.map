@@ -1,5 +1,7 @@
 <map id="misc/poly_add.c" name="misc/poly_add.c">
-<area shape="rect" id="node1" title="Implementation of [Addition of two polynomials] (https://en.wikipedia.org/wiki/Polynomial#Addition)" alt="" coords="20,5,136,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,66,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,79,153,105"/>
+<area shape="rect" id="Node000001" title="Implementation of [Addition of two polynomials] (https://en.wikipedia.org/wiki/Polynomial#Addition)" alt="" coords="20,5,136,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,33,52,68,48,65,69,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,153,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,30,109,65,104,68,83,33"/>
 </map>

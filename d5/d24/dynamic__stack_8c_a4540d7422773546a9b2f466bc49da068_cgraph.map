@@ -1,4 +1,5 @@
 <map id="pop" name="pop">
-<area shape="rect" id="node1" title="The pop function to pop an element from the stack." alt="" coords="5,5,48,31"/>
-<area shape="rect" id="node2" href="$d5/d24/dynamic__stack_8c.html#a072451a98105e776e63cb5dd792d562f" title="As this is stack implementation using dynamic array this function will shrink the size of stack by tw..." alt="" coords="96,5,188,31"/>
+<area shape="rect" id="Node000001" title="The pop function to pop an element from the stack." alt="" coords="5,5,48,31"/>
+<area shape="rect" id="Node000002" href="$d5/d24/dynamic__stack_8c.html#a072451a98105e776e63cb5dd792d562f" title="As this is stack implementation using dynamic array this function will shrink the size of stack by tw..." alt="" coords="96,5,188,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,16,81,16,81,21,48,21"/>
 </map>

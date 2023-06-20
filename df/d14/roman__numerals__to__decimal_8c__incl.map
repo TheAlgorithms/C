@@ -1,6 +1,9 @@
 <map id="conversions/roman_numerals_to_decimal.c" name="conversions/roman_numerals_to_decimal.c">
-<area shape="rect" id="node1" title="Conversion of roman numerals to decimal." alt="" coords="32,5,223,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,74,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,94,158,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="182,94,246,120"/>
+<area shape="rect" id="Node000001" title="Conversion of roman numerals to decimal." alt="" coords="32,5,223,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,74,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,48,65,86,62,82,104,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,94,158,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,46,130,79,125,79,125,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,94,246,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,44,192,82,188,86,147,48"/>
 </map>

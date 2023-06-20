@@ -1,3 +1,4 @@
 <map id="_cantor_set" name="_cantor_set">
-<area shape="rect" id="node1" title="structure to define Cantor set" alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000001" title="structure to define Cantor set" alt="" coords="5,5,95,31"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="110,12,121,18,113,24,95,26,95,20,111,19,116,18,108,17"/>
 </map>

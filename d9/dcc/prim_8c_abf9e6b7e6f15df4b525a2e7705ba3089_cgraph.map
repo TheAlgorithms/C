@@ -1,9 +1,17 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,35,55,61"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="352,86,391,111"/>
-<area shape="rect" id="node3" href="$de/dcf/rot13_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="124,35,167,61"/>
-<area shape="rect" id="node5" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="103,86,188,111"/>
-<area shape="rect" id="node4" href="$de/dcf/rot13_8c.html#aff3bdb59af9eabba91420f23eb01718c" title="for IO operations" alt="" coords="236,35,286,61"/>
-<area shape="rect" id="node6" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="238,136,284,162"/>
-<area shape="rect" id="node7" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="334,136,409,162"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,35,55,61"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="352,86,391,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,35,102,20,196,4,237,6,287,20,325,43,354,72,350,76,322,48,285,25,236,11,196,9,103,25,56,40"/>
+<area shape="rect" id="Node000003" href="$de/dcf/rot13_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="124,35,167,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,45,109,45,109,51,55,51"/>
+<area shape="rect" id="Node000005" href="$d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768" title="Function user_graph(); gets user input adj." alt="" coords="103,86,188,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="56,56,102,77,100,82,54,61"/>
+<area shape="rect" id="Node000004" href="$de/dcf/rot13_8c.html#aff3bdb59af9eabba91420f23eb01718c" title="for IO operations" alt="" coords="236,35,286,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="167,45,221,45,221,51,167,51"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="188,96,338,96,338,101,188,101"/>
+<area shape="rect" id="Node000006" href="$d9/dcc/prim_8c.html#a0bea087eb586c437cf0a667f794c8853" title="Used to find MST of user&#45;generated adj matrix G." alt="" coords="238,136,284,162"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="177,109,225,131,223,136,175,114"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="284,136,338,111,340,116,286,141"/>
+<area shape="rect" id="Node000007" href="$d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc" title="Finds index of minimum element in edge list for an arbitrary vertex." alt="" coords="334,136,409,162"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="285,147,319,147,319,152,285,152"/>
 </map>

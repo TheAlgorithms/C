@@ -1,7 +1,11 @@
 <map id="misc/run_length_encoding.c" name="misc/run_length_encoding.c">
-<area shape="rect" id="node1" title="Encode a null terminated string using Run&#45;length encoding" alt="" coords="75,5,258,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,66,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="90,79,154,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="179,79,242,105"/>
-<area shape="rect" id="node5" title=" " alt="" coords="265,79,334,105"/>
+<area shape="rect" id="Node000001" title="Encode a null terminated string using Run&#45;length encoding" alt="" coords="75,5,258,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,34,72,74,69,69,143,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,79,154,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,33,139,68,135,65,157,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="179,79,242,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,30,197,65,193,68,171,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="265,79,334,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="190,29,265,69,263,74,188,34"/>
 </map>

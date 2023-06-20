@@ -1,6 +1,9 @@
 <map id="extended_euclidean_algorithm" name="extended_euclidean_algorithm">
-<area shape="rect" id="node1" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="5,23,142,64"/>
-<area shape="rect" id="node2" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="190,31,316,56"/>
-<area shape="rect" id="node3" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="376,5,422,31"/>
-<area shape="rect" id="node4" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="364,55,434,80"/>
+<area shape="rect" id="Node000001" title="performs the extended Euclidean algorithm on integer inputs a and b" alt="" coords="5,23,142,64"/>
+<area shape="rect" id="Node000002" href="$d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" title="calculates the value of x or y and push those into the small &#39;queues&#39;" alt="" coords="190,31,316,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,41,175,41,175,46,142,46"/>
+<area shape="rect" id="Node000003" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="376,5,422,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,30,361,22,362,27,317,35"/>
+<area shape="rect" id="Node000004" href="$d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of..." alt="" coords="364,55,434,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="317,51,350,57,349,62,316,57"/>
 </map>

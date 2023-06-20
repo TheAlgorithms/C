@@ -1,6 +1,9 @@
 <map id="sorting/patience_sort.c" name="sorting/patience_sort.c">
-<area shape="rect" id="node1" title="Patience Sort" alt="" coords="51,5,204,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,74,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,79,158,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,79,245,105"/>
+<area shape="rect" id="Node000001" title="Patience Sort" alt="" coords="51,5,204,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,34,67,72,64,67,111,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,158,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,31,130,64,125,64,125,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="181,79,245,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="144,29,189,67,186,72,140,34"/>
 </map>

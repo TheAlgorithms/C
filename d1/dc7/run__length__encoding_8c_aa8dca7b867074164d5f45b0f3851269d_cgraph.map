@@ -1,4 +1,6 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="9,29,53,55"/>
-<area shape="rect" id="node2" href="$d1/dc7/run__length__encoding_8c.html#ac3cc4a63cf2a14a08e05c5537ecf59c2" title="for IO operations" alt="" coords="101,29,231,55"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="9,29,53,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="7,30,3,21,6,11,15,5,31,3,48,6,57,13,54,17,46,10,31,8,17,10,10,14,8,20,12,28"/>
+<area shape="rect" id="Node000002" href="$d1/dc7/run__length__encoding_8c.html#ac3cc4a63cf2a14a08e05c5537ecf59c2" title="for IO operations" alt="" coords="101,29,231,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,40,86,40,86,45,53,45"/>
 </map>

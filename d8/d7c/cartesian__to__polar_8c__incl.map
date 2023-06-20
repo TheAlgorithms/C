@@ -1,7 +1,11 @@
 <map id="math/cartesian_to_polar.c" name="math/cartesian_to_polar.c">
-<area shape="rect" id="node1" title="Function to convert a Cartesian co&#45;ordinate to polar form." alt="" coords="86,5,257,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,74,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,79,160,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="184,79,244,105"/>
-<area shape="rect" id="node5" title=" " alt="" coords="268,79,331,105"/>
+<area shape="rect" id="Node000001" title="Function to convert a Cartesian co&#45;ordinate to polar form." alt="" coords="86,5,257,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,34,76,74,73,69,148,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,160,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,33,146,68,141,65,162,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="184,79,244,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,30,202,65,197,68,176,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="268,79,331,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="195,29,266,69,264,74,192,34"/>
 </map>

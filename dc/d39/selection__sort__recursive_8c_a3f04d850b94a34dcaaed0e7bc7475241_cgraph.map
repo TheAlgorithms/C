@@ -1,4 +1,7 @@
 <map id="selectionSort" name="selectionSort">
-<area shape="rect" id="node1" title="Selection Sort algorithm implemented using recursion." alt="" coords="5,29,103,55"/>
-<area shape="rect" id="node2" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="151,29,225,55"/>
+<area shape="rect" id="Node000001" title="Selection Sort algorithm implemented using recursion." alt="" coords="5,29,103,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="31,30,26,21,29,11,39,5,54,3,71,6,80,13,76,17,69,10,54,8,40,10,33,14,32,20,35,28"/>
+<area shape="rect" id="Node000002" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="151,29,225,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,40,136,40,136,45,103,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="164,30,160,21,163,11,172,5,188,3,205,6,214,13,210,17,203,10,188,8,174,10,167,14,165,20,169,28"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="test_xor8" name="test_xor8">
-<area shape="rect" id="node1" title="Test function for xor8." alt="" coords="5,5,81,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb" title="8&#45;bit XOR algorithm implementation" alt="" coords="129,5,175,31"/>
+<area shape="rect" id="Node000001" title="Test function for xor8." alt="" coords="5,5,81,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#gae4836b42b998b336298f3b19dcc9cdeb" title="8&#45;bit XOR algorithm implementation" alt="" coords="129,5,175,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,16,114,16,114,21,81,21"/>
 </map>

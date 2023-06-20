@@ -1,9 +1,16 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,104,55,130"/>
-<area shape="rect" id="node2" href="$db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1" title="convert function" alt="" coords="103,104,167,130"/>
-<area shape="rect" id="node3" href="$db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787" title="getPrecedence function returns the precedence after comparing two operators passed as parameter." alt="" coords="215,5,323,31"/>
-<area shape="rect" id="node4" href="$da/d96/infix__to__postfix2_8c.html#a653c98c68c558505b75b04c44b7c838e" title="Function to check whether the stack is empty or not." alt="" coords="235,55,304,80"/>
-<area shape="rect" id="node5" href="$db/d0c/infix__to__postfix_8c.html#afd8245c04b202240390de23170f72d6b" title="isOprnd function" alt="" coords="236,104,302,130"/>
-<area shape="rect" id="node6" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." alt="" coords="248,153,290,179"/>
-<area shape="rect" id="node7" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="245,227,294,252"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,104,55,130"/>
+<area shape="rect" id="Node000002" href="$db/d0c/infix__to__postfix_8c.html#a92af69ffc1e1f965ebce6a44672e96b1" title="convert function" alt="" coords="103,104,167,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,114,88,114,88,120,55,120"/>
+<area shape="rect" id="Node000003" href="$db/d0c/infix__to__postfix_8c.html#ac91f38ad7885fca93e39325361a5c787" title="getPrecedence function returns the precedence after comparing two operators passed as parameter." alt="" coords="215,5,323,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,102,175,72,213,40,220,36,223,40,217,44,178,76,149,106"/>
+<area shape="rect" id="Node000004" href="$da/d96/infix__to__postfix2_8c.html#a653c98c68c558505b75b04c44b7c838e" title="Function to check whether the stack is empty or not." alt="" coords="235,55,304,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="166,103,220,83,221,88,168,108"/>
+<area shape="rect" id="Node000005" href="$db/d0c/infix__to__postfix_8c.html#afd8245c04b202240390de23170f72d6b" title="isOprnd function" alt="" coords="236,104,302,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="167,114,221,114,221,120,167,120"/>
+<area shape="rect" id="Node000006" href="$da/d96/infix__to__postfix2_8c.html#a312e7f6c761a199c1369fbe651e084f0" title="Function to pop from the stack." alt="" coords="248,153,290,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="168,126,235,151,233,156,166,131"/>
+<area shape="rect" id="Node000007" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="245,227,294,252"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="152,128,217,190,244,215,241,219,213,193,148,132"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="246,227,241,218,244,209,254,202,269,200,287,203,295,210,292,214,284,208,269,205,256,207,248,212,247,218,251,225"/>
 </map>

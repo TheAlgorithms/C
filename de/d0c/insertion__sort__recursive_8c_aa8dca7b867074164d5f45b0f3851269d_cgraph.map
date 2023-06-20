@@ -1,4 +1,6 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Test function." alt="" coords="5,29,49,55"/>
-<area shape="rect" id="node2" href="$d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359" title="Insertion sort algorithm implements using Recursion." alt="" coords="97,29,251,55"/>
+<area shape="rect" id="Node000001" title="Test function." alt="" coords="5,29,49,55"/>
+<area shape="rect" id="Node000002" href="$d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359" title="Insertion sort algorithm implements using Recursion." alt="" coords="97,29,251,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,40,82,40,82,45,49,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="148,30,144,21,147,11,157,5,174,3,193,6,202,13,199,17,191,11,174,8,159,10,151,14,149,20,153,28"/>
 </map>

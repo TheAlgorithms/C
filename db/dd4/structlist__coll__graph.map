@@ -1,3 +1,4 @@
 <map id="list" name="list">
-<area shape="rect" id="node1" title="Doubly linked list struct." alt="" coords="5,8,44,33"/>
+<area shape="rect" id="Node000001" title="Doubly linked list struct." alt="" coords="5,8,44,33"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="60,14,70,20,61,27,44,27,44,22,60,22,65,20,58,18"/>
 </map>

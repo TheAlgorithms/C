@@ -1,8 +1,13 @@
 <map id="test3" name="test3">
-<area shape="rect" id="node1" title="Test function 3." alt="" coords="5,80,56,106"/>
-<area shape="rect" id="node2" href="$d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d" title="The function will create a polynomial." alt="" coords="106,5,233,31"/>
-<area shape="rect" id="node3" href="$d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d" title="The function will display the polynomial." alt="" coords="104,55,235,80"/>
-<area shape="rect" id="node4" href="$d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895" title="Frees memory space." alt="" coords="132,104,207,130"/>
-<area shape="rect" id="node6" href="$d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af" title="The function will add 2 polynomials." alt="" coords="133,153,206,179"/>
-<area shape="rect" id="node5" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="283,104,329,130"/>
+<area shape="rect" id="Node000001" title="Test function 3." alt="" coords="5,80,56,106"/>
+<area shape="rect" id="Node000002" href="$d0/dcb/poly__add_8c.html#a29eace09ec1373a92003075f1c2f6d9d" title="The function will create a polynomial." alt="" coords="106,5,233,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,77,102,40,113,35,115,40,105,44,50,82"/>
+<area shape="rect" id="Node000003" href="$d0/dcb/poly__add_8c.html#ab9b9bedcb99f279d491d1b856791a36d" title="The function will display the polynomial." alt="" coords="104,55,235,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,86,89,80,90,85,57,91"/>
+<area shape="rect" id="Node000004" href="$d0/dcb/poly__add_8c.html#a5a103fff33166d6e4d975b8b63c6e895" title="Frees memory space." alt="" coords="132,104,207,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="57,94,118,105,117,111,56,100"/>
+<area shape="rect" id="Node000006" href="$d0/dcb/poly__add_8c.html#a6ff38afe4720527c9513139cbab460af" title="The function will add 2 polynomials." alt="" coords="133,153,206,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="50,104,105,140,120,147,118,152,102,144,47,108"/>
+<area shape="rect" id="Node000005" href="$df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" title="This function gets the next item from the Vector each time it&#39;s called." alt="" coords="283,104,329,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="207,114,268,114,268,120,207,120"/>
 </map>

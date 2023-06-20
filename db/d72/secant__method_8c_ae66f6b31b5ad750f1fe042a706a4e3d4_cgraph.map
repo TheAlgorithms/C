@@ -1,6 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$db/d72/secant__method_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,5,146,31"/>
-<area shape="rect" id="node3" href="$db/d72/secant__method_8c.html#a213829e8511060395c4a31ad8920ef0a" title="Root&#45;finding method for a continuous function given two points." alt="" coords="194,5,304,31"/>
-<area shape="rect" id="node4" href="$db/d72/secant__method_8c.html#aba60904b56a5dce7e291d2f7d62e9782" title="Continuous function for which we want to find the root." alt="" coords="352,5,399,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$db/d72/secant__method_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,5,146,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$db/d72/secant__method_8c.html#a213829e8511060395c4a31ad8920ef0a" title="Root&#45;finding method for a continuous function given two points." alt="" coords="194,5,304,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,16,179,16,179,21,146,21"/>
+<area shape="rect" id="Node000004" href="$db/d72/secant__method_8c.html#aba60904b56a5dce7e291d2f7d62e9782" title="Continuous function for which we want to find the root." alt="" coords="352,5,399,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="305,16,337,16,337,21,305,21"/>
 </map>

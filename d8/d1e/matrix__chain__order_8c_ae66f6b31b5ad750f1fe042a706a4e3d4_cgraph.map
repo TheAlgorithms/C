@@ -1,6 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,43,55,68"/>
-<area shape="rect" id="node2" href="$d8/d1e/matrix__chain__order_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,43,146,68"/>
-<area shape="rect" id="node3" href="$d8/d1e/matrix__chain__order_8c.html#aecddbc91839e5b13644eea4f1d34566b" title="for assert" alt="" coords="194,5,317,31"/>
-<area shape="rect" id="node4" href="$d8/d1e/matrix__chain__order_8c.html#ab49bc6e377a4b72a1295a953bc2520f5" title="Recursively prints the solution." alt="" coords="209,79,302,104"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,43,55,68"/>
+<area shape="rect" id="Node000002" href="$d8/d1e/matrix__chain__order_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,43,146,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,53,88,53,88,58,55,58"/>
+<area shape="rect" id="Node000003" href="$d8/d1e/matrix__chain__order_8c.html#aecddbc91839e5b13644eea4f1d34566b" title="for assert" alt="" coords="194,5,317,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,47,194,33,195,38,147,52"/>
+<area shape="rect" id="Node000004" href="$d8/d1e/matrix__chain__order_8c.html#ab49bc6e377a4b72a1295a953bc2520f5" title="Recursively prints the solution." alt="" coords="209,79,302,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="147,59,196,72,194,77,146,64"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="233,79,228,70,231,61,240,54,256,52,273,55,281,62,278,66,270,60,256,57,242,59,235,64,234,70,238,77"/>
 </map>

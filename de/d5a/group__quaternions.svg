@@ -6,12 +6,22 @@
 <!-- Title: Library for 3D Vectors &amp; Quaternions Pages: 1 -->
 <svg width="283pt" height="150pt"
  viewBox="0.00 0.00 283.00 149.88" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 145.88)">
 <title>Library for 3D Vectors &amp; Quaternions</title>
 <!-- Node5 -->
-<g id="node1" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node1"><a xlink:href="../../d4/d69/group__dual__quats.html" target="_top" xlink:title=" ">
+<g id="a_Node000005"><a xlink:href="../../d4/d69/group__dual__quats.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="262.62,-141.88 160.38,-141.88 160.38,-111.38 262.62,-111.38 262.62,-141.88"/>
 <text text-anchor="start" x="168.38" y="-128.38" font-family="Helvetica,sans-Serif" font-size="10.00">3D Dual&#45;Quaternion</text>
 <text text-anchor="middle" x="211.5" y="-117.12" font-family="Helvetica,sans-Serif" font-size="10.00"> operations</text>
@@ -19,18 +29,18 @@
 </g>
 </g>
 <!-- Node3 -->
-<g id="node2" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="../../dd/d7a/group__matrix.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="../../dd/d7a/group__matrix.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="257,-93.25 166,-93.25 166,-74 257,-74 257,-93.25"/>
 <text text-anchor="middle" x="211.5" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">Matrix operations</text>
 </a>
 </g>
 </g>
 <!-- Node1 -->
-<g id="node3" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node3"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="112,-79.88 0,-79.88 0,-49.38 112,-49.38 112,-79.88"/>
 <text text-anchor="start" x="8" y="-66.38" font-family="Helvetica,sans-Serif" font-size="10.00">Library for 3D Vectors</text>
 <text text-anchor="middle" x="56" y="-55.12" font-family="Helvetica,sans-Serif" font-size="10.00"> &amp; Quaternions</text>
@@ -50,9 +60,9 @@
 <polygon fill="black" stroke="black" points="123.77,-69.24 113.42,-71.48 122.91,-76.19 123.77,-69.24"/>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../dc/d9a/group__quats.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="../../dc/d9a/group__quats.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="275,-56.25 148,-56.25 148,-37 275,-37 275,-56.25"/>
 <text text-anchor="middle" x="211.5" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">3D Quaternion operations</text>
 </a>
@@ -65,9 +75,9 @@
 <polygon fill="black" stroke="black" points="122.94,-53.49 113.42,-58.13 123.76,-60.44 122.94,-53.49"/>
 </g>
 <!-- Node2 -->
-<g id="node5" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node5"><a xlink:href="../../de/d7b/group__vec__3d.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../de/d7b/group__vec__3d.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="265.62,-19.25 157.38,-19.25 157.38,0 265.62,0 265.62,-19.25"/>
 <text text-anchor="middle" x="211.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">3D Vector operations</text>
 </a>
@@ -80,4 +90,19 @@
 <polygon fill="black" stroke="black" points="101.88,-41.91 93.98,-48.97 104.55,-48.38 101.88,-41.91"/>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

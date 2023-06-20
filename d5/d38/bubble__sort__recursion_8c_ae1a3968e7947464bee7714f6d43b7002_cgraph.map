@@ -1,4 +1,6 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Test function." alt="" coords="5,29,49,55"/>
-<area shape="rect" id="node2" href="$d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f" title="Bubble sort algorithm implements using recursion." alt="" coords="97,29,180,55"/>
+<area shape="rect" id="Node000001" title="Test function." alt="" coords="5,29,49,55"/>
+<area shape="rect" id="Node000002" href="$d5/d38/bubble__sort__recursion_8c.html#aa8989f6c9bfd1f040854fa18b180114f" title="Bubble sort algorithm implements using recursion." alt="" coords="97,29,180,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,40,82,40,82,45,49,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="118,30,115,21,117,11,125,5,138,3,153,6,160,13,156,16,150,10,138,8,127,10,122,14,120,20,123,28"/>
 </map>

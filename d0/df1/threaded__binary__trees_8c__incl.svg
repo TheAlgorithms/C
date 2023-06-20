@@ -6,12 +6,22 @@
 <!-- Title: data_structures/binary_trees/threaded_binary_trees.c Pages: 1 -->
 <svg width="123pt" height="105pt"
  viewBox="0.00 0.00 123.00 105.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 101)">
 <title>data_structures/binary_trees/threaded_binary_trees.c</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="This file is a simple implementation of a Threaded Binary Tree.">
+<g id="a_Node000001"><a xlink:title="This file is a simple implementation of a Threaded Binary Tree.">
 <polygon fill="#999999" stroke="#666666" points="115,-97 0,-97 0,-55.25 115,-55.25 115,-97"/>
 <text text-anchor="start" x="8" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">data_structures/binary</text>
 <text text-anchor="start" x="8" y="-72.25" font-family="Helvetica,sans-Serif" font-size="10.00">_trees/threaded_binary</text>
@@ -20,34 +30,55 @@
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
+<g id="a_Node000002"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="48.12,-19.25 2.88,-19.25 2.88,0 48.12,0 48.12,-19.25"/>
 <text text-anchor="middle" x="25.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">stdio.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M47.55,-55.07C43.47,-46.84 38.77,-37.37 34.76,-29.29"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="37.58,-28.1 30,-20.7 31.31,-31.21 37.58,-28.1"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
+<g id="a_Node000003"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="113.25,-19.25 65.75,-19.25 65.75,0 113.25,0 113.25,-19.25"/>
 <text text-anchor="middle" x="89.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">stdlib.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M67.45,-55.07C71.53,-46.84 76.23,-37.37 80.24,-29.29"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="83.69,-31.21 85,-20.7 77.42,-28.1 83.69,-31.21"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

@@ -1,7 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$de/dff/heap__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,31,146,56"/>
-<area shape="rect" id="node3" href="$de/dff/heap__sort__2_8c.html#a672a47d865e7fa18f1ff23001ef4a485" title="Heap Sort algorithm." alt="" coords="194,31,267,56"/>
-<area shape="rect" id="node4" href="$de/dff/heap__sort__2_8c.html#a00cd944b33a5fe5972111ded9b49793c" title="heapifyDown Adjusts new root to the correct position in the heap This heapify procedure can be though..." alt="" coords="315,5,413,31"/>
-<area shape="rect" id="node5" href="$de/dff/heap__sort__2_8c.html#a619753b978f962aa2337e1fdb4e59e33" title="heapifyUp Adjusts arr[i] to the correct position in the heap This heapify procedure can be thought of..." alt="" coords="324,55,404,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$de/dff/heap__sort__2_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,31,146,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,41,88,41,88,46,55,46"/>
+<area shape="rect" id="Node000003" href="$de/dff/heap__sort__2_8c.html#a672a47d865e7fa18f1ff23001ef4a485" title="Heap Sort algorithm." alt="" coords="194,31,267,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,41,179,41,179,46,147,46"/>
+<area shape="rect" id="Node000004" href="$de/dff/heap__sort__2_8c.html#a00cd944b33a5fe5972111ded9b49793c" title="heapifyDown Adjusts new root to the correct position in the heap This heapify procedure can be though..." alt="" coords="315,5,413,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,34,300,28,301,33,268,39"/>
+<area shape="rect" id="Node000005" href="$de/dff/heap__sort__2_8c.html#a619753b978f962aa2337e1fdb4e59e33" title="heapifyUp Adjusts arr[i] to the correct position in the heap This heapify procedure can be thought of..." alt="" coords="324,55,404,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="268,47,310,55,309,60,267,53"/>
 </map>

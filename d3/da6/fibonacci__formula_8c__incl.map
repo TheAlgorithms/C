@@ -1,6 +1,9 @@
 <map id="math/fibonacci_formula.c" name="math/fibonacci_formula.c">
-<area shape="rect" id="node1" title="Finding Fibonacci number of any n number using [Binet&#39;s closed form formula](https://en...." alt="" coords="38,5,205,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,67,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,79,152,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="175,79,244,105"/>
+<area shape="rect" id="Node000001" title="Finding Fibonacci number of any n number using [Binet&#39;s closed form formula](https://en...." alt="" coords="38,5,205,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,67,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,34,63,72,60,67,105,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="91,79,152,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,31,124,64,119,64,119,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="175,79,244,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,29,185,67,182,72,135,34"/>
 </map>

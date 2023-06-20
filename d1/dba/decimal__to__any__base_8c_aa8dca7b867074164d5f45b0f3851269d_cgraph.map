@@ -1,7 +1,13 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,103,49,128"/>
-<area shape="rect" id="node2" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="97,103,237,128"/>
-<area shape="rect" id="node3" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="288,29,390,55"/>
-<area shape="rect" id="node4" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="299,103,380,128"/>
-<area shape="rect" id="node5" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="285,152,393,178"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,103,49,128"/>
+<area shape="rect" id="Node000002" href="$d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c" title="decimal_to_anybase ensure the validity of the parameters and convert any unsigned integers into any a..." alt="" coords="97,103,237,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,113,82,113,82,118,49,118"/>
+<area shape="rect" id="Node000003" href="$d1/dba/decimal__to__any__base_8c.html#a899b3a7e0f1fac5a465eac0d4b10d711" title="Calculate the final length of the converted number." alt="" coords="288,29,390,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,100,293,59,295,64,200,104"/>
+<area shape="rect" id="Node000004" href="$d1/dba/decimal__to__any__base_8c.html#a0c5ccb926a23bc0050f213ba3408e18d" title="Convert positive decimal integer into anybase recursively." alt="" coords="299,103,380,128"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="238,113,283,113,283,118,238,118"/>
+<area shape="rect" id="Node000005" href="$d1/dba/decimal__to__any__base_8c.html#ae071f62d704823751bf9a085bf0a1bd7" title="for IO operations" alt="" coords="285,152,393,178"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="215,126,278,145,277,150,214,132"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="310,30,304,21,308,11,320,5,339,3,361,6,372,13,369,17,359,11,339,8,321,10,312,15,310,20,314,28"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="310,104,304,94,308,84,320,78,339,76,361,79,372,86,369,91,359,84,339,81,321,83,312,88,310,93,314,101"/>
 </map>

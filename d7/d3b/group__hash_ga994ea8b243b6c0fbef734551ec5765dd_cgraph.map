@@ -1,4 +1,5 @@
 <map id="test_adler32" name="test_adler32">
-<area shape="rect" id="node1" title="Test function for adler32." alt="" coords="5,5,98,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" title="32&#45;bit Adler algorithm implementation" alt="" coords="146,5,209,31"/>
+<area shape="rect" id="Node000001" title="Test function for adler32." alt="" coords="5,5,98,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" title="32&#45;bit Adler algorithm implementation" alt="" coords="146,5,209,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,16,131,16,131,21,98,21"/>
 </map>

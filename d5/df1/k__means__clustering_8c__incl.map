@@ -1,9 +1,15 @@
 <map id="machine_learning/k_means_clustering.c" name="machine_learning/k_means_clustering.c">
-<area shape="rect" id="node1" title="K Means Clustering Algorithm implemented." alt="" coords="175,5,317,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,63,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="87,94,149,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="173,94,234,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="257,94,320,120"/>
-<area shape="rect" id="node6" title=" " alt="" coords="345,94,409,120"/>
-<area shape="rect" id="node7" title=" " alt="" coords="433,94,491,120"/>
+<area shape="rect" id="Node000001" title="K Means Clustering Algorithm implemented." alt="" coords="175,5,317,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,63,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,49,77,92,75,87,192,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="87,94,149,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,49,151,88,148,84,213,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="173,94,234,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="238,48,219,82,214,79,233,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="257,94,320,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="259,45,278,79,273,82,254,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="345,94,409,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="280,44,346,84,343,88,277,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="433,94,491,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="301,44,420,88,419,93,299,49"/>
 </map>

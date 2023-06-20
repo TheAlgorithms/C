@@ -9,79 +9,94 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 42.25)">
 <title>main</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Main function.">
+<g id="a_Node000001"><a xlink:title="Main function.">
 <polygon fill="#999999" stroke="#666666" points="37,-19.25 0,-19.25 0,0 37,0 37,-19.25"/>
 <text text-anchor="middle" x="18.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478" target="_top" xlink:title="check if a given number can be represented as a sum of two abundant numbers.">
+<g id="a_Node000002"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478" target="_top" xlink:title="check if a given number can be represented as a sum of two abundant numbers.">
 <polygon fill="white" stroke="#666666" points="179,-19.25 73,-19.25 73,0 179,0 179,-19.25"/>
 <text text-anchor="middle" x="126" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">is_sum_of_abundant</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.4,-9.62C44.5,-9.62 53.12,-9.62 62.15,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="61.88,-13.13 71.88,-9.62 61.88,-6.13 61.88,-13.13"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" target="_top" xlink:title="Find the next abundant number after N and not including N.">
+<g id="a_Node000003"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" target="_top" xlink:title="Find the next abundant number after N and not including N.">
 <polygon fill="white" stroke="#666666" points="313.5,-38.25 215,-38.25 215,-19 313.5,-19 313.5,-38.25"/>
 <text text-anchor="middle" x="264.25" y="-24.75" font-family="Helvetica,sans-Serif" font-size="10.00">get_next_abundant</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M179.29,-16.92C187.43,-18.05 195.89,-19.23 204.17,-20.39"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="203.51,-23.97 213.9,-21.88 204.48,-17.04 203.51,-23.97"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" target="_top" xlink:title="Is the given number an abundant number (1) or not (0)">
+<g id="a_Node000004"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" target="_top" xlink:title="Is the given number an abundant number (1) or not (0)">
 <polygon fill="white" stroke="#666666" points="418,-19.25 349.5,-19.25 349.5,0 418,0 418,-19.25"/>
 <text text-anchor="middle" x="383.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">is_abundant</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node4 -->
-<g id="edge5" class="edge">
+<g id="edge5_Node000002_Node000004" class="edge">
 <title>Node2&#45;&gt;Node4</title>
+<g id="a_edge5_Node000002_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M179.37,-9.62C226.16,-9.62 293.95,-9.62 338.18,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="338.17,-13.13 348.17,-9.62 338.17,-6.13 338.17,-13.13"/>
+</a>
+</g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M313.72,-20.79C321.89,-19.47 330.34,-18.1 338.39,-16.8"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="338.77,-20.12 348.08,-15.07 337.65,-13.21 338.77,-20.12"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" target="_top" xlink:title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect.">
+<g id="a_Node000005"><a xlink:href="../../d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" target="_top" xlink:title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect.">
 <polygon fill="white" stroke="#666666" points="556.25,-19.25 454,-19.25 454,0 556.25,0 556.25,-19.25"/>
 <text text-anchor="middle" x="505.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">get_perfect_number</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M418.32,-9.62C426.08,-9.62 434.57,-9.62 443.1,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="442.87,-13.13 452.87,-9.62 442.87,-6.13 442.87,-13.13"/>
+</a>
+</g>
 </g>
 </g>
 </svg>

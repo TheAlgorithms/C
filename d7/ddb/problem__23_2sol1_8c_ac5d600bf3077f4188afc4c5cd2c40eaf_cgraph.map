@@ -1,5 +1,7 @@
 <map id="get_next_abundant" name="get_next_abundant">
-<area shape="rect" id="node1" title="Find the next abundant number after N and not including N." alt="" coords="5,5,137,31"/>
-<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="185,5,276,31"/>
-<area shape="rect" id="node3" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="324,5,460,31"/>
+<area shape="rect" id="Node000001" title="Find the next abundant number after N and not including N." alt="" coords="5,5,137,31"/>
+<area shape="rect" id="Node000002" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="185,5,276,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,16,169,16,169,21,137,21"/>
+<area shape="rect" id="Node000003" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="324,5,460,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="276,16,309,16,309,21,276,21"/>
 </map>

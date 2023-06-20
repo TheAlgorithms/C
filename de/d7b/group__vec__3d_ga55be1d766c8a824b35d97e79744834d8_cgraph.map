@@ -1,5 +1,8 @@
 <map id="get_angle" name="get_angle">
-<area shape="rect" id="node1" title="Obtain the angle between two given vectors." alt="" coords="5,5,83,31"/>
-<area shape="rect" id="node2" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="272,5,343,31"/>
-<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="131,31,224,56"/>
+<area shape="rect" id="Node000001" title="Obtain the angle between two given vectors." alt="" coords="5,5,83,31"/>
+<area shape="rect" id="Node000002" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="272,5,343,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,16,258,16,258,21,83,21"/>
+<area shape="rect" id="Node000003" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="131,31,224,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="84,23,117,29,116,35,83,28"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="224,32,257,25,258,31,225,37"/>
 </map>

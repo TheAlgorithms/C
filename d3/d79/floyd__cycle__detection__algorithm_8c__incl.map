@@ -1,6 +1,9 @@
 <map id="searching/floyd_cycle_detection_algorithm.c" name="searching/floyd_cycle_detection_algorithm.c">
-<area shape="rect" id="node1" title="Implementation of Floyd&#39;s Cycle Detection algorithm." alt="" coords="61,5,213,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,74,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,94,176,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="200,94,260,120"/>
+<area shape="rect" id="Node000001" title="Implementation of Floyd&#39;s Cycle Detection algorithm." alt="" coords="61,5,213,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,74,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,48,67,86,64,82,111,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,176,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,46,140,79,134,79,134,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,94,260,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,44,207,82,203,86,158,48"/>
 </map>

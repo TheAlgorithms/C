@@ -1,3 +1,4 @@
 <map id="_big_int" name="_big_int">
-<area shape="rect" id="node1" title="store arbitratily large integer values as a linked list of digits." alt="" coords="5,8,72,33"/>
+<area shape="rect" id="Node000001" title="store arbitratily large integer values as a linked list of digits." alt="" coords="5,8,72,33"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="88,14,98,20,89,27,72,28,72,22,88,22,93,20,85,19"/>
 </map>

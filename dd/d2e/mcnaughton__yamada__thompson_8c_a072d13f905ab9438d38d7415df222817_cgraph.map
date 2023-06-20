@@ -1,4 +1,5 @@
 <map id="subString" name="subString">
-<area shape="rect" id="node1" title="utility function to create a subString" alt="" coords="5,5,82,31"/>
-<area shape="rect" id="node2" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="130,5,182,31"/>
+<area shape="rect" id="Node000001" title="utility function to create a subString" alt="" coords="5,5,82,31"/>
+<area shape="rect" id="Node000002" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="130,5,182,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,16,115,16,115,21,82,21"/>
 </map>

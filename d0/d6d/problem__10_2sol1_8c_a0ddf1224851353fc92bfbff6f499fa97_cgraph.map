@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5" title="Computes sum of prime numbers less than N." alt="" coords="103,5,213,31"/>
-<area shape="rect" id="node3" href="$d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f" title="Function to check if a number is prime." alt="" coords="261,5,331,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d0/d6d/problem__10_2sol1_8c.html#ae3d987cb2ad0ddb0c3caa4c2506a20e5" title="Computes sum of prime numbers less than N." alt="" coords="103,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d0/d6d/problem__10_2sol1_8c.html#acc871ab6bfead702e983a7f9c412915f" title="Function to check if a number is prime." alt="" coords="261,5,331,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,16,246,16,246,21,214,21"/>
 </map>

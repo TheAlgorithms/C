@@ -1,10 +1,17 @@
 <map id="data_structures/binary_trees/words_alphabetical.c" name="data_structures/binary_trees/words_alphabetical.c">
-<area shape="rect" id="node1" title="Printing the words contained in a file named file.txt in alphabetical order and also their frequencie..." alt="" coords="235,5,418,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,74,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,94,162,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,94,265,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="289,94,363,120"/>
-<area shape="rect" id="node6" title=" " alt="" coords="388,94,448,120"/>
-<area shape="rect" id="node7" title=" " alt="" coords="472,94,535,120"/>
-<area shape="rect" id="node8" title=" " alt="" coords="559,94,624,120"/>
+<area shape="rect" id="Node000001" title="Printing the words contained in a file named file.txt in alphabetical order and also their frequencie..." alt="" coords="235,5,418,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,74,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,49,89,95,87,90,254,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,162,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="278,49,174,91,173,86,276,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,94,265,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="303,49,254,87,251,83,300,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="289,94,363,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="329,46,329,79,324,79,324,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="388,94,448,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="351,44,395,82,391,86,347,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="472,94,535,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="372,44,464,85,462,90,369,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="559,94,624,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="393,44,545,89,544,94,392,49"/>
 </map>

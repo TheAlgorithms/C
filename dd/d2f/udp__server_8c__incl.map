@@ -1,12 +1,21 @@
 <map id="client_server/udp_server.c" name="client_server/udp_server.c">
-<area shape="rect" id="node1" title="Server side implementation of UDP client&#45;server model." alt="" coords="388,5,561,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,88,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="112,79,176,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="200,79,285,105"/>
-<area shape="rect" id="node5" title=" " alt="" coords="309,79,405,105"/>
-<area shape="rect" id="node6" title=" " alt="" coords="430,79,519,105"/>
-<area shape="rect" id="node7" title=" " alt="" coords="544,79,611,105"/>
-<area shape="rect" id="node8" title=" " alt="" coords="635,79,695,105"/>
-<area shape="rect" id="node9" title=" " alt="" coords="719,79,782,105"/>
-<area shape="rect" id="node10" title=" " alt="" coords="806,79,871,105"/>
+<area shape="rect" id="Node000001" title="Server side implementation of UDP client&#45;server model." alt="" coords="388,5,561,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,88,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,34,103,81,102,76,389,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="112,79,176,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="412,34,191,81,190,76,411,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,79,285,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="436,34,297,77,295,72,434,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="309,79,405,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="456,34,391,73,388,69,453,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="430,79,519,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="477,31,477,64,472,64,472,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="544,79,611,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="493,29,550,68,546,73,490,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="635,79,695,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="508,29,622,72,620,77,506,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="719,79,782,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="523,29,705,76,704,81,522,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="806,79,871,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="548,29,792,76,791,81,547,34"/>
 </map>

@@ -26,19 +26,19 @@ var NAVTREE =
 [
   [ "Algorithms_in_C", "index.html", [
     [ "The Algorithms - C", "index.html", "index" ],
-    [ "Contributor Covenant Code of Conduct", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
-      [ "Our Pledge", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md1", null ],
-      [ "Our Standards", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md2", null ],
-      [ "Enforcement Responsibilities", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md3", null ],
-      [ "Scope", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md4", null ],
-      [ "Enforcement", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md5", null ],
-      [ "Enforcement Guidelines", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md6", [
-        [ "1. Correction", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md7", null ],
-        [ "2. Warning", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md8", null ],
-        [ "3. Temporary Ban", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md9", null ],
-        [ "4. Permanent Ban", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md10", null ]
+    [ "Contributor Covenant Code of Conduct", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html", [
+      [ "Our Pledge", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md1", null ],
+      [ "Our Standards", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md2", null ],
+      [ "Enforcement Responsibilities", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md3", null ],
+      [ "Scope", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md4", null ],
+      [ "Enforcement", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md5", null ],
+      [ "Enforcement Guidelines", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md6", [
+        [ "1. Correction", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md7", null ],
+        [ "2. Warning", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md8", null ],
+        [ "3. Temporary Ban", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md9", null ],
+        [ "4. Permanent Ban", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md10", null ]
       ] ],
-      [ "Attribution", "d4/d4c/md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md11", null ]
+      [ "Attribution", "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md11", null ]
     ] ],
     [ "Code style convention", "dc/d64/md__coding_guidelines.html", [
       [ "User-interface", "dc/d64/md__coding_guidelines.html#autotoc_md14", null ],
@@ -71,13 +71,13 @@ var NAVTREE =
         ] ]
       ] ]
     ] ],
-    [ "Array", "d9/d41/md_data_structures_array__r_e_a_d_m_e.html", [
-      [ "Sort Function", "d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md39", null ],
-      [ "Structure", "d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md40", null ],
-      [ "Files", "d9/d41/md_data_structures_array__r_e_a_d_m_e.html#autotoc_md41", null ]
+    [ "Array", "d0/dd9/md_data__structures_2array_2_r_e_a_d_m_e.html", [
+      [ "Sort Function", "d0/dd9/md_data__structures_2array_2_r_e_a_d_m_e.html#autotoc_md39", null ],
+      [ "Structure", "d0/dd9/md_data__structures_2array_2_r_e_a_d_m_e.html#autotoc_md40", null ],
+      [ "Files", "d0/dd9/md_data__structures_2array_2_r_e_a_d_m_e.html#autotoc_md41", null ]
     ] ],
-    [ "Dictionary", "de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html", null ],
-    [ "Simple generic Stack", "d1/d12/md_data_structures_stack__r_e_a_d_m_e.html", null ],
+    [ "Dictionary", "d1/d52/md_data__structures_2dictionary_2_r_e_a_d_m_e.html", null ],
+    [ "Simple generic Stack", "d6/d2c/md_data__structures_2stack_2_r_e_a_d_m_e.html", null ],
     [ "Audio", "d5/d88/md__d_i_r_e_c_t_o_r_y.html", [
       [ "Cipher", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md48", null ],
       [ "Client Server", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md49", null ],
@@ -100,16 +100,16 @@ var NAVTREE =
       [ "Searching", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md66", null ],
       [ "Sorting", "d5/d88/md__d_i_r_e_c_t_o_r_y.html#autotoc_md67", null ]
     ] ],
-    [ "Sample solutions for <a href=\"http://exercism.io/\" target=\"_blank\" >exercism.io</a>", "d7/db5/md_exercism__r_e_a_d_m_e.html", null ],
-    [ "Hash algorithms", "d4/dcb/md_hash__r_e_a_d_m_e.html", null ],
-    [ "LeetCode", "d6/d77/md_leetcode__d_i_r_e_c_t_o_r_y.html", null ],
-    [ "📚 Contributing 📚", "df/d58/md_leetcode__r_e_a_d_m_e.html", [
-      [ "💻 Cloning/setting up the project 💻", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md74", null ],
-      [ "📝 Adding a new solution 📝", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md75", null ],
-      [ "📦 Committing your changes 📦", "df/d58/md_leetcode__r_e_a_d_m_e.html#autotoc_md76", null ]
+    [ "Sample solutions for <a href=\"http://exercism.io/\" target=\"_blank\" >exercism.io</a>", "de/dd4/md_exercism_2_r_e_a_d_m_e.html", null ],
+    [ "Hash algorithms", "d1/dfe/md_hash_2_r_e_a_d_m_e.html", null ],
+    [ "LeetCode", "db/d5f/md_leetcode_2_d_i_r_e_c_t_o_r_y.html", null ],
+    [ "📚 Contributing 📚", "d9/d9b/md_leetcode_2_r_e_a_d_m_e.html", [
+      [ "💻 Cloning/setting up the project 💻", "d9/d9b/md_leetcode_2_r_e_a_d_m_e.html#autotoc_md74", null ],
+      [ "📝 Adding a new solution 📝", "d9/d9b/md_leetcode_2_r_e_a_d_m_e.html#autotoc_md75", null ],
+      [ "📦 Committing your changes 📦", "d9/d9b/md_leetcode_2_r_e_a_d_m_e.html#autotoc_md76", null ]
     ] ],
-    [ "ProjectEuler", "d8/d81/md_project_euler__r_e_a_d_m_e.html", null ],
-    [ "Guidelines for reviewers and maintainers", "dc/db4/md__r_e_v_i_e_w_e_r__c_o_d_e.html", null ],
+    [ "ProjectEuler", "d0/da3/md_project__euler_2_r_e_a_d_m_e.html", null ],
+    [ "Guidelines for reviewers and maintainers", "d7/d1b/md__r_e_v_i_e_w_e_r___c_o_d_e.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -135,10 +135,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/d06/struct_vector.html#afd870750f3874ee097833fc8a1dc809e",
-"d6/ded/shell__sort2_8c.html#a0ddf1224851353fc92bfbff6f499fa97",
-"da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75",
-"de/d0c/insertion__sort__recursive_8c.html"
+"d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md6",
+"d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md34",
+"da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde",
+"dd/df0/problem__19_2sol1_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

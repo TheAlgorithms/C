@@ -1,5 +1,8 @@
 <map id="postProcessing" name="postProcessing">
-<area shape="rect" id="node1" title="performs postprocessing on a compiled NFA, add circular empty character transition rules where it&#39;s n..." alt="" coords="5,31,117,56"/>
-<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a4ed0049e15d45e0d75a991fbb6f8963c" title="adds a transition rule to a NFA" alt="" coords="172,5,242,31"/>
-<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc" title="creates and initializes a transition rule" alt="" coords="165,55,249,80"/>
+<area shape="rect" id="Node000001" title="performs postprocessing on a compiled NFA, add circular empty character transition rules where it&#39;s n..." alt="" coords="5,31,117,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="36,32,31,22,34,13,44,6,61,4,80,7,89,14,86,18,78,12,61,9,46,11,38,16,36,22,41,29"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a4ed0049e15d45e0d75a991fbb6f8963c" title="adds a transition rule to a NFA" alt="" coords="172,5,242,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,31,157,24,158,29,118,36"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc" title="creates and initializes a transition rule" alt="" coords="165,55,249,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,50,150,56,150,61,117,55"/>
 </map>

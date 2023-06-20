@@ -1,5 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$de/d0c/insertion__sort__recursive_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,29,146,55"/>
-<area shape="rect" id="node3" href="$d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359" title="Insertion sort algorithm implements using Recursion." alt="" coords="194,29,348,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$de/d0c/insertion__sort__recursive_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,29,146,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="rect" id="Node000003" href="$d5/d4c/group__sorting.html#ga98666b73777e308fb06a3c489ce25359" title="Insertion sort algorithm implements using Recursion." alt="" coords="194,29,348,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,40,179,40,179,45,146,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="246,30,241,21,244,11,254,5,271,3,290,6,299,13,296,17,288,11,271,8,256,10,248,14,246,20,251,28"/>
 </map>

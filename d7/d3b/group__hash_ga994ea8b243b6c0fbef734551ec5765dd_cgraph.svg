@@ -6,31 +6,59 @@
 <!-- Title: test_adler32 Pages: 1 -->
 <svg width="161pt" height="27pt"
  viewBox="0.00 0.00 160.75 27.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23.25)">
 <title>test_adler32</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Test function for adler32.">
+<g id="a_Node000001"><a xlink:title="Test function for adler32.">
 <polygon fill="#999999" stroke="#666666" points="69.25,-19.25 0,-19.25 0,0 69.25,0 69.25,-19.25"/>
 <text text-anchor="middle" x="34.62" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">test_adler32</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" target="_top" xlink:title="32&#45;bit Adler algorithm implementation">
+<g id="a_Node000002"><a xlink:href="../../d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" target="_top" xlink:title="32&#45;bit Adler algorithm implementation">
 <polygon fill="white" stroke="#666666" points="152.75,-19.25 105.25,-19.25 105.25,0 152.75,0 152.75,-19.25"/>
 <text text-anchor="middle" x="129" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">adler32</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M69.5,-9.62C77.48,-9.62 85.99,-9.62 93.97,-9.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="93.81,-13.13 103.81,-9.62 93.81,-6.13 93.81,-13.13"/>
+</a>
 </g>
 </g>
+</g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

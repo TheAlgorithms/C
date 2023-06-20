@@ -2,7 +2,7 @@ var searchData=
 [
   ['validateposition_0',['validatePosition',['../db/de2/naval__battle_8c.html#a4a5686c91f144d07eff1c6576303962d',1,'naval_battle.c']]],
   ['validentrylinecolumn_1',['validEntryLineColumn',['../db/de2/naval__battle_8c.html#a7c5042bd35c4186b06ae28f06635b40e',1,'naval_battle.c']]],
-  ['value_2',['value',['../d5/da1/structnode.html#a4df5127dc26bf42ff5d965d77823efb5',1,'node::value()'],['../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41',1,'list::value()'],['../dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008',1,'_big_int::value()']]],
+  ['value_2',['value',['../d5/da1/structnode.html#a4df5127dc26bf42ff5d965d77823efb5',1,'node::value'],['../d8/d10/structlist.html#a5363bdc0495ab9ef0ed587c99b9a2b41',1,'list::value'],['../dc/d77/struct__big__int.html#a273ee73fd755f2a99512cca5f0e09008',1,'_big_int::value']]],
   ['vec_5f3d_3',['vec_3d',['../de/d7b/group__vec__3d.html#gaf9ee870d4922e488bdd3e7262485c270',1,'geometry_datatypes.h']]],
   ['vec_5f3d_5f_4',['vec_3d_',['../d5/db4/structvec__3d__.html',1,'']]],
   ['vector_5',['Vector',['../d4/d06/struct_vector.html',1,'']]],

@@ -1,7 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be" title="sum of squares of factors of numbers from 1 thru N" alt="" coords="103,5,159,31"/>
-<area shape="rect" id="node3" href="$d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788" title="compute sum of squares of all integer factors of a number" alt="" coords="207,5,270,31"/>
-<area shape="rect" id="node4" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="318,5,410,31"/>
-<area shape="rect" id="node5" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="458,5,506,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d4/d83/problem__401_2sol1_8c.html#aaf964739be92adc2f500e7da11e3f6be" title="sum of squares of factors of numbers from 1 thru N" alt="" coords="103,5,159,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d4/d83/problem__401_2sol1_8c.html#a236548478af932f1115a71f601a68788" title="compute sum of squares of all integer factors of a number" alt="" coords="207,5,270,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,16,192,16,192,21,159,21"/>
+<area shape="rect" id="Node000004" href="$d4/d83/problem__401_2sol1_8c.html#a7380e14d595d560007b02ce516b6b215" title="Get all integer divisors of a number." alt="" coords="318,5,410,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,16,303,16,303,21,271,21"/>
+<area shape="rect" id="Node000005" href="$d4/d83/problem__401_2sol1_8c.html#a4441a6d27134cf3aed05727800d99456" title="Check if a number is present in given array." alt="" coords="458,5,506,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,16,443,16,443,21,410,21"/>
 </map>

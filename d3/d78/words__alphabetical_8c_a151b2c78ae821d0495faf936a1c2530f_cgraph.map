@@ -1,7 +1,13 @@
 <map id="readWordsInFileToTree" name="readWordsInFileToTree">
-<area shape="rect" id="node1" title="Reads words from file to tree." alt="" coords="5,31,161,56"/>
-<area shape="rect" id="node2" href="$d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9" title="Adds word (node) to the correct position in tree." alt="" coords="209,31,321,56"/>
-<area shape="rect" id="node3" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="369,5,532,31"/>
-<area shape="rect" id="node5" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="389,55,513,80"/>
-<area shape="rect" id="node4" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="580,31,720,56"/>
+<area shape="rect" id="Node000001" title="Reads words from file to tree." alt="" coords="5,31,161,56"/>
+<area shape="rect" id="Node000002" href="$d3/d78/words__alphabetical_8c.html#a0ac11529daf94e98f7114a6e938679a9" title="Adds word (node) to the correct position in tree." alt="" coords="209,31,321,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,41,194,41,194,46,161,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="234,32,228,22,232,12,244,6,265,4,288,7,299,14,296,19,286,12,265,9,246,11,236,16,233,21,239,29"/>
+<area shape="rect" id="Node000003" href="$d3/d78/words__alphabetical_8c.html#a1e5ad8401396df36ab585d79f3309fd9" title="Reserves memory for new node." alt="" coords="369,5,532,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="321,33,354,29,354,34,322,38"/>
+<area shape="rect" id="Node000005" href="$d3/d78/words__alphabetical_8c.html#a9e3cab68cf6557024f0073f674a307a1" title="Stores word in memory." alt="" coords="389,55,513,80"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="322,48,374,55,374,60,321,53"/>
+<area shape="rect" id="Node000004" href="$d3/d78/words__alphabetical_8c.html#a5157a5b4e164f934602fa78413504029" title="Ends program due to an error." alt="" coords="580,31,720,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="533,26,566,30,565,35,532,31"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="513,57,565,51,566,56,513,63"/>
 </map>

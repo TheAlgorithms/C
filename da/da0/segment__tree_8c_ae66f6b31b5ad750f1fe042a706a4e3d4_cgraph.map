@@ -1,11 +1,19 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function." alt="" coords="5,129,55,155"/>
-<area shape="rect" id="node2" href="$da/da0/segment__tree_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test RMQ Testing Segment tree using Range Minimum Queries." alt="" coords="103,129,146,155"/>
-<area shape="rect" id="node3" href="$da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb" title="Utility for test A function compare for minimum between two integers This function is used as combine..." alt="" coords="233,5,307,31"/>
-<area shape="rect" id="node4" href="$da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75" title="Builds a Segment tree It is assumed that leaves of tree already contains data." alt="" coords="203,55,337,80"/>
-<area shape="rect" id="node5" href="$da/da0/segment__tree_8c.html#af20a9f373083d3f701e1cd92560cef01" title="Dispose Segment Tree Frees all heap memory accquired by segment tree." alt="" coords="194,104,346,130"/>
-<area shape="rect" id="node6" href="$da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde" title="Initializes Segment Tree Accquires memory for segment tree and fill the leaves of segment tree with d..." alt="" coords="208,153,332,179"/>
-<area shape="rect" id="node8" href="$da/da0/segment__tree_8c.html#af61bd96660cb53f49f28d60a5f1d0c91" title="Query the segment tree This function helps in range query of segment tree This function assumes that ..." alt="" coords="201,203,340,228"/>
-<area shape="rect" id="node9" href="$da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c" title="For point updates This function updates the element at given index and also updates segment tree acco..." alt="" coords="197,252,343,278"/>
-<area shape="rect" id="node7" href="$dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a" title="Continuous loop to send and receive over the socket." alt="" coords="394,153,441,179"/>
+<area shape="rect" id="Node000001" title="Main Function." alt="" coords="5,129,55,155"/>
+<area shape="rect" id="Node000002" href="$da/da0/segment__tree_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test RMQ Testing Segment tree using Range Minimum Queries." alt="" coords="103,129,146,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,140,88,140,88,145,55,145"/>
+<area shape="rect" id="Node000003" href="$da/da0/segment__tree_8c.html#a93bfab032ce9dbc0c1feaeee32a885fb" title="Utility for test A function compare for minimum between two integers This function is used as combine..." alt="" coords="233,5,307,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,127,152,85,170,61,192,40,218,27,220,31,196,44,174,64,157,88,134,130"/>
+<area shape="rect" id="Node000004" href="$da/da0/segment__tree_8c.html#aae59daf9a0dc33f8cbc7a525a616ee75" title="Builds a Segment tree It is assumed that leaves of tree already contains data." alt="" coords="203,55,337,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="139,127,163,108,193,89,204,84,207,89,195,94,166,112,142,131"/>
+<area shape="rect" id="Node000005" href="$da/da0/segment__tree_8c.html#af20a9f373083d3f701e1cd92560cef01" title="Dispose Segment Tree Frees all heap memory accquired by segment tree." alt="" coords="194,104,346,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="146,136,179,130,180,135,147,141"/>
+<area shape="rect" id="Node000006" href="$da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde" title="Initializes Segment Tree Accquires memory for segment tree and fill the leaves of segment tree with d..." alt="" coords="208,153,332,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="147,143,194,151,193,156,146,148"/>
+<area shape="rect" id="Node000008" href="$da/da0/segment__tree_8c.html#af61bd96660cb53f49f28d60a5f1d0c91" title="Query the segment tree This function helps in range query of segment tree This function assumes that ..." alt="" coords="201,203,340,228"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="143,153,167,172,195,189,207,194,204,199,193,194,164,176,139,158"/>
+<area shape="rect" id="Node000009" href="$da/da0/segment__tree_8c.html#a1e81a9bbf01716f1b4fb27ef36a9098c" title="For point updates This function updates the element at given index and also updates segment tree acco..." alt="" coords="197,252,343,278"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="134,154,157,196,174,219,196,239,202,243,199,247,192,243,171,223,153,199,129,157"/>
+<area shape="rect" id="Node000007" href="$dd/d93/client_8c.html#ac17020a38607ab29ce18939d5194a32a" title="Continuous loop to send and receive over the socket." alt="" coords="394,153,441,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="333,164,380,164,380,169,333,169"/>
 </map>

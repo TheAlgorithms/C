@@ -1,4 +1,5 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Test function." alt="" coords="5,5,49,31"/>
-<area shape="rect" id="node2" href="$db/ddf/insertion__sort_8c.html#a0d6c227641a5e0dae580b3a18df241fb" title="Insertion sort algorithm implements." alt="" coords="97,5,191,31"/>
+<area shape="rect" id="Node000001" title="Test function." alt="" coords="5,5,49,31"/>
+<area shape="rect" id="Node000002" href="$db/ddf/insertion__sort_8c.html#a0d6c227641a5e0dae580b3a18df241fb" title="Insertion sort algorithm implements." alt="" coords="97,5,191,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,16,81,16,81,21,49,21"/>
 </map>

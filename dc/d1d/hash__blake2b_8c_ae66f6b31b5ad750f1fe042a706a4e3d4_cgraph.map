@@ -1,11 +1,19 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function" alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$dc/d1d/hash__blake2b_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="testing function" alt="" coords="103,31,146,56"/>
-<area shape="rect" id="node3" href="$dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144" title="Self&#45;test implementations." alt="" coords="194,5,290,31"/>
-<area shape="rect" id="node4" href="$d7/d3b/group__hash.html#gaf2cd4bc8e8097fff865741a0efc42eca" title="blake2b hash function" alt="" coords="209,55,275,80"/>
-<area shape="rect" id="node5" href="$d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582" title="driver function to perform the hashing as described in specification" alt="" coords="338,29,419,55"/>
-<area shape="rect" id="node9" href="$d7/d3b/group__hash.html#ga94c9f3e74306c2b7ac5f141d8454dbe9" title="put value of n into dest" alt="" coords="344,79,413,104"/>
-<area shape="rect" id="node6" href="$d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd" title="compression function F" alt="" coords="504,5,543,31"/>
-<area shape="rect" id="node8" href="$d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e" title="increment an 128&#45;bit number by a given amount" alt="" coords="467,55,580,80"/>
-<area shape="rect" id="node7" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="628,5,666,31"/>
+<area shape="rect" id="Node000001" title="main function" alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$dc/d1d/hash__blake2b_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="testing function" alt="" coords="103,31,146,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,41,88,41,88,46,55,46"/>
+<area shape="rect" id="Node000003" href="$dc/d1d/hash__blake2b_8c.html#a857feb4c0c5980c4c3807c721dd7b144" title="Self&#45;test implementations." alt="" coords="194,5,290,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,36,179,29,180,34,147,42"/>
+<area shape="rect" id="Node000004" href="$d7/d3b/group__hash.html#gaf2cd4bc8e8097fff865741a0efc42eca" title="blake2b hash function" alt="" coords="209,55,275,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="147,45,195,55,194,60,146,50"/>
+<area shape="rect" id="Node000005" href="$d7/d3b/group__hash.html#gafa42f7c30fb9921ba2eafa8b68b23582" title="driver function to perform the hashing as described in specification" alt="" coords="338,29,419,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="275,59,324,50,325,55,276,64"/>
+<area shape="rect" id="Node000009" href="$d7/d3b/group__hash.html#ga94c9f3e74306c2b7ac5f141d8454dbe9" title="put value of n into dest" alt="" coords="344,79,413,104"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="276,71,329,80,329,85,275,76"/>
+<area shape="rect" id="Node000006" href="$d7/d3b/group__hash.html#ga37e02cbf2df2247d31ab92f443990dbd" title="compression function F" alt="" coords="504,5,543,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="419,33,489,21,490,26,420,38"/>
+<area shape="rect" id="Node000008" href="$d7/d3b/group__hash.html#gaead2e4f50d0c512905c07ddd564e082e" title="increment an 128&#45;bit number by a given amount" alt="" coords="467,55,580,80"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="420,47,453,52,452,58,419,52"/>
+<area shape="rect" id="Node000007" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="628,5,666,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="543,16,613,16,613,21,543,21"/>
 </map>

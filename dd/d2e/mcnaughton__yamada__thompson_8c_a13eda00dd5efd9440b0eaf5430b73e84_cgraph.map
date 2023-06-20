@@ -1,22 +1,48 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Self&#45;test implementations." alt="" coords="5,283,49,308"/>
-<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a38faadeab39bb48716f1065bc05abec8" title="Testing helper function." alt="" coords="97,283,178,308"/>
-<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a496e9b4e45417ac56dac40bbbb769d7a" title="recursively constructs a AST from a preprocessed regex string" alt="" coords="245,128,319,154"/>
-<area shape="rect" id="node5" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6a97ab2db6392f262b03370689872348" title="recursively destroys a AST" alt="" coords="385,29,481,55"/>
-<area shape="rect" id="node9" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a684ed3494e22ee17d7b3e19a4d1fe977" title="recursively destroys a NFA" alt="" coords="236,233,327,259"/>
-<area shape="rect" id="node12" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a2dabcd5c410a4b0cac1b4ab378c9dcdc" title="determines whether the NFA is currently in its accepting state" alt="" coords="237,283,326,308"/>
-<area shape="rect" id="node13" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a86e0f235783b005e4e6e951c9603bbe1" title="performs postprocessing on a compiled NFA, add circular empty character transition rules where it&#39;s n..." alt="" coords="226,356,337,382"/>
-<area shape="rect" id="node16" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ae9a5eac7c0d8ac478eb1b97529638fb6" title="performs preprocessing on a regex string, making all implicit concatenations explicit" alt="" coords="230,412,334,438"/>
-<area shape="rect" id="node18" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aebe16fbf12c8ac089501ebcae6f0c050" title="moves a NFA forward" alt="" coords="253,475,310,500"/>
-<area shape="rect" id="node4" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6" title="creates and initializes a AST node" alt="" coords="389,79,477,104"/>
-<area shape="rect" id="node6" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aab463320a19667bd604db2405abefd55" title="utility function to locate the first occurrence of a character in a string while respecting parenthes..." alt="" coords="400,128,466,154"/>
-<area shape="rect" id="node7" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a072d13f905ab9438d38d7415df222817" title="utility function to create a subString" alt="" coords="395,177,471,203"/>
-<area shape="rect" id="node8" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="538,177,590,203"/>
-<area shape="rect" id="node10" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e" title="destroys a transition rule object" alt="" coords="387,227,479,252"/>
-<area shape="rect" id="node11" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652" title="destroys a NFA state" alt="" coords="385,276,481,302"/>
-<area shape="rect" id="node14" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a4ed0049e15d45e0d75a991fbb6f8963c" title="adds a transition rule to a NFA" alt="" coords="398,325,468,351"/>
-<area shape="rect" id="node15" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc" title="creates and initializes a transition rule" alt="" coords="391,375,475,400"/>
-<area shape="rect" id="node17" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6eaf52853f2b39a1299cc16972a3298e" title="helper function to determine whether a character should be considered a character literal" alt="" coords="400,424,466,450"/>
-<area shape="rect" id="node19" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a709e32f5905536216abb03efb4f4db2b" title="helper function to determine an element&#39;s presence in an array" alt="" coords="529,512,599,538"/>
-<area shape="rect" id="node20" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a34774f1859a742ea1c3eaf3f6726b66c" title="helper function to manage empty character transitions" alt="" coords="393,549,473,575"/>
+<area shape="rect" id="Node000001" title="Self&#45;test implementations." alt="" coords="5,283,49,308"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a38faadeab39bb48716f1065bc05abec8" title="Testing helper function." alt="" coords="97,283,178,308"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,293,82,293,82,298,49,298"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a496e9b4e45417ac56dac40bbbb769d7a" title="recursively constructs a AST from a preprocessed regex string" alt="" coords="245,128,319,154"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,281,224,195,255,162,259,166,228,199,152,284"/>
+<area shape="rect" id="Node000005" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6a97ab2db6392f262b03370689872348" title="recursively destroys a AST" alt="" coords="385,29,481,55"/>
+<area shape="poly" id="edge14_Node000002_Node000005" title=" " alt="" coords="138,282,145,244,160,192,185,137,203,111,224,89,258,68,296,53,334,44,370,40,370,45,335,50,297,58,260,72,228,94,207,115,190,139,165,193,150,245,143,283"/>
+<area shape="rect" id="Node000009" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a684ed3494e22ee17d7b3e19a4d1fe977" title="recursively destroys a NFA" alt="" coords="236,233,327,259"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="177,280,227,262,229,267,178,285"/>
+<area shape="rect" id="Node000012" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a2dabcd5c410a4b0cac1b4ab378c9dcdc" title="determines whether the NFA is currently in its accepting state" alt="" coords="237,283,326,308"/>
+<area shape="poly" id="edge15_Node000002_Node000012" title=" " alt="" coords="179,293,222,293,222,298,179,298"/>
+<area shape="rect" id="Node000013" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a86e0f235783b005e4e6e951c9603bbe1" title="performs postprocessing on a compiled NFA, add circular empty character transition rules where it&#39;s n..." alt="" coords="226,356,337,382"/>
+<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="166,307,243,346,240,351,163,311"/>
+<area shape="rect" id="Node000016" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ae9a5eac7c0d8ac478eb1b97529638fb6" title="performs preprocessing on a regex string, making all implicit concatenations explicit" alt="" coords="230,412,334,438"/>
+<area shape="poly" id="edge20_Node000002_Node000016" title=" " alt="" coords="150,307,183,348,228,392,242,402,239,406,224,396,179,351,146,311"/>
+<area shape="rect" id="Node000018" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aebe16fbf12c8ac089501ebcae6f0c050" title="moves a NFA forward" alt="" coords="253,475,310,500"/>
+<area shape="poly" id="edge22_Node000002_Node000018" title=" " alt="" coords="146,308,176,372,200,412,228,448,246,464,243,468,224,452,195,415,171,375,141,310"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="257,129,252,119,255,110,265,104,282,101,300,104,309,112,306,116,298,109,282,107,267,109,259,113,257,119,261,126"/>
+<area shape="rect" id="Node000004" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a12df013d848665fdcdcb01870c322af6" title="creates and initializes a AST node" alt="" coords="389,79,477,104"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="319,126,377,107,379,112,320,131"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="298,125,384,64,390,60,393,65,387,68,301,130"/>
+<area shape="rect" id="Node000006" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#aab463320a19667bd604db2405abefd55" title="utility function to locate the first occurrence of a character in a string while respecting parenthes..." alt="" coords="400,128,466,154"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="319,138,385,138,385,144,319,144"/>
+<area shape="rect" id="Node000007" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a072d13f905ab9438d38d7415df222817" title="utility function to create a subString" alt="" coords="395,177,471,203"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="320,150,382,171,380,176,319,155"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="410,30,406,21,408,11,418,5,433,3,450,6,458,13,455,17,448,10,433,8,420,10,413,14,411,20,415,28"/>
+<area shape="rect" id="Node000008" href="$df/dfa/vector_8c.html#a1afee8aaf33d741df31a73048cff4473" title="This function returns the pointer to the begining of the Vector." alt="" coords="538,177,590,203"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="472,188,522,188,522,193,472,193"/>
+<area shape="poly" id="edge11_Node000009_Node000009" title=" " alt="" coords="257,234,252,225,255,215,265,209,282,207,300,210,309,217,306,221,298,215,282,212,267,214,259,218,257,224,261,232"/>
+<area shape="rect" id="Node000010" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e" title="destroys a transition rule object" alt="" coords="387,227,479,252"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="327,242,372,239,373,245,328,247"/>
+<area shape="rect" id="Node000011" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652" title="destroys a NFA state" alt="" coords="385,276,481,302"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="328,256,372,269,371,274,327,262"/>
+<area shape="poly" id="edge19_Node000013_Node000013" title=" " alt="" coords="257,357,252,347,255,338,265,332,282,329,300,332,309,340,306,344,298,337,282,335,267,337,259,341,257,347,261,354"/>
+<area shape="rect" id="Node000014" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a4ed0049e15d45e0d75a991fbb6f8963c" title="adds a transition rule to a NFA" alt="" coords="398,325,468,351"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="337,355,384,345,385,351,338,360"/>
+<area shape="rect" id="Node000015" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a0b8d037bf2841dede90be41f5fe1ccdc" title="creates and initializes a transition rule" alt="" coords="391,375,475,400"/>
+<area shape="poly" id="edge18_Node000013_Node000015" title=" " alt="" coords="338,373,377,378,376,383,338,378"/>
+<area shape="rect" id="Node000017" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a6eaf52853f2b39a1299cc16972a3298e" title="helper function to determine whether a character should be considered a character literal" alt="" coords="400,424,466,450"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="334,426,385,430,385,436,334,432"/>
+<area shape="rect" id="Node000019" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a709e32f5905536216abb03efb4f4db2b" title="helper function to determine an element&#39;s presence in an array" alt="" coords="529,512,599,538"/>
+<area shape="poly" id="edge23_Node000018_Node000019" title=" " alt="" coords="311,488,481,510,514,515,514,520,480,515,310,494"/>
+<area shape="rect" id="Node000020" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a34774f1859a742ea1c3eaf3f6726b66c" title="helper function to manage empty character transitions" alt="" coords="393,549,473,575"/>
+<area shape="poly" id="edge24_Node000018_Node000020" title=" " alt="" coords="311,498,393,540,391,545,308,503"/>
+<area shape="poly" id="edge25_Node000020_Node000019" title=" " alt="" coords="473,548,514,536,515,541,474,553"/>
+<area shape="poly" id="edge26_Node000020_Node000020" title=" " alt="" coords="410,550,406,541,408,531,418,525,433,523,450,526,458,533,455,537,448,530,433,528,420,530,413,534,411,540,415,548"/>
 </map>

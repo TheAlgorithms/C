@@ -1,8 +1,8 @@
 var searchData=
 [
   ['d_5ffunc_0',['d_func',['../dd/d08/newton__raphson__root_8c.html#ae713a1fd0c275fbec7edf263ac2c0337',1,'newton_raphson_root.c']]],
-  ['darraystack_1',['DArrayStack',['../d4/d67/struct_d_array_stack.html',1,'DArrayStack'],['../d5/d24/dynamic__stack_8c.html#aae116f0ceb8ee66fc9255762ccd7bfd6',1,'DArrayStack():&#160;dynamic_stack.c']]],
-  ['data_2',['data',['../df/dea/structdata.html',1,'data'],['../d8/db8/structkohonen__array__3d.html#ad546baa2e81c6196d5f1dc0fe2e5bd59',1,'kohonen_array_3d::data()'],['../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2',1,'node::data()'],['../db/d8b/struct_node.html#a87c003c9f600e3fc58e6e90835f0b605',1,'Node::data()']]],
+  ['darraystack_1',['DArrayStack',['../d4/d67/struct_d_array_stack.html',1,'DArrayStack'],['../d5/d24/dynamic__stack_8c.html#aae116f0ceb8ee66fc9255762ccd7bfd6',1,'DArrayStack:&#160;dynamic_stack.c']]],
+  ['data_2',['data',['../df/dea/structdata.html',1,'data'],['../d8/db8/structkohonen__array__3d.html#ad546baa2e81c6196d5f1dc0fe2e5bd59',1,'kohonen_array_3d::data'],['../d5/da1/structnode.html#a2d890bb9f6af0ffd73fe79b21124c2a2',1,'node::data'],['../db/d8b/struct_node.html#a87c003c9f600e3fc58e6e90835f0b605',1,'Node::data']]],
   ['decimal_5fto_5fany_5fbase_2ec_3',['decimal_to_any_base.c',['../d1/dba/decimal__to__any__base_8c.html',1,'']]],
   ['decimal_5fto_5fanybase_4',['decimal_to_anybase',['../d1/dba/decimal__to__any__base_8c.html#a3e4a7cfc97a528faa4d6e5741461109c',1,'decimal_to_any_base.c']]],
   ['decimal_5fto_5fbinary_5',['decimal_to_binary',['../d8/d30/decimal__to__binary__recursion_8c.html#acbbe6358ec95b3201865a72b2ac522c8',1,'decimal_to_binary_recursion.c']]],
@@ -19,7 +19,7 @@ var searchData=
   ['destroyrule_16',['destroyRule',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e',1,'mcnaughton_yamada_thompson.c']]],
   ['destroystate_17',['destroyState',['../dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652',1,'mcnaughton_yamada_thompson.c']]],
   ['dict_18',['Dict',['../d4/dfe/struct_dict.html',1,'']]],
-  ['dictionary_19',['Dictionary',['../de/d20/md_data_structures_dictionary__r_e_a_d_m_e.html',1,'']]],
+  ['dictionary_19',['Dictionary',['../d1/d52/md_data__structures_2dictionary_2_r_e_a_d_m_e.html',1,'']]],
   ['digits_20',['digits',['../d3/d5a/struct__large__num.html#afaf353a072cf050ac86ac6e39868bcc9',1,'_large_num']]],
   ['dim1_21',['dim1',['../d8/db8/structkohonen__array__3d.html#a16720581653fa9a34d1029e7229a7377',1,'kohonen_array_3d']]],
   ['dim2_22',['dim2',['../d8/db8/structkohonen__array__3d.html#a888d7e007b38c91c7933e12a9566af1d',1,'kohonen_array_3d']]],
@@ -32,7 +32,7 @@ var searchData=
   ['dot_5fprod_29',['dot_prod',['../de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84',1,'vectors_3d.c']]],
   ['double_5farray_30',['double_array',['../d5/d24/dynamic__stack_8c.html#ac01c5d1d1000ed68b5ff093c5ff36854',1,'dynamic_stack.c']]],
   ['doubly_5flinked_5flist_2ec_31',['doubly_linked_list.c',['../dd/d29/doubly__linked__list_8c.html',1,'']]],
-  ['dual_32',['dual',['../d7/dfd/structdual__quat__.html#a1b05fbc4135e4f9b731423f26527543d',1,'dual_quat_::dual()'],['../de/d58/structquaternion__.html#a596abbab688731119c1f23b26a7ac17a',1,'quaternion_::dual()']]],
+  ['dual_32',['dual',['../d7/dfd/structdual__quat__.html#a1b05fbc4135e4f9b731423f26527543d',1,'dual_quat_::dual'],['../de/d58/structquaternion__.html#a596abbab688731119c1f23b26a7ac17a',1,'quaternion_::dual']]],
   ['dual_5fquat_33',['dual_quat',['../d4/d69/group__dual__quats.html#ga27005601c47e5bb7aafe77659e76c88f',1,'geometry_datatypes.h']]],
   ['dual_5fquat_5f_34',['dual_quat_',['../d7/dfd/structdual__quat__.html',1,'']]],
   ['duplicatenumber_35',['duplicateNumber',['../d2/d9b/floyd__cycle__detection__algorithm_8c.html#ac7af29ae53c6659f2881fb080b080f9d',1,'floyd_cycle_detection_algorithm.c']]],

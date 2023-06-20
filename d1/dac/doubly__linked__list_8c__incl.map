@@ -1,5 +1,7 @@
 <map id="data_structures/linked_list/doubly_linked_list.c" name="data_structures/linked_list/doubly_linked_list.c">
-<area shape="rect" id="node1" title="Implementation of Doubly linked list" alt="" coords="5,5,169,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="14,94,75,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,94,161,120"/>
+<area shape="rect" id="Node000001" title="Implementation of Doubly linked list" alt="" coords="5,5,169,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="14,94,75,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,48,60,82,55,79,74,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,161,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,45,119,79,114,82,95,48"/>
 </map>

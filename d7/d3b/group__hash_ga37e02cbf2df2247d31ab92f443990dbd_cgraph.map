@@ -1,4 +1,5 @@
 <map id="F" name="F">
-<area shape="rect" id="node1" title="compression function F" alt="" coords="5,5,44,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="92,5,130,31"/>
+<area shape="rect" id="Node000001" title="compression function F" alt="" coords="5,5,44,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga049d44b5a4804ca5a1b7a290f3fa3202" title="blake2b mixing function G" alt="" coords="92,5,130,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,16,77,16,77,21,44,21"/>
 </map>

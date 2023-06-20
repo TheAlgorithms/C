@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#ga994ea8b243b6c0fbef734551ec5765dd" title="Test function for adler32." alt="" coords="103,5,195,31"/>
-<area shape="rect" id="node3" href="$d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" title="32&#45;bit Adler algorithm implementation" alt="" coords="243,5,306,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#ga994ea8b243b6c0fbef734551ec5765dd" title="Test function for adler32." alt="" coords="103,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d7/d3b/group__hash.html#ga506f0227a3b5f9434a503e09a3cb672b" title="32&#45;bit Adler algorithm implementation" alt="" coords="243,5,306,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,16,228,16,228,21,195,21"/>
 </map>

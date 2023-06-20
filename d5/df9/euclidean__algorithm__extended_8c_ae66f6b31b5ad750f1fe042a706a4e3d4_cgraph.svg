@@ -5,98 +5,104 @@
  -->
 <!-- Title: main Pages: 1 -->
 <!--zoomable 64 -->
+
 <svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }
 ]]></style>
-<script type="text/javascript"><![CDATA[
-var edges = document.getElementsByTagName('g');
-if (edges && edges.length) {
-  for (var i=0;i<edges.length;i++) {
-    if (edges[i].id.substr(0,4)=='edge') {
-      edges[i].setAttribute('class','edge');
-    }
-  }
-}
-]]></script>
-        <defs>
-                <circle id="rim" cx="0" cy="0" r="7"/>
-                <circle id="rim2" cx="0" cy="0" r="3.5"/>
-                <g id="zoomPlus">
-                        <use xlink:href="#rim" fill="#404040">
-                                <set attributeName="fill" to="#808080" begin="zoomplus.mouseover" end="zoomplus.mouseout"/>
-                        </use>
-                        <path d="M-4,0h8M0,-4v8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
-                </g>
-                <g id="zoomMin">
-                        <use xlink:href="#rim" fill="#404040">
-                                <set attributeName="fill" to="#808080" begin="zoomminus.mouseover" end="zoomminus.mouseout"/>
-                        </use>
-                        <path d="M-4,0h8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
-                </g>
-                <g id="dirArrow">
-                        <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-               <g id="resetDef">
-                       <use xlink:href="#rim2" fill="#404040">
-                               <set attributeName="fill" to="#808080" begin="reset.mouseover" end="reset.mouseout"/>
-                       </use>
-               </g>
-        </defs>
 
-<script type="text/javascript">
+<defs>
+  <circle id="rim" cx="0" cy="0" r="7"/>
+  <circle id="rim2" cx="0" cy="0" r="3.5"/>
+  <g id="zoomPlus">
+    <use xlink:href="#rim" fill="#404040"><set attributeName="fill" to="#808080" begin="zoomplus.mouseover" end="zoomplus.mouseout"/></use>
+    <path d="M-4,0h8M0,-4v8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
+  </g>
+  <g id="zoomMin">
+    <use xlink:href="#rim" fill="#404040"><set attributeName="fill" to="#808080" begin="zoomminus.mouseover" end="zoomminus.mouseout"/></use>
+    <path d="M-4,0h8" fill="none" stroke="white" stroke-width="1.5" pointer-events="none"/>
+  </g>
+  <g id="arrowUp" transform="translate(30 24)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowRight" transform="rotate(90) translate(36 -43)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowDown" transform="rotate(180) translate(-30 -48)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="arrowLeft" transform="rotate(270) translate(-36 17)">
+    <use xlink:href="#rim"/>
+    <path pointer-events="none" fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
+  </g>
+  <g id="resetDef">
+    <use xlink:href="#rim2" fill="#404040"><set attributeName="fill" to="#808080" begin="reset.mouseover" end="reset.mouseout"/></use>
+  </g>
+</defs>
+<script type="application/ecmascript">
 var viewWidth = 571;
 var viewHeight = 64;
 var sectionId = 'dynsection-3';
 </script>
-<script xlink:href="../../svgpan.js"/>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>main</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Main Function.">
+<g id="a_Node000001"><a xlink:title="Main Function.">
 <polygon fill="#999999" stroke="#666666" points="37,-37.25 0,-37.25 0,-18 37,-18 37,-37.25"/>
 <text text-anchor="middle" x="18.5" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#aa8dca7b867074164d5f45b0f3851269d" target="_top" xlink:title="Perform tests on known results.">
+<g id="a_Node000002"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#aa8dca7b867074164d5f45b0f3851269d" target="_top" xlink:title="Perform tests on known results.">
 <polygon fill="white" stroke="#666666" points="105.5,-37.25 73,-37.25 73,-18 105.5,-18 105.5,-37.25"/>
 <text text-anchor="middle" x="89.25" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">test</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M37.2,-27.62C44.67,-27.62 53.52,-27.62 61.73,-27.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="61.71,-31.13 71.71,-27.62 61.71,-24.13 61.71,-31.13"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#aaa5f87fdd4cc35a6c77e255416de66ba" target="_top" xlink:title="perform one single check on the result of the algorithm with provided parameters and expected output">
+<g id="a_Node000003"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#aaa5f87fdd4cc35a6c77e255416de66ba" target="_top" xlink:title="perform one single check on the result of the algorithm with provided parameters and expected output">
 <polygon fill="white" stroke="#666666" points="204.75,-37.25 141.5,-37.25 141.5,-18 204.75,-18 204.75,-37.25"/>
 <text text-anchor="middle" x="173.12" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">single_test</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M105.65,-27.62C112.76,-27.62 121.59,-27.62 130.46,-27.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="130.19,-31.13 140.19,-27.62 130.19,-24.13 130.19,-31.13"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d" target="_top" xlink:title="performs the extended Euclidean algorithm on integer inputs a and b">
+<g id="a_Node000004"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a2e7f9cce2f756c6a016ae7e2592f9c5d" target="_top" xlink:title="performs the extended Euclidean algorithm on integer inputs a and b">
 <polygon fill="white" stroke="#666666" points="343,-42.88 240.75,-42.88 240.75,-12.37 343,-12.37 343,-42.88"/>
 <text text-anchor="start" x="248.75" y="-29.38" font-family="Helvetica,sans-Serif" font-size="10.00">extended_euclidean</text>
 <text text-anchor="middle" x="291.88" y="-18.12" font-family="Helvetica,sans-Serif" font-size="10.00">_algorithm</text>
@@ -104,97 +110,103 @@ var sectionId = 'dynsection-3';
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M205.11,-27.62C212.71,-27.62 221.11,-27.62 229.59,-27.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="229.32,-31.13 239.32,-27.62 229.32,-24.13 229.32,-31.13"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" target="_top" xlink:title="calculates the value of x or y and push those into the small &#39;queues&#39;">
+<g id="a_Node000005"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a2692f7190cf9d281ae23df491902d1c8" target="_top" xlink:title="calculates the value of x or y and push those into the small &#39;queues&#39;">
 <polygon fill="white" stroke="#666666" points="473.75,-37.25 379,-37.25 379,-18 473.75,-18 473.75,-37.25"/>
 <text text-anchor="middle" x="426.38" y="-23.75" font-family="Helvetica,sans-Serif" font-size="10.00">calculate_next_xy</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M343.35,-27.62C351.29,-27.62 359.56,-27.62 367.65,-27.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="367.53,-31.13 377.53,-27.62 367.53,-24.13 367.53,-31.13"/>
+</a>
+</g>
 </g>
 <!-- Node6 -->
-<g id="node6" class="node">
+<g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" target="_top" xlink:title="This function gets the next item from the Vector each time it&#39;s called.">
+<g id="a_Node000006"><a xlink:href="../../df/dfa/vector_8c.html#af2f92e8cc55e764980bc0573ab5cd06f" target="_top" xlink:title="This function gets the next item from the Vector each time it&#39;s called.">
 <polygon fill="white" stroke="#666666" points="553.5,-56.25 518.75,-56.25 518.75,-37 553.5,-37 553.5,-56.25"/>
 <text text-anchor="middle" x="536.12" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">next</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
+<g id="edge5_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
+<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M474.01,-35.85C485.5,-37.87 497.43,-39.98 507.67,-41.78"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="506.95,-45.39 517.4,-43.68 508.16,-38.49 506.95,-45.39"/>
+</a>
+</g>
 </g>
 <!-- Node7 -->
-<g id="node7" class="node">
+<g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" target="_top" xlink:title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of...">
+<g id="a_Node000007"><a xlink:href="../../d5/df9/euclidean__algorithm__extended_8c.html#a14f0d2347018c28ef17be3185b373d8f" target="_top" xlink:title="gives queue&#45;like behavior to an array of two ints, pushing an element onto the end and pushing one of...">
 <polygon fill="white" stroke="#666666" points="562.5,-19.25 509.75,-19.25 509.75,0 562.5,0 562.5,-19.25"/>
 <text text-anchor="middle" x="536.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">xy_push</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
+<g id="edge6_Node000005_Node000007" class="edge">
 <title>Node5&#45;&gt;Node7</title>
+<g id="a_edge6_Node000005_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M474.01,-19.83C482.28,-18.45 490.79,-17.03 498.72,-15.71"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="499.2,-19.01 508.48,-13.91 498.04,-12.1 499.2,-19.01"/>
+</a>
+</g>
 </g>
 </g>
 </svg>
-        <g id="navigator" transform="translate(0 0)" fill="#404254">
-                <rect fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width=".5" x="0" y="0" width="60" height="60"/>
-                <use id="zoomplus" xlink:href="#zoomPlus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/>
-                <use id="zoomminus" xlink:href="#zoomMin" x="42" y="9" onmousedown="handleZoom(evt,'out')"/>
-                <use id="reset" xlink:href="#resetDef" x="30" y="36" onmousedown="handleReset()"/>
-                <g id="arrowUp" xlink:href="#dirArrow" transform="translate(30 24)" onmousedown="handlePan(0,-1)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowUp.mouseover" end="arrowUp.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowRight" xlink:href="#dirArrow" transform="rotate(90) translate(36 -43)" onmousedown="handlePan(1,0)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowRight.mouseover" end="arrowRight.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowDown" xlink:href="#dirArrow" transform="rotate(180) translate(-30 -48)" onmousedown="handlePan(0,1)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowDown.mouseover" end="arrowDown.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-                <g id="arrowLeft" xlink:href="#dirArrow" transform="rotate(270) translate(-36 17)" onmousedown="handlePan(-1,0)">
-                  <use xlink:href="#rim" fill="#404040">
-                        <set attributeName="fill" to="#808080" begin="arrowLeft.mouseover" end="arrowLeft.mouseout"/>
-                  </use>
-                  <path fill="none" stroke="white" stroke-width="1.5" d="M0,-3.0v7 M-2.5,-0.5L0,-3.0L2.5,-0.5"/>
-                </g>
-        </g>
-        <svg viewBox="0 0 15 15" width="100%" height="30px" preserveAspectRatio="xMaxYMin meet">
-         <g id="arrow_out" transform="scale(0.3 0.3)">
-          <a xlink:href="euclidean__algorithm__extended_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph_org.svg" target="_base">
-           <rect id="button" ry="5" rx="5" y="6" x="6" height="38" width="38"
-                fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width="1.0"/>
-           <path id="arrow"
-             d="M 11.500037,31.436501 C 11.940474,20.09759 22.043105,11.32322 32.158766,21.979434 L 37.068811,17.246167 C 37.068811,17.246167 37.088388,32 37.088388,32 L 22.160133,31.978069 C 22.160133,31.978069 26.997745,27.140456 26.997745,27.140456 C 18.528582,18.264221 13.291696,25.230495 11.500037,31.436501 z"
-             style="fill:#404040;"/>
-          </a>
-         </g>
-        </svg>
+
+<g id="navigator" transform="translate(0 0)" fill="#404254">
+  <rect fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width=".5" x="0" y="0" width="60" height="60"/>
+  <use id="zoomplus" xlink:href="#zoomPlus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/>
+  <use id="zoomminus" xlink:href="#zoomMin" x="42" y="9" onmousedown="handleZoom(evt,'out')"/>
+  <use id="reset" xlink:href="#resetDef" x="30" y="36" onmousedown="handleReset()"/>
+   <use id="arrowup" xlink:href="#arrowUp" x="0" y="0" onmousedown="handlePan(0,-1)"/>
+  <use id="arrowright" xlink:href="#arrowRight" x="0" y="0" onmousedown="handlePan(1,0)"/>
+  <use id="arrowdown" xlink:href="#arrowDown" x="0" y="0" onmousedown="handlePan(0,1)"/>
+  <use id="arrowleft" xlink:href="#arrowLeft" x="0" y="0" onmousedown="handlePan(-1,0)"/>
+</g>
+<svg viewBox="0 0 15 15" width="100%" height="30px" preserveAspectRatio="xMaxYMin meet">
+ <g id="arrow_out" transform="scale(0.3 0.3)">
+  <a xlink:href="euclidean__algorithm__extended_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph_org.svg" target="_base">
+   <rect id="button" ry="5" rx="5" y="6" x="6" height="38" width="38"
+        fill="#f2f5e9" fill-opacity="0.5" stroke="#606060" stroke-width="1.0"/>
+   <path id="arrow"
+     d="M 11.500037,31.436501 C 11.940474,20.09759 22.043105,11.32322 32.158766,21.979434 L 37.068811,17.246167 C 37.068811,17.246167 37.088388,32 37.088388,32 L 22.160133,31.978069 C 22.160133,31.978069 26.997745,27.140456 26.997745,27.140456 C 18.528582,18.264221 13.291696,25.230495 11.500037,31.436501 z"
+     style="fill:#404040;"/>
+  </a>
+ </g>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

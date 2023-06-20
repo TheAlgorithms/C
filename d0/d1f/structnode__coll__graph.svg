@@ -6,31 +6,59 @@
 <!-- Title: node Pages: 1 -->
 <svg width="105pt" height="109pt"
  viewBox="0.00 0.00 105.00 109.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 105.25)">
 <title>node</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Node, the basic data structure in the tree.">
+<g id="a_Node000001"><a xlink:title="Node, the basic data structure in the tree.">
 <polygon fill="#999999" stroke="#666666" points="37,-60.25 0,-60.25 0,-41 37,-41 37,-60.25"/>
 <text text-anchor="middle" x="18.5" y="-46.75" font-family="Helvetica,sans-Serif" font-size="10.00">node</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node1 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000001" class="edge">
 <title>Node1&#45;&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000001"><a xlink:title=" ">
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M48.04,-53.86C52.21,-53.33 55,-52.26 55,-50.62 55,-47.81 46.65,-46.64 37.28,-47.12"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="48.19,-50.38 38.28,-54.13 48.36,-57.38 48.19,-50.38"/>
-<text text-anchor="middle" x="76" y="-91.75" font-family="Helvetica,sans-Serif" font-size="10.00"> left</text>
-<text text-anchor="middle" x="76" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">leftNode</text>
-<text text-anchor="middle" x="76" y="-69.25" font-family="Helvetica,sans-Serif" font-size="10.00">link</text>
-<text text-anchor="middle" x="76" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00">next</text>
-<text text-anchor="middle" x="76" y="-46.75" font-family="Helvetica,sans-Serif" font-size="10.00">par</text>
-<text text-anchor="middle" x="76" y="-35.5" font-family="Helvetica,sans-Serif" font-size="10.00">pre</text>
-<text text-anchor="middle" x="76" y="-24.25" font-family="Helvetica,sans-Serif" font-size="10.00">prev</text>
-<text text-anchor="middle" x="76" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">right</text>
-<text text-anchor="middle" x="76" y="-1.75" font-family="Helvetica,sans-Serif" font-size="10.00">rightNode</text>
+</a>
+</g>
+<text text-anchor="middle" x="76" y="-91.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> left</text>
+<text text-anchor="middle" x="76" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">leftNode</text>
+<text text-anchor="middle" x="76" y="-69.25" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">link</text>
+<text text-anchor="middle" x="76" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">next</text>
+<text text-anchor="middle" x="76" y="-46.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">par</text>
+<text text-anchor="middle" x="76" y="-35.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">pre</text>
+<text text-anchor="middle" x="76" y="-24.25" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">prev</text>
+<text text-anchor="middle" x="76" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">right</text>
+<text text-anchor="middle" x="76" y="-1.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">rightNode</text>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

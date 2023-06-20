@@ -1,3 +1,4 @@
 <map id="preorder_display" name="preorder_display">
-<area shape="rect" id="node1" title="performs preorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,122,55"/>
+<area shape="rect" id="Node000001" title="performs preorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,122,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="43,30,39,21,41,11,50,5,64,3,79,6,86,13,83,17,76,10,63,8,52,10,46,14,44,20,48,28"/>
 </map>

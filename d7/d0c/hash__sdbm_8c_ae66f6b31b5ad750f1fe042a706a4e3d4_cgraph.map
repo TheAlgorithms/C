@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d7/d3b/group__hash.html#gab87679863646255178427a56dc33e453" title="Test function for sdbm." alt="" coords="103,5,185,31"/>
-<area shape="rect" id="node3" href="$d7/d3b/group__hash.html#ga8ab8eeb35f8ccfcad89091b5fdd4f605" title="SDBM algorithm implementation." alt="" coords="233,5,286,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/group__hash.html#gab87679863646255178427a56dc33e453" title="Test function for sdbm." alt="" coords="103,5,185,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,88,16,88,21,55,21"/>
+<area shape="rect" id="Node000003" href="$d7/d3b/group__hash.html#ga8ab8eeb35f8ccfcad89091b5fdd4f605" title="SDBM algorithm implementation." alt="" coords="233,5,286,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,16,218,16,218,21,185,21"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="inorder_display" name="inorder_display">
-<area shape="rect" id="node1" title="performs inorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,114,55"/>
+<area shape="rect" id="Node000001" title="performs inorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,114,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="40,30,37,21,39,11,47,5,60,3,74,6,81,13,77,16,71,10,59,8,49,10,43,14,42,20,45,28"/>
 </map>

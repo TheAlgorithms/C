@@ -1,7 +1,12 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478" title="check if a given number can be represented as a sum of two abundant numbers." alt="" coords="103,31,244,56"/>
-<area shape="rect" id="node3" href="$d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" title="Find the next abundant number after N and not including N." alt="" coords="292,5,423,31"/>
-<area shape="rect" id="node4" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="471,31,563,56"/>
-<area shape="rect" id="node5" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="611,31,747,56"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$d7/ddb/problem__23_2sol1_8c.html#a3ab61b5a1c4f2288625d160aa0ea8478" title="check if a given number can be represented as a sum of two abundant numbers." alt="" coords="103,31,244,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,41,88,41,88,46,55,46"/>
+<area shape="rect" id="Node000003" href="$d7/ddb/problem__23_2sol1_8c.html#ac5d600bf3077f4188afc4c5cd2c40eaf" title="Find the next abundant number after N and not including N." alt="" coords="292,5,423,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,31,277,27,278,32,245,36"/>
+<area shape="rect" id="Node000004" href="$d7/ddb/problem__23_2sol1_8c.html#a4f128410e6582fe26488e2316cc96e17" title="Is the given number an abundant number (1) or not (0)" alt="" coords="471,31,563,56"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="244,41,456,41,456,46,244,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,26,457,31,456,37,423,31"/>
+<area shape="rect" id="Node000005" href="$d7/ddb/problem__23_2sol1_8c.html#a1aca7f530f82b27100262adba9e7556b" title="Returns: &#45;1 if N is deficient 1 if N is abundant 0 if N is perfect." alt="" coords="611,31,747,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="563,41,596,41,596,46,563,46"/>
 </map>

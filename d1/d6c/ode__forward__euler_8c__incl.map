@@ -1,7 +1,11 @@
 <map id="numerical_methods/ode_forward_euler.c" name="numerical_methods/ode_forward_euler.c">
-<area shape="rect" id="node1" title="Solve a multivariable first order ordinary differential equation (ODEs) using forward Euler method" alt="" coords="84,5,244,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,67,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,94,152,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="175,94,238,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="262,94,319,120"/>
+<area shape="rect" id="Node000001" title="Solve a multivariable first order ordinary differential equation (ODEs) using forward Euler method" alt="" coords="84,5,244,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,67,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,49,69,88,66,84,131,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="91,94,152,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,48,137,82,132,79,151,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="175,94,238,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,45,196,79,191,82,172,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="262,94,319,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="197,44,261,84,258,88,194,49"/>
 </map>

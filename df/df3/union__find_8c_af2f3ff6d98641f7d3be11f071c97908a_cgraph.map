@@ -1,4 +1,6 @@
 <map id="join" name="join">
-<area shape="rect" id="node1" title="Function to join." alt="" coords="5,29,47,55"/>
-<area shape="rect" id="node2" href="$df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86" title="Find index of or value in an array." alt="" coords="95,29,137,55"/>
+<area shape="rect" id="Node000001" title="Function to join." alt="" coords="5,29,47,55"/>
+<area shape="rect" id="Node000002" href="$df/df3/union__find_8c.html#a3e13b69cce5a1b25ae034798092f3d86" title="Find index of or value in an array." alt="" coords="95,29,137,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,40,80,40,80,45,47,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="99,30,96,21,98,12,105,5,116,3,128,6,134,13,130,16,125,10,116,8,107,10,103,14,102,20,104,28"/>
 </map>

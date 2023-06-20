@@ -1,5 +1,10 @@
 <map id="NFA" name="NFA">
-<area shape="rect" id="node1" title="Definition for the NFA itself." alt="" coords="5,187,54,213"/>
-<area shape="rect" id="node2" href="$d4/d97/struct_n_f_a_state.html" title="Definition for a NFA state." alt="" coords="46,5,125,31"/>
-<area shape="rect" id="node3" href="$d9/dd9/structtrans_rule.html" title="Definition for a NFA state transition rule." alt="" coords="115,96,192,122"/>
+<area shape="rect" id="Node000001" title="Definition for the NFA itself." alt="" coords="5,187,54,213"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="70,190,77,193,80,200,72,209,54,211,54,205,70,204,75,199,73,197,68,195"/>
+<area shape="rect" id="Node000002" href="$d4/d97/struct_n_f_a_state.html" title="Definition for a NFA state." alt="" coords="46,5,125,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,43,40,66,23,95,18,119,19,144,28,186,23,187,14,145,13,119,18,93,35,63,57,39"/>
+<area shape="rect" id="Node000003" href="$d9/dd9/structtrans_rule.html" title="Definition for a NFA state transition rule." alt="" coords="115,96,192,122"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="81,46,80,58,84,69,98,83,116,94,113,98,94,88,80,71,75,59,75,45"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="127,133,48,189,45,184,124,128"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,84,122,57,99,34,103,30,126,53,144,81"/>
 </map>

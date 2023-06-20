@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2" title="Function to add arbitrary length decimal integers stored in an array." alt="" coords="103,5,202,31"/>
-<area shape="rect" id="node3" href="$db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319" title="Function to print a long number." alt="" coords="104,55,201,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$db/d01/problem__13_2sol1_8c.html#ad51742ca5a5c99e860bdf30299163bf2" title="Function to add arbitrary length decimal integers stored in an array." alt="" coords="103,5,202,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,36,87,29,88,34,56,41"/>
+<area shape="rect" id="Node000003" href="$db/d01/problem__13_2sol1_8c.html#a248adc917818cc6666d8bc679a660319" title="Function to print a long number." alt="" coords="104,55,201,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,46,90,53,89,58,54,51"/>
 </map>

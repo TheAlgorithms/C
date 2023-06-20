@@ -1,6 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$dc/d39/selection__sort__recursive_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,29,146,55"/>
-<area shape="rect" id="node3" href="$dc/d39/selection__sort__recursive_8c.html#a3f04d850b94a34dcaaed0e7bc7475241" title="Selection Sort algorithm implemented using recursion." alt="" coords="194,29,291,55"/>
-<area shape="rect" id="node4" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="339,29,414,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$dc/d39/selection__sort__recursive_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Self&#45;test implementations." alt="" coords="103,29,146,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="rect" id="Node000003" href="$dc/d39/selection__sort__recursive_8c.html#a3f04d850b94a34dcaaed0e7bc7475241" title="Selection Sort algorithm implemented using recursion." alt="" coords="194,29,291,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,40,179,40,179,45,146,45"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="222,30,218,21,220,11,229,5,243,3,258,6,266,13,262,17,256,10,243,8,231,10,225,14,223,20,227,28"/>
+<area shape="rect" id="Node000004" href="$dc/d39/selection__sort__recursive_8c.html#aa2bc8bdd2e8ce289a6b8ef528fd1a534" title="Returns the index having minimum value using recursion." alt="" coords="339,29,414,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,40,324,40,324,45,292,45"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="353,30,349,21,351,11,361,5,377,3,394,6,402,13,399,17,392,10,376,8,363,10,356,14,354,20,358,28"/>
 </map>

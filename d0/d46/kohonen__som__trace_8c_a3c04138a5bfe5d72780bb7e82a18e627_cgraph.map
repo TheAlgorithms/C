@@ -1,15 +1,36 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,166,55,191"/>
-<area shape="rect" id="node2" href="$d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908" title="Convert clock cycle difference to time in seconds." alt="" coords="103,91,205,117"/>
-<area shape="rect" id="node3" href="$d0/d46/kohonen__som__trace_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" title="Test that creates a random set of points distributed near the circumference of a circle and trains an..." alt="" coords="129,140,179,166"/>
-<area shape="rect" id="node10" href="$d0/d46/kohonen__som__trace_8c.html#a0283886819c7c140a023582b7269e2d0" title="Test that creates a random set of points distributed near the locus of the Lamniscate of Gerono and t..." alt="" coords="129,190,179,215"/>
-<area shape="rect" id="node12" href="$d0/d46/kohonen__som__trace_8c.html#a6d0455dd5c30adda100e95f0423c786e" title="Test that creates a random set of points distributed in six clusters in 3D space." alt="" coords="129,239,179,265"/>
-<area shape="rect" id="node4" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="492,115,563,141"/>
-<area shape="rect" id="node5" href="$d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="253,190,395,215"/>
-<area shape="rect" id="node8" href="$d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" title="Save a given n&#45;dimensional data martix to file." alt="" coords="273,239,375,265"/>
-<area shape="rect" id="node9" href="$d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8" title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ..." alt="" coords="284,39,365,65"/>
-<area shape="rect" id="node6" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="443,190,612,215"/>
-<area shape="rect" id="node7" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="660,190,804,215"/>
-<area shape="rect" id="node11" href="$d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614" title="Creates a random set of points distributed near the locus of the Lamniscate of Gerono." alt="" coords="268,140,381,166"/>
-<area shape="rect" id="node13" href="$d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="266,340,382,366"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,166,55,191"/>
+<area shape="rect" id="Node000002" href="$d0/d46/kohonen__som__trace_8c.html#a2256c10b16edba377b64a44b6c656908" title="Convert clock cycle difference to time in seconds." alt="" coords="103,91,205,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,163,101,126,109,121,111,126,104,130,50,167"/>
+<area shape="rect" id="Node000003" href="$d0/d46/kohonen__som__trace_8c.html#a1440a7779ac56f47a3f355ce4a8c7da0" title="Test that creates a random set of points distributed near the circumference of a circle and trains an..." alt="" coords="129,140,179,166"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,171,114,159,115,164,56,176"/>
+<area shape="rect" id="Node000010" href="$d0/d46/kohonen__som__trace_8c.html#a0283886819c7c140a023582b7269e2d0" title="Test that creates a random set of points distributed near the locus of the Lamniscate of Gerono and t..." alt="" coords="129,190,179,215"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="56,181,115,192,114,198,55,186"/>
+<area shape="rect" id="Node000012" href="$d0/d46/kohonen__som__trace_8c.html#a6d0455dd5c30adda100e95f0423c786e" title="Test that creates a random set of points distributed in six clusters in 3D space." alt="" coords="129,239,179,265"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="50,190,104,226,117,233,114,237,101,230,48,194"/>
+<area shape="rect" id="Node000004" href="$d0/dcb/group__kohonen__1d.html#gaf5ce14f026d6d231bef29161bac2b485" title="Helper function to generate a random number in a given interval." alt="" coords="492,115,563,141"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="178,143,203,127,213,114,219,101,224,74,230,48,238,36,252,24,289,7,322,4,356,11,396,24,429,39,460,60,507,102,503,106,456,64,427,44,394,29,355,16,322,9,290,12,254,29,242,39,235,50,229,75,224,103,218,117,207,131,181,148"/>
+<area shape="rect" id="Node000005" href="$d0/dcb/group__kohonen__1d.html#gaeaeffbff2be4d5d15b0d4f10f846abde" title="Apply incremental algorithm with updating neighborhood and learning rates on all samples in the given..." alt="" coords="253,190,395,215"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="180,158,264,183,263,188,179,163"/>
+<area shape="rect" id="Node000008" href="$d0/dcb/group__kohonen__1d.html#ga7b84b14e60f47812b581d1f93057c85a" title="Save a given n&#45;dimensional data martix to file." alt="" coords="273,239,375,265"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="181,161,207,175,221,189,231,202,240,214,255,226,262,230,259,235,251,230,236,217,226,205,217,192,203,179,178,165"/>
+<area shape="rect" id="Node000009" href="$d0/d46/kohonen__som__trace_8c.html#a107f00650b8041f77767927073ddddb8" title="Creates a random set of points distributed near the circumference of a circle and trains an SOM that ..." alt="" coords="284,39,365,65"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="178,141,203,127,227,105,251,82,273,69,276,74,255,86,231,108,207,131,181,146"/>
+<area shape="rect" id="Node000006" href="$d0/dcb/group__kohonen__1d.html#gae334493a0917a24736fe5ba82aa6f81f" title="Update weights of the SOM using Kohonen algorithm." alt="" coords="443,190,612,215"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="396,200,428,200,428,205,396,205"/>
+<area shape="rect" id="Node000007" href="$d0/dcb/group__kohonen__1d.html#ga4a57a413a3cef286a7da6d4666575586" title="Get minimum value and index of the value in a vector." alt="" coords="660,190,804,215"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="612,200,645,200,645,205,612,205"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="362,63,479,107,477,112,360,68"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="178,191,203,176,217,163,226,149,235,136,252,125,310,109,371,104,429,107,477,114,477,119,428,112,371,109,311,114,254,130,239,140,230,152,221,166,207,181,181,195"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="180,200,238,200,238,205,180,205"/>
+<area shape="poly" id="edge13_Node000010_Node000008" title=" " alt="" coords="180,207,264,232,263,237,179,212"/>
+<area shape="rect" id="Node000011" href="$d0/d46/kohonen__som__trace_8c.html#aa2246f940155472084ee461f3685d614" title="Creates a random set of points distributed near the locus of the Lamniscate of Gerono." alt="" coords="268,140,381,166"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="179,193,263,168,264,173,180,198"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="381,144,477,131,477,137,382,149"/>
+<area shape="poly" id="edge17_Node000012_Node000004" title=" " alt="" coords="181,261,224,278,280,292,309,295,339,294,367,287,394,275,406,265,413,255,420,230,425,204,431,190,441,175,460,159,480,146,483,150,463,163,445,179,436,192,430,205,425,232,418,257,410,269,397,280,369,292,340,299,309,300,279,297,222,283,179,266"/>
+<area shape="poly" id="edge18_Node000012_Node000005" title=" " alt="" coords="179,242,263,217,264,223,180,247"/>
+<area shape="poly" id="edge19_Node000012_Node000008" title=" " alt="" coords="180,249,258,249,258,255,180,255"/>
+<area shape="rect" id="Node000013" href="$d0/d46/kohonen__som__trace_8c.html#a41ae16442e3e5b891a58d2e5932a2cd0" title="Creates a random set of points distributed in four clusters in 3D space with centroids at the points." alt="" coords="266,340,382,366"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="173,263,210,290,254,319,279,332,276,336,252,324,207,294,170,267"/>
+<area shape="poly" id="edge21_Node000013_Node000004" title=" " alt="" coords="368,338,393,319,406,302,413,284,418,250,422,214,429,195,441,176,458,159,478,146,481,150,462,163,445,179,433,198,427,215,423,250,418,286,411,304,397,323,371,342"/>
 </map>

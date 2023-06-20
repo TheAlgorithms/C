@@ -1,8 +1,16 @@
 <map id="numerical_methods/qr_decomposition.c" name="numerical_methods/qr_decomposition.c">
-<area shape="rect" id="node1" title="Program to compute the QR decomposition of a given matrix." alt="" coords="77,5,227,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,168,67,193"/>
-<area shape="rect" id="node3" title=" " alt="" coords="106,168,166,193"/>
-<area shape="rect" id="node4" title=" " alt="" coords="203,168,266,193"/>
-<area shape="rect" id="node5" title=" " alt="" coords="286,94,343,120"/>
-<area shape="rect" id="node6" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." alt="" coords="93,94,211,120"/>
+<area shape="rect" id="Node000001" title="Program to compute the QR decomposition of a given matrix." alt="" coords="77,5,227,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,168,67,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,48,99,70,75,96,58,125,46,154,41,152,53,123,71,92,96,66,122,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,168,166,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,48,101,69,84,95,81,111,86,127,110,156,106,160,82,130,76,112,79,93,97,66,120,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,168,266,193"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,45,206,66,225,93,235,123,238,153,233,153,230,124,220,95,202,69,179,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="286,94,343,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="194,44,278,85,275,90,191,49"/>
+<area shape="rect" id="Node000006" href="$d4/d68/qr__decompose_8h.html" title="Library functions to compute QR decomposition of a given matrix." alt="" coords="93,94,211,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="155,46,155,79,149,79,149,46"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="134,122,69,162,66,157,131,118"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="152,120,144,154,139,152,147,119"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="168,118,211,156,208,160,164,122"/>
 </map>

@@ -1,6 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628" title="continuous mean and variance computance using first value as an approximation for the mean." alt="" coords="247,5,365,31"/>
-<area shape="rect" id="node3" href="$dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96" title="continuous mean and variance computance using Welford&#39;s algorithm (very accurate)" alt="" coords="247,55,365,80"/>
-<area shape="rect" id="node4" href="$dc/d47/realtime__stats_8c.html#aa54c915581fcc495489175a4386d59fd" title="Test the algorithm implementation." alt="" coords="103,29,199,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$dc/d47/realtime__stats_8c.html#a63ddcdaab24f722f0963fa2fbe0ae628" title="continuous mean and variance computance using first value as an approximation for the mean." alt="" coords="247,5,365,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,29,102,14,169,8,232,9,232,14,169,13,103,19,56,34"/>
+<area shape="rect" id="Node000003" href="$dc/d47/realtime__stats_8c.html#a34be233a9200ee2065f6b7b27e2d9a96" title="continuous mean and variance computance using Welford&#39;s algorithm (very accurate)" alt="" coords="247,55,365,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,50,103,65,169,71,232,71,232,76,169,77,102,70,54,56"/>
+<area shape="rect" id="Node000004" href="$dc/d47/realtime__stats_8c.html#aa54c915581fcc495489175a4386d59fd" title="Test the algorithm implementation." alt="" coords="103,29,199,55"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="199,32,232,27,233,32,200,37"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="200,47,233,53,232,58,199,53"/>
 </map>

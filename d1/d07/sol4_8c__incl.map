@@ -1,4 +1,5 @@
 <map id="project_euler/problem_1/sol4.c" name="project_euler/problem_1/sol4.c">
-<area shape="rect" id="node1" title="Problem 1 solution" alt="" coords="5,5,151,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="48,94,108,120"/>
+<area shape="rect" id="Node000001" title="Problem 1 solution" alt="" coords="5,5,151,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="48,94,108,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,46,81,79,75,79,75,46"/>
 </map>

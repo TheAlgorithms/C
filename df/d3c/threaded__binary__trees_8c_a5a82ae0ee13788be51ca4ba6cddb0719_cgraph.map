@@ -1,3 +1,4 @@
 <map id="postorder_display" name="postorder_display">
-<area shape="rect" id="node1" title="performs postorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,129,55"/>
+<area shape="rect" id="Node000001" title="performs postorder traversal param[in] curr node pointer to the topmost node of the tree" alt="" coords="5,29,129,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="45,30,41,21,44,11,53,5,67,3,83,6,91,13,87,17,81,10,67,8,55,10,48,14,47,20,50,28"/>
 </map>

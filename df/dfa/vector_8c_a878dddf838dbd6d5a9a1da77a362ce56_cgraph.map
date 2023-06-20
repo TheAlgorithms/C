@@ -1,4 +1,6 @@
 <map id="push" name="push">
-<area shape="rect" id="node1" title="This function pushes a value to the end of the Vector." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="103,29,152,55"/>
+<area shape="rect" id="Node000001" title="This function pushes a value to the end of the Vector." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$db/d0c/infix__to__postfix_8c.html#a613462735d30cae1b85b606ecab30554" title="push function" alt="" coords="103,29,152,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="110,30,106,21,108,12,116,5,127,3,140,6,147,13,143,16,138,10,127,8,118,10,113,14,112,20,115,28"/>
 </map>

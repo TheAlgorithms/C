@@ -1,7 +1,14 @@
 <map id="test" name="test">
-<area shape="rect" id="node1" title="Testing function." alt="" coords="5,58,49,84"/>
-<area shape="rect" id="node2" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="375,33,447,59"/>
-<area shape="rect" id="node3" href="$de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8" title="Obtain the angle between two given vectors." alt="" coords="103,33,180,59"/>
-<area shape="rect" id="node4" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="234,84,327,109"/>
-<area shape="rect" id="node5" href="$de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5" title="Compute the vector product of two 3d vectors." alt="" coords="97,134,186,160"/>
+<area shape="rect" id="Node000001" title="Testing function." alt="" coords="5,58,49,84"/>
+<area shape="rect" id="Node000002" href="$de/d7b/group__vec__3d.html#ga243e74d542d0d4d14fa3ae0bc2170d84" title="Obtain the dot product of two 3D vectors." alt="" coords="375,33,447,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,56,64,35,96,18,131,9,167,4,239,5,306,15,362,28,360,33,305,20,239,11,167,10,132,14,98,23,67,40,43,60"/>
+<area shape="rect" id="Node000003" href="$de/d7b/group__vec__3d.html#ga55be1d766c8a824b35d97e79744834d8" title="Obtain the angle between two given vectors." alt="" coords="103,33,180,59"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="48,64,87,55,88,60,49,69"/>
+<area shape="rect" id="Node000004" href="$de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de" title="Compute the norm a vector." alt="" coords="234,84,327,109"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="50,71,219,88,219,93,49,76"/>
+<area shape="rect" id="Node000005" href="$de/d7b/group__vec__3d.html#gae4a49e6bdf13df949e8b23c7925bb5f5" title="Compute the vector product of two 3d vectors." alt="" coords="97,134,186,160"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="49,82,110,124,107,128,46,87"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="180,43,360,43,360,49,180,49"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="180,57,231,76,229,81,178,62"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="315,81,362,62,364,67,317,86"/>
 </map>

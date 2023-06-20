@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node2" href="$dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d" title="Alphabetical sorting using &#39;lazy sort&#39; algorithm." alt="" coords="104,5,179,31"/>
-<area shape="rect" id="node3" href="$dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63" title="Alphabetical sorting using &#39;shell sort&#39; algorithm." alt="" coords="103,55,180,80"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$dd/d8b/problem__22_2sol1_8c.html#ae359b8a4656b164c91ef91a084c15c9d" title="Alphabetical sorting using &#39;lazy sort&#39; algorithm." alt="" coords="104,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,35,89,27,90,32,56,41"/>
+<area shape="rect" id="Node000003" href="$dd/d8b/problem__22_2sol1_8c.html#a5bc3659aa0949ea33118c95b1dee5f63" title="Alphabetical sorting using &#39;shell sort&#39; algorithm." alt="" coords="103,55,180,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,46,89,53,88,59,54,51"/>
 </map>

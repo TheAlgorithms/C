@@ -1,9 +1,15 @@
 <map id="numerical_methods/newton_raphson_root.c" name="numerical_methods/newton_raphson_root.c">
-<area shape="rect" id="node1" title="Find approximate solution for &#160;using Newton&#45;Raphson interpolation algorithm." alt="" coords="181,5,362,46"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,94,87,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="110,94,174,120"/>
-<area shape="rect" id="node4" title=" " alt="" coords="198,94,259,120"/>
-<area shape="rect" id="node5" title=" " alt="" coords="284,94,344,120"/>
-<area shape="rect" id="node6" title=" " alt="" coords="368,94,431,120"/>
-<area shape="rect" id="node7" title=" " alt="" coords="455,94,512,120"/>
+<area shape="rect" id="Node000001" title="Find approximate solution for &#160;using Newton&#45;Raphson interpolation algorithm." alt="" coords="181,5,362,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,87,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,49,95,91,94,86,214,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,94,174,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,49,175,88,173,84,238,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="198,94,259,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,48,245,82,240,79,258,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="284,94,344,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="284,45,303,79,298,82,280,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="368,94,431,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="304,44,369,84,366,88,302,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="455,94,512,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="325,44,442,87,440,92,323,49"/>
 </map>

@@ -1,5 +1,8 @@
 <map id="destroyNFA" name="destroyNFA">
-<area shape="rect" id="node1" title="recursively destroys a NFA" alt="" coords="5,31,97,56"/>
-<area shape="rect" id="node2" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e" title="destroys a transition rule object" alt="" coords="147,5,238,31"/>
-<area shape="rect" id="node3" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652" title="destroys a NFA state" alt="" coords="145,55,240,80"/>
+<area shape="rect" id="Node000001" title="recursively destroys a NFA" alt="" coords="5,31,97,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="26,31,22,22,25,13,35,6,51,4,69,7,78,14,75,18,67,12,51,9,37,11,29,16,27,22,31,29"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#ade1398311f666988b895f41c3e36d70e" title="destroys a transition rule object" alt="" coords="147,5,238,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="96,33,132,26,133,32,97,38"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/mcnaughton__yamada__thompson_8c.html#a9a361f55b51ce6d677e907396fbc1652" title="destroys a NFA state" alt="" coords="145,55,240,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="97,49,130,54,129,60,97,54"/>
 </map>

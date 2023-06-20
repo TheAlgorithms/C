@@ -1,4 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,29,55,55"/>
-<area shape="rect" id="node2" href="$d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43" title="Merge sort algorithm implementation." alt="" coords="103,29,189,55"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,29,55,55"/>
+<area shape="rect" id="Node000002" href="$d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43" title="Merge sort algorithm implementation." alt="" coords="103,29,189,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,40,88,40,88,45,55,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="125,30,122,21,124,11,132,5,146,3,161,6,168,13,165,17,158,10,146,8,134,10,128,14,127,20,130,28"/>
 </map>

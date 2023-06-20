@@ -1,6 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,5,55,31"/>
-<area shape="rect" id="node2" href="$d0/d8a/octal__to__hexadecimal_8c.html#a823ef5170955cfef40e07d9a4d2e87e2" title="Convert octal number to hexadecimal number dynamically allocated memory needs to be freed by the call..." alt="" coords="194,5,333,31"/>
-<area shape="rect" id="node4" href="$d0/d8a/octal__to__hexadecimal_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,31,146,56"/>
-<area shape="rect" id="node3" href="$d0/d8a/octal__to__hexadecimal_8c.html#a86a4edb605c2a03d9175c59de679347d" title="Convert octal number to decimal number." alt="" coords="381,5,493,31"/>
+<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,5,55,31"/>
+<area shape="rect" id="Node000002" href="$d0/d8a/octal__to__hexadecimal_8c.html#a823ef5170955cfef40e07d9a4d2e87e2" title="Convert octal number to hexadecimal number dynamically allocated memory needs to be freed by the call..." alt="" coords="194,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,179,16,179,21,55,21"/>
+<area shape="rect" id="Node000004" href="$d0/d8a/octal__to__hexadecimal_8c.html#aa8dca7b867074164d5f45b0f3851269d" title="Test function." alt="" coords="103,31,146,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="56,22,89,31,88,37,54,27"/>
+<area shape="rect" id="Node000003" href="$d0/d8a/octal__to__hexadecimal_8c.html#a86a4edb605c2a03d9175c59de679347d" title="Convert octal number to decimal number." alt="" coords="381,5,493,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,16,367,16,367,21,334,21"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="146,37,179,31,180,36,147,42"/>
 </map>
