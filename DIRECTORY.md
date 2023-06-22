@@ -107,6 +107,7 @@
     * [Queue](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/queue/queue.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack.c)
   * Stack
+    * [Dynamic Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/dynamic_stack.c)
     * [Main](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/main.c)
     * [Parenthesis](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/parenthesis.c)
     * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack.c)
@@ -238,6 +239,7 @@
   * [Qr Decomposition](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/qr_decomposition.c)
   * [Qr Eigen Values](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/qr_eigen_values.c)
   * [Realtime Stats](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/realtime_stats.c)
+  * [Secant Method](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/secant_method.c)
   * [Simpsons 1 3Rd Rule](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/simpsons_1_3rd_rule.c)
   * [Variance](https://github.com/TheAlgorithms/C/blob/HEAD/numerical_methods/variance.c)
 

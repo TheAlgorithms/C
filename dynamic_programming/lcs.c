@@ -1,12 +1,15 @@
 /**
  * @file
- * @brief [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) algorithm
+ * @brief [Longest Common
+ * Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)
+ * algorithm
  * @details
  * From Wikipedia: The longest common subsequence (LCS) problem is the problem
- * of finding the longest subsequence common to all sequences in a set of sequences
- * (often just two sequences).
+ * of finding the longest subsequence common to all sequences in a set of
+ * sequences (often just two sequences).
  * @author [Kurtz](https://github.com/itskurtz)
  */
+
 #include <stdio.h>		/* for io operations */
 #include <stdlib.h>		/* for memory management & exit */
 #include <string.h>		/* for string manipulation & ooperations */
@@ -15,13 +18,13 @@
 enum {LEFT, UP, DIAG};
 
 /**
- * @breif Computes LCS between s1 and s2 using a dynamic-programming approach
- * @param1 s1 first null-terminated string
- * @param2 s2 second null-terminated string
- * @param3 l1 length of s1
- * @param4 l2 length of s2
- * @param5 L matrix of size l1 x l2
- * @param6 B matrix of size l1 x l2
+ * @brief Computes LCS between s1 and s2 using a dynamic-programming approach
+ * @param s1 first null-terminated string
+ * @param s2 second null-terminated string
+ * @param l1 length of s1
+ * @param l2 length of s2
+ * @param L matrix of size l1 x l2
+ * @param B matrix of size l1 x l2
  * @returns void
  */
 void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
@@ -31,8 +34,8 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 
 	/* loop over the simbols in my sequences
 	   save the directions according to the LCS */
-	for (i = 1; i <= l1; ++i)
-		for (j = 1; j <= l2; ++j)
+	for (i = 1; i <= l1; ++i) {
+		for (j = 1; j <= l2; ++j) {
 			if (s1[i-1] == s2[j-1]) {
 				L[i][j] = 1 + L[i-1][j-1];
 				B[i][j] = DIAG;
@@ -44,16 +47,18 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 			else {
 				L[i][j] = L[i-1][j];
 				B[i][j] = UP;
-			}
+            }
+		}
+	}
 }
 
 /**
- * @breif Builds the LCS according to B using a traceback approach
- * @param1 s1 first null-terminated string
- * @param2 l1 length of s1
- * @param3 l2 length of s2
- * @param4 L matrix of size l1 x l2
- * @param5 B matrix of size l1 x l2
+ * @brief Builds the LCS according to B using a traceback approach
+ * @param s1 first null-terminated string
+ * @param l1 length of s1
+ * @param l2 length of s2
+ * @param L matrix of size l1 x l2
+ * @param B matrix of size l1 x l2
  * @returns lcs longest common subsequence
  */
 char *lcsbuild(const char *s1, int l1, int l2, int **L, int **B) {
@@ -76,13 +81,18 @@ char *lcsbuild(const char *s1, int l1, int l2, int **L, int **B) {
 			i = i - 1;
 			j = j - 1;
 		}
-		else if (B[i][j] == LEFT)
-			j = j - 1;
-		else
-			i = i - 1;
+        else if (B[i][j] == LEFT)
+        {
+            j = j - 1;
+		}
+        else
+        {
+            i = i - 1;
+        }
 	}
 	return lcs;
 }
+
 /**
  * @brief Self-test implementations
  * @returns void
@@ -132,9 +142,11 @@ static void test() {
 	printf("LCS len:%3d\n", L[l1][l2]);
 	printf("LCS: %s\n", lcs);
 
-	free(lcs);	
-	for (j = 0; j <= l1; j++)
-		free(L[j]), free(B[j]);
+	free(lcs);
+    for (j = 0; j <= l1; j++)
+    {
+        free(L[j]), free(B[j]);
+	}
 	free(L);
 	free(B);
 
