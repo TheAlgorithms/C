@@ -6,7 +6,7 @@ on:
     paths:
       - "leetcode/src/**.c"
     branches:
-      - main
+      - master
 jobs:
   build:
     if: github.repository == 'TheAlgorithms/C' # We only need this to run in our repository.
