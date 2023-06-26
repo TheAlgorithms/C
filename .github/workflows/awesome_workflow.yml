@@ -26,6 +26,8 @@ jobs:
         uses: TheAlgorithms/scripts/formatter@main
         with:
           filetypes: .c,.h
+      - name: Update copyright license
+        uses: TheAlgorithms/scripts/license_copyright@main
       - name: Update DIRECTORY.md
         run: |
           wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/build_directory_md.py
