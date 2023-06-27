@@ -33,13 +33,13 @@ jobs:
         shell: bash
         run: |
           git checkout -b leetcode-directory-${{ github.sha }}
-          git commit -m "docs: updating `leetcode/DIRECTORY.md`
-          git push origin leetcode-directory-${{ github.sha }}:leetcode-directory-${{ github.sha }}
+          git commit -m "docs: updating `leetcode/DIRECTORY.md`"
+          git push origin leetcode-directory-${{ github.sha }}:leetcode-directory-${{ github.sha }} || true
       - name: Creating the pull request
         shell: bash
         run: |
-          if [[ `git status --porcelain` ]]; then
-            gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).'
+          if [[ $(git log --branches --not --remotes) ]]; then
+            gh pr create --base ${GITHUB_REF##*/} --head leetcode-directory-${{ github.sha }} --title 'docs: updating `leetcode/DIRECTORY.md`' --body 'Updated LeetCode directory (see the diff. for changes).' || true
           fi
         env:
           GH_TOKEN: ${{ github.token }}
