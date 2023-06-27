@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief
- * [0-1_Knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem)
+ * [0-1_Knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem) implementation
  * @details
  * From Wikipedia : The knapsack problem is
  * Given a set of items, each with a weight and a value, determine
