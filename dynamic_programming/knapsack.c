@@ -37,7 +37,7 @@ struct Item
 };
 
 /**
- * @brief 0-1 Knapsack algorithm
+ * @brief Print 0-1 Knapsack algorithm result
  * @param maxWeight the capacity of the knapsack
  * @param itemCount the number of items(Item structure)
  * @param items an array of Item structure
@@ -112,7 +112,7 @@ int knapsack(int maxWeight, struct Item items[], int itemCount)
 }
 
 /**
- * @brief 0-1 Knapsack algorithm
+ * @brief Print 0-1 Knapsack algorithm result
  * @param maxWeight the capacity of the knapsack
  * @param itemCount the number of items(Item structure)
  * @param items an array of Item structure
