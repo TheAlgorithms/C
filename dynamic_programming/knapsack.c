@@ -205,7 +205,12 @@ static void tests()
     struct Item items2[4] = {{6, 13}, {4, 8}, {3, 6}, {5, 12}};
     // Calculate the maximum value that can be obtained in a 7kg knapsack
     assert(knapsack(7, items2, 4) == 14);
-
+    printf("=========================\n");
+    // test3
+    // Initialize the given items1
+    struct Item items3[4] = {{2, 3}, {3, 4}, {4, 5}, {5, 6}};
+    // Calculate the maximum value that can be obtained in a 5kg knapsack
+    assert(knapsack(5, items3, 4) == 7);
     printf("All tests have passed successfully!\n");
 }
 
