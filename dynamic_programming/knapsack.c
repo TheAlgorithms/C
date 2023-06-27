@@ -189,10 +189,10 @@ void print_knapsack_item(int maxWeight, struct Item items[], int itemCount,
 }
 
 /**
- * @brief Self-test implementations
+ * @brief Self-tests implementations
  * @returns void
  */
-static void tests()
+static void test()
 {
     // test 1
     // Initialize the given items1
@@ -200,12 +200,14 @@ static void tests()
     // Calculate the maximum value that can be obtained in a 10kg knapsack
     assert(knapsack(MAXCAPACITY, items1, 4) == 90);
     printf("=========================\n");
+    
     // test2
     // Initialize the given items1
     struct Item items2[4] = {{6, 13}, {4, 8}, {3, 6}, {5, 12}};
     // Calculate the maximum value that can be obtained in a 7kg knapsack
     assert(knapsack(7, items2, 4) == 14);
     printf("=========================\n");
+    
     // test3
     // Initialize the given items1
     struct Item items3[4] = {{2, 3}, {3, 4}, {4, 5}, {5, 6}};
@@ -220,6 +222,6 @@ static void tests()
  */
 int main()
 {
-    tests();
+    test();
     return 0;
 }
