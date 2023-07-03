@@ -2,7 +2,7 @@
 #define fore_head_h
 
 /**
- * @file forehead.h
+ * @file
  * @brief This header must be included in every sub-header file.
  * @details
  * 1. forehead.h included the necessary header files which needed by every
