@@ -55,7 +55,7 @@ int matrixChainOrder(int l,const int *p, int *s) {
 void printSolution(int l,int *s,int i,int j) {
     if(i == j) {
         printf("A%d",i);
-        return
+        return;
     }
     putchar('(');
     printSolution(l,s,i,s[i * l + j]);
