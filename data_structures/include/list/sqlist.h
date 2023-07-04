@@ -1,7 +1,7 @@
 #ifndef sqlist_h_
 #define sqlist_h_
 
-#define LISTINIT 100  // initial size of sequential list
+#define LISTINIT 10   // initial size of sequential list
 #define ElemType int  // Element type
 
 #include <forehead/forehead.h>
@@ -23,7 +23,7 @@ typedef struct
 
 /* Operations */
 
-char* sqlist_to_string(sqlist* sl);
+extern char* sqlist_to_string(sqlist* sl);
 extern void sqlist_init(sqlist* sl);
 extern int sqlist_create(sqlist* sl, int num);
 extern int sqlist_insert(sqlist* sl, int ith, ElemType e);

@@ -1,6 +1,15 @@
+/**
+ * @file
+ * @brief Test for sqlist.c
+ * @details Test for insert, delete, search, locate operations of sqlist
+ * @author danielhu19 (shady030314@gmail.com)
+ */
 #include <list/sqlist.h>
 
-void test_insert()
+/**
+ * @test Test insert operations
+ */
+static void test_insert()
 {
     sqlist sl;
     sqlist_init(&sl);
@@ -11,11 +20,15 @@ void test_insert()
     sqlist_insert(&sl, 3, 3);
     sqlist_insert(&sl, 4, 4);
     sqlist_insert(&sl, 5, 5);
+    // it should be '1 2 3 4 5\n'
     Assert(strcmp(sqlist_to_string(&sl), predicted) == 0, "INSERT FAILED!");
     LOG("INSERT PASSED!\n");
 }
 
-void test_delete()
+/**
+ * @brief Test delete operations
+ */
+static void test_delete()
 {
     int e;
     sqlist sl;
@@ -34,11 +47,15 @@ void test_delete()
     Assert(e == 3, "DELETE 3 FAILED!");
     sqlist_delete(&sl, 3, &e);  // delete 5
     Assert(e == 5, "DELETE 5 FAILED!");
+    // it should be '2 4\n'
     Assert(strcmp(sqlist_to_string(&sl), predicted) == 0, "DELETE FAILED!");
     LOG("DELETE PASSED!\n");
 }
 
-void test_search()
+/**
+ * @brief Test search and locate operations
+ */
+static void test_search()
 {
     int e;
     int* locate;
@@ -72,7 +89,10 @@ void test_search()
     LOG("LOCATE PASSED!\n");
 }
 
-void test_all()
+/**
+ * @brief Test all operations altogether
+ */
+static void test_all()
 {
     int e;
     sqlist sl;

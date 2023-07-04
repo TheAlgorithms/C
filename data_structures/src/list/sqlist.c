@@ -1,5 +1,5 @@
 /**
- * @file sqlist.h
+ * @file
  * @brief Implementation of sequential list with basic operations and algorithms
  * @details
  * @author danielhu19 (shady030314@gmail.com)
@@ -9,6 +9,12 @@
 
 #include <list/sqlist.h>
 
+/**
+ * @brief Stores the sqlist to a string which is used for Assert testing
+ *
+ * @param sl sqlist pointer
+ * @return char* string of sqlist with '\n'
+ */
 char* sqlist_to_string(sqlist* sl)
 {
     // Abort program if SqLIst is NOT INIT
@@ -39,14 +45,25 @@ void sqlist_init(sqlist* sl)
     (*sl).size = LISTINIT;
 }
 
-/* testing whether or not a list is empty */
+/**
+ * @brief Testing whether or not a list is empty
+ *
+ * @param sl sqlist pointer
+ * @return true if empty, false if not
+ */
 bool is_sqlist_empty(sqlist* sl)
 {
     Assert(sl, "NOT INIT");
     return sl->length == 0;
 }
 
-/* Create a sqlist which contains $num(<=size) random elements */
+/**
+ * @brief Create a sqlist which contains 'num'(<=size) random elements
+ *
+ * @param sl sqlist pointer
+ * @param num number of elements to be created
+ * @return 1 if succeed
+ */
 int sqlist_create(sqlist* sl, int num)
 {
     Assert(sl, "NOT INIT");
