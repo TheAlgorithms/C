@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.22)
 project(Algorithms_in_C
     LANGUAGES C
     VERSION 1.0.0
