@@ -1,3 +1,5 @@
+include(CheckIncludeFile)
+
 if(WIN32)
     check_include_file(winsock2.h WINSOCK_HEADER)
 else()
