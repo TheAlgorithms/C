@@ -12,7 +12,7 @@
  */
 
 #include <assert.h>  /// for assert
-#include <stdio.h>
+#include <stdio.h>   /// for IO operations
 
 /**
  * @brief Returns the maximum value between two values a and b
