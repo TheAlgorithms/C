@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # This is modified 
 # This is changed
+=======
+# This is my changes
+# This is done by Me
+>>>>>>> f672c9713d96d70434675a0bdaced81176238d82
 # The Algorithms - C # {#mainpage}
 <!-- the suffix in the above line is required for doxygen to consider this as the index page of the generated documentation site -->
 
