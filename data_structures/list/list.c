@@ -30,13 +30,13 @@ int List_length(L list)
 {
     int n;
     for (n = 0; list; list = list->next) n++;
-    return n;
+    return n - 1;
 }
 
 /* Convert list to array */
 void **List_toArray(L list)
 {
-    int i, n = List_length(list);
+    int i, n = List_length(list) + 1;
     void **array = (void **)malloc((n + 1) * sizeof(*array));
 
     for (i = 0; i < n; i++)
