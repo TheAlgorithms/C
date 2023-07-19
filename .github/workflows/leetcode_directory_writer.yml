@@ -34,7 +34,7 @@ jobs:
         run: |
           git checkout -b leetcode-directory-${{ github.sha }}
           git commit -m "docs: updating `leetcode/DIRECTORY.md`"
-          git push origin leetcode-directory-${{ github.sha }}:leetcode-directory-${{ github.sha }} || true
+          git push origin leetcode-directory-${{ github.sha }}:leetcode-directory-${{ github.sha }}
       - name: Creating the pull request
         shell: bash
         run: |
