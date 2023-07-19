@@ -1,7 +1,9 @@
+include(CheckIncludeFile)
+
 if(WIN32)
-    check_include_file(winsock2.h WINSOCK_HEADER)
+    CHECK_INCLUDE_FILE(winsock2.h WINSOCK_HEADER)
 else()
-    check_include_file(arpa/inet.h ARPA_HEADERS)
+    CHECK_INCLUDE_FILE(arpa/inet.h ARPA_HEADERS)
 endif()
 
 if(ARPA_HEADERS OR WINSOCK_HEADER)
