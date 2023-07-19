@@ -3,3 +3,4 @@
 *.out
 .vscode/
 build/
+git_diff.txt
