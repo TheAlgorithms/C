@@ -190,7 +190,7 @@ void print_knapsack_item(int maxWeight, struct Item items[], int itemCount,
 }
 
 /**
- * @brief Self-tests implementations
+ * @brief Self-test implementations
  * @returns void
  */
 static void test()
