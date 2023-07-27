@@ -33,8 +33,8 @@
  */
 struct Item
 {
-    int weight = 0;  ///< weight
-    int value = 0;   ///< value
+    int weight;  ///< weight
+    int value;   ///< value
 };
 
 /**
