@@ -10,7 +10,7 @@
  * 2. forehead.h defined some macros for debugging.
  * @note These macro functions will be heavily used in the code (in situations
  * such as exception handling, test cases, and termination functions)!
- * @author danielhu19 (https://github.com/danielhu19)
+ * @author [Daniel Hu](https://github.com/danielhu19)
  */
 
 #include <assert.h>   /// for assert
@@ -30,10 +30,9 @@
 // #define OVERFLOW -2
 
 /* The following three macros are originated from NJU-ICS:2020 for debugging. */
+
 /**
- * @brief Helper macro for LOG().
- * @see
- * https://stackoverflow.com/questions/26053959/what-does-va-args-in-a-macro-mean
+ * @def Helper macro for LOG().
  */
 #define _LOG(...)            \
     do                       \
@@ -42,28 +41,27 @@
     } while (0);
 
 /**
- * @brief Helper macro for __FILE__ to get the filename without the path.
- * @see https://stackoverflow.com/questions/8487986/file-macro-shows-full-path
+ * @def Helper macro __FILE__: [__FILE__ macro shows full
+ * path](https://stackoverflow.com/questions/8487986/file-macro-shows-full-path).
  */
 #define __FILENAME__ \
     (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 
 /**
- * @brief Log() is an enhanced version of printf(), specifically designed for
- * outputting debugging information, while also including the source file, line
- * number, and function where the Log() is used. This is particularly useful for
- * identifying the relevant location in the code when there is a large amount of
- * debug information being output.
+ * @def Log() is an enhanced version of printf(), specifically designed for
+ * outputting debugging information in
+ * [color-text-in-terminal](https://stackoverflow.com/questions/3585846/color-text-in-terminal-applications-in-unix)
+ * , while also including the source file, line number, and function where the
+ * Log() is used.
  * @param format The format string with color.
- * @see
- * https://stackoverflow.com/questions/3585846/color-text-in-terminal-applications-in-unix
+ *
  */
 #define LOG(format, ...)                                                   \
     _LOG("\33[1;34m[%s,%d,%s] " format "\33[0m\n", __FILENAME__, __LINE__, \
          __func__, ##__VA_ARGS__)
 
 /**
- * @brief Assert() is an upgraded version of assert() that allows for outputting
+ * @def Assert() is an upgraded version of assert() that allows for outputting
  * additional information before the assertion failure when the test condition
  * is false.
  * @param cond The test condition.
@@ -84,11 +82,16 @@
     } while (0)
 
 /**
- * @brief The panic() function is used to output information and terminate the
+ * @def The panic() function is used to output information and terminate the
  * program, effectively functioning as an unconditional assertion failure.
  * @param ... The additional information to be output when the test condition is
  * false.
  */
 #define panic(...) Assert(0, __VA_ARGS__)
+
+/**
+ * @def Output the details of tests if it is set to 1. Default is 0.
+ */
+#define DEBUG 0
 
 #endif

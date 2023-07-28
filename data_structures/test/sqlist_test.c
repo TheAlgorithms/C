@@ -2,12 +2,13 @@
  * @file
  * @brief Test for sqlist.c
  * @details Test for insert, delete, search, locate operations of sqlist
- * @author danielhu19 (shady030314@gmail.com)
+ * @author [Daniel Hu](https://github.com/danielhu19)
  */
 #include <list/sqlist.h>
 
 /**
  * @test Test insert operations
+ * @returns void
  */
 static void test_insert()
 {
@@ -27,6 +28,7 @@ static void test_insert()
 
 /**
  * @brief Test delete operations
+ * @returns void
  */
 static void test_delete()
 {
@@ -54,6 +56,7 @@ static void test_delete()
 
 /**
  * @brief Test search and locate operations
+ * @returns void
  */
 static void test_search()
 {
@@ -91,6 +94,7 @@ static void test_search()
 
 /**
  * @brief Test all operations altogether
+ * @returns void
  */
 static void test_all()
 {

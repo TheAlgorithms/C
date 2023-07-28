@@ -1,10 +1,11 @@
 /**
  * @file
- * @brief Implementation of sequential list with basic operations and algorithms
+ * @brief Implementation of sequential
+ * [list](https://en.wikipedia.org/wiki/List_(abstract_data_type))
+ * with basic operations and algorithms.
  * @details
- * @author danielhu19 (shady030314@gmail.com)
- * @see  Wikipedia: https://en.wikipedia.org/wiki/List_(abstract_data_type))
- *
+ * @author [Daniel Hu](https://github.com/danielhu19)
+ * @see
  */
 
 #include <list/sqlist.h>
@@ -13,14 +14,14 @@
  * @brief Stores the sqlist to a string which is used for Assert testing
  *
  * @param sl sqlist pointer
- * @return char* string of sqlist with '\n'
+ * @returns char* string of sqlist with '\n'
  */
-char* sqlist_to_string(sqlist* sl)
+char *sqlist_to_string(sqlist *sl)
 {
     // Abort program if SqLIst is NOT INIT
     Assert(sl, "NOT INIT");
 
-    char* str = malloc(sizeof(char) * 100);
+    char *str = malloc(sizeof(char) * 100);
     int clock = 0;
     while (clock < (*sl).length - 1)
     {
@@ -36,10 +37,11 @@ char* sqlist_to_string(sqlist* sl)
  * @brief  Create a null sqlist with:
  * `LISTINIT` size of data array, 0 current length and `LISTINIT` maximize size
  * @param sl sqlist pointer
+ * @returns void
  */
-void sqlist_init(sqlist* sl)
+void sqlist_init(sqlist *sl)
 {
-    (*sl).data = (ElemType*)malloc(LISTINIT * sizeof(ElemType));
+    (*sl).data = (ElemType *)malloc(LISTINIT * sizeof(ElemType));
     Assert((sl)->data, "MALLOC FAILED!");
     (*sl).length = 0;
     (*sl).size = LISTINIT;
@@ -49,9 +51,9 @@ void sqlist_init(sqlist* sl)
  * @brief Testing whether or not a list is empty
  *
  * @param sl sqlist pointer
- * @return true if empty, false if not
+ * @returns true if empty, false if not
  */
-bool is_sqlist_empty(sqlist* sl)
+bool is_sqlist_empty(sqlist *sl)
 {
     Assert(sl, "NOT INIT");
     return sl->length == 0;
@@ -62,9 +64,9 @@ bool is_sqlist_empty(sqlist* sl)
  *
  * @param sl sqlist pointer
  * @param num number of elements to be created
- * @return 1 if succeed
+ * @returns 1 if succeed
  */
-int sqlist_create(sqlist* sl, int num)
+int sqlist_create(sqlist *sl, int num)
 {
     Assert(sl, "NOT INIT");
     Assert(num <= sl->size, "OVERFLOW");
@@ -86,9 +88,9 @@ int sqlist_create(sqlist* sl, int num)
  * @param sl sqlist pointer
  * @param ith spot(not array index) to be inserted: `1 <= i <= length + 1`
  * @param e element to insert
- * @return 1 if succeed
+ * @returns 1 if succeed
  */
-int sqlist_insert(sqlist* sl, int ith, ElemType e)
+int sqlist_insert(sqlist *sl, int ith, ElemType e)
 {
     // Assert if sqlist is not initialized or invalid insertion
     Assert(sl, "NOT INIT");
@@ -97,7 +99,7 @@ int sqlist_insert(sqlist* sl, int ith, ElemType e)
     // re-allocate(double) space if sqlist is full
     if ((*sl).length == (*sl).size)
     {
-        sl->data = (ElemType*)realloc(
+        sl->data = (ElemType *)realloc(
             (*sl).data, ((*sl).size + LISTINIT) * sizeof(ElemType));
         Assert(sl->data, "RE-ALLOCATION FAILED");
         (*sl).size += LISTINIT;
@@ -120,9 +122,9 @@ int sqlist_insert(sqlist* sl, int ith, ElemType e)
  * @param sl sqlist pointer
  * @param ith spot(not array index) to be deleted: `1 <= i <= length`
  * @param e pointer to store the deleted element
- * @return 1 if succeed
+ * @returns 1 if succeed
  */
-int sqlist_delete(sqlist* sl, int ith, ElemType* e)
+int sqlist_delete(sqlist *sl, int ith, ElemType *e)
 {
     // Assert if sqlist is not initialized or invalid deletion
     Assert(sl, "NOT INIT");
@@ -146,9 +148,9 @@ int sqlist_delete(sqlist* sl, int ith, ElemType* e)
  * @param sl sqlist pointer
  * @param ith spot(not array index) to be searched: `1 <= i <= length`
  * @param e pointer to store the founded element
- * @return 1 if succeed
+ * @returns 1 if succeed
  */
-int sqlist_search(sqlist* sl, int ith, ElemType* e)
+int sqlist_search(sqlist *sl, int ith, ElemType *e)
 {
     // Assert if sqlist is not initialized or invalid search
     Assert(sl, "NOT INIT");
@@ -160,7 +162,13 @@ int sqlist_search(sqlist* sl, int ith, ElemType* e)
     return 1;
 }
 
-// auxiliary function for sqlist_locate
+/**
+ * @brief Helper function for sqlist_locate
+ *
+ * @param x element to compare
+ * @param y element to compare
+ * @returns 1 if x == y, 0 else
+ */
 int compare(ElemType x, ElemType y) { return x == y; }
 
 /**
@@ -169,13 +177,13 @@ int compare(ElemType x, ElemType y) { return x == y; }
  * @param sl sqlist pointer
  * @param e element to be searched
  * @param compare function pointer to compare two elements
- * @return int *: satisfied spot array or NULL if not found
+ * @returns int *: satisfied spot array or NULL if not found
  */
-int* sqlist_locate(sqlist* sl, ElemType e, int (*compare)(ElemType, ElemType))
+int *sqlist_locate(sqlist *sl, ElemType e, int (*compare)(ElemType, ElemType))
 {
     Assert(sl, "NOT INIT");
 
-    int* ith = malloc(sizeof(int) * sl->length);
+    int *ith = malloc(sizeof(int) * sl->length);
     int cnt = 0;        // denotes how many times occurs
     bool flag = false;  // denotes if target is found or not
 
