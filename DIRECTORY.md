@@ -88,6 +88,11 @@
   * Heap
     * [Max Heap](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/heap/max_heap.c)
     * [Min Heap](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/heap/min_heap.c)
+  * Include
+    * Forehead
+      * [Forehead](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/include/forehead/forehead.h)
+    * List
+      * [Sqlist](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/include/list/sqlist.h)
   * Linked List
     * [Ascending Priority Queue](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/ascending_priority_queue.c)
     * [Circular Doubly Linked List](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/linked_list/circular_doubly_linked_list.c)
@@ -105,6 +110,9 @@
   * Queue
     * [Include](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/queue/include.h)
     * [Queue](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/queue/queue.c)
+  * Src
+    * List
+      * [Sqlist](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/src/list/sqlist.c)
   * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack.c)
   * Stack
     * [Dynamic Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/dynamic_stack.c)
@@ -116,6 +124,8 @@
       * [Main](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack_linked_list/main.c)
       * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack_linked_list/stack.c)
       * [Stack](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/stack/stack_linked_list/stack.h)
+  * Test
+    * [Sqlist Test](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/test/sqlist_test.c)
   * Trie
     * [Trie](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/trie/trie.c)
   * [Vector](https://github.com/TheAlgorithms/C/blob/HEAD/data_structures/vector.c)
