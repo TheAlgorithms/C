@@ -1,139 +1,89 @@
 /**
- * @file
- * @brief Implementation of [merge
- * sort](https://en.wikipedia.org/wiki/Merge_sort) algorithm
+ *@author [Bama Charan Chhandogi](https://github.com/BamaCharanChhandogi)
  */
 #include <stdio.h>
-#include <stdlib.h>
 
-/**
- * @addtogroup sorting Sorting algorithms
- * @{
- */
-/** Swap two integer variables
- * @param [in,out] a pointer to first variable
- * @param [in,out] b pointer to second variable
- */
-void swap(int *a, int *b)
+// Function to merge two sorted subarrays into one sorted array
+void merge(int arr[], int left, int mid, int right)
 {
-    int t;
-    t = *a;
-    *a = *b;
-    *b = t;
-}
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
 
-/**
- * @brief Perform merge of segments.
- *
- * @param a array to sort
- * @param l left index for merge
- * @param r right index for merge
- * @param n total number of elements in the array
- */
-void merge(int *a, int l, int r, int n)
-{
-    int *b = (int *)malloc(n * sizeof(int)); /* dynamic memory must be freed */
-    if (b == NULL)
+    // Create temporary arrays to store the left and right subarrays
+    int L[n1], R[n2];
+
+    // Copy data to temporary arrays
+    for (i = 0; i < n1; i++) L[i] = arr[left + i];
+    for (j = 0; j < n2; j++) R[j] = arr[mid + 1 + j];
+
+    // Merge the temporary arrays back into arr[left..right]
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2)
     {
-        printf("Can't Malloc! Please try again.");
-        exit(EXIT_FAILURE);
-    }
-    int c = l;
-    int p1, p2;
-    p1 = l;
-    p2 = ((l + r) / 2) + 1;
-    while ((p1 < ((l + r) / 2) + 1) && (p2 < r + 1))
-    {
-        if (a[p1] <= a[p2])
+        if (L[i] <= R[j])
         {
-            b[c++] = a[p1];
-            p1++;
+            arr[k] = L[i];
+            i++;
         }
         else
         {
-            b[c++] = a[p2];
-            p2++;
+            arr[k] = R[j];
+            j++;
         }
+        k++;
     }
 
-    if (p2 == r + 1)
+    // Copy the remaining elements of L and R, if any
+    while (i < n1)
     {
-        while ((p1 < ((l + r) / 2) + 1))
-        {
-            b[c++] = a[p1];
-            p1++;
-        }
+        arr[k] = L[i];
+        i++;
+        k++;
     }
-    else
+    while (j < n2)
     {
-        while ((p2 < r + 1))
-        {
-            b[c++] = a[p2];
-            p2++;
-        }
+        arr[k] = R[j];
+        j++;
+        k++;
     }
-
-    for (c = l; c < r + 1; c++) a[c] = b[c];
-
-    free(b);
 }
 
-/** Merge sort algorithm implementation
- * @param a array to sort
- * @param n number of elements in the array
- * @param l index to sort from
- * @param r index to sort till
- */
-void merge_sort(int *a, int n, int l, int r)
+// Merge sort function
+void mergeSort(int arr[], int left, int right)
 {
-    if (r - l == 1)
+    if (left < right)
     {
-        if (a[l] > a[r])
-            swap(&a[l], &a[r]);
-    }
-    else if (l != r)
-    {
-        merge_sort(a, n, l, (l + r) / 2);
-        merge_sort(a, n, ((l + r) / 2) + 1, r);
-        merge(a, l, r, n);
-    }
+        int mid = left + (right - left) / 2;
 
-    /* no change if l == r */
+        // Sort the left and right halves separately
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+
+        // Merge the two sorted halves
+        merge(arr, left, mid, right);
+    }
 }
-/** @} */
 
-/** Main function */
-int main(void)
+int main()
 {
-    int *a, n, i;
-    printf("Enter Array size: ");
+    int n;
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
-    if (n <= 0) /* exit program if arraysize is not greater than 0 */
-    {
-        printf("Array size must be Greater than 0!\n");
-        return 1;
-    }
-    a = (int *)malloc(n * sizeof(int));
-    if (a == NULL) /* exit program if can't malloc memory */
-    {
-        printf("Can't Malloc! Please try again.");
-        return 1;
-    }
-    for (i = 0; i < n; i++)
-    {
-        printf("Enter number[%d]: ", i);
-        scanf("%d", &a[i]);
-    }
 
-    merge_sort(a, n, 0, n - 1);
-    printf("Sorted Array: ");
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
+    int arr[n];
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
 
-    free(a);
+    printf("Original array: ");
+    for (int i = 0; i < n; i++) printf("%d ", arr[i]);
+
+    mergeSort(arr, 0, n - 1);
+
+    printf("\nSorted array: ");
+    for (int i = 0; i < n; i++) printf("%d ", arr[i]);
 
     return 0;
 }
