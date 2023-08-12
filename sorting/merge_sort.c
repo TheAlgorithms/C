@@ -51,16 +51,20 @@ void merge(int arr[], int left, int mid, int right)
     }
 }
 
-// Merge sort function
-void mergeSort(int arr[], int left, int right)
+/** Merge sort algorithm implementation
+ * @param arr the array
+ * @param left index to sort from
+ * @param right index to sort till
+ */
+void merge_sort(int arr[], int left, int right)
 {
     if (left < right)
     {
         int mid = left + (right - left) / 2;
 
         // Sort the left and right halves separately
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
+        merge_sort(arr, left, mid);
+        merge_sort(arr, mid + 1, right);
 
         // Merge the two sorted halves
         merge(arr, left, mid, right);
@@ -80,7 +84,7 @@ int main()
     printf("Original array: ");
     for (int i = 0; i < n; i++) printf("%d ", arr[i]);
 
-    mergeSort(arr, 0, n - 1);
+    merge_sort(arr, 0, n - 1);
 
     printf("\nSorted array: ");
     for (int i = 0; i < n; i++) printf("%d ", arr[i]);
