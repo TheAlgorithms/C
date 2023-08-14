@@ -193,7 +193,7 @@ void print_knapsack_item(int maxWeight, struct Item items[], int itemCount,
  * @brief Self-test implementations
  * @returns void
  */
-static void test()
+static void tests()
 {
     // test 1
     // Initialize the given items1
