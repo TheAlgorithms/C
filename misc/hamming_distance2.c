@@ -21,8 +21,9 @@
  * @param param4 int* second int-array
  * @returns Pointer to Hamming distance
  */
-void hamming_distance(int* h_dist, int length, int* s1, int* s2) {
+int* hamming_distance(int length, int* s1, int* s2) {
     int dist = 0;
+    int* distptr = &dist;
     int left = 0; // position of first element
     int right = length - 1; // position of last element
 
@@ -43,7 +44,7 @@ void hamming_distance(int* h_dist, int length, int* s1, int* s2) {
 
     // if number of integer is uneven, then add hamming-distance from element in the middle
     dist += (length % 2 != 0) * ((int) s1[(length - 1) / 2] != s2[(length - 1) / 2]);
-    *h_dist = dist;
+    return distptr;
 }
 
 /**
@@ -57,18 +58,16 @@ static void test() {
     int s2[10] = {1,2,7,6,8,9,3,2,0,5};
     int* ptr1 = &s1[0];
     int* ptr2 = &s2[0];
-    int h_dist;
-    hamming_distance(&h_dist, 10, ptr1, ptr2);
-    assert(h_dist == 2); 
+    int* h_dist = hamming_distance(10, ptr1, ptr2);
+    assert(*h_dist == 2); 
 
     /* tests if h_dist is calculated correctly with uneven number of integers */
     int s3[13] = {1,2,6,6,8,9,3,4,0,5,6,7,6}; 
     int s4[13] = {1,2,7,6,8,9,3,2,0,5,6,1,6};
     int* ptr3 = &s3[0];
     int* ptr4 = &s4[0];
-    int h_dist2;
-    hamming_distance(&h_dist2, 13, ptr3, ptr4);
-    assert(h_dist2 == 3);
+    int* h_dist2 = hamming_distance(13, ptr3, ptr4);
+    assert(*h_dist2 == 3);
 
     printf("All tests have successfully passed!\n");
 }
