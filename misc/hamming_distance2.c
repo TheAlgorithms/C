@@ -16,22 +16,29 @@
 /**
  * @brief Function that calculates the Hamming distance between two Integer-arrays
  * @param param1 int* Pointer for Hamming distance
- * @param param2 int length of the two arrays
+ * @param param2 int  length of the two arrays
  * @param param3 int* first int-array
  * @param param4 int* second int-array
  * @returns Pointer to Hamming distance
  */
 void hamming_distance(int* h_dist, int length, int* s1, int* s2) {
     int dist = 0;
-    int left = 0;
-    int right = length - 1;
+    int left = 0; // position of first element
+    int right = length - 1; // position of last element
 
+    /**
+     * The main calculation loop.
+     * In each loop, we compute the hamming-distance from left and from right at the same time.
+     * Then we set left and right to new position.
+    */
     while(left < right){
         dist += (int) s1[left] != s2[left];
         dist += (int) s1[right] != s2[right];
         ++left;
         --right;
     }
+
+    // if number of integer is uneven, then add hamming-distance from element in the middle
     dist += (length % 2 != 0) * ((int) s1[(length - 1) / 2] != s2[(length - 1) / 2]);
     *h_dist = dist;
 }
@@ -42,6 +49,7 @@ void hamming_distance(int* h_dist, int length, int* s1, int* s2) {
  */
 static void test() {
 
+    /* tests if h_dist is calculated correctly with even number of integers */
     int s1[10] = {1,2,6,6,8,9,3,4,0,5}; 
     int s2[10] = {1,2,7,6,8,9,3,2,0,5};
     int* ptr1 = &s1[0];
@@ -50,6 +58,7 @@ static void test() {
     hamming_distance(&h_dist, 10, ptr1, ptr2);
     assert(h_dist == 2); 
 
+    /* tests if h_dist is calculated correctly with uneven number of integers */
     int s3[13] = {1,2,6,6,8,9,3,4,0,5,6,7,6}; 
     int s4[13] = {1,2,7,6,8,9,3,2,0,5,6,1,6};
     int* ptr3 = &s3[0];
