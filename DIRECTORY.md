@@ -207,6 +207,7 @@
 ## Misc
   * [Demonetization](https://github.com/TheAlgorithms/C/blob/HEAD/misc/demonetization.c)
   * [Hamming Distance](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance.c)
+  * [Hamming Distance2](https://github.com/TheAlgorithms/C/blob/HEAD/misc/hamming_distance2.c)
   * [Lexicographic Permutations](https://github.com/TheAlgorithms/C/blob/HEAD/misc/lexicographic_permutations.c)
   * [Longest Subsequence](https://github.com/TheAlgorithms/C/blob/HEAD/misc/longest_subsequence.c)
   * [Mcnaughton Yamada Thompson](https://github.com/TheAlgorithms/C/blob/HEAD/misc/mcnaughton_yamada_thompson.c)
