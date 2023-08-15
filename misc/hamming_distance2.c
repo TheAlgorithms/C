@@ -28,8 +28,11 @@ void hamming_distance(int* h_dist, int length, int* s1, int* s2) {
 
     /**
      * The main calculation loop.
-     * In each loop, we compute the hamming-distance from left and from right at the same time.
+     * In each loop, we compute the hamming-distance from left and from right at the same time while
+     * moving towards the middle position.
      * Then we set left and right to new position.
+     * When the number of elements is even, we're done. When the number is uneven, there is still an element
+     * in the middle left.
     */
     while(left < right){
         dist += (int) s1[left] != s2[left];
