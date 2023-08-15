@@ -69,6 +69,14 @@ static void test() {
     int* h_dist2 = hamming_distance(13, ptr3, ptr4);
     assert(*h_dist2 == 3);
 
+    /* tests if h_dist is calculated correctly with even number of negative integers */
+    int s5[14] = {1,2,6,6,-8,9,3,4,0,5,6,-7,6,-4}; 
+    int s6[14] = {1,2,7,6,-8,9,3,2,0,5,6,-7,6,-5};
+    int* ptr5 = &s5[0];
+    int* ptr6 = &s6[0];
+    int* h_dist3 = hamming_distance(14, ptr5, ptr6);
+    assert(*h_dist3 == 3);
+
     printf("All tests have successfully passed!\n");
 }
 
