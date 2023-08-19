@@ -1,9 +1,13 @@
 /**
- *@author [Bama Charan Chhandogi](https://github.com/BamaCharanChhandogi)
+ * @file
+ * @brief Implementation of [merge
+ * sort](https://en.wikipedia.org/wiki/Merge_sort) algorithm
+ * @author Bama Charan Chhandogi(https://www.github.com/BamaCharanChhandogi)
  */
-#include <assert.h> // for Testing
-#include <stdio.h>
-#include <stdlib.h>
+#include <assert.h>  /// For assert
+#include <stdio.h>   /// For I/O operations
+#include <stdlib.h>  /// For memory operations
+
 // Function to merge two sorted subarrays into one sorted array
 void merge(int arr[], int left, int mid, int right)
 {
