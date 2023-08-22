@@ -15,11 +15,10 @@
 
 /**
  * @brief Function that calculates the Hamming distance between two Integer-arrays
- * @param param1 int* Pointer for Hamming distance
- * @param param2 int  length of the two arrays
- * @param param3 int* first int-array
- * @param param4 int* second int-array
- * @returns Pointer to Hamming distance
+ * @param param1 int  length of the two arrays
+ * @param param2 int* first int-array
+ * @param param3 int* second int-array
+ * @returns Hamming distance
  */
 int hamming_distance(int length, int* s1, int* s2) {
     int dist = 0;
