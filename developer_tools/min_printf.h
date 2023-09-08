@@ -19,7 +19,11 @@
 #define MIN_PRINTF_H
 
 #include <stdlib.h> /// for `malloc` and `free` functions
-#include <unistd.h> /// for `write` function
+#ifdef _WIN32
+	#include <io.h>		/// for `write` function
+#else
+	#include <unistd.h> /// for `write` function
+#endif
 #include <stdarg.h> /// for `va_start` and `va_arg` functions
 
 #define INT_MAX_LENGTH 10       /// used as standard length of string to store integers

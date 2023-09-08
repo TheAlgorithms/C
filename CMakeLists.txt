@@ -1,18 +1,17 @@
 cmake_minimum_required(VERSION 3.22)
 project(Algorithms_in_C
-    LANGUAGES C
-    VERSION 1.0.0
-    DESCRIPTION "Set of algorithms implemented in C."
-)
+        LANGUAGES C
+        VERSION 1.0.0
+        DESCRIPTION "Set of algorithms implemented in C."
+        )
 
 # Set compilation standards
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
-
-if(MSVC)
+if (MSVC)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
     # add_compile_options(/Za)
-endif(MSVC)
+endif (MSVC)
 
 # check for math library
 # addresses a bug when linking on OSX

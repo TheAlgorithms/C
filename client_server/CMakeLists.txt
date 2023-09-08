@@ -6,6 +6,7 @@ else()
     CHECK_INCLUDE_FILE(arpa/inet.h ARPA_HEADERS)
 endif()
 
+include(CheckSymbolExists)
 if(ARPA_HEADERS OR WINSOCK_HEADER)
     # If necessary, use the RELATIVE flag, otherwise each source file may be listed
     # with full pathname. RELATIVE may makes it easier to extract an executable name
@@ -15,16 +16,21 @@ if(ARPA_HEADERS OR WINSOCK_HEADER)
     # AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} APP_SOURCES)
     foreach( testsourcefile ${APP_SOURCES} )
         # I used a simple string replace, to cut off .cpp.
-        string( REPLACE ".c" "" testname ${testsourcefile} )
-        add_executable( ${testname} ${testsourcefile} )
-        
-        if(OpenMP_C_FOUND)
+        string(REPLACE ".c" "" testname ${testsourcefile})
+
+        if(NOT WIN32)
+            if(${testname} STREQUAL "fork" OR ${testname} STREQUAL "bool")
+                continue()
+            endif()
+        endif()
+        add_executable(${testname} ${testsourcefile})
+
+        if (OpenMP_C_FOUND)
             target_link_libraries(${testname} PRIVATE OpenMP::OpenMP_C)
-        endif()
-        if(MATH_LIBRARY)
+        endif ()
+        if (MATH_LIBRARY)
             target_link_libraries(${testname} PRIVATE ${MATH_LIBRARY})
-        endif()
-        
+        endif ()
         # if(HAS_UNISTD)
         #     target_compile_definitions(${testname} PRIVATE HAS_UNISTD)
         # endif()
@@ -34,7 +40,7 @@ if(ARPA_HEADERS OR WINSOCK_HEADER)
         #     target_compile_definitions(${testname} PRIVATE WINSOCK_HEADER)
         # endif()
 
-        if(WINSOCK_HEADER)
+        if (WINSOCK_HEADER)
             target_link_libraries(${testname} PRIVATE ws2_32)   # link winsock library on windows
         endif()
 

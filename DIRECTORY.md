@@ -7,7 +7,9 @@
   * [Rot13](https://github.com/TheAlgorithms/C/blob/HEAD/cipher/rot13.c)
 
 ## Client Server
+  * [Bool](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/bool.h)
   * [Client](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/client.c)
+  * [Fork](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/fork.h)
   * [Remote Command Exec Udp Client](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/remote_command_exec_udp_client.c)
   * [Remote Command Exec Udp Server](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/remote_command_exec_udp_server.c)
   * [Server](https://github.com/TheAlgorithms/C/blob/HEAD/client_server/server.c)
