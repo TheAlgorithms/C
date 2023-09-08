@@ -110,7 +110,7 @@ var NAVTREE =
     ] ],
     [ "ProjectEuler", "d0/da3/md_project__euler_2_r_e_a_d_m_e.html", null ],
     [ "Guidelines for reviewers and maintainers", "d7/d1b/md__r_e_v_i_e_w_e_r___c_o_d_e.html", null ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -136,9 +136,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/dd7/md__c_o_d_e___o_f___c_o_n_d_u_c_t.html#autotoc_md6",
-"d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md34",
-"da/da0/segment__tree_8c.html#a3513a2b7c3f1d15aa3d019af1f834cde",
-"dd/df0/problem__19_2sol1_8c.html"
+"d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md31",
+"da/d96/infix__to__postfix2_8c.html#ae363a3863a8bfbf40e7a95c2b9dbe71b",
+"dd/de4/bubble__sort_8c.html#ae1a3968e7947464bee7714f6d43b7002"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

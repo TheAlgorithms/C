@@ -22,7 +22,7 @@ var searchData=
   ['print_5fvector_19',['print_vector',['../de/d7b/group__vec__3d.html#gae25e1f2e973933bef65838601e2de0af',1,'vectors_3d.c']]],
   ['printarray_20',['printArray',['../d2/d57/patience__sort_8c.html#a51db6714f25747b7de0daca675363e19',1,'patience_sort.c']]],
   ['printeps_21',['printEPS',['../d6/d76/k__means__clustering_8c.html#a5b4ba704e02672e59cfa35f82e3db28a',1,'k_means_clustering.c']]],
-  ['printleaks_22',['printLeaks',['../db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797',1,'printLeaks():&#160;malloc_dbg.c'],['../d2/ddd/malloc__dbg_8h.html#abfd0a4452069af4cfefe4a5d037e92ef',1,'printLeaks(void):&#160;malloc_dbg.c']]],
+  ['printleaks_22',['printleaks',['../db/d84/malloc__dbg_8c.html#a2a47e4c38db8c00b80248e5535adf797',1,'printLeaks():&#160;malloc_dbg.c'],['../d2/ddd/malloc__dbg_8h.html#abfd0a4452069af4cfefe4a5d037e92ef',1,'printLeaks(void):&#160;malloc_dbg.c']]],
   ['printmessage_23',['printMessage',['../db/de2/naval__battle_8c.html#a521043b369238e618dcc9364b40448ef',1,'naval_battle.c']]],
   ['printmessagescore_24',['printMessageScore',['../db/de2/naval__battle_8c.html#a2d65de2c86c7015d7ca400dfca0f25dc',1,'naval_battle.c']]],
   ['printpositioning_25',['printPositioning',['../db/de2/naval__battle_8c.html#a5c84d83e31ca6a320b6ea8081402686a',1,'naval_battle.c']]],

@@ -30,7 +30,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d1e/matrix__chain__order_8c.html#aecddbc91839e5b13644eea4f1d34566b" target="_top" xlink:title="for assert">
+<g id="a_Node000002"><a xlink:href="../../d8/d1e/matrix__chain__order_8c.html#aecddbc91839e5b13644eea4f1d34566b" target="_top" xlink:title="for assert for INT_MAX macro">
 <polygon fill="white" stroke="#666666" points="161,-74.25 68.5,-74.25 68.5,-55 161,-55 161,-74.25"/>
 <text text-anchor="middle" x="114.75" y="-60.75" font-family="Helvetica,sans-Serif" font-size="10.00">matrixChainOrder</text>
 </a>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📚_20contributing_20📚_0',['📚 Contributing 📚',['../d9/d9b/md_leetcode_2_r_e_a_d_m_e.html',1,'']]]
+  ['leetcode_0',['LeetCode',['../db/d5f/md_leetcode_2_d_i_r_e_c_t_o_r_y.html',1,'']]]
 ];
