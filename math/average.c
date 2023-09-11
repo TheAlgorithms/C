@@ -30,8 +30,12 @@ double average(int avg[]) {
  */
 void test()
 {
-    int test[] = {1,2,3,4,5};
-    assert(average(test)==3);
+    int test_0[] = {1,2,3,4,5};
+    assert(average(test_0)==3);
+    int test_1[] = {-1,-2,-3,-4,-5};
+    assert(average(test_1)==-3);
+    int test_2[] = {-1,2,3,-4};
+    assert(average(test_2)==0);
 }
 
 /**
