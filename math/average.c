@@ -18,8 +18,22 @@ double average(int avg[]) {
     return result / size;
 }
 
-int main() {
+/**
+ * Test function
+ * @return void
+ */
+void test()
+{
     int test[] = {1,2,3,4,5};
     assert(average(test)==3);
+}
+
+/**
+ * Driver Code
+ * @return None
+ */
+int main()
+{
+    test();
     return 0;
 }
