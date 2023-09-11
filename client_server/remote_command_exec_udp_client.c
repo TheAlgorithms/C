@@ -14,17 +14,26 @@
  * using UDP is shown using the server-client model & socket programming
  */
 
+#ifdef _WIN32
+#define bzero(b, len) \
+    (memset((b), '\0', (len)), (void)0) /**< BSD name not in windows */
+#define close _close
+#include <Ws2tcpip.h>
+#include <io.h>
+#include <winsock2.h>  /// For the type in_addr_t and in_port_t
+#else
 #include <arpa/inet.h>  /// For the type in_addr_t and in_port_t
-#include <errno.h>      /// To indicate what went wrong if an error occurs
 #include <netdb.h>  /// For structures returned by the network database library - formatted internet addresses and port numbers
 #include <netinet/in.h>  /// For in_addr and sockaddr_in structures
-#include <stdint.h>      /// For specific bit size values of variables
+#include <sys/socket.h>  /// For macro definitions related to the creation of sockets
+#include <sys/types.h>  /// For definitions to allow for the porting of BSD programs
+#include <unistd.h>
+#endif
+#include <errno.h>   /// To indicate what went wrong if an error occurs
+#include <stdint.h>  /// For specific bit size values of variables
 #include <stdio.h>  /// Variable types, several macros, and various functions for performing input and output
 #include <stdlib.h>  /// Variable types, several macros, and various functions for performing general functions
 #include <string.h>  /// Various functions for manipulating arrays of characters
-#include <sys/socket.h>  /// For macro definitions related to the creation of sockets
-#include <sys/types.h>  /// For definitions to allow for the porting of BSD programs
-#include <unistd.h>  /// For miscellaneous symbolic constants and types, and miscellaneous functions
 
 #define PORT 10000  /// Define port over which communication will take place
 
