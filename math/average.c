@@ -1,3 +1,8 @@
+/**
+ * @brief    This function calculates the average of an array
+ * @param avg[]
+ * @return avg_val
+ */
 #include <stdio.h>
 #include <assert.h>
 
@@ -15,7 +20,8 @@ double average(int avg[]) {
         result += avg[i];
     }
 
-    return result / size;
+    int avg_val = result / size;
+    return avg_val;
 }
 
 /**
