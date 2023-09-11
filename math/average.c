@@ -7,7 +7,7 @@ double average(int avg[]) {
     double result = 0;
     int size=0;
     
-    while(avg[size+1]!='\0'){
+    while(avg[size]!='\0'){
         size++;
     }
 
