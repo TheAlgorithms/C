@@ -15,6 +15,11 @@ double average(int avg[]) {
     while(avg[size]!='\0'){
         size++;
     }
+    
+    if(size==0){
+        printf("\n Empty array");
+        return 0;
+    }
 
     for (int i = 0; i < size; i++) {
         result += avg[i];
