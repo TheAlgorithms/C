@@ -39,8 +39,10 @@ void test()
     assert(average(test_0)==3);
     int test_1[] = {-1,-2,-3,-4,-5};
     assert(average(test_1)==-3);
-    int test_2[] = {-1,2,3,-4};
+    int test_2[] = {-1,2,3,-4,0};
     assert(average(test_2)==0);
+    int test_3[] = {};
+    assert(average(test_3)==0);
 }
 
 /**
