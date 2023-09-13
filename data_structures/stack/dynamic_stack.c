@@ -193,6 +193,20 @@ int isempty(DArrayStack *ptr)
 int stack_size(DArrayStack *ptr) { return ptr->top + 1; }
 
 /**
+* @brief Deallocates memory associated with a given DArrayStack.
+*
+* @param ptr Pointer to the stack structure to be deallocated.
+*/
+void delete_stack(DArrayStack *const ptr)
+{
+    if (ptr == NULL) {
+        return;
+    }
+    free(ptr->arrPtr);
+    free(ptr);
+}
+
+/**
  * @brief Self-test implementations
  * @returns void
  */
@@ -237,6 +251,7 @@ static void test()
 
     printf("\nTesting POP operation on empty stack: ");
     assert(pop(NewStack) == -1);
+    delete_stack(NewStack);
 }
 
 /**
