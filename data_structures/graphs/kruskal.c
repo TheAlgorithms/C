@@ -41,7 +41,7 @@ struct Graph *createGraph(int V, int E)
  *
  * @param ptr Pointer to the graph structure to be deallocated.
  */
-void deleteGraph(struct Graph *graph)
+void deleteGraph(struct Graph *const graph)
 {
     if (graph == NULL)
     {
