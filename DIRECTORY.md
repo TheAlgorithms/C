@@ -183,6 +183,7 @@
 
 ## Math
   * [Armstrong Number](https://github.com/TheAlgorithms/C/blob/HEAD/math/armstrong_number.c)
+  * [Binary Exponentiation](https://github.com/TheAlgorithms/C/blob/HEAD/math/binary_exponentiation.c)
   * [Cantor Set](https://github.com/TheAlgorithms/C/blob/HEAD/math/cantor_set.c)
   * [Cartesian To Polar](https://github.com/TheAlgorithms/C/blob/HEAD/math/cartesian_to_polar.c)
   * [Catalan](https://github.com/TheAlgorithms/C/blob/HEAD/math/catalan.c)
