@@ -9,6 +9,7 @@
  */
 
 #include <assert.h>  // for assert()
+#include <stdint.h>  // for int64 types
 #include <stdio.h>   // for output
 #include <stdlib.h>  // for exit()
 
@@ -18,18 +19,11 @@
  * @param n - exponent
  * @return a raised to the nth power
  * @warning
- * `int` can overflow very quickly.
+ * can overflow very quickly.
  */
-int binary_exponentiation(int a, int n)
+int64_t binary_exponentiation(int64_t a, uint64_t n)
 {
-    // Check for negative exponent
-    if (n < 0)
-    {
-        fprintf(stderr, "Illegal exponent passed! n should be non negative.\n");
-        exit(EXIT_FAILURE);
-    }
-
-    int res = 1;
+    int64_t res = 1;
     while (n > 0)
     {
         if (n % 2 == 1)  // If the current bit is 1
