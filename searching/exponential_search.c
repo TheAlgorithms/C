@@ -3,8 +3,9 @@
  *  \brief [Exponential Search](https://github.com/TheAlgorithms/Algorithms-Explanation/blob/master/en/Search%20Algorithms/Exponential%20Search.md)
  *  \author [Alessio Farinelli](https://github.com/faridevnz)
  */
-#include <assert.h>  /// for assert
+#include <assert.h>    /// for assert
 #include <inttypes.h>  /// for int64_t, uint16_t
+#include <stdio.h>     /// for printf
 
 #define ELEMENT -10
 
@@ -81,7 +82,7 @@ int main()
 static void test()
 {
     // empty array
-    int64_t arr_empty[] = {};
+    int64_t arr_empty[] = { 0 };
     assert(exponential_search(arr_empty, 0, 10) == -1);
     // elent not found
     int64_t arr_found[] = {1, 2, 3};
@@ -104,4 +105,6 @@ static void test()
     // find an element in an array of length n
     int64_t arr_middle[] = {-1, 2, 4, 6, 8};
     assert(exponential_search(arr_middle, 5, 6) == 3);
+
+    printf("All tests have successfully passed!\n");
 }
