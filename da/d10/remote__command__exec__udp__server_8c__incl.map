@@ -1,25 +1,25 @@
 <map id="client_server/remote_command_exec_udp_server.c" name="client_server/remote_command_exec_udp_server.c">
 <area shape="rect" id="Node000001" title="Server&#45;side implementation of [Remote Command Execution Using UDP](https://www.imperva...." alt="" coords="477,5,678,46"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,94,88,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,42,306,64,102,96,101,91,305,59,476,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,42,306,64,103,96,102,91,305,59,476,36"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="112,94,176,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="476,45,344,66,191,96,190,91,343,61,475,39"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="476,45,345,66,192,96,191,91,344,61,475,39"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="200,94,285,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="494,49,300,95,299,89,493,44"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="494,49,301,95,300,89,493,44"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="309,94,405,120"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="523,49,405,91,404,86,521,44"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="523,49,406,91,404,86,521,44"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="430,94,519,120"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="553,49,503,87,500,83,550,44"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="553,49,504,86,501,82,550,44"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="544,94,611,120"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="580,46,580,79,575,79,575,46"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="580,46,580,78,575,78,575,46"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="635,94,696,120"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="601,44,643,82,639,86,597,48"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="601,44,642,81,638,85,597,48"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="720,94,784,120"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="622,44,713,85,711,90,620,49"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="622,44,712,85,710,90,620,49"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="808,94,869,120"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="643,44,795,90,793,95,642,49"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="643,44,794,89,793,95,642,49"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="892,94,956,120"/>
 <area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="672,44,878,91,877,96,671,49"/>
 <area shape="rect" id="Node000012" title=" " alt="" coords="980,94,1044,120"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="679,39,811,61,966,91,965,96,810,66,678,45"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="679,39,811,61,965,91,964,96,810,66,678,45"/>
 </map>

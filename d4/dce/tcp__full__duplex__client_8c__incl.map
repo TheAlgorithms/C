@@ -1,23 +1,23 @@
 <map id="client_server/tcp_full_duplex_client.c" name="client_server/tcp_full_duplex_client.c">
 <area shape="rect" id="Node000001" title="Client&#45;side implementation of TCP Full Duplex Communication" alt="" coords="455,5,596,46"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,94,88,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="454,40,297,63,103,96,102,91,296,58,453,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="454,40,297,63,103,96,102,91,297,58,453,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="112,94,176,120"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="455,42,191,96,190,91,454,37"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="200,94,285,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="455,49,300,92,299,87,454,44"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="455,49,301,92,299,87,454,44"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="309,94,405,120"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="484,49,397,90,395,85,482,44"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="484,49,398,89,396,85,482,44"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="430,94,519,120"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="515,48,492,83,488,80,510,45"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="515,48,493,82,488,79,510,45"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="544,94,611,120"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="540,45,563,80,559,83,536,48"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="540,45,563,79,558,82,536,48"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="634,94,699,120"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="562,44,634,84,631,89,559,49"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="562,44,633,84,630,88,559,49"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="723,94,783,120"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="583,44,710,88,708,93,581,49"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="583,44,709,88,707,93,581,49"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="807,94,870,120"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="597,42,793,91,792,96,595,47"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="597,42,792,90,791,96,595,47"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="894,94,959,120"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="597,36,725,59,880,91,879,96,724,64,596,41"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="597,36,725,59,880,91,878,96,724,64,596,41"/>
 </map>
