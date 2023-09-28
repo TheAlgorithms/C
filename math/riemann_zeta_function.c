@@ -34,7 +34,7 @@ double complex riemann_zeta(double real_part, int num_terms)
 
 int main() {
     // Example of use:
-    double real_part = 7.0;  // Real of s
+    double real_part = 7.0;  // Real of "s"
     int num_terms_to_sum = 100;  // Number of terms that will be added to the series, (the greater  the quantity, the greater the precision)
 
     // zeta_value(double real_part, int num_terms) return double
