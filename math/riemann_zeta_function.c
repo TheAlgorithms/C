@@ -7,7 +7,6 @@
 
 #include <math.h>
 #include <complex.h>
-#include <stdio.h>
 
 /**
  * @brief Calculate the Riemann Zeta function for a given real number s.
@@ -20,6 +19,18 @@
  * @b Algorithm Complexity:
  *      - Time: O(num_terms)
  *      - Space: O(1)
+ *
+ * @example: zeta_value(double real_part, int num_terms) return double
+ * <><><>
+ * "Considering x as the return value of zeta_value(), note that creal(x)
+ * returns the real part of x, and cimag() returns the imaginary part of x.
+ * [...] <complex.h> is essential in your code. Please refer to the
+ * documentation of this library:
+ * (https://pubs.opengroup.org/onlinepubs/009695399/basedefs/complex.h.html)"
+ *
+ * @example: creal( zeta_value(7, 12) ) = 1.008349
+ * @example: cimag( zeta_value(7, 12) ) = 0.000000
+ *
  */
 double complex riemann_zeta(double real_part, int num_terms)
 {
@@ -32,15 +43,19 @@ double complex riemann_zeta(double real_part, int num_terms)
     return result;
 }
 
-int main() {
+void main() {
+
+
+    // Feel free to implement your code by removing the lines below.
+
+    {
+        
     // Example of use:
-    double real_part = 7.0;  // Real of s
-    int num_terms_to_sum = 100;  // Number of terms that will be added to the series, (the greater  the quantity, the greater the precision)
+    double complex zeta_value = riemann_zeta(7 /* The real part */ , 12 /* Number of terms that will be added to the series, (the greater  the quantity, the greater the precision) */ );
+    double real_part = creal(zeta_value);
+    double imag_part = creal(zeta_value);
 
-    // zeta_value(double real_part, int num_terms) return double
-    double complex zeta_value = riemann_zeta(real_part, num_terms_to_sum);
+    }
 
-    printf("Zeta(%lf) = %.10lf + %.10lfi\n", real_part, creal(zeta_value), cimag(zeta_value));
 
-    return 0;
 }
