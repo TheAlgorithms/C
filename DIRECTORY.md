@@ -36,6 +36,7 @@
   * [Hexadecimal To Octal2](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/hexadecimal_to_octal2.c)
   * [Infix To Postfix](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/infix_to_postfix.c)
   * [Infix To Postfix2](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/infix_to_postfix2.c)
+  * [Infix To Prefix](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/infix_to_prefix.c)
   * [Int To String](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/int_to_string.c)
   * [Octal To Binary](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/octal_to_binary.c)
   * [Octal To Decimal](https://github.com/TheAlgorithms/C/blob/HEAD/conversions/octal_to_decimal.c)
