@@ -1,5 +1,18 @@
 #include <stdio.h>
 
+// Define a struct to represent an array of integers
+struct IntArray {
+    int *data;
+    int size;
+};
+
+/**
+ * Find the maximum element in the array.
+ *
+ * @param arr The array to find the maximum element in.
+ * @param n   The number of elements in the array.
+ * @return    The maximum element in the array.
+ */
 int findMax(int arr[], int n) {
     int max = arr[0];
     for (int i = 1; i < n; i++) {
@@ -10,6 +23,13 @@ int findMax(int arr[], int n) {
     return max;
 }
 
+/**
+ * Perform counting sort on the array based on the specified digit place (exp).
+ *
+ * @param arr The array to be sorted.
+ * @param n   The number of elements in the array.
+ * @param exp The digit place (e.g., 1 for units, 10 for tens).
+ */
 void countingSort(int arr[], int n, int exp) {
     int output[n];
     int count[10] = {0};
@@ -32,6 +52,12 @@ void countingSort(int arr[], int n, int exp) {
     }
 }
 
+/**
+ * Perform Radix Sort on the given integer array.
+ *
+ * @param arr The array to be sorted.
+ * @param n   The number of elements in the array.
+ */
 void radixSort(int arr[], int n) {
     int max = findMax(arr, n);
 
@@ -45,20 +71,28 @@ int main() {
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    int arr[n];
+    // Create a struct to hold the integer array
+    struct IntArray array;
+    array.size = n;
+    array.data = (int *)malloc(n * sizeof(int));
 
     printf("Enter the elements: ");
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+        scanf("%d", &array.data[i]);
     }
 
-    radixSort(arr, n);
+    // Perform Radix Sort
+    radixSort(array.data, array.size);
 
     printf("Sorted array: ");
     for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", array.data[i]);
     }
     printf("\n");
 
+    // Free the dynamically allocated memory
+    free(array.data);
+
     return 0;
 }
+
