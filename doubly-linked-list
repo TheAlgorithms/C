@@ -125,7 +125,7 @@ void insertion_specified() {
         temp = head;
         printf("Enter the location");
         scanf("%d", &loc);
-        for (i = 0; i < loc; i++) {
+        for (i = 1; i < loc-1; i++) {
             temp = temp->next;
             if (temp == NULL) {
                 printf("\n There are less than %d elements", loc);
@@ -170,7 +170,7 @@ void deletion_last() {
         printf("\nnode deleted\n");
     } else {
         ptr = head;
-        if (ptr->next != NULL) {
+        while (ptr->next != NULL) {
             ptr = ptr->next;
         }
         ptr->prev->next = NULL;
