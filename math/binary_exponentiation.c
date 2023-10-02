@@ -8,10 +8,10 @@
  * @author [Praneeth Jain](https://github.com/PraneethJain)
  */
 
-#include <assert.h>  // for assert()
-#include <stdint.h>  // for int64 types
-#include <stdio.h>   // for output
-#include <stdlib.h>  // for exit()
+#include <assert.h>  /// for assert()
+#include <stdint.h>  /// for int64 types
+#include <stdio.h>   /// for output
+#include <stdlib.h>  /// for exit()
 
 /**
  * @brief Determines a raised to the nth power via binary exponentiation.
