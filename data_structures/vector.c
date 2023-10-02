@@ -35,7 +35,7 @@ void init(Vector* vec, int val) {
  * @returns: none
  */
 void delete(Vector* vec) {
-    free(vec->contents);    
+    free(vec->contents);
 }
 
 /**
@@ -54,7 +54,7 @@ void clear(Vector* vec) {
  * @returns: int
  */
 int len(Vector* vec) {
-    return vec->len;    
+    return vec->len;
 }
 
 /**
@@ -118,7 +118,7 @@ void* begin(Vector* vec) {
 }
 
 /**
- * This function prints the entire Vector as a list. 
+ * This function prints the entire Vector as a list.
  * @params Vector* (a pointer to the Vector struct)
  * @returns: none
  */
@@ -147,6 +147,7 @@ static void test() {
     set(&vec, 1, 22);
     assert(get(&vec, 1) == 22);
     assert(len(&vec) == 2);
+    delete(&vec);
 }
 
 /**
@@ -164,5 +165,6 @@ int main() {
     set(&vec, 1, 22);
     print(&vec);
     printf("Length: %d\n", len(&vec));
+    delete(&vec);
     return 0;
 }
