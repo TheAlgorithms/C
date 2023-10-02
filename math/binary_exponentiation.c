@@ -15,27 +15,27 @@
 
 /**
  * @brief Determines a raised to the nth power via binary exponentiation.
- * @param a - base
- * @param n - exponent
+ * @param base of the given number
+ * @param exponent of the given number
  * @return a raised to the nth power
  * @warning
  * can overflow very quickly.
  */
-int64_t binary_exponentiation(int64_t a, uint64_t n)
+int64_t binary_exponentiation(int64_t base, uint64_t exponent)
 {
-    int64_t res = 1;
-    while (n > 0)
+    int64_t result = 1;
+    while (exponent > 0)
     {
-        if (n % 2 == 1)  // If the current bit is 1
+        if (exponent % 2 == 1)  // If the current bit is 1
         {
-            res *= a;  // Then it must be multiplied to the result
+            result *= base;  // Then it must be multiplied to the result
         }
 
-        a *= a;   // Square the base
-        n >>= 1;  // Move to the next bit
+        base *= base;   // Square the base
+        exponent >>= 1;  // Move to the next bit
     }
 
-    return res;
+    return result;
 }
 
 /**
