@@ -14,7 +14,7 @@
 #include <stdlib.h>  /// for exit()
 
 /**
- * @brief Determines a raised to the nth power via binary exponentiation.
+ * @brief Determines base raised to an exponent via binary exponentiation.
  * @param base of the given number
  * @param exponent of the given number
  * @return a raised to the nth power
