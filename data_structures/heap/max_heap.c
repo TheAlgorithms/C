@@ -11,6 +11,13 @@ typedef struct max_heap
 
 Heap *create_heap(Heap *heap); /*Creates a max_heap structure and returns a
                                   pointer to the struct*/
+/**
+ * @brief Deallocates memory associated with a given heap.
+ *
+ * @param heap Pointer to the heap structure to be deallocated.
+ */
+void delete_heap(Heap *const heap);
+
 void down_heapify(Heap *heap, int index); /*Pushes an element downwards in the
                                              heap to find its correct position*/
 void up_heapify(Heap *heap, int index); /*Pushes an element upwards in the heap
@@ -46,6 +53,7 @@ int main()
     printf("Popping an element.\n");
     printf("Top element = %d \n", top(head));
     printf("\n");
+    delete_heap(head);
     return 0;
 }
 Heap *create_heap(Heap *heap)
@@ -55,6 +63,16 @@ Heap *create_heap(Heap *heap)
     heap->p = (int *)malloc(heap->size * sizeof(int));
     heap->count = 0;
     return heap;
+}
+
+void delete_heap(Heap *const heap)
+{
+    if (heap == NULL)
+    {
+        return;
+    }
+    free(heap->p);
+    free(heap);
 }
 
 void down_heapify(Heap *heap, int index)
