@@ -29,7 +29,7 @@ char* run_length_encode(char* str) {
     int encoded_index = 0;
 
     //allocate space for worst-case scenario
-    char* encoded = malloc(2 * strlen(str));
+    char* encoded = malloc(2 * strlen(str)+1);
     
     //temp space for int to str conversion
     char int_str[20];
@@ -54,9 +54,10 @@ char* run_length_encode(char* str) {
         ++encoded_index;
     }
 
-    //null terminate string and move encoded string to compacted memory space 
+    //null terminate string and move encoded string to compacted memory space
+    printf("%d %ld\n", encoded_index, 2 * strlen(str)+1);
     encoded[encoded_index] = '\0';
-    char* compacted_string = malloc(strlen(encoded) + 1);
+    char* compacted_string = malloc(strlen(encoded)+1);
     strcpy(compacted_string, encoded);
     
     free(encoded);
@@ -74,10 +75,25 @@ static void test() {
     assert(!strcmp(test, "7a3b2a4c1d1e1f2a1d1r"));
     free(test);
     test = run_length_encode("lidjhvipdurevbeirbgipeahapoeuhwaipefupwieofb");
-    assert(!strcmp(test, "1l1i1d1j1h1v1i1p1d1u1r1e1v1b1e1i1r1b1g1i1p1e1a1h1a1p1o1e1u1h1w1a1i1p1e1f1u1p1w1i1e1o1f1bq"));
+    assert(!strcmp(test, "1l1i1d1j1h1v1i1p1d1u1r1e1v1b1e1i1r1b1g1i1p1e1a1h1a1p1o1e1u1h1w1a1i1p1e1f1u1p1w1i1e1o1f1b"));
     free(test);
     test = run_length_encode("htuuuurwuquququuuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahghghrw");
     assert(!strcmp(test, "1h1t4u1r1w1u1q1u1q1u1q3u76a1h1g1h1g1h1r1w"));
+    free(test);
+    test = run_length_encode("aaaa");
+    assert(!strcmp(test, "4a"));
+    free(test);
+    test = run_length_encode("aaa");
+    assert(!strcmp(test, "3a"));
+    free(test);
+    test = run_length_encode("aa");
+    assert(!strcmp(test, "2a"));
+    free(test);
+    test = run_length_encode("a");
+    assert(!strcmp(test, "1a"));
+    free(test);
+    test = run_length_encode("");
+    assert(!strcmp(test, ""));
     free(test);
 }
 
