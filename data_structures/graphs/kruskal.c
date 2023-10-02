@@ -36,6 +36,21 @@ struct Graph *createGraph(int V, int E)
     return graph;
 }
 
+/**
+ * @brief Deallocates memory associated with a given graph.
+ *
+ * @param ptr Pointer to the graph structure to be deallocated.
+ */
+void deleteGraph(struct Graph *const graph)
+{
+    if (graph == NULL)
+    {
+        return;
+    }
+    free(graph->edge);
+    free(graph);
+}
+
 // A structure to represent a subset for union-find
 struct subset
 {
@@ -131,6 +146,7 @@ void KruskalMST(struct Graph *graph)
         }
         // Else discard the next_edge
     }
+    free(subsets);
 
     // print the contents of result[] to display the
     // built MST
@@ -182,6 +198,7 @@ int main()
     graph->edge[4].weight = 4;
 
     KruskalMST(graph);
+    deleteGraph(graph);
 
     return 0;
 }
