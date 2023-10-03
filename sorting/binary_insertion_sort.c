@@ -38,7 +38,7 @@ void insertionSort(int *arr, int size)
     {
         j = i - 1;
         key = arr[i];
-        /* Use binrary search to find exact key's index */
+        /* Use binary search to find exact key's index */
         index = binarySearch(arr, key, 0, j);
         /* Move all elements greater than key from [index...j]
          * to one position */
