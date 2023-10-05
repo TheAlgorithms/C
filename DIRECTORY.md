@@ -247,6 +247,7 @@
 
 ## Process Scheduling Algorithms
   * [Non Preemptive Priority Scheduling](https://github.com/TheAlgorithms/C/blob/HEAD/process_scheduling_algorithms/non_preemptive_priority_scheduling.c)
+  * [Preemptive Priority Scheduling](https://github.com/TheAlgorithms/C/blob/HEAD/process_scheduling_algorithms/preemptive_priority_scheduling.c)
 
 ## Project Euler
   * Problem 1
