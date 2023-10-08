@@ -12,8 +12,8 @@
 #include<string.h>
 #include<stdbool.h>
 #include<assert.h>
-#define sz 1000      // Maximum size of infix string
-#define ln 2000     //  Maximum size of the resultant prefix string 
+#define sz 1000     //<  Maximum size of infix string
+#define ln 2000     //<  Maximum size of the resultant prefix string 
 /**
  * @brief dynnamic implementation of stack using structure
 */
