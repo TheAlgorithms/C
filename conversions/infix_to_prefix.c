@@ -7,11 +7,11 @@
  * @author [Jibesh Roy](https://github.com/Jibesh10101011)
  * @see infix_to_prefix.c
  */
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdbool.h>
-#include<assert.h>
+#include<stdio.h>  /// for printf(),sizeof() and scanf()
+#include<stdlib.h> /// for malloc()
+#include<string.h> /// for strlen() and strcmp()
+#include<stdbool.h> /// for bool data type 
+#include<assert.h> /// for assert() 
 #define sz 1000     //<  Maximum size of infix string
 #define ln 2000     //<  Maximum size of the resultant prefix string 
 /**
