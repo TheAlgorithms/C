@@ -21,7 +21,8 @@ typedef struct  node
 {
     char data;
     struct node *next;
-}node;
+} node;
+
 typedef struct stack {
     node *head;
 }stack;
