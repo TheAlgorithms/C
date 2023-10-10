@@ -13,7 +13,7 @@ int arrangeCoins(int n)
         long long int guess = mid * (mid + 1L) / 2;
         long long int prevGuess = (mid - 1L) * mid / 2;
         if (guess == n)
-        {  // Edge case - f it's equal then the last row is full and we have
+        {  // Edge case - if it's equal then the last row is full and we have
            // reached our answer
             return mid;
         }
