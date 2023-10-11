@@ -26,10 +26,35 @@ A complex number is considered part of the mandelbrot set if he doesn't
 #include <math.h>          /// for math functions
 #include <stdbool.h>       /// for boolean
 #include <unistd.h>        /// for size_t
+#include <stdio.h>         /// for printf
 
 #define MAX_ITERATIONS 100 /// the maximum iterations to be made
 
 bool point_is_part_of_mandelbrot(double real, double imaginary);
+
+/**
+@brief The function that makes all the tests
+
+@return void
+ */
+void test(void)
+{
+    // tests that resulted in true
+    assert(point_is_part_of_mandelbrot(0.0, 0.0) == true);
+    assert(point_is_part_of_mandelbrot(-1.123, 0.0) == true);
+    assert(point_is_part_of_mandelbrot(0.25, 0.0) == true);
+    assert(point_is_part_of_mandelbrot(-1.3, 0.0) == true);
+    assert(point_is_part_of_mandelbrot(-0.1, -0.7) == true);
+
+    // tests that resulted in false
+    assert(point_is_part_of_mandelbrot(42.0, 0.0) == false);
+    assert(point_is_part_of_mandelbrot(0.0, -42.0) == false);
+    assert(point_is_part_of_mandelbrot(-1.123, 2.0) == false);
+    assert(point_is_part_of_mandelbrot(-1.123, -2.0) == false);
+    assert(point_is_part_of_mandelbrot(1.0, -1.0) == false);
+
+    printf("Passed in all tests :)\n");
+}
 
 /**
 @brief The main function
@@ -38,6 +63,7 @@ bool point_is_part_of_mandelbrot(double real, double imaginary);
  */
 int main(void)
 {
+    test();
     return 0;
 }
 
