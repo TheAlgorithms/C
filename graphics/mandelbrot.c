@@ -1,4 +1,4 @@
-/*
+/**
 @file mandelbrot.c
 @brief Implementation of the
     [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set).
@@ -20,7 +20,7 @@ A complex number is considered part of the mandelbrot set if he doesn't
     diverge to infinity, basically a number is considered infinite if
     it's absolute value is greater than 2, as we gonna see in the code.
 @author [andreyvdl](https://github.com/andreyvdl)
-*/
+ */
 
 #include <assert.h>        /// for assert
 #include <math.h>          /// for math functions
@@ -31,11 +31,24 @@ A complex number is considered part of the mandelbrot set if he doesn't
 
 bool point_is_part_of_mandelbrot(double real, double imaginary);
 
+/**
+@brief The main function
+
+@return 0 on exit
+ */
 int main(void)
 {
     return 0;
 }
 
+/**
+@brief Mandelbrot formula function
+
+@param real The X real point
+@param imaginary  The Y imaginary point
+@return true If the point is part of the mandelbrot set
+@return false If the point is not part of the mandelbrot set
+ */
 bool point_is_part_of_mandelbrot(double real, double imaginary)
 {
     double complex_imaginary;
@@ -48,8 +61,8 @@ bool point_is_part_of_mandelbrot(double real, double imaginary)
     temp_real = 0;
     iterator = 0;
 
-    // the sum of the squares represents the absolute value of
-    // the complex number
+    // the sum of the squares represents the absolute value
+    // (hipotenuse) of the complex number.
     while (MAX_ITERATIONS > iterator &&
             2 >= pow(complex_real, 2) + pow(complex_imaginary, 2))
     {
@@ -60,7 +73,6 @@ bool point_is_part_of_mandelbrot(double real, double imaginary)
         complex_real = temp_real;
         iterator = iterator + 1;
     }
-    return MAX_ITERATIONS == iterator; // if they are equal, it means
-                                       // that the number is part of
-                                       // the mandelbrot set
+    if (MAX_ITERATIONS == iterator) { return true; }
+    return false;
 }
