@@ -1,3 +1,7 @@
+/**
+ * A small programm where you need to guess the computer number between 1-100.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
