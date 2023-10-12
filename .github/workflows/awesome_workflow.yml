@@ -26,11 +26,6 @@ jobs:
         uses: TheAlgorithms/scripts/formatter@main
         with:
           filetypes: .c,.h
-      - name: Update DIRECTORY.md
-        run: |
-          wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/build_directory_md.py
-          python3 build_directory_md.py C . .c,.h leetcode/ > DIRECTORY.md
-          git commit -m "updating DIRECTORY.md" DIRECTORY.md || true
       - name: Get file changes
         run: |
           git branch
@@ -57,14 +52,14 @@ jobs:
     needs: [MainSequence]
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [windows-latest, ubuntu-latest, macOS-latest]
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
       - run: |
           cmake -B ./build -S .
-          cmake --build build
+          cmake --build build --config Release
       - name: Label on PR fail
         uses: actions/github-script@v6
         if: ${{ failure() && matrix.os == 'ubuntu-latest' && github.event_name == 'pull_request' }}
