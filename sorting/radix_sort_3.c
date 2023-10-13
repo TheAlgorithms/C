@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
 
 // Define a struct to represent an array of integers
 struct IntArray {
@@ -66,7 +68,31 @@ void radixSort(int arr[], int n) {
     }
 }
 
+void testRadixSort() {
+    // Test case 1: Sorting an array with positive integers
+    int arr1[] = {170, 45, 75, 90, 802, 24, 2, 66};
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+
+    radixSort(arr1, n1);
+
+    for (int i = 1; i < n1; i++) {
+        assert(arr1[i - 1] <= arr1[i]);
+    }
+
+    // Test case 2: Sorting an array with negative integers
+    int arr2[] = {-170, -45, -75, -90, -802, -24, -2, -66};
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
+
+    radixSort(arr2, n2);
+
+    for (int i = 1; i < n2; i++) {
+        assert(arr2[i - 1] <= arr2[i]);
+    }
+}
+
 int main() {
+    testRadixSort(); // Run the sorting algorithm tests
+
     int n;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
@@ -92,6 +118,5 @@ int main() {
 
     // Free the dynamically allocated memory
     free(array.data);
-
     return 0;
 }
