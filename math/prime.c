@@ -49,6 +49,8 @@ void test()
          ++i)
     {
         assert(isPrime(primers[i]));
+        //Adding the print statement
+        printf("%d is prime.\n", primers[i]);
     }
 
     /* Example Non-prime numbers */
@@ -57,6 +59,8 @@ void test()
          i < size; ++i)
     {
         assert(!isPrime(NonPrimers[i]));
+        //Adding the print statement
+        printf("%d is not prime.\n", NonPrimers[i]);
     }
 }
 
