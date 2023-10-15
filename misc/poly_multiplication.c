@@ -111,8 +111,7 @@ int main() //main function
     {
         printf("Please give your terms-coeffcient and power:\n");
         scanf("%d %d", &cf, &pw);
-        if (cf != -99 && pw != -99)
-            head1 = addNode(head1, cf, pw);
+        head1 = addNode(head1, cf, pw);
     }
     cf = 1, pw = 1;
     printf("For your 2nd polynomial give the number of terms:\n");
@@ -121,8 +120,7 @@ int main() //main function
     {
         printf("Please give your terms-coeffcient and power:\n");
         scanf("%d %d", &cf, &pw);
-        if (cf != -99 && pw != -99)
-            head2 = addNode(head2, cf, pw);
+        head2 = addNode(head2, cf, pw);
     }
     printf("Your 1st polynomial:\n");
     head1 = addsamevariables(head1);
