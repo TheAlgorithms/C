@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAXSIZE 100
-int queue[MAXSIZE];
+
+int queue[MAXSIZE]; //maximum size of the queue
 int front = -1;
 int rear = -1;
+
+//Here are some operations that we can do with a queue
 void enqueue (int data);
 int dequeue ();
 int peek ();
@@ -11,8 +14,9 @@ int queue_rear ();
 int isfull ();
 int isempty ();
 int display ();
-int
-main ()
+
+//main function
+int main ()
 {
   int choice, data;
   while (1)
@@ -28,6 +32,8 @@ main ()
       printf ("8. Exit\n");
       printf ("Enter your choice: ");
       scanf ("%d", &choice);
+      
+      //switch case to choose the operation user wants
       switch (choice)
 	{
 	case 1:
@@ -100,8 +106,8 @@ main ()
   return 0;
 }
 
-void
-enqueue (int data)
+//enqueue function
+void enqueue (int data)
 {
   if (isfull ())
     {
@@ -117,8 +123,8 @@ enqueue (int data)
   printf ("Enqueued element is %d\n", data);
 }
 
-int
-dequeue ()
+//dequeue function
+int dequeue ()
 {
   if (isempty ())
     {
@@ -135,8 +141,8 @@ dequeue ()
   return data;
 }
 
-int
-peek ()
+//funtion to display peek
+int peek ()
 {
   if (isempty ())
     {
@@ -146,8 +152,8 @@ peek ()
   return queue[front];
 }
 
-int
-queue_rear ()
+//function to display rear
+int queue_rear ()
 {
   if (isempty ())
     {
@@ -157,8 +163,8 @@ queue_rear ()
   return queue[rear];
 }
 
-int
-isfull ()
+//function to display whether queue is full or not
+int isfull ()
 {
   if (rear == MAXSIZE - 1)
     {
@@ -170,8 +176,8 @@ isfull ()
     }
 }
 
-int
-isempty ()
+//function to display whether queue is empty or not
+int isempty ()
 {
   if (front == -1 || front > rear)
     {
@@ -183,8 +189,8 @@ isempty ()
     }
 }
 
-int
-display ()
+//function to display queue items
+int display ()
 {
   if (isempty ())
     {
