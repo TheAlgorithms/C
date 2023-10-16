@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief  Searching for a value in an array of integer
+ * @parem arr the array of integer
+ * @parem size the size of the array
+ * @parem val the value to search for
+ * @return 1 if the val is found
+ * @return 0 if not found
+ */
 int linearsearch(int *arr, int size, int val)
 {
     int i;
