@@ -17,7 +17,7 @@ void *add(dynamic_array_t *da, const void *value)
     if (da->size >= da->capacity)
     {
         void **newItems =
-            realloc(da->items, (da->capacity <<= 1) * sizeof(void **));
+            realloc(da->items, (da->capacity <<= 1) * sizeof(void *));
 
         da->items = newItems;
     }
