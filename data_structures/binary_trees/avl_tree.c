@@ -1,7 +1,51 @@
-#include <stdio.h>
+/*
+   Author: DUDEKULA MAHAMMAD HUSSAIN
+   Date:20-10-2023
+
+   Overview:
+   This documentation provides an overview of AVL (Adelson-Velsky and Landis)
+   trees in C, a self-balancing binary search tree.
+
+   What is an AVL Tree?
+   An AVL tree is a binary search tree that self-balances itself to ensure that
+   the height of the left and right subtrees of any node differs by at most 1.
+   This self-balancing property makes AVL trees highly efficient for various
+   operations, such as searching, insertion, and deletion.
+
+   Key Concepts:
+   - Balance Factor: The balance factor of a node is defined as the difference
+   between the height of its left subtree and the height of its right subtree.
+   The balance factor must be in the range [-1, 0, 1] to maintain balance.
+
+   Functions:
+   1. `Node* newNode(int key)`: Creates a new AVL tree node with the given key.
+   2. `int height(Node* node)`: Calculates the height of a node.
+   3. `int getBalance(Node* node)`: Computes the balance factor of a node.
+   4. `Node* rightRotate(Node* y)`: Performs a right rotation on the given node.
+   5. `Node* leftRotate(Node* x)`: Performs a left rotation on the given node.
+   6. `Node* insert(Node* root, int key)`: Inserts a new node with the given key
+   into the AVL tree and rebalances if necessary.
+   7. `Node* minValueNode(Node* node)`: Finds the node with the minimum value in
+   the tree.
+   8. `Node* deleteNode(Node* root, int key)`: Deletes a node with the given key
+   from the AVL tree and rebalances if necessary.
+
+   Usage:
+   - Include this C file in your project and use the provided functions to work
+   with AVL trees.
+   - Example usage is given in the `main` function.
+
+   Note:
+   - This code assumes that the keys in the AVL tree are integers. You can
+   modify it for other data types.
+   - Make sure to balance the tree after each insertion or deletion to maintain
+   the AVL property.
+*/
+
+include<stdio.h>
 #include <stdlib.h>
 
-struct AVLnode
+    struct AVLnode
 {
     int key;
     struct AVLnode *left;
@@ -156,7 +200,7 @@ avlNode *insert(avlNode *node, int key)
     return node;
 }
 
-avlNode *delete (avlNode *node, int queryNum)
+avlNode *delete(avlNode *node, int queryNum)
 {
     if (node == NULL)
         return node;
