@@ -7,7 +7,7 @@
 /**
  * @file
  *
- * @details
+ * @brief
  * [XOR List](https://en.wikipedia.org/wiki/XOR_linked_list) combines the properties of a 
  * circular doubly linked list and XOR pointers to save memory and enhance performance. 
  * Each node contains an XOR of the addresses of the previous and next nodes.
