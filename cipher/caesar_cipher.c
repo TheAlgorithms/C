@@ -10,16 +10,20 @@
  * @author [Tuchar Chandra Das](https://github.com/Thunder-Ultra)
  */
 
+#include <assert.h>  // For making Assertions
 #include <stdio.h>   // For standard input/Output
 #include <stdlib.h>  // For dynamic memory management
 #include <string.h>  // For finding the length of a string
 
 /**
  * @brief Encrypts a given message
+ *
  * @param msg raw message
- * @param
+ * @param key Key used to Encrypt the message
+ *
+ * @returns char*
  */
-char* encrypt(char* msg, int key)
+char* encrypt(const char* msg, int key)
 {
     int i;
     char* result = (char*)malloc(
@@ -46,10 +50,13 @@ char* encrypt(char* msg, int key)
 
 /**
  * @brief Decrypts a given message
+ *
  * @param msg raw message
- * @param
+ * @param key Key to Use to Decrypt the message
+ *
+ * returns char*
  */
-char* decrypt(char* msg, int key)
+char* decrypt(const char* msg, int key)
 {
     int i;
     char* result = (char*)malloc(
@@ -75,25 +82,44 @@ char* decrypt(char* msg, int key)
 }
 
 /**
- * @brief Test a sample string and prints the Raw, Encrypted, and
- * Unencrypted Message
+ * @brief Tests a given string
+ *
+ * @param msg Raw text
+ * @param cipher Encrypted text
+ * @param key The key used to encrypt/decrypt
  *
  * @returns void
  */
-void main()
+void test_string(const char* msg, const char* cipher, int key)
 {
-    // Some code to sample to check the working of the algorithm
-    char message[] = "Hello, World!";
-    printf("Raw Message: %s\n", message);
-    // Here goes the key with which to encrypt the message
-    int key = 7;
+    // assert that the encryption worked
+    assert(strcmp(encrypt(msg, key), cipher) == 0);
+    // assert that we got the same string we started with
+    assert(strcmp(msg, decrypt(cipher, key)) == 0);
+}
 
-    char* encrypted_message = encrypt(message, key);
-    printf("Encrypted message: %s\n", encrypted_message);
+/**
+ * @brief Test multiple strings
+ *
+ * @returns void
+ */
+static void tests()
+{
+    test_string("Hello World!", "Olssv Dvysk!", 7);
+    test_string("TheAlgorithms", "DroKvqybsdrwc", 10);
+    test_string("I Like Coding in C , But Coding is Python is another level",
+                "S Vsuo Mynsxq sx M , Led Mynsxq sc Zidryx sc kxydrob vofov",
+                10);
+    printf("All tests have successfully passed!\n");
+}
 
-    char* decrypted_message = decrypt(encrypted_message, key);
-    printf("Decrypted message: %s\n", decrypted_message);
-
-    free(encrypted_message);
-    free(decrypted_message);
+/**
+ * @brief Runs many test cases
+ *
+ * @returns int
+ */
+int main()
+{
+    tests();
+    return 0;
 }
