@@ -11,4 +11,3 @@ In this directory you will find (in the right order):
 * word-count
 * rna-transcription
 * hamming
-
