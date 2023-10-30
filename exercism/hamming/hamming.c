@@ -11,21 +11,6 @@
 
 */
 
-int computer(const char *lhgs, const char *rhs);
-
-int main(void) {
-    // Define two character arrays (strings) lhgs and rhs
-    const char* lhgs = "GAGCCTACTAACGGGAT";
-    const char* rhs = "CATCGTAATGACGGCCT";
-
-    // Call the 'computer' function with lhgs and rhs as arguments and store the result in 'distance'
-    int distance = computer(lhgs, rhs);
-
-    printf("%d\n", distance);
-
-    return 0;
-}
-
 int computer(const char *lhgs, const char *rhs) {
     int distance = 0;
 
