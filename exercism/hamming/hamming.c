@@ -1,9 +1,18 @@
 #include "hamming.h"
 
-// Declare a function prototype for the 'computer' function
+/*
+ The program calculates the Hamming Distance between two DNA strands represented as sequences of characters (C, A, G, and T). 
+ 
+ The Hamming Distance is a measure of the number of differences between two DNA strands of equal length. 
+ 
+ The program should ensure that the input sequences have the same length and then count the differing characters to determine the Hamming Distance.
+
+ This calculation is a common task in biology and science in general.
+
+*/
+
 int computer(const char *lhgs, const char *rhs);
 
-// The main function, where the program execution starts
 int main(void) {
     // Define two character arrays (strings) lhgs and rhs
     const char* lhgs = "GAGCCTACTAACGGGAT";
@@ -12,16 +21,12 @@ int main(void) {
     // Call the 'computer' function with lhgs and rhs as arguments and store the result in 'distance'
     int distance = computer(lhgs, rhs);
 
-    // Print the value of 'distance' to the console
     printf("%d\n", distance);
 
-    // Return 0 to indicate successful execution to the operating system
     return 0;
 }
 
-// Definition of the 'computer' function
 int computer(const char *lhgs, const char *rhs) {
-    // Initialize a variable 'distance' to 0 to keep track of the differences between the two strings
     int distance = 0;
 
     // Get the lengths of the input strings 'lhgs' and 'rhs'
@@ -41,7 +46,6 @@ int computer(const char *lhgs, const char *rhs) {
         }
     }
 
-    // Return the 'distance' value, which represents the number of differing characters
     return distance;
 }
 
