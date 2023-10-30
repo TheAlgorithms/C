@@ -45,7 +45,7 @@ char* encrypt(char* msg, int key)
 }
 
 /**
- * @brief Encrypts a given message
+ * @brief Decrypts a given message
  * @param msg raw message
  * @param
  */
