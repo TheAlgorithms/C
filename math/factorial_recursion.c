@@ -1,10 +1,35 @@
+/*
+    Algorithm: Factorial Calculation using Memoization
+
+    This C program calculates factorials of non-negative integers using a recursive algorithm with memoization.
+    Factorial of a non-negative integer 'n' is denoted as 'n!' and is defined as the product of all positive integers
+    less than or equal to 'n'. For example, 5! = 5 x 4 x 3 x 2 x 1 = 120.
+
+    Author: Sricharan Nibhanupudi
+    
+    Uses:
+    - The program provides a function 'computeFactorial' that calculates the factorial of a given non-negative integer
+      using recursive memoization. It stores previously computed factorials in an array 'factResults' to avoid redundant
+      calculations, which significantly improves performance for large values of 'n'.
+    - The 'testFactorial' function uses assertions to verify the correctness of the 'computeFactorial' function by
+      comparing its results with known factorial values.
+    - The program also demonstrates the use of standardized integer data types like 'uint64_t' from 'stdint.h' for
+      improved code portability and readability.
+
+    References:
+    - The concept of factorial: https://en.wikipedia.org/wiki/Factorial
+    - Memoization: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+*/
+
 #include <stdio.h>
+#include <stdint.h>
+#include <assert.h>
 
-#define MAX_LIMIT 200 
+#define MAX_LIMIT 200
 
-unsigned long long factResults[MAX_LIMIT] = {0};
+uint64_t factResults[MAX_LIMIT] = {0};
 
-unsigned long long computeFactorial(int sequenceNumber) {
+uint64_t computeFactorial(int sequenceNumber) {
     if (sequenceNumber == 0) {
         return 1;
     }
@@ -15,19 +40,37 @@ unsigned long long computeFactorial(int sequenceNumber) {
     return factResults[sequenceNumber];
 }
 
+void testFactorial() {
+    assert(computeFactorial(0) == 1);
+    assert(computeFactorial(1) == 1);
+    assert(computeFactorial(2) == 2);
+    assert(computeFactorial(3) == 6);
+    assert(computeFactorial(4) == 24);
+    assert(computeFactorial(5) == 120);
+    assert(computeFactorial(6) == 720);
+    assert(computeFactorial(7) == 5040);
+    assert(computeFactorial(8) == 40320);
+    assert(computeFactorial(9) == 362880);
+    assert(computeFactorial(10) == 3628800);
+    
+}
+
 int main() {
+    testFactorial();
+    
     int testNumber;
-    testNumber=5;
+    testNumber = 5;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
-    testNumber=4;
+    testNumber = 4;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
-    testNumber=6;
+    testNumber = 6;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
-    testNumber=7;
+    testNumber = 7;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
-    testNumber=9;
+    testNumber = 9;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
-    testNumber=10;
+    testNumber = 10;
     printf("The factorial of %d is %llu\n", testNumber, computeFactorial(testNumber));
+    
     return 0;
 }
