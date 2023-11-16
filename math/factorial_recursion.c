@@ -21,7 +21,7 @@
     - Memoization: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
 */
 
-#include <stdio.h>
+#include <stdio.h> /// Perform Input and Output operations
 #include <stdint.h> /// Standardized integer data types for improved portability.
 #include <assert.h> /// Assertions for testing purposes.
 
