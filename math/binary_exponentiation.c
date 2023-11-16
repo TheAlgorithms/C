@@ -26,7 +26,7 @@ int64_t binary_exponentiation(int64_t base, uint64_t exponent)
     int64_t result = 1;
     while (exponent > 0)
     {
-        if (exponent % 2 == 1)  // If the current bit is 1
+        if (exponent & 1)  // If the current bit is 1
         {
             result *= base;  // Then it must be multiplied to the result
         }
