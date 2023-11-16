@@ -24,7 +24,6 @@
 #include <stdio.h>
 #include <stdint.h> /// Standardized integer data types for improved portability.
 #include <assert.h> /// Assertions for testing purposes.
-#include <header.h> /// Request to use header files
 
 #define MAX_LIMIT 200
 
