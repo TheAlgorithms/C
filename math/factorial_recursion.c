@@ -22,13 +22,19 @@
 */
 
 #include <stdio.h>
-#include <stdint.h>
-#include <assert.h>
+#include <stdint.h> /// Standardized integer data types for improved portability.
+#include <assert.h> /// Assertions for testing purposes.
+#include <header.h> /// Request to use header files
 
 #define MAX_LIMIT 200
 
 uint64_t factResults[MAX_LIMIT] = {0};
 
+/**
+ * @brief Computes the factorial of a non-negative integer using memoization.
+ * @param sequenceNumber The non-negative integer for which to compute the factorial.
+ * @return The factorial of the input integer.
+ */
 uint64_t computeFactorial(int sequenceNumber) {
     if (sequenceNumber == 0) {
         return 1;
@@ -40,6 +46,9 @@ uint64_t computeFactorial(int sequenceNumber) {
     return factResults[sequenceNumber];
 }
 
+/**
+ * @brief Tests the 'computeFactorial' function by comparing its results with known factorial values.
+ */
 void testFactorial() {
     assert(computeFactorial(0) == 1);
     assert(computeFactorial(1) == 1);
@@ -52,9 +61,12 @@ void testFactorial() {
     assert(computeFactorial(8) == 40320);
     assert(computeFactorial(9) == 362880);
     assert(computeFactorial(10) == 3628800);
-    
 }
 
+/**
+ * @brief Main function to test the factorial calculation.
+ * @return 0 on success.
+ */
 int main() {
     testFactorial();
     
