@@ -36,7 +36,12 @@ int main()
     }
 }
 
-void push(struct node *p)
+/**
+ * push function will add a new node at the head of the list, time complexity O(1)
+ * @param p pointer to the top of the stack
+ * @returns void
+ */
+void push(struct node *p) 
 {
     int item;
     struct node *temp;
@@ -50,7 +55,13 @@ void push(struct node *p)
 
     printf("Inserted successfully.\n");
 }
-void pop(struct node *p)
+
+/**
+ * pop function deletes the first node from the head, time complexity O(1)
+ * @param p pointer to the top of the stack
+ * @returns void
+ */
+void pop(struct node *p) 
 {
     int item;
     struct node *temp;
@@ -79,6 +90,5 @@ void display(struct node *p)
             printf("\t%d\n", p->info);
             p = p->link;
         }
-        // printf("%d\n",p->info);
     }
 }
