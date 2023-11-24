@@ -1,16 +1,52 @@
-#include <stdio.h>
-
-// Process structure containing ID, arrival time, burst time, priority, executed time, and completion time
+/**
+ * @file
+ * @brief
+ * [Preemptive Priority
+ * Scheduling]
+ *  Preemptive Priority Scheduling is a CPU scheduling algorithm
+    that assigns priorities to processes and selects the process
+    with the highest priority to execute. If a higher-priority
+    process becomes available, it preempts the currently executing
+    process. This algorithm ensures that higher-priority processes
+    are given preference, but it may lead to starvation of lower-priority
+    processes if not handled properly.*
+ *
+ * @details
+ Algorithm Overview:
+    1. Initialize a set of processes with attributes such as ID, arrival time,
+       burst time, priority, executed time, and completion time.
+    2. Start with an empty queue of ready processes and initialize variables
+       to keep track of the current time, executed processes, and the currently
+       executing process.
+    3. Repeat the following steps until all processes are executed:
+       a. Find the process with the highest priority that has arrived and
+          not completed yet.
+       b. Execute the selected process for one time unit, updating its
+          executed time and the current time.
+       c. If the selected process completes, calculate its completion time,
+          print a completion message, and update turnaround and waiting times.
+       d. If no suitable process is found to execute, increment the current time.
+    4. Calculate and print the average turnaround time and average waiting time.
+ * @author [Archana Saroj](https://github.com/SarojArchana)
+ */
+#include <stdio.h>    /// for IO operations (`printf`)
+/**
+ * @brief Structure to represent a process
+ */
 struct Process {
-    int id;
-    int arrival_time;
-    int burst_time;
-    int priority;
-    int executed_time;
-    int completion_time;
+    int id;             /**< Process ID */
+    int arrival_time;   /**< Arrival time of the process */
+    int burst_time;     /**< Burst time of the process */
+    int priority;       /**< Priority of the process */
+    int executed_time;  /**< Time the process has been executed */
+    int completion_time;/**< Completion time of the process */
 };
-
-// Function to perform preemptive priority scheduling
+/**
+ * @brief Performs preemptive priority scheduling for a set of processes.
+ * @param processes An array of Process structures representing the processes to be scheduled.
+ * @param n The number of processes in the array.
+ * @return void
+ */
 void preemptivePriority(struct Process processes[], int n) {
     int currentTime = 0;
     int executedProcesses = 0;
@@ -58,7 +94,11 @@ void preemptivePriority(struct Process processes[], int n) {
     printf("\nAverage Turnaround Time: %.2f\n", avgTurnaroundTime);
     printf("Average Waiting Time: %.2f\n", avgWaitingTime);
 }
-int main() {
+/**
+ * @brief Runs test cases for preemptive priority scheduling.
+ * @return void
+ */
+static void test() {
     struct Process testCase1[] = {
         {1, 0, 3, 2, 0},
         {2, 1, 5, 1, 0},
@@ -107,6 +147,12 @@ int main() {
 
     printf("\nTest Case 4:\n");
     preemptivePriority(testCase4, n4);
-
+}
+/**
+ * @brief Main function to run the scheduling algorithm with test cases.
+ * @return Returns 0 to indicate successful execution.
+ */
+int main() {
+    test();
     return 0;
 }
