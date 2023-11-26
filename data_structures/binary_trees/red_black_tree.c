@@ -20,6 +20,7 @@ Node *newNode(int val, Node *par)
     create->left = NULL;
     create->right = NULL;
     create->color = 1;
+    return create;
 }
 
 // Check if the node is the leaf
