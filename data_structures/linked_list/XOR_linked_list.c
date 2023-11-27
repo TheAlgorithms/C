@@ -1,3 +1,16 @@
+/**
+ * @file
+ *
+ * @brief
+ * [XOR List](https://en.wikipedia.org/wiki/XOR_linked_list) combines the properties of a 
+ * circular doubly linked list and XOR pointers to save memory and enhance performance. 
+ * Each node contains an XOR of the addresses of the previous and next nodes.
+ *
+ * In this implementation, functions to insert at the head, delete the first node, display list, get
+ * list size, and get element at index functions are coded.
+ *
+ * @author [Sahil Kandhare](https://github.com/SahilK-027)
+ */
 #include <assert.h> /// to verify assumptions made by the program and print a diagnostic message if this assumption is false.
 #include <inttypes.h> /// to provide a set of integer types with universally consistent definitions that are operating system-independent
 #include <stdio.h> /// for IO operations
