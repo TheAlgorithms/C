@@ -4,19 +4,6 @@
 #include <stdlib.h> /// for including functions involving memory allocation such as `malloc`
 #include <stdint.h> /// to ensure that the integer types such as uintptr_t are properly defined.
 
-/**
- * @file
- *
- * @brief
- * [XOR List](https://en.wikipedia.org/wiki/XOR_linked_list) combines the properties of a 
- * circular doubly linked list and XOR pointers to save memory and enhance performance. 
- * Each node contains an XOR of the addresses of the previous and next nodes.
- *
- * In this implementation, functions to insert at the head, delete the first node, display list, get
- * list size, and get element at index functions are coded.
- *
- * @author [Sahil Kandhare](https://github.com/SahilK-027)
- */
 
 /**
  * @brief XOR List Node struct
