@@ -57,17 +57,24 @@ static void tests() {
     assert(binary_gcd(0, 11) == 11);
     assert(binary_gcd(2*3*7*11*29, 3*5*11*29) == 3*11*29);
     assert(binary_gcd(3*17*23*29, 2*2*5*17*23*31) == 17*23);
+    assert(binary_gcd(7*7*7*7*7, 3*7*7*7*13) == 7*7*7);
+    assert(binary_gcd(1024*3*7, 1024*11*5) == 1024);
+    assert(binary_gcd(2*3*3*5, 2*2*3*5) == 2*3*5);
     assert(binary_gcd(2*5*11*17*23, 3*7*7*13*19) == 1);
 
     // consecutive numbers have gcd 1
-    for (i = 1; i < 1000; i++)
+    for (i = 1; i < 1000; i++) {
         assert(binary_gcd(i, i + 1) == 1);
+    }
 
-    for (i = 2; i < 1000; i++)
+    for (i = 2; i < 1000; i++) {
         assert(binary_gcd(i, i) == i);
+    }
 
-    for (i = 1; i < 1000; i++)
+    for (i = 1; i < 1000; i++) {
         assert(binary_gcd(1, i) == 1);
+        assert(binary_gcd(i, 1) == 1);
+    }
 
     printf("All tests have successfully passed!\n");
 }
