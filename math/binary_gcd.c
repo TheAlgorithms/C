@@ -6,10 +6,10 @@
  * @date 28 November, 2023
  */
 
+#include <assert.h>
 #include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 /**
  * @brief Get greatest common divisor of u and v without division
@@ -17,13 +17,19 @@
  * @param [in] v nonnegative integer
  * @return gcd(u,v) in unsigned long type
  */
-unsigned long binary_gcd (unsigned long u, unsigned long v)
+unsigned long binary_gcd(unsigned long u, unsigned long v)
 {
     int shift, u_tz, v_tz;
     unsigned long tmp;
 
-    if (u == 0) return v;
-    if (v == 0) return u;
+    if (u == 0)
+    {
+        return v;
+    }
+    if (v == 0)
+    {
+        return u;
+    }
 
     // get number of trailing zero bits
     // essentially powers of 2 in prime factorization
@@ -36,9 +42,10 @@ unsigned long binary_gcd (unsigned long u, unsigned long v)
     u >>= u_tz;
 
     // maintain v and u odd for gcd(u, v) = gcd(|u − v|, min(u, v))
-    do {
-        tmp = (u > v) ? u - v : v - u; // |u - v|
-        v = (u > v) ? v : u; // min(u, v)
+    do
+    {
+        tmp = (u > v) ? u - v : v - u;  // |u - v|
+        v = (u > v) ? v : u;            // min(u, v)
         u_tz = __builtin_ctzll(tmp);
         u = tmp >> u_tz;
     } while (u != 0);
@@ -50,28 +57,32 @@ unsigned long binary_gcd (unsigned long u, unsigned long v)
  * @brief Self-test implementations
  * @returns void
  */
-static void tests() {
+static void tests()
+{
     unsigned i;
 
     assert(binary_gcd(7, 0) == 7);
     assert(binary_gcd(0, 11) == 11);
-    assert(binary_gcd(2*3*7*11*29, 3*5*11*29) == 3*11*29);
-    assert(binary_gcd(3*17*23*29, 2*2*5*17*23*31) == 17*23);
-    assert(binary_gcd(7*7*7*7*7, 3*7*7*7*13) == 7*7*7);
-    assert(binary_gcd(1024*3*7, 1024*11*5) == 1024);
-    assert(binary_gcd(2*3*3*5, 2*2*3*5) == 2*3*5);
-    assert(binary_gcd(2*5*11*17*23, 3*7*7*13*19) == 1);
+    assert(binary_gcd(13398, 4785) == 957);
+    assert(binary_gcd(34017, 242420) == 391);
+    assert(binary_gcd(16807, 13377) == 343);
+    assert(binary_gcd(21504, 56320) == 1024);
+    assert(binary_gcd(90, 60) == 30);
+    assert(binary_gcd(43010, 36309) == 1);
 
     // consecutive numbers have gcd 1
-    for (i = 1; i < 1000; i++) {
+    for (i = 1; i < 1000; i++)
+    {
         assert(binary_gcd(i, i + 1) == 1);
     }
 
-    for (i = 2; i < 1000; i++) {
+    for (i = 2; i < 1000; i++)
+    {
         assert(binary_gcd(i, i) == i);
     }
 
-    for (i = 1; i < 1000; i++) {
+    for (i = 1; i < 1000; i++)
+    {
         assert(binary_gcd(1, i) == 1);
         assert(binary_gcd(i, 1) == 1);
     }
@@ -92,10 +103,13 @@ int main(int argc, char *argv[])
     tests();
 
     // Asks for the input numbers
-    if (argc == 3) {
+    if (argc == 3)
+    {
         num1 = atoi(argv[1]);
         num2 = atoi(argv[1]);
-    } else {
+    }
+    else
+    {
         printf("Enter the values of 2 nonnegative numbers: ");
         scanf("%lu %lu", &num1, &num2);
     }
