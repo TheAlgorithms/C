@@ -1,6 +1,7 @@
 /**
  * @file
  * @brief Compute greatest common divisor using Binary GCD (Stein's algorithm)
+ * https://en.wikipedia.org/wiki/Binary_GCD_algorithm
  * @author [Apostolos Pappas](https://github.com/tolis-0/)
  * @date 28 November, 2023
  */
