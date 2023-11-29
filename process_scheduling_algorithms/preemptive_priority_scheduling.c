@@ -46,8 +46,8 @@ struct Process {
  * @return void
  */
 void preemptivePriority(struct Process processes[], int n) {
-    uint_t currentTime = 0;
-    uint_t executedProcesses = 0;
+    unsigned int currentTime = 0;
+    unsigned int executedProcesses = 0;
     int currentProcess = -1;
     float totalTurnaroundTime = 0;
     float totalWaitingTime = 0;
