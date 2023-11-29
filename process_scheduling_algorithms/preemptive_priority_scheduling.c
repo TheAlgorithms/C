@@ -3,13 +3,13 @@
  * @brief
  * [Preemptive Priority
  * Scheduling]
- *  Preemptive Priority Scheduling is a CPU scheduling algorithm
-    that assigns priorities to processes and selects the process
-    with the highest priority to execute. If a higher-priority
-    process becomes available, it preempts the currently executing
-    process. This algorithm ensures that higher-priority processes
-    are given preference, but it may lead to starvation of lower-priority
-    processes if not handled properly.*
+ *  Preemptive Priority Scheduling is a   CPU scheduling algorithm
+ *  that assigns priorities to processes and selects the process
+ *  with the highest priority to execute. If a higher-priority
+ *  process becomes available, it preempts the currently executing.
+ *  This algorithm ensures that higher-priority processes
+ *  are given preference, but it may lead to starvation of lower-priority
+ *   if not handled properly.*
  *
  * @details
  Algorithm Overview:
