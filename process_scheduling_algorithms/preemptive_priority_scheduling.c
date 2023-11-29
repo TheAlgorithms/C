@@ -32,12 +32,12 @@
  * @brief Structure to represent a process
  */
 struct Process {
-    int id;             /**< Process ID */
-    int arrival_time;   /**< Arrival time of the process */
-    int burst_time;     /**< Burst time of the process */
-    int priority;       /**< Priority of the process */
-    int executed_time;  /**< Time the process has been executed */
-    int completion_time;/**< Completion time of the process */
+    int id;             ///< Process ID
+    int arrival_time;   ///< Arrival time of the process 
+    int burst_time;     ///< Burst time of the process
+    int priority;       ///< Priority of the process
+    int executed_time;  ///< Time the process has been executed
+    int completion_time;///< Completion time of the process 
 };
 /**
  * @brief Performs preemptive priority scheduling for a set of processes.
