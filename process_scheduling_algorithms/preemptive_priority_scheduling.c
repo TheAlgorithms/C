@@ -12,21 +12,19 @@
  *   if not handled properly.*
  *
  * @details
- Algorithm Overview:
-    1. Initialize a set of processes with attributes such as ID, arrival time,
-       burst time, priority, executed time, and completion time.
-    2. Start with an empty queue of ready processes and initialize variables
-       to keep track of the current time, executed processes, and the currently
-       executing process.
-    3. Repeat the following steps until all processes are executed:
-       a. Find the process with the highest priority that has arrived and
-          not completed yet.
-       b. Execute the selected process for one time unit, updating its
-          executed time and the current time.
-       c. If the selected process completes, calculate its completion time,
-          print a completion message, and update turnaround and waiting times.
-       d. If no suitable process is found to execute, increment the current time.
-    4. Calculate and print the average turnaround time and average waiting time.
+ *  Algorithm Overview:
+ *    1. Initialize a set of processes with such as ID, arrival time,
+ *       burst time, priority, executed time, and completion time.
+ *      2. Start with an empty queue of ready processes and initialize variables
+ *         to keep track of the current time, executed processes, and the currently
+ *         executing process.
+ *      3. Repeat the following steps until all processes are executed:
+ *         a. Find the process with the highest priority that has arrived and
+ *           not completed yet.
+ *       b. Execute the selected process for one time unit, updating its executed time and the current time.
+ *       c. If the selected process completes, calculate its completion time, print a completion message, and update turnaround and waiting times.
+ *       d. If no suitable process is found to execute, increment the current time.
+ *     4. Calculate and print the average turnaround time and average waiting time.
  * @author [Archana Saroj](https://github.com/SarojArchana)
  */
 #include <stdio.h>    /// for IO operations (`printf`)
