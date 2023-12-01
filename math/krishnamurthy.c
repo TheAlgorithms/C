@@ -2,7 +2,7 @@
 #include <assert.h> //For test cases
 
 /**
-MAIN DESCRIPTION:
+SCRIPT DESCRIPTION:
 
  * @description a krishnamurthy number is
  * a number whose sum of the factorial of digits
@@ -74,4 +74,3 @@ int main(){
     tests();
     return 0;
 }
-
