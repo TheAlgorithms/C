@@ -10,6 +10,12 @@
 #include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef _MSC_VER
+#include <intrin.h>
+#define trailing_zeros(x) _tzcnt_u64(x)
+#else
+#define trailing_zeros(x) __builtin_ctzll(x)
+#endif
 
 /**
  * @brief Get greatest common divisor of u and v without division
@@ -33,8 +39,8 @@ unsigned long binary_gcd(unsigned long u, unsigned long v)
 
     // get number of trailing zero bits
     // essentially powers of 2 in prime factorization
-    u_tz = __builtin_ctzll(u);
-    v_tz = __builtin_ctzll(v);
+    u_tz = trailing_zeros(u);
+    v_tz = trailing_zeros(v);
 
     // keep minimum of powers of 2 because gcd(2u, 2v) = 2·gcd(u, v)
     shift = (u_tz < v_tz) ? u_tz : v_tz;
@@ -46,7 +52,7 @@ unsigned long binary_gcd(unsigned long u, unsigned long v)
     {
         tmp = (u > v) ? u - v : v - u;  // |u - v|
         v = (u > v) ? v : u;            // min(u, v)
-        u_tz = __builtin_ctzll(tmp);
+        u_tz = trailing_zeros(tmp);
         u = tmp >> u_tz;
     } while (u != 0);
 
