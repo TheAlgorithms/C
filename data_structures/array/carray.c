@@ -68,6 +68,7 @@ int removeValueCArray(CArray *array, int position)
         if (array->array[position] != 0)
         {
             array->array[position] = 0;
+            return SUCCESS;
         }
         else
             return POSITION_EMPTY;
