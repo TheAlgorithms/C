@@ -1,21 +1,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 // INCLUDES
-#include "include.h";
-
+#include <stdio.h>
+#include<stdlib.h>
+////////////////////////////////////////////////////////////////////////////////
+// Defination of the node
+struct node{
+    int data;
+    struct node *next;
+    struct node *pre;
+};
+////////////////////////////////////////////////////////////////////////////////
+// Declaring head, tail
+struct node* head=NULL;
+struct node* tail =NULL;
 ////////////////////////////////////////////////////////////////////////////////
 // GLOBAL VARIABLES
 int count;
-
-////////////////////////////////////////////////////////////////////////////////
-// MAIN ENTRY POINT
-
-int main(int argc, char const *argv[])
-{
-    create();
-    enque(5);
-
-    return 0;
-}
 
 void create()
 {
@@ -36,7 +36,8 @@ void enque(int x)
         tail = head;
     }
     else
-    {
+    {   
+        struct node* tmp;
         tmp = (struct node *)malloc(sizeof(struct node));
         tmp->data = x;
         tmp->next = tail;
@@ -53,7 +54,7 @@ int deque()
     if (head == NULL)
     {
         printf("ERROR: Deque from empty queue.\n");
-        exit(1);
+        return 0;
     }
     else
     {
@@ -71,3 +72,15 @@ int deque()
  * Returns the size of the Queue.
  */
 int size() { return count; }
+
+
+////////////////////////////////////////////////////////////////////////////////
+// MAIN ENTRY POINT
+
+int main(int argc, char const *argv[])
+{
+    create();
+    enque(5);
+
+    return 0;
+}
