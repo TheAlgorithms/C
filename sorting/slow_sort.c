@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+/*Displays array passed as parameter*/
 void display(int arr[], int size)
 {
 	for(int i = 0; i < size; i++)
@@ -12,6 +13,7 @@ void display(int arr[], int size)
 	printf("\n");
 }
 
+/*Swaps the two values passed to the function*/
 void swap(int *num1, int *num2)
 {
 	int temp = *num1;
@@ -19,6 +21,12 @@ void swap(int *num1, int *num2)
 	*num2 = *num1;
 }
 
+/*
+  Slow sort function
+  @param arr The array to be sorted
+  @param low The starting index
+  @param high The ending index
+*/
 void slowsort(int arr[], int low, int high)
 {
 	if (low >= high)
@@ -35,6 +43,7 @@ void slowsort(int arr[], int low, int high)
 	slowsort(arr, low, high - 1);
 }
 
+/*Test function*/
 void test()
 {
 	const int size = 20;
