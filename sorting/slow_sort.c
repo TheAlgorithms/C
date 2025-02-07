@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <assert.h>
 
 /*Displays array passed as parameter*/
 void display(int arr[], int size)
@@ -56,6 +57,11 @@ void test()
 	}
 
 	slowsort(arr, 0, size-1);
+
+	for (int i = 0; i < size - 1; i++)
+	{
+		assert(arr[i] <= arr[i+1]);
+	}
 
 	display(arr, size);
 
