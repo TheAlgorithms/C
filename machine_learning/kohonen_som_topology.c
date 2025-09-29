@@ -239,7 +239,7 @@ double kohonen_update_weights(const double *X, struct kohonen_array_3d *W,
     double d_min = 0.f;
 
 #ifdef _OPENMP
-#pragma omp for
+#pragma omp parallel for
 #endif
     // step 1: for each 2D output point
     for (x = 0; x < num_out; x++)
@@ -271,9 +271,7 @@ double kohonen_update_weights(const double *X, struct kohonen_array_3d *W,
 
     // step 3b: update the weights of nodes in the
     // neighborhood
-#ifdef _OPENMP
-#pragma omp for
-#endif
+
     for (x = from_x; x < to_x; x++)
     {
         for (y = from_y; y < to_y; y++)
@@ -306,7 +304,7 @@ double kohonen_update_weights(const double *X, struct kohonen_array_3d *W,
  *
  * \param[in] X data set
  * \param[in,out] W weights matrix
- * \param[in] num_samples number of output points
+ * \param[in] num_samples number of input samples
  * \param[in] num_features number of features per input sample
  * \param[in] num_out number of output points
  * \param[in] alpha_min terminal value of alpha
