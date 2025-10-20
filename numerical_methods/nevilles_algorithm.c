@@ -6,11 +6,12 @@
  * https://en.wikipedia.org/wiki/Neville%27s_algorithm
  * @author [Mitrajit Ghorui](https://github.com/KeyKyrios)
  */
-#include <assert.h>    /// for assert
-#include <math.h>      /// for fabs
-#include <stdio.h>     /// for IO operations
-#include <stdlib.h>    /// for malloc, free
-#include <string.h>    /// for memcpy
+#include <assert.h>   /// for assert
+#include <math.h>     /// for fabs and isnan
+#include <stdbool.h>  /// for bool
+#include <stdio.h>    /// for IO operations
+#include <stdlib.h>   /// for malloc, free
+#include <string.h>   /// for memcpy
 
 /**
  * @brief Evaluates the interpolating polynomial at a specific point.
@@ -18,18 +19,26 @@
  * @param y_coords Array of y-coordinates of the given points.
  * @param n The number of points (size of the arrays).
  * @param target The x-coordinate at which to evaluate the polynomial.
- * @returns The interpolated y-value at the target x-coordinate. Returns NaN if
- * inputs are invalid.
+ * @returns The interpolated y-value. Returns NaN if inputs are invalid or
+ * x-coordinates are not unique.
  */
 double interpolate(const double *x_coords, const double *y_coords, size_t n,
                    double target) {
     if (n == 0) {
-        return NAN;  // Not a Number, indicates error
+        return NAN;
+    }
+
+    for (size_t i = 0; i < n; ++i) {
+        for (size_t j = i + 1; j < n; ++j) {
+            if (x_coords[i] == x_coords[j]) {
+                return NAN;  // Duplicate x-values are invalid
+            }
+        }
     }
 
     double *p = (double *)malloc(n * sizeof(double));
     if (p == NULL) {
-        return NAN; // Memory allocation failed
+        return NAN;  // Memory allocation failed
     }
     memcpy(p, y_coords, n * sizeof(double));
 
@@ -71,6 +80,12 @@ static void tests() {
     double expected3 = 0.0;
     assert(fabs(interpolate(x3, y3, 3, 1.0) - expected3) < 1e-9);
     printf("Negative numbers test passed.\n");
+
+    // Test 4: Duplicate x-coordinates should return NaN
+    double x4[] = {1, 2, 1};
+    double y4[] = {5, 8, 3};
+    assert(isnan(interpolate(x4, y4, 3, 1.5)));
+    printf("Duplicate X coordinate test passed.\n");
 
     printf("All tests have successfully passed!\n");
 }
