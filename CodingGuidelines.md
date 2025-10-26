@@ -1,19 +1,22 @@
-# Code style convention  
+# Code Style Conventions
 
-Please orient on this guide before you sent a pull request.  
-
----
-
-## User-interface  
-
-Please write a simple user interface for your programs. Not a blinking cursor!  
-What does the program do?  
-What want the program an user informations?  
+Please read this guide before you submit a pull request.
 
 ---
 
-## Code style conventions  
+## User Interface
 
-See [here](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)  
-Don't push all code in one line!  
+Please provide a simple, clear user interface for your programs — not just a blinking cursor.
+- Explain what the program does.
+- Describe what inputs the user needs to provide.
+- Show example usage or prompts when appropriate.
+
+---
+
+## Code Style
+
+See the [CMU C Coding Standard](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html).
+- Keep code readable and well formatted.
+- Do not put all code on one line; use proper indentation and spacing.
+- Prefer meaningful names and consistent conventions.
 
