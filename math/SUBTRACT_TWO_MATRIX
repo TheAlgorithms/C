@@ -1,0 +1,32 @@
+//addition of matrix or subtraction of matrix
+#include<stdio.h>
+int main()
+{
+    int a[10][10],b[10][10],x[10][10];
+    int r,c;
+    printf("\n Enter the order of matrix a (max 10x10):");
+    scanf("%d%d",&r,&c);
+    printf("enter the elements of matrix a: ");
+    for (int i=0;i<r;i++)
+    for (int j=0;j<c;j++)
+    scanf("%d",&a[i][j]);
+    printf("\n enter the elements of matrix b: ");
+    for (int i=0;i<r;i++)
+    for (int j=0;j<c;j++)
+    scanf("%d",&b[i][j]);
+
+    for(int i=0;i<r;i++)
+    for(int j=0;j<c;j++)
+    //x[i][j]=a[i][j]+b[i][j];    //for addition
+    x[i][j]=a[i][j]-b[i][j];      //for subtraction
+
+    printf("now the elements of the resultant matrix x is:  ");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        printf(" %d",x[i][j]);
+        printf("\n");
+    }
+    return 0;
+
+}
