@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     else
     {
         printf("Enter starting number: ");
-        scanf("%lu", &n);  // input number
+        scanf("%llu", &n);  // input number
     }
 
     curr_no = n;          // curr_no stores input number n

@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/tcp_half_duplex_client.dir/tcp_half_duplex_client.c.o -o tcp_half_duplex_client  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

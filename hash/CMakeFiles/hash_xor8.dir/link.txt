@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hash_xor8.dir/hash_xor8.c.o -o hash_xor8  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

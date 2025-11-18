@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     printf("Data Sorted\n");
     show_data(array, size);  // display array after sorting
 
-    printf("Time spent sorting: %.4g s\n", (t2 - t1) / CLOCKS_PER_SEC);
+    printf("Time spent sorting: %.4lu s\n", (t2 - t1) / CLOCKS_PER_SEC);
 
     free(array);
     return 0;

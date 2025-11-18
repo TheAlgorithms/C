@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/is_armstrong.dir/is_armstrong.c.o -o is_armstrong  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

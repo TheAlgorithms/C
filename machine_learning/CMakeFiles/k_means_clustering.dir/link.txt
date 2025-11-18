@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/k_means_clustering.dir/k_means_clustering.c.o -o k_means_clustering  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

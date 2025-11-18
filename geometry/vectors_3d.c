@@ -249,7 +249,7 @@ static void test()
 
     double alpha = get_angle(&a, &b);
     // printf("The angle is %f\n", alpha);
-    assert(fabsf(alpha - 0.387597) < 0.01);
+    assert(fabs(alpha - 0.387597) < 0.01);
 }
 
 /**

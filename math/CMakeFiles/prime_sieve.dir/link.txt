@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/prime_sieve.dir/prime_sieve.c.o -o prime_sieve  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

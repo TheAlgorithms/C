@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmalloc_dbg.a CMakeFiles/malloc_dbg.dir/malloc_dbg.c.o
+/usr/bin/ranlib libmalloc_dbg.a

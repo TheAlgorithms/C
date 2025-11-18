@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_malloc_dbg.dir/test_malloc_dbg.c.o -o test_malloc_dbg  libmalloc_dbg.a /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

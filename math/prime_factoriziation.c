@@ -136,9 +136,8 @@ Range int_fact(int n)
 void print_arr(Range pStr)
 {
     assert(pStr); /* checks whether pStr is a null-pointer */
-    int i = 0;
     printf("\n");
-    for (i; i < pStr->length; i++)
+    for (int i = 0; i < pStr->length; i++)
     {
         if (i == 0)
             printf("%d", pStr->range[0]);

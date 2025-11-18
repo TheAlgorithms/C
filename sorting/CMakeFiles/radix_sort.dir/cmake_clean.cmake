@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/radix_sort.dir/radix_sort.c.o"
+  "CMakeFiles/radix_sort.dir/radix_sort.c.o.d"
+  "radix_sort"
+  "radix_sort.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/radix_sort.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

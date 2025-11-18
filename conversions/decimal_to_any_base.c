@@ -108,7 +108,7 @@ static void test()
 	
 	/* max dec*/
 	reference = "18446744073709551615";
-	ret = decimal_to_anybase(18446744073709551615, "0123456789");
+	ret = decimal_to_anybase(18446744073709551615ULL, "0123456789");
 	for (int i = 0; i < strlen(reference) && i < strlen(ret); i++) {
 		assert(ret[i] == reference[i]);
 	}

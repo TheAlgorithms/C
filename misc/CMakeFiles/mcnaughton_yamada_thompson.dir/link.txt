@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/mcnaughton_yamada_thompson.dir/mcnaughton_yamada_thompson.c.o -o mcnaughton_yamada_thompson  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd

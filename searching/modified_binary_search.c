@@ -112,7 +112,7 @@ int main()
         }
     }
 
-    modifiedBinarySearch(mat, n, m, x);
+    modifiedBinarySearch((const int **)mat, n, m, x);
 
     for (int i = 0; i < n; i++) free(mat[i]);
     free(mat);

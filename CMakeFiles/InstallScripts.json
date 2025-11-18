@@ -1,0 +1,25 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jesperolsen/development/C/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/developer_tools/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/hash/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/misc/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/games/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/audio/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/sorting/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/geometry/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/graphics/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/searching/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/conversions/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/client_server/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/project_euler/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/machine_learning/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/process_scheduling_algorithms/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/numerical_methods/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/math/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/cipher/cmake_install.cmake",
+		"/Users/jesperolsen/development/C/dynamic_programming/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -33,10 +33,10 @@ uint64_t djb2(const char* s)
  */
 void test_djb2(void)
 {
-    assert(djb2("Hello World") == 13827776004929097857);
-    assert(djb2("Hello World!") == 13594750393630990530);
-    assert(djb2("Hello world") == 13827776004967047329);
-    assert(djb2("Hello world!") == 13594750394883323106);
+    assert(djb2("Hello World") == 13827776004929097857ULL);
+    assert(djb2("Hello World!") == 13594750393630990530ULL);
+    assert(djb2("Hello world") == 13827776004967047329ULL);
+    assert(djb2("Hello world!") == 13594750394883323106ULL);
     printf("Tests passed\n");
 }
 
