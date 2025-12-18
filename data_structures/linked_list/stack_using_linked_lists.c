@@ -1,3 +1,29 @@
+/*
+ * Stack using Linked List
+ * -----------------------
+ * This program implements a stack data structure using a singly linked list.
+ *
+ * Operations supported:
+ * 1. Push  - Insert an element at the top of the stack
+ * 2. Pop   - Remove the top element from the stack
+ * 3. Peek  - View the top element without removing it
+ * 4. Display - Print all elements of the stack
+ *
+ * Advantages of Linked List Stack:
+ * - Dynamic size (no fixed capacity)
+ * - Efficient push and pop operations (O(1))
+ *
+ * Time Complexity:
+ * Push  : O(1)
+ * Pop   : O(1)
+ * Peek  : O(1)
+ *
+ * Space Complexity:
+ * O(n), where n is the number of elements in the stack
+ *
+ * Author: Open Source Contributor
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 struct node
@@ -35,7 +61,7 @@ int main()
         }
     }
 }
-
+//Pushes an element on the top of the Stack
 void push(struct node *p)
 {
     int item;
@@ -50,6 +76,7 @@ void push(struct node *p)
 
     printf("Inserted successfully.\n");
 }
+//Pops the topmost Element
 void pop(struct node *p)
 {
     int item;
@@ -66,7 +93,7 @@ void pop(struct node *p)
         printf("\nElement popped is %d.\n", item);
     }
 }
-
+//Displays all the Elements of the stack
 void display(struct node *p)
 {
     if (top == NULL)
