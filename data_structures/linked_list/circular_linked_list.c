@@ -1,155 +1,219 @@
-/* Circularly Linked List (Basic Operations) - Program to create a Circularly linked list abstract data type and perform various operations on it (Variable first and last declared globally) */
+/* Circularly Linked List (Basic Operations) - Program to create a Circularly
+ * linked list abstract data type and perform various operation on it */
 
-#include  <stdio.h>
-#include <conio.h>
-#include  <stdlib.h>
-#define  NULL  0
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Assume that the data portion of each node consists of ONLY an integer.*/
-struct  node
+struct node
 {
-  int  data ;
-  struct  node  *next ;
-} ;
+    int data;
+    struct node* next;
+};
 
-struct  node  *first=NULL ;
-struct  node  *last=NULL ;
-/* first and last are global variables and need not be passed to any function. Any changes made to variables first and last by any of the functions in the program will be reflected in the entire program */
-
-/* This function is responsible for creating the Circularly Linked List right from the BEGINNING. */
-void  create()
+/* Circular Linked List as a standalone structure
+   first : marks the beginning of linked list
+   last : marks the last node of linked list
+*/
+struct circularLinkedList
 {
-  int  i , n ;
-  struct  node  *pnode , *p ;
+    struct node* first;
+    struct node* last;
+};
 
-  printf("Enter the number of nodes required:\n") ;
-  scanf("%d",&n) ;
+/* This function create a new node and returns its pointer. */
+struct node* createNode(int data)
+{
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    newNode->data = data;
+    newNode->next = NULL;
 
-  printf("Enter the data value of each node:\n") ;
-  for(i=1 ; i<=n ; i++)
-  {
-    pnode=(struct node*)malloc(sizeof(struct node)) ;
-    if(pnode==NULL)
+    return newNode;
+}
+
+/* This function deletes a node */
+void deleteNode(struct node* n)
+{
+    if (n)
     {
-      printf("Memory overflow. Unable to create.\n") ;
-      return ;
+        free(n);
+    }
+}
+
+/* This function creates a new Circular Linked List from scratch.
+CLL stands for "Circular Linked List"*/
+struct circularLinkedList* createCLL()
+{
+    struct circularLinkedList* list =
+        (struct circularLinkedList*)malloc(sizeof(struct circularLinkedList));
+
+    list->first = NULL;
+    list->last = NULL;
+
+    return list;
+}
+
+/* This function adds a new node at the front. */
+void addNodeAtFront(struct circularLinkedList* cll, int data)
+{
+    struct node* newNode = createNode(data);
+
+    if (cll->first == NULL)
+    {
+        cll->first = newNode;
+        cll->last = newNode;
+        newNode->next = newNode;
+        return;
     }
 
-    scanf("%d",&pnode->data) ;
+    newNode->next = cll->first;
+    cll->first = newNode;
+    cll->last->next = cll->first;
+}
 
-    if(first==NULL)
-	 first=last=pnode ;
+/* This function adds a new node at the rear. */
+void addNodeAtRear(struct circularLinkedList* cll, int data)
+{
+    struct node* newNode = createNode(data);
+
+    if (cll->first == NULL)
+    {
+        cll->first = newNode;
+        cll->last = newNode;
+        newNode->next = newNode;
+        return;
+    }
+
+    cll->last->next = newNode;
+    cll->last = newNode;
+    cll->last->next = cll->first;
+}
+
+/* This function deletes the node at the front of the Circular Linked List. */
+void deleteFront(struct circularLinkedList* cll)
+{
+    if (cll->first == NULL)
+    {
+        printf("Circularly Linked List Empty\n");
+        return;
+    }
+
+    struct node* temp = cll->first;
+
+    if (cll->first == cll->last)
+    {
+        cll->first = NULL;
+        cll->last = NULL;
+    }
     else
     {
-	  last->next=pnode ;
-	  last=pnode ;    /* last keeps track of last node */
+        cll->first = cll->first->next;
+        cll->last->next = cll->first;
     }
 
-    last->next=first ;
-  }
+    deleteNode(temp);
 }
 
-/* This function will delete a node with value k from the Linked List if such a node exists */
-void  deletenode(int  k)
+/* This function deletes the node at the end of Circular Linked List. */
+void deleteRear(struct circularLinkedList* cll)
 {
-  struct  node  *p , *follow ;
-
-  /* searching the required node */
-  p=first ;
-  follow=NULL ;
-  while(follow!=last)
-  {
-    if(p->data==k)
-	  break ;
-    follow=p ;
-    p=p->next ;
-  }
-
-  if(follow==last)
-    printf("Required node not found.\n") ;
-  else
-  {
-    if(p==first&&p==last)  /* deleting the one and the only node */
-	  first=last=NULL ;
-    else if(p==first)       /* deleting the first node */
+    if (cll->first == NULL)
     {
-      first=first->next ;
-      last->next=first ;
+        printf("Circularly Linked List Empty\n");
+        return;
     }
-    else if(p==last)      /* deleting the last node */
-    {
-      last=follow ;
-      last->next=first ;
-    }
-    else		/* deleting any other node */
-      follow->next=p->next ;
 
-    free(p) ;
-  }
+    struct node* temp = cll->last;
+    if (cll->first == cll->last)
+    {
+        cll->first = NULL;
+        cll->last = NULL;
+    }
+    else
+    {
+        struct node* current = cll->first;
+        while (current->next != cll->last)
+        {
+            current = current->next;
+        }
+        cll->last = current;
+        cll->last->next = cll->first;
+    }
+    deleteNode(temp);
 }
 
-/* This function will go through all the nodes of Linked List exactly once and will display data value of each node */
-void  traverse()
+/* This function deletes the node with the given value. */
+void deleteNodeWithValue(struct circularLinkedList* cll, int data)
 {
-  struct  node  *p , *follow ;
-  if(first==NULL)
-    printf("Circularly Linked List Empty") ;
-  else
-  {
-    printf("Circularly Linked List is as shown: \n") ;
-
-    p=first ;
-    follow = NULL ;
-    while(follow!=last)
+    if (cll->first == NULL)
     {
-      printf("%d " , p->data) ;
-      follow=p ;
-      p=p->next ;
+        printf("Circularly Linked List Empty\n");
+        return;
     }
 
-    printf("\n") ;
-  }
+    struct node* current = cll->first;
+    struct node* previous = cll->last;
+    do
+    {
+        if (current->data == data)
+        {
+            if (current == cll->first)
+            {
+                deleteFront(cll);
+            }
+            else if (current == cll->last)
+            {
+                deleteRear(cll);
+            }
+            else
+            {
+                previous->next = current->next;
+                deleteNode(current);
+            }
+            return;
+        }
+        previous = current;
+        current = current->next;
+    } while (current != cll->first);
+
+    printf("Required node not found.\n");
 }
 
-void main()
+void traverse(struct circularLinkedList* cll)
 {
-  int  x , k , ch ;
-  clrscr() ;
-  do
-  {
-    printf("\n Menu: \n") ;
-    printf("1:Create Linked List \n") ;
-    printf("2:Delete Node \n") ;
-    printf("3:Traverse \n") ;
-    printf("4:Exit \n") ;
-
-    printf("\nEnter your choice: ") ;
-    scanf("%d",&ch) ;
-
-    switch(ch)
+    if (cll->first == NULL)
     {
-      case 1:
-      create() ;
-      break ;
-
-      case 2:
-      printf("Enter the data value of the node to be deleted: ") ;
-      scanf("%d",&k) ;
-      deletenode(k) ;
-      break ;
-
-      case 3:
-      traverse() ;
-      break ;
-
-      case 4:
-      break ;
+        printf("Circularly Linked List Empty\n");
+        return;
     }
- }
- while(ch!=4) ;
 
- getch() ;
+    struct node* current = cll->first;
+    printf("Circularly Linked List is as shown:\n");
+    do
+    {
+        printf("%d ", current->data);
+        current = current->next;
+    } while (current != cll->first);
+    printf("\n");
 }
 
+int main()
+{
+    struct circularLinkedList* cll = createCLL();
 
+    addNodeAtRear(cll, 10);
+    addNodeAtRear(cll, 20);
+    addNodeAtFront(cll, 5);
+    traverse(cll);
 
+    deleteNodeWithValue(cll, 20);
+    traverse(cll);
+
+    deleteFront(cll);
+    traverse(cll);
+
+    deleteRear(cll);
+    traverse(cll);
+
+    return 0;
+}
