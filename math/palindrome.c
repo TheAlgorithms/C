@@ -22,12 +22,18 @@ int main()
 
 /**
  * Check given number whether is palindrome number or not
+ * A palindrome number is read same backward as forward. Eg.123321
+ * Negative numbers are not considered palindromes.
  * @param number number to check
  * @return `true` if given number is palindrome number
  * @return `false` if number is not a palindrome number
  */
 bool isPalindrome(int number)
 {
+    if(number<0)
+    {
+        return false;   // negative numbers can not be palindromes
+    }
     int reversedNumber = 0;
     int originalNumber = number;
     while (number != 0)
