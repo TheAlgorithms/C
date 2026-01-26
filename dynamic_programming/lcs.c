@@ -32,7 +32,7 @@ void lcslen(const char *s1, const char *s2, int l1, int l2, int **L, int **B) {
 	   L is the LCS matrix */
 	int i, j;
 
-	/* loop over the simbols in my sequences
+	/* loop over the symbols in my sequences
 	   save the directions according to the LCS */
 	for (i = 1; i <= l1; ++i) {
 		for (j = 1; j <= l2; ++j) {
