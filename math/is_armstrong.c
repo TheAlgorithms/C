@@ -1,17 +1,37 @@
 #include <stdio.h>
 
+
 int main()
 {
-    int n, sum = 0, i, num;
+    int num, temp, rem, sum = 0, d = 0;
+
     printf("Enter number: ");
-    scanf("%d", &n);
-    num = n;
-    while (n != 0)
+    scanf("%d", &num); // get number
+    
+    temp = num;
+    // get number of digits
+    // and save in variable d
+    while (temp)
     {
-        i = n % 10;
-        sum = sum + (i * i * i);
-        n = n / 10;
+        temp /= 10;
+        d += 1;
     }
+
+    temp = num;
+    int powerSum;
+    // adding digits of number
+    // each raised to the power of the total number of digits
+    while (temp)
+    {
+        rem = temp % 10;
+        temp /= 10;
+        powerSum = rem;
+        for (int i=1; i<d; i++) powerSum *= rem;
+        sum += powerSum;
+    }
+
+    // if sum is same as num,
+    // then it is an armstrong number
     if (sum == num)
     {
         printf("%d is an armstrong number!\n", num);
