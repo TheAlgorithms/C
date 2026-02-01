@@ -58,7 +58,7 @@ void *get_element_label(Dictionary *, char[]);
 void *get_element_index(Dictionary *, int);
 
 /*
-    simple destrcutor function
+    simple destructor function
 */
 void destroy(Dictionary *);
 
