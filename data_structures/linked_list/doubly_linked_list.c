@@ -168,6 +168,8 @@ List *insert(List *list, double value, int pos)
         }
         return list;
     }
+
+    return list;
 }
 
 /**
@@ -230,6 +232,8 @@ List *delete(List *list, int pos)
         }
         return list;
     }
+
+    return list;
 }
 
 /**
@@ -245,7 +249,7 @@ int search(List *list, double value)
         return 0;
     if (list->value == value)
         return 1;
-    search(list->next, value);
+    return search(list->next, value);
 }
 
 /**
