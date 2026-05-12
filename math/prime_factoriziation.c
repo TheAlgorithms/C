@@ -66,7 +66,7 @@ Range int_fact(int n)
     int i = 0;
     int *range = (int *)malloc(sizeof(int) * len);
     assert(range);
-    Range pstr = (Range)malloc(sizeof(range));
+    Range pstr = (Range)malloc(sizeof(struct data));
     assert(pstr);
 
     while (n % 2 == 0)
