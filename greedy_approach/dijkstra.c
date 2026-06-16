@@ -21,6 +21,14 @@ int cf(void *a, void *b)
     return *y - *x;
 }
 
+int cf2(void *a, void *b)
+{
+    int *x = (int *)a;
+    int *y = (int *)b;
+    return dist[*y] - dist[*x];
+}
+
+
 int dequeue()
 {
     qsort(q, qp, sizeof(int), cf);
