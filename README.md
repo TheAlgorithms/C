@@ -14,11 +14,11 @@
 
 ## Overview
 
-The repository is a collection of open-source implementations of a variety of algorithms implemented in C and licensed under [GPLv3 License](https://github.com/TheAlgorithms/C/blob/master/LICENSE). The algorithms span a variety of topics from computer science, mathematics and statistics, data science, machine learning, engineering, etc.. The implementations and their associated documentations are meant to provide a learning resource for educators and students. Hence, one may find more than one implementation for the same objective but using different algorithm strategies and optimizations.
+The repository is a collection of open-source implementations of a variety of algorithms implemented in C and licensed under [GPLv3 License](https://github.com/TheAlgorithms/C/blob/master/LICENSE). The algorithms span a variety of topics from computer science, mathematics and statistics, data science, machine learning, engineering, etc. The implementations and their associated documentations are meant to provide a learning resource for educators and students. Hence, one may find more than one implementation for the same objective but using different algorithm strategies and optimizations.
 
 ## Features
 
-* The repository provides implementations of various algorithms in one of the most fundamental general purpose languages - [C](https://en.wikipedia.org/wiki/C_(programming_language)).
+* The repository provides implementations of various algorithms in one of the most fundamental general-purpose languages - [C](https://en.wikipedia.org/wiki/C_(programming_language)).
 * Well documented source code with detailed explanations provide a valuable resource for educators and students alike.
 * Each source code is atomic using standard C library [`libc`](https://en.wikipedia.org/wiki/C_standard_library) and _no external libraries_ are required for their compilation and execution. Thus the fundamentals of the algorithms can be studied in much depth.
 * Source codes are [compiled and tested](https://github.com/TheAlgorithms/C/actions?query=workflow%3A%22Awesome+CI+Workflow%22) for every commit on the latest versions of two major operating systems viz., MacOS and Ubuntu (Linux) using AppleClang 14.0.0 and GNU 11.3.0 respectively.
