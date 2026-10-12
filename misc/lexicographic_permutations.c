@@ -57,8 +57,20 @@ int main()
         perror("Input number out of range: >0 and <1000\n");
         return -1;
     }
-    char *str = (char *)malloc(n * sizeof(char));
-    scanf("%s", str);
+    char *str = malloc((n + 1) * sizeof(char));
+    if (str == NULL)
+    {
+        return -1;
+    }
+
+    char input_format[16];
+    snprintf(input_format, sizeof(input_format), "%%%ds", n);
+    if (scanf(input_format, str) != 1)
+    {
+        free(str);
+        return -1;
+    }
+
     PrintSortedPermutations(str);
     free(str);
     return 0;
