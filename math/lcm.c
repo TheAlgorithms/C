@@ -16,7 +16,19 @@ int gcd(int a, int b)
 }
 
 // Function to return LCM of two numbers
-int lcm(int a, int b) { return (a * b) / gcd(a, b); }
+int lcm(int a, int b)
+{
+    // gcd(a, b) == 0 only when both inputs are zero; the division below would
+    // raise SIGFPE. lcm(0, 0) is conventionally 0.
+    if (a == 0 || b == 0)
+        return 0;
+
+    // Divide BEFORE multiplying. gcd(a, b) divides a exactly, so the
+    // intermediate value never exceeds the true LCM: for a = b = 50000 the old
+    // order computed 50000 * 50000 = 2500000000 (signed overflow, UB in C11)
+    // even though the answer 50000 fits in int with room to spare.
+    return (a / gcd(a, b)) * b;
+}
 
 // Driver program
 int main()
