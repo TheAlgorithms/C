@@ -4,6 +4,7 @@
  * number](https://en.wikipedia.org/wiki/Palindrome) or not.
  * @see project_euler/problem_4/sol1.c
  */
+//salut baieti
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
