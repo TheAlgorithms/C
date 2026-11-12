@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 // Euclid's algorithm
+// This function returns the greatest common divisor of x and y.
 int GCD(int x, int y)
 {
     if (y == 0)
