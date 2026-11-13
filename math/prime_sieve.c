@@ -20,11 +20,11 @@ const unsigned long long MAX_SIZE = 1000000;  /// variable upto which prime numb
  */
 void prime(int *p)
 {
-	for(long long int i=3;i<=MAX_SIZE;i+=2) { p[i]=1; }
-	for(long long int i=3;i<=MAX_SIZE;i+=2)
+	for(long long int i=3;i<MAX_SIZE;i+=2) { p[i]=1; }
+	for(long long int i=3;i<MAX_SIZE;i+=2)
 	{
 		if(p[i]==1) {
-		    for(long long int j=i*i;j<=MAX_SIZE;j+=i) {
+		    for(long long int j=i*i;j<MAX_SIZE;j+=i) {
 			p[j]=0;
 		    }
 		}
@@ -41,7 +41,7 @@ void prime(int *p)
  */
 int count(int *arr, const int size){
   int k=0;
-  for(int i=0;i<=size;i++){
+  for(int i=0;i<size;i++){
     if(arr[i]==1){
       k++;
     }
@@ -55,12 +55,17 @@ int count(int *arr, const int size){
  */
 static void test()
 {
-    // Test Case 1
+    // Test Case 1: Count primes up to 10 (2, 3, 5, 7 -> 4 primes)
     const int size = 10; /* array size */
     printf("Test Case 1...");
-    int arr[1000005]={0};   /* array to store prime numbers */
+    int arr[1000000]={0};   /* array to store prime numbers */
     prime(arr);
     assert(count(arr,size)==4);
+    printf("Passed\n");
+
+    // Test Case 2: Count primes up to 100 (25 primes)
+    printf("Test Case 2...");
+    assert(count(arr, 100) == 25);
     printf("Passed\n");
 }
 
