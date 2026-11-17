@@ -69,7 +69,7 @@ int main()
         }
 
         printf("Next game ? : ");
-        printf("Enter 1 – YES and 0 - NO ");
+        printf("Enter 1 - YES and 0 - NO ");
         scanf("%d", &l);
 
     } while (l == 1);
