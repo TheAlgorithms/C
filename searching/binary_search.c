@@ -50,12 +50,12 @@ int binarysearch1(const int *arr, int l, int r, int x)
  */
 int binarysearch2(const int *arr, int l, int r, int x)
 {
-    int mid = l + (r - l) / 2;
-
-    while (arr[mid] != x)
+    while (l <= r)
     {
-        if (r <= l || r < 0)
-            return -1;
+        int mid = l + (r - l) / 2;
+
+        if (arr[mid] == x)
+            return mid;
 
         if (arr[mid] > x)
             // If element is smaller than middle
@@ -63,12 +63,10 @@ int binarysearch2(const int *arr, int l, int r, int x)
         else
             // Else element is in right subarray
             l = mid + 1;
-
-        mid = l + (r - l) / 2;
     }
 
     // When element is not present in array
-    return mid;
+    return -1;
 }
 
 /** Test implementations */
@@ -99,6 +97,28 @@ void test()
     result = binarysearch2(arr, 0, n - 1, x);
     assert(result == -1);
     printf("passed iterative...\n");
+
+    // Empty ranges must not read the array or report an out-of-range match.
+    assert(binarysearch1(NULL, 0, -1, 2) == -1);
+    assert(binarysearch2(NULL, 0, -1, 2) == -1);
+    assert(binarysearch1(arr, 2, 1, 4) == -1);
+    assert(binarysearch2(arr, 2, 1, 4) == -1);
+
+    // Search boundaries and values outside the array's range.
+    assert(binarysearch1(arr, 0, n - 1, 2) == 0);
+    assert(binarysearch2(arr, 0, n - 1, 2) == 0);
+    assert(binarysearch1(arr, 0, n - 1, 40) == n - 1);
+    assert(binarysearch2(arr, 0, n - 1, 40) == n - 1);
+    assert(binarysearch1(arr, 0, n - 1, 1) == -1);
+    assert(binarysearch2(arr, 0, n - 1, 1) == -1);
+    assert(binarysearch1(arr, 0, n - 1, 41) == -1);
+    assert(binarysearch2(arr, 0, n - 1, 41) == -1);
+
+    // Single-element ranges, with and without a match.
+    assert(binarysearch1(arr, 0, 0, 2) == 0);
+    assert(binarysearch2(arr, 0, 0, 2) == 0);
+    assert(binarysearch1(arr, 0, 0, 3) == -1);
+    assert(binarysearch2(arr, 0, 0, 3) == -1);
 }
 
 /** Main function */
