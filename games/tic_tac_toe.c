@@ -107,6 +107,14 @@ void singlemode()
         scanf("%d", &m);
 
         placex(m);
+		int x = checkwin();
+		
+		if (x == -1)
+		{
+		  printf("YOU WIN\n");
+		  return;
+		}
+		
         if(table_fill_count<4)
         {
           place();
