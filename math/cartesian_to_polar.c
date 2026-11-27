@@ -30,7 +30,7 @@ void to_polar(double x, double y, double *r, double *theta)
         if (y != 0)
         {
             *theta = atan(y / x);
-            if ((x > 0 && y > 0) || (x == -y))
+            if (x > 0 && y > 0)
             {  // Q1
                 thetaFinal = *theta;
             }
@@ -43,8 +43,8 @@ void to_polar(double x, double y, double *r, double *theta)
                 thetaFinal = *theta - M_PI;
             }
             else if (x > 0 && y < 0)
-            {  // Q4
-                thetaFinal = 2 * M_PI - *theta;
+            {  // Q4: atan(y / x) is already in (-pi/2, 0)
+                thetaFinal = *theta;
             }
             else
             {
@@ -114,10 +114,27 @@ void test()
     }
 }
 
+/**
+ * @brief Test the angle in each quadrant, including the diagonals
+ */
+void test_quadrants()
+{
+    const double points[][2] = {{2, -1},  {1, -3}, {1, -1}, {-1, 1}, {-2, 1},
+                                {-1, -1}, {1, 1},  {0, 2},  {0, -2}, {3, 0}};
+    for (size_t i = 0; i < sizeof(points) / sizeof(points[0]); i++)
+    {
+        double r, theta;
+        to_polar(points[i][0], points[i][1], &r, &theta);
+        assert(fabs(r - hypot(points[i][0], points[i][1])) < 1e-9);
+        assert(fabs(theta - atan2(points[i][1], points[i][0])) < 1e-9);
+    }
+}
+
 /** Main function */
 int main()
 {
     test();
+    test_quadrants();
 
     return 0;
 }
