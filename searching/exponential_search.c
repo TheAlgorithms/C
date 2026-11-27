@@ -31,10 +31,10 @@ int64_t exponential_search(const int64_t* arr, const uint16_t length, const int6
     if ( length == 0 ) { return -1; }
     // find the upperbound
     uint32_t upper_bound = 1;
-    while ( upper_bound <= length && arr[upper_bound] < n ) { upper_bound = upper_bound * 2; }
+    while ( upper_bound < length && arr[upper_bound] < n ) { upper_bound = upper_bound * 2; }
     // calculate the range ( between lower_boud and upper_bound )
     uint16_t lower_bound = upper_bound/2;
-    if ( upper_bound > length ) { upper_bound = length; }
+    if ( upper_bound >= length ) { upper_bound = length - 1; }
     // apply the binary search in the range
     return binary_search(arr, lower_bound, upper_bound, n);
 }
@@ -55,13 +55,13 @@ int64_t exponential_search(const int64_t* arr, const uint16_t length, const int6
  */
 int64_t binary_search(const int64_t* arr, const uint16_t l_index, const uint16_t r_index, const int64_t n) 
 {
-    // calculate the middle index of the array
-    uint16_t middle_index = l_index + ( r_index - l_index ) / 2;
     // base cases
     if ( l_index > r_index ) { return -1; }
+    // calculate the middle index of the array
+    uint16_t middle_index = l_index + ( r_index - l_index ) / 2;
     if ( arr[middle_index] == n ) { return middle_index; }
     // recursion
-    if ( arr[middle_index] > n ) { return binary_search(arr, l_index, middle_index-1, n); } // left
+    if ( arr[middle_index] > n ) { return middle_index == 0 ? -1 : binary_search(arr, l_index, middle_index-1, n); } // left
     return binary_search(arr, middle_index+1, r_index, n); // right
 }
 
@@ -89,7 +89,20 @@ static void test()
     assert(exponential_search(arr_found, 3, 10) == -1);
     // element found in an array of length 1
     int64_t arr_one[] = {1};
-    assert(exponential_search(arr_found, 1, 1) == 0);
+    assert(exponential_search(arr_one, 1, 1) == 0);
+    // element not in an array of length 1 (smaller and bigger than the item)
+    assert(exponential_search(arr_one, 1, 0) == -1);
+    assert(exponential_search(arr_one, 1, 2) == -1);
+    // element smaller than the first one
+    assert(exponential_search(arr_found, 3, 0) == -1);
+    // element bigger than the last one in arrays of different lengths
+    int64_t arr_big[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    for ( uint16_t len = 1; len <= 9; len++ ) { assert(exponential_search(arr_big, len, 10) == -1); }
+    // every element is found in every prefix length
+    for ( uint16_t len = 1; len <= 9; len++ )
+    {
+        for ( uint16_t i = 0; i < len; i++ ) { assert(exponential_search(arr_big, len, arr_big[i]) == i); }
+    }
     // find the first element in an array of length 2
     int64_t arr_first_2[] = {1, 2};
     assert(exponential_search(arr_first_2, 2, 1) == 0);
