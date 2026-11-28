@@ -89,15 +89,15 @@ void test()
     free(arr);
     /* edge case tests */ 
     bubbleSort(NULL, 0);
-    int single []= {42};
+    int single[] = {42};
     bubbleSort(single, 1);
-assert(single[0] == 42);
-int edge []= {-3, 0, -3, 5, 2};
+    assert(single[0] == 42);
+    int edge[] = {-3, 0, -3, 5, 2};
     bubbleSort(edge, 5);
-    for (int i=0; i < 4; i++)
-        {
-            assert(edge[i] <= edge[i + 1]);
-        }
+    for (int i = 0; i < 4; i++)
+    {
+        assert(edge[i] <= edge[i + 1]);
+    }
 }
 
 /** Driver Code */
