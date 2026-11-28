@@ -42,8 +42,12 @@ void swap(int *first, int *second)
  */
 void bubbleSort(int *arr, int size)
 {
+    if (arr == NULL || size <= 1)
+    {
+        return;
+    }
     for (int i = 0; i < size - 1; i++)
-    {                         /* for each array index */
+    {             /* for each array index */
         bool swapped = false; /* flag to check if any changes had to be made */
         /* perform iterations until no more changes were made or outer loop
             executed for all array indices */
@@ -83,6 +87,17 @@ void test()
         assert(arr[i] <= arr[i + 1]);
     }
     free(arr);
+    /* edge case tests */ 
+    bubbleSort(NULL, 0);
+    int single []= {42};
+    bubbleSort(single, 1);
+assert(single[0] == 42);
+int edge []= {-3, 0, -3, 5, 2};
+    bubbleSort(edge, 5);
+    for (int i=0; i < 4; i++)
+        {
+            assert(edge[i] <= edge[i + 1]);
+        }
 }
 
 /** Driver Code */
